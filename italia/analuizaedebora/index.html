@@ -1377,98 +1377,66 @@
     overflow: hidden;
   }
   .atracao-img-box {
-    float: right;
-    width: 160px;
-    height: 160px;
-    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #93c5fd;
-    gap: 4px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 8px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: center;
-    flex-shrink: 0;
-    margin: 0 0 10px 14px;
-  }
-  .atracao-img-box {
-    position: relative;
-    overflow: hidden;
-  }
-  .atracao-img-box img {
-    width: 100%; height: 100%; object-fit: cover; border-radius: 10px;
-  }
-  .atracao-img-box span {
-    padding: 0 14px;
-  }
-  .atracao-img-box:not(.is-placeholder) {
-    background: #dbeafe;
-    color: transparent;
-  }
-  .atracao-img-box:not(.is-placeholder) span {
-    display: none;
-  }
-  .atracao-img-box.is-placeholder img {
-    display: none;
-  }
+  float: right;
+  width: 160px;
+  height: 160px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 0 0 10px 14px;
+  background: transparent; /* remove o azul */
+  position: relative;
+}
 
-  .cidade-topo-grid {
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:10px;
-    margin-bottom:28px;
-  }
-  .cidade-topo-card {
-    height:140px;
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.15);
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position: relative;
-    overflow: hidden;
-    color: rgba(255,255,255,0.72);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 16px;
-  }
-  .cidade-topo-card img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-  }
-  .cidade-topo-card span {
-    position:absolute;
-    inset:auto 12px 12px 12px;
-    z-index:2;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-height:40px;
-    padding:8px 10px;
-    background:rgba(13, 45, 107, 0.36);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border:1px solid rgba(255,255,255,0.14);
-    border-radius:10px;
-  }
-  .cidade-topo-card:not(.is-placeholder) span {
-    display:none;
-  }
-  .cidade-topo-card.is-placeholder img {
-    display:none;
-  }
+/* imagem ocupa o bloco inteiro */
+.atracao-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* remove texto */
+.atracao-img-box span {
+  display: none !important;
+}
+
+/* mata o placeholder de vez */
+.atracao-img-box.is-placeholder img {
+  display: block !important;
+}
+
+.atracao-img-box:not(.is-placeholder) {
+  background: transparent !important;
+}
+
+.cidade-topo-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:10px;
+  margin-bottom:28px;
+}
+
+.cidade-topo-card {
+  position: relative;
+  height: 140px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.cidade-topo-card img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.cidade-topo-card span {
+  display:none;
+}
 
   .atracao-nova-desc {
     font-size: 12px;
@@ -2071,7 +2039,7 @@
 <div class="page secao">
 
   <div class="pais-hero">
-    <img src="assets/hero/italia-hero.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0;" alt="Itália">
+    <img src="./assets/hero/italia-hero.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0;" alt="Itália">
     <div class="pais-hero-overlay"></div>
     <span class="pais-hero-nome">Itália</span>
   </div>
@@ -2841,17 +2809,14 @@
 
   <!-- 3 imagens placeholder -->
   <div class="cidade-topo-grid">
-    <div class="cidade-topo-card is-placeholder">
-      <img src="./assets/cidades/roma/coliseu-roma.jpg" alt="Roma · imagem topo 01 · Coliseu" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
-      <span>COLISEU</span>
+    <div class="cidade-topo-card">
+      <img src="./assets/cidades/roma/img1.jpg" alt="Coliseu" loading="lazy">
     </div>
-    <div class="cidade-topo-card is-placeholder">
-      <img src="./assets/cidades/roma/fontana-di-trevi.jpg" alt="Roma · imagem topo 02 · Fontana di Trevi" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
-      <span>FONTANA DI TREVI</span>
+    <div class="cidade-topo-card">
+      <img src="./assets/cidades/roma/img2.jpg" alt="Fontana di Trevi" loading="lazy">
     </div>
-    <div class="cidade-topo-card is-placeholder">
-      <img src="./assets/cidades/roma/por-do-sol-roma.jpg" alt="Roma · imagem topo 03 · pôr do sol em Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
-      <span>PÔR DO SOL EM ROMA</span>
+    <div class="cidade-topo-card">
+      <img src="./assets/cidades/roma/img3.png" alt="Pôr do sol em Roma" loading="lazy">
     </div>
   </div>
 
@@ -3071,8 +3036,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Moderado · 6 km</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=1GhCI4cJKwL-k0aTyiBqOfQTraI9yyH0&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
@@ -3138,7 +3103,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-01/01-fontana-di-trevi.jpg" alt="Fontana di Trevi" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-01/01-fontana-di-trevi.webp" alt="Fontana di Trevi" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Fontana di Trevi</span>
     </div>
       <p class="atracao-nova-desc">A maior fonte barroca do mundo foi encomendada pelo Papa Clemente XII em 1732 e concluída por Nicola Salvi apenas em 1762 — 30 anos de obsessão esculpida em travertino. Netuno domina o centro, flanqueado por cavalos marinhos que representam os dois estados do mar: calmo e agitado. A fonte marca o ponto final do Aqueduto Virgo, construído por Agripa em 19 a.C. para abastecer as termas de Roma. A tradição da moeda foi popularizada pelo filme <em>Três Moedas na Fonte</em> (1954) — hoje a Trevi arrecada <strong>mais de €1 milhão por ano</strong> em moedas, doados à Caritas romana.</p>
@@ -3171,7 +3136,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-01/02-piazza-di-spagna.jpg" alt="Piazza di Spagna" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-01/piazza_di_spagna.jpeg" alt="Piazza di Spagna" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Piazza di Spagna</span>
     </div>
       <p class="atracao-nova-desc">Os 135 degraus da Scalinata di Trinità dei Monti foram construídos entre 1723 e 1725 com financiamento do embaixador francês — motivo pelo qual a igreja no alto, de arquitetura francesa, destoa do barroco romano ao redor. A Fontana della Barcaccia aos pés foi esculpida por Pietro Bernini (pai do mais famoso Gian Lorenzo) em 1627, representando um barco meio afundado inundado pela cheia do Tibre de 1598. Keats morreu no apartamento à direita da escadaria em 1821 — hoje é museu. A Via Condotti, que desce da piazza, concentra Gucci, Bulgari, Valentino e Hermès num único quarteirão: o endereço mais caro de Roma.</p>
@@ -3197,7 +3162,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-01/03-via-condotti-roma.jpg" alt="Via Condotti Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-01/via-condotti-roma.jpg" alt="Via Condotti Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Via Condotti Roma</span>
     </div>
       <p class="atracao-nova-desc">A Via Condotti desce da Piazza di Spagna em linha reta com o Caffè Greco de 1760 — o café histórico mais antigo de Roma — de um lado, e Gucci, Bulgari, Valentino, Hermès e Cartier do outro. Não é necessário comprar nada: as vitrines são design puro e a rua é um set de cinema permanente. O Caffè Greco vale um espresso no balcão só pelo ambiente — Goethe, Casanova e Byron sentaram aqui.</p>
@@ -3224,7 +3189,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-01/04-via-del-corso-roma.jpg" alt="Via del Corso Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-01/viadelcorso.webp" alt="Via del Corso Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Via del Corso Roma</span>
     </div>
       <p class="atracao-nova-desc">A Via del Corso é a coluna vertebral do centro histórico — 1,5 km retos conectando Piazza Venezia à Piazza del Popolo. É onde os romanos fazem a passeggiata: o ritual do passeio vespertino, ver e ser visto, gelato na mão, entrar numa loja. Caminha-se só um trecho — do cruzamento com a Via Condotti até a Piazza Colonna, onde a Coluna de Marco Aurélio marca dois mil anos de Roma.</p>
@@ -3267,7 +3232,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-01/05-pantheon.jpg" alt="Pantheon" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-01/pantheon.jpg" alt="Pantheon" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Pantheon</span>
     </div>
       <p class="atracao-nova-desc">O Pantheon é o maior mistério da arquitetura romana: construído em 125 d.C. por Adriano sobre os alicerces de um templo anterior de Agripa (cujo nome permanece na fachada por humildade imperial), é o edifício de cúpula não reforçada mais largo do mundo — <strong>43,3 metros de diâmetro</strong>, exatamente igual à altura do teto ao piso. Por 19 séculos ninguém conseguiu reproduzir a receita do concreto romano. O óculo de <strong>9 metros</strong> no teto é a única entrada de luz — e de chuva, que escoa por 22 drenos dissimulados no piso levemente inclinado. Rafael escolheu ser enterrado aqui em 1520. Também repousam aqui Vittorio Emanuele II e Umberto I, primeiros reis da Itália unificada.</p>
@@ -3302,7 +3267,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-01/06-piazza-navona.jpg" alt="Piazza Navona" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-01/piazza-navona-1-1-1200x800.jpg.webp" alt="Piazza Navona" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Piazza Navona</span>
     </div>
       <p class="atracao-nova-desc">A Piazza Navona é construída exatamente sobre o Circo Agonalis do imperador Domiciano, do século I d.C. — as fundações do estádio de 30.000 lugares ainda estruturam os edifícios ao redor. A Fontana dei Quattro Fiumi (1651) é a obra-prima de Bernini: os quatro gigantes de mármore representam os maiores rios dos quatro continentes conhecidos — Nilo (véu no rosto pois sua nascente era desconhecida), Ganges (remo para indicar navegabilidade), Danúbio e Rio da Prata (moedas, pela riqueza americana). A estátua do Nilo tapa os olhos para não ver a fachada da Igreja de Sant'Agnese em Agone, obra do rival Borromini — rivalidade inventada pela lenda mas adorada pelos romanos. Em agosto a praça é o palco mais animado do centro histórico.</p>
@@ -3334,7 +3299,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-01/07-campo-de-fiori.jpg" alt="Campo de Fiori" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-01/campofiori.jpg" alt="Campo de Fiori" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Campo de Fiori</span>
     </div>
       <p class="atracao-nova-desc">De manhã é mercado de flores e hortifruti. À noite é a praça mais animada do centro histórico de Roma — bares abertos, jovens com spritz na mão, músicos tocando nas esquinas. A estátua sombria de Giordano Bruno no centro lembra que aqui aconteciam as execuções da Inquisição — a ironia histórica mais deliciosa de Roma: a praça do terror medieval virou epicentro da festa noturna. De Navona são apenas 5 min a pé e encaixa perfeitamente no ritmo do primeiro dia.</p>
@@ -3412,8 +3377,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Intenso · 9 km</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=1S8DvC9r0EZSRUTuPpVmcotfDFIQor3M&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
@@ -3471,7 +3436,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-02/01-via-nicola-salvi-colosseo.jpg" alt="Via Nicola Salvi Colosseo" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-02/coliseu.webp" alt="Via Nicola Salvi Colosseo" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Via Nicola Salvi Colosseo</span>
     </div>
       <p class="atracao-nova-desc">Antes de entrar no Coliseu, passem pela Via Nicola Salvi — a rua que sobe pelo Colle Oppio com uma perspectiva direta e elevada da fachada do anfiteatro. De manhã cedo, com a luz rasante do sol e sem a multidão da tarde, essa é a foto do Coliseu que a maioria dos turistas nunca tira. Ângulo lateral, luz perfeita, quase ninguém na cena.</p>
@@ -3498,7 +3463,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-02/02-colosseo-interior-roma.jpg" alt="Colosseo interior Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-02/coliseudentro.jpg" alt="Colosseo interior Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Colosseo interior Roma</span>
     </div>
       <p class="atracao-nova-desc">Construído entre 72 e 80 d.C. pelo imperador Vespasiano e inaugurado por Tito com 100 dias de jogos, o Coliseu comportava até 80 mil espectadores e tinha um sistema de tendas retráteis (o Velarium) para proteger do sol — uma engenharia que ainda impressiona arquitetos hoje. As 80 entradas numeradas (vomitoria) permitiam encher e esvaziar o anfiteatro em minutos. O nome original Anfiteatro Flávio só virou "Coliseu" na Idade Média, por causa de uma estátua colossal de Nero que ficava ao lado.</p>
@@ -3531,7 +3496,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-02/03-arco-costantino-roma.jpg" alt="Arco Costantino Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-02/arcoconst.jpg" alt="Arco Costantino Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Arco Costantino Roma</span>
     </div>
       <p class="atracao-nova-desc">Erguido em 315 d.C. para celebrar a vitória de Constantino sobre Maxêncio na Batalha da Ponte Mílvia, é o maior arco de triunfo da Roma Antiga e o mais bem conservado. Fica entre o Coliseu e o Palatino — literalmente no caminho — e é gratuito. Os relevos que decoram o arco foram "emprestados" de monumentos anteriores de Trajano, Adriano e Marco Aurélio: os romanos não tinham pejo em reciclar arte imperial.</p>
@@ -3558,7 +3523,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-02/04-foro-romano-roma.jpg" alt="Foro Romano Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-02/fororomano.jpeg" alt="Foro Romano Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Foro Romano Roma</span>
     </div>
       <p class="atracao-nova-desc">O Fórum Romano foi por séculos o centro político, comercial e religioso do mundo. Aqui Júlio César foi assassinado (no Templo de Vesta), aqui os cônsules discursavam, aqui passavam os triunfos militares. O Monte Palatino acima — o mais antigo dos sete morros de Roma — é onde a tradição diz que Rômulo fundou a cidade em 753 a.C. e onde depois os imperadores construíram seus palácios com vista para tudo.</p>
@@ -3614,7 +3579,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-02/05-piazza-venezia-roma.jpg" alt="Piazza Venezia Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-02/piazza venezzia.jpg" alt="Piazza Venezia Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Piazza Venezia Roma</span>
     </div>
       <p class="atracao-nova-desc">Piazza Venezia é o ponto onde convergem todas as grandes avenidas do centro de Roma — a Via del Corso, a Via dei Fori Imperiali, a Via del Teatro di Marcello. É o centro geográfico da cidade e o palco do famoso meme do guarda de trânsito que rege o caos com gestos operísticos. O Palazzo Venezia, do lado esquerdo, foi o balcão de onde Mussolini discursava para as multidões durante o fascismo. O Altare della Patria domina tudo ao fundo — é impossível não parar e fotografar.</p>
@@ -3639,7 +3604,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-02/06-vittoriano-roma-por-do-sol.jpg" alt="Vittoriano Roma pôr do sol" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-02/altaredellapatria.webp" alt="Vittoriano Roma pôr do sol" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Vittoriano Roma pôr do sol</span>
     </div>
       <p class="atracao-nova-desc">O Altare della Patria — batizado pelos romanos de "máquina de escrever" pela forma — abriga no topo a Terrazza delle Quadrighe, um dos melhores pontos de vista de Roma: a cidade inteira se abre diante de vocês, do Fórum Romano ao Coliseu, dos telhados de Trastevere à cúpula do Vaticano. Em agosto o pôr do sol é por volta das 20h — chegando às 19h a luz dourada transforma o panorama.</p>
@@ -3693,7 +3658,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-02/07-piazza-madonna-dei-monti-roma.jpg" alt="Piazza Madonna dei Monti Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-02/piazzamaddona.jpg" alt="Piazza Madonna dei Monti Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Piazza Madonna dei Monti Roma</span>
     </div>
       <p class="atracao-nova-desc">A Piazza della Madonna dei Monti é o ponto de encontro dos moradores do bairro. Noite após noite, jovens romanos se reúnem nos degraus da fonte central com garrafinhas de vinho compradas nas cantinas ao redor — não há um bar específico, é a praça inteira que vira o programa. Em agosto, quando o Monti se transforma no bairro mais animado do centro histórico, essa praça resume tudo que torna Roma especial: descontração, beleza e a sensação de ter chegado no lugar certo.</p>
@@ -3742,8 +3707,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Intenso · 8 km</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=1PKIOT2wEXGU1GR-DuCbPvi35IvxmSqQ&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
@@ -4088,7 +4053,7 @@
       <span>VESÚVIO</span>
     </div>
     <div class="cidade-topo-card is-placeholder">
-      <img src="./assets/cidades/napoles/teatro-san-carlo.jpg" alt="Nápoles · imagem topo 03 · teatro e cultura" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/cidades/napoles/napoli.jpeg" alt="Nápoles · imagem topo 03 · teatro e cultura" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>TEATRO E CULTURA</span>
     </div>
   </div>
@@ -4158,8 +4123,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Moderado · 4 km</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=11kM24pbUKYodtZb-uzrB8MeNYnOTo6o&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
@@ -4649,8 +4614,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Tranquilo · city walk + beach club</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=14NQIk1gePQOl6p5iCluMk3I89APXUd0&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
@@ -4925,8 +4890,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Intenso · dia inteiro no mar</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=1euFhRH4-ODJULG2fYGaqNoeFIKJG7B8&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
@@ -5127,8 +5092,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Moderado · ferry + ônibus · 5 km</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=1qkxa_CUMMY3pzq54brrukrmccWKhR9c&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
@@ -5443,8 +5408,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Tranquilo · ferry + vielas + beach club</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=1v9U8jke9dTrMqIgttz2NbyzPrjolTkA&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
@@ -5640,7 +5605,7 @@
       <span>BARCO</span>
     </div>
     <div class="cidade-topo-card is-placeholder">
-      <img src="./assets/cidades/capri/glamour-capri.jpg" alt="Capri · imagem topo 02 · glamour da ilha" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/cidades/capri/glamour-capri.jpeg" alt="Capri · imagem topo 02 · glamour da ilha" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>GLAMOUR DA ILHA</span>
     </div>
     <div class="cidade-topo-card is-placeholder">
@@ -5720,8 +5685,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Intenso · travessia + barco + Piazzetta</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=1l_m8TUN3QCYgMKDghI8CP3V6bwZZt8k&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
@@ -6033,8 +5998,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Intenso · manhã em Anacapri + travessia para Milão</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=1QkXdKnWPS_RmgoBxNUCkhg8H8hoIa7E&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
@@ -6298,7 +6263,7 @@
       <span>MODA</span>
     </div>
     <div class="cidade-topo-card is-placeholder">
-      <img src="./assets/cidades/milao/arte-milao.jpg" alt="Milão · imagem topo 03 · arte" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/cidades/milao/arte-milao.jpeg" alt="Milão · imagem topo 03 · arte" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>ARTE</span>
     </div>
   </div>
@@ -6373,8 +6338,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Moderado · manhã no Duomo + tarde no Lago di Como</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=1OdOmXWK2BOd_xQb7c7feTY9XFrmmzFo&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
@@ -6677,15 +6642,15 @@
 
   <div class="cidade-topo-grid">
     <div class="cidade-topo-card is-placeholder">
-      <img src="./assets/cidades/como/barco-lago-di-como.jpg" alt="Lago di Como · imagem topo 01 · barco" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/cidades/como/como1.webp" alt="Lago di Como · imagem topo 01 · barco" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>BARCO</span>
     </div>
     <div class="cidade-topo-card is-placeholder">
-      <img src="./assets/cidades/como/montanhas-lago-di-como.jpg" alt="Lago di Como · imagem topo 02 · montanhas" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/cidades/como/como2.webp" alt="Lago di Como · imagem topo 02 · montanhas" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>MONTANHAS</span>
     </div>
     <div class="cidade-topo-card is-placeholder">
-      <img src="./assets/cidades/como/vilas-lago-di-como.jpg" alt="Lago di Como · imagem topo 03 · vilas e jardins" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/cidades/como/como3.jpeg" alt="Lago di Como · imagem topo 03 · vilas e jardins" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>VILAS E JARDINS</span>
     </div>
   </div>
@@ -6709,8 +6674,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Moderado · café no hotel + passeio pelo lago</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=1AgP1a93vZPLfBBxZ_bvpiAr3sXAnKfU&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
@@ -6877,8 +6842,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Tranquilo · ferry + vilas + caminhada</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=1nKBaaVX-ILIwAL5aV2FWIUeNMllzPhE&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
@@ -7033,8 +6998,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Moderado · bate-volta + carimbo na Suíça</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=1Ufs9pqc-rOYPHEW3uDGRGky07js2ggI&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
@@ -7116,8 +7081,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Tranquilo manhã · intenso na viagem</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=1e7bfcYiLtpT8sEZ9ZLCGI6eRwgC13to&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
@@ -7176,8 +7141,8 @@
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Tranquilo · despedida sem pressa</span>
       <div class="dia-header-links">
-        <a class="btn-rota" href="#" target="_blank">🗺 Google Maps</a>
-        <a class="btn-rota" href="#" target="_blank">💰 Custos do dia</a>
+        <a class="btn-rota" href="https://www.google.com/maps/d/u/6/edit?mid=1gUa1Bx4GpsRUBmFKeSo9mqYXQld_p5E&usp=sharing" target="_blank">🗺 Google Maps</a>
+        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Custos do dia</span>
       </div>
     </div>
   </div>
