@@ -945,6 +945,10 @@
   .restaurante-body p { margin: 5px 0; }
   .rest-prato { background: #fff0f0; border-left: 3px solid #c93838; border-radius: 0 8px 8px 0; padding: 8px 12px; font-size: 12px; margin: 10px 0; font-weight: 600; color: #7c0000; }
 
+  /* RESTAURANTE COM FOTO REDONDA */
+  .rest-img { float: left; width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 14px 8px 0; border: 3px solid #fde0e0; box-shadow: 0 2px 8px rgba(201,56,56,0.15); }
+  .restaurante-com-foto .restaurante-body::after { content: ''; display: table; clear: both; }
+
   /* GASTO ESTIMADO — borda azul, fundo branco */
   .gasto-dia { background: white; border: 2px solid var(--azul-medio); border-radius: 12px; padding: 20px 24px; margin: 24px 0 0; }
   .gasto-titulo { font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--azul-medio); margin-bottom: 12px; }
@@ -1378,8 +1382,8 @@
   }
   .atracao-img-box {
   float: right;
-  width: 160px;
-  height: 160px;
+  width: 230px;
+  height: 180px;
   border-radius: 14px;
   overflow: hidden;
   margin: 0 0 10px 14px;
@@ -3056,12 +3060,13 @@
   </div>
   <span class="rest-titulo-script">Sugestão pro Almoço de Chegada</span>
   <div class="rest-grid-ab">
-    <div class="restaurante">
+    <div class="restaurante restaurante-com-foto">
       <div class="restaurante-header">
         <div class="rest-letra">🍽</div>
         <div class="rest-nome">Fuorinorma<span class="rest-recomendado-badge badge-economico">💰 Econômico</span></div>
       </div>
       <div class="restaurante-body">
+        <img class="rest-img" src="assets/restaurantes/fuorinorma.jpg" alt="Fuorinorma">
         <p>📍 Via dei Serpenti 178, Monti · <strong>5 min a pé do hotel</strong></p>
         <p>Culinária: Panini artesanais + taglieri · custo benefício imbatível</p>
         <p>💰 <strong>€8–14</strong> ≈ R$50–87 · rápido ou relaxado</p>
@@ -3069,7 +3074,7 @@
         <p><span class="reserva-direto">✅ Sem reserva · aberto todos os dias</span></p>
       </div>
     </div>
-    <div class="restaurante">
+    <div class="restaurante restaurante-com-foto">
       <div class="restaurante-header">
         <div class="rest-letra">🍽</div>
         <div class="rest-nome">Alle Carrette
@@ -3077,6 +3082,7 @@
         </div>
       </div>
       <div class="restaurante-body">
+        <img class="rest-img" src="assets/restaurantes/alle-carrette.jpg" alt="alle-carrette">
         <p>📍 Via della Madonna dei Monti 95 · <strong>5 min a pé do hotel</strong></p>
         <p>Culinária: Pizza romana fina e crua + pasta · ambiente descontraído</p>
         <p>💰 €12–18 ≈ R$74–112</p>
@@ -3201,12 +3207,13 @@
 
   <!-- ══ PARADA GIOLITTI ══ -->
   <span class="rest-titulo-script">Sugestão pro Gelato</span>
-  <div class="restaurante" style="margin-bottom:20px;">
+  <div class="restaurante restaurante-com-foto" style="margin-bottom:20px;">
     <div class="restaurante-header">
       <div class="rest-letra" style="background:#c93838;color:white;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;">🍦</div>
       <div class="rest-nome">Giolitti<span class="rest-recomendado-badge badge-bom">⭐ Bem Avaliado</span></div>
     </div>
     <div class="restaurante-body">
+      <img class="rest-img" src="assets/restaurantes/giolitti.jpg" alt="giolitti">
       <p>📍 Via degli Uffici del Vicario 40 · <strong>3 min da Via del Corso</strong></p>
       <p>Culinária: Gelateria artesanal clássica desde 1900 · uma das mais tradicionais de Roma</p>
       <p>💰 <strong>€3–5</strong> ≈ R$19–31 · cone ou copinho</p>
@@ -3318,12 +3325,13 @@
   <!-- ══ JANTAR DIA 01 ══ -->
   <span class="rest-titulo-script">Sugestão pro Jantar</span>
   <div class="rest-grid-ab">
-    <div class="restaurante">
+    <div class="restaurante restaurante-com-foto">
       <div class="restaurante-header">
         <div class="rest-letra">🍽</div>
         <div class="rest-nome">La Piccola Cuccagna</div>
       </div>
       <div class="restaurante-body">
+        <img class="rest-img" src="assets/restaurantes/la-piccola-cuccagna.jpg" alt="la-piccola-cuccagna">
         <p>📍 3 min a pé da Piazza Navona</p>
         <p>Culinária: Romana tradicional · ambiente acolhedor</p>
         <p>💰 €20–30 por pessoa ≈ R$124–186</p>
@@ -3331,7 +3339,7 @@
         <p><span class="reserva-direto">✅ Sem reserva</span></p>
       </div>
     </div>
-    <div class="restaurante">
+    <div class="restaurante restaurante-com-foto">
       <div class="restaurante-header">
         <div class="rest-letra">🍽</div>
         <div class="rest-nome">Cantina &amp; Cucina
@@ -3339,6 +3347,7 @@
         </div>
       </div>
       <div class="restaurante-body">
+        <img class="rest-img" src="assets/restaurantes/cantina-cucina.jpg" alt="cantina-cucina">
         <p>📍 5 min a pé da Piazza Navona</p>
         <p>Culinária: Italiana clássica · ambiente refinado</p>
         <p>💰 €35–50 por pessoa ≈ R$217–310</p>
@@ -3392,12 +3401,13 @@
     <!-- ══ CAFÉ DA MANHÃ ══ -->
   <span class="rest-titulo-script">Sugestão pro Café da Manhã</span>
   <div class="rest-grid-ab">
-    <div class="restaurante">
+    <div class="restaurante restaurante-com-foto">
       <div class="restaurante-header">
         <div class="rest-letra" style="background:#c93838;color:white;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;">☕</div>
         <div class="rest-nome">Er Baretto — L'Arte del Caffè<span class="rest-recomendado-badge badge-bom">⭐ Bem Avaliado</span></div>
       </div>
       <div class="restaurante-body">
+        <img class="rest-img" src="assets/restaurantes/er-baretto.jpg" alt="er-baretto">
         <p>📍 Via del Boschetto 132, Monti · <strong>5 min a pé do hotel</strong> · no caminho pro Coliseu</p>
         <p>Culinária: Bar de café romano tradicional · croissants, cappuccino artesanal, atmosfera de bairro</p>
         <p>💰 <strong>€4–7</strong> ≈ R$25–43 · no balcão como os romanos</p>
@@ -3405,12 +3415,13 @@
         <p><span class="reserva-direto">✅ Sem reserva · abre 7h</span></p>
       </div>
     </div>
-    <div class="restaurante">
+    <div class="restaurante restaurante-com-foto">
       <div class="restaurante-header">
         <div class="rest-letra" style="background:#c93838;color:white;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;">☕</div>
         <div class="rest-nome">Bar La Licata<span class="rest-recomendado-badge badge-bom">⭐ Bem Avaliado</span></div>
       </div>
       <div class="restaurante-body">
+        <img class="rest-img" src="assets/restaurantes/bar-la-licata.jpg" alt="bar-la-licata">
         <p>📍 Via dei Serpenti 165, Monti · <strong>3 min a pé do hotel</strong> · na mesma rua do hotel</p>
         <p>Culinária: Bar histórico desde 1967 · ponto de encontro dos moradores do Monti</p>
         <p>💰 <strong>€4–8</strong> ≈ R$25–50 · ótimo custo-benefício</p>
@@ -3540,13 +3551,14 @@
     <span class="dica-box-label">💡 Almoço + pausa do sol</span>
     <p>Até ~13h30/14h vocês terão finalizado o Coliseu, Fórum e Palatino. O calor de agosto pede uma pausa — almocem com calma e descansem entre 14h e 16h antes de seguir para o Vittoriano.</p>
   </div>
-  <div class="rest-grid-ab">
-    <div class="restaurante">
+  <div style="margin: 16px 0 24px;">
+    <div class="restaurante restaurante-com-foto">
       <div class="restaurante-header">
         <div class="rest-letra">🍽</div>
         <div class="rest-nome">Grano — La Cucina di Traiano<span class="rest-recomendado-badge badge-bom">⭐ Bem Avaliado</span></div>
       </div>
       <div class="restaurante-body">
+        <img class="rest-img" src="assets/restaurantes/grano.jpg" alt="grano">
         <p>📍 Via Magnanapoli 9 · <strong>8 min a pé do Fórum Romano</strong></p>
         <p>Culinária: Italiana de rua autêntica · pizza al taglio, lasanha, gnocchi ao pesto</p>
         <p>💰 <strong>€8–14</strong> ≈ R$50–87 por pessoa · excelente custo-benefício</p>
@@ -3627,12 +3639,13 @@
     <p style="color:#e2e8f0;">Depois do Vittoriano, a noite é de passeio livre. A ideia é caminhar no rumo do hotel — andando devagar, se perdendo pelas ruazinhas de Monti, entrando nos bares que chamarem atenção. Passem pelo Coliseu iluminado: à noite ele tem uma presença completamente diferente do dia.</p>
   </div>
 
-  <div class="restaurante" style="margin-bottom:16px;">
+  <div class="restaurante restaurante-com-foto" style="margin-bottom:16px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍹</div>
       <div class="rest-nome">Oppio Caffè — Drink com vista pro Coliseu<span class="rest-recomendado-badge badge-bom">⭐ Bem Avaliado</span></div>
     </div>
     <div class="restaurante-body">
+      <img class="rest-img" src="assets/restaurantes/oppio-caffe.jpg" alt="oppio-caffe">
       <p>📍 Via delle Terme di Tito 72 · <strong>2 min do Coliseu</strong> · no topo do Colle Oppio</p>
       <p>Estilo: Cocktail bar com terraço panorâmico direto para o Coliseu · aperitivo + buffet</p>
       <p>💰 Das 17h às 22h: <strong>€10</strong> ≈ R$62 · drink + buffet all-you-can-eat. Cocktails avulsos ~€6–8</p>
@@ -3669,12 +3682,13 @@
     </div>
   </div>
 
-  <div class="restaurante" style="margin-bottom:20px;">
+  <div class="restaurante restaurante-com-foto" style="margin-bottom:20px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍹</div>
       <div class="rest-nome">Ice Club Monti — experiência noturna diferente<span class="rest-recomendado-badge" style="background:#ede9fe;color:#4f46e5;border:1px solid #c4b5fd;">✨ Experiência Única</span></div>
     </div>
     <div class="restaurante-body">
+      <img class="rest-img" src="assets/restaurantes/ice-club-monti.jpg" alt="ice-club-monti">
       <p>📍 Via della Madonna dei Monti 18/19 · <strong>próximo ao hotel e à piazza</strong></p>
       <p>O bar inteiro é construído em gelo — paredes, balcão, até os copos. Temperatura interna: −5°C. Fornecem uma capa térmica na entrada.</p>
       <p>💰 <strong>€15</strong> ≈ R$93 · entrada inclui 1 drink em copo de gelo</p>
@@ -3721,13 +3735,14 @@
 
     <!-- ══ CAFÉ DA MANHÃ ══ -->
   <span class="rest-titulo-script">Sugestão pro Café da Manhã</span>
-  <div class="rest-grid-ab">
-    <div class="restaurante">
+  <div style="margin: 16px 0 24px;">
+    <div class="restaurante restaurante-com-foto">
       <div class="restaurante-header">
         <div class="rest-letra" style="background:#c93838;color:white;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;">☕</div>
         <div class="rest-nome">Antico Caffè del Brasile<span class="rest-recomendado-badge badge-bom">⭐ Bem Avaliado</span></div>
       </div>
       <div class="restaurante-body">
+        <img class="rest-img" src="assets/restaurantes/antico-caffe-del-brasile.jpg" alt="antico-caffe-del-brasile">
         <p>📍 Via dei Serpenti 23, Monti · <strong>3 min a pé do hotel</strong> · no caminho pro metrô</p>
         <p>Culinária: Torrefazione histórica · café de torra própria desde 1882 · pastéis, maritozzo, tramezzini</p>
         <p>💰 <strong>€3–7</strong> ≈ R$19–43 · no balcão como os romanos</p>
@@ -3806,7 +3821,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-03/02-basilica-san-pietro-roma-interior.jpg" alt="Basilica San Pietro Roma interior" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-03/02-basilica-san-pietro-roma-interior.avif" alt="Basilica San Pietro Roma interior" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Basilica San Pietro Roma interior</span>
     </div>
       <p class="atracao-nova-desc">A Basílica de São Pedro foi construída sobre o local onde o apóstolo Pedro foi sepultado após seu martírio em 64 d.C. A versão atual levou 120 anos (1506–1626) e teve Bramante, Rafael, Sangallo e Michelangelo como arquitetos — cada um deixando sua marca. O dossel de bronze de Bernini sobre o altar principal tem 29 metros de altura. A Pietà de Michelangelo, esculpida quando ele tinha 24 anos, fica na primeira capela à direita. A cúpula de 137 metros criada por Michelangelo ainda é a mais alta do mundo.</p>
@@ -3893,7 +3908,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-03/05-castel-sant-angelo-roma.jpg" alt="Castel Sant Angelo Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-03/ 05-castel-sant-angelo-roma.jpg" alt="Castel Sant Angelo Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Castel Sant Angelo Roma</span>
     </div>
       <p class="atracao-nova-desc">Construído em 135 d.C. como mausoléu para o imperador Adriano e sua família, o Castel Sant'Angelo se tornou ao longo dos séculos fortaleza, prisão e refúgio dos papas em períodos de crise — conectado ao Vaticano por um passagem secreta elevada chamada Passetto di Borgo. O anjo de bronze no topo surgiu de uma visão do Papa Gregório I em 590 d.C., durante uma prece para o fim de uma epidemia de peste. O terraço oferece uma das melhores vistas do Tibre e do Vaticano.</p>
@@ -3911,13 +3926,14 @@
 
   <!-- ══ ALMOÇO DIA 03 ══ -->
   <span class="rest-titulo-script">Sugestão pro Almoço</span>
-  <div class="rest-grid-ab">
-    <div class="restaurante">
+  <div style="margin: 16px 0 24px;">
+    <div class="restaurante restaurante-com-foto">
       <div class="restaurante-header">
         <div class="rest-letra">🍽</div>
         <div class="rest-nome">Trattoria Pancia Felice<span class="rest-recomendado-badge badge-bom">⭐ Bem Avaliado</span></div>
       </div>
       <div class="restaurante-body">
+        <img class="rest-img" src="assets/restaurantes/trattoria-pancia-felice.jpg" alt="trattoria-pancia-felice">
         <p>📍 Via di Porta Castello 11/12 · <strong>5 min a pé do Castel Sant'Angelo</strong></p>
         <p>Culinária: Trattoria romana tradicional · cucina caseira · pizzas de longa fermentação</p>
         <p>💰 <strong>€15–28</strong> ≈ R$93–174 por pessoa</p>
@@ -3944,7 +3960,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-03/06-villa-borghese-temple-of-aesculapius-lake.jpg" alt="Villa Borghese Temple of Aesculapius lake" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-03/06-villa-borghese-temple-of-aesculapius-lake.png" alt="Villa Borghese Temple of Aesculapius lake" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Villa Borghese Temple of Aesculapius lake</span>
     </div>
       <p class="atracao-nova-desc">Com 80 hectares no coração de Roma, a Villa Borghese é o parque onde os romanos respiram — pinheiros mediterrâneos, lagos, estátuas e fontes. O ponto mais fotogênico é o <strong>Templo de Esculápio</strong> no meio do lago artificial: um templo neoclássico sobre uma ilha, refletindo na água parada. Barcos para alugar ao redor do lago (~€5 por 20 min), relógio d'Água de 1873 que funciona até hoje, bicicletas e quadriciclos para alugar na entrada principal.</p>
@@ -3971,7 +3987,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-03/07-galleria-borghese-roma-interior-bernini.jpg" alt="Galleria Borghese Roma interior Bernini" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-03/07-galleria-borghese-roma-interior-bernini.avif" alt="Galleria Borghese Roma interior Bernini" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Galleria Borghese Roma interior Bernini</span>
     </div>
       <p class="atracao-nova-desc">A Galleria Borghese é um dos melhores museus da Europa — instalada no palácio de caça da família Borghese, com um acervo que faz parar. Esculturas de Bernini em mármore que parecem respirar: o <em>Apolo e Dafne</em>, onde Dafne se transforma em árvore na sua fuga; o <em>Rapto de Proserpina</em>, com os dedos de Plutão afundando na carne de pedra. Pinturas de Caravaggio, Rafael e Canova. A visita é limitada a 2h por turno — e vale cada minuto.</p>
@@ -4002,7 +4018,7 @@
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-03/08-terrazza-del-pincio-sunset-roma.jpg" alt="Terrazza del Pincio sunset Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      <img src="./assets/atracoes/dia-03/terrazadelpincio.jpg" alt="Terrazza del Pincio sunset Roma" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
       <span>Terrazza del Pincio sunset Roma</span>
     </div>
       <p class="atracao-nova-desc">O mirante na borda oeste da Villa Borghese, acima da Piazza del Popolo, oferece uma das vistas mais amplas de Roma — do Vaticano à cúpula do Pantheon. Em agosto o pôr do sol ocorre por volta das 20h15. Cheguem às 19h30 para garantir lugar na grade da beira. Ao lado, uma lojinha vende cerveja gelada e snacks — sentem no jardim murado e esperem o sol desaparecer atrás da linha dos telhados.</p>
@@ -4014,13 +4030,14 @@
 
   <!-- ══ JANTAR DIA 03 ══ -->
   <span class="rest-titulo-script">Sugestão pro Jantar</span>
-  <div class="rest-grid-ab">
-    <div class="restaurante">
+  <div style="margin: 16px 0 24px;">
+    <div class="restaurante restaurante-com-foto">
       <div class="restaurante-header">
         <div class="rest-letra">🍽</div>
         <div class="rest-nome">Crazy Pizza<span class="rest-recomendado-badge badge-premium">✨ Experiência Premium</span></div>
       </div>
       <div class="restaurante-body">
+        <img class="rest-img" src="assets/restaurantes/crazy-pizza.jpg" alt="crazy-pizza">
         <p>📍 Via Vittorio Veneto 167 · <strong>10 min a pé da Villa Borghese</strong> · no coração da Dolce Vita</p>
         <p>Culinária: Pizzaria de luxo do chef Flavio Briatore · pizza ultra fina sem fermento · DJ set ao vivo todas as noites</p>
         <p>💰 <strong>€25–45</strong> ≈ R$155–279 por pessoa · experiência premium</p>
@@ -4583,12 +4600,13 @@
 
   <!-- Jantar primeira noite -->
   <span class="rest-titulo-script">Sugestão pro Jantar de Chegada</span>
-  <div class="restaurante" style="margin-bottom:16px;">
+  <div class="restaurante restaurante-com-foto" style="margin-bottom:16px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍽</div>
       <div class="rest-nome">Alfred — Trattoria Moderna<span class="rest-recomendado-badge badge-bom">⭐ Bem Avaliado</span></div>
     </div>
     <div class="restaurante-body">
+      <img class="rest-img" src="assets/restaurantes/alfred.jpg" alt="alfred">
       <p>📍 Via Cappuccini 30, Sant'Agnello · <strong>10 min a pé do hotel</strong></p>
       <p>Culinária: Trattoria familiar moderna · frutos do mar frescos · massas artesanais · ambiente acolhedor</p>
       <p>💰 <strong>€30–40</strong> ≈ R$186–248 por pessoa · nota 4.9 no Google</p>
@@ -4855,12 +4873,13 @@
   </div>
 
   <span class="rest-titulo-script">Sugestão pro Jantar</span>
-  <div class="restaurante" style="margin-bottom:16px;">
+  <div class="restaurante restaurante-com-foto" style="margin-bottom:16px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍽</div>
       <div class="rest-nome">Twins Gourmet<span class="rest-recomendado-badge badge-bom">⭐ Bem Avaliado</span></div>
     </div>
     <div class="restaurante-body">
+      <img class="rest-img" src="assets/restaurantes/twins-gourmet.jpg" alt="twins-gourmet">
       <p>📍 Corso Italia 134 · <strong>5 min a pé da Piazza Tasso</strong> · no centro histórico</p>
       <p>Culinária: Street food gourmet · schiacciata artesanal · sanduíches com ingredientes fatiados na hora · taglieri de frios</p>
       <p>💰 <strong>€10–20</strong> ≈ R$62–124 por pessoa · excelente custo-benefício</p>
@@ -4960,7 +4979,7 @@
                 <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Ponta extrema da Península · parada para mergulho em enseada cristalina · Capri visível ao fundo</div>
               </div>
             </div>
-            <div style="background:#dbeafe;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:var(--azul-medio);text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Punta Campanella</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-06/punta-campanella.webp" alt="Punta Campanella" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
           <!-- 2 -->
@@ -4972,7 +4991,7 @@
                 <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Arquipélago privado de Nureyev · as "Ilhas das Sereias" · mergulho com snorkel na água turquesa</div>
               </div>
             </div>
-            <div style="background:#dbeafe;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:var(--azul-medio);text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Ilhas Li Galli</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-06/li-galli.jpg" alt="Ilhas Li Galli" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
           <!-- 3 -->
@@ -4984,7 +5003,7 @@
                 <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Vila de pescadores tranquila · Praia da Gavitella vista de baixo · muito menos turistas que Positano</div>
               </div>
             </div>
-            <div style="background:#dbeafe;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:var(--azul-medio);text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Praiano</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-06/praiano.jpg" alt="Praiano" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
           <!-- 4 -->
@@ -4996,7 +5015,7 @@
                 <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">O ponto mais dramático da rota — fenda na rocha com ponte em arco. O barco entra literalmente dentro.</div>
               </div>
             </div>
-            <div style="background:#dbeafe;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:var(--azul-medio);text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Fiordo di Furore</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-06/fiordo-di-furore.jpg" alt="Fiordo di Furore" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
           <!-- 5 -->
@@ -5008,7 +5027,7 @@
                 <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Gruta marinha com água verde-esmeralda · entrada de bote · <strong>~€5–6 à parte</strong> pago na hora</div>
               </div>
             </div>
-            <div style="background:#dbeafe;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:var(--azul-medio);text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Grotta Smeraldo</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-06/grotta-smeraldo.jpg" alt="Grotta Smeraldo" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
           <!-- 6 -->
@@ -5020,7 +5039,7 @@
                 <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Desembarcam · Catedral de Sant'Andrea · granita di limone · Piazzale dei Protontini para foto</div>
               </div>
             </div>
-            <div style="background:#dbeafe;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:var(--azul-medio);text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Amalfi</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-06/amalfi.jpg" alt="Amalfi" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
           <!-- 7 -->
@@ -5032,7 +5051,7 @@
                 <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Desembarcam · Spiaggia Grande · vielas · almoço com vista · gelato antes de voltar ao barco</div>
               </div>
             </div>
-            <div style="background:#dbeafe;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:var(--azul-medio);text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Positano</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-06/positano.jpg" alt="Positano" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
           <!-- + -->
@@ -5044,7 +5063,7 @@
                 <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Fiorde protegido + parada para almoço com Spaghetti alla Nerano · confirmar com a operadora</div>
               </div>
             </div>
-            <div style="background:#f0e8d4;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:#8a6830;text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Nerano</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#f0e8d4;"><img src="./assets/atracoes/dia-06/nerano.jpg" alt="Nerano" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
         </div>
@@ -5260,12 +5279,13 @@
 
   <!-- ALMOÇO EM RAVELLO -->
   <span class="rest-titulo-script">Sugestão pro Almoço em Ravello</span>
-  <div class="restaurante" style="margin-bottom:16px;">
+  <div class="restaurante restaurante-com-foto" style="margin-bottom:16px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍽</div>
       <div class="rest-nome">Salvatore Ravello 1958<span class="rest-recomendado-badge badge-bom">⭐ Bem Avaliado</span></div>
     </div>
     <div class="restaurante-body">
+      <img class="rest-img" src="assets/restaurantes/salvatore-ravello.jpg" alt="salvatore-ravello">
       <p>📍 Via della Repubblica 2, Ravello · <strong>praticamente em frente à parada do ônibus</strong></p>
       <p>Culinária: Italiana da Campânia · frutos do mar frescos · cardápio criativo com ingredientes locais · terraço panorâmico</p>
       <p>💰 <strong>€25–45</strong> ≈ R$155–279 por pessoa · 4.3 no Google · #6 em Ravello</p>
@@ -5577,12 +5597,13 @@
 
   <!-- JANTAR -->
   <span class="rest-titulo-script">Sugestão pro Jantar</span>
-  <div class="restaurante" style="margin-bottom:16px;">
+  <div class="restaurante restaurante-com-foto" style="margin-bottom:16px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍽</div>
       <div class="rest-nome">Bottiglieria Sant'Agnello<span class="rest-recomendado-badge badge-bom">⭐ Bem Avaliado</span></div>
     </div>
     <div class="restaurante-body">
+      <img class="rest-img" src="assets/restaurantes/bottiglieria-santaghello.jpg" alt="bottiglieria-santaghello">
       <p>📍 Sant'Agnello · <strong>próximo ao hotel</strong> · ao lado da Igreja San Prisco e Agnello</p>
       <p>Culinária: Enoteca · vinho local da Campânia · salumi · formaggi · pratos italianos</p>
       <p>💰 <strong>€15–30</strong> ≈ R$93–186 por pessoa · nota 4.5 no Google</p>
@@ -5758,7 +5779,7 @@
               <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">1</div>
               <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Salto di Tiberio</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Falésia de 300m de onde o Imperador Tibério teria jogado seus inimigos — lenda ou não, a vista é dantesca</div></div>
             </div>
-            <div style="background:#dbeafe;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:var(--azul-medio);text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Salto di Tiberio</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/salto-di-tiberio.jpg" alt="Salto di Tiberio" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
           <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
@@ -5766,7 +5787,7 @@
               <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">2</div>
               <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Gruta Branca</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Caverna de calcário branco com estalactites que brilham quando o sol entra — a mais silenciosa das grutas de Capri</div></div>
             </div>
-            <div style="background:#dbeafe;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:var(--azul-medio);text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Gruta Branca</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/gruta-branca.jpg" alt="Gruta Branca" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
           <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
@@ -5774,7 +5795,7 @@
               <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">3</div>
               <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Arco Naturale</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Arco de pedra calcária esculpido pelo mar — o símbolo mais elegante da costa leste de Capri, visto de baixo é de tirar o fôlego</div></div>
             </div>
-            <div style="background:#dbeafe;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:var(--azul-medio);text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Arco Naturale</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/arco-naturale.jpg" alt="Arco Naturale" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
           <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
@@ -5782,7 +5803,7 @@
               <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">4</div>
               <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Casa Malaparte</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">A casa mais famosa de Capri — cubo vermelho sobre o penhasco projetado pelo escritor Curzio Malaparte. Vista de barco é impossível de esquecer</div></div>
             </div>
-            <div style="background:#dbeafe;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:var(--azul-medio);text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Casa Malaparte</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/casa-malaparte.jpg" alt="Casa Malaparte" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
           <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
@@ -5790,7 +5811,7 @@
               <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">5</div>
               <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Faraglioni di Capri</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">As três rochas que definem Capri. O barco passa pelo arco do Faraglione di Mezzo — tradição de dar sorte ao casal que passa juntos</div></div>
             </div>
-            <div style="background:#dbeafe;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:var(--azul-medio);text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Faraglioni</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/faraglioni.jpg" alt="Faraglioni" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
           <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
@@ -5798,7 +5819,7 @@
               <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">6</div>
               <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Marina Piccola</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">A única praia de seixos de Capri — com os Faraglioni ao fundo. Parada para banho em algumas operadoras</div></div>
             </div>
-            <div style="background:#dbeafe;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:var(--azul-medio);text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Marina Piccola</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/marina-piccola.jpg" alt="Marina Piccola" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
           <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
@@ -5806,7 +5827,7 @@
               <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">7</div>
               <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Gruta Verde</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Luz verde refletida pelo fundo do mar — menor e mais íntima que a Azzurra, raramente lotada</div></div>
             </div>
-            <div style="background:#dbeafe;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:var(--azul-medio);text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Gruta Verde</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/gruta-verde.jpg" alt="Gruta Verde" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
           <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
@@ -5814,7 +5835,7 @@
               <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">8</div>
               <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Farol de Punta Carena</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">O segundo farol mais antigo da Itália, na ponta oeste da ilha — com pôr do sol espetacular se o passeio for no final do dia</div></div>
             </div>
-            <div style="background:#dbeafe;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:var(--azul-medio);text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Punta Carena</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/punta-carena.jpg" alt="Punta Carena" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
           <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
@@ -5822,7 +5843,7 @@
               <div style="background:#1a6b3a;color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">9</div>
               <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:#1a6b3a;">Grotta Azzurra ✦ O Ponto Alto</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">A gruta mais famosa do Mediterrâneo — água azul sobrenatural iluminada por baixo. Entrada de bote pequeno. <strong>Ticket extra à parte</strong> — pago direto na gruta</div></div>
             </div>
-            <div style="background:#d1fae5;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;color:#1a6b3a;text-align:center;padding:6px;gap:4px;min-height:70px;"><span style="font-size:18px;">📷</span><span style="font-weight:600;line-height:1.3;">Grotta Azzurra</span></div>
+            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#d1fae5;"><img src="./assets/atracoes/dia-09/grotta-azzurra.jpg" alt="Grotta Azzurra" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
 
         </div>
@@ -5968,12 +5989,13 @@
 
   <!-- JANTAR -->
   <span class="rest-titulo-script">Sugestão pro Jantar</span>
-  <div class="restaurante" style="margin-bottom:16px;">
+  <div class="restaurante restaurante-com-foto" style="margin-bottom:16px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍽</div>
       <div class="rest-nome">Bianca Rooftop Carne & Crudo<span class="rest-recomendado-badge badge-premium">✨ Experiência Premium</span></div>
     </div>
     <div class="restaurante-body">
+      <img class="rest-img" src="assets/restaurantes/bianca-rooftop.jpg" alt="bianca-rooftop">
       <p>📍 Hotel La Palma · <strong>3 min a pé da Piazzetta</strong> · Via Vittorio Emanuele 39</p>
       <p>Culinária: Steakhouse gourmet italiana · raw bar · churrasco em forno a carvão · vista 360° sobre Capri</p>
       <p>💰 <strong>€60–100+</strong> ≈ R$370–620 por pessoa · dress code: <em>island chic</em> · jantar apenas</p>
@@ -6157,12 +6179,13 @@
 
   <!-- ALMOÇO -->
   <span class="rest-titulo-script">Sugestão pro Almoço em Capri</span>
-  <div class="restaurante" style="margin-bottom:16px;">
+  <div class="restaurante restaurante-com-foto" style="margin-bottom:16px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍽</div>
       <div class="rest-nome">Ristorante Verginiello<span class="rest-recomendado-badge badge-bom">⭐ Bem Avaliado</span></div>
     </div>
     <div class="restaurante-body">
+      <img class="rest-img" src="assets/restaurantes/ristorante-verginiello.jpg" alt="ristorante-verginiello">
       <p>📍 Via Lo Capo 8, Capri · <strong>3 min da Piazzetta</strong></p>
       <p>Culinária: Italiana caprese · insalata caprese, linguine alle vongole, pesce fresco · terraço com vista</p>
       <p>💰 <strong>€20–35</strong> ≈ R$124–217 por pessoa</p>
@@ -6232,12 +6255,13 @@
 
   <!-- JANTAR -->
   <span class="rest-titulo-script">Sugestão pro Jantar</span>
-  <div class="restaurante" style="margin-bottom:16px;">
+  <div class="restaurante restaurante-com-foto" style="margin-bottom:16px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍽</div>
       <div class="rest-nome">Sweet Burger Centrale<span class="rest-recomendado-badge badge-economico">💰 Econômico</span></div>
     </div>
     <div class="restaurante-body">
+      <img class="rest-img" src="assets/restaurantes/sweet-burger.jpg" alt="sweet-burger">
       <p>📍 Via Tenca 24, Milão · <strong>8 min a pé da Milano Centrale</strong></p>
       <p>Culinária: Smash burgers artesanais · pão doce estilo japonês · batatas fritas · opções vegetarianas</p>
       <p>💰 <strong>€12–18</strong> ≈ R$74–111 por pessoa · excelente custo-benefício para a região</p>
@@ -6376,12 +6400,13 @@
 
   <!-- CAFÉS -->
   <span class="rest-titulo-script">Sugestão pro Café da Manhã</span>
-  <div class="restaurante" style="margin-bottom:12px;">
+  <div class="restaurante restaurante-com-foto" style="margin-bottom:12px;">
     <div class="restaurante-header">
       <div class="rest-letra">☕</div>
       <div class="rest-nome">Marchesi 1824 — Galleria Vittorio Emanuele II<span class="rest-recomendado-badge badge-premium">✨ Experiência Premium</span></div>
     </div>
     <div class="restaurante-body">
+      <img class="rest-img" src="assets/restaurantes/marchesi.jpg" alt="marchesi">
       <p>📍 Galleria Vittorio Emanuele II, Piazza della Scala 2 · <strong>2 min do Duomo</strong></p>
       <p>Fundada em 1824 · hoje parceria Prada · pasteis de amêndoa, cornetto, cappuccino · ambiente Belle Époque dourado</p>
       <p>💰 <strong>€8–15</strong> ≈ R$50–93 por pessoa · preço de luxo, experiência inesquecível</p>
@@ -6389,12 +6414,13 @@
       <a class="link-rest" href="https://www.marchesi1824.com" target="_blank">↗ Mais informações</a>
     </div>
   </div>
-  <div class="restaurante" style="margin-bottom:16px;">
+  <div class="restaurante restaurante-com-foto" style="margin-bottom:16px;">
     <div class="restaurante-header">
       <div class="rest-letra">☕</div>
       <div class="rest-nome">Gran Caffè Visconteo<span class="rest-recomendado-badge badge-economico">💰 Econômico</span></div>
     </div>
     <div class="restaurante-body">
+      <img class="rest-img" src="assets/restaurantes/gran-caffe-visconteo.jpg" alt="gran-caffe-visconteo">
       <p>📍 Piazza del Duomo · <strong>na própria praça do Duomo</strong></p>
       <p>Café italiano clássico · cornetto + cappuccino no balcão ao estilo italiano · rápido e autêntico</p>
       <p>💰 <strong>€3–5</strong> ≈ R$18–31 · custo-benefício excelente</p>
@@ -6556,12 +6582,13 @@
   </div>
 
   <span class="rest-titulo-script">Sugestão pro Almoço ou Jantar de Chegada</span>
-  <div class="restaurante" style="margin-bottom:16px;">
+  <div class="restaurante restaurante-com-foto" style="margin-bottom:16px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍽</div>
       <div class="rest-nome">Ristorante Silvio<span class="rest-recomendado-badge badge-bom">⭐ Bem Avaliado</span></div>
     </div>
     <div class="restaurante-body">
+      <img class="rest-img" src="assets/restaurantes/ristorante-silvio.jpg" alt="ristorante-silvio">
       <p>📍 Via Carcano 12, Bellagio · <strong>8 min a pé do hotel</strong></p>
       <p>Culinária: Peixes frescos do lago · lavarello, misultin, agoni · massas artesanais</p>
       <p>💰 <strong>€25–40</strong> ≈ R$155–248 por pessoa · ingredientes do próprio lago</p>
@@ -7126,6 +7153,73 @@
     <p>Checkout no Hotel Centrale Bellagio. Ferry Bellagio → Varenna → trem para Milano Centrale → Frecciarossa para Roma Termini. Comprem um lanche para o trem (3h de viagem). Check-in no Hotel Trastevere à noite.</p>
   </div>
 
+  <!-- COMO CHEGAR EM ROMA -->
+  <div class="cidade-chegada" style="margin:20px 0 16px;">
+    <div class="cidade-chegada-header"><span style="font-size:14px;">🚂</span>
+      <span class="cidade-chegada-titulo">Como Chegar em Roma — Bellagio → Varenna → Roma Termini</span>
+    </div>
+    <div class="cidade-chegada-body">
+      <div class="card-lista" style="margin-top:8px;">
+        <div class="card-lista-item">
+          <span class="card-lista-emoji">⛴️</span>
+          <div class="card-lista-info">
+            <span class="card-lista-titulo">Ferry — Bellagio → Varenna</span>
+            <span class="card-lista-desc">~15 min · <strong>~€5/pessoa</strong> · horários frequentes (a cada ~30 min) · sem reserva · embarque no pier central de Bellagio</span>
+          </div>
+          <span class="card-lista-badge badge-economico">💰 Sem reserva</span>
+        </div>
+        <div class="card-lista-item">
+          <span class="card-lista-emoji">🚶</span>
+          <div class="card-lista-info">
+            <span class="card-lista-titulo">Caminhada — Porto de Varenna → Estação Varenna-Esino</span>
+            <span class="card-lista-desc">~10 min a pé pelo centro de Varenna · estação na beira do lago</span>
+          </div>
+        </div>
+        <div class="card-lista-item">
+          <span class="card-lista-emoji">🚆</span>
+          <div class="card-lista-info">
+            <span class="card-lista-titulo">Trem regional — Varenna-Esino → Milano Centrale</span>
+            <span class="card-lista-desc">~1h20 · <strong>~€10–15/pessoa</strong> · comprar no app Trenitalia ou nas máquinas da estação · validar antes de embarcar</span>
+          </div>
+          <span class="card-lista-badge" style="background:#fef9c3;color:#854d0e;border:1.5px solid #fde047;">Trenitalia</span>
+        </div>
+        <div class="card-lista-item">
+          <span class="card-lista-emoji">🚄</span>
+          <div class="card-lista-info">
+            <span class="card-lista-titulo">Frecciarossa — Milano Centrale → Roma Termini</span>
+            <span class="card-lista-desc">~3h · <strong>~€35–70/pessoa</strong> dependendo da antecedência · sentar lado E para vista do campo · lanche a bordo disponível</span>
+          </div>
+          <span class="card-lista-badge" style="background:var(--azul-claro);color:var(--azul-medio);border:1.5px solid var(--azul-medio);">⚠️ Reserva antecipada</span>
+        </div>
+      </div>
+      <div class="dica2-box" style="margin-top:10px;">
+        <span class="dica2-label">🎟️ Reserve o Frecciarossa com antecedência</span>
+        <p>O Frecciarossa Milano → Roma é o trecho mais procurado da Itália. <strong>Reserve assim que possível</strong> pelo site ou app Trenitalia — os preços sobem muito próximo da data. Comprem as passagens os quatro trechos de uma vez: ferry (sem reserva) + regional Varenna → Milão + Frecciarossa Milão → Roma.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACOMODAÇÃO EM ROMA -->
+  <div class="cidade-chegada" style="margin:16px 0;">
+    <div class="cidade-chegada-header"><span style="font-size:14px;">🏨</span>
+      <span class="cidade-chegada-titulo">Sua Hospedagem em Roma — Trastevere</span>
+    </div>
+    <div class="cidade-chegada-body">
+      <div class="cidade-hotel">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+          <span class="cidade-hotel-nome" style="margin:0;">Hotel Trastevere</span>
+          <span style="background:#f0fdf4;color:#166534;border:1.5px solid #86efac;border-radius:8px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;padding:3px 9px;letter-spacing:1px;white-space:nowrap;">☕ Café incluso</span>
+        </div>
+        <span class="cidade-hotel-end">📍 Bairro de Trastevere, Roma</span>
+      </div>
+      <p>Check-in: <strong>a partir das 14h</strong> · Check-out: <strong>12h</strong> · café da manhã incluso</p>
+      <div class="dica2-box" style="margin-top:10px;">
+        <span class="dica2-label">🌙 Trastevere à Noite</span>
+        <p>Chegando de viagem, o ideal é fazer check-in e descansar. Mas se tiverem pique, Trastevere tem um dos melhores climas noturnos de Roma — ruelas de paralelepípedo iluminadas, bares com mesas na calçada, músicos de rua e restaurantes que abrem até meia-noite. É um passeio a pé pelo próprio bairro — sem precisar de metrô ou táxi.</p>
+      </div>
+    </div>
+  </div>
+
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
 </section>
@@ -7284,12 +7378,13 @@
 
   <!-- JANTAR DESPEDIDA -->
   <span class="rest-titulo-script">Sugestão pro Jantar de Despedida</span>
-  <div class="restaurante" style="margin-bottom:12px;">
+  <div class="restaurante restaurante-com-foto" style="margin-bottom:12px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍽</div>
       <div class="rest-nome">Tonnarello<span class="rest-recomendado-badge badge-bom">⭐ Bem Avaliado</span></div>
     </div>
     <div class="restaurante-body">
+      <img class="rest-img" src="assets/restaurantes/tonnarello.jpg" alt="tonnarello">
       <p>📍 Via della Paglia 1, Trastevere · <strong>2 min da Piazza di Santa Maria</strong></p>
       <p>Culinária: Trattoria romana clássica · cacio e pepe, gricia, amatriciana, carbonara · ambiente animado com mesas na rua</p>
       <p>💰 <strong>€15–30</strong> ≈ R$93–186 por pessoa · custo-benefício excelente para o bairro</p>
@@ -7307,115 +7402,62 @@
 </div>
 </section>
 
-<section id="ese" class="secao-wrapper">
-<div class="page secao">
-  <span class="titulo-principal">E Se...?</span>
-  <div class="ese-item">
-    <h3>☔ Chover em um dia de passeio ao ar livre?</h3>
-    <p>Chuva em agosto em Roma é rara, mas trovoadas rápidas ocorrem no fim da tarde. O Coliseu pode ser visitado com chuva (parcialmente coberto). O Fórum Romano fica escorregadio com chuva — cuidado nos paralelepípedos.</p>
-    <p>Alternativa imediata coberta: Museu Nazionale Romano (Palazzo Massimo alle Terme) — 10 min do Coliseu de metrô, €10, coleção romana impressionante e pouco visitada.</p>
-    <p>Para chuva longa: Galleria Doria Pamphilj (Via del Corso, 305) — galeria privada no palazzo, ingresso €16, um dos espaços mais belos de Roma, sem fila.</p>
-  </div>
-
-  <div class="ese-item">
-    <h3>😷 Uma de vocês passar mal?</h3>
-    <p>Farmácia mais próxima do hotel: Farmacia Trevi — Via del Tritone, 156 (5 min a pé). Aberta até as 20h30.</p>
-    <p>Farmácia de plantão 24h: Farmacia della Stazione Termini — estação Termini (taxi ~10 min)</p>
-    <p>Hospital de referência com inglês: Ospedale Pediatrico Bambino Gesù (adultos: Policlinico Umberto I — Viale del Policlinico, 155)</p>
-    <p>Emergências: <strong>118</strong> (equivalente ao SAMU) / <strong>113</strong> (polícia) / <strong>112</strong> (emergência geral europeia)</p>
-    <p>Como pedir ajuda em italiano: <em>"Ho bisogno di aiuto! Chiamate un'ambulanza!"</em> — Preciso de ajuda! Chamem uma ambulância!</p>
-  </div>
-
-  <div class="ese-item">
-    <h3>🚫 Ingresso do Coliseu ou Vaticano esgotado?</h3>
-    <p>Coliseu: tente reservar no site às 24h — cancelamentos liberam vagas a toda hora. Alternativa: Terme di Caracalla (termas romanas do século III, menos visitadas, igualmente impressionantes) — a apenas 10 min a pé do hotel no Monti.</p>
-    <p>Vaticano: verifique o site oficial a partir das 23h58 (eles liberam cancelamentos à meia-noite). Se não conseguir, a Basílica de São Pedro e a vista da Piazza são gratuitas e não precisam de reserva.</p>
-  </div>
-
-  <div class="ese-item">
-    <h3>🚕 Táxi cobrando valor absurdo?</h3>
-    <p>A tarifa tabelada do aeroporto Fiumicino é €50 fixo para o centro histórico — exijam antes de entrar e não aceitem mais.</p>
-    <p>Na cidade, corridas curtas (2-5 km): €8-15 é o normal. Nunca entre em táxi sem confirmar que o taxímetro foi zerado.</p>
-    <p>O que fazer: se o valor na chegada for absurdo, paguem o que parecer razoável, anotem o número da placa e o número do táxi (fica no painel), e registrem reclamação no: <strong>06 0606</strong> (central do táxi de Roma).</p>
-    <p>A solução mais simples: use FREE NOW — preço fixo, cartão, sem negociação.</p>
-  </div>
-
-  <div class="ese-item">
-    <h3>✈️ Problema com o voo ou chegada atrasada?</h3>
-    <p>Se a chegada atrasar para depois das 14h: pule a Escadaria e a Piazza di Spagna do Dia 01 e vá direto para a Trevi + jantar em Navona — Roma à noite é especialmente bonita no primeiro dia.</p>
-    <p>Para problemas com a companhia aérea: na UE, o Regulamento CE 261/2004 garante compensação de €250-600 por atraso de 3h+ em voos que partem ou chegam à Europa, dependendo da distância.</p>
-  </div>
-
-  <div class="ese-item">
-    <h3>📱 Celular sem bateria ou sinal?</h3>
-    <p>Wi-Fi gratuito confiável: Trevi Palace Hotel (no lobby, sempre disponível) / McDonald's e Starbucks espalhados pelo centro / Stazione Termini</p>
-    <p>Chip italiano: comprem na loja TIM ou Vodafone em Fiumicino na chegada — ~€15 para 15GB ≈ R$93. Vale muito se ficarem mais dias na Itália.</p>
-    <p>Powerbank disponível para compra: qualquer loja de eletrônicos no centro (procure lojas chinesas de produtos eletrônicos na Via Nazionale ou perto de Termini)</p>
-  </div>
-
-  <div class="ese-item">
-    <h3>☀️ Calor extremo — o que fazer?</h3>
-    <p>Se a temperatura passar de 38°C (possível em agosto), priorizem museus e espaços cobertos até as 17h. Ajustem o Fórum Romano para o fim da tarde (abre até as 19h em agosto).</p>
-    <p>Hidratação: reabastecimento gratuito nas nasoni (torneiras públicas) em toda a cidade. A mais próxima do hotel fica na Via della Stamperia, a 3 minutos.</p>
-    <p>Se uma de vocês tiver sintomas de insolação (tontura, náusea, pele seca): sombra imediata, água, retire o calçado e molhe os pés, ligue para o 118.</p>
-  </div>
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
-
-</div>
-</section>
-<!-- ════════════════════════════════ GOOGLE MAPS -->
-<section id="maps" class="secao-wrapper">
-<div class="page secao">
-  <span class="titulo-principal">Google Maps</span>
-  <p style="font-size:13.5px; line-height:1.7; margin-bottom:20px;">Abram o Google Maps, criem uma lista chamada "Roma Ana Luiza e Débora" e salvem cada ponto abaixo. Depois de salvar todos, o app mostra todos os pins no mapa ao mesmo tempo — é o roteiro visual de vocês.</p>
-
-  <div class="maps-lista">
-    <div class="maps-dia-titulo">📅 DIA 01 — 04/08 TERÇA</div>
-    <div class="maps-item"><span class="num">01 —</span> Fontana di Trevi → <em>Fontana di Trevi, Piazza di Trevi, Roma</em></div>
-    <div class="maps-item"><span class="num">02 —</span> Escadaria Trinità dei Monti → <em>Scalinata di Trinità dei Monti, Piazza di Spagna, Roma</em></div>
-    <div class="maps-item"><span class="num">03 —</span> Pantheon → <em>Pantheon, Piazza della Rotonda, Roma</em></div>
-    <div class="maps-item"><span class="num">04 —</span> Piazza Navona → <em>Piazza Navona, Roma</em></div>
-    <div class="maps-item"><span class="rest">🍽 A —</span> Forno Campo de' Fiori → <em>Forno di Campo de' Fiori, Piazza Campo de' Fiori, 22, Roma</em></div>
-    <div class="maps-item"><span class="rest">🍽 B —</span> Osteria da Fortunata → <em>Osteria da Fortunata, Via del Pellegrino 14, Roma</em></div>
-
-    <div class="maps-dia-titulo">📅 DIA 02 — 05/08 QUARTA</div>
-    <div class="maps-item"><span class="num">01 —</span> Museus do Vaticano → <em>Musei Vaticani, Viale Vaticano, Città del Vaticano</em></div>
-    <div class="maps-item"><span class="num">02 —</span> Basílica de São Pedro → <em>Basilica di San Pietro, Città del Vaticano</em></div>
-    <div class="maps-item"><span class="num">03 —</span> Trastevere → <em>Trastevere, Roma</em></div>
-    <div class="maps-item"><span class="num">03b —</span> Santa Maria in Trastevere → <em>Basilica di Santa Maria in Trastevere, Roma</em></div>
-    <div class="maps-item"><span class="rest">🍽 A —</span> Pizzarium Bonci → <em>Pizzarium, Via della Meloria 43, Roma</em></div>
-    <div class="maps-item"><span class="rest">🍽 B —</span> Da Enzo al 29 → <em>Da Enzo al 29, Via dei Vascellari 29, Roma</em></div>
-
-    <div class="maps-dia-titulo">📅 DIA 03 — 06/08 QUINTA</div>
-    <div class="maps-item"><span class="num">01 —</span> Coliseu → <em>Colosseo, Piazza del Colosseo, Roma</em></div>
-    <div class="maps-item"><span class="num">02 —</span> Fórum Romano → <em>Foro Romano, Via Sacra, Roma</em></div>
-    <div class="maps-item"><span class="num">03 —</span> Galeria Borghese → <em>Galleria Borghese, Viale del Museo Borghese 5, Roma</em></div>
-    <div class="maps-item"><span class="num">04 —</span> Terraço do Pincio → <em>Terrazzo del Pincio, Villa Borghese, Roma</em></div>
-    <div class="maps-item"><span class="rest">🍽 A —</span> Roscioli → <em>Roscioli Salumeria con Cucina, Via dei Giubbonari 21, Roma</em></div>
-    <div class="maps-item"><span class="rest">🍽 B —</span> Osteria Fernanda → <em>Osteria Fernanda, Via Crescenzio 57, Roma</em></div>
-
-    <div class="maps-dia-titulo">📅 DIA 04 — 07/08 SEXTA</div>
-    <div class="maps-item"><span class="num">01 —</span> Café Monti → <em>Via Leonina, Rione Monti, Roma</em></div>
-    <div class="maps-item"><span class="num">02 —</span> Fontana di Trevi (despedida) → <em>Fontana di Trevi, Piazza di Trevi, Roma</em></div>
-    <div class="maps-item"><span class="num">03 —</span> Mercado Campo de' Fiori → <em>Campo de' Fiori, Roma</em></div>
-    <div class="maps-item"><span class="rest">🍽 A —</span> Forno Campo de' Fiori → <em>Forno di Campo de' Fiori, Piazza Campo de' Fiori 22, Roma</em></div>
-    <div class="maps-item"><span class="rest">🏨</span> Hotel → <em>Via Mazzarino 2, Monti, Roma</em></div>
-    <div class="maps-item"><span class="rest">🚂</span> Estação Termini → <em>Roma Termini, Piazza dei Cinquecento, Roma</em></div>
-  </div>
-</div>
-</section>
-
 <!-- ════════════════════════════════ ENCERRAMENTO -->
+<section id="encerramento" style="position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:url('assets/capas/menu-pratico-bg.png');background-size:cover;background-position:center;z-index:0;"></div>
+  <div style="position:relative;z-index:2;background:linear-gradient(135deg,rgba(13,45,107,0.95) 0%,rgba(26,74,158,0.92) 50%,rgba(34,85,168,0.92) 100%);border-radius:20px;padding:56px 40px 48px;max-width:420px;width:calc(100% - 48px);text-align:center;box-shadow:0 12px 48px rgba(0,0,0,0.35);">
+    <div style="position:absolute;top:-52px;left:50%;transform:translateX(-50%);width:90px;height:90px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.12);padding:6px;">
+      <img src="assets/branding/logo-vamos-carimbar-azul.png" alt="Vamos Carimbar" style="width:72px;height:72px;object-fit:contain;">
+    </div>
+    <div style="font-family:'Poppins',sans-serif;font-size:18px;font-weight:700;color:white;margin-bottom:10px;line-height:1.4;">Viajar é carimbar histórias,</div>
+    <div style="font-family:'Magnolia Script',cursive;font-size:64px;line-height:1.1;color:white;text-shadow:0 4px 20px rgba(0,0,0,0.4);margin-bottom:36px;white-space:nowrap;">Boa viagem!</div>
+    <p style="font-size:12.5px;line-height:1.8;color:rgba(255,255,255,0.78);margin:0;">Este roteiro foi pensado para <strong style="color:white;">otimizar deslocamentos, horários e ritmo</strong>, garantindo a <strong style="color:white;">melhor experiência dentro do tempo disponível</strong>. Mas viagem não é um roteiro engessado — é <strong style="color:white;">experiência viva</strong>. Ajustem o que fizer sentido, <strong style="color:white;">prolonguem o que encantar</strong> e adaptem o dia conforme a energia de vocês.</p>
+  </div>
+</section>
 
-<!-- ══ ENCERRAMENTO ══ -->
-<section id="encerramento" style="page-break-before:always;">
-<div id="encerramento" style="background:linear-gradient(135deg,#0a1628 0%,#1a3a5c 100%);padding:80px 60px;text-align:center;color:white;">
-  <p class="frase-principal">Este roteiro foi cuidadosamente estruturado para otimizar deslocamentos, horários, clima e ritmo da viagem, garantindo a melhor experiência possível dentro do tempo disponível.</p>
-  <div class="bold-frase">No entanto, viagens são vivas.</div>
-  <p class="frase-principal">O clima pode mudar, a energia do dia pode ser diferente, um lugar pode encantar mais do que o previsto. Por isso, este planejamento não é uma agenda engessada, mas sim um guia estratégico. Ana Luiza e Débora — ajustem horários, prolonguem momentos especiais ou encurtem paradas conforme sentirem necessidade.</p>
-  <div class="boa-viagem">Boa viagem! 🇮🇹</div>
-  <div class="social">@vamoscarimbar</div>
-</div>
+<!-- ════════════════════════════════ REDES SOCIAIS -->
+<section style="background:#f8fafc;padding:64px 24px 56px;text-align:center;">
+  <div style="max-width:360px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:0;">
+
+    <!-- Foto -->
+    <img src="assets/branding/foto-casal.png" alt="Vamos Carimbar" style="width:200px;display:block;margin:0 auto 28px;">
+
+    <!-- Título -->
+    <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:#0d2d6b;margin-bottom:16px;line-height:1.2;">Vamos Carimbar?!</div>
+
+    <!-- Texto -->
+    <p style="font-family:'Poppins',sans-serif;font-size:13px;line-height:1.8;color:#475569;margin:0 0 32px;">Nós temos uma filosofia de vida: <strong style="color:#0d2d6b;">"Pelo menos uma vez ao ano conhecer um lugar que nunca fomos antes"</strong><br>E o conhecimento nos proporciona viver isso.</p>
+
+    <!-- Redes sociais -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;width:100%;">
+
+      <!-- Instagram handles — linha única sem quebra -->
+      <div style="display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:nowrap;white-space:nowrap;">
+        <a href="https://instagram.com/vamoscarimbar" target="_blank" style="display:flex;align-items:center;gap:5px;text-decoration:none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="url(#ig1)"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.8" fill="none"/><circle cx="17.2" cy="6.8" r="1.1" fill="white"/><defs><linearGradient id="ig1" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#f9ce34"/><stop offset="0.35" stop-color="#ee2a7b"/><stop offset="1" stop-color="#6228d7"/></linearGradient></defs></svg>
+          <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#334155;font-weight:500;">vamoscarimbar</span>
+        </a>
+        <a href="https://instagram.com/fabianarosant" target="_blank" style="display:flex;align-items:center;gap:5px;text-decoration:none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="url(#ig2)"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.8" fill="none"/><circle cx="17.2" cy="6.8" r="1.1" fill="white"/><defs><linearGradient id="ig2" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#f9ce34"/><stop offset="0.35" stop-color="#ee2a7b"/><stop offset="1" stop-color="#6228d7"/></linearGradient></defs></svg>
+          <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#334155;font-weight:500;">fabianarosant</span>
+        </a>
+        <a href="https://instagram.com/ericdepaula.cruz" target="_blank" style="display:flex;align-items:center;gap:5px;text-decoration:none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="url(#ig3)"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.8" fill="none"/><circle cx="17.2" cy="6.8" r="1.1" fill="white"/><defs><linearGradient id="ig3" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#f9ce34"/><stop offset="0.35" stop-color="#ee2a7b"/><stop offset="1" stop-color="#6228d7"/></linearGradient></defs></svg>
+          <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#334155;font-weight:500;">ericdepaula.cruz</span>
+        </a>
+      </div>
+
+      <!-- YouTube -->
+      <a href="https://youtube.com/@vamoscarimbar" target="_blank" style="display:flex;align-items:center;gap:6px;text-decoration:none;">
+        <!-- Ícone play vermelho -->
+        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="14" rx="3.5" fill="#FF0000"/><path d="M8 10V4L14 7L8 10Z" fill="white"/></svg>
+        <!-- Texto YouTube estilizado -->
+        <span style="font-family:Arial,sans-serif;font-size:12px;font-weight:700;color:#282828;letter-spacing:-0.3px;">YouTube</span>
+        <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#334155;font-weight:500;">Vamos Carimbar</span>
+      </a>
+
+    </div>
+  </div>
 </section>
 
 </div><!-- fim main-content -->
