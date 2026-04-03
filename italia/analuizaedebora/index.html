@@ -1101,6 +1101,137 @@
   }
   .alerta-box-gold strong { color: #6b4c1e; }
 
+  /* ── ITINERÁRIO DO BARCO ── */
+.roteiro-barco-wrap{
+  margin:16px 0;
+}
+
+.roteiro-barco-titulo{
+  font-family:'Poppins',sans-serif;
+  font-weight:700;
+  font-size:12px;
+  color:var(--azul-medio);
+  margin-bottom:12px;
+  letter-spacing:0.5px;
+}
+
+.roteiro-barco-lista{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.roteiro-barco-item{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 110px;
+  gap:10px;
+  align-items:start;
+}
+
+.roteiro-barco-texto{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  padding:12px;
+  background:var(--azul-claro);
+  border-radius:10px;
+  min-width:0;
+}
+
+.roteiro-barco-num{
+  background:var(--azul-medio);
+  color:white;
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Poppins',sans-serif;
+  font-weight:700;
+  font-size:11px;
+  flex-shrink:0;
+}
+
+.roteiro-barco-item-titulo{
+  font-family:'Poppins',sans-serif;
+  font-weight:700;
+  font-size:12px;
+  color:var(--azul-medio);
+}
+
+.roteiro-barco-item-desc{
+  font-size:11px;
+  color:#475569;
+  margin-top:3px;
+  line-height:1.5;
+}
+
+.roteiro-barco-foto{
+  border-radius:10px;
+  overflow:hidden;
+  background:#dbeafe;
+  height:88px;
+}
+
+.roteiro-barco-foto img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.roteiro-barco-texto-destaque{
+  background:#d1fae5;
+}
+
+.roteiro-barco-num-destaque{
+  background:#1a6b3a;
+}
+
+.roteiro-barco-item-titulo-destaque{
+  color:#1a6b3a;
+}
+
+.roteiro-barco-foto-destaque{
+  background:#d1fae5;
+}
+
+@media (max-width: 600px){
+  .roteiro-barco-item{
+    grid-template-columns:minmax(0,1fr) 96px;
+    gap:8px;
+  }
+
+  .roteiro-barco-texto{
+    padding:10px;
+    gap:8px;
+  }
+
+  .roteiro-barco-num,
+  .roteiro-barco-num-destaque{
+    width:24px;
+    height:24px;
+    font-size:10px;
+  }
+
+  .roteiro-barco-item-titulo,
+  .roteiro-barco-item-titulo-destaque{
+    font-size:11.5px;
+    line-height:1.35;
+  }
+
+  .roteiro-barco-item-desc{
+    font-size:10.5px;
+    line-height:1.45;
+  }
+
+  .roteiro-barco-foto,
+  .roteiro-barco-foto-destaque{
+    height:88px;
+  }
+}
+
   /* ════ FIXES MOBILE ════ */
 
   @media (max-width: 768px) {
@@ -3241,6 +3372,11 @@
     </div>
   </div>
 
+  <div class="dica2-box" style="margin:20px 0;background:#fdf6ec;border-left:4px solid #c8a96e;">
+    <span class="dica2-label" style="color:#8a6830;">💄 Kiko Milano</span>
+    <p>No caminho entre a Via dei Condotti e a Via del Corso, vocês vão passar por uma Kiko Milano — vale MUITO a parada pra compras. Está sinalizado no mapa pra vocês.</p>
+  </div>
+
   <!-- ══ ATRAÇÃO 04 ══ -->
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
@@ -5040,109 +5176,127 @@
       <div><span class="info-label">Duração</span><span class="info-valor">🕐 Dia inteiro · retorno ~18h</span></div>
     </div>
     <div class="atracao-nova-corpo">
-      <!-- ITINERÁRIO DO BARCO -->
-      <div style="margin:16px 0;">
-        <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);margin-bottom:12px;letter-spacing:0.5px;">ITINERÁRIO — PONTOS DA ROTA</div>
+   
+    <!-- ITINERÁRIO DO BARCO -->
+<div class="roteiro-barco-wrap">
+  <div class="roteiro-barco-titulo">ITINERÁRIO — PONTOS DA ROTA</div>
 
-        <div style="display:flex;flex-direction:column;gap:10px;">
+  <div class="roteiro-barco-lista">
 
-          <!-- 1 -->
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">1</div>
-              <div>
-                <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Punta Campanella</div>
-                <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Ponta extrema da Península · parada para mergulho em enseada cristalina · Capri visível ao fundo</div>
-              </div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-06/punta-campanella.webp" alt="Punta Campanella" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
-          <!-- 2 -->
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">2</div>
-              <div>
-                <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Ilhas Li Galli — com parada para banho</div>
-                <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Arquipélago privado de Nureyev · as "Ilhas das Sereias" · mergulho com snorkel na água turquesa</div>
-              </div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-06/ilhasligalli.jpg" alt="Ilhas Li Galli" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
-          <!-- 3 -->
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">3</div>
-              <div>
-                <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Praiano</div>
-                <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Vila de pescadores tranquila · Praia da Gavitella vista de baixo · muito menos turistas que Positano</div>
-              </div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-06/praiano.jpg" alt="Praiano" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
-          <!-- 4 -->
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">4</div>
-              <div>
-                <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Fiordo di Furore</div>
-                <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">O ponto mais dramático da rota — fenda na rocha com ponte em arco. O barco entra literalmente dentro.</div>
-              </div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-06/fiordodifurore.png" alt="Fiordo di Furore" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
-          <!-- 5 -->
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">5</div>
-              <div>
-                <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Conca dei Marini — Grotta dello Smeraldo</div>
-                <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Gruta marinha com água verde-esmeralda · entrada de bote · <strong>~€5–6 à parte</strong> pago na hora</div>
-              </div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-06/concadeimarini.jpg" alt="Grotta Smeraldo" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
-          <!-- 6 -->
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">6</div>
-              <div>
-                <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Amalfi — Parada livre 1h30</div>
-                <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Desembarcam · Catedral de Sant'Andrea · granita di limone · Piazzale dei Protontini para foto</div>
-              </div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-06/amalfi.webp" alt="Amalfi" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
-          <!-- 7 -->
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">7</div>
-              <div>
-                <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Positano — Parada livre 1h30</div>
-                <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Desembarcam · Spiaggia Grande · vielas · almoço com vista · gelato antes de voltar ao barco</div>
-              </div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-06/positano-2.webp" alt="Positano" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
-          <!-- + -->
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:#f8f5ef;border-radius:10px;">
-              <div style="background:#8a6830;color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">+</div>
-              <div>
-                <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:#8a6830;">Crapolla + Nerano — se o roteiro incluir</div>
-                <div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Fiorde protegido + parada para almoço com Spaghetti alla Nerano · confirmar com a operadora</div>
-              </div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#f0e8d4;"><img src="./assets/atracoes/dia-06/caprolla.jpg" alt="Nerano" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
+    <!-- 1 -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">1</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Punta Campanella</div>
+          <div class="roteiro-barco-item-desc">Ponta extrema da Península · parada para mergulho em enseada cristalina · Capri visível ao fundo</div>
         </div>
+      </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-06/punta-campanella.webp" alt="Punta Campanella" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">2</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Ilhas Li Galli — com parada para banho</div>
+          <div class="roteiro-barco-item-desc">Arquipélago privado de Nureyev · as "Ilhas das Sereias" · mergulho com snorkel na água turquesa</div>
+        </div>
+      </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-06/ilhasligalli.jpg" alt="Ilhas Li Galli" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">3</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Praiano</div>
+          <div class="roteiro-barco-item-desc">Vila de pescadores tranquila · Praia da Gavitella vista de baixo · muito menos turistas que Positano</div>
+        </div>
+      </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-06/praiano.jpg" alt="Praiano" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">4</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Fiordo di Furore</div>
+          <div class="roteiro-barco-item-desc">O ponto mais dramático da rota — fenda na rocha com ponte em arco. O barco entra literalmente dentro.</div>
+        </div>
+      </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-06/fiordodifurore.png" alt="Fiordo di Furore" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">5</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Conca dei Marini — Grotta dello Smeraldo</div>
+          <div class="roteiro-barco-item-desc">Gruta marinha com água verde-esmeralda · entrada de bote · <strong>~€5–6 à parte</strong> pago na hora</div>
+        </div>
+      </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-06/concadeimarini.jpg" alt="Grotta Smeraldo" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">6</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Amalfi — Parada livre 1h30</div>
+          <div class="roteiro-barco-item-desc">Desembarcam · Catedral de Sant'Andrea · granita di limone · Piazzale dei Protontini para foto</div>
+        </div>
+      </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-06/amalfi.webp" alt="Amalfi" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">7</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Positano — Parada livre 1h30</div>
+          <div class="roteiro-barco-item-desc">Desembarcam · Spiaggia Grande · vielas · almoço com vista · gelato antes de voltar ao barco</div>
+        </div>
+      </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-06/positano-2.webp" alt="Positano" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- + -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">+</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Crapolla + Nerano — se o roteiro incluir</div>
+          <div class="roteiro-barco-item-desc">Fiorde protegido + parada para almoço com Spaghetti alla Nerano · confirmar com a operadora</div>
+        </div>
+      </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-06/caprolla.jpg" alt="Nerano" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+  </div>
+</div>
 
     </div>
     <div class="dicas-box">
@@ -5836,84 +5990,142 @@
     </div>
     <div class="atracao-nova-corpo">
 
-      <div style="margin:16px 0;">
-        <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);margin-bottom:12px;letter-spacing:0.5px;">ITINERÁRIO — PONTOS DA ROTA</div>
-        <div style="display:flex;flex-direction:column;gap:10px;">
+      <!-- ITINERÁRIO DO BARCO -->
+<div class="roteiro-barco-wrap">
+  <div class="roteiro-barco-titulo">ITINERÁRIO — PONTOS DA ROTA</div>
 
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">1</div>
-              <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Salto di Tiberio</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Falésia de 300m de onde o Imperador Tibério teria jogado seus inimigos — lenda ou não, a vista é dantesca</div></div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/salto-di-tiberio.jpg" alt="Salto di Tiberio" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
+  <div class="roteiro-barco-lista">
 
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">2</div>
-              <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Gruta Branca</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Caverna de calcário branco com estalactites que brilham quando o sol entra — a mais silenciosa das grutas de Capri</div></div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/gruta-branca.webp" alt="Gruta Branca" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">3</div>
-              <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Arco Naturale</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Arco de pedra calcária esculpido pelo mar — o símbolo mais elegante da costa leste de Capri, visto de baixo é de tirar o fôlego</div></div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/arco-naturale.jpg" alt="Arco Naturale" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">4</div>
-              <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Casa Malaparte</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">A casa mais famosa de Capri — cubo vermelho sobre o penhasco projetado pelo escritor Curzio Malaparte. Vista de barco é impossível de esquecer</div></div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/casa-malaparte.png" alt="Casa Malaparte" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">5</div>
-              <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Faraglioni di Capri</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">As três rochas que definem Capri. O barco passa pelo arco do Faraglione di Mezzo — tradição de dar sorte ao casal que passa juntos</div></div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/faraglioni.png" alt="Faraglioni" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">6</div>
-              <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Marina Piccola</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">A única praia de seixos de Capri — com os Faraglioni ao fundo. Parada para banho em algumas operadoras</div></div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/marina-piccola.jpg" alt="Marina Piccola" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">7</div>
-              <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Gruta Verde</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">Luz verde refletida pelo fundo do mar — menor e mais íntima que a Azzurra, raramente lotada</div></div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/gruta-verde.jpg" alt="Gruta Verde" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">8</div>
-              <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Farol de Punta Carena</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">O segundo farol mais antigo da Itália, na ponta oeste da ilha — com pôr do sol espetacular se o passeio for no final do dia</div></div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/farol-punta-carena.jpg" alt="Punta Carena" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
-          <div style="display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:stretch;">
-            <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--azul-claro);border-radius:10px;">
-              <div style="background:var(--azul-medio);color:white;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;flex-shrink:0;">9</div>
-              <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;color:var(--azul-medio);">Grotta Azzurra ✦ O Ponto Alto</div><div style="font-size:11px;color:#475569;margin-top:3px;line-height:1.5;">A gruta mais famosa do Mediterrâneo — água azul sobrenatural iluminada por baixo. Entrada de bote pequeno. <strong>Ticket extra à parte</strong> — pago direto na gruta</div></div>
-            </div>
-            <div style="border-radius:10px;overflow:hidden;min-height:70px;background:#dbeafe;"><img src="./assets/atracoes/dia-09/grotta-azzurra.jpeg" alt="Punta Carena" style="width:100%;height:100%;object-fit:cover;display:block;min-height:70px;" loading="lazy" onerror="this.style.display='none'"></div>
-          </div>
-
+    <!-- 1 -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">1</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Salto di Tiberio</div>
+          <div class="roteiro-barco-item-desc">Falésia de 300m de onde o Imperador Tibério teria jogado seus inimigos — lenda ou não, a vista é dantesca</div>
         </div>
       </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-09/salto-di-tiberio.jpg" alt="Salto di Tiberio" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">2</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Gruta Branca</div>
+          <div class="roteiro-barco-item-desc">Caverna de calcário branco com estalactites que brilham quando o sol entra — a mais silenciosa das grutas de Capri</div>
+        </div>
+      </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-09/gruta-branca.webp" alt="Gruta Branca" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">3</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Arco Naturale</div>
+          <div class="roteiro-barco-item-desc">Arco de pedra calcária esculpido pelo mar — o símbolo mais elegante da costa leste de Capri, visto de baixo é de tirar o fôlego</div>
+        </div>
+      </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-09/arco-naturale.jpg" alt="Arco Naturale" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">4</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Casa Malaparte</div>
+          <div class="roteiro-barco-item-desc">A casa mais famosa de Capri — cubo vermelho sobre o penhasco projetado pelo escritor Curzio Malaparte. Vista de barco é impossível de esquecer</div>
+        </div>
+      </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-09/casa-malaparte.png" alt="Casa Malaparte" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">5</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Faraglioni di Capri</div>
+          <div class="roteiro-barco-item-desc">As três rochas que definem Capri. O barco passa pelo arco do Faraglione di Mezzo — tradição de dar sorte ao casal que passa juntos</div>
+        </div>
+      </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-09/faraglioni.png" alt="Faraglioni" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">6</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Marina Piccola</div>
+          <div class="roteiro-barco-item-desc">A única praia de seixos de Capri — com os Faraglioni ao fundo. Parada para banho em algumas operadoras</div>
+        </div>
+      </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-09/marina-piccola.jpg" alt="Marina Piccola" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">7</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Gruta Verde</div>
+          <div class="roteiro-barco-item-desc">Luz verde refletida pelo fundo do mar — menor e mais íntima que a Azzurra, raramente lotada</div>
+        </div>
+      </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-09/gruta-verde.jpg" alt="Gruta Verde" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="roteiro-barco-item">
+      <div class="roteiro-barco-texto">
+        <div class="roteiro-barco-num">8</div>
+        <div>
+          <div class="roteiro-barco-item-titulo">Farol de Punta Carena</div>
+          <div class="roteiro-barco-item-desc">O segundo farol mais antigo da Itália, na ponta oeste da ilha — com pôr do sol espetacular se o passeio for no final do dia</div>
+        </div>
+      </div>
+      <div class="roteiro-barco-foto">
+        <img src="./assets/atracoes/dia-09/farol-punta-carena.jpg" alt="Punta Carena" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- 9 -->
+<div class="roteiro-barco-item">
+  <div class="roteiro-barco-texto">
+    <div class="roteiro-barco-num">9</div>
+    <div>
+      <div class="roteiro-barco-item-titulo">Grotta Azzurra ✦ O Ponto Alto</div>
+      <div class="roteiro-barco-item-desc">
+        A gruta mais famosa do Mediterrâneo — água azul sobrenatural iluminada por baixo. Entrada de bote pequeno. <strong>Ticket extra à parte</strong> — pago direto na gruta
+      </div>
+    </div>
+  </div>
+  <div class="roteiro-barco-foto">
+    <img src="./assets/atracoes/dia-09/grotta-azzurra.jpeg" alt="Grotta Azzurra" loading="lazy" onerror="this.style.display='none'">
+  </div>
+</div>
+
+  </div>
+</div>
 
     </div>
     <div class="dicas-box">
@@ -6538,6 +6750,11 @@
     </div>
   </div>
 
+  <div class="dica2-box" style="margin:20px 0;background:#fdf6ec;border-left:4px solid #c8a96e;">
+    <span class="dica2-label" style="color:#8a6830;">ZARA</span>
+    <p>👣 5 min da Galleria tem uma ZARA gigante em Milão, está sinalizada no mapa pra vocês. Façam uma parada pra compras. Se der tempo sigam pro castelo abaixo, se estiverem cansadas podem voltar daqui pro Hotel.</p>
+  </div>
+
   <!-- ATRAÇÃO 03 -->
   <div class="atracao-nova">
   <div class="atracao-nova-topo">
@@ -6549,7 +6766,7 @@
       <span class="selo selo-verde">🔵 Gratuito</span>
     </div>
     <div class="atracao-info-faixa">
-      <div><span class="info-label">Trajeto</span><span class="info-valor">👣 15 min a pé da Galleria pela Via Dante</span></div>
+      <div><span class="info-label">Trajeto</span><span class="info-valor">👣 15 min a pé da Galleria pela Via Dante (opcional se estiverem animadas)</span></div>
       <div><span class="info-label">Horário</span><span class="info-valor">🕐 11h30 · 30–45 min</span></div>
     </div>
     <div class="atracao-nova-corpo">
