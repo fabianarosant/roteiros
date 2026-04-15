@@ -1495,6 +1495,7 @@ section.cidade-clean strong[style*="color:white"]{
 <nav class="nav-drawer" id="navDrawer">
 
   <a class="nav-menu-principal" href="#menu-pratico">MENU PRINCIPAL</a>
+  <a class="nav-menu-principal" href="#checklist-reservas">✦ Checklist Reservas e Resumo Financeiro</a>
 
   <a class="nav-cidade" href="#pilanesberg">Pilanesberg</a>
   <a class="nav-item" href="#dia01">Dia 01 · 21/07 · Terça</a>
@@ -1544,13 +1545,13 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="mp-titulo" style="font-family:'Magnolia Script',cursive;font-size:32px;font-weight:400;color:var(--azul-medio);margin-bottom:20px;letter-spacing:0;text-transform:none;">Menu Principal</div>
 
     <a class="mp-btn" href="#menu-dias">Roteiro Macro</a>
+    <a class="mp-btn" href="#checklist-reservas" style="background:linear-gradient(135deg,#c8a96e,#dbbf8a);color:white;font-weight:700;">✦ Checklist Reservas e SubTotal</a>
     <a class="mp-btn" href="#cidade">Sobre a África do Sul</a>
     <a class="mp-btn" href="#dinheiro">Guia Financeiro</a>
     <a class="mp-btn" href="#clima">Clima &amp; Checklist Mala</a>
     <a class="mp-btn" href="#frases">Frases Mágicas</a>
     <a class="mp-btn" href="#guia-gastronomico">Guia Gastronômico</a>
     <a class="mp-btn" href="#legendas">Legendas do Roteiro</a>
-    <a class="mp-btn" href="#checklist-reservas" style="background:linear-gradient(135deg,#c8a96e,#dbbf8a);color:white;font-weight:700;">✦ Checklist de Reservas</a>
 
     <div style="font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--azul-medio);text-align:center;margin:12px 0 6px;padding-top:0;">Roteiro por Região</div>
     <a class="mp-btn" href="#pilanesberg">Pilanesberg — Safari</a>
@@ -1576,11 +1577,11 @@ section.cidade-clean strong[style*="color:white"]{
 
     <a class="vg-card" href="#dia03"><div class="vg-card-header"><span class="vg-dia-num">DIA 03</span><span class="vg-dia-data">23/07 · Quinta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Pilanesberg — Safari</span><ul class="vg-items"><li>Manhã livre no Lodge</li><li>Game drive ao pôr do sol (16h)</li><li>Chance dos Big Five</li><li>Jantar incluso no Lodge</li></ul></div></a>
 
-    <a class="vg-card" href="#dia04"><div class="vg-card-header"><span class="vg-dia-num">DIA 04</span><span class="vg-dia-data">24/07 · Sexta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Pilanesberg → Joanesburgo</span><ul class="vg-items"><li>Último game drive (05h)</li><li>Café da manhã + checkout Lodge</li><li>Transfer para Joanesburgo</li><li>Nelson Mandela Square + Sandton City</li></ul></div></a>
+    <a class="vg-card" href="#dia04"><div class="vg-card-header"><span class="vg-dia-num">DIA 04</span><span class="vg-dia-data">24/07 · Sexta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Pilanesberg → Joanesburgo</span><ul class="vg-items"><li>Último game drive (05h)</li><li>Café da manhã + checkout Lodge</li><li>Transfer para Joanesburgo</li><li>Nelson Mandela Square</li><li>Sandton City</li></ul></div></a>
 
     <a class="vg-card" href="#dia05"><div class="vg-card-header"><span class="vg-dia-num">DIA 05</span><span class="vg-dia-data">25/07 · Sábado</span></div><div class="vg-card-body"><span class="vg-destino-tag">JNB → Cidade do Cabo ✈️</span><ul class="vg-items"><li>Voo JNB → CPT (FlySafair 09h35)</li><li>Chegada 11h55 → Uber ao hotel</li><li>Check-in SunSquare City Bowl</li><li>Table Mountain (se clima permitir)</li></ul></div></a>
 
-    <a class="vg-card" href="#dia06"><div class="vg-card-header"><span class="vg-dia-num">DIA 06</span><span class="vg-dia-data">26/07 · Domingo</span></div><div class="vg-card-body"><span class="vg-destino-tag">Cidade do Cabo</span><ul class="vg-items"><li>Table Mountain (2ª chance)</li><li>Teleférico ao topo</li><li>Camps Bay Beach à tarde</li><li>Jantar na orla</li></ul></div></a>
+    <a class="vg-card" href="#dia06"><div class="vg-card-header"><span class="vg-dia-num">DIA 06</span><span class="vg-dia-data">26/07 · Domingo</span></div><div class="vg-card-body"><span class="vg-destino-tag">Cidade do Cabo</span><ul class="vg-items"><li>Table Mountain (2ª chance)</li><li>City Tour (alternativa)</li><li>Camps Bay Beach à tarde</li><li>Jantar na orla</li></ul></div></a>
 
     <a class="vg-card" href="#dia07"><div class="vg-card-header"><span class="vg-dia-num">DIA 07</span><span class="vg-dia-data">27/07 · Segunda</span></div><div class="vg-card-body"><span class="vg-destino-tag">Península do Cabo 🐧</span><ul class="vg-items"><li>Tour dia todo com guia</li><li>Cape Point + Boulders Beach</li><li>Pinguins africanos</li><li>GOLD Restaurant à noite</li></ul></div></a>
 
@@ -1598,6 +1599,16 @@ section.cidade-clean strong[style*="color:white"]{
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var cidade = document.getElementById('cidade');
+  var checklist = document.getElementById('checklist-reservas');
+  if(cidade && checklist){
+    cidade.parentNode.insertBefore(checklist, cidade);
+  }
+});
+</script>
 
 <section id="cidade" class="secao-wrapper" style="background:#eef4fb;">
 <div class="page secao">
@@ -2218,7 +2229,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">✈️</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Chegada em Joanesburgo (JNB)</span>
+        <span class="atracao-nova-nome">Chegada em Joanesburgo (JNB) <span class="atracao-data">Dia 01 · 21/07 · Terça</span></span>
         <span class="atracao-nova-cat">07h05 · pouso + imigração + retirada de bagagens</span>
       </div>
     </div>
@@ -2241,7 +2252,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🚐</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Transfer: Joanesburgo → Pilanesberg</span>
+        <span class="atracao-nova-nome">Transfer: Joanesburgo → Pilanesberg <span class="atracao-data">Dia 01 · 21/07 · Terça</span></span>
         <span class="atracao-nova-cat">Tautona Tours and Safaris ou Agência</span>
       </div>
       <span class="selo selo-pre-viagem">🎟️ Pré-viagem</span>
@@ -2277,7 +2288,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🏡</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Check-in — KWA Maritane Bush Lodge</span>
+        <span class="atracao-nova-nome">Check-in — KWA Maritane Bush Lodge <span class="atracao-data">Dia 01 · 21/07 · Terça</span></span>
         <span class="atracao-nova-cat"> Lodge dentro do Pilanesberg National Park</span>
       </div>
     </div>
@@ -2327,7 +2338,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🦁</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Game Drive da Tarde</span>
+        <span class="atracao-nova-nome">Game Drive da Tarde <span class="atracao-data">Dia 01 · 21/07 · Terça</span></span>
         <span class="atracao-nova-cat">16h00 · incluso na diária · veículo aberto com guia</span>
       </div>
       <span class="selo selo-verde">🔵 Incluso</span>
@@ -2394,7 +2405,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🌅</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Game Drive do Amanhecer</span>
+        <span class="atracao-nova-nome">Game Drive do Amanhecer <span class="atracao-data">Dia 02 · 22/07 · Quarta</span></span>
         <span class="atracao-nova-cat">05h00 · o horário dos predadores · incluso na diária</span>
       </div>
       <span class="selo selo-verde">🔵 Incluso</span>
@@ -2433,7 +2444,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🕳️</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Túnel de Observação + Piscina</span>
+        <span class="atracao-nova-nome">Túnel de Observação + Piscina <span class="atracao-data">Dia 02 · 22/07 · Quarta</span></span>
         <span class="atracao-nova-cat">11h00–17h00 · estrutura do lodge · sem custo adicional</span>
       </div>
       <span class="selo selo-verde">🔵 Incluso</span>
@@ -2516,7 +2527,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">☕</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Café + Manhã Livre no Lodge</span>
+        <span class="atracao-nova-nome">Café + Manhã Livre no Lodge <span class="atracao-data">Dia 03 · 23/07 · Quinta</span></span>
         <span class="atracao-nova-cat">☕ 09h00 · ritmo tranquilo · piscina · túnel · mirante</span>
       </div>
       <span class="selo selo-verde">🔵 Incluso</span>
@@ -2553,7 +2564,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🌅</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Game Drive do Pôr do Sol</span>
+        <span class="atracao-nova-nome">Game Drive do Pôr do Sol <span class="atracao-data">Dia 03 · 23/07 · Quinta</span></span>
         <span class="atracao-nova-cat">16h00 · luz laranja · incluso na diária</span>
       </div>
       <span class="selo selo-verde">🔵 Incluso</span>
@@ -2567,7 +2578,7 @@ section.cidade-clean strong[style*="color:white"]{
       <p class="atracao-nova-desc">Esse é o game drive mais aguardado pelos guias do Pilanesberg em julho: céu absolutamente limpo, temperatura agradável depois das 16h30 e a luz dourada do sol de inverno rasando o horizonte sobre as montanhas do vulcão. Os leões tendem a se movimentar mais no final da tarde, especialmente nas áreas de grama mais baixa. Rinocerontes brancos e negros costumam aparecer nos arredores dos pontos de água. O guia vai percorrer as rotas com mais avistamentos reportados no dia e adaptar a rota em tempo real via rádio com outros veículos do parque.</p>
     </div>
     <div class="dicas-box">
-      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">MELHOR FOTO DO ROTEIRO</span>Entre 17h e 17h30 o céu fica cor de laranja e os animais ficam em silhueta. Se conseguirem uma girafa ou elefante nessa luz — é a foto da viagem.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CARIMBE</span>Entre 17h e 17h30 o céu fica cor de laranja e os animais ficam em silhueta. Se conseguirem uma girafa ou elefante nessa luz — é a foto da viagem.</div></div>
       <div class="dica-item"><span class="dica-item-icon">🦁</span><div><span class="dica-item-label">LEÃO</span>Se o guia parar o carro de repente e desligar o motor, é porque ele identificou algo próximo. Fiquem imóveis, em silêncio e câmera na mão.</div></div>
     </div>
   </div>
@@ -2624,7 +2635,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🦁</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Último Game Drive — Despedida do Pilanesberg</span>
+        <span class="atracao-nova-nome">Último Game Drive — Despedida do Pilanesberg <span class="atracao-data">Dia 04 · 24/07 · Sexta</span></span>
         <span class="atracao-nova-cat">🦁 05h00 · incluso na diária · único safari do dia</span>
       </div>
       <span class="selo selo-verde">🔵 Incluso</span>
@@ -2647,7 +2658,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">☕</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Café da Manhã + Checkout</span>
+        <span class="atracao-nova-nome">Café da Manhã + Checkout <span class="atracao-data">Dia 04 · 24/07 · Sexta</span></span>
         <span class="atracao-nova-cat">☕ 09h30 · incluso · saída às 11h00</span>
       </div>
     </div>
@@ -2661,13 +2672,26 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🚐</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Transfer — Pilanesberg → Joanesburgo</span>
+        <span class="atracao-nova-nome">Transfer — Pilanesberg → Joanesburgo <span class="atracao-data">Dia 04 · 24/07 · Sexta</span></span>
         <span class="atracao-nova-cat">🚐 11h00 · Tautona Tours · ~2h30 · chegada ~14h</span>
       </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Saída</span><span class="info-valor">11h00 — portão do KWA Maritane</span></div>
-      <div><span class="info-label">Custo</span><span class="info-valor">ZAR 4.150,00 — já reservado e pago</span></div>
+      <div><span class="info-label">Status</span><span class="info-valor">A reservar antes da viagem</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px 16px;background:#f8fafc;border-bottom:1px solid #f1f5f9;">
+      <div style="background:#f0f7ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:9px 11px;">
+        <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">Tautona Tours and Safaris</div>
+        <div style="font-size:14px;font-weight:700;color:#0f172a;">ZAR 4.150</div>
+        <div style="font-size:9px;color:#64748b;margin-top:1px;">~R$ 1.412 · câmbio R$ 0,34/ZAR</div>
+        <div style="font-size:9px;color:#64748b;margin-top:1px;">Indicado pelo KWA Maritane Lodge</div>
+      </div>
+      <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
+        <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#9a3412;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">🇧🇷 Agência África</div>
+        <div style="font-size:14px;font-weight:700;color:#0f172a;">R$ 1.980 <span style="font-weight:400;font-size:10px;color:#64748b;">PIX</span></div>
+        <div style="font-size:9px;color:#9a3412;margin-top:1px;">R$ 2.138 no cartão (3×)</div>
+      </div>
     </div>
     <div class="atracao-nova-corpo">
       <p class="atracao-nova-desc">De volta à cidade — o contraste do transfer é marcante: savana aberta, animais livres e silêncio absoluto do lado de lá; Joanesburgo com o skyline de arranha-céus surgindo no horizonte do outro. São 2h30 de estrada. Destino: Garden Court Sandton City, no bairro mais seguro e sofisticado de Joanesburgo.</p>
@@ -2716,23 +2740,22 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🏨</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Check-in — Garden Court Sandton City</span>
+        <span class="atracao-nova-nome">Check-in: Garden Court Sandton City <span class="atracao-data">Dia 04 · 24/07 · Sexta</span></span>
         <span class="atracao-nova-cat">🏨 ~14h00 · Sandton, Joanesburgo · sem café da manhã incluso</span>
       </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Custo</span><span class="info-valor">ZAR 1.755,01 · sem café da manhã</span></div>
       <div><span class="info-label">Check-out</span><span class="info-valor">25/07 cedo · voo JNB → CPT às 09h35</span></div>
-    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;">
+      <span style="background:#fff5f5;color:#991b1b;border:1.5px solid #fca5a5;border-radius:8px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;padding:3px 9px;letter-spacing:1px;white-space:nowrap;">⚠️ Sem café da manhã incluso</span>
+    </div></div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
         <img src="./assets/cidades/joanesburgo/garden-court-sandton.jpg" alt="Garden Court Sandton City" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
         <span>Garden Court Sandton City</span>
       </div>
       <p class="atracao-nova-desc">Hotel bem localizado em Sandton, o bairro financeiro e mais seguro de Joanesburgo — a 5 minutos a pé da Nelson Mandela Square e do Sandton City Mall. Façam o check-in, deixem as malas e saiam para aproveitar o fim de tarde.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;">
-        <span style="background:#fff5f5;color:#991b1b;border:1.5px solid #fca5a5;border-radius:8px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;padding:3px 9px;letter-spacing:1px;white-space:nowrap;">⚠️ Sem café da manhã incluso</span>
-      </div>
     </div>
     <div class="dicas-box">
       <div class="dica-item"><span class="dica-item-icon">⚠️</span><div><span class="dica-item-label">CAFÉ DA MANHÃ</span>Não incluso — amanhã o voo sai às 09h35 e o hotel precisa ser deixado cedo. Confiram se o hotel oferece café antes das 07h ou se a saída diretamente do aeroporto é o plano.</div></div>
@@ -2744,25 +2767,46 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🗿</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Nelson Mandela Square + Sandton City</span>
-        <span class="atracao-nova-cat">🗿 15h00 · passeio seguro · shopping + praça icônica</span>
+        <span class="atracao-nova-nome">Nelson Mandela Square <span class="atracao-data">Dia 04 · 24/07 · Sexta</span></span>
+        <span class="atracao-nova-cat">🗿 15h00 · praça icônica · estátua de bronze · restaurantes ao ar livre</span>
       </div>
       <span class="selo selo-verde">🔵 Gratuito</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Distância do hotel</span><span class="info-valor">5 min a pé</span></div>
-      <div><span class="info-label">Horário</span><span class="info-valor">15h00 às 20h00 · jantar na praça</span></div>
+      <div><span class="info-label">Horário</span><span class="info-valor">15h00 às 18h00</span></div>
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
         <img src="./assets/atracoes/dia-04/nelson-mandela-square.jpg" alt="Nelson Mandela Square — Sandton" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
         <span>Nelson Mandela Square — Sandton</span>
       </div>
-      <p class="atracao-nova-desc">A Nelson Mandela Square é uma praça elegante e aberta, dominada pela estátua de bronze de Nelson Mandela — imponente e poderosa. Ao redor, restaurantes bons e bem avaliados com mesas ao ar livre. O Sandton City Mall conecta diretamente à praça e tem lojas, sorveterias, cinemas e tudo que o Luigi pode precisar para gastar energia depois de dias no lodge. O ambiente é sofisticado e completamente seguro — é aqui que os executivos de Joanesburgo trabalham e vivem.</p>
+      <p class="atracao-nova-desc">A Nelson Mandela Square é uma praça elegante e aberta, dominada pela estátua de bronze de Nelson Mandela — imponente e poderosa. Ao redor, restaurantes bons e bem avaliados com mesas ao ar livre. O ambiente é sofisticado e completamente seguro — é aqui que os executivos de Joanesburgo trabalham e vivem.</p>
     </div>
     <div class="dicas-box">
-      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">FOTO OBRIGATÓRIA</span>A estátua de Mandela ao entardecer com as luzes da praça acendendo é uma das imagens mais marcantes de Joanesburgo. Não percam.</div></div>
-      <div class="dica-item"><span class="dica-item-icon">🚗</span><div><span class="dica-item-label">SEGURANÇA</span>Dentro da praça e do shopping, total tranquilidade. Fora do perímetro do Sandton City e da Mandela Square, sempre de Uber — não circulem a pé nas ruas adjacentes, especialmente à noite.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CARIMBE</span>A estátua de Mandela ao entardecer com as luzes da praça acendendo é uma das imagens mais marcantes de Joanesburgo. Não percam.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">🚗</span><div><span class="dica-item-label">SEGURANÇA</span>Dentro da praça, total tranquilidade. Fora do perímetro do Sandton City e da Mandela Square, sempre de Uber — não circulem a pé nas ruas adjacentes, especialmente à noite.</div></div>
+    </div>
+  </div>
+
+  <div class="atracao-nova">
+    <div class="atracao-nova-topo">
+      <div class="atracao-nova-num" style="font-size:16px;">🛍️</div>
+      <div class="atracao-nova-info">
+        <span class="atracao-nova-nome">Sandton City <span class="atracao-data">Dia 04 · 24/07 · Sexta</span></span>
+        <span class="atracao-nova-cat">🛍️ 17h00 · shopping premium · lojas, sorveterias e cinemas · conectado à praça</span>
+      </div>
+      <span class="selo selo-verde">🔵 Gratuito</span>
+    </div>
+    <div class="atracao-info-faixa">
+      <div><span class="info-label">Distância do hotel</span><span class="info-valor">5 min a pé</span></div>
+      <div><span class="info-label">Horário</span><span class="info-valor">17h00 às 20h00</span></div>
+    </div>
+    <div class="atracao-nova-corpo">
+      <p class="atracao-nova-desc">O Sandton City Mall conecta diretamente à Nelson Mandela Square e tem lojas, sorveterias, cinemas e tudo que o Luigi pode precisar para gastar energia depois de dias no lodge. É um dos maiores e mais sofisticados shoppings da África — e completamente seguro para circular com a família.</p>
+    </div>
+    <div class="dicas-box">
+      <div class="dica-item"><span class="dica-item-icon">🍦</span><div><span class="dica-item-label">LUIGI</span>O shopping tem sorveterias, lanchonetes e cinemas — ótima pedida após dias na savana.</div></div>
     </div>
   </div>
 
@@ -2819,7 +2863,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">⏰</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">06h40 — Saída para o Aeroporto O.R. Tambo</span>
+        <span class="atracao-nova-nome">06h40 — Saída para o Aeroporto O.R. Tambo <span class="atracao-data">Dia 05 · 25/07 · Sábado</span></span>
         <span class="atracao-nova-cat">🚗 Uber do Garden Court Sandton · ~40–50 min de trajeto</span>
       </div>
     </div>
@@ -2837,7 +2881,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">✈️</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Voo JNB → CPT — FlySafair</span>
+        <span class="atracao-nova-nome">Voo JNB → CPT — FlySafair <span class="atracao-data">Dia 05 · 25/07 · Sábado</span></span>
         <span class="atracao-nova-cat">09h35 → 11h55 · ~2h20 de voo · ZAR 5.575,00</span>
       </div>
     </div>
@@ -2846,10 +2890,7 @@ section.cidade-clean strong[style*="color:white"]{
       <div><span class="info-label">Chegada</span><span class="info-valor">11h55 — Cidade do Cabo (CPT)</span></div>
     </div>
     <div class="atracao-nova-corpo">
-      <p class="atracao-nova-desc">O voo doméstico de Joanesburgo para Cidade do Cabo é um dos mais bonitos da África do Sul — na boa visibilidade de julho, a janela do lado direito mostra o litoral atlântico se aproximando e, nos últimos minutos, a Table Mountain surge do nada, imponente e plana, como uma promessa do que está por vir. Mantenham os olhos no vidro.</p>
-    </div>
-    <div class="dicas-box">
-      <div class="dica-item"><span class="dica-item-icon">💡</span><div><span class="dica-item-label">JANELA</span>Sentem no lado direito do avião (janelas D ou E) — é o lado da montanha e do litoral durante a aproximação para Cape Town.</div></div>
+      <p class="atracao-nova-desc">O voo doméstico de Joanesburgo para Cidade do Cabo é um dos mais bonitos da África do Sul — especialmente com a boa visibilidade de julho. Da janela do avião, já é possível acompanhar a mudança de paisagens ao longo do trajeto e, na aproximação final, ter vistas incríveis do oceano, da cidade e, com sorte, da icônica Table Mountain.</p>
     </div>
   </div>
 
@@ -2896,7 +2937,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🏨</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Check-in: SunSquare Cape Town City Bowl</span>
+        <span class="atracao-nova-nome">Check-in: SunSquare Cape Town City Bowl <span class="atracao-data">Dia 05 · 25/07 · Sábado</span></span>
         <span class="atracao-nova-cat">~13h00 · City Bowl · café da manhã incluso</span>
       </div>
     </div>
@@ -2938,7 +2979,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🏔️</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Table Mountain — Primeira Oportunidade</span>
+        <span class="atracao-nova-nome">Table Mountain — Primeira Oportunidade <span class="atracao-data">Dia 05 · 25/07 · Sábado</span></span>
         <span class="atracao-nova-cat">🎟️ Sujeito ao clima · ingresso ZAR 1.200 válido por 7 dias</span>
       </div>
       <span class="selo selo-pre-viagem">🎟️ Pré-viagem</span>
@@ -2971,7 +3012,7 @@ section.cidade-clean strong[style*="color:white"]{
     </div>
     <div class="dicas-box">
       <div class="dica-item"><span class="dica-item-icon">🧥</span><div><span class="dica-item-label">FRIO NO TOPO</span>No plateau, o vento pode ser intenso mesmo em dia de sol. Levem casacos para todos — o Luigi especialmente vai precisar de proteção contra o vento.</div></div>
-      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">FOTO DA VIAGEM</span>A vista da cidade lá de cima com o Oceano Atlântico ao fundo é a foto mais icônica de Cape Town. Câmera cheia e bateria carregada.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CARIMBE</span>A vista da cidade lá de cima com o Oceano Atlântico ao fundo é a foto mais icônica de Cape Town. Câmera cheia e bateria carregada.</div></div>
       <div class="dica-item"><span class="dica-item-icon">🐾</span><div><span class="dica-item-label">DASSIE</span>O dassie (hyrax) é um pequeno mamífero parecido com um porco-da-índia que vive no topo da montanha — é o mascote do local e aparece com frequência. O Luigi vai amar tentar se aproximar.</div></div>
     </div>
   </div>
@@ -3023,7 +3064,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🏔️</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Table Mountain — Segunda Oportunidade</span>
+        <span class="atracao-nova-nome">Table Mountain — Segunda Oportunidade <span class="atracao-data">Dia 06 · 26/07 · Domingo</span></span>
         <span class="atracao-nova-cat">🎟️ 08h00 · ingresso já comprado · cedo para evitar filas</span>
       </div>
       <span class="selo selo-pre-viagem">🎟️ Pré-viagem</span>
@@ -3033,20 +3074,6 @@ section.cidade-clean strong[style*="color:white"]{
       <div><span class="info-label">Duração</span><span class="info-valor">2–3h · retorno ~11h00</span></div>
       <span class="info-atencao">Consulte o app antes de sair. Ir cedo evita fila e pega a luz de manhã, que é diferente da tarde.</span>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px 16px;background:#f8fafc;border-bottom:1px solid #f1f5f9;">
-      <div style="background:#f0f7ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:9px 11px;">
-        <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">Ingresso Avulso</div>
-        <div style="font-size:14px;font-weight:700;color:#0f172a;">ZAR 1.200 <span style="font-weight:400;font-size:10px;color:#64748b;">adulto</span></div>
-        <div style="font-size:9px;color:#64748b;margin-top:1px;">~R$ 408 · câmbio R$ 0,34/ZAR</div>
-        <div style="font-size:9px;color:#64748b;margin-top:1px;">Ingresso já comprado — válido 7 dias</div>
-      </div>
-      <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
-        <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#9a3412;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">🇧🇷 Agência África</div>
-        <div style="font-size:14px;font-weight:700;color:#0f172a;">R$ 1.565 <span style="font-weight:400;font-size:10px;color:#64748b;">PIX</span></div>
-        <div style="font-size:9px;color:#9a3412;margin-top:1px;">R$ 1.690 no cartão (3×)</div>
-        <div style="font-size:9px;color:#9a3412;margin-top:2px;">Incluso no pacote do Dia 05</div>
-      </div>
-    </div>
     <div class="atracao-nova-corpo">
       <p class="atracao-nova-desc">Se a Table Mountain ficou fechada ontem por vento ou nuvem, hoje é a segunda chance — e ir cedo tem uma vantagem extra: a luz da manhã sobre a cidade é dourada e suave, as filas são menores e o platô fica menos cheio. O ingresso comprado já é válido, basta apresentar o QR Code na entrada. Se já foram ontem, podem pular a montanha e começar direto pelo café da manhã e partir para Camps Bay mais cedo.</p>
     </div>
@@ -3054,9 +3081,44 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
+      <div class="atracao-nova-num" style="font-size:16px;">🚌</div>
+      <div class="atracao-nova-info">
+        <span class="atracao-nova-nome">City Tour — Cidade do Cabo <span class="atracao-data">Dia 06 · 26/07 · Domingo</span></span>
+        <span class="atracao-nova-cat">🏙️ Substituição caso a Table Mountain já tenha sido feita · manhã ou dia todo</span>
+      </div>
+      <span class="selo selo-amarelo">🔄 Alternativa</span>
+    </div>
+    <div class="atracao-info-faixa">
+      <div><span class="info-label">Quando usar</span><span class="info-valor">Se já foram à Table Mountain no Dia 05 — ou vice-versa</span></div>
+      <div><span class="info-label">Horário</span><span class="info-valor">A partir das 09h00</span></div>
+    </div>
+    <div class="atracao-nova-corpo">
+      <p class="atracao-nova-desc">Se a Table Mountain já foi visitada no dia anterior, o Dia 06 ganha espaço para explorar Cidade do Cabo de outra forma — com um city tour que passa pelos pontos mais icônicos: Bo-Kaap, centro histórico, Green Point e orla. Duas opções disponíveis:</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0 4px;">
+        <div style="background:#f0f7ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:9px 11px;">
+          <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide — hop-on hop-off</div>
+          <div style="font-size:14px;font-weight:700;color:#0f172a;">R$ 360 <span style="font-weight:400;font-size:10px;color:#64748b;">3 pessoas</span></div>
+          <div style="font-size:9px;color:#64748b;margin-top:1px;">Ônibus turístico · embarque e desembarque livre nos pontos · dia inteiro</div>
+        </div>
+        <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
+          <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#9a3412;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">🇧🇷 Agência</div>
+          <div style="font-size:14px;font-weight:700;color:#0f172a;">R$ 2.397 <span style="font-weight:400;font-size:10px;color:#64748b;">à vista</span></div>
+          <div style="font-size:9px;color:#9a3412;margin-top:1px;">R$ 2.589 no cartão</div>
+          <div style="font-size:9px;color:#9a3412;margin-top:2px;">Tour privado · guia em português · veículo exclusivo</div>
+        </div>
+      </div>
+    </div>
+    <div class="dicas-box">
+      <div class="dica-item"><span class="dica-item-icon">🔄</span><div><span class="dica-item-label">COMO USAR ESTA ALTERNATIVA</span>Se fizeram a Table Mountain no Dia 05, usem o Dia 06 para o city tour. Se preferirem a Table Mountain no Dia 06, façam o city tour no Dia 05 à tarde após chegarem de Cape Town.</div></div>
+    </div>
+  </div>
+
+  <div class="atracao-nova">
+    <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🏖️</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Camps Bay Beach</span>
+        <span class="atracao-nova-nome">Camps Bay Beach <span class="atracao-data">Dia 06 · 26/07 · Domingo</span></span>
         <span class="atracao-nova-cat">🌊 14h00 · a praia mais fotogénica de Cape Town</span>
       </div>
       <span class="selo selo-verde">🔵 Gratuito</span>
@@ -3073,7 +3135,7 @@ section.cidade-clean strong[style*="color:white"]{
       <p class="atracao-nova-desc">Camps Bay é a praia urbana mais bonita da África do Sul — talvez do hemisfério sul. A areia branca e fina se estende por 1,5 km entre o Oceano Atlântico e as Twelve Apostles, a cadeia de montanhas que parte da Table Mountain e mergulha no mar. Em julho a água está em torno de 13°C — o Luigi pode tentar os pés, mas banho de verdade não rola. O que rola muito: a calçadeira de palmeiras, os cafés e restaurantes com mesas ao ar livre, o bar Café Caprice cheio de gente e a luz do fim de tarde que deixa a cena dourada e irreal. É o pôr do sol mais fotografado de Cape Town.</p>
     </div>
     <div class="dicas-box">
-      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">FOTO ICÔNICA</span>Da praia olhando para as Twelve Apostles — a montanha descendo em direção ao mar. Quanto mais tarde, melhor a luz.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CARIMBE</span>Da praia olhando para as Twelve Apostles — a montanha descendo em direção ao mar. Quanto mais tarde, melhor a luz.</div></div>
       <div class="dica-item"><span class="dica-item-icon">☕</span><div><span class="dica-item-label">CAFÉ</span>O Café Caprice na calçada é o point clássico de Camps Bay — cerveja gelada ou café quente com vista para o mar e as montanhas.</div></div>
     </div>
   </div>
@@ -3125,7 +3187,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🚗</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Tour Península do Cabo — Dia Inteiro</span>
+        <span class="atracao-nova-nome">Tour Península do Cabo — Dia Inteiro <span class="atracao-data">Dia 07 · 27/07 · Segunda</span></span>
         <span class="atracao-nova-cat">07h00–08h00 · 10 horas · pick-up no hotel incluso</span>
       </div>
       <span class="selo selo-pre-viagem">🎟️ Pré-viagem</span>
@@ -3304,7 +3366,7 @@ section.cidade-clean strong[style*="color:white"]{
     </div>
     <div class="dicas-box">
       <div class="dica-item"><span class="dica-item-icon">🐧</span><div><span class="dica-item-label">PINGUINS — TAXAS À PARTE</span>Boulders Beach cobra entrada à parte no local — em torno de ZAR 280 por adulto e ZAR 140 por criança. Tenham Rand em mãos ou cartão. O Luigi vai querer ficar horas — avisem o guia para reservar mais tempo aqui se possível.</div></div>
-      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CAPE POINT</span>A entrada do Cape Point (Cabo da Boa Esperança) também é paga à parte — ZAR 340 por adulto. A foto na placa com os dois oceanos ao fundo é a mais icônica de toda a viagem.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CARIMBE</span>A entrada do Cape Point (Cabo da Boa Esperança) também é paga à parte — ZAR 340 por adulto. A foto na placa com os dois oceanos ao fundo é a mais icônica de toda a viagem.</div></div>
       <div class="dica-item"><span class="dica-item-icon">🧥</span><div><span class="dica-item-label">VENTO</span>O Cabo tem vento forte o ano todo — e em julho pode ser muito intenso. Casacos, gorro e óculos de sol são essenciais para o passeio nas pedras e mirantes.</div></div>
     </div>
   </div>
@@ -3313,7 +3375,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🥁</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">GOLD Restaurant — Experiência Gastronômica Africana</span>
+        <span class="atracao-nova-nome">GOLD Restaurant — Experiência Gastronômica Africana <span class="atracao-data">Dia 07 · 27/07 · Segunda</span></span>
         <span class="atracao-nova-cat">✨ 18h30 · jantar + tambores + música ao vivo · De Waterkant</span>
       </div>
       <span class="selo selo-pre-viagem">🎟️ Pré-viagem</span>
@@ -3321,6 +3383,8 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-info-faixa">
       <div><span class="info-label">Reserva</span><span class="info-valor">Confirmar com antecedência — muito procurado</span></div>
       <div><span class="info-label">Endereço</span><span class="info-valor">15 Bennett St, De Waterkant · ~15 min de Uber do hotel</span></div>
+      <div><span class="info-label">Valor (vocês 3)</span><span class="info-valor">ZAR 1.400 · ~R$ 420–450 · bebidas à parte</span></div>
+      <div><span class="info-label">Por pessoa</span><span class="info-valor">ZAR 560 adulto · ZAR 280 criança (até 12 anos)</span></div>
       <span class="info-atencao">🔴 Reserve antes de viajar — o GOLD é um dos restaurantes mais famosos de Cape Town.</span>
     </div>
     <div class="atracao-nova-corpo">
@@ -3368,7 +3432,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🎨</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Bo-Kaap</span>
+        <span class="atracao-nova-nome">Bo-Kaap <span class="atracao-data">Dia 08 · 28/07 · Terça</span></span>
         <span class="atracao-nova-cat">08h30 · bairro histórico malayo · casas coloridas · a pé</span>
       </div>
       <span class="selo selo-verde">🔵 Gratuito</span>
@@ -3385,7 +3449,7 @@ section.cidade-clean strong[style*="color:white"]{
       <p class="atracao-nova-desc">Bo-Kaap é o bairro mais fotografado de Cape Town — e não é à toa. As fachadas das casas são pintadas em rosa-choque, turquesa, amarelo-canário, laranja vibrante e verde-limão, cada uma diferente da vizinha, subindo a encosta Signal Hill em fileiras perfeitas. O bairro foi habitado pelos escravos malaios trazidos pelos holandeses no século XVII — e a comunidade Cape Malay preservou a cultura, a religião islâmica e a culinária até hoje. O cheiro de especiarias e a arquitetura holandesa colorida criam um cenário completamente único na África. Vão cedo — antes das 9h as ruas ainda estão vazias e as fotos ficam sem multidões.</p>
     </div>
     <div class="dicas-box">
-      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">FOTO CLÁSSICA</span>A rua Wale Street olhando para baixo com as casas coloridas e a Table Mountain ao fundo — é a foto mais replicada de Cape Town. Cheguem antes das 9h para pegar sem multidão.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CARIMBE</span>A rua Wale Street olhando para baixo com as casas coloridas e a Table Mountain ao fundo — é a foto mais replicada de Cape Town. Cheguem antes das 9h para pegar sem multidão.</div></div>
       <div class="dica-item"><span class="dica-item-icon">🍛</span><div><span class="dica-item-label">CAFÉ DA MANHÃ LOCAL</span>O restaurante Biesmiellah na Upper Wale Street serve café da manhã com pão de special curry e samosas desde 1969 — é o mais antigo do bairro e vale muito a experiência.</div></div>
     </div>
   </div>
@@ -3394,7 +3458,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🌳</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Company's Garden + Centro Histórico</span>
+        <span class="atracao-nova-nome">Company's Garden + Centro Histórico <span class="atracao-data">Dia 08 · 28/07 · Terça</span></span>
         <span class="atracao-nova-cat">10h30 · jardim histórico de 1652 · museus · a pé</span>
       </div>
       <span class="selo selo-verde">🔵 Gratuito</span>
@@ -3434,7 +3498,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">⚓</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">V&A Waterfront</span>
+        <span class="atracao-nova-nome">V&A Waterfront <span class="atracao-data">Dia 08 · 28/07 · Terça</span></span>
         <span class="atracao-nova-cat">15h00 · harbor · compras · restaurantes · vista da Table Mountain</span>
       </div>
       <span class="selo selo-verde">🔵 Gratuito</span>
@@ -3488,7 +3552,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🍷</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Tour Vinícolas — Stellenbosch & Franschhoek</span>
+        <span class="atracao-nova-nome">Tour Vinícolas — Stellenbosch & Franschhoek <span class="atracao-data">Dia 09 · 29/07 · Quarta</span></span>
         <span class="atracao-nova-cat">🚗 07h00 · dia inteiro · ~45 min de Cape Town</span>
       </div>
     </div>
@@ -3499,8 +3563,8 @@ section.cidade-clean strong[style*="color:white"]{
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px 16px;background:#f8fafc;border-bottom:1px solid #f1f5f9;">
       <div style="background:#f0f7ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:9px 11px;">
         <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide — tour em inglês</div>
-        <div style="font-size:13px;font-weight:700;color:#0f172a;">Buscar na plataforma</div>
-        <div style="font-size:9px;color:#64748b;margin-top:1px;">Filtrar: "Stellenbosch wine tour" full day</div>
+        <div style="font-size:14px;font-weight:700;color:#0f172a;">~R$ 1.500 <span style="font-weight:400;font-size:10px;color:#64748b;">3 pessoas</span></div>
+        <div style="font-size:9px;color:#64748b;margin-top:1px;">Tour em grupo · guia em inglês · cancelamento flexível</div>
         <a href="https://www.getyourguide.com/stellenbosch-l2034/" target="_blank" style="display:inline-block;margin-top:5px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:2px 8px;">Ver no GetYourGuide →</a>
       </div>
       <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
@@ -3549,23 +3613,44 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="dica-box">
     <span class="dica-box-label">📋 Resumo do Dia</span>
-    <p>Dia todo fora de Cape Town — destino: Hermanus, a capital mundial das baleias. A apenas 1h30 de carro pela rota costeira, a cidade é famosa pelos avistamentos de baleias sulinas (southern right whales) que entram na Walker Bay de junho a novembro para se reproduzir. Julho é temporada alta — os animais ficam próximos da costa e visíveis do cliff path a olho nu. Opção de boat tour para quem quiser se aproximar mais. Almoço no centro da cidade e regresso no fim da tarde.</p>
+    <p>Dia todo fora de Cape Town — destino: Hermanus, a capital mundial das baleias. O passeio já inclui o transfer ida e volta saindo do hotel, cruzeiro de observação de baleias e golfinhos na Walker Bay, e — dependendo da opção escolhida — mergulho na gaiola de tubarões em Gansbaai. Julho é temporada alta: os animais ficam próximos da costa e visíveis a olho nu tanto da falésia quanto do barco. Almoço no centro da cidade e regresso no fim da tarde.</p>
   </div>
 
-  <!-- TRANSFER IDA -->
+  <!-- PASSEIO DIA TODO -->
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
-      <div class="atracao-nova-num" style="font-size:16px;">🚗</div>
+      <div class="atracao-nova-num" style="font-size:16px;">🐋</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Transfer Cape Town → Hermanus</span>
-        <span class="atracao-nova-cat">Saída 08h30 · ~1h30 pela rota costeira</span>
+        <span class="atracao-nova-nome">Passeio Dia Todo — Hermanus <span class="atracao-data">Dia 10 · 30/07 · Quinta</span></span>
+        <span class="atracao-nova-cat">🚗 Saída 08h30 · transfer + cruzeiro + atividades · retorno ao entardecer</span>
+      </div>
+      <span class="selo selo-pre-viagem">🎟️ Pré-viagem</span>
+    </div>
+    <div class="atracao-info-faixa">
+      <div><span class="info-label">Transfer</span><span class="info-valor">Incluso nas duas opções · ida e volta do hotel</span></div>
+      <div><span class="info-label">Inclui</span><span class="info-valor">Cruzeiro baleias e golfinhos · Walker Bay</span></div>
+      <span class="info-atencao">⚠️ Taxa de entrada no porto paga à parte no local: ZAR 5 por pessoa.</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px 16px;background:#f8fafc;border-bottom:1px solid #f1f5f9;">
+      <div style="background:#f0f7ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:9px 11px;">
+        <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide</div>
+        <div style="font-size:14px;font-weight:700;color:#0f172a;">R$ 2.500 <span style="font-weight:400;font-size:10px;color:#64748b;">3 pessoas</span></div>
+        <div style="font-size:9px;color:#64748b;margin-top:1px;">Transfer ida e volta · passeio de barco</div>
+        <div style="font-size:9px;color:#64748b;margin-top:1px;">+ mergulho na gaiola de tubarões</div>
+      </div>
+      <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
+        <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#9a3412;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">🇧🇷 Agência</div>
+        <div style="font-size:14px;font-weight:700;color:#0f172a;">R$ 2.997 <span style="font-weight:400;font-size:10px;color:#64748b;">à vista</span></div>
+        <div style="font-size:9px;color:#9a3412;margin-top:1px;">R$ 3.237 no cartão</div>
+        <div style="font-size:9px;color:#9a3412;margin-top:2px;">Transfer CPT→Hermanus · cruzeiro baleias e golfinhos · guia em português</div>
       </div>
     </div>
     <div class="atracao-nova-corpo">
-      <p class="atracao-nova-desc">O trajeto de Cape Town a Hermanus passa por Hout Bay e pelos últimos quilômetros já junto à costa — quando o mar abre, é possível ver as primeiras baleias ainda no caminho. Recomendamos contratar um transfer privado ou tour guiado saindo de Cape Town: o motorista conhece os melhores pontos de observação e leva de volta ao final do dia.</p>
+      <p class="atracao-nova-desc">O passeio sai do hotel em Cape Town com transfer já incluso — 1h30 pela rota costeira, passando por Hout Bay, com as primeiras baleias podendo aparecer ainda no caminho. Em Hermanus, o cruzeiro de observação leva vocês para dentro da Walker Bay ao nível da água, com baleias sulinas e golfinhos ao redor do barco. A opção GetYourGuide ainda inclui o mergulho na gaiola de tubarões em Gansbaai — uma das experiências mais adrenalínicas do mundo.</p>
     </div>
     <div class="dicas-box">
-      <div class="dica-item"><span class="dica-item-icon">💡</span><div><span class="dica-item-label">DICA</span>Perguntem no hotel por tours privados para Hermanus — muitas operadoras de Cape Town oferecem o dia todo com transfer e guia por um valor fixo por família.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">🦈</span><div><span class="dica-item-label">GAIOLA DE TUBARÕES</span>A opção GetYourGuide inclui mergulho com tubarões-brancos em Gansbaai — confirme disponibilidade e condições de mar na reserva. O Luigi precisará ter altura/idade mínima exigida pela operadora.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">🌊</span><div><span class="dica-item-label">MAR DE JULHO</span>O mar em julho pode ter agitação — verifiquem a previsão na véspera. A maioria das empresas não sai com mar ruim e oferece reagendamento.</div></div>
     </div>
   </div>
 
@@ -3574,7 +3659,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🐋</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Walker Bay — Cliff Path</span>
+        <span class="atracao-nova-nome">Walker Bay — Cliff Path <span class="atracao-data">Dia 10 · 30/07 · Quinta</span></span>
         <span class="atracao-nova-cat">🌊 10h00 · caminhada pela falésia · avistamento de baleias · gratuito</span>
       </div>
       <span class="selo selo-verde">🔵 Gratuito</span>
@@ -3593,42 +3678,6 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="dicas-box">
       <div class="dica-item"><span class="dica-item-icon">🔭</span><div><span class="dica-item-label">BINÓCULOS</span>Ampliam muito a experiência — mas em julho as baleias frequentemente ficam tão perto que dá para ver o jato d'água a olho nu da falésia.</div></div>
       <div class="dica-item"><span class="dica-item-icon">🧒</span><div><span class="dica-item-label">PARA O LUIGI</span>O tamanho das baleias vistas de perto, os saltos e os sons são uma das experiências mais inesquecíveis para criança. Uma das melhores cenas da viagem inteira.</div></div>
-    </div>
-  </div>
-
-  <!-- BOAT TOUR OPCIONAL -->
-  <div class="atracao-nova">
-    <div class="atracao-nova-topo">
-      <div class="atracao-nova-num" style="font-size:16px;">⛵</div>
-      <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Boat Tour — Avistamento na Água (Opcional)</span>
-        <span class="atracao-nova-cat">🐋 ~2h · saída do Old Harbour · ~ZAR 1.800 família</span>
-      </div>
-      <span class="selo selo-amarelo">🟡 Opcional · Reservar com antecedência</span>
-    </div>
-    <div class="atracao-info-faixa">
-      <div><span class="info-label">Duração</span><span class="info-valor">~2 horas no mar</span></div>
-      <div><span class="info-label">Custo estimado</span><span class="info-valor">~ZAR 1.800 família (3 pessoas)</span></div>
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px 16px;background:#f8fafc;border-bottom:1px solid #f1f5f9;">
-      <div style="background:#f0f7ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:9px 11px;">
-        <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">Avulso — Boat Tour local</div>
-        <div style="font-size:14px;font-weight:700;color:#0f172a;">~ZAR 1.800 <span style="font-weight:400;font-size:10px;color:#64748b;">família</span></div>
-        <div style="font-size:9px;color:#64748b;margin-top:1px;">~R$ 612 · câmbio R$ 0,34/ZAR</div>
-        <div style="font-size:9px;color:#64748b;margin-top:1px;">Reservar em Hermanus no dia ou online</div>
-      </div>
-      <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
-        <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#9a3412;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">🇧🇷 Agência África — dia completo</div>
-        <div style="font-size:14px;font-weight:700;color:#0f172a;">R$ 2.997 <span style="font-weight:400;font-size:10px;color:#64748b;">PIX</span></div>
-        <div style="font-size:9px;color:#9a3412;margin-top:1px;">R$ 3.237 no cartão (3×)</div>
-        <div style="font-size:9px;color:#9a3412;margin-top:2px;">Inclui transfer CPT→Hermanus + guia + boat tour</div>
-      </div>
-    </div>
-    <div class="atracao-nova-corpo">
-      <p class="atracao-nova-desc">Para quem quiser se aproximar ainda mais, há empresas licenciadas com boat tours saindo do Old Harbour de Hermanus. Os barcos mantêm distância regulamentar das baleias, mas estar no mar ao nível da água com um animal de 40 toneladas a poucos metros é uma experiência diferente de tudo. A Walker Bay é considerada um dos melhores lugares do mundo para avistamento por barco justamente porque as baleias ficam dentro da baía e o mar é mais calmo. Reservem com antecedência — as vagas esgotam rápido em julho.</p>
-    </div>
-    <div class="dicas-box">
-      <div class="dica-item"><span class="dica-item-icon">🌊</span><div><span class="dica-item-label">MAR DE JULHO</span>O mar em julho pode ter agitação — verifiquem a previsão na véspera. A maioria das empresas não sai com mar ruim e oferece reagendamento.</div></div>
     </div>
   </div>
 
@@ -3651,7 +3700,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🚗</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Retorno a Cape Town</span>
+        <span class="atracao-nova-nome">Retorno a Cape Town <span class="atracao-data">Dia 10 · 30/07 · Quinta</span></span>
         <span class="atracao-nova-cat">Saída ~15h00 · chegada ~16h30 · jantar livre no hotel</span>
       </div>
     </div>
@@ -3693,7 +3742,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🌿</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Kirstenbosch National Botanical Garden</span>
+        <span class="atracao-nova-nome">Kirstenbosch National Botanical Garden <span class="atracao-data">Dia 11 · 31/07 · Sexta</span></span>
         <span class="atracao-nova-cat">🌺 08h45 · jardim botânico de 36km² na encosta da Table Mountain · ZAR 350</span>
       </div>
       <span class="selo selo-amarelo">🟡 Ingresso no Local</span>
@@ -3748,7 +3797,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🏛️</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">District Six Museum</span>
+        <span class="atracao-nova-nome">District Six Museum <span class="atracao-data">Dia 11 · 31/07 · Sexta</span></span>
         <span class="atracao-nova-cat">🕊️ 14h00 · memorial do apartheid · ZAR 130</span>
       </div>
       <span class="selo selo-amarelo">🟡 Ingresso no Local</span>
@@ -3786,7 +3835,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🎨</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Zeitz Museum of Contemporary Art Africa (MOCAA)</span>
+        <span class="atracao-nova-nome">Zeitz Museum of Contemporary Art Africa (MOCAA) <span class="atracao-data">Dia 11 · 31/07 · Sexta</span></span>
         <span class="atracao-nova-cat">🏛️ 16h00 · maior museu de arte contemporânea africana do mundo · ZAR 210</span>
       </div>
       <span class="selo selo-amarelo">🟡 Ingresso no Local</span>
@@ -3816,7 +3865,7 @@ section.cidade-clean strong[style*="color:white"]{
       <p class="atracao-nova-desc">O Zeitz MOCAA é a obra arquitetônica mais ousada de Cape Town — um antigo silo de grãos do porto transformado pelo arquiteto Thomas Heatherwick numa catedral de arte contemporânea de 9 andares. O núcleo do silo foi escavado criando um átrio cilíndrico com luz natural que desce até o subsolo. O museu tem a maior coleção de arte africana contemporânea do mundo — obras de artistas de todo o continente e da diáspora africana global, misturando pintura, escultura, fotografia, performance e instalação. Mesmo quem não é apreciador de arte sai impressionado pela arquitetura e pela escala do projeto.</p>
     </div>
     <div class="dicas-box">
-      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">ARQUITETURA</span>O átrio central com os cilindros de concreto cortados é a foto mais impressionante — olhem de baixo para cima para ter noção da escala. A loja do museu tem produtos de design africano de altíssima qualidade.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CARIMBE</span>O átrio central com os cilindros de concreto cortados é a foto mais impressionante — olhem de baixo para cima para ter noção da escala. A loja do museu tem produtos de design africano de altíssima qualidade.</div></div>
     </div>
   </div>
 
@@ -3825,7 +3874,7 @@ section.cidade-clean strong[style*="color:white"]{
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">⚓</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">V&A Waterfront — Tarde de Despedida</span>
+        <span class="atracao-nova-nome">V&A Waterfront — Tarde de Despedida <span class="atracao-data">Dia 11 · 31/07 · Sexta</span></span>
         <span class="atracao-nova-cat">🛍️ 12h00 · compras · cafés · Makers Landing · última vista do harbor</span>
       </div>
       <span class="selo selo-verde">🔵 Gratuito</span>
@@ -3957,7 +4006,7 @@ section.cidade-clean strong[style*="color:white"]{
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;padding-left:32px;">
           <div style="background:#f0f7ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:9px 11px;">
             <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide + ingresso direto</div>
-            <div style="font-size:13px;font-weight:700;color:#0f172a;">Buscar na plataforma</div>
+            <div style="font-size:13px;font-weight:700;color:#0f172a;">R$816</div>
             <div style="font-size:9px;color:#64748b;margin-top:2px;">Ingresso teleférico: ZAR 1.200 · ~R$ 408 · câmbio R$ 0,34/ZAR</div>
             <a href="https://www.getyourguide.com/cape-town-l170/" target="_blank" style="display:inline-block;margin-top:6px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:3px 8px;">Ver GetYourGuide →</a>
           </div>
@@ -3982,7 +4031,7 @@ section.cidade-clean strong[style*="color:white"]{
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;padding-left:32px;">
           <div style="background:#f0f7ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:9px 11px;">
             <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide</div>
-            <div style="font-size:13px;font-weight:700;color:#0f172a;">Buscar na plataforma</div>
+            <div style="font-size:13px;font-weight:700;color:#0f172a;">R$360</div>
             <div style="font-size:9px;color:#64748b;margin-top:2px;">Filtrar: "Cape Town City Tour" half ou full day</div>
             <a href="https://www.getyourguide.com/cape-town-l170/?q=city+tour" target="_blank" style="display:inline-block;margin-top:6px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:3px 8px;">Ver GetYourGuide →</a>
           </div>
@@ -4007,7 +4056,7 @@ section.cidade-clean strong[style*="color:white"]{
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;padding-left:32px;">
           <div style="background:#f0f7ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:9px 11px;">
             <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide</div>
-            <div style="font-size:13px;font-weight:700;color:#0f172a;">Buscar na plataforma</div>
+            <div style="font-size:13px;font-weight:700;color:#0f172a;">R$900</div>
             <div style="font-size:9px;color:#64748b;margin-top:2px;">Filtrar: "Cape Peninsula" full day tour</div>
             <a href="https://www.getyourguide.com/cape-town-l170/?q=cape+peninsula" target="_blank" style="display:inline-block;margin-top:6px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:3px 8px;">Ver GetYourGuide →</a>
           </div>
@@ -4032,8 +4081,8 @@ section.cidade-clean strong[style*="color:white"]{
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;padding-left:32px;">
           <div style="background:#f0f7ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:9px 11px;">
             <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide</div>
-            <div style="font-size:13px;font-weight:700;color:#0f172a;">Buscar na plataforma</div>
-            <div style="font-size:9px;color:#64748b;margin-top:2px;">Filtrar: "Stellenbosch wine tour" full day</div>
+            <div style="font-size:14px;font-weight:700;color:#0f172a;">~R$ 1.500 <span style="font-weight:400;font-size:10px;color:#64748b;">3 pessoas</span></div>
+            <div style="font-size:9px;color:#64748b;margin-top:2px;">Tour em grupo · guia em inglês · cancelamento flexível</div>
             <a href="https://www.getyourguide.com/stellenbosch-l2034/" target="_blank" style="display:inline-block;margin-top:6px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:3px 8px;">Ver GetYourGuide →</a>
           </div>
           <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
@@ -4049,16 +4098,16 @@ section.cidade-clean strong[style*="color:white"]{
         <div style="display:flex;align-items:flex-start;gap:10px;width:100%;">
           <div class="buy-check"></div>
           <div style="flex:1;">
-            <span class="card-lista-titulo">Hermanus — Avistamento de Baleias</span>
-            <span class="card-lista-desc">Dia 10 · 30/07 (Quinta) · dia todo · Walker Bay · Cliff Path · boat tour</span>
+            <span class="card-lista-titulo">Hermanus — Passeio Dia Todo</span>
+            <span class="card-lista-desc">Dia 10 · 30/07 (Quinta) · transfer incluso · cruzeiro baleias e golfinhos · gaiola de tubarões (GYG)</span>
           </div>
           <span class="card-lista-badge badge-req">A Reservar</span>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;padding-left:32px;">
           <div style="background:#f0f7ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:9px 11px;">
             <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide</div>
-            <div style="font-size:13px;font-weight:700;color:#0f172a;">Buscar na plataforma</div>
-            <div style="font-size:9px;color:#64748b;margin-top:2px;">Filtrar: "Hermanus whale watching" day tour</div>
+            <div style="font-size:14px;font-weight:700;color:#0f172a;">R$ 2.500 <span style="font-weight:400;font-size:10px;color:#64748b;">3 pessoas</span></div>
+            <div style="font-size:9px;color:#64748b;margin-top:2px;">Transfer ida e volta · passeio de barco · gaiola de tubarões</div>
             <a href="https://www.getyourguide.com/cape-town-l170/?q=hermanus+whale" target="_blank" style="display:inline-block;margin-top:6px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:3px 8px;">Ver GetYourGuide →</a>
           </div>
           <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
@@ -4161,23 +4210,124 @@ section.cidade-clean strong[style*="color:white"]{
     </div>
   </div>
 
-  <!-- ══ TOTAL FINANCEIRO ══ -->
-  <div style="background:linear-gradient(135deg,#1e3a5f 0%,#2d5a8e 100%);border-radius:14px;padding:20px 22px;margin-bottom:8px;">
-    <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:14px;">Resumo Financeiro — Se Tudo pela Agência</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
-      <div style="background:rgba(255,255,255,0.1);border-radius:10px;padding:12px 14px;">
-        <div style="font-family:'Poppins',sans-serif;font-size:9px;color:rgba(255,255,255,0.65);margin-bottom:4px;">À vista — PIX</div>
-        <div style="font-size:22px;font-weight:700;color:white;line-height:1;">R$ 15.713</div>
+  <!-- ══ RESUMO FINANCEIRO ══ -->
+  <div style="margin-bottom:20px;">
+    <span class="titulo-principal">Resumo Financeiro</span>
+
+    <!-- LINHA HELPER -->
+    <style>
+      .rf-linha { display:flex; justify-content:space-between; align-items:baseline; padding:8px 0; border-bottom:1px solid #f1f5f9; }
+      .rf-linha:last-child { border-bottom:none; }
+      .rf-label { font-family:'Poppins',sans-serif; font-size:11px; color:#475569; }
+      .rf-sub { font-family:'Poppins',sans-serif; font-size:9px; color:#94a3b8; display:block; margin-top:1px; }
+      .rf-valor { font-family:'Poppins',sans-serif; font-size:12px; font-weight:700; color:#0f172a; white-space:nowrap; }
+      .rf-valor.vazio { color:#cbd5e1; font-weight:400; font-style:italic; }
+      .rf-secao { font-family:'Poppins',sans-serif; font-size:8px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--azul-medio); padding:14px 0 4px; }
+      .rf-subtotal { display:flex; justify-content:space-between; padding:8px 12px; background:#f8fafc; border-radius:8px; margin-top:4px; }
+      .rf-subtotal-label { font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; color:#475569; }
+      .rf-subtotal-valor { font-family:'Poppins',sans-serif; font-size:12px; font-weight:700; color:#1e3a5f; }
+      .rf-total-box { display:flex; justify-content:space-between; align-items:center; padding:14px 16px; border-radius:10px; margin-top:8px; }
+      .rf-total-box.gyg { background:#f0f7ff; border:1.5px solid #bfdbfe; }
+      .rf-total-box.agencia { background:#fff7ed; border:1.5px solid #fed7aa; }
+      .rf-total-label { font-family:'Poppins',sans-serif; font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase; }
+      .rf-total-label.gyg { color:#1d4ed8; }
+      .rf-total-label.agencia { color:#9a3412; }
+      .rf-total-valor { font-size:18px; font-weight:700; color:#0f172a; }
+    </style>
+
+    <div style="background:white;border:1px solid #e2e8f0;border-radius:12px;padding:16px 18px;">
+
+      <!-- VOOS -->
+      <div class="rf-secao">✈️ Voos</div>
+      <div class="rf-linha">
+        <div><span class="rf-label">Ida e volta Brasil ↔ África do Sul</span><span class="rf-sub">POA → GRU → JNB · volta JNB → GRU → POA</span></div>
+        <span class="rf-valor">R$ 23.000</span>
       </div>
-      <div style="background:rgba(255,255,255,0.1);border-radius:10px;padding:12px 14px;">
-        <div style="font-family:'Poppins',sans-serif;font-size:9px;color:rgba(255,255,255,0.65);margin-bottom:4px;">3× no Cartão</div>
-        <div style="font-size:22px;font-weight:700;color:white;line-height:1;">R$ 16.970</div>
+      <div class="rf-linha">
+        <div><span class="rf-label">Voo interno JNB → CPT (FlySafair)</span><span class="rf-sub">ZAR 5.575 · câmbio R$ 0,34/ZAR</span></div>
+        <span class="rf-valor">~R$ 1.896</span>
       </div>
+
+      <!-- HOSPEDAGENS -->
+      <div class="rf-secao">🏨 Hospedagens</div>
+      <div class="rf-linha">
+        <div><span class="rf-label">KWA Maritane Lodge</span><span class="rf-sub">Pilanesberg · 3 noites</span></div>
+        <span class="rf-valor">R$ 6.616</span>
+      </div>
+      <div class="rf-linha">
+        <div><span class="rf-label">Garden Court Sandton City</span><span class="rf-sub">Joanesburgo · 1 noite</span></div>
+        <span class="rf-valor">R$ 536</span>
+      </div>
+      <div class="rf-linha">
+        <div><span class="rf-label">SunSquare Cape Town City Bowl</span><span class="rf-sub">Cidade do Cabo · 7 noites</span></div>
+        <span class="rf-valor">R$ 6.124</span>
+      </div>
+      <div class="rf-subtotal">
+        <span class="rf-subtotal-label">Subtotal hospedagens</span>
+        <span class="rf-subtotal-valor">R$ 13.276</span>
+      </div>
+
+      <!-- TRANSFERS -->
+      <div class="rf-secao">🚐 Transfers Pilanesberg (ida + volta)</div>
+      <div class="rf-linha">
+        <div><span class="rf-label">Tautona Tours (2 transfers) ou Agência</span><span class="rf-sub">ZAR 8.300 · câmbio R$ 0,34/ZAR ou R$1980*2 trechos com agência</span></div>
+        <span class="rf-valor">~ R$ 2.800 ou R$3960</span>
+      </div>
+
+      <!-- PASSEIOS -->
+      <div class="rf-secao">🗺️ Passeios</div>
+      <div class="rf-linha">
+        <div><span class="rf-label">Table Mountain</span><span class="rf-sub">2 adultos + 1 criança · ZAR 2.400 estimado avulso ou R$1565 com agência</span></div>
+        <span class="rf-valor">~R$ 816 ou R$1565</span>
+      </div>
+      <div class="rf-linha">
+        <div><span class="rf-label">City Tour</span><span class="rf-sub">hop-on hop-off (GetYourGuide) ou com agência</span></div>
+        <span class="rf-valor">R$ 360 ou R$2400</span>
+      </div>
+      <div class="rf-linha">
+        <div><span class="rf-label">Península do Cabo</span><span class="rf-sub">Getyourguide ou agência</span></div>
+        <span class="rf-valor">~ R$ 900,00 ou R$2397,00</span>
+      </div>
+      <div class="rf-linha">
+        <div><span class="rf-label">Vinícolas Stellenbosch + Franschhoek</span><span class="rf-sub">Dia 09 · 3 pessoas</span></div>
+        <span class="rf-valor">~R$ 1.500 ou R$2397</span>
+      </div>
+      <div class="rf-linha">
+        <div><span class="rf-label">Hermanus — Passeio Dia Todo</span><span class="rf-sub">Dia 10 · transfer + barco + tubarões (GYG)</span></div>
+        <span class="rf-valor">R$ 2.500 ou R$2997</span>
+      </div>
+
+      <div class="rf-subtotal">
+        <span class="rf-subtotal-label">Subtotal Passeios</span>
+        <span class="rf-subtotal-valor">R$ 6.000 ou R$11.800</span>
+      </div>
+
+      <!-- RESTAURANTES RESERVADOS -->
+      <div class="rf-secao">🍽️ Restaurantes com Reserva</div>
+      <div class="rf-linha">
+        <div><span class="rf-label">GOLD Restaurant</span><span class="rf-sub">Dia 07 · 2 adultos + 1 criança · sem bebidas</span></div>
+        <span class="rf-valor">~R$ 450</span>
+      </div>
+
+      <!-- OUTROS -->
+      <div class="rf-secao">🧾 Outros Custos</div>
+      <div class="rf-linha">
+        <div><span class="rf-label">Alimentação, Uber e avulsos</span><span class="rf-sub">Estimativa de 1500 a 2000 rands por dia (R$450 a R$600) · 3 pessoas</span></div>
+        <span class="rf-valor">R$ 5.000 a R$7.000</span>
+      </div>
+
     </div>
-    <div style="font-size:10px;color:rgba(255,255,255,0.55);line-height:1.6;">Inclui: 2 transfers Pilanesberg (ida + volta) · Chegada CPT + Table Mountain · City Tour · Península do Cabo · Vinícolas + Giraffe House · Hermanus. Não inclui restaurantes, ingressos avulsos e hospedagens.</div>
-  </div>
-  <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:10px 14px;margin-bottom:20px;font-size:10px;color:#9a3412;line-height:1.6;">
-    <strong>💡 Dica de comparação:</strong> Os valores do GetYourGuide são em ZAR e variam por operador e data. Converta pelo câmbio do dia antes de comparar com a agência. A vantagem da agência é o atendimento em português do início ao fim.
+
+    <!-- TOTAIS -->
+    <div style="margin-top:16px;display:flex;flex-direction:column;gap:8px;">
+      <div class="rf-total-box gyg">
+        <div>
+          <span class="rf-total-label gyg">Estimativa Total:</span>
+          <div style="font-size:9px;color:#64748b;margin-top:2px;">Valor variável a escolher agência ou passeios avulsos getyourguide</div>
+        </div>
+        <span class="rf-total-valor">~ R$50.000 a R$60.000<br></span>
+      </div>
+    <div style="font-size:9px;color:#94a3b8;margin-top:8px;line-height:1.6;padding:0 2px;">* Câmbio estimado R$ 0,34/ZAR. Valores de passeios são médias — confirmar na reserva. Voo internacional, alimentação e outros custos variáveis não incluídos nos totais acima.</div>
   </div>
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
