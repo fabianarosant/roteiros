@@ -557,6 +557,7 @@ body{
 .selo-amarelo{ background: #fef9c3; color: #854d0e; border: 1.5px solid #ca8a04; }
 .selo-dourado{ background: #fef9c3; color: #854d0e; border: 1.5px solid #ca8a04; }
 .selo-vermelho{ background: #fee2e2; color: #991b1b; border: 1.5px solid #dc2626; }
+.selo-incluso{ background: #dcfce7; color: #166534; border: 1.5px solid #16a34a; }
 .reserva-essencial{ background: #fee2e2; color: #991b1b; border-radius: 6px; padding: 4px 10px; font-size: 10px; font-weight: 700; }
 .reserva-recomendada{ background: #fdf6ec; color: #8a6830; border-radius: 6px; padding: 4px 10px; font-size: 10px; font-weight: 700; }
 .reserva-direto{ background: #dbeafe; color: var(--azul-medio); border-radius: 6px; padding: 4px 10px; font-size: 10px; font-weight: 700; }
@@ -2096,23 +2097,23 @@ document.addEventListener('DOMContentLoaded', function(){
       <div style="display:flex;flex-direction:column;gap:12px;">
 
         <div style="display:flex;align-items:center;gap:12px;">
-          <span class="selo selo-vermelho" style="flex-shrink:0;">🎟️ Prioridade</span>
-          <span style="font-size:12px;color:#475569;"><strong>Compre antes de viajar</strong> — risco real de esgotar. Link oficial em cada atração.</span>
-        </div>
-
-        <div style="display:flex;align-items:center;gap:12px;">
           <span class="selo selo-pre-viagem" style="flex-shrink:0;">🎟️ Pré-viagem</span>
-          <span style="font-size:12px;color:#475569;">Pode comprar no local, mas recomendamos comprar online para evitar filas nas bilheterias.</span>
+          <span style="font-size:12px;color:#475569;"><strong>Compre antes de viajar, online</strong> — para evitar filas e risco de esgotar. Link oficial em cada atração.</span>
         </div>
 
         <div style="display:flex;align-items:center;gap:12px;">
           <span class="selo selo-amarelo" style="flex-shrink:0;">🟡 Ingresso no Local</span>
-          <span style="font-size:12px;color:#475569;">Paga na bilheteria na hora — sem compra online disponível. Incluímos valor e tempo de fila estimado.</span>
+          <span style="font-size:12px;color:#475569;">Pode ser decidido e comprado na hora, direto na bilheteria — sem necessidade de reserva antecipada.</span>
         </div>
 
         <div style="display:flex;align-items:center;gap:12px;">
           <span class="selo selo-verde" style="flex-shrink:0;">🔵 Gratuito</span>
           <span style="font-size:12px;color:#475569;">Acesso sem custo. Incluímos horários e melhores momentos para visitar.</span>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span class="selo selo-incluso" style="flex-shrink:0;">✓ Incluso</span>
+          <span style="font-size:12px;color:#475569;">Já incluso na diária do hotel ou no pacote — sem custo adicional.</span>
         </div>
 
       </div>
@@ -2213,9 +2214,6 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
     <div class="dia-header-body">
       <span class="dia-header-ritmo">🦁 Ritmo: Tranquilo · chegada + descanso</span>
-      <div class="dia-header-links">
-        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 ZAR 900 almoço</span>
-      </div>
     </div>
   </div>
 
@@ -2341,7 +2339,7 @@ document.addEventListener('DOMContentLoaded', function(){
         <span class="atracao-nova-nome">Game Drive da Tarde <span class="atracao-data">Dia 01 · 21/07 · Terça</span></span>
         <span class="atracao-nova-cat">16h00 · incluso na diária · veículo aberto com guia</span>
       </div>
-      <span class="selo selo-verde">🔵 Incluso</span>
+      <span class="selo selo-incluso">✓ Incluso</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Saída</span><span class="info-valor">16h00 — recepção do lodge</span></div>
@@ -2362,7 +2360,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="restaurante" style="margin-bottom:24px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍽️</div>
-      <div class="rest-nome">Restaurante KWA Maritane — Jantar<span class="rest-recomendado-badge badge-bom">✓ Incluso</span></div>
+      <div class="rest-nome">Restaurante KWA Maritane — Jantar<span class="selo selo-incluso">✓ Incluso</span></div>
     </div>
     <div class="restaurante-body">
       <p>📍 KWA Maritane Bush Lodge · Pilanesberg</p>
@@ -2389,9 +2387,6 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
     <div class="dia-header-body">
       <span class="dia-header-ritmo">🦁 Ritmo: Tranquilo · lodge + dois safaris</span>
-      <div class="dia-header-links">
-        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 ZAR 900 almoço</span>
-      </div>
     </div>
   </div>
 
@@ -2408,7 +2403,7 @@ document.addEventListener('DOMContentLoaded', function(){
         <span class="atracao-nova-nome">Game Drive do Amanhecer <span class="atracao-data">Dia 02 · 22/07 · Quarta</span></span>
         <span class="atracao-nova-cat">05h00 · o horário dos predadores · incluso na diária</span>
       </div>
-      <span class="selo selo-verde">🔵 Incluso</span>
+      <span class="selo selo-incluso">✓ Incluso</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Saída</span><span class="info-valor">05h00 — recepção do lodge</span></div>
@@ -2430,7 +2425,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="restaurante" style="margin-bottom:24px;">
     <div class="restaurante-header">
       <div class="rest-letra">☕</div>
-      <div class="rest-nome">Café da Manhã — KWA Maritane<span class="rest-recomendado-badge badge-bom">✓ Incluso</span></div>
+      <div class="rest-nome">Café da Manhã — KWA Maritane<span class="selo selo-incluso">✓ Incluso</span></div>
     </div>
     <div class="restaurante-body">
       <p>📍 Restaurante do Lodge · Pilanesberg</p>
@@ -2447,7 +2442,7 @@ document.addEventListener('DOMContentLoaded', function(){
         <span class="atracao-nova-nome">Túnel de Observação + Piscina <span class="atracao-data">Dia 02 · 22/07 · Quarta</span></span>
         <span class="atracao-nova-cat">11h00–17h00 · estrutura do lodge · sem custo adicional</span>
       </div>
-      <span class="selo selo-verde">🔵 Incluso</span>
+      <span class="selo selo-incluso">✓ Incluso</span>
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
@@ -2485,7 +2480,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="restaurante" style="margin-bottom:24px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍽️</div>
-      <div class="rest-nome">Restaurante KWA Maritane — Jantar<span class="rest-recomendado-badge badge-bom">✓ Incluso</span></div>
+      <div class="rest-nome">Restaurante KWA Maritane — Jantar<span class="selo selo-incluso">✓ Incluso</span></div>
     </div>
     <div class="restaurante-body">
       <p>📍 KWA Maritane Bush Lodge · a partir das 19h30</p>
@@ -2511,9 +2506,6 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
     <div class="dia-header-body">
       <span class="dia-header-ritmo">🦁 Ritmo: Tranquilo · lodge + safari tarde</span>
-      <div class="dia-header-links">
-        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 ZAR 900 almoço</span>
-      </div>
     </div>
   </div>
 
@@ -2530,7 +2522,7 @@ document.addEventListener('DOMContentLoaded', function(){
         <span class="atracao-nova-nome">Café + Manhã Livre no Lodge <span class="atracao-data">Dia 03 · 23/07 · Quinta</span></span>
         <span class="atracao-nova-cat">☕ 09h00 · ritmo tranquilo · piscina · túnel · mirante</span>
       </div>
-      <span class="selo selo-verde">🔵 Incluso</span>
+      <span class="selo selo-incluso">✓ Incluso</span>
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
@@ -2567,7 +2559,7 @@ document.addEventListener('DOMContentLoaded', function(){
         <span class="atracao-nova-nome">Game Drive do Pôr do Sol <span class="atracao-data">Dia 03 · 23/07 · Quinta</span></span>
         <span class="atracao-nova-cat">16h00 · luz laranja · incluso na diária</span>
       </div>
-      <span class="selo selo-verde">🔵 Incluso</span>
+      <span class="selo selo-incluso">✓ Incluso</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Saída</span><span class="info-valor">16h00 — recepção do lodge</span></div>
@@ -2588,7 +2580,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="restaurante" style="margin-bottom:24px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍽️</div>
-      <div class="rest-nome">Restaurante KWA Maritane — Jantar<span class="rest-recomendado-badge badge-bom">✓ Incluso</span></div>
+      <div class="rest-nome">Restaurante KWA Maritane — Jantar<span class="selo selo-incluso">✓ Incluso</span></div>
     </div>
     <div class="restaurante-body">
       <p>📍 KWA Maritane Bush Lodge · a partir das 20h00</p>
@@ -2619,9 +2611,6 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
     <div class="dia-header-body">
       <span class="dia-header-ritmo">🦁 Ritmo: Moderado · safari + transferência + cidade</span>
-      <div class="dia-header-links">
-        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 ZAR 4.150 transfer + ZAR 1.755 hotel</span>
-      </div>
     </div>
   </div>
 
@@ -2638,7 +2627,7 @@ document.addEventListener('DOMContentLoaded', function(){
         <span class="atracao-nova-nome">Último Game Drive — Despedida do Pilanesberg <span class="atracao-data">Dia 04 · 24/07 · Sexta</span></span>
         <span class="atracao-nova-cat">🦁 05h00 · incluso na diária · único safari do dia</span>
       </div>
-      <span class="selo selo-verde">🔵 Incluso</span>
+      <span class="selo selo-incluso">✓ Incluso</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Saída</span><span class="info-valor">05h00 — recepção do lodge</span></div>
@@ -2848,9 +2837,6 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
     <div class="dia-header-body">
       <span class="dia-header-ritmo">🌊 Ritmo: Moderado · voo + Table Mountain</span>
-      <div class="dia-header-links">
-        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 ZAR 5.575 voo · ZAR 1.200 Table Mountain</span>
-      </div>
     </div>
   </div>
 
@@ -3049,9 +3035,6 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
     <div class="dia-header-body">
       <span class="dia-header-ritmo">🌊 Ritmo: Moderado · montanha + praia</span>
-      <div class="dia-header-links">
-        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 ZAR 1.200 Table Mountain (se não foi ontem)</span>
-      </div>
     </div>
   </div>
 
@@ -3100,6 +3083,7 @@ document.addEventListener('DOMContentLoaded', function(){
           <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide — hop-on hop-off</div>
           <div style="font-size:14px;font-weight:700;color:#0f172a;">R$ 360 <span style="font-weight:400;font-size:10px;color:#64748b;">3 pessoas</span></div>
           <div style="font-size:9px;color:#64748b;margin-top:1px;">Ônibus turístico · embarque e desembarque livre nos pontos · dia inteiro</div>
+          <a href="https://gyg.me/BQI6RfRH" target="_blank" style="display:inline-block;margin-top:5px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:2px 8px;">Ver no GetYourGuide →</a>
         </div>
         <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
           <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#9a3412;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">🇧🇷 Agência</div>
@@ -3172,9 +3156,6 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
     <div class="dia-header-body">
       <span class="dia-header-ritmo">🚗 Ritmo: Intenso · dia inteiro na estrada</span>
-      <div class="dia-header-links">
-        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 ZAR 2.530 tour + jantar GOLD</span>
-      </div>
     </div>
   </div>
 
@@ -3204,9 +3185,9 @@ document.addEventListener('DOMContentLoaded', function(){
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0 4px;">
         <div style="background:#f0f7ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:9px 11px;">
           <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide — tour em inglês</div>
-          <div style="font-size:14px;font-weight:700;color:#0f172a;">~R$ 1.600 <span style="font-weight:400;font-size:10px;color:#64748b;">3 pessoas</span></div>
+          <div style="font-size:14px;font-weight:700;color:#0f172a;">R$ 800 <span style="font-weight:400;font-size:10px;color:#64748b;">3 pessoas</span></div>
           <div style="font-size:9px;color:#64748b;margin-top:1px;">Tour em grupo · guia em inglês · cancelamento flexível</div>
-          <a href="https://www.getyourguide.com/cape-town-l103/cape-peninsula-tour-tc24/" target="_blank" style="display:inline-block;margin-top:5px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:2px 8px;">Ver no GetYourGuide →</a>
+          <a href="https://gyg.me/lkA4VQyh" target="_blank" style="display:inline-block;margin-top:5px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:2px 8px;">Ver no GetYourGuide →</a>
         </div>
         <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
           <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#9a3412;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">🇧🇷 Agência África</div>
@@ -3216,29 +3197,34 @@ document.addEventListener('DOMContentLoaded', function(){
         </div>
       </div>
 
+      <!-- CUSTOS ADICIONAIS OPCIONAIS -->
+      <div style="background:#fefce8;border:1.5px solid #fde68a;border-radius:8px;padding:10px 12px;margin:8px 0 4px;">
+        <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#92400e;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">⚠️ Custos Adicionais Opcionais — pagos no local · não incluídos no tour</div>
+        <div style="display:flex;flex-direction:column;gap:5px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;">
+            <span style="font-size:10px;color:#0f172a;font-weight:600;">Boulders Beach (pinguins)</span>
+            <span style="font-size:10px;font-weight:700;color:#0f172a;">ZAR 245 <span style="font-weight:400;font-size:9px;color:#64748b;">adulto · criança meia</span></span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;">
+            <span style="font-size:10px;color:#0f172a;font-weight:600;">Cabo da Boa Esperança</span>
+            <span style="font-size:10px;font-weight:700;color:#0f172a;">ZAR 515 <span style="font-weight:400;font-size:9px;color:#64748b;">adulto · criança meia</span></span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;">
+            <span style="font-size:10px;color:#0f172a;font-weight:600;">Funicular · Farol do Cabo</span>
+            <span style="font-size:10px;font-weight:700;color:#0f172a;">ZAR 105 <span style="font-weight:400;font-size:9px;color:#64748b;">adulto · ZAR 55 criança</span></span>
+          </div>
+        </div>
+      </div>
+
       <!-- ITINERÁRIO -->
       <div class="roteiro-operacional-wrap" style="margin-top:20px;">
-        <div class="roteiro-operacional-titulo">ITINERÁRIO — PENINSULA DO CABO · 10 PARADAS</div>
+        <div class="roteiro-operacional-titulo">ITINERÁRIO — PENINSULA DO CABO · 9 PARADAS</div>
         <div class="roteiro-operacional-lista">
 
           <!-- 1 -->
           <div class="roteiro-operacional-item">
             <div class="roteiro-operacional-texto">
               <div class="roteiro-operacional-num">1</div>
-              <div>
-                <div class="roteiro-operacional-item-titulo">Saída do Hotel — 07h00 a 08h00</div>
-                <div class="roteiro-operacional-item-desc">Pick-up no hotel incluso · início do tour pela manhã</div>
-              </div>
-            </div>
-            <div class="roteiro-operacional-foto">
-              <img src="./assets/atracoes/dia-07/peninsula-saida.jpg" alt="Saída do hotel" loading="lazy" onerror="this.style.display='none'">
-            </div>
-          </div>
-
-          <!-- 2 -->
-          <div class="roteiro-operacional-item">
-            <div class="roteiro-operacional-texto">
-              <div class="roteiro-operacional-num">2</div>
               <div>
                 <div class="roteiro-operacional-item-titulo">Bo-Kaap · 30 min</div>
                 <div class="roteiro-operacional-item-desc">Casinhas coloridas do bairro histórico malayo · parada para fotos · passeio guiado</div>
@@ -3249,10 +3235,10 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>
           </div>
 
-          <!-- 3 -->
+          <!-- 2 -->
           <div class="roteiro-operacional-item">
             <div class="roteiro-operacional-texto">
-              <div class="roteiro-operacional-num">3</div>
+              <div class="roteiro-operacional-num">2</div>
               <div>
                 <div class="roteiro-operacional-item-titulo">Enseada da Donzela · 15 min</div>
                 <div class="roteiro-operacional-item-desc">Parada para fotos · rota pitoresca na costa atlântica</div>
@@ -3263,10 +3249,10 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>
           </div>
 
-          <!-- 4 -->
+          <!-- 3 -->
           <div class="roteiro-operacional-item">
             <div class="roteiro-operacional-texto">
-              <div class="roteiro-operacional-num">4</div>
+              <div class="roteiro-operacional-num">3</div>
               <div>
                 <div class="roteiro-operacional-item-titulo">Hout Bay + Ilha das Focas · 1h45</div>
                 <div class="roteiro-operacional-item-desc">Porto pesqueiro · passeio de barco até a colônia de focas sul-africanas · observação de vida marinha de perto</div>
@@ -3277,10 +3263,10 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>
           </div>
 
-          <!-- 5 -->
+          <!-- 4 -->
           <div class="roteiro-operacional-item">
             <div class="roteiro-operacional-texto">
-              <div class="roteiro-operacional-num">5</div>
+              <div class="roteiro-operacional-num">4</div>
               <div>
                 <div class="roteiro-operacional-item-titulo">Chapman's Peak Drive · 20 min</div>
                 <div class="roteiro-operacional-item-desc">Estrada costeira esculpida na falésia · uma das 10 mais bonitas do mundo · parada para fotos</div>
@@ -3291,13 +3277,13 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>
           </div>
 
-          <!-- 6 -->
+          <!-- 5 -->
           <div class="roteiro-operacional-item">
             <div class="roteiro-operacional-texto">
-              <div class="roteiro-operacional-num">6</div>
+              <div class="roteiro-operacional-num">5</div>
               <div>
                 <div class="roteiro-operacional-item-titulo">Boulders Beach — Pinguins · 1 hora</div>
-                <div class="roteiro-operacional-item-desc">Colônia de pinguins-africanos · caminham livremente pela praia · <strong>entrada à parte ~ZAR 280/adulto</strong></div>
+                <div class="roteiro-operacional-item-desc">Colônia de pinguins-africanos · caminham livremente pela praia · <strong>entrada à parte ZAR 245/adulto · criança meia</strong></div>
               </div>
             </div>
             <div class="roteiro-operacional-foto">
@@ -3305,10 +3291,10 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>
           </div>
 
-          <!-- 7 -->
+          <!-- 6 -->
           <div class="roteiro-operacional-item">
             <div class="roteiro-operacional-texto">
-              <div class="roteiro-operacional-num">7</div>
+              <div class="roteiro-operacional-num">6</div>
               <div>
                 <div class="roteiro-operacional-item-titulo">Simon's Town — Almoço · 1h15</div>
                 <div class="roteiro-operacional-item-desc">Cidade histórica da Marinha · almoço · tempo livre · compras · vistas panorâmicas da baía</div>
@@ -3319,13 +3305,13 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>
           </div>
 
-          <!-- 8 -->
+          <!-- 7 -->
           <div class="roteiro-operacional-item">
             <div class="roteiro-operacional-texto">
-              <div class="roteiro-operacional-num">8</div>
+              <div class="roteiro-operacional-num">7</div>
               <div>
                 <div class="roteiro-operacional-item-titulo">Cabo da Boa Esperança · 1 hora</div>
-                <div class="roteiro-operacional-item-desc">A ponta mais sudoeste da África · placa do marco geográfico · vista dos dois oceanos · <strong>entrada à parte ~ZAR 340/adulto</strong></div>
+                <div class="roteiro-operacional-item-desc">A ponta mais sudoeste da África · placa do marco geográfico · vista dos dois oceanos · <strong>entrada à parte ZAR 515/adulto · criança meia</strong></div>
               </div>
             </div>
             <div class="roteiro-operacional-foto">
@@ -3333,13 +3319,13 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>
           </div>
 
-          <!-- 9 -->
+          <!-- 8 -->
           <div class="roteiro-operacional-item">
             <div class="roteiro-operacional-texto">
-              <div class="roteiro-operacional-num">9</div>
+              <div class="roteiro-operacional-num">8</div>
               <div>
                 <div class="roteiro-operacional-item-titulo">Novo Farol do Cabo · 1 hora</div>
-                <div class="roteiro-operacional-item-desc">Trilha até o farol · vistas impressionantes do promontório · dois oceanos ao mesmo tempo</div>
+                <div class="roteiro-operacional-item-desc">Trilha até o farol · vistas impressionantes do promontório · dois oceanos ao mesmo tempo · <strong>funicular à parte ZAR 105/adulto · ZAR 55 criança</strong></div>
               </div>
             </div>
             <div class="roteiro-operacional-foto">
@@ -3347,10 +3333,10 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>
           </div>
 
-          <!-- 10 -->
+          <!-- 9 -->
           <div class="roteiro-operacional-item">
             <div class="roteiro-operacional-texto">
-              <div class="roteiro-operacional-num">10</div>
+              <div class="roteiro-operacional-num">9</div>
               <div>
                 <div class="roteiro-operacional-item-titulo">Praia de Muizenberg · 30 min</div>
                 <div class="roteiro-operacional-item-desc">Parada final · casinhas coloridas de surf · passeio tranquilo antes do retorno ao hotel</div>
@@ -3365,7 +3351,7 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
     </div>
     <div class="dicas-box">
-      <div class="dica-item"><span class="dica-item-icon">🐧</span><div><span class="dica-item-label">PINGUINS — TAXAS À PARTE</span>Boulders Beach cobra entrada à parte no local — em torno de ZAR 280 por adulto e ZAR 140 por criança. Tenham Rand em mãos ou cartão. O Luigi vai querer ficar horas — avisem o guia para reservar mais tempo aqui se possível.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">🐧</span><div><span class="dica-item-label">PINGUINS</span>Os únicos pinguins que vivem na África — e fazem um barulho de burro (o nome científico é <em>spheniscus demersus</em>, mas chamam de "jackass penguin" por isso). Caminham pela praia sem ligar pra ninguém, param do lado das pessoas, olham nos olhos. O Luigi vai querer adotar um — avisem o guia para reservar mais tempo aqui se possível.</div></div>
       <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CARIMBE</span>A entrada do Cape Point (Cabo da Boa Esperança) também é paga à parte — ZAR 340 por adulto. A foto na placa com os dois oceanos ao fundo é a mais icônica de toda a viagem.</div></div>
       <div class="dica-item"><span class="dica-item-icon">🧥</span><div><span class="dica-item-label">VENTO</span>O Cabo tem vento forte o ano todo — e em julho pode ser muito intenso. Casacos, gorro e óculos de sol são essenciais para o passeio nas pedras e mirantes.</div></div>
     </div>
@@ -3417,9 +3403,6 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
     <div class="dia-header-body">
       <span class="dia-header-ritmo">👣 Ritmo: Moderado · passeio a pé + Waterfront</span>
-      <div class="dia-header-links">
-        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Dia de baixo custo</span>
-      </div>
     </div>
   </div>
 
@@ -3440,6 +3423,7 @@ document.addEventListener('DOMContentLoaded', function(){
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">Uber do hotel ~10 min</span></div>
       <div><span class="info-label">Horário</span><span class="info-valor">08h30 às 10h30 · cedo para pegar as ruas vazias</span></div>
+      <span class="info-atencao">💡 O passeio da Península (Dia 07) passa por aqui rapidinho — hoje é a chance de curtir com calma, sem guia com horário marcado e sem grupo atrás.</span>
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
@@ -3517,6 +3501,7 @@ document.addEventListener('DOMContentLoaded', function(){
     <div class="dicas-box">
       <div class="dica-item"><span class="dica-item-icon">🦈</span><div><span class="dica-item-label">TWO OCEANS AQUARIUM</span>Dentro do V&A — um dos melhores aquários da África. Tubarões, tartarugas, raias e o tanque dos pinguins. O Luigi vai querer entrar — vale muito. Ingresso ~ZAR 220 por adulto, ZAR 120 criança.</div></div>
       <div class="dica-item"><span class="dica-item-icon">🛍️</span><div><span class="dica-item-label">SOUVENIR</span>O V&A tem as melhores lojas de artesanato sul-africano — estatuetas de madeira, joias de fio de telefone colorido e produtos locais de qualidade. Melhor lugar para comprar lembranças.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">🍽️</span><div><span class="dica-item-label">MAKER'S LANDING</span>Dentro do V&A, no Dock Road — um food hall com produtores e chefs locais sul-africanos. Diferente dos restaurantes do shopping, aqui é tudo artesanal e independente: frangos assados na brasa, frutos do mar frescos, cozinha indiana da Cidade do Cabo, cervejas artesanais. Ótima opção para o jantar sem sair do complexo.</div></div>
     </div>
   </div>
 
@@ -3537,9 +3522,6 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
     <div class="dia-header-body">
       <span class="dia-header-ritmo">🍇 Ritmo: Tranquilo · dia nas vinícolas</span>
-      <div class="dia-header-links">
-        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Degustações + almoço nas vinícolas</span>
-      </div>
     </div>
   </div>
 
@@ -3565,7 +3547,7 @@ document.addEventListener('DOMContentLoaded', function(){
         <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide — tour em inglês</div>
         <div style="font-size:14px;font-weight:700;color:#0f172a;">~R$ 1.500 <span style="font-weight:400;font-size:10px;color:#64748b;">3 pessoas</span></div>
         <div style="font-size:9px;color:#64748b;margin-top:1px;">Tour em grupo · guia em inglês · cancelamento flexível</div>
-        <a href="https://www.getyourguide.com/stellenbosch-l2034/" target="_blank" style="display:inline-block;margin-top:5px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:2px 8px;">Ver no GetYourGuide →</a>
+        <a href="https://gyg.me/F3Fv4RN6" target="_blank" style="display:inline-block;margin-top:5px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:2px 8px;">Ver no GetYourGuide →</a>
       </div>
       <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
         <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#9a3412;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">🇧🇷 Agência África</div>
@@ -3605,9 +3587,6 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
     <div class="dia-header-body">
       <span class="dia-header-ritmo">🌊 Ritmo: Passeio de dia todo · 1h30 de Cape Town</span>
-      <div class="dia-header-links">
-        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 Transfer + Boat Tour opcional</span>
-      </div>
     </div>
   </div>
 
@@ -3726,9 +3705,6 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
     <div class="dia-header-body">
       <span class="dia-header-ritmo">🎨 Ritmo: Moderado · natureza + história + arte + despedida</span>
-      <div class="dia-header-links">
-        <span class="btn-rota" style="pointer-events:none;opacity:0.45;cursor:default;">💰 ZAR 350 Kirstenbosch · ZAR 130 District Six · ZAR 210 Zeitz</span>
-      </div>
     </div>
   </div>
 
@@ -3925,9 +3901,9 @@ document.addEventListener('DOMContentLoaded', function(){
 <section id="checklist-reservas" class="secao-wrapper">
 <div class="page secao">
   <span class="titulo-principal">Checklist de Reservas</span>
-  <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#64748b;line-height:1.7;margin-bottom:8px;">Tudo que precisa ser reservado antes de embarcar. Cada item tem duas opções de preço para comparar. Quando confirmar uma reserva, edite o HTML adicionando a classe <code style="background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:10px;color:#0d2d6b;">done</code> no <code style="background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:10px;color:#0d2d6b;">buy-check</code> para marcar como feito.</p>
+  <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#64748b;line-height:1.7;margin-bottom:8px;">Tudo que precisa ser reservado/comprado antes. Cada item tem duas opções de preço para comparar. Quando confirmar uma reserva, será atualizado com check aqui.</p>
   <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:8px 12px;margin-bottom:20px;font-family:'Poppins',sans-serif;font-size:10px;color:#9a3412;line-height:1.6;">
-    <strong>🇧🇷 Agência África para Brasileiros</strong> — guias em português, veículo próprio e atendimento em pt-BR do início ao fim. É a opção mais cara, mas elimina a barreira do idioma em todos os passeios.
+    <strong>🇧🇷 Agência África para Brasileiros</strong> — guias e atendimento em português do início ao fim. É a opção mais cara, mas elimina a barreira do idioma em todos os passeios.
   </div>
 
   <!-- ══ TRANSFERS PILANESBERG ══ -->
@@ -4005,10 +3981,10 @@ document.addEventListener('DOMContentLoaded', function(){
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;padding-left:32px;">
           <div style="background:#f0f7ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:9px 11px;">
-            <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide + ingresso direto</div>
+            <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">Ingresso direto — tablemountain.net</div>
             <div style="font-size:13px;font-weight:700;color:#0f172a;">R$816</div>
             <div style="font-size:9px;color:#64748b;margin-top:2px;">Ingresso teleférico: ZAR 1.200 · ~R$ 408 · câmbio R$ 0,34/ZAR</div>
-            <a href="https://www.getyourguide.com/cape-town-l170/" target="_blank" style="display:inline-block;margin-top:6px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:3px 8px;">Ver GetYourGuide →</a>
+            <a href="https://www.tablemountain.net" target="_blank" style="display:inline-block;margin-top:6px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:3px 8px;">Comprar →</a>
           </div>
           <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
             <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#9a3412;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">🇧🇷 Agência África</div>
@@ -4024,7 +4000,7 @@ document.addEventListener('DOMContentLoaded', function(){
           <div class="buy-check"></div>
           <div style="flex:1;">
             <span class="card-lista-titulo">City Tour Cape Town + Mercados Locais</span>
-            <span class="card-lista-desc">Dia 08 · 28/07 (Terça) · Bo-Kaap, centro histórico, mercados</span>
+            <span class="card-lista-desc">Dia 06 · 26/07 (Domingo) · hop-on hop-off · Bo-Kaap, centro histórico, Green Point</span>
           </div>
           <span class="card-lista-badge badge-req">A Reservar</span>
         </div>
@@ -4033,7 +4009,7 @@ document.addEventListener('DOMContentLoaded', function(){
             <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide</div>
             <div style="font-size:13px;font-weight:700;color:#0f172a;">R$360</div>
             <div style="font-size:9px;color:#64748b;margin-top:2px;">Filtrar: "Cape Town City Tour" half ou full day</div>
-            <a href="https://www.getyourguide.com/cape-town-l170/?q=city+tour" target="_blank" style="display:inline-block;margin-top:6px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:3px 8px;">Ver GetYourGuide →</a>
+            <a href="https://gyg.me/BQI6RfRH" target="_blank" style="display:inline-block;margin-top:6px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:3px 8px;">Ver GetYourGuide →</a>
           </div>
           <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
             <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#9a3412;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">🇧🇷 Agência África</div>
@@ -4056,14 +4032,22 @@ document.addEventListener('DOMContentLoaded', function(){
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;padding-left:32px;">
           <div style="background:#f0f7ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:9px 11px;">
             <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide</div>
-            <div style="font-size:13px;font-weight:700;color:#0f172a;">R$900</div>
+            <div style="font-size:13px;font-weight:700;color:#0f172a;">R$ 800</div>
             <div style="font-size:9px;color:#64748b;margin-top:2px;">Filtrar: "Cape Peninsula" full day tour</div>
-            <a href="https://www.getyourguide.com/cape-town-l170/?q=cape+peninsula" target="_blank" style="display:inline-block;margin-top:6px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:3px 8px;">Ver GetYourGuide →</a>
+            <a href="https://gyg.me/lkA4VQyh" target="_blank" style="display:inline-block;margin-top:6px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:3px 8px;">Ver GetYourGuide →</a>
           </div>
           <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
             <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#9a3412;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">🇧🇷 Agência África</div>
             <div style="font-size:14px;font-weight:700;color:#0f172a;">R$ 2.397 <span style="font-weight:400;font-size:10px;color:#64748b;">PIX</span></div>
             <div style="font-size:9px;color:#9a3412;margin-top:2px;">R$ 2.589 no cartão (3×)</div>
+          </div>
+        </div>
+        <div style="background:#fefce8;border:1.5px solid #fde68a;border-radius:8px;padding:10px 12px;width:100%;padding-left:32px;box-sizing:border-box;">
+          <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#92400e;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">⚠️ Custos Adicionais Opcionais — pagos no local · não incluídos no tour</div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div style="display:flex;justify-content:space-between;"><span style="font-size:9px;color:#0f172a;font-weight:600;">Boulders Beach (pinguins)</span><span style="font-size:9px;font-weight:700;color:#0f172a;">ZAR 245 adulto · criança meia</span></div>
+            <div style="display:flex;justify-content:space-between;"><span style="font-size:9px;color:#0f172a;font-weight:600;">Cabo da Boa Esperança</span><span style="font-size:9px;font-weight:700;color:#0f172a;">ZAR 515 adulto · criança meia</span></div>
+            <div style="display:flex;justify-content:space-between;"><span style="font-size:9px;color:#0f172a;font-weight:600;">Funicular · Farol do Cabo</span><span style="font-size:9px;font-weight:700;color:#0f172a;">ZAR 105 adulto · ZAR 55 criança</span></div>
           </div>
         </div>
       </div>
@@ -4083,7 +4067,7 @@ document.addEventListener('DOMContentLoaded', function(){
             <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide</div>
             <div style="font-size:14px;font-weight:700;color:#0f172a;">~R$ 1.500 <span style="font-weight:400;font-size:10px;color:#64748b;">3 pessoas</span></div>
             <div style="font-size:9px;color:#64748b;margin-top:2px;">Tour em grupo · guia em inglês · cancelamento flexível</div>
-            <a href="https://www.getyourguide.com/stellenbosch-l2034/" target="_blank" style="display:inline-block;margin-top:6px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:3px 8px;">Ver GetYourGuide →</a>
+            <a href="https://gyg.me/F3Fv4RN6" target="_blank" style="display:inline-block;margin-top:6px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:3px 8px;">Ver GetYourGuide →</a>
           </div>
           <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
             <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#9a3412;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">🇧🇷 Agência África</div>
@@ -4108,7 +4092,7 @@ document.addEventListener('DOMContentLoaded', function(){
             <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#1d4ed8;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GetYourGuide</div>
             <div style="font-size:14px;font-weight:700;color:#0f172a;">R$ 2.500 <span style="font-weight:400;font-size:10px;color:#64748b;">3 pessoas</span></div>
             <div style="font-size:9px;color:#64748b;margin-top:2px;">Transfer ida e volta · passeio de barco · gaiola de tubarões</div>
-            <a href="https://www.getyourguide.com/cape-town-l170/?q=hermanus+whale" target="_blank" style="display:inline-block;margin-top:6px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:3px 8px;">Ver GetYourGuide →</a>
+            <a href="https://gyg.me/SzV1VPb1" target="_blank" style="display:inline-block;margin-top:6px;font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;color:#1d4ed8;text-decoration:none;background:#dbeafe;border-radius:4px;padding:3px 8px;">Ver GetYourGuide →</a>
           </div>
           <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:9px 11px;">
             <div style="font-family:'Poppins',sans-serif;font-size:8px;font-weight:700;color:#9a3412;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">🇧🇷 Agência África</div>
@@ -4286,7 +4270,7 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
       <div class="rf-linha">
         <div><span class="rf-label">Península do Cabo</span><span class="rf-sub">Getyourguide ou agência</span></div>
-        <span class="rf-valor">~ R$ 900,00 ou R$2397,00</span>
+        <span class="rf-valor">R$ 800 ou R$2.397</span>
       </div>
       <div class="rf-linha">
         <div><span class="rf-label">Vinícolas Stellenbosch + Franschhoek</span><span class="rf-sub">Dia 09 · 3 pessoas</span></div>
