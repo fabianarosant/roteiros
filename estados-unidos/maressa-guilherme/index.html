@@ -54,7 +54,7 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
 #capa .capa-logo-img{ position: absolute; top: 64px; left: 50%; transform: translateX(-50%); width: 90px; height: 90px; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2)); z-index: 3; }
 #capa .capa-bottom{ width: 100%; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 #capa .capa-pais{ font-family: "Pinyon Script", "Great Vibes", cursive; font-size: 140px; color: #fff; line-height: 1; margin: 0; text-shadow: 0 2px 20px rgba(0,0,0,0.15); display: block; text-align: center; width: 100%; }
-#capa .capa-roteiro-txt{ font-family: "DM Sans", sans-serif; font-size: 24px; font-weight: 400; letter-spacing: 16px; color: #fff; text-transform: uppercase; display: block; text-shadow: 0 1px 6px rgba(0,0,0,0.2); margin-top: 6px; text-align: center; width: 100%; }
+#capa .capa-roteiro-txt{ font-family: "DM Sans", sans-serif; font-size: 32px; font-weight: 400; letter-spacing: 16px; color: #fff; text-transform: uppercase; display: block; text-shadow: 0 1px 6px rgba(0,0,0,0.2); margin-top: 6px; text-align: center; width: 100%; }
 #capa .capa-nomes{ display: block; font-family: "DM Sans", sans-serif; font-size: 15px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.8); margin-top: 28px; text-align: center; width: 100%; }
 #capa .capa-datas-txt{ display: block; font-family: "DM Sans", sans-serif; font-size: 11px; font-weight: 300; letter-spacing: 3px; color: rgba(255,255,255,0.55); text-transform: uppercase; margin-top: 6px; text-align: center; width: 100%; }
 #menu-pratico{ position: relative; min-height: 100svh; display: flex; align-items: center; justify-content: center; padding: 72px 24px 60px; overflow: hidden; border-bottom: none; }
@@ -320,8 +320,10 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
     <div class="capa-bottom">
       <span class="capa-pais">Estados Unidos</span>
       <span class="capa-roteiro-txt">Roteiro</span>
-      <span class="capa-nomes">Maressa &amp; Guilherme</span>
-      <span class="capa-datas-txt">Outubro / Novembro 2026</span>
+      <div style="display:inline-flex;flex-direction:column;align-items:center;gap:4px;margin-top:28px;padding:14px 28px;background:rgba(255,255,255,0.12);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.22);border-radius:14px;">
+        <span class="capa-nomes" style="margin-top:0;">Maressa &amp; Guilherme</span>
+        <span class="capa-datas-txt" style="margin-top:0;">Outubro / Novembro 2026</span>
+      </div>
     </div>
   </div>
 </section>
@@ -1108,99 +1110,90 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
 <div class="vg-page" style="padding-top:0;">
   <div class="vg-header">
     <span class="vg-titulo-h titulo-principal">Roteiro Macro 🇺🇸</span>
-    <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;max-width:560px;margin:0 auto;">Esboço temático dos <strong style="color:var(--azul);">15 dias</strong> de viagem — 5 em Dallas, 4 em Miami e 4 em Orlando, mais os dois dias de voo. Datas e horários serão confirmados após a compra das passagens.</p>
-  </div>
-
-  <div class="dica2-box" style="max-width:720px;margin:0 auto 24px;">
-    <span class="dica2-label">🔄 Direção a confirmar</span>
-    <p>Mostramos abaixo a sequência <strong>Dallas → Miami → Orlando</strong> (começando pelo sonho texano do Guilherme e terminando com a energia dos parques). Se o voo escolhido entrar por Miami ou Orlando, invertemos a ordem — o conteúdo de cada cidade continua o mesmo, só muda a sequência.</p>
+    <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;max-width:560px;margin:0 auto;">15 dias de viagem: <strong style="color:var(--azul);">4 em Dallas · 4 em Miami · 4 em Orlando</strong>, mais os dias de voo e o translado interno.</p>
   </div>
 
   <div class="vg-grid">
 
     <!-- VOO IDA -->
     <a class="vg-card" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">✈️ Ida</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">Campo Grande → EUA</span></div>
+      <div class="vg-card-header"><span class="vg-dia-num">✈️ Ida</span><span class="vg-dia-data">21/10 · Qua</span></div>
+      <div class="vg-card-body"><span class="vg-destino-tag">Campo Grande → Dallas</span></div>
     </a>
 
     <!-- ═══════════ DALLAS ═══════════ -->
     <a class="vg-card vg-dallas" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 01</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 01</span><span class="vg-dia-data">22/10 · Qui</span></div>
       <div class="vg-card-body"><span class="vg-destino-tag">🤠 Dallas</span></div>
     </a>
 
     <a class="vg-card vg-dallas" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 02</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 02</span><span class="vg-dia-data">23/10 · Sex</span></div>
       <div class="vg-card-body"><span class="vg-destino-tag">🤠 Dallas</span></div>
     </a>
 
     <a class="vg-card vg-dallas" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 03</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 03</span><span class="vg-dia-data">24/10 · Sáb</span></div>
       <div class="vg-card-body"><span class="vg-destino-tag">🤠 Dallas</span></div>
     </a>
 
     <a class="vg-card vg-dallas" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 04</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 04</span><span class="vg-dia-data">25/10 · Dom</span></div>
       <div class="vg-card-body"><span class="vg-destino-tag">🤠 Dallas</span></div>
     </a>
 
-    <a class="vg-card vg-dallas" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 05</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">🤠 Dallas</span></div>
+    <!-- ═══════════ TRANSLADO INTERNO ═══════════ -->
+    <a class="vg-card" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">✈️ Translado</span><span class="vg-dia-data">26/10 · Seg</span></div>
+      <div class="vg-card-body"><span class="vg-destino-tag">Dallas → Miami</span></div>
     </a>
 
     <!-- ═══════════ MIAMI ═══════════ -->
     <a class="vg-card vg-miami" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 06</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 05</span><span class="vg-dia-data">27/10 · Ter</span></div>
       <div class="vg-card-body"><span class="vg-destino-tag">🌴 Miami</span></div>
     </a>
 
     <a class="vg-card vg-miami" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 07</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 06</span><span class="vg-dia-data">28/10 · Qua</span></div>
       <div class="vg-card-body"><span class="vg-destino-tag">🌴 Miami</span></div>
     </a>
 
     <a class="vg-card vg-miami" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 08</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 07</span><span class="vg-dia-data">29/10 · Qui</span></div>
       <div class="vg-card-body"><span class="vg-destino-tag">🌴 Miami</span></div>
     </a>
 
     <a class="vg-card vg-miami" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 09</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 08</span><span class="vg-dia-data">30/10 · Sex</span></div>
       <div class="vg-card-body"><span class="vg-destino-tag">🌴 Miami</span></div>
     </a>
 
     <!-- ═══════════ ORLANDO ═══════════ -->
     <a class="vg-card vg-orlando" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 10</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 09</span><span class="vg-dia-data">31/10 · Sáb 🎃</span></div>
       <div class="vg-card-body"><span class="vg-destino-tag">🎢 Orlando</span></div>
     </a>
 
     <a class="vg-card vg-orlando" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 11</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 10</span><span class="vg-dia-data">01/11 · Dom</span></div>
       <div class="vg-card-body"><span class="vg-destino-tag">🎢 Orlando</span></div>
     </a>
 
     <a class="vg-card vg-orlando" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 12</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 11</span><span class="vg-dia-data">02/11 · Seg</span></div>
       <div class="vg-card-body"><span class="vg-destino-tag">🎢 Orlando</span></div>
     </a>
 
     <a class="vg-card vg-orlando" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 13</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">🎢 Orlando</span></div>
-    </a>
-
-    <a class="vg-card vg-orlando" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 14</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 12</span><span class="vg-dia-data">03/11 · Ter</span></div>
       <div class="vg-card-body"><span class="vg-destino-tag">🎢 Orlando</span></div>
     </a>
 
     <!-- VOO VOLTA -->
     <a class="vg-card" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">✈️ Volta</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">EUA → Campo Grande</span></div>
+      <div class="vg-card-header"><span class="vg-dia-num">✈️ Volta</span><span class="vg-dia-data">04/11 · Qua</span></div>
+      <div class="vg-card-body"><span class="vg-destino-tag">Orlando → Campo Grande</span></div>
     </a>
 
   </div>
@@ -1219,8 +1212,8 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
   </div>
 
   <p class="pais-intro">
-    <strong style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--azul-medio);">VAMOS CARIMBAR ESTADOS UNIDOS 🇺🇸</strong><br>
-    Os Estados Unidos não são um país só — são dezenas de "países" dentro do mesmo território. É o sonho texano com chapéu de cowboy e BBQ defumado por 14 horas em Dallas. É o azul turquesa do mar com prédios art déco cor pastel em Miami. É a magia dos parques que transformam adulto em criança em Orlando. Vocês escolheram três Américas muito diferentes — e essa é justamente a graça de começar por aqui.
+    <strong style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--azul-medio);">VAMOS CARIMBAR OS ESTADOS UNIDOS 🇺🇸</strong><br>
+    Maressa e Guilherme, os Estados Unidos não são um país só. São dezenas de "países" dentro do mesmo território. É o sonho texano com chapéu de cowboy e BBQ defumado por 14 horas em Dallas. É o azul turquesa do mar com prédios art déco cor pastel em Miami. É a magia dos parques que transformam adulto em criança em Orlando. Vocês escolheram três Américas muito diferentes, e essa é justamente a graça de começar por aqui.
   </p>
 
   <div class="card2-grid">
