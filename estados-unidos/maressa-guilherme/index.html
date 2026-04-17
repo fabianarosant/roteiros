@@ -1,0 +1,1368 @@
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roteiro Estados Unidos — Maressa & Guilherme | Vamos Carimbar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Pinyon+Script&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>:root{
+    --azul: #1a3a5c;
+    --azul-medio: #2563a8;
+    --azul-claro: #dbeafe;
+    --dourado: #c9a227;
+    --dourado-claro: #f5e8b0;
+    --vermelho: #c0392b;
+    --vermelho-claro: #fdecea;
+    --verde: #1a6b3c;
+    --verde-claro: #d4edda;
+    --amarelo: #e6a817;
+    --amarelo-claro: #fef9e7;
+    --cinza-claro: #f4f6f9;
+    --cinza-borda: #dee2e6;
+    --texto: #1c2b3a;
+    --branco: #ffffff;
+  }
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); background: #f5f8fd; font-size: 14px; line-height: 1.6; }
+.topbar{ position: fixed; top: 0; left: 0; right: 0; height: 52px; background: rgba(26,58,92,0.45); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid rgba(255,255,255,0.08); transition: background 0.3s; }
+.topbar:hover{ background: rgba(26,58,92,0.65); }
+.topbar-logo{ font-family: "DM Sans", sans-serif; font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.6); letter-spacing: 3px; text-transform: uppercase; text-decoration: none; }
+.topbar-right{ display: flex; align-items: center; gap: 12px; }
+.topbar-destino{ font-family: "DM Sans", sans-serif; font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.6); letter-spacing: 2px; text-transform: uppercase; }
+.hamburger-btn{ width: 44px; height: 44px; background: none; border: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 0; border-radius: 6px; transition: background 0.2s; -webkit-tap-highlight-color: transparent; touch-action: manipulation; user-select: none; -webkit-user-select: none; }
+.hamburger-btn:hover{ background: rgba(255,255,255,0.1); }
+.hamburger-btn span{ display: block; width: 22px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+.hamburger-btn.open span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+.hamburger-btn.open span:nth-child(2){ opacity: 0; }
+.hamburger-btn.open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+.nav-drawer{ position: fixed; top: 52px; right: 0; width: 240px; height: calc(100vh - 52px); background: rgba(26,58,92,0.55); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-left: 1px solid rgba(255,255,255,0.06); z-index: 199; overflow-y: auto; padding: 12px 0 32px; transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); box-shadow: -4px 0 32px rgba(0,0,0,0.3); }
+.nav-drawer.open{ transform: translateX(0); }
+.nav-overlay{ position: fixed; inset: 52px 0 0 0; background: rgba(0,0,0,0.25); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); z-index: 198; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+.nav-overlay.open{ opacity: 1; pointer-events: all; }
+.nav-item{ display: block; padding: 7px 20px; color: rgba(255,255,255,0.75); text-decoration: none; font-family: "Poppins", sans-serif; font-size: 11px; font-weight: 500; transition: color 0.15s; }
+.nav-item:hover{ color: white; }
+.nav-menu-principal{ display: block; padding: 12px 20px 10px; color: white; text-decoration: none; font-family: "Poppins", sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 8px; }
+.nav-menu-principal:hover{ color: white; }
+.nav-cidade{ display: block; padding: 10px 20px 2px; font-family: "Magnolia Script", cursive; font-size: 18px; color: white; text-decoration: none; }
+.nav-cidade:hover{ color: rgba(255,255,255,0.75); }
+.main-content{ margin-left: 0; min-height: 100vh; }
+#capa{ position: relative; height: 100svh; max-height: 100svh; overflow: hidden; margin-left: 0; padding: 0; display: block; background: linear-gradient(135deg,#0a1f44 0%,#1a3a5c 40%,#7a1823 100%); }
+#capa .capa-bg-img{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; z-index: 0; }
+#capa .capa-overlay{ position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.0) 30%, rgba(0,0,0,0.3) 65%, rgba(0,0,0,0.6) 100%); z-index: 1; }
+#capa .capa-inner{ position: relative; z-index: 2; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 52px 36px 64px; text-align: center; color: white; }
+#capa .capa-logo-img{ position: absolute; top: 64px; left: 50%; transform: translateX(-50%); width: 90px; height: 90px; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2)); z-index: 3; }
+#capa .capa-bottom{ width: 100%; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+#capa .capa-pais{ font-family: "Pinyon Script", "Great Vibes", cursive; font-size: 140px; color: #fff; line-height: 1; margin: 0; text-shadow: 0 2px 20px rgba(0,0,0,0.15); display: block; text-align: center; width: 100%; }
+#capa .capa-roteiro-txt{ font-family: "DM Sans", sans-serif; font-size: 24px; font-weight: 400; letter-spacing: 16px; color: #fff; text-transform: uppercase; display: block; text-shadow: 0 1px 6px rgba(0,0,0,0.2); margin-top: 6px; text-align: center; width: 100%; }
+#capa .capa-nomes{ display: block; font-family: "DM Sans", sans-serif; font-size: 15px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.8); margin-top: 28px; text-align: center; width: 100%; }
+#capa .capa-datas-txt{ display: block; font-family: "DM Sans", sans-serif; font-size: 11px; font-weight: 300; letter-spacing: 3px; color: rgba(255,255,255,0.55); text-transform: uppercase; margin-top: 6px; text-align: center; width: 100%; }
+#menu-pratico{ position: relative; min-height: 100svh; display: flex; align-items: center; justify-content: center; padding: 72px 24px 60px; overflow: hidden; border-bottom: none; }
+.menu-pratico-bg{ position: absolute; inset: 0; background-image: url("./assets/capas/menu-pratico-bg.png"); background-size: cover; background-position: center; z-index: 0; }
+.mp-logo-wrapper{ position: absolute; top: -52px; left: 50%; transform: translateX(-50%); z-index: 10; width: 90px; height: 90px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.12); padding: 6px; }
+.mp-logo{ width: 72px; height: 72px; object-fit: contain; }
+.menu-pratico-card{ position: relative; z-index: 2; background: white; border-radius: 16px; padding: 56px 28px 36px; width: 100%; max-width: 360px; box-shadow: 0 8px 40px rgba(0,0,0,0.13); display: flex; flex-direction: column; align-items: center; }
+.mp-btn{ display: block; width: 100%; background: var(--azul-medio); color: white; text-decoration: none; text-align: center; padding: 13px 16px; border-radius: 7px; font-family: "Poppins", sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin: 4px 0; transition: background 0.2s, transform 0.15s; box-shadow: 0 3px 0 rgba(0,0,0,0.18); }
+.mp-btn:hover{ background: var(--azul); transform: translateY(-1px); }
+.mp-btn:active{ transform: translateY(1px); box-shadow: none; }
+.mp-clientes{ font-family: "Poppins", sans-serif; font-size: 10px; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; color: rgba(26,58,92,0.4); margin-top: 20px; text-align: center; }
+.etapa-badge{ display:inline-block; background:linear-gradient(135deg,#c8a96e,#dbbf8a); color:white; font-family:"Poppins",sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:4px 10px; border-radius:10px; margin-bottom:10px; box-shadow:0 2px 8px rgba(180,150,90,0.2); }
+#menu-dias{ background: #eef4fb; padding: 80px 0 60px; border-bottom: none; }
+.vg-page{ max-width: 780px; margin: 0 auto; padding: 0 48px; }
+.vg-header{ text-align: center; margin-bottom: 32px; }
+.vg-titulo-h{ font-family: "Poppins", sans-serif; font-size: 32px; font-weight: 700; color: var(--azul); display: block; letter-spacing: -1px; margin-bottom: 8px; }
+.vg-grid{ display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+.vg-card{ background: white; border-radius: 12px; overflow: hidden; border: 1px solid #e8ecf0; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; text-decoration: none; color: inherit; display: block; }
+.vg-card:hover{ transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,58,92,0.15); }
+.vg-card:hover .vg-card-header{ background: var(--azul); }
+.vg-card-header{ background: var(--azul-medio); padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.vg-dia-num{ font-family: "Poppins", sans-serif; font-size: 14px; font-weight: 700; color: white; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
+.vg-dia-data{ font-family: "Poppins", sans-serif; font-size: 9px; font-weight: 500; color: rgba(255,255,255,0.65); letter-spacing: 0.5px; text-align: right; text-transform: uppercase; white-space: nowrap; }
+.vg-card-body{ padding: 12px 14px 14px; }
+.vg-destino-tag{ font-family: "Poppins", sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--azul-medio); margin-bottom: 8px; display: block; }
+.vg-items{ list-style: none; padding: 0; margin: 0; }
+.vg-items li{ font-family: "Poppins", sans-serif; font-size: 11px; font-weight: 400; color: #475569; padding: 3px 0; border-bottom: 1px solid #f1f5f9; line-height: 1.4; display: flex; gap: 5px; align-items: flex-start; }
+.vg-items li:last-child{ border-bottom: none; }
+.vg-items li::before{ content: "·"; color: var(--azul-medio); font-weight: 900; flex-shrink: 0; }
+.vg-card.vg-dallas .vg-card-header{ background:#a8321f; }
+.vg-card.vg-dallas:hover .vg-card-header{ background:#7a1823; }
+.vg-card.vg-dallas .vg-destino-tag{ color:#a8321f; }
+.vg-card.vg-miami .vg-card-header{ background:#0891b2; }
+.vg-card.vg-miami:hover .vg-card-header{ background:#0e7490; }
+.vg-card.vg-miami .vg-destino-tag{ color:#0891b2; }
+.vg-card.vg-orlando .vg-card-header{ background:#7c3aed; }
+.vg-card.vg-orlando:hover .vg-card-header{ background:#5b21b6; }
+.vg-card.vg-orlando .vg-destino-tag{ color:#7c3aed; }
+.selo{ padding: 3px 9px; border-radius: 20px; font-size: 9px; font-weight: 700; white-space: nowrap; display: inline-flex; align-items: center; gap: 3px; }
+.restaurante-body p{ margin: 6px 0; }
+.checklist-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+.checklist-item{ display: flex; align-items: center; gap: 8px; padding: 7px 14px; font-size: 12.5px; border-bottom: 1px solid var(--cinza-claro); }
+.checklist-item input[type="checkbox"]{ accent-color: var(--azul-medio); width: 14px; height: 14px; cursor: pointer; }
+#encerramento{ background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 100%); padding: 80px 60px; text-align: center; color: white; }
+@media (max-width: 768px) {#capa .capa-inner{ padding: 36px 20px 40px; justify-content: center; }#capa .capa-logo-img{ width: 72px; height: 72px; }#capa .capa-pais{ font-size: 80px; }#capa .capa-roteiro-txt{ font-size: 17px; letter-spacing: 10px; }#capa .capa-nomes{ font-size: 11px; margin-top: 18px; }#menu-pratico{ padding: 64px 16px 48px; min-height: auto; }.menu-pratico-card{ padding: 52px 20px 28px; }.mp-btn{ padding: 11px 16px; font-size: 10.5px; }#menu-dias{ padding: 52px 0 36px; }.vg-titulo-h{ font-size: 24px; }.vg-header{ margin-bottom: 20px; }.vg-grid{ grid-template-columns: 1fr 1fr; gap: 10px; }.vg-card-body{ padding: 10px 10px 12px; }.vg-card-header{ padding: 8px 10px; }.vg-dia-num{ font-size: 10px; }.vg-dia-data{ font-size: 8px; }.vg-destino-tag{ font-size: 9px; }.vg-items li{ font-size: 10px; padding: 2px 0; }.vg-page{ padding: 0 12px; }.checklist-grid{ grid-template-columns: 1fr; }#encerramento{ padding: 48px 24px; }}
+@media (max-width: 480px) {#capa .capa-pais{ font-size: 58px; }#capa .capa-roteiro-txt{ font-size: 14px; letter-spacing: 8px; }}
+@media (max-width: 360px) {.vg-grid{ grid-template-columns: 1fr 1fr; gap: 8px; }}
+#cidade{ background: white; border-bottom: 1px solid var(--cinza-borda); padding: 64px 0 48px; }
+.pais-hero{ width: 100%; height: 280px; margin-top: -8px; background: linear-gradient(135deg, #0a1f44 0%, #1a3a5c 50%, #7a1823 100%); position: relative; overflow: hidden; border-radius: 16px; margin-bottom: 28px; display: flex; align-items: center; justify-content: center; }
+.pais-hero-overlay{ position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4)); }
+.pais-hero-nome{ position: absolute; bottom: 24px; left: 28px; z-index: 2; font-family: "Pinyon Script", "Great Vibes", cursive; font-size: 64px; color: white; line-height: 1; text-shadow: 0 2px 16px rgba(0,0,0,0.4); }
+.pais-intro{ font-size: 14px; line-height: 1.8; color: #4a5568; margin-bottom: 24px; }
+.btn-menu-wrap{ text-align: center; padding: 28px 0 0; }
+.btn-menu{ display: inline-flex; align-items: center; gap: 6px; padding: 7px 16px; background: white; border: 1px solid var(--cinza-borda); border-radius: 20px; color: #94a3b8; font-family: "Poppins", sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; transition: all 0.2s; }
+.btn-menu:hover{ border-color: var(--azul-medio); color: var(--azul-medio); background: var(--azul-claro); }
+.btn-menu::before{ content: "↑"; font-size: 11px; }
+@font-face { font-family: "Magnolia Script"; src: url("./assets/fonts/MagnoliaScript.otf") format("opentype"); font-weight: normal; font-style: normal; }
+.titulo-principal{ font-family: "Magnolia Script", cursive; font-size: 34px; color: var(--azul-medio); text-align: center; display: block; line-height: 1.2; margin-top: 0; margin-bottom: 24px; }
+.secao-wrapper{ padding: 72px 0 0; border-bottom: 1px solid var(--cinza-borda); background: #f5f8fd; }
+.dia-secao{ padding: 72px 0 0; border-bottom: 2px solid var(--azul); }
+.page{ max-width: 780px; margin: 0 auto; padding: 0 48px 56px; }
+@media (max-width: 900px) {.page{ padding: 0 40px 48px; }.secao-wrapper{ padding: 56px 0 0; }.dia-secao{ padding: 56px 0 0; }}
+@media (max-width: 600px) {.page{ padding: 0 24px 36px; }.secao-wrapper{ padding: 40px 0 0; }.dia-secao{ padding: 40px 0 0; }}
+.card{ background: white; border-radius: 12px; overflow: hidden; border: 1px solid #e0eaf5; box-shadow: 0 1px 4px rgba(26,58,92,0.07); transition: transform 0.2s, box-shadow 0.2s; }
+.card:hover{ transform: translateY(-2px); box-shadow: 0 6px 18px rgba(26,58,92,0.1); }
+.card-header{ background: var(--azul-medio); padding: 9px 16px; display: flex; align-items: center; gap: 8px; }
+.card-header-titulo{ font-family: "Poppins", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: white; }
+.card-header-icon{ font-size: 14px; flex-shrink: 0; }
+.card-body{ padding: 14px 16px; font-size: 12.5px; line-height: 1.7; color: #475569; }
+.card-body strong{ color: var(--azul); }
+.card-body p{ margin: 5px 0; }
+.card-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0 16px; }
+@media (max-width: 600px) {.card-grid{ grid-template-columns: 1fr; }}
+.card2-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+.card2{ background: white; border: 1px solid #e0eaf5; border-radius: 12px; padding: 14px 16px; display: flex; align-items: flex-start; gap: 12px; box-shadow: 0 1px 4px rgba(26,58,92,0.05); }
+.card2-icon{ font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+.card2-label{ font-family: "Poppins", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--azul-medio); display: block; margin-bottom: 3px; }
+.card2-valor{ font-family: "Poppins", sans-serif; font-weight: 700; font-size: 13px; color: var(--azul); display: block; }
+.card2-detalhe{ font-size: 11.5px; color: #64748b; margin-top: 2px; display: block; line-height: 1.5; }
+@media (max-width: 600px) {.card2-grid{ grid-template-columns: 1fr; }}
+.card-lista{ display: flex; flex-direction: column; border: 1px solid var(--cinza-borda); border-radius: 12px; overflow: hidden; margin: 16px 0; }
+.card-lista-item{ display: flex; align-items: center; gap: 12px; padding: 11px 16px; border-bottom: 1px solid var(--cinza-borda); background: white; font-size: 12.5px; color: #475569; transition: background 0.15s; }
+.card-lista-item:last-child{ border-bottom: none; }
+.card-lista-item:hover{ background: var(--cinza-claro); }
+.card-lista-emoji{ font-size: 16px; flex-shrink: 0; width: 24px; text-align: center; }
+.card-lista-info{ flex: 1; }
+.card-lista-titulo{ font-family: "Poppins", sans-serif; font-size: 12px; font-weight: 600; color: var(--azul); display: block; }
+.card-lista-desc{ font-size: 11px; color: #64748b; display: block; margin-top: 1px; }
+.card-lista-badge{ font-family: "Poppins", sans-serif; font-size: 9px; font-weight: 700; padding: 3px 10px; border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
+.badge-req{ background: #fee2e2; color: #991b1b; }
+.badge-rec{ background: #fdf6ec; color: #8a6830; }
+.badge-ok{ background: #dcfce7; color: #166534; }
+.dica-box{ background: #dbeafe; border-left: 3px solid var(--azul-medio); border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 12px 0; font-size: 12.5px; line-height: 1.65; color: #475569; }
+.dica-box-label{ font-family: "Poppins", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--azul-medio); display: block; margin-bottom: 5px; }
+.dica2-box{ background: #fdf6ec; border-left: 3px solid #c8a96e; border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 12px 0; font-size: 12.5px; line-height: 1.65; color: #5c4020; }
+.dica2-label{ font-family: "Poppins", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #8a6830; display: block; margin-bottom: 4px; }
+.alerta-box{ background: #fff5f5; border: 1px solid #fca5a5; border-left: 4px solid var(--vermelho); border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
+.alerta-box-titulo{ font-family: "Poppins", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--vermelho); margin-bottom: 10px; display: block; }
+.alerta-box-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 4px 20px; }
+.alerta-box-grid p, .alerta-box p{ font-size: 12px; line-height: 1.65; color: #475569; margin: 4px 0; }
+@media (max-width: 600px) {.alerta-box-grid{ grid-template-columns: 1fr; }}
+.card-frases{ background: white; border: 1px solid #e0eaf5; border-radius: 12px; overflow: hidden; margin: 16px 0; }
+.card-frases-header{ background: var(--azul-claro); padding: 10px 16px; }
+.card-frases-titulo{ font-family: "Poppins", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--azul); }
+.card-frases-item{ display: flex; align-items: baseline; gap: 8px; padding: 9px 16px; border-bottom: 1px solid #f1f5f9; font-size: 12.5px; }
+.card-frases-item:last-child{ border-bottom: none; }
+.card-frases-it{ font-weight: 700; color: var(--azul); min-width: 160px; font-size: 13px; }
+.card-frases-pt{ color: #64748b; }
+.selo-verde{ background: #dbeafe; color: var(--azul-medio); border: 1.5px solid var(--azul-medio); }
+.selo-amarelo{ background: #fef9c3; color: #854d0e; border: 1.5px solid #ca8a04; }
+.selo-dourado{ background: #fef9c3; color: #854d0e; border: 1.5px solid #ca8a04; }
+.selo-vermelho{ background: #fee2e2; color: #991b1b; border: 1.5px solid #dc2626; }
+.selo-incluso{ background: #dcfce7; color: #166534; border: 1.5px solid #16a34a; }
+.selo-pre-viagem{ background: #FFF7ED; color: #9A3412; border: 1px solid #FED7AA; }
+.reserva-essencial{ background: #fee2e2; color: #991b1b; border-radius: 6px; padding: 4px 10px; font-size: 10px; font-weight: 700; }
+.reserva-recomendada{ background: #fdf6ec; color: #8a6830; border-radius: 6px; padding: 4px 10px; font-size: 10px; font-weight: 700; }
+.reserva-direto{ background: #dbeafe; color: var(--azul-medio); border-radius: 6px; padding: 4px 10px; font-size: 10px; font-weight: 700; }
+.rest-recomendado-badge{ display: inline-flex; align-items: center; gap: 4px; background: #dcfce7; color: #166534; font-family: "Poppins", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 10px; margin-left: auto; flex-shrink: 0; }
+.rest-titulo-script{ font-family: "Magnolia Script", cursive; font-size: 20px; color: var(--azul); display: block; margin: 16px 0 8px; line-height: 1.2; }
+.badge-economico{ background:#dcfce7 !important; color:#166534 !important; border:none !important; }
+.badge-premium{ background:linear-gradient(135deg,#c8a96e,#e8d0a0) !important; color:white !important; }
+.badge-bom{ background:var(--azul-claro) !important; color:var(--azul-medio) !important; border:1px solid var(--azul-medio) !important; }
+.card-gold{ background: white; border-radius: 12px; overflow: hidden; border: 1px solid #eddfc0; box-shadow: 0 2px 12px rgba(180,150,90,0.08); grid-column: 1 / -1; }
+.card-gold-header{ background: linear-gradient(135deg, #c8a96e, #dbbf8a, #e8d0a0); padding: 10px 18px; display: flex; align-items: center; gap: 10px; }
+.card-gold-header-titulo{ font-family: "Poppins", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: white; }
+.card-gold-header-icon{ font-size: 15px; flex-shrink: 0; }
+.card-gold-body{ padding: 16px 20px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; }
+.card-gold-body p{ font-size: 12.5px; line-height: 1.7; color: #475569; margin: 5px 0; }
+.card-gold-body strong{ color: #8a6830; }
+.card-gold-link{ color: #b89050; font-family: "Poppins", sans-serif; font-size: 12px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: 8px; transition: color 0.2s; }
+.card-gold-link:hover{ color: #8a6830; }
+.cupom-gold{ background: linear-gradient(135deg, #b8956a, #cfaa82); border-radius: 10px; padding: 10px 14px; text-align: center; box-shadow: 0 4px 16px rgba(180,150,90,0.18); flex-shrink: 0; }
+.cupom-gold-label{ font-family: "Poppins", sans-serif; font-size: 7px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.7); display: block; margin-bottom: 4px; }
+.cupom-gold-codigo{ font-family: "Poppins", sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 2px; color: white; display: block; text-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+@media (max-width: 600px) {.card-gold-body{ grid-template-columns: 1fr; }.cupom-gold{ min-width: unset; }}
+.card-grid-gold .card-header{ background: linear-gradient(135deg, #c8a96e, #dbbf8a); }
+.card-grid-gold .card{ border-color: #e8d48b; }
+.card-grid-gold .card-body strong{ color: #8a6830; }
+.alerta-box-gold{ background: #fdf6ec; border: 1px solid #eddfc0; border-left: 4px solid #c8a96e; border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
+.alerta-box-gold .alerta-box-titulo{ color: #8a6830; }
+.alerta-box-gold p{ font-size: 12px; line-height: 1.65; color: #5c4020; margin: 4px 0; }
+.alerta-box-gold strong{ color: #6b4c1e; }
+.checklist-acordeao{ margin: 4px 0; }
+.checklist-acordeao-btn{ width: 100%; background: var(--azul-medio); color: white; border: none; border-radius: 10px; padding: 12px 18px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-family: "Poppins", sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; transition: background 0.2s; -webkit-tap-highlight-color: transparent; }
+.checklist-acordeao-btn:hover{ background: var(--azul); }
+.checklist-acordeao-btn .seta{ font-size: 10px; transition: transform 0.3s; display: inline-block; }
+.checklist-acordeao-btn.aberto .seta{ transform: rotate(180deg); }
+.checklist-acordeao-conteudo{ overflow: hidden; max-height: 0; transition: max-height 0.35s ease; }
+.checklist-acordeao-conteudo.aberto{ max-height: 2000px; }
+.checklist-acordeao-inner{ padding-top: 8px; }
+.gastro-pais-grid{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; margin:22px 0 18px; }
+.gastro-pais-card{ background:white; border:1px solid #e5edf7; border-radius:16px; padding:16px 18px; box-shadow:0 1px 4px rgba(26,58,92,0.05); }
+.gastro-pais-card h3{ font-family:'Poppins',sans-serif; font-size:12px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--azul); margin:0 0 8px; }
+.gastro-pais-card p{ font-size:12.5px; color:#64748b; line-height:1.75; margin:0; }
+.prato-img{ width: 82px; height: 82px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid rgba(255,255,255,0.2); margin-bottom: 6px; display: block; }
+.legenda-glass{ background: rgba(255,255,255,0.10); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.20); border-radius: 14px; padding: 16px 18px; margin-bottom: 16px; }
+.legenda-glass-titulo{ font-family: "Poppins", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: white; display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.15); }
+
+/* ═══════════════════ SEÇÃO CURADORIA DE VOOS ═══════════════════ */
+.voo-card{ background:white; border:1.5px solid #e0eaf5; border-radius:16px; overflow:hidden; margin:0 0 20px; box-shadow:0 2px 10px rgba(26,58,92,0.07); transition:transform 0.2s, box-shadow 0.2s; }
+.voo-card:hover{ transform:translateY(-2px); box-shadow:0 6px 24px rgba(26,58,92,0.12); }
+.voo-card-header{ background:var(--azul-medio); padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.voo-card.voo-custo .voo-card-header{ background:linear-gradient(135deg,#1a6b3c,#2a8d5a); }
+.voo-card.voo-conforto .voo-card-header{ background:linear-gradient(135deg,#2563a8,#3b82f6); }
+.voo-card.voo-premium .voo-card-header{ background:linear-gradient(135deg,#c8a96e,#dbbf8a); }
+.voo-opcao-label{ font-family:"Poppins",sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.7); }
+.voo-opcao-titulo{ font-family:"Poppins",sans-serif; font-size:14px; font-weight:700; color:white; display:block; margin-top:2px; }
+.voo-opcao-valor{ font-family:"Poppins",sans-serif; font-size:16px; font-weight:800; color:white; text-align:right; white-space:nowrap; }
+.voo-opcao-valor small{ font-size:9px; font-weight:500; color:rgba(255,255,255,0.7); letter-spacing:1px; display:block; margin-top:2px; }
+.voo-card-body{ padding:16px 20px; }
+.voo-rota-grid{ display:grid; grid-template-columns:1fr auto 1fr; gap:12px; align-items:center; margin-bottom:14px; padding-bottom:14px; border-bottom:1px solid #f1f5f9; }
+.voo-aeroporto{ text-align:center; }
+.voo-aeroporto-codigo{ font-family:"Poppins",sans-serif; font-size:22px; font-weight:800; color:var(--azul); display:block; letter-spacing:1px; }
+.voo-aeroporto-cidade{ font-family:"Poppins",sans-serif; font-size:9px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:#64748b; display:block; margin-top:2px; }
+.voo-aeroporto-hora{ font-family:"Poppins",sans-serif; font-size:13px; font-weight:700; color:var(--azul-medio); display:block; margin-top:6px; }
+.voo-aeroporto-data{ font-size:10px; color:#94a3b8; display:block; margin-top:1px; }
+.voo-meio{ display:flex; flex-direction:column; align-items:center; gap:4px; padding:0 8px; }
+.voo-duracao{ font-family:"Poppins",sans-serif; font-size:11px; font-weight:700; color:var(--azul-medio); }
+.voo-linha-avião{ width:100%; height:1px; background:linear-gradient(90deg,transparent,var(--azul-medio) 20%,var(--azul-medio) 80%,transparent); position:relative; min-width:60px; }
+.voo-linha-avião::after{ content:"✈"; position:absolute; top:-8px; left:50%; transform:translateX(-50%); background:white; padding:0 4px; font-size:12px; color:var(--azul-medio); }
+.voo-conexao{ font-size:9.5px; color:#94a3b8; letter-spacing:0.5px; text-transform:uppercase; }
+.voo-info-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px 16px; margin:12px 0; }
+.voo-info-item{ }
+.voo-info-label{ font-family:"Poppins",sans-serif; font-size:8.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--azul-medio); display:block; margin-bottom:2px; }
+.voo-info-valor{ font-size:12px; color:#334155; display:block; line-height:1.45; }
+.voo-print-box{ background:#f8fafc; border:1px dashed #cbd5e1; border-radius:10px; padding:14px; text-align:center; margin:12px 0 0; }
+.voo-print-box.is-placeholder{ background:#f8fafc; }
+.voo-print-box:not(.is-placeholder){ padding:0; background:transparent; border:none; }
+.voo-print-box img{ max-width:100%; border-radius:8px; display:block; margin:0 auto; }
+.voo-print-placeholder{ font-family:"Poppins",sans-serif; font-size:10px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:#94a3b8; display:block; }
+.voo-print-placeholder-desc{ font-size:11px; color:#cbd5e1; margin-top:4px; }
+.voo-destaque-box{ background:#f0fdf4; border-left:3px solid #16a34a; border-radius:0 8px 8px 0; padding:10px 14px; margin-top:12px; }
+.voo-destaque-box.neutro{ background:#dbeafe; border-left-color:var(--azul-medio); }
+.voo-destaque-box.atencao{ background:#fdf6ec; border-left-color:#c8a96e; }
+.voo-destaque-label{ font-family:"Poppins",sans-serif; font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#166534; display:block; margin-bottom:3px; }
+.voo-destaque-box.neutro .voo-destaque-label{ color:var(--azul-medio); }
+.voo-destaque-box.atencao .voo-destaque-label{ color:#8a6830; }
+.voo-destaque-texto{ font-size:12px; color:#334155; line-height:1.55; }
+@media (max-width: 600px) {.voo-rota-grid{ grid-template-columns:1fr; gap:14px; } .voo-meio{ padding:8px 0; } .voo-info-grid{ grid-template-columns:1fr; } .voo-aeroporto-codigo{ font-size:26px; }}
+
+/* ═══════════════════ SEÇÃO PRÓXIMOS PASSOS ═══════════════════ */
+.passo-card{ display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:flex-start; background:white; border:1.5px solid #e0eaf5; border-radius:14px; padding:16px 20px; margin:0 0 14px; box-shadow:0 1px 6px rgba(26,58,92,0.06); }
+.passo-card.atual{ border-color:var(--azul-medio); background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%); }
+.passo-card.futuro{ opacity:0.85; }
+.passo-num{ width:42px; height:42px; border-radius:50%; background:var(--azul-claro); color:var(--azul-medio); display:flex; align-items:center; justify-content:center; font-family:"Poppins",sans-serif; font-weight:800; font-size:16px; flex-shrink:0; border:2px solid var(--azul-medio); }
+.passo-card.atual .passo-num{ background:var(--azul-medio); color:white; }
+.passo-card.concluido .passo-num{ background:#16a34a; color:white; border-color:#16a34a; }
+.passo-card.concluido .passo-num::after{ content:"✓"; font-size:18px; }
+.passo-card.concluido .passo-num span{ display:none; }
+.passo-titulo{ font-family:"Poppins",sans-serif; font-size:13px; font-weight:700; color:var(--azul); display:block; margin-bottom:4px; }
+.passo-desc{ font-size:12px; color:#475569; line-height:1.6; margin:0; }
+.passo-tag{ display:inline-block; font-family:"Poppins",sans-serif; font-size:8.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:3px 9px; border-radius:10px; margin-top:8px; }
+.passo-tag.agora{ background:var(--azul-medio); color:white; }
+.passo-tag.em-breve{ background:#f1f5f9; color:#64748b; }
+.passo-tag.depois{ background:#fdf6ec; color:#8a6830; }
+</style>
+</head>
+
+<body>
+
+<!-- ═══════════════════════════════════════════════════════ TOPBAR ═══════════════════════════════════════════════════════ -->
+<div class="topbar">
+  <span class="topbar-logo">Vamos Carimbar</span>
+  <div class="topbar-right">
+    <span class="topbar-destino">EUA · Out/Nov 2026</span>
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</div>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- ═══════════════════════════════════════════════════════ DRAWER ═══════════════════════════════════════════════════════ -->
+<nav class="nav-drawer" id="navDrawer">
+  <a class="nav-menu-principal" href="#menu-pratico">MENU PRINCIPAL</a>
+  <a class="nav-item" href="#proximos-passos">📍 Próximos Passos</a>
+  <a class="nav-item" href="#voos-recomendados">✈️ Curadoria de Voos</a>
+  <a class="nav-item" href="#menu-dias">🗺️ Roteiro Macro</a>
+  <a class="nav-item" href="#cidade">🇺🇸 Sobre os EUA</a>
+  <a class="nav-item" href="#dinheiro">💵 Guia Financeiro</a>
+  <a class="nav-item" href="#clima">🧳 Clima &amp; Mala</a>
+  <a class="nav-item" href="#frases">💬 Frases Mágicas</a>
+  <a class="nav-item" href="#guia-gastronomico">🍔 Guia Gastronômico</a>
+  <a class="nav-item" href="#legendas">📌 Legendas do Roteiro</a>
+</nav>
+
+<div class="main-content">
+
+<!-- ═══════════════════════════════════════════════════════ CAPA ═══════════════════════════════════════════════════════ -->
+<section id="capa">
+  <img class="capa-bg-img" src="./assets/capas/capa-estados-unidos.png" alt="Estados Unidos" onerror="this.style.display='none'">
+  <div class="capa-overlay"></div>
+  <div class="capa-inner">
+    <img class="capa-logo-img" src="./assets/branding/logo-vamos-carimbar-branco.png" alt="Vamos Carimbar">
+    <div class="capa-bottom">
+      <span class="capa-pais">Estados Unidos</span>
+      <span class="capa-roteiro-txt">Roteiro</span>
+      <span class="capa-nomes">Maressa &amp; Guilherme</span>
+      <span class="capa-datas-txt">Outubro / Novembro 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ MENU PRÁTICO ═══════════════════════════════════════════════════════ -->
+<section id="menu-pratico">
+  <div class="menu-pratico-bg"></div>
+  <div class="menu-pratico-card">
+    <div class="mp-logo-wrapper">
+      <img class="mp-logo" src="./assets/branding/logo-vamos-carimbar-azul.png" alt="Vamos Carimbar">
+    </div>
+    <span class="etapa-badge">✦ Etapa 1 · Base de Curadoria</span>
+    <div style="font-family:'Magnolia Script',cursive;font-size:32px;font-weight:400;color:var(--azul-medio);margin-bottom:16px;letter-spacing:0;text-transform:none;">Menu Principal</div>
+
+    <a class="mp-btn" href="#proximos-passos" style="background:linear-gradient(135deg,#c8a96e,#dbbf8a);color:white;font-weight:700;">📍 Próximos Passos</a>
+    <a class="mp-btn" href="#voos-recomendados">✈️ Curadoria de Voos</a>
+    <a class="mp-btn" href="#menu-dias">🗺️ Roteiro Macro</a>
+    <a class="mp-btn" href="#cidade">🇺🇸 Sobre os Estados Unidos</a>
+    <a class="mp-btn" href="#dinheiro">💵 Guia Financeiro</a>
+    <a class="mp-btn" href="#clima">🧳 Clima &amp; Checklist Mala</a>
+    <a class="mp-btn" href="#frases">💬 Frases Mágicas</a>
+    <a class="mp-btn" href="#guia-gastronomico">🍔 Guia Gastronômico</a>
+    <a class="mp-btn" href="#legendas">📌 Legendas do Roteiro</a>
+
+    <div class="mp-clientes">Maressa &amp; Guilherme · Outubro/Novembro 2026</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ PRÓXIMOS PASSOS ═══════════════════════════════════════════════════════ -->
+<section id="proximos-passos" class="secao-wrapper">
+<div class="page secao">
+  <span class="titulo-principal">Próximos Passos</span>
+  <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 24px;max-width:640px;">Este roteiro é construído em <strong style="color:var(--azul);">três etapas</strong> — cada uma desbloqueia a próxima. Aqui vocês acompanham onde estamos agora e o que vem por aí.</p>
+
+  <div class="passo-card concluido">
+    <div class="passo-num"><span>1</span></div>
+    <div>
+      <span class="passo-titulo">Reunião inicial &amp; briefing</span>
+      <p class="passo-desc">A gente já conversou sobre sonhos, ritmo, gostos e escolheu as três cidades da viagem — <strong>Dallas, Miami e Orlando</strong>. A partir daqui é curadoria pura.</p>
+      <span class="passo-tag depois">Concluído</span>
+    </div>
+  </div>
+
+  <div class="passo-card atual">
+    <div class="passo-num">2</div>
+    <div>
+      <span class="passo-titulo">Curadoria de voos &amp; decisão da rota</span>
+      <p class="passo-desc">Nesta etapa entregamos <strong>2 a 3 opções de voo</strong> selecionadas por custo-benefício, horários e logística de conexão (saindo de Campo Grande). Vocês comparam, escolhem a que faz mais sentido e <strong>compram as passagens</strong>. A direção do roteiro (entrar por Dallas ou por Miami/Orlando) vai ser definida junto com o voo.</p>
+      <span class="passo-tag agora">Estamos aqui</span>
+    </div>
+  </div>
+
+  <div class="passo-card futuro">
+    <div class="passo-num">3</div>
+    <div>
+      <span class="passo-titulo">Curadoria de hospedagem</span>
+      <p class="passo-desc">Com os voos comprados e as datas fechadas, mandamos <strong>3 opções de hotel por cidade</strong> (9 no total) organizadas por perfil — econômico, custo-benefício e premium. Vocês escolhem e reservam direto pela plataforma que preferirem.</p>
+      <span class="passo-tag em-breve">Em breve</span>
+    </div>
+  </div>
+
+  <div class="passo-card futuro">
+    <div class="passo-num">4</div>
+    <div>
+      <span class="passo-titulo">Roteiro completo dia a dia</span>
+      <p class="passo-desc">Com voos e hospedagem confirmados, finalizamos o roteiro completo: todos os dias com atrações, restaurantes, transfers, horários e dicas — do voo de ida ao voo de volta. É a versão final que vocês vão usar durante a viagem.</p>
+      <span class="passo-tag em-breve">Última etapa</span>
+    </div>
+  </div>
+
+  <div class="dica-box" style="margin-top:20px;">
+    <span class="dica-box-label">💡 Por que entregamos em etapas?</span>
+    <p>Roteiros bons se constroem com decisões boas. Esperar os voos pra indicar hotel (e esperar o hotel pra montar o dia a dia) garante que <strong>cada recomendação esteja perfeitamente alinhada</strong> com as datas, o aeroporto de chegada e o ritmo real da viagem. Nada de refazer — cada etapa fica pronta, certa, pra sempre.</p>
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ CURADORIA DE VOOS ═══════════════════════════════════════════════════════ -->
+<section id="voos-recomendados" class="secao-wrapper">
+<div class="page secao">
+  <span class="titulo-principal">✈️ Curadoria de Voos</span>
+  <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 24px;max-width:640px;">Selecionamos <strong style="color:var(--azul);">3 opções de voo</strong> saindo de Campo Grande (CGR) com destino aos Estados Unidos, considerando <strong>custo-benefício, horários de chegada e logística de conexão</strong>. Analisem com calma — a escolha do voo define a direção do roteiro.</p>
+
+  <div class="dica2-box" style="margin-bottom:24px;">
+    <span class="dica2-label">🔄 Duas rotas possíveis</span>
+    <p>Cada opção de voo pode entrar por <strong>Dallas (DFW)</strong> e voltar por <strong>Miami (MIA)</strong> ou <strong>Orlando (MCO)</strong> — ou o contrário. A curadoria considera essa flexibilidade de <em>open jaw</em> (entrar em um aeroporto e sair por outro), que costuma ser a melhor escolha pra não desperdiçar um dia voltando só pra pegar o voo.</p>
+  </div>
+
+  <!-- ═══════════ OPÇÃO 1 — CUSTO-BENEFÍCIO ═══════════ -->
+  <div class="voo-card voo-custo">
+    <div class="voo-card-header">
+      <div>
+        <span class="voo-opcao-label">Opção 1 · Melhor Preço</span>
+        <span class="voo-opcao-titulo">{{VOO1_TITULO}}</span>
+      </div>
+      <div class="voo-opcao-valor">
+        {{VOO1_VALOR}}
+        <small>por pessoa · ida e volta</small>
+      </div>
+    </div>
+    <div class="voo-card-body">
+      <div class="voo-rota-grid">
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">{{VOO1_IDA_ORIGEM_SIGLA}}</span>
+          <span class="voo-aeroporto-cidade">{{VOO1_IDA_ORIGEM_CIDADE}}</span>
+          <span class="voo-aeroporto-hora">{{VOO1_IDA_ORIGEM_HORA}}</span>
+          <span class="voo-aeroporto-data">{{VOO1_IDA_ORIGEM_DATA}}</span>
+        </div>
+        <div class="voo-meio">
+          <span class="voo-duracao">{{VOO1_IDA_DURACAO}}</span>
+          <div class="voo-linha-avião"></div>
+          <span class="voo-conexao">{{VOO1_IDA_CONEXAO}}</span>
+        </div>
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">{{VOO1_IDA_DESTINO_SIGLA}}</span>
+          <span class="voo-aeroporto-cidade">{{VOO1_IDA_DESTINO_CIDADE}}</span>
+          <span class="voo-aeroporto-hora">{{VOO1_IDA_DESTINO_HORA}}</span>
+          <span class="voo-aeroporto-data">{{VOO1_IDA_DESTINO_DATA}}</span>
+        </div>
+      </div>
+
+      <div class="voo-rota-grid" style="border-top:1px dashed #e0eaf5;padding-top:14px;">
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">{{VOO1_VOLTA_ORIGEM_SIGLA}}</span>
+          <span class="voo-aeroporto-cidade">{{VOO1_VOLTA_ORIGEM_CIDADE}}</span>
+          <span class="voo-aeroporto-hora">{{VOO1_VOLTA_ORIGEM_HORA}}</span>
+          <span class="voo-aeroporto-data">{{VOO1_VOLTA_ORIGEM_DATA}}</span>
+        </div>
+        <div class="voo-meio">
+          <span class="voo-duracao">{{VOO1_VOLTA_DURACAO}}</span>
+          <div class="voo-linha-avião"></div>
+          <span class="voo-conexao">{{VOO1_VOLTA_CONEXAO}}</span>
+        </div>
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">{{VOO1_VOLTA_DESTINO_SIGLA}}</span>
+          <span class="voo-aeroporto-cidade">{{VOO1_VOLTA_DESTINO_CIDADE}}</span>
+          <span class="voo-aeroporto-hora">{{VOO1_VOLTA_DESTINO_HORA}}</span>
+          <span class="voo-aeroporto-data">{{VOO1_VOLTA_DESTINO_DATA}}</span>
+        </div>
+      </div>
+
+      <div class="voo-info-grid">
+        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">{{VOO1_COMPANHIA}}</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Bagagem</span><span class="voo-info-valor">{{VOO1_BAGAGEM}}</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Classe</span><span class="voo-info-valor">{{VOO1_CLASSE}}</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Cancelamento</span><span class="voo-info-valor">{{VOO1_CANCELAMENTO}}</span></div>
+      </div>
+
+      <div class="voo-print-box is-placeholder">
+        <img src="./assets/voos/voo1-print.png" alt="Print opção 1" loading="lazy"
+          onload="this.parentElement.classList.remove('is-placeholder')"
+          onerror="this.parentElement.classList.add('is-placeholder')">
+        <span class="voo-print-placeholder">📸 Print de tela da passagem</span>
+        <span class="voo-print-placeholder-desc">Salvar imagem como <code>voo1-print.png</code> na pasta <code>assets/voos/</code></span>
+      </div>
+
+      <div class="voo-destaque-box">
+        <span class="voo-destaque-label">💰 Por que vale a pena</span>
+        <span class="voo-destaque-texto">{{VOO1_DESTAQUE}}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ OPÇÃO 2 — EQUILIBRADA ═══════════ -->
+  <div class="voo-card voo-conforto">
+    <div class="voo-card-header">
+      <div>
+        <span class="voo-opcao-label">Opção 2 · Equilibrada</span>
+        <span class="voo-opcao-titulo">{{VOO2_TITULO}}</span>
+      </div>
+      <div class="voo-opcao-valor">
+        {{VOO2_VALOR}}
+        <small>por pessoa · ida e volta</small>
+      </div>
+    </div>
+    <div class="voo-card-body">
+      <div class="voo-rota-grid">
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">{{VOO2_IDA_ORIGEM_SIGLA}}</span>
+          <span class="voo-aeroporto-cidade">{{VOO2_IDA_ORIGEM_CIDADE}}</span>
+          <span class="voo-aeroporto-hora">{{VOO2_IDA_ORIGEM_HORA}}</span>
+          <span class="voo-aeroporto-data">{{VOO2_IDA_ORIGEM_DATA}}</span>
+        </div>
+        <div class="voo-meio">
+          <span class="voo-duracao">{{VOO2_IDA_DURACAO}}</span>
+          <div class="voo-linha-avião"></div>
+          <span class="voo-conexao">{{VOO2_IDA_CONEXAO}}</span>
+        </div>
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">{{VOO2_IDA_DESTINO_SIGLA}}</span>
+          <span class="voo-aeroporto-cidade">{{VOO2_IDA_DESTINO_CIDADE}}</span>
+          <span class="voo-aeroporto-hora">{{VOO2_IDA_DESTINO_HORA}}</span>
+          <span class="voo-aeroporto-data">{{VOO2_IDA_DESTINO_DATA}}</span>
+        </div>
+      </div>
+
+      <div class="voo-rota-grid" style="border-top:1px dashed #e0eaf5;padding-top:14px;">
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">{{VOO2_VOLTA_ORIGEM_SIGLA}}</span>
+          <span class="voo-aeroporto-cidade">{{VOO2_VOLTA_ORIGEM_CIDADE}}</span>
+          <span class="voo-aeroporto-hora">{{VOO2_VOLTA_ORIGEM_HORA}}</span>
+          <span class="voo-aeroporto-data">{{VOO2_VOLTA_ORIGEM_DATA}}</span>
+        </div>
+        <div class="voo-meio">
+          <span class="voo-duracao">{{VOO2_VOLTA_DURACAO}}</span>
+          <div class="voo-linha-avião"></div>
+          <span class="voo-conexao">{{VOO2_VOLTA_CONEXAO}}</span>
+        </div>
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">{{VOO2_VOLTA_DESTINO_SIGLA}}</span>
+          <span class="voo-aeroporto-cidade">{{VOO2_VOLTA_DESTINO_CIDADE}}</span>
+          <span class="voo-aeroporto-hora">{{VOO2_VOLTA_DESTINO_HORA}}</span>
+          <span class="voo-aeroporto-data">{{VOO2_VOLTA_DESTINO_DATA}}</span>
+        </div>
+      </div>
+
+      <div class="voo-info-grid">
+        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">{{VOO2_COMPANHIA}}</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Bagagem</span><span class="voo-info-valor">{{VOO2_BAGAGEM}}</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Classe</span><span class="voo-info-valor">{{VOO2_CLASSE}}</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Cancelamento</span><span class="voo-info-valor">{{VOO2_CANCELAMENTO}}</span></div>
+      </div>
+
+      <div class="voo-print-box is-placeholder">
+        <img src="./assets/voos/voo2-print.png" alt="Print opção 2" loading="lazy"
+          onload="this.parentElement.classList.remove('is-placeholder')"
+          onerror="this.parentElement.classList.add('is-placeholder')">
+        <span class="voo-print-placeholder">📸 Print de tela da passagem</span>
+        <span class="voo-print-placeholder-desc">Salvar imagem como <code>voo2-print.png</code> na pasta <code>assets/voos/</code></span>
+      </div>
+
+      <div class="voo-destaque-box neutro">
+        <span class="voo-destaque-label">⚖️ Por que vale a pena</span>
+        <span class="voo-destaque-texto">{{VOO2_DESTAQUE}}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ OPÇÃO 3 — PREMIUM ═══════════ -->
+  <div class="voo-card voo-premium">
+    <div class="voo-card-header">
+      <div>
+        <span class="voo-opcao-label">Opção 3 · Conforto Premium</span>
+        <span class="voo-opcao-titulo">{{VOO3_TITULO}}</span>
+      </div>
+      <div class="voo-opcao-valor">
+        {{VOO3_VALOR}}
+        <small>por pessoa · ida e volta</small>
+      </div>
+    </div>
+    <div class="voo-card-body">
+      <div class="voo-rota-grid">
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">{{VOO3_IDA_ORIGEM_SIGLA}}</span>
+          <span class="voo-aeroporto-cidade">{{VOO3_IDA_ORIGEM_CIDADE}}</span>
+          <span class="voo-aeroporto-hora">{{VOO3_IDA_ORIGEM_HORA}}</span>
+          <span class="voo-aeroporto-data">{{VOO3_IDA_ORIGEM_DATA}}</span>
+        </div>
+        <div class="voo-meio">
+          <span class="voo-duracao">{{VOO3_IDA_DURACAO}}</span>
+          <div class="voo-linha-avião"></div>
+          <span class="voo-conexao">{{VOO3_IDA_CONEXAO}}</span>
+        </div>
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">{{VOO3_IDA_DESTINO_SIGLA}}</span>
+          <span class="voo-aeroporto-cidade">{{VOO3_IDA_DESTINO_CIDADE}}</span>
+          <span class="voo-aeroporto-hora">{{VOO3_IDA_DESTINO_HORA}}</span>
+          <span class="voo-aeroporto-data">{{VOO3_IDA_DESTINO_DATA}}</span>
+        </div>
+      </div>
+
+      <div class="voo-rota-grid" style="border-top:1px dashed #e0eaf5;padding-top:14px;">
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">{{VOO3_VOLTA_ORIGEM_SIGLA}}</span>
+          <span class="voo-aeroporto-cidade">{{VOO3_VOLTA_ORIGEM_CIDADE}}</span>
+          <span class="voo-aeroporto-hora">{{VOO3_VOLTA_ORIGEM_HORA}}</span>
+          <span class="voo-aeroporto-data">{{VOO3_VOLTA_ORIGEM_DATA}}</span>
+        </div>
+        <div class="voo-meio">
+          <span class="voo-duracao">{{VOO3_VOLTA_DURACAO}}</span>
+          <div class="voo-linha-avião"></div>
+          <span class="voo-conexao">{{VOO3_VOLTA_CONEXAO}}</span>
+        </div>
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">{{VOO3_VOLTA_DESTINO_SIGLA}}</span>
+          <span class="voo-aeroporto-cidade">{{VOO3_VOLTA_DESTINO_CIDADE}}</span>
+          <span class="voo-aeroporto-hora">{{VOO3_VOLTA_DESTINO_HORA}}</span>
+          <span class="voo-aeroporto-data">{{VOO3_VOLTA_DESTINO_DATA}}</span>
+        </div>
+      </div>
+
+      <div class="voo-info-grid">
+        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">{{VOO3_COMPANHIA}}</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Bagagem</span><span class="voo-info-valor">{{VOO3_BAGAGEM}}</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Classe</span><span class="voo-info-valor">{{VOO3_CLASSE}}</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Cancelamento</span><span class="voo-info-valor">{{VOO3_CANCELAMENTO}}</span></div>
+      </div>
+
+      <div class="voo-print-box is-placeholder">
+        <img src="./assets/voos/voo3-print.png" alt="Print opção 3" loading="lazy"
+          onload="this.parentElement.classList.remove('is-placeholder')"
+          onerror="this.parentElement.classList.add('is-placeholder')">
+        <span class="voo-print-placeholder">📸 Print de tela da passagem</span>
+        <span class="voo-print-placeholder-desc">Salvar imagem como <code>voo3-print.png</code> na pasta <code>assets/voos/</code></span>
+      </div>
+
+      <div class="voo-destaque-box atencao">
+        <span class="voo-destaque-label">✨ Por que vale a pena</span>
+        <span class="voo-destaque-texto">{{VOO3_DESTAQUE}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dica-box" style="margin-top:24px;">
+    <span class="dica-box-label">💡 Nossa recomendação</span>
+    <p>{{RECOMENDACAO_GERAL}}</p>
+  </div>
+
+  <div class="alerta-box" style="margin-top:16px;">
+    <span class="alerta-box-titulo">⚠️ Antes de comprar</span>
+    <div class="alerta-box-grid">
+      <p><strong>Visto americano B1/B2</strong> — vocês já tiraram, ok. Confiram a validade antes de comprar.</p>
+      <p><strong>Passaporte</strong> — precisa ter pelo menos <strong>6 meses de validade</strong> após a data de volta.</p>
+      <p><strong>Seguro viagem</strong> — obrigatório para os EUA. Contratar antes do embarque.</p>
+      <p><strong>ESTA não é necessária</strong> — o B1/B2 já cobre o turismo.</p>
+    </div>
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ ROTEIRO MACRO (esboçado) ═══════════════════════════════════════════════════════ -->
+<section id="menu-dias">
+<div class="vg-page" style="padding-top:0;">
+  <div class="vg-header">
+    <span class="vg-titulo-h titulo-principal">Roteiro Macro 🇺🇸</span>
+    <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;max-width:560px;margin:0 auto;">Esboço temático dos <strong style="color:var(--azul);">15 dias</strong> de viagem — 5 em Dallas, 4 em Miami e 4 em Orlando, mais os dois dias de voo. Datas e horários serão confirmados após a compra das passagens.</p>
+  </div>
+
+  <div class="dica2-box" style="max-width:720px;margin:0 auto 24px;">
+    <span class="dica2-label">🔄 Direção a confirmar</span>
+    <p>Mostramos abaixo a sequência <strong>Dallas → Miami → Orlando</strong> (começando pelo sonho texano do Guilherme e terminando com a energia dos parques). Se o voo escolhido entrar por Miami ou Orlando, invertemos a ordem — o conteúdo de cada cidade continua o mesmo, só muda a sequência.</p>
+  </div>
+
+  <div class="vg-grid">
+
+    <!-- VOO IDA -->
+    <a class="vg-card" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">✈️ Ida</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">Campo Grande → EUA</span>
+        <ul class="vg-items">
+          <li>Saída de CGR · conexão em GRU ou outra</li>
+          <li>Voo internacional noturno</li>
+          <li>Chegada no destino no mesmo dia</li>
+        </ul>
+      </div>
+    </a>
+
+    <!-- ═══════════ DALLAS ═══════════ -->
+    <a class="vg-card vg-dallas" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 01</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">🤠 Dallas · Chegada</span>
+        <ul class="vg-items">
+          <li>Chegada em Dallas · transfer</li>
+          <li>Check-in &amp; aclimatação</li>
+          <li>Primeiro jantar texano</li>
+          <li>Descanso pro fuso horário</li>
+        </ul>
+      </div>
+    </a>
+
+    <a class="vg-card vg-dallas" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 02</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">🤠 Dallas Clássica</span>
+        <ul class="vg-items">
+          <li>Sixth Floor Museum (JFK)</li>
+          <li>Dealey Plaza &amp; Downtown</li>
+          <li>Reunion Tower ao pôr do sol</li>
+          <li>Jantar em Deep Ellum</li>
+        </ul>
+      </div>
+    </a>
+
+    <a class="vg-card vg-dallas" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 03</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">🤠 Fort Worth Stockyards</span>
+        <ul class="vg-items">
+          <li>Cattle Drive dos cowboys</li>
+          <li>Billy Bob's Texas (maior honky-tonk)</li>
+          <li>BBQ texano autêntico</li>
+          <li>Rodeio à noite (se houver)</li>
+        </ul>
+      </div>
+    </a>
+
+    <a class="vg-card vg-dallas" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 04</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">🤠 Cultura &amp; Esportes</span>
+        <ul class="vg-items">
+          <li>AT&amp;T Stadium (Cowboys)</li>
+          <li>Dallas Arts District</li>
+          <li>Klyde Warren Park</li>
+          <li>Jantar de steak texano</li>
+        </ul>
+      </div>
+    </a>
+
+    <a class="vg-card vg-dallas" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 05</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">🤠 Compras &amp; voo</span>
+        <ul class="vg-items">
+          <li>Outlet &amp; compras texanas</li>
+          <li>Último almoço em Dallas</li>
+          <li>Voo interno → Miami</li>
+          <li>Check-in em Miami Beach</li>
+        </ul>
+      </div>
+    </a>
+
+    <!-- ═══════════ MIAMI ═══════════ -->
+    <a class="vg-card vg-miami" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 06</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">🌴 South Beach</span>
+        <ul class="vg-items">
+          <li>Praia em South Beach</li>
+          <li>Ocean Drive &amp; Art Deco</li>
+          <li>Pôr do sol no mar</li>
+          <li>Drinks em rooftop</li>
+        </ul>
+      </div>
+    </a>
+
+    <a class="vg-card vg-miami" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 07</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">🌴 Cultura Cubana</span>
+        <ul class="vg-items">
+          <li>Wynwood Walls (arte de rua)</li>
+          <li>Little Havana &amp; Calle Ocho</li>
+          <li>Cuban sandwich &amp; mojito</li>
+          <li>Salsa à noite em Brickell</li>
+        </ul>
+      </div>
+    </a>
+
+    <a class="vg-card vg-miami" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 08</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">🌴 Key Biscayne</span>
+        <ul class="vg-items">
+          <li>Praia de Key Biscayne</li>
+          <li>Passeio de barco ou jet ski</li>
+          <li>Almoço à beira-mar</li>
+          <li>Compras em Lincoln Road</li>
+        </ul>
+      </div>
+    </a>
+
+    <a class="vg-card vg-miami" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 09</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">🌴 Brunch &amp; voo</span>
+        <ul class="vg-items">
+          <li>Brunch em Miami Beach</li>
+          <li>Última praia &amp; check-out</li>
+          <li>Voo interno → Orlando</li>
+          <li>Check-in próximo aos parques</li>
+        </ul>
+      </div>
+    </a>
+
+    <!-- ═══════════ ORLANDO ═══════════ -->
+    <a class="vg-card vg-orlando" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 10</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">🎢 Magic Kingdom</span>
+        <ul class="vg-items">
+          <li>Dia inteiro na Disney clássica</li>
+          <li>Castelo da Cinderela</li>
+          <li>Fogos de artifício à noite</li>
+          <li>Jantar temático no parque</li>
+        </ul>
+      </div>
+    </a>
+
+    <a class="vg-card vg-orlando" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 11</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">🎢 EPCOT</span>
+        <ul class="vg-items">
+          <li>World Showcase (11 países)</li>
+          <li>Test Track &amp; Guardians of the Galaxy</li>
+          <li>Food &amp; Wine Festival (outubro)</li>
+          <li>Fogos ao redor da lagoa</li>
+        </ul>
+      </div>
+    </a>
+
+    <a class="vg-card vg-orlando" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 12</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">🎢 Universal Studios</span>
+        <ul class="vg-items">
+          <li>Wizarding World of Harry Potter</li>
+          <li>Islands of Adventure</li>
+          <li>Hogwarts Express entre parques</li>
+          <li>CityWalk à noite</li>
+        </ul>
+      </div>
+    </a>
+
+    <a class="vg-card vg-orlando" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 13</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">🎢 Animal Kingdom</span>
+        <ul class="vg-items">
+          <li>Pandora (Avatar)</li>
+          <li>Safari Kilimanjaro</li>
+          <li>Expedition Everest</li>
+          <li>Outlets à noite</li>
+        </ul>
+      </div>
+    </a>
+
+    <a class="vg-card vg-orlando" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">DIA 14</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">🛍️ Último dia · Compras</span>
+        <ul class="vg-items">
+          <li>Premium Outlets</li>
+          <li>Últimas lembrancinhas</li>
+          <li>Almoço calmo</li>
+          <li>Preparar malas &amp; voo à noite</li>
+        </ul>
+      </div>
+    </a>
+
+    <!-- VOO VOLTA -->
+    <a class="vg-card" href="#voos-recomendados">
+      <div class="vg-card-header"><span class="vg-dia-num">✈️ Volta</span><span class="vg-dia-data">A confirmar</span></div>
+      <div class="vg-card-body">
+        <span class="vg-destino-tag">EUA → Campo Grande</span>
+        <ul class="vg-items">
+          <li>Voo internacional noturno</li>
+          <li>Conexão em GRU ou outra</li>
+          <li>Chegada em CGR no dia seguinte</li>
+        </ul>
+      </div>
+    </a>
+
+  </div>
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ SOBRE OS EUA ═══════════════════════════════════════════════════════ -->
+<section id="cidade" class="secao-wrapper" style="background:#eef4fb;">
+<div class="page secao">
+
+  <div class="pais-hero">
+    <img src="./assets/capas/hero-estados-unidos.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0;" alt="Estados Unidos" onerror="this.style.display='none'">
+    <div class="pais-hero-overlay"></div>
+    <span class="pais-hero-nome">Estados Unidos</span>
+  </div>
+
+  <p class="pais-intro">
+    <strong style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--azul-medio);">VAMOS CARIMBAR ESTADOS UNIDOS 🇺🇸</strong><br>
+    Os Estados Unidos não são um país só — são dezenas de "países" dentro do mesmo território. É o sonho texano com chapéu de cowboy e BBQ defumado por 14 horas em Dallas. É o azul turquesa do mar com prédios art déco cor pastel em Miami. É a magia dos parques que transformam adulto em criança em Orlando. Vocês escolheram três Américas muito diferentes — e essa é justamente a graça de começar por aqui.
+  </p>
+
+  <div class="card2-grid">
+    <div class="card2"><span class="card2-icon">🗣</span><div><span class="card2-label">Idioma Oficial</span><span class="card2-valor">Inglês Americano</span><span class="card2-detalhe">Em Miami, metade da cidade fala espanhol — e português também funciona em muitos lugares.</span></div></div>
+    <div class="card2"><span class="card2-icon">🕐</span><div><span class="card2-label">Fuso Horário</span><span class="card2-valor">–3h (Dallas) / –2h (Miami &amp; Orlando)</span><span class="card2-detalhe">Dallas está no Central Time; Miami e Orlando no Eastern Time. Brasília adianta 2h ou 3h.</span></div></div>
+    <div class="card2"><span class="card2-icon">🔌</span><div><span class="card2-label">Tomadas</span><span class="card2-valor">Tipo A &amp; B · 110-127V</span><span class="card2-detalhe">Pinos chatos paralelos. Levar adaptador universal — a maioria dos carregadores modernos é bivolt.</span></div></div>
+    <div class="card2"><span class="card2-icon">💰</span><div><span class="card2-label">Moeda</span><span class="card2-valor">Dólar Americano (USD)</span><span class="card2-detalhe">Cartão aceito em praticamente tudo. Dinheiro em espécie só pra gorjetas eventuais.</span></div></div>
+    <div class="card2"><span class="card2-icon">💧</span><div><span class="card2-label">Água</span><span class="card2-valor">Potável da torneira</span><span class="card2-detalhe">Pode beber em qualquer lugar. Restaurantes servem <em>tap water</em> de graça — é só pedir.</span></div></div>
+    <div class="card2"><span class="card2-icon">🌡️</span><div><span class="card2-label">Out/Nov</span><span class="card2-valor">10-28°C</span><span class="card2-detalhe">Dallas mais fresca, Miami e Orlando quentes. Precisa de peças de calor e de frio — as três cidades pedem malas diferentes.</span></div></div>
+  </div>
+
+  <div class="dica-box"><span class="dica-box-label">🇺🇸 PRIMEIRA VIAGEM INTERNACIONAL</span><p>Vocês escolheram um destino ideal pra estrear: estrutura impecável, tudo sinalizado, logística facílima. O único "choque cultural" real é o tamanho — porções gigantes, distâncias enormes, prédios altíssimos. Abraçem isso. É parte da experiência americana.</p></div>
+
+  <span class="info-label" style="margin-top:20px;display:block;">Documentos Necessários</span>
+  <div class="card-lista">
+    <div class="card-lista-item">
+      <span class="card-lista-emoji">🛂</span>
+      <div class="card-lista-info">
+        <span class="card-lista-titulo">Passaporte válido</span>
+        <span class="card-lista-desc">Mínimo 6 meses de validade após a data de volta + 2 páginas em branco para carimbos.</span>
+      </div>
+      <span class="card-lista-badge badge-req">Obrigatório</span>
+    </div>
+    <div class="card-lista-item">
+      <span class="card-lista-emoji">🇺🇸</span>
+      <div class="card-lista-info">
+        <span class="card-lista-titulo">Visto B1/B2 (turismo)</span>
+        <span class="card-lista-desc">Vocês já têm — parabéns! Confiram se a validade cobre a data de embarque e volta.</span>
+      </div>
+      <span class="card-lista-badge badge-ok">OK — já têm</span>
+    </div>
+    <div class="card-lista-item">
+      <span class="card-lista-emoji">🏥</span>
+      <div class="card-lista-info">
+        <span class="card-lista-titulo">Seguro viagem</span>
+        <span class="card-lista-desc">Obrigatório. Os EUA têm o sistema de saúde mais caro do mundo — uma visita simples ao hospital pode custar US$ 5.000+. Cobertura mínima de US$ 100.000.</span>
+      </div>
+      <span class="card-lista-badge badge-req">Obrigatório</span>
+    </div>
+    <div class="card-lista-item">
+      <span class="card-lista-emoji">📝</span>
+      <div class="card-lista-info">
+        <span class="card-lista-titulo">Comprovante de hospedagem &amp; voo de volta</span>
+        <span class="card-lista-desc">Pode pedir na imigração. Tenham os PDFs no celular ou impressos.</span>
+      </div>
+      <span class="card-lista-badge badge-rec">Recomendado</span>
+    </div>
+    <div class="card-lista-item">
+      <span class="card-lista-emoji">🚗</span>
+      <div class="card-lista-info">
+        <span class="card-lista-titulo">CNH Internacional (PID)</span>
+        <span class="card-lista-desc">Obrigatória se forem alugar carro. Emitida pelo Detran — fica pronta em poucos dias.</span>
+      </div>
+      <span class="card-lista-badge badge-rec">Se alugar carro</span>
+    </div>
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ GUIA FINANCEIRO ═══════════════════════════════════════════════════════ -->
+<section id="dinheiro" class="secao-wrapper">
+<div class="page secao">
+  <span class="titulo-principal">Guia Financeiro</span>
+
+  <div class="card-grid card-grid-gold">
+
+    <div class="card-gold">
+      <div class="card-gold-header"><span class="card-gold-header-icon">⭐</span><span class="card-gold-header-titulo">Nossa Recomendação: Cartão Internacional</span></div>
+      <div class="card-gold-body">
+        <div>
+          <p>Nós utilizamos a <strong>Nomad</strong> como conta internacional durante nossas viagens e recomendamos pela praticidade e economia. A conta é em dólar e permite pagamentos em diversas moedas ao redor do mundo, com conversão automática e instantânea no momento da compra.</p>
+          <p>A transferência de dinheiro pode ser feita via Pix, e o saldo é convertido em poucos segundos diretamente pelo aplicativo. Não há cobrança de anuidade, nem taxas de abertura ou manutenção.</p>
+          <p>Abra sua conta gratuitamente com o cupom <strong>VAMOSCARIMBAR</strong> e ganhe até <strong>$20 em cashback</strong>.</p>
+          <a class="card-gold-link" href="https://nomad.onelink.me/wIQT/VAMOSCARIMBAR" target="_blank">→ Abrir conta Nomad</a>
+        </div>
+        <div style="display:flex;flex-direction:row;align-items:center;gap:10px;min-width:auto;">
+          <img src="./assets/parceiros/cartao-nomad.png" alt="Cartão Nomad" style="width:72px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.12));">
+          <div class="cupom-gold"><span class="cupom-gold-label">Cupom</span><span class="cupom-gold-codigo">VAMOS CARIMBAR</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card"><div class="card-header"><span class="card-header-icon">💵</span><span class="card-header-titulo">Dólar Americano (USD)</span></div><div class="card-body"><p>Nos EUA <strong>tudo funciona com cartão</strong> — contactless, Apple Pay e Google Pay são aceitos até em food trucks. Dinheiro em espécie é útil só para <strong>gorjetas avulsas</strong> e compras pequenas. Levem algo entre US$ 200–300 em notas de $1, $5 e $10.</p><p>Evitem sacar em ATM de rua — optem pelos caixas dentro de agências bancárias (Chase, Bank of America, Wells Fargo), que são mais seguros e têm câmeras.</p></div></div>
+    <div class="card"><div class="card-header"><span class="card-header-icon">🤝</span><span class="card-header-titulo">Gorjetas (<em>Tipping</em>)</span></div><div class="card-body"><p><strong>Essencial nos EUA.</strong> Garçons e atendentes recebem salário base baixo e dependem da gorjeta.</p><p>• Restaurantes: <strong>18-20%</strong> (padrão 20% em cidades grandes)<br>• Uber/táxi: <strong>15-20%</strong><br>• Bartender: <strong>$1-2 por drink</strong><br>• Housekeeping: <strong>$2-5 por noite</strong><br>• Bagageiro: <strong>$1-2 por mala</strong><br>• Valet parking: <strong>$3-5</strong></p></div></div>
+    <div class="card"><div class="card-header"><span class="card-header-icon">🧾</span><span class="card-header-titulo">Impostos &amp; Preços</span></div><div class="card-body"><p><strong>Os preços na vitrine não incluem imposto.</strong> O <em>sales tax</em> é adicionado no caixa — varia por estado: Texas 8,25%, Flórida 6-7%. Um produto de $100 sai por $106-108.</p><p>Em restaurantes, também aparece o imposto na conta <strong>antes</strong> da gorjeta. Gorjeta calcula em cima do subtotal (sem imposto), mas muita gente simplifica e calcula sobre o total.</p></div></div>
+
+  </div>
+
+  <div class="alerta-box-gold">
+    <span class="alerta-box-titulo">💡 Dicas financeiras rápidas</span>
+    <div class="alerta-box-grid">
+      <p><strong>Avisem o banco da viagem.</strong> Alguns bancos bloqueiam compras internacionais se não forem informados. Ligam 15 dias antes.</p>
+      <p><strong>Levem 2 cartões separados.</strong> Um na carteira, outro no hotel. Se perder um, não fica sem meio de pagamento.</p>
+      <p><strong>Apple Pay / Google Pay salva.</strong> Cadastrem o Nomad no celular — se perder o cartão, o pagamento continua funcionando.</p>
+      <p><strong>Evitem trocar dinheiro em aeroporto.</strong> A cotação é péssima. Chegar com Nomad carregado + alguns dólares em espécie é suficiente.</p>
+    </div>
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ CLIMA & CHECKLIST MALA ═══════════════════════════════════════════════════════ -->
+<section id="clima" class="secao-wrapper">
+<div class="page secao">
+  <span class="titulo-principal">Checklist Clima e Mala</span>
+
+  <div class="dica2-box">
+    <span class="dica2-label">🍂 Outono americano · meia-estação</span>
+    <p>Outubro/novembro nos EUA é transição. <strong>Dallas</strong> fica no esquema <em>layered</em> (camadas): dias mornos de 22-25°C, mas noites podem baixar pra 10-12°C — casaco obrigatório. <strong>Miami</strong> continua verão-eterno: 25-28°C, água morna, ainda dá pra tomar banho de mar. <strong>Orlando</strong> é quente de dia (26-28°C) com pancadas rápidas de chuva — levar poncho dobrável ou capa.</p>
+  </div>
+
+  <div class="card2-grid" style="margin:20px 0;">
+    <div class="card2"><span class="card2-icon">🤠</span><div><span class="card2-label">Dallas, TX</span><span class="card2-valor">10-25°C</span><span class="card2-detalhe">Dia morno, noite fria. Camadas são a chave.</span></div></div>
+    <div class="card2"><span class="card2-icon">🌴</span><div><span class="card2-label">Miami, FL</span><span class="card2-valor">22-28°C</span><span class="card2-detalhe">Calor tropical, ainda temporada de praia.</span></div></div>
+    <div class="card2"><span class="card2-icon">🎢</span><div><span class="card2-label">Orlando, FL</span><span class="card2-valor">18-28°C</span><span class="card2-detalhe">Quente de dia, chuvas rápidas de tarde.</span></div></div>
+    <div class="card2"><span class="card2-icon">☂️</span><div><span class="card2-label">Chuva</span><span class="card2-valor">Baixa/Média</span><span class="card2-detalhe">Raro em Dallas, possível em Miami/Orlando.</span></div></div>
+  </div>
+
+  <div class="checklist-grid">
+    <div>
+      <div class="checklist-acordeao">
+        <button class="checklist-acordeao-btn" onclick="toggleAcordeao(this)"><span>▼ ROUPAS</span><span class="seta">▼</span></button>
+        <div class="checklist-acordeao-conteudo"><div class="checklist-acordeao-inner">
+          <div class="checklist-item"><input type="checkbox"> Camisetas básicas (7-10)</div>
+          <div class="checklist-item"><input type="checkbox"> Bermuda / short leve (4-5)</div>
+          <div class="checklist-item"><input type="checkbox"> Calça jeans / sarja (2)</div>
+          <div class="checklist-item"><input type="checkbox"> Vestido leve / saia (Maressa)</div>
+          <div class="checklist-item"><input type="checkbox"> Jaqueta leve / moletom (Dallas à noite)</div>
+          <div class="checklist-item"><input type="checkbox"> Blusa de manga comprida (1-2)</div>
+          <div class="checklist-item"><input type="checkbox"> Traje casual-esporte pra bares/jantares</div>
+          <div class="checklist-item"><input type="checkbox"> Roupa de banho / biquíni (2 cada)</div>
+          <div class="checklist-item"><input type="checkbox"> Saída de praia / kaftan</div>
+          <div class="checklist-item"><input type="checkbox"> Pijama confortável</div>
+          <div class="checklist-item"><input type="checkbox"> Meias (inclusive esportivas pros parques)</div>
+          <div class="checklist-item"><input type="checkbox"> Roupas íntimas extras (pelo menos 15 dias)</div>
+        </div></div>
+      </div>
+      <br>
+      <div class="checklist-acordeao">
+        <button class="checklist-acordeao-btn" onclick="toggleAcordeao(this)"><span>▼ CALÇADOS</span><span class="seta">▼</span></button>
+        <div class="checklist-acordeao-conteudo"><div class="checklist-acordeao-inner">
+          <div class="checklist-item"><input type="checkbox"> Tênis confortável (essencial pros parques)</div>
+          <div class="checklist-item"><input type="checkbox"> Sandália / havaianas (praia)</div>
+          <div class="checklist-item"><input type="checkbox"> Sapatênis ou tênis casual (bares/jantares)</div>
+          <div class="checklist-item"><input type="checkbox"> Botinha ou bota texana (opcional, pra Dallas)</div>
+          <div class="checklist-item"><input type="checkbox"> Rasteirinha ou sapatilha (Maressa)</div>
+        </div></div>
+      </div>
+      <br>
+      <div class="checklist-acordeao">
+        <button class="checklist-acordeao-btn" onclick="toggleAcordeao(this)"><span>▼ ACESSÓRIOS</span><span class="seta">▼</span></button>
+        <div class="checklist-acordeao-conteudo"><div class="checklist-acordeao-inner">
+          <div class="checklist-item"><input type="checkbox"> Óculos escuros (essencial)</div>
+          <div class="checklist-item"><input type="checkbox"> Boné ou chapéu (sol forte nos parques)</div>
+          <div class="checklist-item"><input type="checkbox"> Pochete / bolsa crossbody</div>
+          <div class="checklist-item"><input type="checkbox"> Mochila pequena (dia a dia &amp; parques)</div>
+          <div class="checklist-item"><input type="checkbox"> Guarda-chuva dobrável ou poncho</div>
+        </div></div>
+      </div>
+    </div>
+    <div>
+      <div class="checklist-acordeao">
+        <button class="checklist-acordeao-btn" onclick="toggleAcordeao(this)"><span>▼ HIGIENE &amp; PROTEÇÃO</span><span class="seta">▼</span></button>
+        <div class="checklist-acordeao-conteudo"><div class="checklist-acordeao-inner">
+          <div class="checklist-item"><input type="checkbox"> Protetor solar FPS 50+ (Miami e Orlando)</div>
+          <div class="checklist-item"><input type="checkbox"> Protetor labial com FPS</div>
+          <div class="checklist-item"><input type="checkbox"> Hidratante corporal</div>
+          <div class="checklist-item"><input type="checkbox"> Kit de higiene pessoal básico</div>
+          <div class="checklist-item"><input type="checkbox"> Escova e pasta de dente</div>
+          <div class="checklist-item"><input type="checkbox"> Desodorante</div>
+          <div class="checklist-item"><input type="checkbox"> Remédios pessoais (com receita em PDF)</div>
+          <div class="checklist-item"><input type="checkbox"> Analgésico, antiácido e antialérgico</div>
+          <div class="checklist-item"><input type="checkbox"> Band-Aid (essencial pros parques)</div>
+        </div></div>
+      </div>
+      <br>
+      <div class="checklist-acordeao">
+        <button class="checklist-acordeao-btn" onclick="toggleAcordeao(this)"><span>▼ ELETRÔNICOS</span><span class="seta">▼</span></button>
+        <div class="checklist-acordeao-conteudo"><div class="checklist-acordeao-inner">
+          <div class="checklist-item"><input type="checkbox"> Adaptador tipo A/B (tomada americana)</div>
+          <div class="checklist-item"><input type="checkbox"> Power bank (pelo menos 10.000 mAh)</div>
+          <div class="checklist-item"><input type="checkbox"> Carregador de celular + cabo extra</div>
+          <div class="checklist-item"><input type="checkbox"> Fones de ouvido</div>
+          <div class="checklist-item"><input type="checkbox"> Câmera (opcional — celular moderno basta)</div>
+          <div class="checklist-item"><input type="checkbox"> Chip internacional ou eSIM (Airalo, Holafly)</div>
+        </div></div>
+      </div>
+      <br>
+      <div class="checklist-acordeao">
+        <button class="checklist-acordeao-btn" onclick="toggleAcordeao(this)"><span>▼ DOCUMENTOS &amp; MÃO</span><span class="seta">▼</span></button>
+        <div class="checklist-acordeao-conteudo"><div class="checklist-acordeao-inner">
+          <div class="checklist-item"><input type="checkbox"> Passaporte (válido 6 meses+)</div>
+          <div class="checklist-item"><input type="checkbox"> Visto B1/B2 no passaporte</div>
+          <div class="checklist-item"><input type="checkbox"> Cópia do passaporte (separada)</div>
+          <div class="checklist-item"><input type="checkbox"> Impressão do seguro viagem</div>
+          <div class="checklist-item"><input type="checkbox"> Confirmação de hospedagem (PDF)</div>
+          <div class="checklist-item"><input type="checkbox"> Voo de volta (PDF)</div>
+          <div class="checklist-item"><input type="checkbox"> CNH Internacional (se alugar carro)</div>
+          <div class="checklist-item"><input type="checkbox"> 2 cartões internacionais</div>
+          <div class="checklist-item"><input type="checkbox"> Dinheiro em espécie (US$ 200-300)</div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ FRASES MÁGICAS ═══════════════════════════════════════════════════════ -->
+<section id="frases" class="secao-wrapper">
+<div class="page secao">
+  <span class="titulo-principal">Frases Mágicas</span>
+  <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 24px;max-width:640px;">Frases essenciais em <strong style="color:var(--azul);">inglês americano</strong> — simples, educadas, funcionais. Em Miami, muitas delas também funcionam em espanhol; em Dallas e Orlando, inglês é indispensável.</p>
+
+  <div class="card-frases">
+    <div class="card-frases-header"><span class="card-frases-titulo">💬 CUMPRIMENTOS &amp; EDUCAÇÃO</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Hi / Hello</span><span class="card-frases-pt">Oi / Olá</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Thank you (<em>thanks</em>)</span><span class="card-frases-pt">Obrigado(a)</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">You're welcome</span><span class="card-frases-pt">De nada</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Please</span><span class="card-frases-pt">Por favor</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Excuse me</span><span class="card-frases-pt">Com licença / desculpa</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">I'm sorry</span><span class="card-frases-pt">Desculpa (pedir desculpas)</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Have a good one!</span><span class="card-frases-pt">Tenha um bom dia! (gíria americana comum)</span></div>
+  </div>
+
+  <div class="card-frases">
+    <div class="card-frases-header"><span class="card-frases-titulo">🍽️ NO RESTAURANTE</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Table for two, please</span><span class="card-frases-pt">Mesa para dois, por favor</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Can I see the menu?</span><span class="card-frases-pt">Posso ver o cardápio?</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">What do you recommend?</span><span class="card-frases-pt">O que você recomenda?</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">I'll have...</span><span class="card-frases-pt">Eu vou querer...</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Can I have some water, please?</span><span class="card-frases-pt">Pode me trazer água, por favor? (tap water = grátis)</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Can I get the check, please?</span><span class="card-frases-pt">Pode trazer a conta, por favor?</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Can we split the bill?</span><span class="card-frases-pt">Podemos dividir a conta?</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">To go / for here</span><span class="card-frases-pt">Pra viagem / pra comer aqui</span></div>
+  </div>
+
+  <div class="card-frases">
+    <div class="card-frases-header"><span class="card-frases-titulo">🏨 NO HOTEL &amp; EM LOJAS</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">I have a reservation under...</span><span class="card-frases-pt">Tenho uma reserva no nome de...</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">What time is check-out?</span><span class="card-frases-pt">Que horas é o check-out?</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">How much is this?</span><span class="card-frases-pt">Quanto custa isso?</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Do you take credit card?</span><span class="card-frases-pt">Vocês aceitam cartão?</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Can I try it on?</span><span class="card-frases-pt">Posso provar?</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Just looking, thanks</span><span class="card-frases-pt">Só estou dando uma olhada, obrigado</span></div>
+  </div>
+
+  <div class="card-frases">
+    <div class="card-frases-header"><span class="card-frases-titulo">🗺️ TRANSPORTE &amp; DIREÇÕES</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Where is...?</span><span class="card-frases-pt">Onde fica...?</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">How do I get to...?</span><span class="card-frases-pt">Como eu chego em...?</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Can you call me an Uber?</span><span class="card-frases-pt">Pode chamar um Uber pra mim?</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Is it far from here?</span><span class="card-frases-pt">É longe daqui?</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Can you repeat, please?</span><span class="card-frases-pt">Pode repetir, por favor?</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">I don't speak English very well</span><span class="card-frases-pt">Não falo inglês muito bem</span></div>
+  </div>
+
+  <div class="card-frases">
+    <div class="card-frases-header"><span class="card-frases-titulo">🎢 EMERGÊNCIAS &amp; SOS</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Help!</span><span class="card-frases-pt">Socorro!</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Call 911</span><span class="card-frases-pt">Chamem a emergência (polícia/ambulância)</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">I need a doctor</span><span class="card-frases-pt">Preciso de um médico</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">I lost my passport</span><span class="card-frases-pt">Perdi meu passaporte</span></div>
+    <div class="card-frases-item"><span class="card-frases-it">Where is the nearest hospital?</span><span class="card-frases-pt">Onde fica o hospital mais próximo?</span></div>
+  </div>
+
+  <div class="dica-box">
+    <span class="dica-box-label">🗣️ DICA DE PRONÚNCIA</span>
+    <p>Americano fala mais rápido e "engole" sílabas. Se não entenderem, sorriam e digam <strong>"Can you repeat, please?"</strong> — ninguém vai julgar. Eles amam quando estrangeiros tentam, mesmo com sotaque forte.</p>
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ GUIA GASTRONÔMICO ═══════════════════════════════════════════════════════ -->
+<section id="guia-gastronomico" class="secao-wrapper">
+<div class="page secao">
+  <span class="titulo-principal">Guia Gastronômico</span>
+
+  <div class="gastro-pais-grid">
+    <div class="gastro-pais-card"><h3>O que esperar</h3><p>Porções generosas — pra dois, quase sempre dá pra dividir um prato. Muita variedade: do burger simples ao fine dining, passando por food trucks, diners retrô, BBQ texano, cozinha cubana e japonesa. Cada cidade tem seu DNA: <strong>Dallas</strong> é Tex-Mex e carne; <strong>Miami</strong> é cubano, peruano e seafood; <strong>Orlando</strong> é mais turístico, mas tem jóias escondidas.</p></div>
+    <div class="gastro-pais-card"><h3>Bebidas típicas</h3><p><strong>Sweet tea</strong> (chá gelado adoçado, típico do sul), <strong>margarita</strong> (drink texano por excelência), <strong>craft beer</strong> (cervejas artesanais), <strong>mojito</strong> e <strong>daiquiri</strong> em Miami, <strong>milkshake</strong>, refrigerante com refil grátis em quase todo lugar. Café americano costuma ser mais fraco que o brasileiro — peçam <em>espresso</em> ou <em>latte</em> se quiserem sabor forte.</p></div>
+    <div class="gastro-pais-card"><h3>Dicas gerais</h3><p>O cardápio sempre tem foto ou descrição detalhada. <strong>Happy hour</strong> é sagrado (geralmente 16h-19h com desconto em drinks). <strong>Brunch</strong> no fim de semana é quase obrigatório. Muitos restaurantes aceitam reserva pelo <strong>OpenTable</strong> — vale baixar o app. Em bares movimentados, cartão e ID (passaporte) na mão.</p></div>
+    <div class="gastro-pais-card"><h3>Etiqueta americana</h3><p><strong>Gorjeta 18-20% é obrigatória.</strong> O garçom vai perguntar "<em>How is everything?</em>" algumas vezes — é cultura. A conta (<em>check</em>) não vem sozinha, vocês pedem. Tap water é de graça. Não é comum dividir pratos grandes (mas dá). Proibido fumar em bares e restaurantes fechados em quase todo estado.</p></div>
+  </div>
+
+  <div class="legenda-glass" style="background:white;border:1px solid #e5edf7;backdrop-filter:none;-webkit-backdrop-filter:none;">
+    <span class="legenda-glass-titulo" style="color:var(--azul);border-bottom:1px solid #edf2f7;">Pratos Icônicos Americanos</span>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:0;">
+
+      <div style="background:#f8fbff;border-radius:10px;padding:10px 12px;">
+        <img class="prato-img" src="./assets/gastronomia/burger.jpg" alt="American Burger" style="border:2px solid #e5edf7;">
+        <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);display:block;margin-top:4px;">American Burger</span>
+        <span style="font-size:10.5px;color:#64748b;">Pão brioche, carne suculenta, queijo derretido, molho especial. Cada estado tem seu jeito — em Dallas, geralmente com bacon.</span>
+      </div>
+
+      <div style="background:#f8fbff;border-radius:10px;padding:10px 12px;">
+        <img class="prato-img" src="./assets/gastronomia/bbq-texano.jpg" alt="BBQ Texano" style="border:2px solid #e5edf7;">
+        <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);display:block;margin-top:4px;">BBQ Texano</span>
+        <span style="font-size:10.5px;color:#64748b;">Brisket (peito bovino) defumado por 12-14h, costelinhas, linguiça e pão branco. Prato obrigatório em Dallas.</span>
+      </div>
+
+      <div style="background:#f8fbff;border-radius:10px;padding:10px 12px;">
+        <img class="prato-img" src="./assets/gastronomia/tex-mex.jpg" alt="Tex-Mex" style="border:2px solid #e5edf7;">
+        <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);display:block;margin-top:4px;">Tex-Mex</span>
+        <span style="font-size:10.5px;color:#64748b;">Fajitas, tacos, enchiladas, nachos — a fusão texano-mexicana que virou sinônimo de Dallas. Servido com margarita.</span>
+      </div>
+
+      <div style="background:#f8fbff;border-radius:10px;padding:10px 12px;">
+        <img class="prato-img" src="./assets/gastronomia/cuban-sandwich.jpg" alt="Cuban Sandwich" style="border:2px solid #e5edf7;">
+        <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);display:block;margin-top:4px;">Cuban Sandwich</span>
+        <span style="font-size:10.5px;color:#64748b;">Pão cubano crocante, porco desfiado, presunto, queijo suíço, picles e mostarda. Alma da Little Havana em Miami.</span>
+      </div>
+
+      <div style="background:#f8fbff;border-radius:10px;padding:10px 12px;">
+        <img class="prato-img" src="./assets/gastronomia/key-lime-pie.jpg" alt="Key Lime Pie" style="border:2px solid #e5edf7;">
+        <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);display:block;margin-top:4px;">Key Lime Pie</span>
+        <span style="font-size:10.5px;color:#64748b;">Torta cítrica típica da Flórida feita com limão-galego das Keys. Sobremesa obrigatória em Miami.</span>
+      </div>
+
+      <div style="background:#f8fbff;border-radius:10px;padding:10px 12px;">
+        <img class="prato-img" src="./assets/gastronomia/cheesecake.jpg" alt="Cheesecake" style="border:2px solid #e5edf7;">
+        <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);display:block;margin-top:4px;">NY Cheesecake</span>
+        <span style="font-size:10.5px;color:#64748b;">Denso, cremoso, base de biscoito. Icônico americano — servido do coffee shop ao fine dining.</span>
+      </div>
+
+      <div style="background:#f8fbff;border-radius:10px;padding:10px 12px;">
+        <img class="prato-img" src="./assets/gastronomia/pancakes.jpg" alt="Pancakes" style="border:2px solid #e5edf7;">
+        <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);display:block;margin-top:4px;">Pancakes &amp; Waffles</span>
+        <span style="font-size:10.5px;color:#64748b;">Café da manhã americano clássico: pilha de pancakes com manteiga, maple syrup e bacon. IHOP e Denny's são os templos.</span>
+      </div>
+
+      <div style="background:#f8fbff;border-radius:10px;padding:10px 12px;">
+        <img class="prato-img" src="./assets/gastronomia/lobster-roll.jpg" alt="Seafood" style="border:2px solid #e5edf7;">
+        <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);display:block;margin-top:4px;">Seafood &amp; Stone Crab</span>
+        <span style="font-size:10.5px;color:#64748b;">Miami é paraíso de frutos do mar — stone crab é especialidade local (temporada começa em outubro), além de ceviches peruanos.</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="dica-box">
+    <span class="dica-box-label">🍹 DICA DE DRINK</span>
+    <p>Em Dallas, peçam <strong>frozen margarita</strong> — a Mariano's inventou a máquina em 1971. Em Miami, <strong>mojito</strong> autêntico na Little Havana ou <strong>Espresso Martini</strong> nos rooftops. Em Orlando, os bares temáticos do Universal e do Disney Springs valem pela experiência mais que pelo drink.</p>
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ LEGENDAS (fixo) ═══════════════════════════════════════════════════════ -->
+<section id="legendas" class="secao-wrapper">
+<div class="page secao">
+  <span class="titulo-principal">Legendas do Roteiro</span>
+  <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.7;margin-bottom:24px;">Tudo que vocês precisam pra usar este roteiro com confiança e autonomia. Vão aparecer muito nos dias detalhados da <strong>Etapa 4</strong>.</p>
+
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-header"><span class="card-header-icon">🎟</span><span class="card-header-titulo">Selos de Acesso — Atrações</span></div>
+    <div class="card-body">
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="display:flex;align-items:center;gap:12px;"><span class="selo selo-pre-viagem" style="flex-shrink:0;">🎟️ Pré-viagem</span><span style="font-size:12px;color:#475569;"><strong>Compre antes de viajar</strong> — para evitar filas e risco de esgotar.</span></div>
+        <div style="display:flex;align-items:center;gap:12px;"><span class="selo selo-amarelo" style="flex-shrink:0;">🟡 Ingresso no Local</span><span style="font-size:12px;color:#475569;">Pode ser comprado na hora, direto na bilheteria.</span></div>
+        <div style="display:flex;align-items:center;gap:12px;"><span class="selo selo-verde" style="flex-shrink:0;">🔵 Gratuito</span><span style="font-size:12px;color:#475569;">Acesso sem custo.</span></div>
+        <div style="display:flex;align-items:center;gap:12px;"><span class="selo selo-incluso" style="flex-shrink:0;">✓ Incluso</span><span style="font-size:12px;color:#475569;">Já incluso na diária ou no pacote.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-header"><span class="card-header-icon">🍽</span><span class="card-header-titulo">Selos de Restaurantes</span></div>
+    <div class="card-body">
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="display:flex;align-items:center;gap:12px;"><span class="rest-recomendado-badge badge-premium" style="flex-shrink:0;">✨ Experiência</span><span style="font-size:12px;color:#475569;">Jantar especial — reserve com antecedência.</span></div>
+        <div style="display:flex;align-items:center;gap:12px;"><span class="rest-recomendado-badge badge-bom" style="flex-shrink:0;">⭐ Bem Avaliado</span><span style="font-size:12px;color:#475569;">Ótimas avaliações e boa relação custo-benefício.</span></div>
+        <div style="display:flex;align-items:center;gap:12px;"><span class="rest-recomendado-badge badge-economico" style="flex-shrink:0;">💰 Econômico</span><span style="font-size:12px;color:#475569;">Melhor custo-benefício da região.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-header"><span class="card-header-icon">📌</span><span class="card-header-titulo">Indicação de Reserva</span></div>
+    <div class="card-body">
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;align-items:center;gap:12px;"><span class="reserva-essencial" style="flex-shrink:0;">🔴 Reserva Essencial</span><span style="font-size:12px;color:#475569;">Reserve antes de chegar.</span></div>
+        <div style="display:flex;align-items:center;gap:12px;"><span class="reserva-recomendada" style="flex-shrink:0;">⚠️ Reserva Recomendada</span><span style="font-size:12px;color:#475569;">Altamente aconselhável.</span></div>
+        <div style="display:flex;align-items:center;gap:12px;"><span class="reserva-direto" style="flex-shrink:0;">✅ Sem Reserva</span><span style="font-size:12px;color:#475569;">Pode chegar diretamente.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ ENCERRAMENTO ═══════════════════════════════════════════════════════ -->
+<section id="encerramento" style="position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:url('./assets/capas/menu-pratico-bg.png');background-size:cover;background-position:center;z-index:0;"></div>
+  <div style="position:relative;z-index:2;background:linear-gradient(135deg,rgba(13,45,107,0.95) 0%,rgba(26,74,158,0.92) 50%,rgba(34,85,168,0.92) 100%);border-radius:20px;padding:56px 40px 48px;max-width:420px;width:calc(100% - 48px);text-align:center;box-shadow:0 12px 48px rgba(0,0,0,0.35);">
+    <div style="position:absolute;top:-52px;left:50%;transform:translateX(-50%);width:90px;height:90px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.12);padding:6px;">
+      <img src="./assets/branding/logo-vamos-carimbar-azul.png" alt="Vamos Carimbar" style="width:72px;height:72px;object-fit:contain;">
+    </div>
+    <div style="font-family:'Poppins',sans-serif;font-size:18px;font-weight:700;color:white;margin-bottom:10px;line-height:1.4;">Viajar é carimbar histórias,</div>
+    <div style="font-family:'Magnolia Script',cursive;font-size:clamp(38px,10vw,64px);line-height:1.1;color:white;text-shadow:0 4px 20px rgba(0,0,0,0.4);margin-bottom:36px;white-space:nowrap;">Boa viagem!</div>
+    <p style="font-size:12.5px;line-height:1.8;color:rgba(255,255,255,0.82);margin:0;">Este roteiro foi pensado para <strong style="color:white;">otimizar deslocamentos, horários e ritmo</strong>, garantindo a <strong style="color:white;">melhor experiência dentro do tempo disponível</strong>. Mas viagem não é um roteiro engessado — é <strong style="color:white;">experiência viva</strong>. Ajustem o que fizer sentido, <strong style="color:white;">prolonguem o que encantar</strong> e adaptem o dia conforme a energia de vocês.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ REDES SOCIAIS (fixo) ═══════════════════════════════════════════════════════ -->
+<section style="background:#f8fafc;padding:64px 24px 56px;text-align:center;">
+  <div style="max-width:360px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:0;">
+    <img src="assets/branding/foto-casal.png" alt="Vamos Carimbar" style="width:200px;display:block;margin:0 auto 28px;">
+    <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:#0d2d6b;margin-bottom:16px;line-height:1.2;">Vamos Carimbar?!</div>
+    <p style="font-family:'Poppins',sans-serif;font-size:13px;line-height:1.8;color:#475569;margin:0 0 32px;">Nós temos uma filosofia de vida: <strong style="color:#0d2d6b;">"Pelo menos uma vez ao ano conhecer um lugar que nunca fomos antes"</strong><br>E o conhecimento nos proporciona viver isso.</p>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;width:100%;">
+      <div style="display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:nowrap;white-space:nowrap;">
+        <a href="https://instagram.com/vamoscarimbar" target="_blank" style="display:flex;align-items:center;gap:5px;text-decoration:none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="url(#ig1)"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.8" fill="none"/><circle cx="17.2" cy="6.8" r="1.1" fill="white"/><defs><linearGradient id="ig1" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#f9ce34"/><stop offset="0.35" stop-color="#ee2a7b"/><stop offset="1" stop-color="#6228d7"/></linearGradient></defs></svg><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#334155;font-weight:500;">vamoscarimbar</span></a>
+        <a href="https://instagram.com/fabianarosant" target="_blank" style="display:flex;align-items:center;gap:5px;text-decoration:none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="url(#ig2)"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.8" fill="none"/><circle cx="17.2" cy="6.8" r="1.1" fill="white"/><defs><linearGradient id="ig2" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#f9ce34"/><stop offset="0.35" stop-color="#ee2a7b"/><stop offset="1" stop-color="#6228d7"/></linearGradient></defs></svg><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#334155;font-weight:500;">fabianarosant</span></a>
+        <a href="https://instagram.com/ericdepaula.cruz" target="_blank" style="display:flex;align-items:center;gap:5px;text-decoration:none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="url(#ig3)"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.8" fill="none"/><circle cx="17.2" cy="6.8" r="1.1" fill="white"/><defs><linearGradient id="ig3" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#f9ce34"/><stop offset="0.35" stop-color="#ee2a7b"/><stop offset="1" stop-color="#6228d7"/></linearGradient></defs></svg><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#334155;font-weight:500;">ericdepaula.cruz</span></a>
+      </div>
+      <a href="https://youtube.com/@vamoscarimbar" target="_blank" style="display:flex;align-items:center;gap:6px;text-decoration:none;"><svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="14" rx="3.5" fill="#FF0000"/><path d="M8 10V4L14 7L8 10Z" fill="white"/></svg><span style="font-family:Arial,sans-serif;font-size:12px;font-weight:700;color:#282828;letter-spacing:-0.3px;">YouTube</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#334155;font-weight:500;">Vamos Carimbar</span></a>
+    </div>
+  </div>
+</section>
+
+</div><!-- fim main-content -->
+
+<script>
+(function() {
+  function init() {
+    var btn = document.getElementById('hamburgerBtn');
+    var drawer = document.getElementById('navDrawer');
+    var overlay = document.getElementById('navOverlay');
+    if (!btn || !drawer || !overlay) return;
+    function close() { btn.classList.remove('open'); drawer.classList.remove('open'); overlay.classList.remove('open'); }
+    function open() { btn.classList.add('open'); drawer.classList.add('open'); overlay.classList.add('open'); }
+    function toggle() { drawer.classList.contains('open') ? close() : open(); }
+    btn.addEventListener('touchend', function(e) { e.preventDefault(); e.stopPropagation(); toggle(); });
+    btn.addEventListener('click', function(e) { e.stopPropagation(); toggle(); });
+    overlay.addEventListener('touchend', function(e) { e.preventDefault(); close(); });
+    overlay.addEventListener('click', close);
+    var links = drawer.querySelectorAll('a.nav-item');
+    links.forEach(function(l) {
+      l.addEventListener('touchend', function(e) { e.stopPropagation(); setTimeout(close, 150); });
+      l.addEventListener('click', function() { setTimeout(close, 150); });
+    });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+  }
+  document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', init) : init();
+})();
+</script>
+
+<script>
+function toggleAcordeao(btn) {
+  btn.classList.toggle('aberto');
+  var conteudo = btn.nextElementSibling;
+  conteudo.classList.toggle('aberto');
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var btns = document.querySelectorAll('.checklist-acordeao-btn');
+  var isMobile = window.innerWidth <= 768;
+  btns.forEach(function(btn) {
+    if (!isMobile) { btn.classList.add('aberto'); btn.nextElementSibling.classList.add('aberto'); }
+  });
+});
+</script>
+
+</body>
+</html>
