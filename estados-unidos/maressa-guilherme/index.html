@@ -217,8 +217,8 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
 .voo-card{ background:white; border:1.5px solid #e0eaf5; border-radius:16px; overflow:hidden; margin:0 0 20px; box-shadow:0 2px 10px rgba(26,58,92,0.07); transition:transform 0.2s, box-shadow 0.2s; }
 .voo-card:hover{ transform:translateY(-2px); box-shadow:0 6px 24px rgba(26,58,92,0.12); }
 .voo-card-header{ background:var(--azul-medio); padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
-.voo-card.voo-custo .voo-card-header{ background:linear-gradient(135deg,#1a6b3c,#2a8d5a); }
-.voo-card.voo-conforto .voo-card-header{ background:linear-gradient(135deg,#2563a8,#3b82f6); }
+.voo-card.voo-custo .voo-card-header{ background:var(--azul-medio); }
+.voo-card.voo-conforto .voo-card-header{ background:linear-gradient(135deg,#92600a,#c9850c); }
 .voo-card.voo-premium .voo-card-header{ background:linear-gradient(135deg,#c8a96e,#dbbf8a); }
 .voo-opcao-label{ font-family:"Poppins",sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.7); }
 .voo-opcao-titulo{ font-family:"Poppins",sans-serif; font-size:14px; font-weight:700; color:white; display:block; margin-top:2px; }
@@ -246,6 +246,9 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
 .voo-print-box img{ max-width:100%; border-radius:8px; display:block; margin:0 auto; }
 .voo-print-placeholder{ font-family:"Poppins",sans-serif; font-size:10px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:#94a3b8; display:block; }
 .voo-print-placeholder-desc{ font-size:11px; color:#cbd5e1; margin-top:4px; }
+.voo-print-caption{ font-family:"Poppins",sans-serif; font-size:10px; color:#94a3b8; text-align:center; margin:6px 0 10px; display:block; }
+.voo-compra-btn{ display:block; width:100%; background:var(--azul-medio); color:white; text-decoration:none; text-align:center; padding:11px 16px; border-radius:8px; font-family:"Poppins",sans-serif; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-top:10px; transition:background 0.2s; }
+.voo-compra-btn:hover{ background:var(--azul); }
 .voo-destaque-box{ background:#f0fdf4; border-left:3px solid #16a34a; border-radius:0 8px 8px 0; padding:10px 14px; margin-top:12px; }
 .voo-destaque-box.neutro{ background:#dbeafe; border-left-color:var(--azul-medio); }
 .voo-destaque-box.atencao{ background:#fdf6ec; border-left-color:#c8a96e; }
@@ -291,8 +294,10 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
 <!-- ═══════════════════════════════════════════════════════ DRAWER ═══════════════════════════════════════════════════════ -->
 <nav class="nav-drawer" id="navDrawer">
   <a class="nav-menu-principal" href="#menu-pratico">MENU PRINCIPAL</a>
-  <a class="nav-item" href="#proximos-passos">📍 Próximos Passos</a>
+  <a class="nav-item" href="#proximos-passos">📍 Nossa Rota</a>
+  <a class="nav-item" href="#checklist-planejamento">✅ Checklist da Viagem</a>
   <a class="nav-item" href="#voos-recomendados">✈️ Curadoria de Voos</a>
+  <a class="nav-item" href="#hospedagem-curadoria">🏨 Curadoria de Hospedagens</a>
   <a class="nav-item" href="#menu-dias">🗺️ Roteiro Macro</a>
   <a class="nav-item" href="#cidade">🇺🇸 Sobre os EUA</a>
   <a class="nav-item" href="#dinheiro">💵 Guia Financeiro</a>
@@ -300,6 +305,7 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
   <a class="nav-item" href="#frases">💬 Frases Mágicas</a>
   <a class="nav-item" href="#guia-gastronomico">🍔 Guia Gastronômico</a>
   <a class="nav-item" href="#legendas">📌 Legendas do Roteiro</a>
+  <a class="nav-item" href="#roteiro-detalhado">📅 Roteiro Detalhado</a>
 </nav>
 
 <div class="main-content">
@@ -326,11 +332,12 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
     <div class="mp-logo-wrapper">
       <img class="mp-logo" src="./assets/branding/logo-vamos-carimbar-azul.png" alt="Vamos Carimbar">
     </div>
-    <span class="etapa-badge">✦ Etapa 1 · Base de Curadoria</span>
     <div style="font-family:'Magnolia Script',cursive;font-size:32px;font-weight:400;color:var(--azul-medio);margin-bottom:16px;letter-spacing:0;text-transform:none;">Menu Principal</div>
 
-    <a class="mp-btn" href="#proximos-passos" style="background:linear-gradient(135deg,#c8a96e,#dbbf8a);color:white;font-weight:700;">📍 Próximos Passos</a>
+    <a class="mp-btn" href="#proximos-passos" style="background:linear-gradient(135deg,#c8a96e,#dbbf8a);color:white;font-weight:700;">📍 Nossa Rota</a>
+    <a class="mp-btn" href="#checklist-planejamento">✅ Checklist da Viagem</a>
     <a class="mp-btn" href="#voos-recomendados">✈️ Curadoria de Voos</a>
+    <a class="mp-btn" href="#hospedagem-curadoria">🏨 Curadoria de Hospedagens</a>
     <a class="mp-btn" href="#menu-dias">🗺️ Roteiro Macro</a>
     <a class="mp-btn" href="#cidade">🇺🇸 Sobre os Estados Unidos</a>
     <a class="mp-btn" href="#dinheiro">💵 Guia Financeiro</a>
@@ -338,6 +345,7 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
     <a class="mp-btn" href="#frases">💬 Frases Mágicas</a>
     <a class="mp-btn" href="#guia-gastronomico">🍔 Guia Gastronômico</a>
     <a class="mp-btn" href="#legendas">📌 Legendas do Roteiro</a>
+    <a class="mp-btn" href="#roteiro-detalhado">📅 Roteiro Detalhado</a>
 
     <div class="mp-clientes">Maressa &amp; Guilherme · Outubro/Novembro 2026</div>
   </div>
@@ -346,15 +354,15 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
 <!-- ═══════════════════════════════════════════════════════ PRÓXIMOS PASSOS ═══════════════════════════════════════════════════════ -->
 <section id="proximos-passos" class="secao-wrapper">
 <div class="page secao">
-  <span class="titulo-principal">Próximos Passos</span>
-  <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 24px;max-width:640px;">Este roteiro é construído em <strong style="color:var(--azul);">três etapas</strong> — cada uma desbloqueia a próxima. Aqui vocês acompanham onde estamos agora e o que vem por aí.</p>
+  <span class="titulo-principal">Nossa Rota</span>
+  <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 24px;max-width:640px;">Este roteiro é construído em <strong style="color:var(--azul);">cinco etapas</strong>. Cada uma desbloqueia a próxima. Aqui vocês acompanham onde estamos e o que vem por aí.</p>
 
   <div class="passo-card concluido">
     <div class="passo-num"><span>1</span></div>
     <div>
       <span class="passo-titulo">Reunião inicial &amp; briefing</span>
-      <p class="passo-desc">A gente já conversou sobre sonhos, ritmo, gostos e escolheu as três cidades da viagem — <strong>Dallas, Miami e Orlando</strong>. A partir daqui é curadoria pura.</p>
-      <span class="passo-tag depois">Concluído</span>
+      <p class="passo-desc">Conversamos sobre sonhos, ritmo de viagem e gostos pessoais de vocês. Juntos definimos as três cidades: <strong>Dallas, Miami e Orlando</strong>. A partir daqui é planejar e carimbar os 🇺🇸</p>
+      <span class="passo-tag depois">Concluído · 13/04/2026 às 20h30</span>
     </div>
   </div>
 
@@ -362,7 +370,7 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
     <div class="passo-num">2</div>
     <div>
       <span class="passo-titulo">Curadoria de voos &amp; decisão da rota</span>
-      <p class="passo-desc">Nesta etapa entregamos <strong>2 a 3 opções de voo</strong> selecionadas por custo-benefício, horários e logística de conexão (saindo de Campo Grande). Vocês comparam, escolhem a que faz mais sentido e <strong>compram as passagens</strong>. A direção do roteiro (entrar por Dallas ou por Miami/Orlando) vai ser definida junto com o voo.</p>
+      <p class="passo-desc">Nesta etapa entregamos opções de voo selecionadas por custo-benefício, horários e logística de conexão (saindo de Campo Grande). Vocês comparam, escolhem a que faz mais sentido e compram as passagens.</p>
       <span class="passo-tag agora">Estamos aqui</span>
     </div>
   </div>
@@ -380,14 +388,194 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
     <div class="passo-num">4</div>
     <div>
       <span class="passo-titulo">Roteiro completo dia a dia</span>
-      <p class="passo-desc">Com voos e hospedagem confirmados, finalizamos o roteiro completo: todos os dias com atrações, restaurantes, transfers, horários e dicas — do voo de ida ao voo de volta. É a versão final que vocês vão usar durante a viagem.</p>
+      <p class="passo-desc">Com voos e hospedagem confirmados, finalizamos o roteiro completo: todos os dias com atrações, restaurantes, transfers, horários e dicas — do voo de ida ao voo de volta. É a versão final que vocês vão usar durante a viagem. <strong>Previsão de entrega: 30 dias após voos e hospedagens confirmados e pagamento final do valor contratado do roteiro.</strong></p>
+      <span class="passo-tag em-breve">Em breve</span>
+    </div>
+  </div>
+
+  <div class="passo-card futuro">
+    <div class="passo-num">5</div>
+    <div>
+      <span class="passo-titulo">Aprovação, passeios &amp; suporte final</span>
+      <p class="passo-desc">Com o roteiro completo aprovado por vocês, entramos na reta final: <strong>checklist e suporte na reserva dos passeios</strong> que precisam ser comprados com antecedência, entrega do <strong>Google Maps personalizado</strong> com todos os pontos da viagem já marcados, uma <strong>reunião final</strong> para tirar todas as dúvidas antes de embarcar — e <strong>suporte contínuo</strong> até a data da viagem.</p>
       <span class="passo-tag em-breve">Última etapa</span>
     </div>
   </div>
 
   <div class="dica-box" style="margin-top:20px;">
     <span class="dica-box-label">💡 Por que entregamos em etapas?</span>
-    <p>Roteiros bons se constroem com decisões boas. Esperar os voos pra indicar hotel (e esperar o hotel pra montar o dia a dia) garante que <strong>cada recomendação esteja perfeitamente alinhada</strong> com as datas, o aeroporto de chegada e o ritmo real da viagem. Nada de refazer — cada etapa fica pronta, certa, pra sempre.</p>
+    <p>Roteiros bons se constroem com decisões boas. Esperar os voos pra indicar hotel, e esperar o hotel pra montar o dia a dia, garante que <strong>cada recomendação esteja perfeitamente alinhada</strong> com as datas, o aeroporto de chegada e o ritmo real da viagem. Cada etapa fica pronta, certa e definitiva.</p>
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ CHECKLIST DE PLANEJAMENTO ═══════════════════════════════════════════════════════ -->
+<section id="checklist-planejamento" class="secao-wrapper">
+<div class="page secao">
+  <span class="titulo-principal">Checklist da Viagem</span>
+  <div class="dica-box" style="margin:-8px auto 28px;max-width:620px;">
+    <span class="dica-box-label">💡 Como funciona</span>
+    <p>Atualizamos este checklist conforme avançamos nas etapas da viagem. Os itens marcados já estão resolvidos — os abertos são os próximos passos.</p>
+  </div>
+
+  <!-- DOCUMENTOS -->
+  <div style="margin-bottom:20px;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--azul-claro);">
+      <span style="font-size:16px;">📄</span>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--azul);">Documentos</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:2px;">
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;margin-bottom:4px;">
+        <input type="checkbox" checked>
+        <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Passaporte válido</span>
+      </div>
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;margin-bottom:4px;">
+        <input type="checkbox" checked>
+        <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Visto B1/B2</span>
+      </div>
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;margin-bottom:4px;">
+        <input type="checkbox">
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Seguro viagem</span>
+          <span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#94a3b8;line-height:1.5;">Enviem no grupo os cartões black que possuem — verificamos se já têm cobertura de seguro viagem como benefício antes de contratar por fora.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VOOS -->
+  <div style="margin-bottom:20px;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--azul-claro);">
+      <span style="font-size:16px;">✈️</span>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--azul);">Voos</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;margin-bottom:4px;">
+        <input type="checkbox">
+        <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Voo internacional — Campo Grande → EUA</span>
+      </div>
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;margin-bottom:4px;">
+        <input type="checkbox">
+        <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Voo interno — Dallas → Miami</span>
+      </div>
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;">
+        <input type="checkbox">
+        <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Voo internacional de volta — EUA → Campo Grande</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOSPEDAGEM -->
+  <div style="margin-bottom:20px;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--azul-claro);">
+      <span style="font-size:16px;">🏨</span>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--azul);">Hospedagem</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;margin-bottom:4px;">
+        <input type="checkbox">
+        <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Hotel em Dallas (5 noites)</span>
+      </div>
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;margin-bottom:4px;">
+        <input type="checkbox">
+        <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Hotel em Miami (4 noites)</span>
+      </div>
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;">
+        <input type="checkbox">
+        <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Hotel em Orlando (5 noites)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINANÇAS & CONECTIVIDADE -->
+  <div style="margin-bottom:20px;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--azul-claro);">
+      <span style="font-size:16px;">💳</span>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--azul);">Finanças &amp; Conectividade</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;margin-bottom:4px;">
+        <input type="checkbox">
+        <div style="display:flex;flex-direction:column;gap:3px;">
+          <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Cartão internacional (sem IOF)</span>
+          <a href="https://nomad.onelink.me/wIQT/VAMOSCARIMBAR" target="_blank" style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--azul-medio);font-weight:600;text-decoration:none;">→ Abrir conta Nomad · Cupom VAMOSCARIMBAR</a>
+        </div>
+      </div>
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;margin-bottom:4px;">
+        <input type="checkbox">
+        <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Câmbio — dólares em espécie (gorjetas &amp; emergências)</span>
+      </div>
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;margin-bottom:4px;">
+        <input type="checkbox">
+        <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Avisar o banco sobre a viagem internacional</span>
+      </div>
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;">
+        <input type="checkbox">
+        <div style="display:flex;flex-direction:column;gap:3px;">
+          <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Chip/eSIM internacional para os EUA</span>
+          <a href="https://holafly.sjv.io/GbKGW2" target="_blank" style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--azul-medio);font-weight:600;text-decoration:none;">→ Holafly · Cupom VAMOSCARIMBAR</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARRO -->
+  <div style="margin-bottom:20px;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--azul-claro);">
+      <span style="font-size:16px;">🚗</span>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--azul);">Aluguel de carro</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;">
+        <input type="checkbox">
+        <div style="display:flex;flex-direction:column;gap:3px;">
+          <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Reserva aluguel de carro — Miami / Orlando</span>
+          <a href="https://www.rentcars.com/pt-br/?requestorid=10463" target="_blank" style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--azul-medio);font-weight:600;text-decoration:none;">→ Rentcars</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROTEIRO -->
+  <div style="margin-bottom:20px;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--azul-claro);">
+      <span style="font-size:16px;">📋</span>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--azul);">Roteiro</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;margin-bottom:4px;">
+        <input type="checkbox">
+        <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Aprovação do roteiro macro</span>
+      </div>
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;">
+        <input type="checkbox">
+        <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Aprovação do roteiro detalhado (dia a dia)</span>
+      </div>
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;">
+        <input type="checkbox">
+        <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Aprovação estimativa financeira</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESERVAS -->
+  <div style="margin-bottom:28px;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--azul-claro);">
+      <span style="font-size:16px;">🎟️</span>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--azul);">Reservas</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;margin-bottom:4px;">
+        <input type="checkbox">
+        <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Ingressos de atrações pagas (parques, tours, experiências)</span>
+      </div>
+      <div class="checklist-item" style="border-radius:7px;border-bottom:none;">
+        <input type="checkbox">
+        <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Reservas em restaurantes que exigem antecedência</span>
+      </div>
+    </div>
   </div>
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
@@ -398,250 +586,515 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
 <section id="voos-recomendados" class="secao-wrapper">
 <div class="page secao">
   <span class="titulo-principal">✈️ Curadoria de Voos</span>
-  <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 24px;max-width:640px;">Selecionamos <strong style="color:var(--azul);">3 opções de voo</strong> saindo de Campo Grande (CGR) com destino aos Estados Unidos, considerando <strong>custo-benefício, horários de chegada e logística de conexão</strong>. Analisem com calma — a escolha do voo define a direção do roteiro.</p>
+  <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 24px;max-width:640px;">Período: <strong style="color:var(--azul);">21/10 a 04/11/2026</strong> · Rota: <strong style="color:var(--azul);">Dallas · Miami · Orlando</strong></p>
 
-  <div class="dica2-box" style="margin-bottom:24px;">
-    <span class="dica2-label">🔄 Duas rotas possíveis</span>
-    <p>Cada opção de voo pode entrar por <strong>Dallas (DFW)</strong> e voltar por <strong>Miami (MIA)</strong> ou <strong>Orlando (MCO)</strong> — ou o contrário. A curadoria considera essa flexibilidade de <em>open jaw</em> (entrar em um aeroporto e sair por outro), que costuma ser a melhor escolha pra não desperdiçar um dia voltando só pra pegar o voo.</p>
+  <!-- POR QUE ESSA SELEÇÃO -->
+  <div class="card" style="margin-bottom:28px;">
+    <div class="card-header"><span class="card-header-icon">🧭</span><span class="card-header-titulo">Por que essa seleção?</span></div>
+    <div class="card-body">
+      <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#475569;line-height:1.8;margin-bottom:12px;">Maressa e Guilherme, analisamos várias rotas saindo de Campo Grande comparando preços, conexões, companhias e segurança. A combinação que apresentamos é a que entregou o melhor equilíbrio entre custo, conforto e tranquilidade pra vocês.</p>
+      <div style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:#f4f6f9;border-radius:8px;margin-bottom:16px;border-left:3px solid var(--cinza-borda);">
+        <span style="font-size:16px;flex-shrink:0;">ℹ️</span>
+        <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;line-height:1.5;"><strong style="color:var(--azul);">Observação:</strong> Não existe voo direto de Campo Grande para os EUA. Toda rota passa por pelo menos uma conexão no Brasil, geralmente Guarulhos, antes do voo internacional.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:#f4f6f9;border-radius:8px;">
+          <span style="font-size:20px;flex-shrink:0;">🎯</span>
+          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);display:block;margin-bottom:3px;">Entrada por Dallas</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;line-height:1.5;">Melhor custo na ida. A saída por Dallas pro Brasil está muito mais cara, por isso trabalhamos com trechos separados: vocês entram por Dallas e saem por Orlando.</span></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:#f4f6f9;border-radius:8px;">
+          <span style="font-size:20px;flex-shrink:0;">🔄</span>
+          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);display:block;margin-bottom:3px;">Open jaw — entram por Dallas, saem por Orlando</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;line-height:1.5;">Sem desperdiçar um dia voltando à cidade de origem pra pegar o voo. Cada destino visitado em sequência lógica.</span></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:#f4f6f9;border-radius:8px;">
+          <span style="font-size:20px;flex-shrink:0;">✈️</span>
+          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);display:block;margin-bottom:3px;">Apenas 1 voo interno</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;line-height:1.5;">Fazer ida e volta pelo mesmo aeroporto exigiria 2 voos internos. Com trechos separados, vocês têm só um voo interno, menos reservas e menos imprevistos.</span></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:#f4f6f9;border-radius:8px;">
+          <span style="font-size:20px;flex-shrink:0;">🤝</span>
+          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);display:block;margin-bottom:3px;">Parceiras de aliança aérea</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;line-height:1.5;">Os voos selecionados combinam companhias parceiras. A reserva funciona num único processo, com mais segurança e suporte integrado se precisarem de qualquer ajuda.</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- ═══════════ OPÇÃO 1 — CUSTO-BENEFÍCIO ═══════════ -->
+  <!-- ANTES DE COMPRAR -->
+  <div class="card" style="margin-bottom:28px;">
+    <div class="card-header"><span class="card-header-icon">📌</span><span class="card-header-titulo">Antes de comprar — leia com atenção</span></div>
+    <div class="card-body">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li style="display:flex;gap:8px;padding:8px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;line-height:1.6;"><span style="color:var(--azul-medio);font-weight:700;flex-shrink:0;">→</span><span>Entrem nos links de cada companhia, confiram os voos, valores e trechos. Quando decidirem comprar, façam a compra dos <strong>3 trechos no mesmo dia</strong>: os preços mudam o tempo todo.</span></li>
+        <li style="display:flex;gap:8px;padding:8px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;line-height:1.6;"><span style="color:var(--azul-medio);font-weight:700;flex-shrink:0;">→</span><span>Preencha os dados com atenção: <strong>nome completo, data de nascimento e número do passaporte</strong> exatamente como estão no documento. Qualquer erro pode gerar custos adicionais ou impedir o embarque.</span></li>
+        <li style="display:flex;gap:8px;padding:8px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;line-height:1.6;"><span style="color:var(--azul-medio);font-weight:700;flex-shrink:0;">→</span><span>Revise datas, horários e aeroportos antes de finalizar. Confirme a tarifa e as regras de bagagem selecionadas.</span></li>
+        <li style="display:flex;gap:8px;padding:8px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;line-height:1.6;"><span style="color:var(--azul-medio);font-weight:700;flex-shrink:0;">→</span><span>Compre sempre pelos sites oficiais das companhias — mais segurança, facilidade em alterações e suporte direto. Para facilitar, abaixo do print de cada voo tem o link direto do site.</span></li>
+        <li style="display:flex;gap:8px;padding:8px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;line-height:1.6;"><span style="color:var(--azul-medio);font-weight:700;flex-shrink:0;">→</span><span>Incluam a bagagem despachada na volta <strong>já na hora da compra</strong>. Adicionar depois ou no aeroporto sai bem mais caro.</span></li>
+        <li style="display:flex;gap:8px;padding:8px 0;font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;line-height:1.6;"><span style="color:var(--azul-medio);font-weight:700;flex-shrink:0;">→</span><span>Se quiserem explorar outros dias ou horários por conta própria, o <strong>Google Flights</strong> é o melhor lugar pra isso. Dá pra ver variação de preço por data de forma bem visual.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LEGENDA DE CORES -->
+  <div style="display:flex;gap:12px;justify-content:center;margin:-8px 0 24px;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:8px;padding:8px 16px;background:white;border-radius:20px;border:1.5px solid var(--cinza-borda);box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+      <div style="width:12px;height:12px;border-radius:3px;background:var(--azul-medio);flex-shrink:0;"></div>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);">Nossa recomendação</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;padding:8px 16px;background:white;border-radius:20px;border:1.5px solid var(--cinza-borda);box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+      <div style="width:12px;height:12px;border-radius:3px;background:#c9850c;flex-shrink:0;"></div>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);">Alternativa</span>
+    </div>
+  </div>
+
+  <!-- ═══════ TRECHO 01 — IDA ═══════ -->
+  <div style="display:flex;align-items:center;gap:12px;margin:8px 0 16px;padding-bottom:12px;border-bottom:2px solid var(--azul-claro);">
+    <div style="background:var(--azul);border-radius:8px;padding:6px 12px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:white;flex-shrink:0;">Trecho 01</div>
+    <div>
+      <span style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--azul);display:block;">Ida — Campo Grande → Dallas</span>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#94a3b8;">CGR → DFW · Quarta, 21/10/2026</span>
+    </div>
+  </div>
+
   <div class="voo-card voo-custo">
     <div class="voo-card-header">
       <div>
-        <span class="voo-opcao-label">Opção 1 · Melhor Preço</span>
-        <span class="voo-opcao-titulo">{{VOO1_TITULO}}</span>
+        <span class="voo-opcao-label">Opção 1 · Mais econômica</span>
+        <span class="voo-opcao-titulo">LATAM + Delta Air Lines</span>
       </div>
-      <div class="voo-opcao-valor">
-        {{VOO1_VALOR}}
-        <small>por pessoa · ida e volta</small>
-      </div>
+      <div class="voo-opcao-valor">R$ 2.986,97<small>por pessoa · inclui taxas</small></div>
     </div>
     <div class="voo-card-body">
       <div class="voo-rota-grid">
         <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">{{VOO1_IDA_ORIGEM_SIGLA}}</span>
-          <span class="voo-aeroporto-cidade">{{VOO1_IDA_ORIGEM_CIDADE}}</span>
-          <span class="voo-aeroporto-hora">{{VOO1_IDA_ORIGEM_HORA}}</span>
-          <span class="voo-aeroporto-data">{{VOO1_IDA_ORIGEM_DATA}}</span>
+          <span class="voo-aeroporto-codigo">CGR</span>
+          <span class="voo-aeroporto-cidade">Campo Grande</span>
+          <span class="voo-aeroporto-hora">18:55</span>
+          <span class="voo-aeroporto-data">Qua, 21/10</span>
         </div>
         <div class="voo-meio">
-          <span class="voo-duracao">{{VOO1_IDA_DURACAO}}</span>
+          <span class="voo-duracao">18h32</span>
           <div class="voo-linha-avião"></div>
-          <span class="voo-conexao">{{VOO1_IDA_CONEXAO}}</span>
+          <span class="voo-conexao">2 conexões · GRU + ATL</span>
         </div>
         <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">{{VOO1_IDA_DESTINO_SIGLA}}</span>
-          <span class="voo-aeroporto-cidade">{{VOO1_IDA_DESTINO_CIDADE}}</span>
-          <span class="voo-aeroporto-hora">{{VOO1_IDA_DESTINO_HORA}}</span>
-          <span class="voo-aeroporto-data">{{VOO1_IDA_DESTINO_DATA}}</span>
+          <span class="voo-aeroporto-codigo">DFW</span>
+          <span class="voo-aeroporto-cidade">Dallas</span>
+          <span class="voo-aeroporto-hora">12:27</span>
+          <span class="voo-aeroporto-data">Qui, 22/10</span>
         </div>
       </div>
-
-      <div class="voo-rota-grid" style="border-top:1px dashed #e0eaf5;padding-top:14px;">
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">{{VOO1_VOLTA_ORIGEM_SIGLA}}</span>
-          <span class="voo-aeroporto-cidade">{{VOO1_VOLTA_ORIGEM_CIDADE}}</span>
-          <span class="voo-aeroporto-hora">{{VOO1_VOLTA_ORIGEM_HORA}}</span>
-          <span class="voo-aeroporto-data">{{VOO1_VOLTA_ORIGEM_DATA}}</span>
-        </div>
-        <div class="voo-meio">
-          <span class="voo-duracao">{{VOO1_VOLTA_DURACAO}}</span>
-          <div class="voo-linha-avião"></div>
-          <span class="voo-conexao">{{VOO1_VOLTA_CONEXAO}}</span>
-        </div>
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">{{VOO1_VOLTA_DESTINO_SIGLA}}</span>
-          <span class="voo-aeroporto-cidade">{{VOO1_VOLTA_DESTINO_CIDADE}}</span>
-          <span class="voo-aeroporto-hora">{{VOO1_VOLTA_DESTINO_HORA}}</span>
-          <span class="voo-aeroporto-data">{{VOO1_VOLTA_DESTINO_DATA}}</span>
-        </div>
-      </div>
-
       <div class="voo-info-grid">
-        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">{{VOO1_COMPANHIA}}</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Bagagem</span><span class="voo-info-valor">{{VOO1_BAGAGEM}}</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Classe</span><span class="voo-info-valor">{{VOO1_CLASSE}}</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Cancelamento</span><span class="voo-info-valor">{{VOO1_CANCELAMENTO}}</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Conexão 1</span><span class="voo-info-valor">Guarulhos (GRU) · 1h15</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Conexão 2</span><span class="voo-info-valor">Atlanta (ATL) · 3h17</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Bagagem</span><span class="voo-info-valor">1 despachada + 1 cabine + 1 mochila</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Classe</span><span class="voo-info-valor">Econômica</span></div>
       </div>
-
       <div class="voo-print-box is-placeholder">
-        <img src="./assets/voos/voo1-print.png" alt="Print opção 1" loading="lazy"
+        <img src="./assets/voos/voo1-print.png" alt="Print LATAM + Delta" loading="lazy"
           onload="this.parentElement.classList.remove('is-placeholder')"
           onerror="this.parentElement.classList.add('is-placeholder')">
-        <span class="voo-print-placeholder">📸 Print de tela da passagem</span>
-        <span class="voo-print-placeholder-desc">Salvar imagem como <code>voo1-print.png</code> na pasta <code>assets/voos/</code></span>
       </div>
-
-      <div class="voo-destaque-box">
-        <span class="voo-destaque-label">💰 Por que vale a pena</span>
-        <span class="voo-destaque-texto">{{VOO1_DESTAQUE}}</span>
+      <a href="https://www.latamairlines.com/br/pt/oferta-voos?origin=CGR&outbound=2026-10-21T00%3A00%3A00.000Z&destination=DFW&adt=2&chd=0&inf=0&trip=OW&cabin=Economy&redemption=false&sort=RECOMMENDED&exp_id=a2190528-75b2-4810-8116-81c643a31909" target="_blank" class="voo-compra-btn">Acesse aqui para comprar →</a>
+      <div class="voo-destaque-box neutro">
+        <span class="voo-destaque-label">⚠️ Pontos de atenção</span>
+        <span class="voo-destaque-texto">É a opção mais barata e já inclui mala despachada no valor apresentado. O ponto de atenção são as 2 conexões (GRU + ATL): o dia de viagem fica mais longo. Vale pesarem se o preço menor compensa o tempo a mais em trânsito.</span>
       </div>
     </div>
   </div>
 
-  <!-- ═══════════ OPÇÃO 2 — EQUILIBRADA ═══════════ -->
   <div class="voo-card voo-conforto">
     <div class="voo-card-header">
       <div>
-        <span class="voo-opcao-label">Opção 2 · Equilibrada</span>
-        <span class="voo-opcao-titulo">{{VOO2_TITULO}}</span>
+        <span class="voo-opcao-label">Opção 2 · Só uma conexão</span>
+        <span class="voo-opcao-titulo">GOL + American Airlines</span>
       </div>
-      <div class="voo-opcao-valor">
-        {{VOO2_VALOR}}
-        <small>por pessoa · ida e volta</small>
-      </div>
+      <div class="voo-opcao-valor">R$ 3.161,50<small>por pessoa · inclui taxas</small></div>
     </div>
     <div class="voo-card-body">
       <div class="voo-rota-grid">
         <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">{{VOO2_IDA_ORIGEM_SIGLA}}</span>
-          <span class="voo-aeroporto-cidade">{{VOO2_IDA_ORIGEM_CIDADE}}</span>
-          <span class="voo-aeroporto-hora">{{VOO2_IDA_ORIGEM_HORA}}</span>
-          <span class="voo-aeroporto-data">{{VOO2_IDA_ORIGEM_DATA}}</span>
+          <span class="voo-aeroporto-codigo">CGR</span>
+          <span class="voo-aeroporto-cidade">Campo Grande</span>
+          <span class="voo-aeroporto-hora">10:20</span>
+          <span class="voo-aeroporto-data">Qua, 21/10</span>
         </div>
         <div class="voo-meio">
-          <span class="voo-duracao">{{VOO2_IDA_DURACAO}}</span>
+          <span class="voo-duracao">21h00</span>
           <div class="voo-linha-avião"></div>
-          <span class="voo-conexao">{{VOO2_IDA_CONEXAO}}</span>
+          <span class="voo-conexao">1 conexão · GRU (8h55)</span>
         </div>
         <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">{{VOO2_IDA_DESTINO_SIGLA}}</span>
-          <span class="voo-aeroporto-cidade">{{VOO2_IDA_DESTINO_CIDADE}}</span>
-          <span class="voo-aeroporto-hora">{{VOO2_IDA_DESTINO_HORA}}</span>
-          <span class="voo-aeroporto-data">{{VOO2_IDA_DESTINO_DATA}}</span>
+          <span class="voo-aeroporto-codigo">DFW</span>
+          <span class="voo-aeroporto-cidade">Dallas</span>
+          <span class="voo-aeroporto-hora">06:20</span>
+          <span class="voo-aeroporto-data">Qui, 22/10</span>
         </div>
       </div>
-
-      <div class="voo-rota-grid" style="border-top:1px dashed #e0eaf5;padding-top:14px;">
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">{{VOO2_VOLTA_ORIGEM_SIGLA}}</span>
-          <span class="voo-aeroporto-cidade">{{VOO2_VOLTA_ORIGEM_CIDADE}}</span>
-          <span class="voo-aeroporto-hora">{{VOO2_VOLTA_ORIGEM_HORA}}</span>
-          <span class="voo-aeroporto-data">{{VOO2_VOLTA_ORIGEM_DATA}}</span>
-        </div>
-        <div class="voo-meio">
-          <span class="voo-duracao">{{VOO2_VOLTA_DURACAO}}</span>
-          <div class="voo-linha-avião"></div>
-          <span class="voo-conexao">{{VOO2_VOLTA_CONEXAO}}</span>
-        </div>
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">{{VOO2_VOLTA_DESTINO_SIGLA}}</span>
-          <span class="voo-aeroporto-cidade">{{VOO2_VOLTA_DESTINO_CIDADE}}</span>
-          <span class="voo-aeroporto-hora">{{VOO2_VOLTA_DESTINO_HORA}}</span>
-          <span class="voo-aeroporto-data">{{VOO2_VOLTA_DESTINO_DATA}}</span>
-        </div>
-      </div>
-
       <div class="voo-info-grid">
-        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">{{VOO2_COMPANHIA}}</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Bagagem</span><span class="voo-info-valor">{{VOO2_BAGAGEM}}</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Classe</span><span class="voo-info-valor">{{VOO2_CLASSE}}</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Cancelamento</span><span class="voo-info-valor">{{VOO2_CANCELAMENTO}}</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Conexão</span><span class="voo-info-valor">Guarulhos (GRU) · 8h55</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Bagagem</span><span class="voo-info-valor">1 cabine + 1 mochila (sem despachada)</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Duração total</span><span class="voo-info-valor">21 horas</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Classe</span><span class="voo-info-valor">Econômica</span></div>
       </div>
-
       <div class="voo-print-box is-placeholder">
-        <img src="./assets/voos/voo2-print.png" alt="Print opção 2" loading="lazy"
+        <img src="./assets/voos/voo2-print.png" alt="Print GOL + AA" loading="lazy"
           onload="this.parentElement.classList.remove('is-placeholder')"
           onerror="this.parentElement.classList.add('is-placeholder')">
-        <span class="voo-print-placeholder">📸 Print de tela da passagem</span>
-        <span class="voo-print-placeholder-desc">Salvar imagem como <code>voo2-print.png</code> na pasta <code>assets/voos/</code></span>
       </div>
-
-      <div class="voo-destaque-box neutro">
-        <span class="voo-destaque-label">⚖️ Por que vale a pena</span>
-        <span class="voo-destaque-texto">{{VOO2_DESTAQUE}}</span>
+      <a href="https://b2c.voegol.com.br/compra/busca-parceiros?pv=BR&tipo=DF&de=CGR&para=DFW&ADT=2&INF=0&CHD=0&ADL=0&id=1e889b22-4f7a-418f-bd0b-d0a2e4b959b3&share=1&utm_campaign=exp-compartilhamento-de-voo&utm_medium=referral&utm_source=compartilhamento&utm_content=dados-passageiro2&ida=21-10-2026&vooSelecionado1=G31477%7C31615BRL" target="_blank" class="voo-compra-btn" style="background:#92600a;">Acesse aqui para comprar →</a>
+      <div class="voo-destaque-box atencao">
+        <span class="voo-destaque-label">⚠️ Pontos de atenção</span>
+        <span class="voo-destaque-texto">Tem 1 conexão a menos que a Opção 1, mas a duração total chega a 21 horas por conta da espera de ~9h em Guarulhos. Saída mais cedo de Campo Grande. Não inclui mala despachada.</span>
       </div>
     </div>
   </div>
 
-  <!-- ═══════════ OPÇÃO 3 — PREMIUM ═══════════ -->
-  <div class="voo-card voo-premium">
+  <!-- ═══════ TRECHO 02 — VOO INTERNO ═══════ -->
+  <div style="display:flex;align-items:center;gap:12px;margin:24px 0 16px;padding-bottom:12px;border-bottom:2px solid var(--azul-claro);">
+    <div style="background:var(--azul);border-radius:8px;padding:6px 12px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:white;flex-shrink:0;">Trecho 02</div>
+    <div>
+      <span style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--azul);display:block;">Voo Interno — Dallas → Miami</span>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#94a3b8;">DFW → FLL ou MIA · Segunda, 26/10/2026</span>
+    </div>
+  </div>
+
+  <div class="voo-card voo-custo">
     <div class="voo-card-header">
       <div>
-        <span class="voo-opcao-label">Opção 3 · Conforto Premium</span>
-        <span class="voo-opcao-titulo">{{VOO3_TITULO}}</span>
+        <span class="voo-opcao-label">⭐ Opção 1 · Recomendada · Mais econômica</span>
+        <span class="voo-opcao-titulo">American Airlines · DFW → FLL</span>
       </div>
-      <div class="voo-opcao-valor">
-        {{VOO3_VALOR}}
-        <small>por pessoa · ida e volta</small>
-      </div>
+      <div class="voo-opcao-valor">R$ 642<small>por pessoa · inclui taxas</small></div>
     </div>
     <div class="voo-card-body">
       <div class="voo-rota-grid">
         <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">{{VOO3_IDA_ORIGEM_SIGLA}}</span>
-          <span class="voo-aeroporto-cidade">{{VOO3_IDA_ORIGEM_CIDADE}}</span>
-          <span class="voo-aeroporto-hora">{{VOO3_IDA_ORIGEM_HORA}}</span>
-          <span class="voo-aeroporto-data">{{VOO3_IDA_ORIGEM_DATA}}</span>
+          <span class="voo-aeroporto-codigo">DFW</span>
+          <span class="voo-aeroporto-cidade">Dallas</span>
+          <span class="voo-aeroporto-hora">10:22 ou 11:45</span>
+          <span class="voo-aeroporto-data">Seg, 26/10</span>
         </div>
         <div class="voo-meio">
-          <span class="voo-duracao">{{VOO3_IDA_DURACAO}}</span>
+          <span class="voo-duracao">~2h50</span>
           <div class="voo-linha-avião"></div>
-          <span class="voo-conexao">{{VOO3_IDA_CONEXAO}}</span>
+          <span class="voo-conexao">Sem escalas</span>
         </div>
         <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">{{VOO3_IDA_DESTINO_SIGLA}}</span>
-          <span class="voo-aeroporto-cidade">{{VOO3_IDA_DESTINO_CIDADE}}</span>
-          <span class="voo-aeroporto-hora">{{VOO3_IDA_DESTINO_HORA}}</span>
-          <span class="voo-aeroporto-data">{{VOO3_IDA_DESTINO_DATA}}</span>
+          <span class="voo-aeroporto-codigo">FLL</span>
+          <span class="voo-aeroporto-cidade">Fort Lauderdale</span>
+          <span class="voo-aeroporto-hora">14:18 ou 15:35</span>
+          <span class="voo-aeroporto-data">Seg, 26/10</span>
         </div>
       </div>
-
-      <div class="voo-rota-grid" style="border-top:1px dashed #e0eaf5;padding-top:14px;">
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">{{VOO3_VOLTA_ORIGEM_SIGLA}}</span>
-          <span class="voo-aeroporto-cidade">{{VOO3_VOLTA_ORIGEM_CIDADE}}</span>
-          <span class="voo-aeroporto-hora">{{VOO3_VOLTA_ORIGEM_HORA}}</span>
-          <span class="voo-aeroporto-data">{{VOO3_VOLTA_ORIGEM_DATA}}</span>
-        </div>
-        <div class="voo-meio">
-          <span class="voo-duracao">{{VOO3_VOLTA_DURACAO}}</span>
-          <div class="voo-linha-avião"></div>
-          <span class="voo-conexao">{{VOO3_VOLTA_CONEXAO}}</span>
-        </div>
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">{{VOO3_VOLTA_DESTINO_SIGLA}}</span>
-          <span class="voo-aeroporto-cidade">{{VOO3_VOLTA_DESTINO_CIDADE}}</span>
-          <span class="voo-aeroporto-hora">{{VOO3_VOLTA_DESTINO_HORA}}</span>
-          <span class="voo-aeroporto-data">{{VOO3_VOLTA_DESTINO_DATA}}</span>
-        </div>
-      </div>
-
       <div class="voo-info-grid">
-        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">{{VOO3_COMPANHIA}}</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Bagagem</span><span class="voo-info-valor">{{VOO3_BAGAGEM}}</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Classe</span><span class="voo-info-valor">{{VOO3_CLASSE}}</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Cancelamento</span><span class="voo-info-valor">{{VOO3_CANCELAMENTO}}</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">American Airlines</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Bagagem</span><span class="voo-info-valor">1 mala de cabine</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Escalas</span><span class="voo-info-valor">Voo direto</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Aeroporto</span><span class="voo-info-valor">Fort Lauderdale (FLL)</span></div>
       </div>
-
       <div class="voo-print-box is-placeholder">
-        <img src="./assets/voos/voo3-print.png" alt="Print opção 3" loading="lazy"
+        <img src="./assets/voos/voo3-print.png" alt="Print AA interno" loading="lazy"
           onload="this.parentElement.classList.remove('is-placeholder')"
           onerror="this.parentElement.classList.add('is-placeholder')">
-        <span class="voo-print-placeholder">📸 Print de tela da passagem</span>
-        <span class="voo-print-placeholder-desc">Salvar imagem como <code>voo3-print.png</code> na pasta <code>assets/voos/</code></span>
       </div>
-
-      <div class="voo-destaque-box atencao">
-        <span class="voo-destaque-label">✨ Por que vale a pena</span>
-        <span class="voo-destaque-texto">{{VOO3_DESTAQUE}}</span>
+      <p style="font-family:'Poppins',sans-serif;font-size:11px;color:#94a3b8;line-height:1.6;margin:8px 0 6px;">Não foi possível gerar um link direto para esta data — pesquisem por <strong style="color:var(--azul);">26/10/2026 · DFW → FLL</strong> no site e encontrarão o voo.</p>
+      <a href="https://www.aa.com.br" target="_blank" class="voo-compra-btn">Acesse aqui para comprar →</a>
+      <div class="voo-destaque-box neutro">
+        <span class="voo-destaque-label">✅ Por que recomendamos</span>
+        <span class="voo-destaque-texto">Melhor preço entre as duas opções e ainda dentro da mesma aliança do voo de ida, o que facilita a reserva. Fort Lauderdale fica a ~40-50 min de Miami Beach, tranquilo de carro ou Uber, com custo bem abaixo do aeroporto principal.</span>
       </div>
     </div>
   </div>
 
-  <div class="dica-box" style="margin-top:24px;">
-    <span class="dica-box-label">💡 Nossa recomendação</span>
-    <p>{{RECOMENDACAO_GERAL}}</p>
+  <div class="voo-card voo-conforto">
+    <div class="voo-card-header">
+      <div>
+        <span class="voo-opcao-label">Opção 2 · Diferencial: Aeroporto Miami</span>
+        <span class="voo-opcao-titulo">Southwest Airlines · DFW → MIA</span>
+      </div>
+      <div class="voo-opcao-valor">R$ 1.087<small>por pessoa · inclui taxas</small></div>
+    </div>
+    <div class="voo-card-body">
+      <div class="voo-rota-grid">
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">DFW</span>
+          <span class="voo-aeroporto-cidade">Dallas</span>
+          <span class="voo-aeroporto-hora">11:15</span>
+          <span class="voo-aeroporto-data">Seg, 26/10</span>
+        </div>
+        <div class="voo-meio">
+          <span class="voo-duracao">2h40</span>
+          <div class="voo-linha-avião"></div>
+          <span class="voo-conexao">Sem escalas</span>
+        </div>
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">MIA</span>
+          <span class="voo-aeroporto-cidade">Miami</span>
+          <span class="voo-aeroporto-hora">14:55</span>
+          <span class="voo-aeroporto-data">Seg, 26/10</span>
+        </div>
+      </div>
+      <div class="voo-info-grid">
+        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">Southwest Airlines</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Bagagem</span><span class="voo-info-valor">1 mala de cabine</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Escalas</span><span class="voo-info-valor">Voo direto</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Aeroporto</span><span class="voo-info-valor">Miami Internacional (MIA)</span></div>
+      </div>
+      <div class="voo-print-box is-placeholder">
+        <img src="./assets/voos/voo4-print.png" alt="Print Southwest" loading="lazy"
+          onload="this.parentElement.classList.remove('is-placeholder')"
+          onerror="this.parentElement.classList.add('is-placeholder')">
+      </div>
+      <p style="font-family:'Poppins',sans-serif;font-size:11px;color:#94a3b8;line-height:1.6;margin:8px 0 6px;">Não foi possível gerar um link direto para esta data — pesquisem por <strong style="color:var(--azul);">26/10/2026 · DFW → MIA</strong> no site e encontrarão o voo.</p>
+      <a href="https://www.southwest.com" target="_blank" class="voo-compra-btn" style="background:#92600a;">Acesse aqui para comprar →</a>
+      <div class="voo-destaque-box atencao">
+        <span class="voo-destaque-label">⚖️ Considerar</span>
+        <span class="voo-destaque-texto">Chega no aeroporto principal de Miami (MIA), mais central que Fort Lauderdale. O ponto é que custa R$ 445 a mais por pessoa no mesmo trecho sem escalas.</span>
+      </div>
+    </div>
   </div>
 
-  <div class="alerta-box" style="margin-top:16px;">
-    <span class="alerta-box-titulo">⚠️ Antes de comprar</span>
-    <div class="alerta-box-grid">
-      <p><strong>Visto americano B1/B2</strong> — vocês já tiraram, ok. Confiram a validade antes de comprar.</p>
-      <p><strong>Passaporte</strong> — precisa ter pelo menos <strong>6 meses de validade</strong> após a data de volta.</p>
-      <p><strong>Seguro viagem</strong> — obrigatório para os EUA. Contratar antes do embarque.</p>
-      <p><strong>ESTA não é necessária</strong> — o B1/B2 já cobre o turismo.</p>
+  <!-- ═══════ TRECHO 03 — VOLTA ═══════ -->
+  <div style="display:flex;align-items:center;gap:12px;margin:24px 0 16px;padding-bottom:12px;border-bottom:2px solid var(--azul-claro);">
+    <div style="background:var(--azul);border-radius:8px;padding:6px 12px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:white;flex-shrink:0;">Trecho 03</div>
+    <div>
+      <span style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--azul);display:block;">Volta — Orlando → Campo Grande</span>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#94a3b8;">MCO → CGR · Quarta, 04/11/2026</span>
+    </div>
+  </div>
+
+  <div class="voo-card voo-custo">
+    <div class="voo-card-header">
+      <div>
+        <span class="voo-opcao-label">⭐ Melhor opção</span>
+        <span class="voo-opcao-titulo">LATAM Airlines</span>
+      </div>
+      <div class="voo-opcao-valor">R$ 1.726,36<small>por pessoa · inclui taxas</small></div>
+    </div>
+    <div class="voo-card-body">
+      <div class="voo-rota-grid">
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">MCO</span>
+          <span class="voo-aeroporto-cidade">Orlando</span>
+          <span class="voo-aeroporto-hora">18:25</span>
+          <span class="voo-aeroporto-data">Qua, 04/11</span>
+        </div>
+        <div class="voo-meio">
+          <span class="voo-duracao">14h25</span>
+          <div class="voo-linha-avião"></div>
+          <span class="voo-conexao">1 conexão · GRU (4h00)</span>
+        </div>
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">CGR</span>
+          <span class="voo-aeroporto-cidade">Campo Grande</span>
+          <span class="voo-aeroporto-hora">09:50</span>
+          <span class="voo-aeroporto-data">Qui, 05/11</span>
+        </div>
+      </div>
+      <div class="voo-info-grid">
+        <div class="voo-info-item"><span class="voo-info-label">Conexão</span><span class="voo-info-valor">Guarulhos (GRU) · 4h00</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Bagagem</span><span class="voo-info-valor">1 cabine + 1 mochila</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Despachada</span><span class="voo-info-valor">~R$ 350 extra (adicionar na compra)</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Classe</span><span class="voo-info-valor">Econômica</span></div>
+      </div>
+      <div class="voo-print-box is-placeholder">
+        <img src="./assets/voos/voo5-print.png" alt="Print LATAM volta" loading="lazy"
+          onload="this.parentElement.classList.remove('is-placeholder')"
+          onerror="this.parentElement.classList.add('is-placeholder')">
+      </div>
+      <a href="https://www.latamairlines.com/br/pt/oferta-voos?origin=MCO&outbound=2026-11-04T00%3A00%3A00.000Z&destination=CGR&adt=2&chd=0&inf=0&trip=OW&cabin=Economy&redemption=false&sort=RECOMMENDED&exp_id=a2190528-75b2-4810-8116-81c643a31909" target="_blank" class="voo-compra-btn">Acesse aqui para comprar →</a>
+      <div class="voo-destaque-box neutro">
+        <span class="voo-destaque-label">🧳 Bagagem despachada na volta</span>
+        <span class="voo-destaque-texto">A tarifa base não inclui mala despachada. Com 15 dias em 3 cidades, vocês vão precisar. Incluam já na compra (~R$ 350/pessoa): no aeroporto sai bem mais caro e você perde tempo na fila.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORÇAMENTO ESTIMADO -->
+  <div class="card" style="margin:24px 0 16px;">
+    <div class="card-header"><span class="card-header-icon">💰</span><span class="card-header-titulo">Estimativa de passagens por pessoa</span></div>
+    <div class="card-body">
+      <div style="display:flex;flex-direction:column;">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--cinza-claro);"><span style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;">✈️ Ida — CGR → DFW</span><span style="font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;color:var(--azul);">R$ 2.986,97 – R$ 3.161,50</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--cinza-claro);"><span style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;">✈️ Voo interno — DFW → FLL/MIA</span><span style="font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;color:var(--azul);">R$ 642 – R$ 1.087</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--cinza-claro);"><span style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;">✈️ Volta — MCO → CGR</span><span style="font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;color:var(--azul);">R$ 1.726,36</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--cinza-claro);"><span style="font-family:'Poppins',sans-serif;font-size:12px;color:#94a3b8;">+ Bagagem despachada na volta (recomendado)</span><span style="font-family:'Poppins',sans-serif;font-size:12px;color:#94a3b8;">~R$ 350</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;"><span style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--azul);">Total estimado por pessoa</span><span style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--azul);">R$ 5.355,33 – R$ 5.974,86</span></div>
+      </div>
+      <div class="dica2-box" style="margin:4px 0 0;">
+        <span class="dica2-label">⚠️ Preços dinâmicos</span>
+        <p>Os valores mudam o tempo todo. Quanto antes vocês comprarem, maiores as chances de garantir as tarifas que apresentamos aqui.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ CURADORIA DE HOSPEDAGENS ═══════════════════════════════════════════════════════ -->
+<section id="hospedagem-curadoria" class="secao-wrapper">
+<div class="page secao">
+  <span class="titulo-principal">🏨 Curadoria de Hospedagens</span>
+  <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 24px;max-width:640px;">Para cada cidade da viagem, selecionamos <strong style="color:var(--azul);">3 opções de hospedagem</strong> organizadas por perfil de investimento — para vocês escolherem com segurança e reservarem direto.</p>
+
+  <div class="dica2-box" style="margin-bottom:24px;">
+    <span class="dica2-label">⏳ Aguardando datas dos voos</span>
+    <p>As opções de hospedagem serão apresentadas assim que as datas dos voos estiverem definidas. As datas exatas são essenciais para garantir disponibilidade e os melhores preços. Esta seção será atualizada na <strong>Etapa 3</strong>.</p>
+  </div>
+
+  <!-- Como fazemos a curadoria -->
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-header"><span class="card-header-icon">🔍</span><span class="card-header-titulo">Como fazemos a curadoria</span></div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+        <div style="display:flex;gap:10px;align-items:flex-start;padding:10px;background:#f4f6f9;border-radius:8px;">
+          <span style="font-size:18px;flex-shrink:0;">🚇</span>
+          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);display:block;">Logística</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#475569;">Proximidade de metrô, trem ou transporte público</span></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;padding:10px;background:#f4f6f9;border-radius:8px;">
+          <span style="font-size:18px;flex-shrink:0;">📍</span>
+          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);display:block;">Localização estratégica</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#475569;">Para otimizar deslocamentos entre as atrações</span></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;padding:10px;background:#f4f6f9;border-radius:8px;">
+          <span style="font-size:18px;flex-shrink:0;">🛏</span>
+          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);display:block;">Conforto</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#475569;">Alinhado ao perfil e ritmo de vocês</span></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;padding:10px;background:#f4f6f9;border-radius:8px;">
+          <span style="font-size:18px;flex-shrink:0;">💰</span>
+          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);display:block;">Equilíbrio</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#475569;">Entre experiência e investimento</span></div>
+        </div>
+      </div>
+      <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;line-height:1.6;margin-bottom:12px;">As opções são organizadas em <strong style="color:var(--azul);">3 níveis</strong>: mais econômico, melhor custo-benefício e mais conforto.</p>
+      <div class="dica2-box" style="margin:0;">
+        <span class="dica2-label">⚠️ Atenção aos valores</span>
+        <p>Os valores apresentados correspondem ao <strong>total para todos os viajantes</strong> na quantidade de noites de cada cidade — não é por pessoa.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ação dos clientes -->
+  <div class="dica-box" style="margin-bottom:16px;">
+    <span class="dica-box-label">📲 O que vocês fazem nessa etapa</span>
+    <p>Analisem cada opção com calma e sinalizem no grupo a preferência para avançarmos com as reservas. Fiquem à vontade para pesquisar também — usando as datas do roteiro macro. Se encontrarem algo interessante, enviem o link para validarmos juntos a localização e logística.</p>
+  </div>
+
+  <!-- Por que Booking -->
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-header"><span class="card-header-icon">📋</span><span class="card-header-titulo">Por que trabalhamos com o Booking</span></div>
+    <div class="card-body">
+      <ul style="list-style:none;padding:0;margin:0 0 14px;">
+        <li style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;"><span>✅</span><span><strong style="color:var(--texto);">Cancelamento gratuito</strong> — grande parte das opções permite cancelar sem custo, mantendo flexibilidade para ajustes durante a viagem</span></li>
+        <li style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;"><span>✅</span><span><strong style="color:var(--texto);">Política clara</strong> — prazos, condições e taxas transparentes antes de confirmar</span></li>
+        <li style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;"><span>✅</span><span><strong style="color:var(--texto);">Avaliações reais e consolidadas</strong> — confiáveis para embasar a escolha</span></li>
+        <li style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;"><span>✅</span><span><strong style="color:var(--texto);">Centralização</strong> — todas as hospedagens organizadas em um único lugar, fácil de acessar durante a viagem</span></li>
+        <li style="display:flex;gap:8px;padding:7px 0;font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;"><span>✅</span><span><strong style="color:var(--texto);">Tarifas melhores pelo app</strong> — o aplicativo costuma apresentar valores ligeiramente abaixo da versão desktop</span></li>
+      </ul>
+      <div class="dica-box" style="margin:0;">
+        <span class="dica-box-label">🔑 Conta única</span>
+        <p>As reservas ficam no nome de um único viajante — na conta com maior nível Genius — para aproveitar descontos e benefícios da plataforma.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Níveis Genius -->
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-header"><span class="card-header-icon">⭐</span><span class="card-header-titulo">Níveis Genius do Booking</span></div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px;">
+        <div style="border:1.5px solid #e0eaf5;border-radius:10px;padding:14px;text-align:center;">
+          <div style="font-size:24px;margin-bottom:6px;">🥉</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);margin-bottom:4px;">Genius Nível 1</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:10px;color:#94a3b8;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #f1f5f9;">Após 2 reservas</div>
+          <ul style="list-style:none;padding:0;margin:0;text-align:left;">
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• 10% de desconto em participantes</li>
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Algumas ofertas exclusivas</li>
+          </ul>
+        </div>
+        <div style="border:1.5px solid #bfdbfe;border-radius:10px;padding:14px;text-align:center;background:#f0f7ff;">
+          <div style="font-size:24px;margin-bottom:6px;">🥈</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul-medio);margin-bottom:4px;">Genius Nível 2</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:10px;color:#94a3b8;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #dbeafe;">Após 5 reservas</div>
+          <ul style="list-style:none;padding:0;margin:0;text-align:left;">
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• 10–15% de desconto</li>
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Café da manhã gratuito (algumas propriedades)</li>
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Upgrade de quarto (quando disponível)</li>
+          </ul>
+        </div>
+        <div style="border:1.5px solid #fde68a;border-radius:10px;padding:14px;text-align:center;background:#fffbeb;">
+          <div style="font-size:24px;margin-bottom:6px;">🥇</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:#b45309;margin-bottom:4px;">Genius Nível 3</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:10px;color:#94a3b8;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #fde68a;">Após 15 reservas</div>
+          <ul style="list-style:none;padding:0;margin:0;text-align:left;">
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Até 20% de desconto</li>
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Upgrade gratuito com mais frequência</li>
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Atendimento prioritário</li>
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Condições especiais em diversas propriedades</li>
+          </ul>
+        </div>
+      </div>
+      <div class="dica-box" style="margin:0;">
+        <span class="dica-box-label">📱 Como ver seu nível</span>
+        <p>Abra o app do Booking → toque em <strong>"Minha conta"</strong> no menu inferior. O nível Genius aparece no topo do perfil.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tutorial passo a passo -->
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-header"><span class="card-header-icon">📖</span><span class="card-header-titulo">Como reservar — passo a passo</span></div>
+    <div class="card-body">
+
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
+        <div style="min-width:32px;height:32px;background:var(--azul-medio);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0;">1</div>
+        <div>
+          <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:4px;">Acesse o app pelos links do roteiro</span>
+          <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;margin:0;line-height:1.6;">Use os links diretos desta seção. Preferencialmente pelo celular — o app costuma oferecer tarifas melhores que a versão desktop.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
+        <div style="min-width:32px;height:32px;background:var(--azul-medio);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0;">2</div>
+        <div style="width:100%;">
+          <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:4px;">Pesquise com as datas certas</span>
+          <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;margin:0 0 10px;line-height:1.6;">Se quiser explorar por conta, insira: <strong>cidade</strong> conforme o roteiro macro, <strong>datas exatas</strong> da hospedagem e <strong>número de hóspedes</strong>.</p>
+          <div class="voo-print-box is-placeholder">
+            <img src="./assets/hospedagem/booking-busca-exemplo.jpg" alt="Exemplo de pesquisa no Booking" loading="lazy"
+              onload="this.parentElement.classList.remove('is-placeholder')"
+              onerror="this.parentElement.classList.add('is-placeholder')">
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
+        <div style="min-width:32px;height:32px;background:var(--azul-medio);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0;">3</div>
+        <div>
+          <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:6px;">Aplique os filtros estratégicos</span>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px;">
+            <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:6px;padding:7px 10px;font-family:'Poppins',sans-serif;font-size:11px;color:var(--azul-medio);font-weight:500;">✔ Cancelamento gratuito</div>
+            <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:6px;padding:7px 10px;font-family:'Poppins',sans-serif;font-size:11px;color:var(--azul-medio);font-weight:500;">✔ Banheiro privativo</div>
+            <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:6px;padding:7px 10px;font-family:'Poppins',sans-serif;font-size:11px;color:var(--azul-medio);font-weight:500;">✔ Categoria "Hotel"</div>
+            <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:6px;padding:7px 10px;font-family:'Poppins',sans-serif;font-size:11px;color:var(--azul-medio);font-weight:500;">✔ Café da manhã incluído</div>
+          </div>
+          <p style="font-family:'Poppins',sans-serif;font-size:11.5px;color:#64748b;margin:0;line-height:1.6;">Também dá para ordenar por preço, avaliação ou custo-benefício, e visualizar no mapa para conferir proximidade com metrô e regiões estratégicas.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
+        <div style="min-width:32px;height:32px;background:var(--azul-medio);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0;">4</div>
+        <div>
+          <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:4px;">Confira os detalhes antes de confirmar</span>
+          <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;margin:0;line-height:1.6;">Em <strong>"Selecionar quartos"</strong>, verifique: tipo de acomodação sugerido no roteiro, inclusão de café da manhã, <strong>cancelamento gratuito</strong>, valor total com taxas e política de pagamento.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;">
+        <div style="min-width:32px;height:32px;background:var(--azul-medio);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0;">5</div>
+        <div>
+          <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:4px;">Finalize e guarde a confirmação</span>
+          <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;margin:0;line-height:1.6;">Insira o cartão de crédito para garantir. Na maioria das opções com cancelamento gratuito não há cobrança imediata — o cartão funciona como garantia. Vocês receberão confirmação por e-mail e tudo fica centralizado na conta do Booking. Em caso de dúvida antes de confirmar, enviem o link ou print no grupo para validarmos juntos.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -667,212 +1120,86 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
     <!-- VOO IDA -->
     <a class="vg-card" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">✈️ Ida</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">Campo Grande → EUA</span>
-        <ul class="vg-items">
-          <li>Saída de CGR · conexão em GRU ou outra</li>
-          <li>Voo internacional noturno</li>
-          <li>Chegada no destino no mesmo dia</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">Campo Grande → EUA</span></div>
     </a>
 
     <!-- ═══════════ DALLAS ═══════════ -->
     <a class="vg-card vg-dallas" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">DIA 01</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">🤠 Dallas · Chegada</span>
-        <ul class="vg-items">
-          <li>Chegada em Dallas · transfer</li>
-          <li>Check-in &amp; aclimatação</li>
-          <li>Primeiro jantar texano</li>
-          <li>Descanso pro fuso horário</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">🤠 Dallas</span></div>
     </a>
 
     <a class="vg-card vg-dallas" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">DIA 02</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">🤠 Dallas Clássica</span>
-        <ul class="vg-items">
-          <li>Sixth Floor Museum (JFK)</li>
-          <li>Dealey Plaza &amp; Downtown</li>
-          <li>Reunion Tower ao pôr do sol</li>
-          <li>Jantar em Deep Ellum</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">🤠 Dallas</span></div>
     </a>
 
     <a class="vg-card vg-dallas" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">DIA 03</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">🤠 Fort Worth Stockyards</span>
-        <ul class="vg-items">
-          <li>Cattle Drive dos cowboys</li>
-          <li>Billy Bob's Texas (maior honky-tonk)</li>
-          <li>BBQ texano autêntico</li>
-          <li>Rodeio à noite (se houver)</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">🤠 Dallas</span></div>
     </a>
 
     <a class="vg-card vg-dallas" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">DIA 04</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">🤠 Cultura &amp; Esportes</span>
-        <ul class="vg-items">
-          <li>AT&amp;T Stadium (Cowboys)</li>
-          <li>Dallas Arts District</li>
-          <li>Klyde Warren Park</li>
-          <li>Jantar de steak texano</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">🤠 Dallas</span></div>
     </a>
 
     <a class="vg-card vg-dallas" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">DIA 05</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">🤠 Compras &amp; voo</span>
-        <ul class="vg-items">
-          <li>Outlet &amp; compras texanas</li>
-          <li>Último almoço em Dallas</li>
-          <li>Voo interno → Miami</li>
-          <li>Check-in em Miami Beach</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">🤠 Dallas</span></div>
     </a>
 
     <!-- ═══════════ MIAMI ═══════════ -->
     <a class="vg-card vg-miami" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">DIA 06</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">🌴 South Beach</span>
-        <ul class="vg-items">
-          <li>Praia em South Beach</li>
-          <li>Ocean Drive &amp; Art Deco</li>
-          <li>Pôr do sol no mar</li>
-          <li>Drinks em rooftop</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">🌴 Miami</span></div>
     </a>
 
     <a class="vg-card vg-miami" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">DIA 07</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">🌴 Cultura Cubana</span>
-        <ul class="vg-items">
-          <li>Wynwood Walls (arte de rua)</li>
-          <li>Little Havana &amp; Calle Ocho</li>
-          <li>Cuban sandwich &amp; mojito</li>
-          <li>Salsa à noite em Brickell</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">🌴 Miami</span></div>
     </a>
 
     <a class="vg-card vg-miami" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">DIA 08</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">🌴 Key Biscayne</span>
-        <ul class="vg-items">
-          <li>Praia de Key Biscayne</li>
-          <li>Passeio de barco ou jet ski</li>
-          <li>Almoço à beira-mar</li>
-          <li>Compras em Lincoln Road</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">🌴 Miami</span></div>
     </a>
 
     <a class="vg-card vg-miami" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">DIA 09</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">🌴 Brunch &amp; voo</span>
-        <ul class="vg-items">
-          <li>Brunch em Miami Beach</li>
-          <li>Última praia &amp; check-out</li>
-          <li>Voo interno → Orlando</li>
-          <li>Check-in próximo aos parques</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">🌴 Miami</span></div>
     </a>
 
     <!-- ═══════════ ORLANDO ═══════════ -->
     <a class="vg-card vg-orlando" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">DIA 10</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">🎢 Magic Kingdom</span>
-        <ul class="vg-items">
-          <li>Dia inteiro na Disney clássica</li>
-          <li>Castelo da Cinderela</li>
-          <li>Fogos de artifício à noite</li>
-          <li>Jantar temático no parque</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">🎢 Orlando</span></div>
     </a>
 
     <a class="vg-card vg-orlando" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">DIA 11</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">🎢 EPCOT</span>
-        <ul class="vg-items">
-          <li>World Showcase (11 países)</li>
-          <li>Test Track &amp; Guardians of the Galaxy</li>
-          <li>Food &amp; Wine Festival (outubro)</li>
-          <li>Fogos ao redor da lagoa</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">🎢 Orlando</span></div>
     </a>
 
     <a class="vg-card vg-orlando" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">DIA 12</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">🎢 Universal Studios</span>
-        <ul class="vg-items">
-          <li>Wizarding World of Harry Potter</li>
-          <li>Islands of Adventure</li>
-          <li>Hogwarts Express entre parques</li>
-          <li>CityWalk à noite</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">🎢 Orlando</span></div>
     </a>
 
     <a class="vg-card vg-orlando" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">DIA 13</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">🎢 Animal Kingdom</span>
-        <ul class="vg-items">
-          <li>Pandora (Avatar)</li>
-          <li>Safari Kilimanjaro</li>
-          <li>Expedition Everest</li>
-          <li>Outlets à noite</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">🎢 Orlando</span></div>
     </a>
 
     <a class="vg-card vg-orlando" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">DIA 14</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">🛍️ Último dia · Compras</span>
-        <ul class="vg-items">
-          <li>Premium Outlets</li>
-          <li>Últimas lembrancinhas</li>
-          <li>Almoço calmo</li>
-          <li>Preparar malas &amp; voo à noite</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">🎢 Orlando</span></div>
     </a>
 
     <!-- VOO VOLTA -->
     <a class="vg-card" href="#voos-recomendados">
       <div class="vg-card-header"><span class="vg-dia-num">✈️ Volta</span><span class="vg-dia-data">A confirmar</span></div>
-      <div class="vg-card-body">
-        <span class="vg-destino-tag">EUA → Campo Grande</span>
-        <ul class="vg-items">
-          <li>Voo internacional noturno</li>
-          <li>Conexão em GRU ou outra</li>
-          <li>Chegada em CGR no dia seguinte</li>
-        </ul>
-      </div>
+      <div class="vg-card-body"><span class="vg-destino-tag">EUA → Campo Grande</span></div>
     </a>
 
   </div>
@@ -913,6 +1240,7 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
       <div class="card-lista-info">
         <span class="card-lista-titulo">Passaporte válido</span>
         <span class="card-lista-desc">Mínimo 6 meses de validade após a data de volta + 2 páginas em branco para carimbos.</span>
+        <span style="font-family:'Poppins',sans-serif;font-size:10.5px;font-weight:600;color:#16a34a;margin-top:4px;display:inline-block;">✅ Confirmado</span>
       </div>
       <span class="card-lista-badge badge-req">Obrigatório</span>
     </div>
@@ -920,15 +1248,17 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
       <span class="card-lista-emoji">🇺🇸</span>
       <div class="card-lista-info">
         <span class="card-lista-titulo">Visto B1/B2 (turismo)</span>
-        <span class="card-lista-desc">Vocês já têm — parabéns! Confiram se a validade cobre a data de embarque e volta.</span>
+        <span class="card-lista-desc">Vocês já têm — parabéns! O visto B1/B2 é válido por 10 anos a partir da data de emissão.</span>
+        <span style="font-family:'Poppins',sans-serif;font-size:10.5px;font-weight:600;color:#16a34a;margin-top:4px;display:inline-block;">✅ Confirmado</span>
       </div>
-      <span class="card-lista-badge badge-ok">OK — já têm</span>
+      <span class="card-lista-badge badge-req">Obrigatório</span>
     </div>
     <div class="card-lista-item">
       <span class="card-lista-emoji">🏥</span>
       <div class="card-lista-info">
         <span class="card-lista-titulo">Seguro viagem</span>
         <span class="card-lista-desc">Obrigatório. Os EUA têm o sistema de saúde mais caro do mundo — uma visita simples ao hospital pode custar US$ 5.000+. Cobertura mínima de US$ 100.000.</span>
+        <span style="font-family:'Poppins',sans-serif;font-size:10.5px;font-weight:500;color:#94a3b8;margin-top:4px;display:inline-block;">⬜ A confirmar</span>
       </div>
       <span class="card-lista-badge badge-req">Obrigatório</span>
     </div>
@@ -937,16 +1267,18 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
       <div class="card-lista-info">
         <span class="card-lista-titulo">Comprovante de hospedagem &amp; voo de volta</span>
         <span class="card-lista-desc">Pode pedir na imigração. Tenham os PDFs no celular ou impressos.</span>
+        <span style="font-family:'Poppins',sans-serif;font-size:10.5px;font-weight:500;color:#94a3b8;margin-top:4px;display:inline-block;">⬜ A confirmar</span>
       </div>
       <span class="card-lista-badge badge-rec">Recomendado</span>
     </div>
     <div class="card-lista-item">
       <span class="card-lista-emoji">🚗</span>
       <div class="card-lista-info">
-        <span class="card-lista-titulo">CNH Internacional (PID)</span>
-        <span class="card-lista-desc">Obrigatória se forem alugar carro. Emitida pelo Detran — fica pronta em poucos dias.</span>
+        <span class="card-lista-titulo">CNH brasileira</span>
+        <span class="card-lista-desc">A CNH brasileira é aceita pelas grandes locadoras nos EUA (Hertz, Avis, Enterprise, Budget). A PID não é exigida — funciona só como tradução e a maioria das locadoras nem pede.</span>
+        <span style="font-family:'Poppins',sans-serif;font-size:10.5px;font-weight:600;color:#16a34a;margin-top:4px;display:inline-block;">✅ Confirmado</span>
       </div>
-      <span class="card-lista-badge badge-rec">Se alugar carro</span>
+      <span class="card-lista-badge badge-rec">Aluguel de carro</span>
     </div>
   </div>
 
@@ -981,12 +1313,19 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
     <div class="card"><div class="card-header"><span class="card-header-icon">🤝</span><span class="card-header-titulo">Gorjetas (<em>Tipping</em>)</span></div><div class="card-body"><p><strong>Essencial nos EUA.</strong> Garçons e atendentes recebem salário base baixo e dependem da gorjeta.</p><p>• Restaurantes: <strong>18-20%</strong> (padrão 20% em cidades grandes)<br>• Uber/táxi: <strong>15-20%</strong><br>• Bartender: <strong>$1-2 por drink</strong><br>• Housekeeping: <strong>$2-5 por noite</strong><br>• Bagageiro: <strong>$1-2 por mala</strong><br>• Valet parking: <strong>$3-5</strong></p></div></div>
     <div class="card"><div class="card-header"><span class="card-header-icon">🧾</span><span class="card-header-titulo">Impostos &amp; Preços</span></div><div class="card-body"><p><strong>Os preços na vitrine não incluem imposto.</strong> O <em>sales tax</em> é adicionado no caixa — varia por estado: Texas 8,25%, Flórida 6-7%. Um produto de $100 sai por $106-108.</p><p>Em restaurantes, também aparece o imposto na conta <strong>antes</strong> da gorjeta. Gorjeta calcula em cima do subtotal (sem imposto), mas muita gente simplifica e calcula sobre o total.</p></div></div>
 
+    <div class="card" style="grid-column: 1 / -1;">
+      <div class="card-header"><span class="card-header-icon">🛍️</span><span class="card-header-titulo">Compras & bens a declarar</span></div>
+      <div class="card-body">
+        <p><strong style="color:var(--azul-medio);">🇧🇷 Volta pro Brasil — limite de isenção</strong><br>Cada viajante tem direito a trazer <strong style="color:var(--azul-medio);">até US$ 1.000 em compras</strong> sem pagar imposto. Acima disso, incide <strong style="color:var(--azul-medio);">50% sobre o valor excedente</strong>. O limite é por pessoa, então vocês dois juntos têm US$ 2.000 de isenção total. Guardem os recibos das compras maiores — a Receita pode pedir na chegada.</p>
+        <p><strong>🇺🇸 Nos EUA — declaração de dinheiro em espécie</strong><br>Ao entrar ou sair dos Estados Unidos com <strong>mais de US$ 10.000 em dinheiro ou equivalente</strong> (incluindo cheques e outros instrumentos financeiros), é obrigatório declarar na alfândega americana. Não é proibido levar — é só declarar. Quem não declara pode ter o valor apreendido.</p>
+      </div>
+    </div>
+
   </div>
 
-  <div class="alerta-box-gold">
+  <div class="alerta-box-gold" style="margin-top:16px;">
     <span class="alerta-box-titulo">💡 Dicas financeiras rápidas</span>
     <div class="alerta-box-grid">
-      <p><strong>Avisem o banco da viagem.</strong> Alguns bancos bloqueiam compras internacionais se não forem informados. Ligam 15 dias antes.</p>
       <p><strong>Levem 2 cartões separados.</strong> Um na carteira, outro no hotel. Se perder um, não fica sem meio de pagamento.</p>
       <p><strong>Apple Pay / Google Pay salva.</strong> Cadastrem o Nomad no celular — se perder o cartão, o pagamento continua funcionando.</p>
       <p><strong>Evitem trocar dinheiro em aeroporto.</strong> A cotação é péssima. Chegar com Nomad carregado + alguns dólares em espécie é suficiente.</p>
@@ -1292,6 +1631,82 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
 </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════════════ ROTEIRO DETALHADO ═══════════════════════════════════════════════════════ -->
+<section id="roteiro-detalhado" class="secao-wrapper" style="background:linear-gradient(180deg,#f5f8fd 0%,#eef4fb 100%);">
+<div class="page secao">
+
+  <span class="titulo-principal">Roteiro Detalhado</span>
+  <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 32px;max-width:620px;">O roteiro que vai com vocês na viagem. Cada dia descrito com detalhe, lógica e carinho — do café da manhã ao jantar.</p>
+
+  <!-- Bloco principal de espera — minimalista -->
+  <div style="border:1.5px solid #e0eaf5;border-radius:16px;padding:36px 28px;text-align:center;margin-bottom:28px;background:white;">
+    <div style="font-size:36px;margin-bottom:14px;opacity:0.35;">⚙️</div>
+    <p style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--azul-medio);margin:0 0 8px;">Em construção</p>
+    <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#94a3b8;line-height:1.8;margin:0;max-width:460px;margin:0 auto;">Esta seção será atualizada na <strong style="color:var(--azul);">Etapa 4</strong> — com voos e hospedagem confirmados, cada dia ganha vida aqui.</p>
+  </div>
+
+  <!-- O que vai ter aqui -->
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-header"><span class="card-header-icon">📋</span><span class="card-header-titulo">O que vocês vão encontrar aqui</span></div>
+    <div class="card-body">
+      <div style="display:flex;flex-direction:column;gap:0;">
+
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
+          <div style="min-width:36px;height:36px;background:linear-gradient(135deg,#1a3a5c,#2563a8);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;">📍</div>
+          <div>
+            <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:3px;">Logística numerada dia a dia</span>
+            <span style="font-family:'Poppins',sans-serif;font-size:12px;color:#64748b;line-height:1.6;">Cada passo do dia em sequência lógica — com horários, tempo de deslocamento e a melhor ordem para aproveitar sem perder tempo.</span>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
+          <div style="min-width:36px;height:36px;background:linear-gradient(135deg,#1a3a5c,#2563a8);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;">🍽️</div>
+          <div>
+            <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:3px;">Sugestões de restaurantes curados</span>
+            <span style="font-family:'Poppins',sans-serif;font-size:12px;color:#64748b;line-height:1.6;">Para cada refeição: nome, endereço, especialidade, faixa de preço e se precisa reservar com antecedência.</span>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
+          <div style="min-width:36px;height:36px;background:linear-gradient(135deg,#1a3a5c,#2563a8);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;">✨</div>
+          <div>
+            <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:3px;">Experiências, ingressos e dicas exclusivas</span>
+            <span style="font-family:'Poppins',sans-serif;font-size:12px;color:#64748b;line-height:1.6;">O que comprar antes, o que pode deixar pra lá, onde o ângulo da foto é melhor, o que os turistas comuns não sabem.</span>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
+          <div style="min-width:36px;height:36px;background:linear-gradient(135deg,#1a3a5c,#2563a8);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;">✅</div>
+          <div>
+            <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:3px;">Checklist de reservas completo</span>
+            <span style="font-family:'Poppins',sans-serif;font-size:12px;color:#64748b;line-height:1.6;">Tudo que precisa ser reservado com antecedência, organizado por ordem de prioridade. Só marcar conforme for resolvendo.</span>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;">
+          <div style="min-width:36px;height:36px;background:linear-gradient(135deg,#1a3a5c,#2563a8);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;">🗺️</div>
+          <div>
+            <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:3px;">Mapa personalizado da viagem</span>
+            <span style="font-family:'Poppins',sans-serif;font-size:12px;color:#64748b;line-height:1.6;">Um Google Maps com todos os pontos da viagem já marcados e organizados por dia — um toque e o mapa abre direto. <strong style="color:var(--azul);">Entregue após a aprovação do roteiro.</strong></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Previsão de entrega -->
+  <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1.5px solid #bfdbfe;border-radius:14px;padding:20px 24px;text-align:center;">
+    <p style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--azul-medio);margin:0;line-height:1.8;">
+      <strong style="display:block;font-size:13px;color:var(--azul);margin-bottom:4px;">⏱ Previsão de entrega desta seção</strong>
+      30 dias após voos e hospedagens confirmados e pagamento final do valor contratado do roteiro.
+    </p>
+  </div>
+
+  <div class="btn-menu-wrap" style="margin-top:28px;"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+</div>
+</section>
+
 <!-- ═══════════════════════════════════════════════════════ ENCERRAMENTO ═══════════════════════════════════════════════════════ -->
 <section id="encerramento" style="position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;">
   <div style="position:absolute;inset:0;background-image:url('./assets/capas/menu-pratico-bg.png');background-size:cover;background-position:center;z-index:0;"></div>
@@ -1308,7 +1723,7 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
 <!-- ═══════════════════════════════════════════════════════ REDES SOCIAIS (fixo) ═══════════════════════════════════════════════════════ -->
 <section style="background:#f8fafc;padding:64px 24px 56px;text-align:center;">
   <div style="max-width:360px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:0;">
-    <img src="assets/branding/foto-casal.png" alt="Vamos Carimbar" style="width:200px;display:block;margin:0 auto 28px;">
+    <img src="./assets/branding/foto-casal.png" alt="Vamos Carimbar" style="width:200px;display:block;margin:0 auto 28px;">
     <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:#0d2d6b;margin-bottom:16px;line-height:1.2;">Vamos Carimbar?!</div>
     <p style="font-family:'Poppins',sans-serif;font-size:13px;line-height:1.8;color:#475569;margin:0 0 32px;">Nós temos uma filosofia de vida: <strong style="color:#0d2d6b;">"Pelo menos uma vez ao ano conhecer um lugar que nunca fomos antes"</strong><br>E o conhecimento nos proporciona viver isso.</p>
     <div style="display:flex;flex-direction:column;align-items:center;gap:12px;width:100%;">
