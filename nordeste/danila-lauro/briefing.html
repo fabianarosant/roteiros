@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Briefing — {{CIDADE}}</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; line-height: 1.6; color: #1a1d26; background: #f4f1ec; margin: 0; padding: 24px; max-width: 820px; }
+    h1 { font-size: 22px; font-weight: 800; color: #0d2d6b; margin: 0 0 2px; }
+    .meta { font-size: 12px; color: #6b7280; margin-bottom: 28px; }
+    hr { border: none; border-top: 2px solid #d1cabb; margin: 24px 0; }
+
+    /* dia */
+    .dia-header { background: #0d2d6b; color: white; padding: 8px 14px; font-size: 14px; font-weight: 700; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
+    .dia-tema { font-weight: 400; font-size: 12px; color: rgba(255,255,255,0.75); }
+    .dia-start { font-size: 12px; color: #374151; background: #e8f0fe; padding: 4px 10px; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .dia-start a { color: #1a4abf; }
+
+    /* item (atração ou restaurante) */
+    .item { padding: 8px 10px; margin-bottom: 6px; border-left: 3px solid transparent; }
+    .item-atr  { border-left-color: #0d2d6b; background: white; }
+    .item-rest { border-left-color: #8B1A1A; background: #fff8f8; }
+
+    .item-title { font-weight: 700; font-size: 13px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .atr-circle { width: 36px; height: 36px; border-radius: 50%; background: #0d2d6b; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .atr-num { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 800; color: #ffffff; }
+    .encaixe-circle { width: 36px; height: 36px; border-radius: 50%; background: #c8a96e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .opcional-circle { width: 36px; height: 36px; border-radius: 50%; background: #c8917e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .rest-circle { width: 36px; height: 36px; border-radius: 50%; background: #8B1A1A; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .atr-nome { color: #0d2d6b; }
+    .atr-tipo { font-size: 11px; color: #6b7280; font-weight: 500; margin-top: 2px; }
+    .rest-nome { color: #8B1A1A; }
+
+    /* selos texto — intencionalmente SEM estilo de badge para não confundir com os .selo do HTML mestre */
+    .s { font-size: 10px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; }
+    .s-star  { color: #b08d3c; }   /* ★ imperdível */
+    .s-i     { color: #92400e; }   /* ingresso */
+    .s-g     { color: #1e40af; }   /* gratuito */
+    .s-e     { color: #c8917e; }   /* encaixe */
+    .s-o     { color: #9ca3af; }   /* opcional */
+
+    .item-detail { font-size: 12px; color: #374151; margin-top: 4px; padding-left: 44px; }
+    .item-detail a { color: #1a4abf; }
+    .item-detail .lbl { color: #6b7280; font-weight: 600; min-width: 88px; display: inline-block; }
+
+    /* notas do dia */
+    .notas { background: #fffbea; border-left: 3px solid #b08d3c; padding: 7px 12px; font-size: 12px; margin-top: 10px; color: #374151; }
+    .notas .lbl { font-weight: 700; color: #92400e; margin-right: 4px; }
+
+    /* guia de combinações */
+    table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 6px; }
+    th { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #6b7280; background: #f4f1ec; padding: 5px 8px; text-align: left; border-bottom: 1px solid #d1cabb; }
+    td { padding: 5px 8px; border-bottom: 0.5px solid #e8e4dc; vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    td a { color: #1a4abf; }
+
+    /* seções finais */
+    .sec-title { font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #0d2d6b; margin: 0 0 10px; }
+    .nota-geral { font-size: 12px; color: #374151; background: white; padding: 8px 12px; border-left: 3px solid #d1cabb; margin-bottom: 6px; }
+    .ph { color: #b0b8cc; font-style: italic; }
+  </style>
+</head>
+<body>
+
+<h1>Briefing · {{CIDADE}}</h1>
+<div class="meta">
+  {{PAIS}} &nbsp;·&nbsp; {{MOEDA}} ({{MOEDA-SIMBOLO}}) &nbsp;·&nbsp; {{N-DIAS}} dias &nbsp;·&nbsp; Idioma: {{IDIOMA}}
+  &nbsp;·&nbsp; <span class="ph">Status: em construção</span>
+</div>
+
+<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:5px 10px;background:white;border:1px solid #e8e4dc;font-size:10px;margin-bottom:20px;">
+  <span style="font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:1px;font-size:9px;">Selos</span>
+  <span class="s s-star" style="font-size:9px;">★ imperdível</span>
+  <span class="s s-i" style="font-size:9px;">[ingresso]</span>
+  <span class="s s-g" style="font-size:9px;">[gratuito]</span>
+  <span class="s s-e" style="font-size:9px;">[encaixe]</span>
+  <span class="s s-o" style="font-size:9px;">[opcional]</span>
+</div>
+
+<!-- ══════════════════ DIA 01 ══════════════════ -->
+<div class="dia-header">
+  <span>Dia 01</span>
+  <span class="dia-tema">{{DIA01-TEMA}}</span>
+</div>
+
+<div class="dia-start">
+  <span><strong>Como Começar:</strong> {{DIA01-COMO-COMECAR}}</span>
+  <span>🗺 Mapa: <a href="{{LINK-MAPS-DIA01}}">{{LINK-MAPS-DIA01}}</a></span>
+</div>
+
+<div class="item item-atr">
+  <div class="item-title">
+    <div class="atr-circle"><span class="atr-num">01</span></div>
+    <div style="flex:1;">
+      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+        <span class="atr-nome">{{DIA01-ATR-01}}</span>
+        <span class="s s-star">★</span>
+        <span class="s s-i">[ingresso]</span>
+      </div>
+      <div class="atr-tipo">{{DIA01-ATR-01-TIPO}}</div>
+    </div>
+  </div>
+  <div class="item-detail">
+    <span class="lbl">Ingresso:</span> {{DIA01-ATR-01-PRECO}} · {{DIA01-ATR-01-INFO}}<br>
+    <span class="lbl">Link oficial:</span> <a href="{{LINK-INGRESSO-DIA01-01}}">{{LINK-INGRESSO-DIA01-01}}</a><br>
+    <span class="lbl">Link afiliado:</span> <a href="{{LINK-AFILIADO-DIA01-01}}">{{LINK-AFILIADO-DIA01-01}}</a>
+  </div>
+</div>
+
+<div class="item item-rest">
+  <div class="item-title">
+    <div class="rest-circle"><span style="font-size:16px;line-height:1;">☕</span></div>
+    <span class="rest-nome">{{DIA01-CAFE}} &nbsp;·&nbsp; <em style="font-weight:400;font-size:12px;">{{DIA01-CAFE-TIPO}}</em></span>
+  </div>
+  <div class="item-detail">
+    <span class="lbl">Reserva:</span> <a href="{{LINK-RESERVA-DIA01-CAFE}}">{{LINK-RESERVA-DIA01-CAFE}}</a>
+  </div>
+</div>
+
+<div class="item item-atr">
+  <div class="item-title">
+    <div class="atr-circle"><span class="atr-num">02</span></div>
+    <div style="flex:1;">
+      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+        <span class="atr-nome">{{DIA01-ATR-02}}</span>
+        <span class="s s-g">[gratuito]</span>
+      </div>
+      <div class="atr-tipo">{{DIA01-ATR-02-TIPO}}</div>
+    </div>
+  </div>
+  <div class="item-detail">
+    <span class="lbl">Link oficial:</span> <a href="{{LINK-INGRESSO-DIA01-02}}">{{LINK-INGRESSO-DIA01-02}}</a>
+  </div>
+</div>
+
+<div class="item item-rest">
+  <div class="item-title">
+    <div class="rest-circle"><span style="font-size:16px;line-height:1;">🍽️</span></div>
+    <span class="rest-nome">{{DIA01-ALMOCO}} &nbsp;·&nbsp; <em style="font-weight:400;font-size:12px;">{{DIA01-ALMOCO-TIPO}}</em></span>
+  </div>
+  <div class="item-detail">
+    <span class="lbl">Reserva:</span> <a href="{{LINK-RESERVA-DIA01-ALMOCO}}">{{LINK-RESERVA-DIA01-ALMOCO}}</a>
+  </div>
+</div>
+
+<div class="item item-atr">
+  <div class="item-title">
+    <div class="encaixe-circle"><span style="font-size:14px;line-height:1;color:#ffffff;font-weight:700;">✱</span></div>
+    <div style="flex:1;">
+      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+        <span class="atr-nome">{{DIA01-ATR-03}}</span>
+        <span class="s s-e">[encaixe]</span>
+      </div>
+      <div class="atr-tipo">{{DIA01-ATR-03-TIPO}}</div>
+    </div>
+  </div>
+  <div class="item-detail">
+    <span class="lbl">Link oficial:</span> <a href="{{LINK-INGRESSO-DIA01-03}}">{{LINK-INGRESSO-DIA01-03}}</a>
+  </div>
+</div>
+
+
+<div class="item item-rest">
+  <div class="item-title">
+    <div class="rest-circle"><span style="font-size:16px;line-height:1;">🍽️</span></div>
+    <span class="rest-nome">{{DIA01-JANTAR}} &nbsp;·&nbsp; <em style="font-weight:400;font-size:12px;">{{DIA01-JANTAR-TIPO}}</em></span>
+  </div>
+  <div class="item-detail">
+    <span class="lbl">Reserva:</span> <a href="{{LINK-RESERVA-DIA01-JANTAR}}">{{LINK-RESERVA-DIA01-JANTAR}}</a>
+  </div>
+</div>
+
+<div class="notas"><span class="lbl">Notas:</span> {{DIA01-NOTAS}}</div>
+
+<hr>
+
+<!-- ══════════════════ DIA EXTRA (remover se não houver) ══════════════════ -->
+<div class="dia-header" style="background:#4a5568;">
+  <span>Dia Extra</span>
+  <span class="dia-tema">{{DIA-EXTRA-TEMA}}</span>
+</div>
+
+<div class="item item-atr">
+  <div class="item-title">
+    <div class="encaixe-circle"><span style="font-size:14px;line-height:1;color:#ffffff;font-weight:700;">✱</span></div>
+    <span class="atr-nome">{{DIA-EXTRA-ATR-01}}</span>
+    <span class="s s-e">[encaixe]</span>
+  </div>
+  <div class="item-detail">
+    <span class="lbl">Link oficial:</span> <a href="{{LINK-DIA-EXTRA-01}}">{{LINK-DIA-EXTRA-01}}</a>
+  </div>
+</div>
+
+<div class="item item-atr">
+  <div class="item-title">
+    <div class="encaixe-circle"><span style="font-size:14px;line-height:1;color:#ffffff;font-weight:700;">✱</span></div>
+    <span class="atr-nome">{{DIA-EXTRA-ATR-02}}</span>
+    <span class="s s-e">[encaixe]</span>
+  </div>
+</div>
+
+<div class="notas"><span class="lbl">Notas:</span> {{DIA-EXTRA-NOTAS}}</div>
+
+<hr>
+
+<!-- ══════════════════ GUIA DE COMBINAÇÕES ══════════════════ -->
+<div class="sec-title">Guia de Combinações</div>
+
+<div style="margin-bottom:4px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;">Bate-volta</div>
+<table>
+  <tr><th>Destino</th><th>Transporte</th><th>Link GYG</th></tr>
+  <tr><td>{{BATEVOLTA-01-NOME}}</td><td>{{BATEVOLTA-01-TRANSPORTE}}</td><td><a href="{{LINK-GYG-BATEVOLTA-01}}">{{LINK-GYG-BATEVOLTA-01}}</a></td></tr>
+  <tr><td>{{BATEVOLTA-02-NOME}}</td><td>{{BATEVOLTA-02-TRANSPORTE}}</td><td><a href="{{LINK-GYG-BATEVOLTA-02}}">{{LINK-GYG-BATEVOLTA-02}}</a></td></tr>
+</table>
+
+<div style="margin:10px 0 4px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;">Múltiplas Noites</div>
+<table style="margin-bottom:20px;">
+  <tr><th>Destino</th><th>Transporte</th><th>Noites</th><th>Link GYG</th></tr>
+  <tr><td>{{MULTNOITES-01-NOME}}</td><td>{{MULTNOITES-01-TRANSPORTE}}</td><td>{{MULTNOITES-01-NOITES}}</td><td><a href="{{LINK-GYG-MULTNOITES-01}}">{{LINK-GYG-MULTNOITES-01}}</a></td></tr>
+  <tr><td>{{MULTNOITES-02-NOME}}</td><td>{{MULTNOITES-02-TRANSPORTE}}</td><td>{{MULTNOITES-02-NOITES}}</td><td><a href="{{LINK-GYG-MULTNOITES-02}}">{{LINK-GYG-MULTNOITES-02}}</a></td></tr>
+</table>
+
+<hr>
+
+<!-- ══════════════════ GUIA INFORMATIVO — NOTAS ESPECÍFICAS ══════════════════ -->
+<div class="sec-title">Guia Informativo · Notas Específicas</div>
+<!-- Preencher só quando houver algo específico a ajustar nas seções informativas.
+     Ex: moeda com particularidade, visto especial, passe turístico obrigatório, etc. -->
+<div class="nota-geral ph">{{GUIA-INFO-NOTA-01}}</div>
+<div class="nota-geral ph">{{GUIA-INFO-NOTA-02}}</div>
+
+<hr>
+
+<!-- ══════════════════ OUTRAS NOTAS / DECISÕES ══════════════════ -->
+<div class="sec-title">Outras Notas / Decisões</div>
+<div class="nota-geral ph">{{NOTA-GERAL-01}}</div>
+<div class="nota-geral ph">{{NOTA-GERAL-02}}</div>
+
+</body>
+</html>

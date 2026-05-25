@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Imagens · {{CIDADE}}</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; line-height: 1.5; color: #1a1d26; background: #f0ece4; padding: 28px 20px; }
+
+    /* ── HEADER ── */
+    .header { max-width: 860px; margin: 0 auto 20px; display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .header-title { font-size: 26px; font-weight: 800; color: #0d2d6b; line-height: 1; }
+    .header-sub { font-size: 12px; color: #6b7280; margin-top: 4px; }
+    .progress-wrap { flex: 1; min-width: 180px; max-width: 260px; }
+    .progress-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #6b7280; margin-bottom: 5px; display: flex; justify-content: space-between; }
+    .progress-bar { height: 8px; background: #ddd8cc; border-radius: 4px; overflow: hidden; }
+    .progress-fill { height: 100%; background: #16a34a; border-radius: 4px; transition: width 0.3s; width: 0%; }
+
+    /* ── AVISO ── */
+    .aviso { max-width: 860px; margin: 0 auto 20px; background: #fffbea; border-left: 3px solid #d97706; padding: 8px 14px; font-size: 12px; color: #374151; }
+    .aviso strong { color: #92400e; }
+
+    /* ── BOARD ── */
+    .board { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+
+    /* ── SEÇÃO ── */
+    .secao { background: white; border: 1px solid #e0dbd0; }
+    .secao-header { padding: 9px 14px; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: white; display: flex; align-items: center; justify-content: space-between; }
+    .secao-capas      .secao-header { background: #0d2d6b; }
+    .secao-dia        .secao-header { background: #1a3a6b; }
+    .secao-gastronomia .secao-header { background: #8B1A1A; }
+    .secao-combinacoes .secao-header { background: #4a3000; }
+    .secao-count { font-size: 10px; font-weight: 600; opacity: 0.75; letter-spacing: 0; text-transform: none; }
+
+    /* ── ITEM ── */
+    .item { display: flex; align-items: flex-start; gap: 10px; padding: 9px 14px; border-bottom: 1px solid #f0ece4; transition: background 0.15s; cursor: pointer; }
+    .item:last-child { border-bottom: none; }
+    .item:hover { background: #faf8f4; }
+    .item.done { background: #f0fdf4; }
+    .item.done .item-path { text-decoration: line-through; color: #9ca3af; }
+    .item.done .item-desc { color: #9ca3af; }
+
+    /* checkbox customizado */
+    .item-check { width: 16px; height: 16px; border: 1.5px solid #d1cabb; border-radius: 3px; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
+    .item.done .item-check { background: #16a34a; border-color: #16a34a; }
+    .item.done .item-check::after { content: '✓'; font-size: 10px; color: white; font-weight: 800; line-height: 1; }
+
+    .item-body { flex: 1; min-width: 0; }
+    .item-path { font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; font-size: 11.5px; color: #0d2d6b; word-break: break-all; }
+    .item-desc { font-size: 11px; color: #6b7280; margin-top: 2px; }
+
+    /* ── BOTÃO LIMPAR ── */
+    .footer { max-width: 860px; margin: 20px auto 0; text-align: right; }
+    .btn-reset { font-size: 11px; color: #9ca3af; cursor: pointer; background: none; border: none; padding: 4px 0; text-decoration: underline; }
+    .btn-reset:hover { color: #6b7280; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="header-title">{{CIDADE}}</div>
+    <div class="header-sub">{{PAIS}} &nbsp;·&nbsp; Lista de imagens para os assets</div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-label"><span>Imagens salvas</span><span id="prog-count">0 / 0</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="prog-fill"></div></div>
+  </div>
+</div>
+
+<div class="aviso">
+  <strong>Como usar:</strong> clique no item para marcar como salvo. O progresso fica salvo no browser — pode fechar e reabrir à vontade. Cada imagem deve ser salva com o caminho exato indicado, a partir da pasta <strong>{{CIDADE_SLUG}}/</strong>.
+</div>
+
+<div class="board" id="board">
+  <!-- conteúdo gerado pelo Claude no passo R11 -->
+</div>
+
+<div class="footer">
+  <button class="btn-reset" onclick="resetar()">Limpar todas as marcações</button>
+</div>
+
+<script>
+  const CITY = '{{CIDADE_SLUG}}';
+
+  function storageKey(id) { return CITY + ':' + id; }
+
+  function atualizarProgresso() {
+    var items = document.querySelectorAll('.item');
+    var done  = document.querySelectorAll('.item.done').length;
+    var total = items.length;
+    document.getElementById('prog-count').textContent = done + ' / ' + total;
+    document.getElementById('prog-fill').style.width  = (total > 0 ? (done / total * 100) : 0) + '%';
+
+    // atualizar contadores por seção
+    document.querySelectorAll('.secao').forEach(function(sec) {
+      var secItems = sec.querySelectorAll('.item');
+      var secDone  = sec.querySelectorAll('.item.done').length;
+      var cnt = sec.querySelector('.secao-count');
+      if (cnt) cnt.textContent = secDone + ' / ' + secItems.length;
+    });
+  }
+
+  function toggleItem(el) {
+    el.classList.toggle('done');
+    localStorage.setItem(storageKey(el.dataset.id), el.classList.contains('done') ? '1' : '0');
+    atualizarProgresso();
+  }
+
+  function carregarEstado() {
+    document.querySelectorAll('.item').forEach(function(el) {
+      if (localStorage.getItem(storageKey(el.dataset.id)) === '1') {
+        el.classList.add('done');
+      }
+      el.addEventListener('click', function() { toggleItem(el); });
+    });
+    atualizarProgresso();
+  }
+
+  function resetar() {
+    if (!confirm('Limpar todas as marcações?')) return;
+    document.querySelectorAll('.item').forEach(function(el) {
+      el.classList.remove('done');
+      localStorage.removeItem(storageKey(el.dataset.id));
+    });
+    atualizarProgresso();
+  }
+
+  document.addEventListener('DOMContentLoaded', carregarEstado);
+</script>
+
+</body>
+</html>

@@ -24,15 +24,45 @@
     --branco: #ffffff;
   }
 *{ margin: 0; padding: 0; box-sizing: border-box; }
+img { max-width: 100%; display: block; }
 body{
     font-family: "Poppins", "DM Sans", sans-serif;
     color: var(--texto);
-    background: #f0f2f5;
+    background: #525659;
+    padding: 24px 0;
     font-size: 14px;
     line-height: 1.6;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
-/* ── TOPBAR ── */
-.topbar{
+/* ── PÁGINA A4 ── */
+.pagina {
+  width: 210mm;
+  height: 297mm;
+  box-sizing: border-box;
+  padding: 12mm 13mm 10mm;
+  background: white;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.50);
+  margin: 0 auto 4mm;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.pagina-full {
+  width: 210mm;
+  height: 297mm;
+  box-sizing: border-box;
+  padding: 0;
+  background: black;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.50);
+  margin: 0 auto 4mm;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+/* ── TOPBAR e NAV (ocultos no PDF) ── */
+.topbar, .nav-drawer, .nav-overlay, .hamburger-btn { display: none !important; }
+.topbar-old{
     position: fixed;
     top: 0; left: 0; right: 0;
     height: 52px;
@@ -410,21 +440,12 @@ body{
     margin-bottom: 24px;
   }
 /* ════ LAYOUT GLOBAL — REGRA ÚNICA ════ */
-.secao-wrapper{
-    padding: 72px 0 0;
-    border-bottom: 1px solid var(--cinza-borda);
-  }
-.dia-secao{
-    padding: 72px 0 0;
-    border-bottom: 2px solid var(--azul);
-  }
-.page{
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 0 48px 56px;
-  }
-@media (max-width: 900px) {.page{ padding: 0 40px 48px; }.secao-wrapper{ padding: 56px 0 0; }.dia-secao{ padding: 56px 0 0; }}
-@media (max-width: 600px) {.page{ padding: 0 24px 36px; }.secao-wrapper{ padding: 40px 0 0; }.dia-secao{ padding: 40px 0 0; }}
+.secao-wrapper{ padding: 0; border: none; background: transparent; }
+.dia-secao{ padding: 0; border: none; background: transparent; }
+.cidade-clean{ padding: 0; border: none; background: transparent; }
+section{ padding: 0; margin: 0; background: transparent; display: block; }
+.page{ max-width: none; margin: 0; padding: 0; }
+.vg-page{ max-width: none; margin: 0; padding: 0; }
 .card-header-icon{ font-size: 15px; flex-shrink: 0; }
 .card-body strong{ color: var(--azul); }
 .card-body p{ margin: 5px 0; }
@@ -1477,54 +1498,77 @@ section.cidade-clean strong[style*="color:white"]{
 }
 
 
+/* ════════════ OVERRIDES PARA PAGINA A4 ════════════ */
+/* Remove min-height 100svh das seções originais */
+#capa { min-height: 0 !important; height: 100% !important; }
+#menu-pratico { min-height: 0 !important; height: 100% !important; padding: 0 !important; display: flex; align-items: center; justify-content: center; }
+#menu-dias { background: transparent !important; padding: 0 !important; }
+
+/* Reduz tamanho dos cards do roteiro macro para caber em 297mm */
+.vg-header { margin-bottom: 10px; }
+.vg-titulo-h { font-size: 20px !important; margin-bottom: 4px; }
+.vg-grid { gap: 7px !important; grid-template-columns: 1fr 1fr 1fr !important; }
+.vg-card { border-radius: 7px !important; }
+.vg-card-header { padding: 5px 8px !important; }
+.vg-dia-num { font-size: 8.5px !important; }
+.vg-dia-data { font-size: 7px !important; }
+.vg-card-body { padding: 5px 8px 7px !important; }
+.vg-destino-tag { font-size: 7.5px !important; margin-bottom: 3px !important; padding: 2px 5px !important; }
+.vg-items li { font-size: 7.5px !important; padding: 1px 0 !important; }
+
+/* Comprime cards dos dias para pagina */
+.dia-header-card { margin-bottom: 8px !important; }
+.dia-header-pill-top { padding: 10px 14px 8px !important; }
+.dia-header-tema { font-size: 12px !important; }
+.dia-header-ritmo { font-size: 11px !important; padding: 6px 14px !important; }
+.dica-box { padding: 10px 13px !important; font-size: 11.5px !important; margin: 8px 0 !important; }
+.dica2-box { padding: 10px 13px !important; font-size: 11.5px !important; margin: 8px 0 !important; }
+.atracao-nova { margin: 8px 0 !important; }
+.atracao-nova-topo { padding: 10px 14px 6px !important; }
+.atracao-nova-nome { font-size: 12px !important; }
+.atracao-nova-cat { font-size: 10px !important; }
+.atracao-info-faixa { padding: 7px 14px !important; gap: 5px !important; }
+.info-label { font-size: 8px !important; }
+.info-valor { font-size: 10px !important; }
+.info-atencao { font-size: 10px !important; }
+.atracao-nova-corpo { padding: 8px 14px 10px !important; }
+.atracao-nova-desc { font-size: 10.5px !important; line-height: 1.5 !important; }
+.atracao-img-box { max-height: 110px !important; border-radius: 8px !important; margin-bottom: 8px !important; }
+.atracao-img-box img { max-height: 110px !important; object-fit: cover; }
+.dicas-box { padding: 7px 14px 10px !important; gap: 6px !important; }
+.dica-item { font-size: 10px !important; }
+.dica-item-label { font-size: 7.5px !important; }
+.atracao-info-preco { margin: 7px 14px !important; }
+.restaurante { margin: 6px 0 !important; }
+.restaurante-header { padding: 8px 13px !important; }
+.rest-nome { font-size: 11.5px !important; }
+.rest-letra { font-size: 14px !important; }
+.restaurante-body { padding: 8px 13px 10px !important; font-size: 10.5px !important; }
+.restaurante-body p { margin: 3px 0 !important; }
+.rest-prato { font-size: 10px !important; padding: 6px 8px !important; margin: 4px 0 !important; }
+.rest-titulo-script { font-size: 18px !important; margin: 10px 0 3px !important; }
+.rest-recomendado-badge { font-size: 8px !important; padding: 2px 5px !important; }
+.btn-menu-wrap { display: none !important; }
+.legenda-glass { padding: 10px 12px !important; }
+.legenda-glass-titulo { font-size: 11px !important; margin-bottom: 6px !important; }
+.selo { font-size: 9px !important; padding: 3px 7px !important; }
+section#encerramento, section:last-of-type { display: none !important; }
+
 /* ════════════ PDF / IMPRESSÃO A4 ════════════ */
-@page {
-  size: A4 portrait;
-  margin: 12mm 14mm 14mm 14mm;
-}
-
 @media print {
-  /* Ocultar elementos de navegação e interação */
-  .nav-drawer, .nav-overlay, .hamburger-btn,
-  .btn-menu-wrap, .btn-menu,
-  #menu-pratico,
-  section#encerramento,
-  section:last-of-type { display: none !important; }
-
-  /* Reset de scroll/overflow */
-  html, body { overflow: visible !important; height: auto !important; }
-
-  /* Largura A4 */
-  .page, .vg-page { max-width: 100% !important; padding: 0 !important; }
-
-  /* Page breaks — nova página a cada cidade e dia */
-  section.cidade-clean { page-break-before: always; min-height: auto !important; }
-  section.dia-secao    { page-break-before: always; }
-  section#menu-dias    { page-break-before: always; }
-  section#volta        { page-break-before: always; }
-
-  /* Não quebrar cards internamente */
-  .atracao-nova, .restaurante, .card, .dica-box, .dica2-box, .alerta-box {
-    page-break-inside: avoid;
+  @page { size: A4 portrait; margin: 0; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background: white !important; padding: 0 !important; }
+  .pagina, .pagina-full {
+    page-break-after: always;
+    break-after: page;
+    margin: 0 !important;
+    box-shadow: none !important;
+    height: 297mm !important;
+    max-height: 297mm !important;
+    overflow: hidden !important;
   }
-
-  /* Capa — ocupa só a primeira página */
-  section#capa { min-height: auto !important; height: 240mm; page-break-after: always; }
-
-  /* Heroes de cidade — compactas */
-  section.cidade-clean { padding: 20px 0 !important; }
-
-  /* Fontes e cores otimizadas para impressão */
-  body { font-size: 11px !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .atracao-nova-desc, .restaurante-body p { font-size: 10.5px !important; line-height: 1.55 !important; }
-  .dia-header-card { margin-bottom: 12px !important; }
-
-  /* Imagens */
-  .atracao-img-box { max-height: 160px !important; }
-  .atracao-img-box img { max-height: 160px !important; object-fit: cover; }
-
-  /* Remover sombras e efeitos pesados */
-  * { box-shadow: none !important; text-shadow: none !important; }
+  section { margin: 0 !important; border: none !important; }
 }
 </style>
 </head>
@@ -1572,8 +1616,8 @@ section.cidade-clean strong[style*="color:white"]{
 
 <div class="main-content">
 
-<!-- CAPA -->
-<section id="capa">
+<!-- CAPA — Página 1 -->
+<div class="pagina-full" id="capa">
   <img class="capa-bg-img" src="./assets/capas/capa-africa-do-sul.png" alt="África do Sul">
   <div class="capa-overlay"></div>
   <div class="capa-inner">
@@ -1585,62 +1629,45 @@ section.cidade-clean strong[style*="color:white"]{
       <span class="capa-datas-txt">Julho de 2026</span>
     </div>
   </div>
-</section>
+</div>
 
-<section id="menu-pratico">
+<!-- MENU PRINCIPAL — Página 2 -->
+<div class="pagina-full" id="menu-pratico">
   <div class="menu-pratico-bg"></div>
   <div class="menu-pratico-card">
     <div class="mp-logo-wrapper">
       <img class="mp-logo" src="./assets/branding/logo-vamos-carimbar-azul.png" alt="Vamos Carimbar">
     </div>
     <div class="mp-titulo" style="font-family:'Magnolia Script',cursive;font-size:32px;font-weight:400;color:var(--azul-medio);margin-bottom:20px;letter-spacing:0;text-transform:none;">Menu Principal</div>
-
     <a class="mp-btn" href="#menu-dias">Roteiro Macro</a>
     <a class="mp-btn" href="#pilanesberg">Pilanesberg — Safari</a>
     <a class="mp-btn" href="#joanesburgo">Joanesburgo</a>
     <a class="mp-btn" href="#cidade-do-cabo">Cidade do Cabo</a>
-
     <div class="mp-clientes">Vanessa, Felipe &amp; Luigi · Julho 2026</div>
   </div>
-</section>
+</div>
 
-<section id="menu-dias">
-<div class="vg-page" style="padding-top:0;">
+<!-- ROTEIRO MACRO — Página 3 -->
+<div class="pagina" id="menu-dias" style="background:#eef4fb;">
   <div class="vg-header">
     <span class="vg-titulo-h titulo-principal">Roteiro Macro 🇿🇦</span>
   </div>
   <div class="vg-grid">
-
-    <a class="vg-card" href="#dia01"><div class="vg-card-header"><span class="vg-dia-num">✈️ Ida</span><span class="vg-dia-data">20/07 · Segunda</span></div><div class="vg-card-body"><span class="vg-destino-tag">Voo Porto Alegre → Joanesburgo</span><ul class="vg-items"><li>Carro Lagoa Vermelha → Porto Alegre</li><li>Voo POA → GRU às 11h20</li><li>Conexão 3h em Guarulhos</li><li>GRU → JNB às 17h05 · chegada 07h05</li></ul></div></a>
-
-    <a class="vg-card" href="#dia01"><div class="vg-card-header"><span class="vg-dia-num">DIA 01</span><span class="vg-dia-data">21/07 · Terça</span></div><div class="vg-card-body"><span class="vg-destino-tag">Joanesburgo → Pilanesberg 🦁</span><ul class="vg-items"><li>Chegada JNB · imigração + bagagens</li><li>Transfer Agência · parada Santuário dos Elefantes</li><li>Check-in KWA Maritane Lodge</li><li>Almoço + descanso + game drive tarde</li></ul></div></a>
-
+    <a class="vg-card" href="#dia01"><div class="vg-card-header"><span class="vg-dia-num">✈️ Ida</span><span class="vg-dia-data">20/07 · Segunda</span></div><div class="vg-card-body"><span class="vg-destino-tag">Voo Porto Alegre → Joanesburgo</span><ul class="vg-items"><li>Carro Lagoa Vermelha → POA</li><li>Voo POA → GRU às 11h20</li><li>GRU → JNB às 17h05 · chegada 07h05</li></ul></div></a>
+    <a class="vg-card" href="#dia01"><div class="vg-card-header"><span class="vg-dia-num">DIA 01</span><span class="vg-dia-data">21/07 · Terça</span></div><div class="vg-card-body"><span class="vg-destino-tag">JNB → Pilanesberg 🦁</span><ul class="vg-items"><li>Chegada JNB · imigração</li><li>Transfer Agência · Santuário Elefantes</li><li>Check-in KWA Maritane Lodge</li><li>Game drive tarde</li></ul></div></a>
     <a class="vg-card" href="#dia02"><div class="vg-card-header"><span class="vg-dia-num">DIA 02</span><span class="vg-dia-data">22/07 · Quarta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Pilanesberg — Safari</span><ul class="vg-items"><li>Café da manhã no Lodge</li><li>Túnel subterrâneo de observação</li><li>Piscina + manhã livre</li><li>Game drive da tarde (16h)</li></ul></div></a>
-
-    <a class="vg-card" href="#dia03"><div class="vg-card-header"><span class="vg-dia-num">DIA 03</span><span class="vg-dia-data">23/07 · Quinta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Pilanesberg — Safari</span><ul class="vg-items"><li>Manhã livre no Lodge</li><li>Game drive ao pôr do sol (16h)</li><li>Chance dos Big Five</li><li>Jantar incluso no Lodge</li></ul></div></a>
-
-    <a class="vg-card" href="#dia04"><div class="vg-card-header"><span class="vg-dia-num">DIA 04</span><span class="vg-dia-data">24/07 · Sexta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Pilanesberg → Joanesburgo</span><ul class="vg-items"><li>Último game drive (05h)</li><li>Café da manhã + checkout Lodge</li><li>Transfer Agência de volta a Joanesburgo</li><li>Nelson Mandela Square</li><li>Sandton City</li></ul></div></a>
-
-    <a class="vg-card" href="#dia05"><div class="vg-card-header"><span class="vg-dia-num">DIA 05</span><span class="vg-dia-data">25/07 · Sábado</span></div><div class="vg-card-body"><span class="vg-destino-tag">JNB → Cidade do Cabo ✈️</span><ul class="vg-items"><li>Uber/Bolt do hotel ao aeroporto JNB</li><li>Voo JNB → CPT (FlySafair 09h35)</li><li>Transfer Agência: Aeroporto CPT + Table Mountain</li><li>Check-in SunSquare City Bowl</li></ul></div></a>
-
+    <a class="vg-card" href="#dia03"><div class="vg-card-header"><span class="vg-dia-num">DIA 03</span><span class="vg-dia-data">23/07 · Quinta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Pilanesberg — Safari</span><ul class="vg-items"><li>Manhã livre no Lodge</li><li>Game drive pôr do sol (16h)</li><li>Chance dos Big Five</li></ul></div></a>
+    <a class="vg-card" href="#dia04"><div class="vg-card-header"><span class="vg-dia-num">DIA 04</span><span class="vg-dia-data">24/07 · Sexta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Pilanesberg → Joanesburgo</span><ul class="vg-items"><li>Último game drive (05h)</li><li>Checkout Lodge · Transfer Agência</li><li>Nelson Mandela Square · Sandton City</li></ul></div></a>
+    <a class="vg-card" href="#dia05"><div class="vg-card-header"><span class="vg-dia-num">DIA 05</span><span class="vg-dia-data">25/07 · Sábado</span></div><div class="vg-card-body"><span class="vg-destino-tag">JNB → Cidade do Cabo ✈️</span><ul class="vg-items"><li>Voo JNB → CPT (09h35)</li><li>Transfer Agência + Table Mountain</li><li>Check-in SunSquare City Bowl</li></ul></div></a>
     <a class="vg-card" href="#dia06"><div class="vg-card-header"><span class="vg-dia-num">DIA 06</span><span class="vg-dia-data">26/07 · Domingo</span></div><div class="vg-card-body"><span class="vg-destino-tag">Cidade do Cabo</span><ul class="vg-items"><li>Table Mountain (2ª chance)</li><li>Camps Bay Beach à tarde</li><li>Jantar na orla</li></ul></div></a>
-
-    <a class="vg-card" href="#dia07"><div class="vg-card-header"><span class="vg-dia-num">DIA 07</span><span class="vg-dia-data">27/07 · Segunda</span></div><div class="vg-card-body"><span class="vg-destino-tag">Península do Cabo 🐧</span><ul class="vg-items"><li>Agência · dia todo com guia em português</li><li>Cape Point + Boulders Beach</li><li>Pinguins africanos</li><li>Jantar perto do hotel</li></ul></div></a>
-
-    <a class="vg-card" href="#dia08"><div class="vg-card-header"><span class="vg-dia-num">DIA 08</span><span class="vg-dia-data">28/07 · Terça</span></div><div class="vg-card-body"><span class="vg-destino-tag">Wine Route 🍷</span><ul class="vg-items"><li>Agência · dia todo com guia em português</li><li>Stellenbosch + Franschhoek</li><li>Degustação em vinícolas</li><li>Almoço na vinha · retorno à cidade</li><li>GOLD Restaurant à noite (Uber)</li></ul></div></a>
-
-    <a class="vg-card" href="#dia09"><div class="vg-card-header"><span class="vg-dia-num">DIA 09</span><span class="vg-dia-data">29/07 · Quarta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Hermanus 🐋</span><ul class="vg-items"><li>Agência · dia todo com guia em português</li><li>Walker Bay — Cliff Path</li><li>Avistamento de baleias sulinas</li><li>Retorno à Cidade do Cabo</li></ul></div></a>
-
-    <a class="vg-card" href="#dia10"><div class="vg-card-header"><span class="vg-dia-num">DIA 10</span><span class="vg-dia-data">30/07 · Quinta</span></div><div class="vg-card-body"><span class="vg-destino-tag">City Tour Cidade do Cabo 🏙️</span><ul class="vg-items"><li>Agência · meia manhã com guia em português</li><li>Bo-Kaap · Company's Garden</li><li>Centro histórico · V&amp;A Waterfront</li><li>Tarde livre por conta</li></ul></div></a>
-
-    <a class="vg-card" href="#dia11"><div class="vg-card-header"><span class="vg-dia-num">DIA 11</span><span class="vg-dia-data">31/07 · Sexta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Cidade do Cabo — Último Dia</span><ul class="vg-items"><li>Kirstenbosch Botanical Garden</li><li>District Six Museum</li><li>Zeitz MOCAA</li><li>V&amp;A Waterfront + Jantar de Despedida</li></ul></div></a>
-
-    <a class="vg-card" href="#volta"><div class="vg-card-header"><span class="vg-dia-num">✈️ Volta</span><span class="vg-dia-data">01/08 · Sábado</span></div><div class="vg-card-body"><span class="vg-destino-tag">Cidade do Cabo → Porto Alegre</span><ul class="vg-items"><li>Café + checkout hotel</li><li>CPT → GRU às 12h50</li><li>Conexão em Guarulhos</li><li>GRU → POA às 22h · chegada 23h55</li></ul></div></a>
-
+    <a class="vg-card" href="#dia07"><div class="vg-card-header"><span class="vg-dia-num">DIA 07</span><span class="vg-dia-data">27/07 · Segunda</span></div><div class="vg-card-body"><span class="vg-destino-tag">Península do Cabo 🐧</span><ul class="vg-items"><li>Agência · guia em português</li><li>Cape Point + Boulders Beach</li><li>Pinguins africanos · jantar hotel</li></ul></div></a>
+    <a class="vg-card" href="#dia08"><div class="vg-card-header"><span class="vg-dia-num">DIA 08</span><span class="vg-dia-data">28/07 · Terça</span></div><div class="vg-card-body"><span class="vg-destino-tag">Wine Route 🍷</span><ul class="vg-items"><li>Agência · guia em português</li><li>Stellenbosch + Franschhoek</li><li>GOLD Restaurant à noite</li></ul></div></a>
+    <a class="vg-card" href="#dia09"><div class="vg-card-header"><span class="vg-dia-num">DIA 09</span><span class="vg-dia-data">29/07 · Quarta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Hermanus 🐋</span><ul class="vg-items"><li>Agência · guia em português</li><li>Walker Bay — Cliff Path</li><li>Avistamento de baleias sulinas</li></ul></div></a>
+    <a class="vg-card" href="#dia10"><div class="vg-card-header"><span class="vg-dia-num">DIA 10</span><span class="vg-dia-data">30/07 · Quinta</span></div><div class="vg-card-body"><span class="vg-destino-tag">City Tour Cidade do Cabo 🏙️</span><ul class="vg-items"><li>Bo-Kaap · Company's Garden</li><li>V&A Waterfront · aquário</li><li>Tarde livre por conta</li></ul></div></a>
+    <a class="vg-card" href="#dia11"><div class="vg-card-header"><span class="vg-dia-num">DIA 11</span><span class="vg-dia-data">31/07 · Sexta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Último Dia · Cape Town</span><ul class="vg-items"><li>Kirstenbosch · District Six</li><li>Zeitz MOCAA</li><li>Jantar de Despedida</li></ul></div></a>
+    <a class="vg-card" href="#volta"><div class="vg-card-header"><span class="vg-dia-num">✈️ Volta</span><span class="vg-dia-data">01/08 · Sábado</span></div><div class="vg-card-body"><span class="vg-destino-tag">Cidade do Cabo → Porto Alegre</span><ul class="vg-items"><li>CPT → GRU às 12h50</li><li>GRU → POA às 22h · chegada 23h55</li></ul></div></a>
   </div>
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
-</section>
 
 <div class="page secao" style="color:white;padding-top:40px;">
 <span class="cidade-nome">Pilanesberg</span>
@@ -1657,12 +1684,9 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico" style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:white;">Menu Principal</a></div>
 </div>
-</section>
 
-<section id="dia01" class="dia-secao">
-<div class="page">
-
-  <div class="dia-header-card">
+<div class="pagina" id="dia01">
+<div class="dia-header-card">
     <div class="dia-header-pill-top">
       <span class="dia-header-titulo-novo">Dia 01</span>
       <div class="dia-header-data-wrap">
@@ -1727,7 +1751,10 @@ section.cidade-clean strong[style*="color:white"]{
   </div>
 
   <!-- SANTUÁRIO DOS ELEFANTES -->
-  <div class="atracao-nova">
+</div>
+
+<div class="pagina">
+<div class="atracao-nova">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🐘</div>
       <div class="atracao-nova-info">
@@ -1784,7 +1811,10 @@ section.cidade-clean strong[style*="color:white"]{
   </div>
 
   <!-- ALMOÇO NO LODGE -->
-  <span class="rest-titulo-script">Almoço no Lodge</span>
+</div>
+
+<div class="pagina">
+<span class="rest-titulo-script">Almoço no Lodge</span>
   <div class="restaurante" style="margin-bottom:24px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍽️</div>
@@ -1840,12 +1870,9 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
-</section>
 
-<section id="dia02" class="dia-secao">
-<div class="page">
-
-  <div class="dia-header-card">
+<div class="pagina" id="dia02">
+<div class="dia-header-card">
     <div class="dia-header-pill-top">
       <span class="dia-header-titulo-novo">Dia 02</span>
       <div class="dia-header-data-wrap">
@@ -1900,7 +1927,10 @@ section.cidade-clean strong[style*="color:white"]{
   </div>
 
   <!-- ALMOÇO -->
-  <span class="rest-titulo-script">Almoço</span>
+</div>
+
+<div class="pagina">
+<span class="rest-titulo-script">Almoço</span>
   <div class="restaurante" style="margin-bottom:24px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍽️</div>
@@ -1953,12 +1983,9 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
-</section>
 
-<section id="dia03" class="dia-secao">
-<div class="page">
-
-  <div class="dia-header-card">
+<div class="pagina" id="dia03">
+<div class="dia-header-card">
     <div class="dia-header-pill-top">
       <span class="dia-header-titulo-novo">Dia 03</span>
       <div class="dia-header-data-wrap">
@@ -2014,7 +2041,10 @@ section.cidade-clean strong[style*="color:white"]{
   </div>
 
   <!-- GAME DRIVE TARDE -->
-  <div class="atracao-nova">
+</div>
+
+<div class="pagina">
+<div class="atracao-nova">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🌅</div>
       <div class="atracao-nova-info">
@@ -2058,12 +2088,9 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
-</section>
 
-<section id="dia04" class="dia-secao">
-<div class="page">
-
-  <div class="dia-header-card">
+<div class="pagina" id="dia04">
+<div class="dia-header-card">
     <div class="dia-header-pill-top">
       <span class="dia-header-titulo-novo">Dia 04</span>
       <div class="dia-header-data-wrap">
@@ -2139,51 +2166,25 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
-</section>
 
-<section id="joanesburgo" class="cidade-clean" style="--cidade-bg:url('./assets/cidades/joanesburgo/joanesburgo-capa.jpg');background:linear-gradient(135deg,#1a1a2e 0%,#2d3561 50%,#1a1a2e 100%);overflow:hidden;">
-<div class="page secao" style="color:white;padding-top:40px;">
-<span class="cidade-nome">Joanesburgo</span>
-
-  <p class="cidade-resumo">Capital econômica da África do Sul, JoBurg pulsa com energia contraditória: arranha-céus de vidro ao lado de grafites políticos, shoppings de luxo a minutos de bairros históricos que ainda guardam as cicatrizes do apartheid.</p>
-
-  <div class="city-cards-grid">
-    <div class="legenda-glass" style="margin-bottom:16px;">
-      <span class="legenda-glass-titulo">🏙️ Sobre Sandton</span>
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">💼</span><span style="font-size:12px;color:rgba(255,255,255,0.85);">Sandton é o <strong style="color:white;">bairro financeiro mais rico da África</strong> — sede de bancos, multinacionais e da bolsa de valores sul-africana. Dentro dele, circulem com total tranquilidade.</span></div>
-        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🚗</span><span style="font-size:12px;color:rgba(255,255,255,0.85);">Fora do perímetro do Sandton City e da Mandela Square, sempre de <strong style="color:white;">Uber</strong> — não circulem a pé nas ruas adjacentes.</span></div>
-        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🌍</span><span style="font-size:12px;color:rgba(255,255,255,0.85);">É na grande Joanesburgo que fica o <strong style="color:white;">Aeroporto O.R. Tambo (JNB)</strong> — maior hub aéreo do continente africano.</span></div>
-      </div>
-    </div>
-
-    <div class="legenda-glass">
-      <span class="legenda-glass-titulo">✨ Curiosidades de Joanesburgo</span>
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🪙</span><span style="font-size:12px;color:rgba(255,255,255,0.8);">A cidade surgiu em 1886 após a descoberta do maior <strong style="color:white;">depósito de ouro do mundo</strong> — e em poucos anos se tornou a maior cidade da África subsaariana.</span></div>
-        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🗿</span><span style="font-size:12px;color:rgba(255,255,255,0.8);">A estátua de <strong style="color:white;">Nelson Mandela</strong> na Mandela Square tem 6 metros de altura — é uma das mais famosas representações do líder sul-africano no mundo.</span></div>
-        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🌳</span><span style="font-size:12px;color:rgba(255,255,255,0.8);">Joanesburgo tem a <strong style="color:white;">maior floresta urbana artificial do mundo</strong> — mais de 10 milhões de árvores plantadas pelos colonos que queriam reviver os jardins europeus na savana.</span></div>
-      </div>
-    </div>
-
+<!-- JOANESBURGO HERO — Página -->
+<div class="pagina-full" id="joanesburgo" style="background:linear-gradient(135deg,#1a1a2e 0%,#2d3561 50%,#1a1a2e 100%);display:flex;align-items:center;justify-content:center;">
+  <div style="color:white;padding:14mm 14mm;width:100%;">
+    <span class="cidade-nome" style="font-size:52px;display:block;margin-bottom:12px;">Joanesburgo</span>
+    <p class="cidade-resumo" style="font-size:11px;line-height:1.6;color:rgba(255,255,255,0.88);margin-bottom:20px;">Capital econômica da África do Sul, JoBurg pulsa com energia contraditória: arranha-céus de vidro ao lado de grafites políticos, shoppings de luxo a minutos de bairros históricos que ainda guardam as cicatrizes do apartheid.</p>
     <div class="legenda-glass" style="margin-top:16px;">
-      <span class="legenda-glass-titulo">🗺️ Mapa Interativo — Pilanesberg & Joanesburgo</span>
+      <span class="legenda-glass-titulo">🗺️ Mapa Interativo — Pilanesberg &amp; Joanesburgo</span>
       <div style="display:flex;flex-direction:column;gap:8px;">
-        <div style="font-size:12px;color:rgba(255,255,255,0.85);">Todos os pontos do roteiro marcados — hotel, Nelson Mandela Square, Sandton City e trajetos da região.</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.85);">Todos os pontos do roteiro marcados — hotel, Nelson Mandela Square, Sandton City e trajetos da região.</div>
         <a href="https://www.google.com/maps/d/u/0/edit?mid=1au-Krji-lASRmZFBArcq9tb9xGgnfxA&usp=sharing" target="_blank" style="display:inline-block;margin-top:2px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;color:white;text-decoration:none;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.35);border-radius:6px;padding:7px 16px;text-align:center;">🗺️ Abrir Mapa →</a>
       </div>
     </div>
   </div>
-
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico" style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:white;">Menu Principal</a></div>
 </div>
-</section>
 
 <!-- ════════════════════════════════ DIA 04 — JOANESBURGO (continuação) -->
-<section id="dia04b" class="dia-secao">
-<div class="page">
-
-  <div class="atracao-nova">
+<div class="pagina" id="dia04b">
+<div class="atracao-nova">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🏨</div>
       <div class="atracao-nova-info">
@@ -2213,8 +2214,10 @@ section.cidade-clean strong[style*="color:white"]{
     <span class="dica2-label">🚶 Sandton a pé — tudo bem, com atenção</span>
     <p>O trajeto do hotel até a Nelson Mandela Square passa pelo interior do <strong>Sandton City Mall</strong> — é seguro e coberto, literalmente 3 minutos. Durante o dia, circular nessa área é tranquilo: é como andar no eixo empresarial de São Paulo, com atenção básica aos pertences. Se preferirem, Uber ou Bolt cobre o trajeto em menos de 5 minutos por um custo mínimo. <strong>Fora do perímetro do Sandton City e da praça, sempre de Uber — não circulem a pé nas ruas adjacentes.</strong></p>
   </div>
+</div>
 
-  <span class="rest-titulo-script">Almoço na Chegada a Joanesburgo</span>
+<div class="pagina">
+<span class="rest-titulo-script">Almoço na Chegada a Joanesburgo</span>
   <div class="restaurante" style="margin-bottom:24px;">
     <div class="restaurante-header">
       <div class="rest-letra">☕</div>
@@ -2255,8 +2258,10 @@ section.cidade-clean strong[style*="color:white"]{
       <div class="dica-item"><span class="dica-item-icon">🚗</span><div><span class="dica-item-label">SEGURANÇA</span>Dentro da praça, total tranquilidade. Fora do perímetro do Sandton City e da Mandela Square, sempre de Uber — não circulem a pé nas ruas adjacentes, especialmente à noite.</div></div>
     </div>
   </div>
+</div>
 
-  <div class="atracao-nova">
+<div class="pagina">
+<div class="atracao-nova">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🛍️</div>
       <div class="atracao-nova-info">
@@ -2304,12 +2309,9 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
-</section>
 
-<section id="dia05" class="dia-secao">
-<div class="page">
-
-  <div class="dia-header-card">
+<div class="pagina" id="dia05">
+<div class="dia-header-card">
     <div class="dia-header-pill-top">
       <span class="dia-header-titulo-novo">Dia 05</span>
       <div class="dia-header-data-wrap">
@@ -2366,51 +2368,25 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
-</section>
 
-<section id="cidade-do-cabo" class="cidade-clean" style="--cidade-bg:url('./assets/cidades/cidade-do-cabo/cidade-do-cabo.png');background:linear-gradient(135deg,#0f3460 0%,#16697a 50%,#0f3460 100%);overflow:hidden;">
-<div class="page secao" style="color:white;padding-top:40px;">
-<span class="cidade-nome">Cidade do Cabo</span>
-
-  <p class="cidade-resumo">Cape Town é uma das cidades mais bonitas do mundo. O Oceano Atlântico em um lado, o Índico do outro, Camps Bay com suas palmeiras e montanhas ao fundo, o colorido de Bo-Kaap subindo a encosta, vinícolas a 45 minutos da cidade. Natureza, gastronomia, história, arte e o pôr do sol mais bonito da África do Sul.</p>
-
-  <div class="city-cards-grid">
-    <div class="legenda-glass" style="margin-bottom:16px;">
-      <span class="legenda-glass-titulo">🌤️ Table Mountain — dica essencial</span>
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">📱</span><span style="font-size:12px;color:rgba(255,255,255,0.85);">Baixem o aplicativo <strong style="color:white;">Table Mountain Aerial Cableway</strong> antes de chegar — ele mostra em tempo real se o teleférico está aberto ou fechado por vento/nuvem. Consultem sempre antes de sair.</span></div>
-        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🎟️</span><span style="font-size:12px;color:rgba(255,255,255,0.85);">O ingresso do teleférico (<strong style="color:white;">ZAR 1.200</strong>) está sendo confirmado junto à <strong style="color:white;">Agência África para Brasileiros</strong> — aguardem a informação final. Se o clima fechar no Dia 05, a segunda oportunidade é o Dia 06.</span></div>
-        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🧥</span><span style="font-size:12px;color:rgba(255,255,255,0.85);">No topo da montanha, julho tem vento forte e temperatura baixa — mesmo em dia de sol. Levem casacos para todos.</span></div>
-      </div>
-    </div>
-
-    <div class="legenda-glass">
-      <span class="legenda-glass-titulo">✨ Curiosidades de Cape Town</span>
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🌊</span><span style="font-size:12px;color:rgba(255,255,255,0.8);">Cape Town fica no ponto de encontro do <strong style="color:white;">Oceano Atlântico e do Índico</strong> — as águas do Atlântico são frias o ano todo, mesmo no verão. Em julho, esqueçam o banho de mar.</span></div>
-        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🍷</span><span style="font-size:12px;color:rgba(255,255,255,0.8);">A Stellenbosch Wine Route tem mais de <strong style="color:white;">200 vinícolas</strong> a 45 minutos da cidade — é uma das mais antigas do mundo fora da Europa, fundada pelos huguenotes franceses no século XVII.</span></div>
-        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🏳️</span><span style="font-size:12px;color:rgba(255,255,255,0.8);">Foi a <strong style="color:white;">última cidade da África do Sul</strong> a ser rendida ao regime do apartheid — e foi também onde Nelson Mandela fez seu primeiro discurso público após 27 anos preso.</span></div>
-      </div>
-    </div>
-
+<!-- CIDADE DO CABO HERO — Página -->
+<div class="pagina-full" id="cidade-do-cabo" style="background:linear-gradient(135deg,#0f3460 0%,#16697a 50%,#0f3460 100%);display:flex;align-items:center;justify-content:center;">
+  <div style="color:white;padding:14mm 14mm;width:100%;">
+    <span class="cidade-nome" style="font-size:44px;display:block;margin-bottom:12px;">Cidade do Cabo</span>
+    <p class="cidade-resumo" style="font-size:11px;line-height:1.6;color:rgba(255,255,255,0.88);margin-bottom:20px;">Cape Town é uma das cidades mais bonitas do mundo. O Oceano Atlântico em um lado, o Índico do outro, Camps Bay com suas palmeiras e montanhas ao fundo, o colorido de Bo-Kaap subindo a encosta, vinícolas a 45 minutos da cidade. Natureza, gastronomia, história, arte e o pôr do sol mais bonito da África do Sul.</p>
     <div class="legenda-glass" style="margin-top:16px;">
       <span class="legenda-glass-titulo">🗺️ Mapa Interativo — Cidade do Cabo</span>
       <div style="display:flex;flex-direction:column;gap:8px;">
-        <div style="font-size:12px;color:rgba(255,255,255,0.85);">Todos os pontos do roteiro em Cape Town — Table Mountain, Camps Bay, Peninsula, Hermanus, vinícolas e mais.</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.85);">Todos os pontos do roteiro em Cape Town — Table Mountain, Camps Bay, Peninsula, Hermanus, vinícolas e mais.</div>
         <a href="https://www.google.com/maps/d/u/0/edit?mid=1qSaxtXFAicpVWmB0kx6ykmF1DYGVYOw&usp=sharing" target="_blank" style="display:inline-block;margin-top:2px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;color:white;text-decoration:none;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.35);border-radius:6px;padding:7px 16px;text-align:center;">🗺️ Abrir Mapa →</a>
       </div>
     </div>
   </div>
-
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico" style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:white;">Menu Principal</a></div>
 </div>
-</section>
 
 <!-- ════════════════════════════════ DIA 05 — CITY BOWL (continuação) -->
-<section id="dia05b" class="dia-secao">
-<div class="page">
-
-  <div class="dica2-box">
+<div class="pagina" id="dia05b">
+<div class="dica2-box">
     <span class="dica2-label">🍽️ Almocem no aeroporto antes do transfer</span>
     <p>O guia da Agência África estará esperando logo após a saída de bagagens. O plano é ir direto à Table Mountain — <strong>as malas ficam trancadas no carro durante toda a visita</strong>, sem precisar passar no hotel antes. Por isso: <strong>almocem ou lanchem no aeroporto antes de encontrar o guia</strong>. Aproveitem os minutos após pegar as bagagens para comer com calma — a montanha é pra ser curtida com energia, não com fome.</p>
   </div>
@@ -2431,7 +2407,10 @@ section.cidade-clean strong[style*="color:white"]{
   </div>
 
   <!-- TRANSFER AGÊNCIA CHEGADA CPT -->
-  <div class="atracao-nova">
+</div>
+
+<div class="pagina">
+<div class="atracao-nova">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🚐</div>
       <div class="atracao-nova-info">
@@ -2478,8 +2457,10 @@ section.cidade-clean strong[style*="color:white"]{
       <div class="dica-item"><span class="dica-item-icon">🐾</span><div><span class="dica-item-label">DASSIE</span>O dassie (hyrax) é um pequeno mamífero parecido com um porco-da-índia que vive no topo da montanha — é o mascote do local e aparece com frequência. O Luigi vai amar tentar se aproximar.</div></div>
     </div>
   </div>
+</div>
 
-  <div class="atracao-nova">
+<div class="pagina">
+<div class="atracao-nova">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🏨</div>
       <div class="atracao-nova-info">
@@ -2525,12 +2506,9 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
-</section>
 
-<section id="dia06" class="dia-secao">
-<div class="page">
-
-  <div class="dia-header-card">
+<div class="pagina" id="dia06">
+<div class="dia-header-card">
     <div class="dia-header-pill-top">
       <span class="dia-header-titulo-novo">Dia 06</span>
       <div class="dia-header-data-wrap">
@@ -2595,8 +2573,10 @@ section.cidade-clean strong[style*="color:white"]{
       <div class="dica-item"><span class="dica-item-icon">☕</span><div><span class="dica-item-label">CAFÉ</span>O Café Caprice na calçada é o point clássico de Camps Bay — cerveja gelada ou café quente com vista para o mar e as montanhas.</div></div>
     </div>
   </div>
+</div>
 
-  <span class="rest-titulo-script">Almoço em Camps Bay</span>
+<div class="pagina">
+<span class="rest-titulo-script">Almoço em Camps Bay</span>
   <div class="restaurante" style="margin-bottom:24px;">
     <div class="restaurante-header">
       <div class="rest-letra">🍔</div>
@@ -2633,12 +2613,9 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
-</section>
 
-<section id="dia07" class="dia-secao">
-<div class="page">
-
-  <div class="dia-header-card">
+<div class="pagina" id="dia07">
+<div class="dia-header-card">
     <div class="dia-header-pill-top">
       <span class="dia-header-titulo-novo">Dia 07</span>
       <div class="dia-header-data-wrap">
@@ -2850,12 +2827,9 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
-</section>
 
-<section id="dia08" class="dia-secao">
-<div class="page">
-
-  <div class="dia-header-card">
+<div class="pagina" id="dia08">
+<div class="dia-header-card">
     <div class="dia-header-pill-top">
       <span class="dia-header-titulo-novo">Dia 08</span>
       <div class="dia-header-data-wrap">
@@ -2931,12 +2905,9 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
-</section>
 
-<section id="dia09" class="dia-secao">
-<div class="page">
-
-  <div class="dia-header-card">
+<div class="pagina" id="dia09">
+<div class="dia-header-card">
     <div class="dia-header-pill-top">
       <span class="dia-header-titulo-novo">Dia 09</span>
       <div class="dia-header-data-wrap">
@@ -3000,12 +2971,9 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
-</section>
 
-<section id="dia10" class="dia-secao">
-<div class="page">
-
-  <div class="dia-header-card">
+<div class="pagina" id="dia10">
+<div class="dia-header-card">
     <div class="dia-header-pill-top">
       <span class="dia-header-titulo-novo">Dia 10</span>
       <div class="dia-header-data-wrap">
@@ -3067,7 +3035,10 @@ section.cidade-clean strong[style*="color:white"]{
   </div>
 
   <!-- TWO OCEANS AQUARIUM -->
-  <div class="atracao-nova">
+</div>
+
+<div class="pagina">
+<div class="atracao-nova">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🦈</div>
       <div class="atracao-nova-info">
@@ -3149,12 +3120,9 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
-</section>
 
-<section id="dia11" class="dia-secao">
-<div class="page">
-
-  <div class="dia-header-card">
+<div class="pagina" id="dia11">
+<div class="dia-header-card">
     <div class="dia-header-pill-top">
       <span class="dia-header-titulo-novo">Dia 11</span>
       <div class="dia-header-data-wrap">
@@ -3226,7 +3194,10 @@ section.cidade-clean strong[style*="color:white"]{
   </div>
 
   <!-- DISTRICT SIX -->
-  <div class="atracao-nova">
+</div>
+
+<div class="pagina">
+<div class="atracao-nova">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🏛️</div>
       <div class="atracao-nova-info">
@@ -3299,7 +3270,10 @@ section.cidade-clean strong[style*="color:white"]{
   </div>
 
   <!-- V&A WATERFRONT -->
-  <div class="atracao-nova">
+</div>
+
+<div class="pagina">
+<div class="atracao-nova">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">⚓</div>
       <div class="atracao-nova-info">
@@ -3348,12 +3322,12 @@ section.cidade-clean strong[style*="color:white"]{
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
-</section>
 
 
 
-<div class="page secao">
-  <span class="titulo-principal">✈️ Volta para Casa</span>
+<!-- VOLTA — Página -->
+<div class="pagina" id="volta">
+<span class="titulo-principal">✈️ Volta para Casa</span>
   <div class="card" style="margin-bottom:20px;">
     <div class="card-header"><span class="card-header-icon">🚌</span><span class="card-header-titulo">Saída do Hotel — 01/08 · Sábado</span></div>
     <div class="card-body">
@@ -3401,7 +3375,7 @@ section.cidade-clean strong[style*="color:white"]{
   </div>
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
-</section>
+
 
 <section id="encerramento" style="position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;">
   <div style="position:absolute;inset:0;background-image:url('./assets/capas/menu-pratico-bg.png');background-size:cover;background-position:center;z-index:0;"></div>
