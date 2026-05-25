@@ -2666,6 +2666,53 @@ section {
 </div>
 </section>
 
+<script>
+// ── SALVAR PERFIL VIAJANTE NO LOCALSTORAGE ─────────────────────────────────
+(function(){
+  var KEY = 'vc-danila-nordeste-perfil';
+
+  function salvar() {
+    var dados = {};
+    // Checkboxes e radios
+    document.querySelectorAll('#perfil-viajante input[type="checkbox"], #perfil-viajante input[type="radio"]').forEach(function(el, i) {
+      dados['input-' + i] = el.checked;
+    });
+    // Inputs de texto
+    document.querySelectorAll('#perfil-viajante input[type="text"]').forEach(function(el, i) {
+      dados['text-' + i] = el.value;
+    });
+    // Textareas
+    document.querySelectorAll('#perfil-viajante textarea').forEach(function(el, i) {
+      dados['textarea-' + i] = el.value;
+    });
+    localStorage.setItem(KEY, JSON.stringify(dados));
+  }
+
+  function restaurar() {
+    var raw = localStorage.getItem(KEY);
+    if (!raw) return;
+    var dados = JSON.parse(raw);
+    document.querySelectorAll('#perfil-viajante input[type="checkbox"], #perfil-viajante input[type="radio"]').forEach(function(el, i) {
+      if (dados['input-' + i] !== undefined) el.checked = dados['input-' + i];
+    });
+    document.querySelectorAll('#perfil-viajante input[type="text"]').forEach(function(el, i) {
+      if (dados['text-' + i] !== undefined) el.value = dados['text-' + i];
+    });
+    document.querySelectorAll('#perfil-viajante textarea').forEach(function(el, i) {
+      if (dados['textarea-' + i] !== undefined) el.value = dados['textarea-' + i];
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    restaurar();
+    document.querySelectorAll('#perfil-viajante input, #perfil-viajante textarea').forEach(function(el) {
+      el.addEventListener('change', salvar);
+      el.addEventListener('input', salvar);
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
 
