@@ -459,14 +459,14 @@ section {
 .hamburger-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger-btn.open span:nth-child(2) { opacity: 0; }
 .hamburger-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-.nav-drawer { position: fixed; top: 52px; right: 0; width: 250px; height: calc(100vh - 52px); background: rgba(13,45,107,0.58); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); border-left: 1px solid rgba(255,255,255,0.08); z-index: 199; overflow-y: auto; padding: 12px 0 32px; transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); box-shadow: -4px 0 32px rgba(0,0,0,0.28); }
+.nav-drawer { position: fixed; top: 52px; right: 0; width: 320px; height: calc(100vh - 52px); background: rgba(13,45,107,0.58); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); border-left: 1px solid rgba(255,255,255,0.08); z-index: 199; overflow-y: auto; padding: 16px 0 40px; transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); box-shadow: -4px 0 32px rgba(0,0,0,0.28); }
 .nav-drawer.open { transform: translateX(0); }
 .nav-overlay { position: fixed; inset: 52px 0 0 0; background: rgba(0,0,0,0.22); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); z-index: 198; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
 .nav-overlay.open { opacity: 1; pointer-events: all; }
-.nav-section { display: block; padding: 12px 20px 6px; font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45); }
-.nav-link { display: block; padding: 8px 20px; color: rgba(255,255,255,0.80); text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.5px; transition: color 0.15s, background 0.15s; border-left: 2px solid transparent; }
+.nav-section { display: block; padding: 14px 24px 8px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+.nav-link { display: block; padding: 11px 24px; color: rgba(255,255,255,0.80); text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.5px; transition: color 0.15s, background 0.15s; border-left: 2px solid transparent; }
 .nav-link:hover { color: white; background: rgba(255,255,255,0.07); border-left-color: var(--gold); }
-.nav-link.destaque { color: var(--gold); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: 11px; padding: 10px 20px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 4px; }
+.nav-link.destaque { color: var(--gold); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: 13px; padding: 12px 24px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 4px; }
 
 /* ══════════════════════════════════════════════
    PH-CIDADE — nome da cidade no cabeçalho de cada página
@@ -983,13 +983,13 @@ section {
           <!-- Coluna esquerda: links de seção -->
           <div style="padding-right:8mm;">
             <div style="display:flex;flex-direction:column;">
-              <a href="#nossa-rota"            style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Nossa Rota</a>
-              <a href="#perfil-viajante"       style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Perfil: Danila</a>
-              <a href="#opcoes-roteiro"        style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Opções de Roteiro</a>
-              <a href="#curadoria-voos"        style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Curadoria Voos</a>
-              <a href="#curadoria-hospedagens" style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Curadoria Hospedagens</a>
-              <a href="#sobre-o-destino"       style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Sobre o Destino</a>
-              <a href="#guia-gastronomico"     style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Gastronomia</a>
+              <a href="#nossa-rota"            style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:1.5px solid rgba(255,255,255,0.20);text-transform:uppercase;letter-spacing:1px;">Nossa Rota</a>
+              <a href="#perfil-viajante"       style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:1.5px solid rgba(255,255,255,0.20);text-transform:uppercase;letter-spacing:1px;">Perfil: Danila</a>
+              <a href="#opcoes-roteiro"        style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:1.5px solid rgba(255,255,255,0.20);text-transform:uppercase;letter-spacing:1px;">Opções de Roteiro</a>
+              <a href="#curadoria-voos"        style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:1.5px solid rgba(255,255,255,0.20);text-transform:uppercase;letter-spacing:1px;">Curadoria Voos</a>
+              <a href="#curadoria-hospedagens" style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:1.5px solid rgba(255,255,255,0.20);text-transform:uppercase;letter-spacing:1px;">Curadoria Hospedagens</a>
+              <a href="#sobre-o-destino"       style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:1.5px solid rgba(255,255,255,0.20);text-transform:uppercase;letter-spacing:1px;">Sobre o Destino</a>
+              <a href="#guia-gastronomico"     style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:1.5px solid rgba(255,255,255,0.20);text-transform:uppercase;letter-spacing:1px;">Gastronomia</a>
               <a href="#financeiro"            style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;text-transform:uppercase;letter-spacing:1px;">Financeiro</a>
             </div>
           </div>
@@ -997,92 +997,27 @@ section {
           <!-- Coluna direita: checklist + dias -->
           <div style="display:flex;flex-direction:column;">
             <!-- Links roteiro -->
-            <a href="#checklist-viagem" style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Checklist Viagem</a>
-            <a href="#menu-dias"        style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.20);text-transform:uppercase;letter-spacing:1px;">Roteiro Macro</a>
+            <a href="#checklist-viagem" style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:1.5px solid rgba(255,255,255,0.20);text-transform:uppercase;letter-spacing:1px;">Checklist Viagem</a>
+            <a href="#menu-dias"        style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:1.5px solid rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:1px;">Roteiro Macro</a>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5mm;margin-top:3.5mm;">
-              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 01</a>
-              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 02</a>
-              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 03</a>
-              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 04</a>
-              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 05</a>
-              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 06</a>
-              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 07</a>
-              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 08</a>
-              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 09</a>
-              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 10</a>
-              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 11</a>
-              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 12</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:1.5px solid rgba(255,255,255,0.25);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 01</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:1.5px solid rgba(255,255,255,0.25);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 02</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:1.5px solid rgba(255,255,255,0.25);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 03</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:1.5px solid rgba(255,255,255,0.25);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 04</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:1.5px solid rgba(255,255,255,0.25);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 05</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:1.5px solid rgba(255,255,255,0.25);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 06</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:1.5px solid rgba(255,255,255,0.25);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 07</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:1.5px solid rgba(255,255,255,0.25);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 08</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:1.5px solid rgba(255,255,255,0.25);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 09</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:1.5px solid rgba(255,255,255,0.25);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 10</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:1.5px solid rgba(255,255,255,0.25);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 11</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:1.5px solid rgba(255,255,255,0.25);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 12</a>
             </div>
           </div>
 
         </div>
       </div>
     </div>
-  </div>
-</div>
-</section>
-
-<!-- ══════════════════════════════════════════
-     MENU PRÁTICO — página 3
-     CUSTOMIZÁVEL: texto de boas-vindas, links dos dias
-     Manter estrutura fixa, trocar apenas conteúdo
-══════════════════════════════════════════ -->
-<section>
-<div id="menu-pratico" style="width:210mm;height:297mm;position:relative;overflow:hidden;background:#ffffff;box-shadow:0 4px 24px rgba(0,0,0,0.50);margin:0 auto 4mm;">
-  <img src="./assets/capas/carimbostransp.png" alt=""
-    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-  <div style="position:relative;z-index:2;width:100%;height:100%;display:flex;">
-
-    <!-- Painel esquerdo -->
-    <div style="width:82mm;background:#f8fbff;flex-shrink:0;display:flex;flex-direction:column;justify-content:center;padding:14mm 10mm;">
-      <div style="margin-bottom:8mm;">
-        <span style="font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:48pt;color:var(--azul);line-height:0.92;letter-spacing:-1px;font-variation-settings:'opsz' 144;display:block;">Menu<br>Principal</span>
-        <span style="font-family:'Pinyon Script',cursive;font-size:22pt;color:var(--gold-deep);display:block;margin-top:4px;">clique e acesse</span>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:0;">
-        <a href="#nossa-rota"            style="font-family:'DM Sans',sans-serif;font-size:15pt;font-weight:600;color:var(--azul);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(26,58,92,0.12);text-transform:uppercase;letter-spacing:1px;">Nossa Rota</a>
-        <a href="#perfil-viajante"       style="font-family:'DM Sans',sans-serif;font-size:15pt;font-weight:600;color:var(--azul);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(26,58,92,0.12);text-transform:uppercase;letter-spacing:1px;">Perfil: Danila</a>
-        <a href="#opcoes-roteiro"        style="font-family:'DM Sans',sans-serif;font-size:15pt;font-weight:600;color:var(--azul);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(26,58,92,0.12);text-transform:uppercase;letter-spacing:1px;">Opções de Roteiro</a>
-        <a href="#curadoria-voos"        style="font-family:'DM Sans',sans-serif;font-size:15pt;font-weight:600;color:var(--azul);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(26,58,92,0.12);text-transform:uppercase;letter-spacing:1px;">Curadoria Voos</a>
-        <a href="#curadoria-hospedagens" style="font-family:'DM Sans',sans-serif;font-size:15pt;font-weight:600;color:var(--azul);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(26,58,92,0.12);text-transform:uppercase;letter-spacing:1px;">Curadoria Hospedagens</a>
-        <a href="#sobre-o-destino"       style="font-family:'DM Sans',sans-serif;font-size:15pt;font-weight:600;color:var(--azul);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(26,58,92,0.12);text-transform:uppercase;letter-spacing:1px;">Sobre o Destino</a>
-        <a href="#guia-gastronomico"     style="font-family:'DM Sans',sans-serif;font-size:15pt;font-weight:600;color:var(--azul);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(26,58,92,0.12);text-transform:uppercase;letter-spacing:1px;">Gastronomia</a>
-        <a href="#financeiro"            style="font-family:'DM Sans',sans-serif;font-size:15pt;font-weight:600;color:var(--azul);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(26,58,92,0.12);text-transform:uppercase;letter-spacing:1px;">Financeiro</a>
-      </div>
-      <div style="display:flex;justify-content:center;margin-top:10mm;">
-        <img src="./assets/branding/logo-vamos-carimbar-azul.png" alt="Vamos Carimbar"
-          style="width:90px;height:90px;object-fit:contain;">
-      </div>
-    </div>
-
-    <!-- Painel direito -->
-    <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-start;padding:14mm 12mm;">
-      <!-- Texto de boas-vindas: trocar {{CIDADE}} -->
-      <p style="font-family:'DM Sans',sans-serif;font-size:21pt;font-weight:500;color:var(--azul);line-height:1.3;margin:44mm 0 4mm 0;width:85%;align-self:center;">Seja bem-vinda,<br><em style="font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:25pt;color:var(--azul-medio);font-variation-settings:'opsz' 36;">Danila Lauro!</em></p>
-      <p style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:500;color:var(--azul);line-height:1.55;margin:0 0 12mm 0;width:85%;align-self:center;">O seu roteiro personalizado para o Nordeste é <strong>interativo</strong>: use os links do menu para navegar entre as seções. Acompanhe <strong>cada etapa</strong> do planejamento aqui — do perfil viajante ao roteiro dia a dia.</p>
-
-      <!-- Links dos dias -->
-      <div style="width:85%;margin:0 auto;display:flex;flex-direction:column;gap:0;">
-        <a href="#checklist-viagem" style="display:block;font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-deep);text-align:center;text-decoration:none;padding:11px 0;background:var(--gold-bg);border:1.5px solid var(--gold-deep);margin-bottom:8px;box-sizing:border-box;">Checklist Viagem</a>
-        <a href="#menu-dias" style="display:block;font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--azul);text-align:center;text-decoration:none;padding:11px 0;background:#f8fbff;border:1.5px solid var(--azul);margin-bottom:8px;box-sizing:border-box;">Roteiro Macro</a>
-        <!-- Grid de dias: 2 colunas × 6 linhas -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;">
-          <a href="#dia01" style="display:block;font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--azul);padding:8px 0;background:#f8fbff;border:1.5px solid var(--azul);text-align:center;text-decoration:none;box-sizing:border-box;">Dia 01</a>
-          <a href="#dia01" style="display:block;font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--azul);padding:8px 0;background:#f8fbff;border:1.5px solid var(--azul);text-align:center;text-decoration:none;box-sizing:border-box;">Dia 02</a>
-          <a href="#dia01" style="display:block;font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--azul);padding:8px 0;background:#f8fbff;border:1.5px solid var(--azul);text-align:center;text-decoration:none;box-sizing:border-box;">Dia 03</a>
-          <a href="#dia01" style="display:block;font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--azul);padding:8px 0;background:#f8fbff;border:1.5px solid var(--azul);text-align:center;text-decoration:none;box-sizing:border-box;">Dia 04</a>
-          <a href="#dia01" style="display:block;font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--azul);padding:8px 0;background:#f8fbff;border:1.5px solid var(--azul);text-align:center;text-decoration:none;box-sizing:border-box;">Dia 05</a>
-          <a href="#dia01" style="display:block;font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--azul);padding:8px 0;background:#f8fbff;border:1.5px solid var(--azul);text-align:center;text-decoration:none;box-sizing:border-box;">Dia 06</a>
-          <a href="#dia01" style="display:block;font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--azul);padding:8px 0;background:#f8fbff;border:1.5px solid var(--azul);text-align:center;text-decoration:none;box-sizing:border-box;">Dia 07</a>
-          <a href="#dia01" style="display:block;font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--azul);padding:8px 0;background:#f8fbff;border:1.5px solid var(--azul);text-align:center;text-decoration:none;box-sizing:border-box;">Dia 08</a>
-          <a href="#dia01" style="display:block;font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--azul);padding:8px 0;background:#f8fbff;border:1.5px solid var(--azul);text-align:center;text-decoration:none;box-sizing:border-box;">Dia 09</a>
-          <a href="#dia01" style="display:block;font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--azul);padding:8px 0;background:#f8fbff;border:1.5px solid var(--azul);text-align:center;text-decoration:none;box-sizing:border-box;">Dia 10</a>
-          <a href="#dia01" style="display:block;font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--azul);padding:8px 0;background:#f8fbff;border:1.5px solid var(--azul);text-align:center;text-decoration:none;box-sizing:border-box;">Dia 11</a>
-          <a href="#dia01" style="display:block;font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--azul);padding:8px 0;background:#f8fbff;border:1.5px solid var(--azul);text-align:center;text-decoration:none;box-sizing:border-box;">Dia 12</a>
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
 </section>
@@ -1146,7 +1081,7 @@ section {
 
   </div>
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div></div>
 </section>
@@ -1252,7 +1187,7 @@ section {
 
   </div>
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div></div>
 </section>
@@ -1319,7 +1254,7 @@ section {
   </div>
 
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div></div>
 </section>
@@ -1343,7 +1278,7 @@ section {
 .transf-txt{font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);line-height:1.4;}
 .transf-txt span{font-family:'DM Mono',monospace;font-size:7.5pt;color:rgba(13,45,107,0.5);}
 
-.dest-pill{display:inline-flex;align-items:center;padding:1mm 3mm;border-radius:20px;font-family:'DM Mono',monospace;font-size:7pt;font-weight:600;letter-spacing:0.5px;background:var(--gold);color:var(--paper);}
+.dest-pill{display:inline-flex;align-items:center;padding:1mm 3mm;border-radius:20px;font-family:'DM Mono',monospace;font-size:7pt;font-weight:600;letter-spacing:0.5px;background:linear-gradient(135deg,rgba(13,45,107,0.97),rgba(34,85,168,0.94));color:rgba(255,255,255,0.92);}
 </style>
 
 <!-- ─── LITORAL CLÁSSICO — versão minimalista ─── -->
@@ -1358,8 +1293,8 @@ section {
 
   <!-- título centrado -->
   <div style="text-align:center;padding-bottom:4mm;margin-bottom:4mm;">
-    <span style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:3px;color:var(--gold);display:block;margin-bottom:2.5mm;">01</span>
-    <h2 class="sec-h2" style="margin:0 0 2mm;font-size:26pt;line-height:1.1;"><em>Litoral Clássico Completo</em></h2>
+    <span style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;letter-spacing:3px;color:var(--gold);display:block;margin-bottom:2.5mm;">01</span>
+    <h2 class="sec-h2" style="margin:0 0 2mm;font-size:30pt;line-height:1.1;"><em>Litoral Clássico Completo</em></h2>
     <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:rgba(13,45,107,0.6);margin:0 auto 3mm;max-width:130mm;line-height:1.5;">O máximo do litoral alagoano e pernambucano, com ritmo dinâmico e variedade de destinos.</p>
     <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:1.5mm;">
       <span class="dest-pill" style="font-family:'DM Sans',sans-serif;font-size:8pt;padding:1.5mm 4mm;">Maceió · 3 noites</span>
@@ -1375,96 +1310,96 @@ section {
 
     <!-- coluna esquerda: Maceió + Maragogi -->
     <div>
-        <div style="display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:8pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">MACEIÓ</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
+        <div style="display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">MACEIÓ</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:0.5px solid var(--hairline);">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">01</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">01</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">29/06 · SEG</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Voo GRU › MCZ. Chegada, check-in, passeio na orla de Maceió.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">29/06 · SEG</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Voo GRU › MCZ. Chegada, check-in, passeio na orla de Maceió.</p>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:0.5px solid var(--hairline);">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">02</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">02</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">30/06 · TER</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Pajuçara, jangada nas piscinas naturais, Orla de Ponta Verde, gastronomia local.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">30/06 · TER</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Pajuçara, jangada nas piscinas naturais, Orla de Ponta Verde, gastronomia local.</p>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">03</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">03</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">01/07 · QUA</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Praia do Francês e Barra de São Miguel, passeio de barco pelo manguezal.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">01/07 · QUA</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Praia do Francês e Barra de São Miguel, passeio de barco pelo manguezal.</p>
           </div>
         </div>
-        <div style="margin-top:5mm;display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:8pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">MARAGOGI</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
+        <div style="margin-top:5mm;display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">MARAGOGI</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:0.5px solid var(--hairline);">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">04</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">04</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">02/07 · QUI</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Transfer Maceió › Maragogi ~2h30. Passeio em São Miguel dos Milagres. Check-in.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">02/07 · QUI</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Transfer Maceió › Maragogi ~2h30. Passeio em São Miguel dos Milagres. Check-in.</p>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:0.5px solid var(--hairline);">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">05</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">05</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">03/07 · SEX</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Galés de Maragogi. Piscinas naturais de corais, snorkel, mergulho.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">03/07 · SEX</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Galés de Maragogi. Piscinas naturais de corais, snorkel, mergulho.</p>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">06</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">06</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">04/07 · SÁB</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Maragogi e Antunes.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">04/07 · SÁB</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Maragogi e Antunes.</p>
           </div>
         </div>
     </div>
 
     <!-- coluna direita: Porto de Galinhas + Recife -->
     <div>
-        <div style="display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:8pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">PORTO DE GALINHAS</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
+        <div style="display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">PORTO DE GALINHAS</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:0.5px solid var(--hairline);">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">07</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">07</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">05/07 · DOM</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Transfer Maragogi › Porto de Galinhas ~1h30. Parada em Carneiros. Check-in.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">05/07 · DOM</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Transfer Maragogi › Porto de Galinhas ~1h30. Parada em Carneiros. Check-in.</p>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:0.5px solid var(--hairline);">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">08</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">08</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">06/07 · SEG</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Passeio de jangada nas piscinas naturais, Praia de Muro Alto.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">06/07 · SEG</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Passeio de jangada nas piscinas naturais, Praia de Muro Alto.</p>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">09</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">09</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">07/07 · TER</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Praia de Maracaípe, tarde livre.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">07/07 · TER</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Praia de Maracaípe, tarde livre.</p>
           </div>
         </div>
-        <div style="margin-top:5mm;display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:8pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">RECIFE</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
+        <div style="margin-top:5mm;display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">RECIFE</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:0.5px solid var(--hairline);">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">10</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">10</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">08/07 · QUA</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Transfer Porto de Galinhas › Recife ~1h. Primeiro dia de Fenarte.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">08/07 · QUA</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Transfer Porto de Galinhas › Recife ~1h. Primeiro dia de Fenarte.</p>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:0.5px solid var(--hairline);">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">11</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">11</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">09/07 · QUI</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Fenarte, Olinda (opcional).</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">09/07 · QUI</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Fenarte, Olinda (opcional).</p>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">12</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">12</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">10/07 · SEX</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Voo REC › GRU.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">10/07 · SEX</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Voo REC › GRU.</p>
           </div>
         </div>
     </div>
@@ -1472,7 +1407,7 @@ section {
   </div>
 
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div></div>
 </section>
@@ -1488,8 +1423,8 @@ section {
   </div>
 
   <div style="text-align:center;padding-bottom:4mm;margin-bottom:4mm;">
-    <span style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:3px;color:var(--gold);display:block;margin-bottom:2.5mm;">02</span>
-    <h2 class="sec-h2" style="margin:0 0 2mm;font-size:26pt;line-height:1.1;"><em>Litoral + Sertão</em></h2>
+    <span style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;letter-spacing:3px;color:var(--gold);display:block;margin-bottom:2.5mm;">02</span>
+    <h2 class="sec-h2" style="margin:0 0 2mm;font-size:30pt;line-height:1.1;"><em>Litoral + Sertão</em></h2>
     <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:rgba(13,45,107,0.6);margin:0 auto 3mm;max-width:130mm;line-height:1.5;">Experiência mais aventureira incluindo o Xingó, cânion do Rio São Francisco.</p>
     <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:1.5mm;">
       <span class="dest-pill" style="font-family:'DM Sans',sans-serif;font-size:8pt;padding:1.5mm 4mm;">Maceió · 2 noites</span>
@@ -1503,102 +1438,102 @@ section {
 
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;column-gap:8mm;flex:1;">
     <div>
-        <div style="display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:8pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">MACEIÓ</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
+        <div style="display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">MACEIÓ</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:0.5px solid var(--hairline);">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">01</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">01</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">29/06 · SEG</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Voo GRU › MCZ. Chegada, check-in, passeio na orla de Maceió.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">29/06 · SEG</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Voo GRU › MCZ. Chegada, check-in, passeio na orla de Maceió.</p>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">02</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">02</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">30/06 · TER</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Pajuçara, jangada, Ponta Verde, gastronomia.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">30/06 · TER</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Pajuçara, jangada, Ponta Verde, gastronomia.</p>
           </div>
         </div>
-        <div style="margin-top:5mm;display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:8pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">PIRANHAS / XINGÓ</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
+        <div style="margin-top:5mm;display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">PIRANHAS / XINGÓ</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:0.5px solid var(--hairline);">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">03</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">03</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">01/07 · QUA</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Transfer Maceió › Piranhas ~3h. Lancha privativa no Cânion de Xingó. Paredões rochosos, Gruta do Talhado.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">01/07 · QUA</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Transfer Maceió › Piranhas ~3h. Lancha privativa no Cânion de Xingó. Paredões rochosos, Gruta do Talhado.</p>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">04</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">04</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">02/07 · QUI</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Prainha fluvial, mirantes, vila histórica.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">02/07 · QUI</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Prainha fluvial, mirantes, vila histórica.</p>
           </div>
         </div>
-        <div style="margin-top:5mm;display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:8pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">MARAGOGI</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
+        <div style="margin-top:5mm;display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">MARAGOGI</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:0.5px solid var(--hairline);">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">05</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">05</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">03/07 · SEX</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Transfer Piranhas › Maragogi ~2h30. Check-in, tarde nas Galés.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">03/07 · SEX</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Transfer Piranhas › Maragogi ~2h30. Check-in, tarde nas Galés.</p>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">06</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">06</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">04/07 · SÁB</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Dia completo nas Galés, snorkel.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">04/07 · SÁB</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Dia completo nas Galés, snorkel.</p>
           </div>
         </div>
     </div>
     <div>
-        <div style="display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:8pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">PORTO DE GALINHAS</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
+        <div style="display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">PORTO DE GALINHAS</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:0.5px solid var(--hairline);">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">07</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">07</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">05/07 · DOM</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Transfer Maragogi › Porto de Galinhas ~1h30. Parada em Carneiros.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">05/07 · DOM</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Transfer Maragogi › Porto de Galinhas ~1h30. Parada em Carneiros.</p>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:0.5px solid var(--hairline);">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">08</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">08</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">06/07 · SEG</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Piscinas naturais, Muro Alto.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">06/07 · SEG</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Piscinas naturais, Muro Alto.</p>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">09</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">09</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">07/07 · TER</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Praia de Maracaípe, tarde livre.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">07/07 · TER</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Praia de Maracaípe, tarde livre.</p>
           </div>
         </div>
-        <div style="margin-top:5mm;display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:8pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">RECIFE</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
+        <div style="margin-top:5mm;display:flex;align-items:center;gap:2.5mm;margin-bottom:2.5mm;"><span style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">RECIFE</span><div style="height:0.5px;flex:1;background:var(--gold-line);"></div></div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:0.5px solid var(--hairline);">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">10</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">10</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">08/07 · QUA</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Transfer Porto de Galinhas › Recife ~1h. Primeiro dia de Fenarte.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">08/07 · QUA</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Transfer Porto de Galinhas › Recife ~1h. Primeiro dia de Fenarte.</p>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;border-bottom:0.5px solid var(--hairline);">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">11</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">11</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">09/07 · QUI</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Fenarte, Olinda (opcional).</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">09/07 · QUI</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Fenarte, Olinda (opcional).</p>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:flex-start;padding:2.5mm 0;">
-          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:7.5pt;flex-shrink:0;margin-top:0.3mm;">12</div>
+          <div style="width:8mm;height:8mm;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:8pt;flex-shrink:0;margin-top:0.3mm;">12</div>
           <div>
-            <span style="font-family:'DM Sans',sans-serif;font-size:8.5pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">10/07 · SEX</span>
-            <p style="font-family:'DM Sans',sans-serif;font-size:10.5pt;color:var(--azul);line-height:1.5;margin:0;">Voo REC › GRU.</p>
+            <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:600;letter-spacing:0.5px;color:var(--gold);display:block;margin-bottom:1mm;">10/07 · SEX</span>
+            <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);line-height:1.5;margin:0;">Voo REC › GRU.</p>
           </div>
         </div>
     </div>
   </div>
 
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div></div>
 </section>
@@ -1702,7 +1637,7 @@ section {
   </div>
 
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div></div>
 </section>
@@ -1773,7 +1708,7 @@ section {
   </div>
 
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div></div>
 </section>
@@ -1899,7 +1834,7 @@ section {
   <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.5;margin:0 0 0mm;font-style:italic;">* Estimativa com base nas opções de roteiro e curadoria apresentadas. Passagens não somadas ao total (emissão em milhas).</p>
 
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div>
 </div>
@@ -1956,7 +1891,7 @@ section {
   </div>
 
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div></div>
 
@@ -1968,135 +1903,131 @@ section {
     <span class="ph-right">Vamos Carimbar <span class="ph-cidade">Nordeste</span></span>
   </div>
 
-  <div style="margin-bottom:3.5mm;">
-    <div style="font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:28pt;color:var(--azul);line-height:0.95;letter-spacing:-0.5px;font-variation-settings:'opsz' 144;">As Belezas de Alagoas</div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3mm;align-content:start;">
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4mm;align-content:start;">
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/alagoas/pajucara-piscinas.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
           <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(13,45,107,0.10);color:var(--azul);margin-bottom:1.5mm;">🏙 Maceió Urbana</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Piscinas Naturais de Pajuçara</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Jangada saindo da orla até piscinas rasas e transparentes a 2 km da praia. Clássico obrigatório.</p>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Piscinas Naturais de Pajuçara</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Jangada até piscinas naturais rasas a 2 km da orla.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/alagoas/lagoa-mundau.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
           <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(13,45,107,0.10);color:var(--azul);margin-bottom:1.5mm;">🏙 Maceió Urbana</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Lagoa do Mundaú ao pôr do sol</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Passeio de barco pelos canais dos ilhotes, couvert de frutos do mar na volta. Fotografia linda.</p>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Lagoa do Mundaú</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Passeio de barco pelos ilhotes ao pôr do sol. Fotografia linda.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/alagoas/orla-pajucara.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
           <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(13,45,107,0.10);color:var(--azul);margin-bottom:1.5mm;">🏙 Maceió Urbana</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Orla de Pajuçara & Mercado de Artesanato</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Calçadão animado e artesanato alagoano. Boa pedida para fechar o dia caminhando à beira-mar.</p>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Orla de Pajuçara & Mercado de Artesanato</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Artesanato alagoano e calçadão à beira-mar.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/alagoas/praia-frances.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
-          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(22,101,52,0.10);color:#166534;margin-bottom:1.5mm;">🏖 Litoral Sul · 25–45 min</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Praia do Francês</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Considerada a mais bonita de Maceió — mar calmo e cristalino, boa para snorkel nas pedras.</p>
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
+          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(22,101,52,0.10);color:#166534;margin-bottom:1.5mm;">🏖 Litoral Sul · 35 min</span>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Praia do Francês</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Mar calmo e cristalino. A mais bonita de Maceió.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/alagoas/praia-gunga.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
-          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(22,101,52,0.10);color:#166534;margin-bottom:1.5mm;">🏖 Litoral Sul · 25–45 min</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Praia do Gunga</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Coqueiros inclinados sobre a lagoa, muito fotografada. Acesso de barco ou jipe pelo coqueiralido.</p>
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
+          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(22,101,52,0.10);color:#166534;margin-bottom:1.5mm;">🏖 Litoral Sul · 35 min</span>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Praia do Gunga</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Coqueiros sobre a lagoa. Acesso de barco ou jipe.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/alagoas/barra-sao-miguel.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
-          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(22,101,52,0.10);color:#166534;margin-bottom:1.5mm;">🏖 Litoral Sul · 25–45 min</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Barra de São Miguel</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Barzinhos na beira da lagoa, clima descontraído e pôr do sol tranquilo no litoral sul.</p>
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
+          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(22,101,52,0.10);color:#166534;margin-bottom:1.5mm;">🏖 Litoral Sul · 35 min</span>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Barra de São Miguel</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Barzinhos na lagoa e pôr do sol tranquilo.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/alagoas/dunas-marape.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
-          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(22,101,52,0.10);color:#166534;margin-bottom:1.5mm;">🏖 Litoral Sul · 25–45 min</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Dunas de Marapé</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Visual único no encontro do rio com o mar, cercado por manguezais — paisagem quase lunar.</p>
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
+          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(22,101,52,0.10);color:#166534;margin-bottom:1.5mm;">🏖 Litoral Sul · 35 min</span>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Dunas de Marapé</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Rio encontra o mar entre manguezais.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/alagoas/sao-miguel-milagres.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
-          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(176,141,60,0.15);color:#7c5c00;margin-bottom:1.5mm;">🌴 Litoral Norte · 80–130 km</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">São Miguel dos Milagres e Patacho</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Vila sem sinal e sem multidão. Mar turquesa, areia branca, pousadas charmosas. O achado do roteiro.</p>
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
+          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(176,141,60,0.15);color:#7c5c00;margin-bottom:1.5mm;">🌴 Litoral Norte · 100 km</span>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">São Miguel dos Milagres</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Vila escondida e Patacho com piscinas naturais.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/alagoas/japaratinga.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
-          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(176,141,60,0.15);color:#7c5c00;margin-bottom:1.5mm;">🌴 Litoral Norte · 80–130 km</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Japaratinga</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Praias quase desertas entre São Miguel e Maragogi. Parada obrigatória para fotografias.</p>
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
+          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(176,141,60,0.15);color:#7c5c00;margin-bottom:1.5mm;">🌴 Litoral Norte · 100 km</span>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Japaratinga</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Praias desertas entre São Miguel e Maragogi.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/alagoas/praia-antunes.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
-          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(176,141,60,0.15);color:#7c5c00;margin-bottom:1.5mm;">🌴 Litoral Norte · 80–130 km</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Praia de Antunes</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Banco de areia acessível na maré baixa e mar azul-turquesa calmo — tranquilidade total.</p>
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
+          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(176,141,60,0.15);color:#7c5c00;margin-bottom:1.5mm;">🌴 Litoral Norte · 100 km</span>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Praia de Antunes</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Banco de areia na maré baixa.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/alagoas/carro-quebrado.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
-          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(176,141,60,0.15);color:#7c5c00;margin-bottom:1.5mm;">🌴 Litoral Norte · 80–130 km</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Praia do Carro Quebrado</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Imensas falésias coloridas na Barra de Santo Antônio. Atmosfera intocada e muito fotogênica.</p>
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
+          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(176,141,60,0.15);color:#7c5c00;margin-bottom:1.5mm;">🌴 Litoral Norte · 100 km</span>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Praia do Carro Quebrado</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Falésias coloridas na Barra de Santo Antônio.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/alagoas/gales-maragogi.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
           <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(176,141,60,0.15);color:#7c5c00;margin-bottom:1.5mm;">🌴 Litoral Norte · 130 km</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Galés de Maragogi</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Piscinas naturais de barco com visibilidade de até 10m. Em julho o mar fica mais calmo — melhores condições do ano. Reservar com antecedência.</p>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Galés de Maragogi</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Piscinas naturais com visibilidade de 10m.</p>
         </div>
       </div>
   </div>
 
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div>
 </div>
@@ -2117,42 +2048,42 @@ section {
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4mm;align-content:start;">
 
     <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-      <div style="height:55mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+      <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
         <img src="./assets/atracoes/alagoas/canions-sao-francisco.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
       </div>
-      <div style="padding:3mm 3.5mm 3mm;flex:1;display:flex;flex-direction:column;">
+      <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
         <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(120,53,15,0.10);color:#7c2d12;margin-bottom:2mm;">🚢 Piranhas · AL</span>
-        <div style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Cânions do São Francisco</div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:9pt;color:var(--azul);opacity:0.75;line-height:1.45;margin:0;">Catamarã entre gigantescos paredões rochosos — alguns chegam a 30m de altura. Um dos passeios mais impressionantes do Nordeste. Saída de Piranhas.</p>
+        <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Cânions do São Francisco</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.45;margin:0;">Catamarã entre gigantescos paredões rochosos — alguns chegam a 30m de altura. Um dos passeios mais impressionantes do Nordeste. Saída de Piranhas.</p>
       </div>
     </div>
 
     <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-      <div style="height:55mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+      <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
         <img src="./assets/atracoes/alagoas/foz-sao-francisco.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
       </div>
-      <div style="padding:3mm 3.5mm 3mm;flex:1;display:flex;flex-direction:column;">
+      <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
         <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(120,53,15,0.10);color:#7c2d12;margin-bottom:2mm;">🚢 Piaçabuçu · AL</span>
-        <div style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Foz do Rio São Francisco</div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:9pt;color:var(--azul);opacity:0.75;line-height:1.45;margin:0;">Passeio de barco partindo de Piaçabuçu até o encontro do "Velho Chico" com o Atlântico — natureza bruta, dunas e emoção de ver o rio encontrar o mar.</p>
+        <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Foz do Rio São Francisco</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.45;margin:0;">Passeio de barco partindo de Piaçabuçu até o encontro do "Velho Chico" com o Atlântico — natureza bruta, dunas e emoção de ver o rio encontrar o mar.</p>
       </div>
     </div>
 
     <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-      <div style="height:55mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+      <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
         <img src="./assets/atracoes/alagoas/penedo.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
       </div>
-      <div style="padding:3mm 3.5mm 3mm;flex:1;display:flex;flex-direction:column;">
+      <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
         <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(120,53,15,0.10);color:#7c2d12;margin-bottom:2mm;">🏛 Penedo · AL</span>
-        <div style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Penedo</div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:9pt;color:var(--azul);opacity:0.75;line-height:1.45;margin:0;">Cidade colonial barroca às margens do São Francisco — igrejas do século XVII, casarões históricos e passeio de barco para Neópolis (SE). Uma das cidades mais bem preservadas do Nordeste.</p>
+        <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Penedo</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.45;margin:0;">Cidade colonial barroca às margens do São Francisco — igrejas do século XVII, casarões históricos e passeio de barco para Neópolis (SE). Uma das cidades mais bem preservadas do Nordeste.</p>
       </div>
     </div>
 
   </div>
 
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div>
 </div>
@@ -2201,7 +2132,7 @@ section {
   </div>
 
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div></div>
 
@@ -2215,135 +2146,131 @@ section {
     <span class="ph-right">Vamos Carimbar <span class="ph-cidade">Nordeste</span></span>
   </div>
 
-  <div style="margin-bottom:3.5mm;">
-    <div style="font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:28pt;color:var(--azul);line-height:0.95;letter-spacing:-0.5px;font-variation-settings:'opsz' 144;">As Belezas de Pernambuco</div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3mm;align-content:start;">
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4mm;align-content:start;">
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/pernambuco/porto-galinhas-piscinas.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
-          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(13,45,107,0.10);color:var(--azul);margin-bottom:1.5mm;">🏖 Litoral Sul · 60–110 km</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Piscinas Naturais de Porto de Galinhas</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Jangada pelos recifes de coral até piscinas cristalinas de água morna. O ícone de Pernambuco — obrigatório.</p>
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
+          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(13,45,107,0.10);color:var(--azul);margin-bottom:1.5mm;">🏖 Litoral Sul · 85 km</span>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Porto de Galinhas</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Jangada pelos recifes até piscinas cristalinas.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/pernambuco/muro-alto.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
-          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(13,45,107,0.10);color:var(--azul);margin-bottom:1.5mm;">🏖 Litoral Sul · 60–110 km</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Praia de Muro Alto</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Mar calmo protegido pelo recife forma uma piscina natural gigante. Mais tranquila e menos lotada que Porto.</p>
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
+          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(13,45,107,0.10);color:var(--azul);margin-bottom:1.5mm;">🏖 Litoral Sul · 85 km</span>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Praia de Muro Alto</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Piscina natural gigante. Mais tranquila que Porto de Galinhas.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/pernambuco/serrambi.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
-          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(13,45,107,0.10);color:var(--azul);margin-bottom:1.5mm;">🏖 Litoral Sul · 60–110 km</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Praia de Serrambi</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Vila de pescadores, praias quase desertas e piscinas naturais sem multidão. Escondida e muito fotogênica.</p>
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
+          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(13,45,107,0.10);color:var(--azul);margin-bottom:1.5mm;">🏖 Litoral Sul · 85 km</span>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Praia de Serrambi</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Praias desertas e piscinas naturais.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/pernambuco/buggy-praias-sul.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
-          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(13,45,107,0.10);color:var(--azul);margin-bottom:1.5mm;">🏖 Litoral Sul · 60–110 km</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Buggy pelas praias sul</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Passeio clássico por Maracaípe, Pontal, Cupe e serras — conecta as melhores praias do litoral sul de PE.</p>
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
+          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(13,45,107,0.10);color:var(--azul);margin-bottom:1.5mm;">🏖 Litoral Sul · 85 km</span>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Buggy pelas praias sul</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Conecta Maracaípe, Pontal e Cupe pelas melhores praias do litoral sul.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/pernambuco/carneiros.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
-          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(13,45,107,0.10);color:var(--azul);margin-bottom:1.5mm;">🏖 Litoral Sul · 60–110 km</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Praia dos Carneiros</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Igrejinha branca à beira do mar, piscinas naturais e frutos do mar sob os coqueiros. Um dos cartões-postais mais bonitos de PE.</p>
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
+          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(13,45,107,0.10);color:var(--azul);margin-bottom:1.5mm;">🏖 Litoral Sul · 85 km</span>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Praia dos Carneiros</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Igrejinha à beira do mar e piscinas naturais sob os coqueiros.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/pernambuco/recife-antigo.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
           <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(22,101,52,0.10);color:#166534;margin-bottom:1.5mm;">🏙 Recife</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Recife Antigo + Marco Zero</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Centro histórico à beira do Rio Capibaribe, ponte Maurício de Nassau e arquitetura holandesa do século XVII.</p>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Recife Antigo + Marco Zero</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Centro histórico, ponte Maurício de Nassau e arquitetura holandesa.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/pernambuco/instituto-brennand.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
           <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(22,101,52,0.10);color:#166534;margin-bottom:1.5mm;">🏙 Recife</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Instituto Ricardo Brennand</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Castelo com acervo de arte europeia, obras de Frans Post e jardins impecáveis. Um dos melhores museus do Brasil.</p>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Instituto Ricardo Brennand</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Castelo com arte europeia, Frans Post e jardins impecáveis.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/pernambuco/fenarte.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
           <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(22,101,52,0.10);color:#166534;margin-bottom:1.5mm;">🏙 Recife</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Fenarte — Julho ⭐</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Maior feira de artesanato do Brasil, no Centro de Convenções. Em julho é a edição especial — Danila vai enlouquecer aqui.</p>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Fenarte — Julho ⭐</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Maior feira de artesanato do Brasil. Julho = edição especial.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/pernambuco/boa-viagem.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
           <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(22,101,52,0.10);color:#166534;margin-bottom:1.5mm;">🏙 Recife</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Orla de Boa Viagem</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Praia urbana mais animada de Recife, com restaurantes à beira-mar e boa vida noturna ao longo da orla.</p>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Orla de Boa Viagem</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Orla animada com restaurantes à beira-mar e vida noturna.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/pernambuco/olinda-historico.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
           <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(176,141,60,0.15);color:#7c5c00;margin-bottom:1.5mm;">✨ Olinda · 15 min</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Centro Histórico de Olinda (UNESCO)</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Ladeiras coloniais, ateliês de artistas, igrejas barrocas do século XVII. Uma das cidades mais bonitas do Brasil.</p>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Centro Histórico de Olinda</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Ladeiras coloniais, ateliês e igrejas barrocas do século XVII.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/pernambuco/alto-da-se.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
           <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(176,141,60,0.15);color:#7c5c00;margin-bottom:1.5mm;">✨ Olinda · 15 min</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Alto da Sé</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Melhor vista panorâmica de Olinda com o Recife ao fundo, feira de artesanato e pôr do sol imperdível.</p>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Alto da Sé</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Vista panorâmica de Olinda e Recife. Pôr do sol imperdível.</p>
         </div>
       </div>
       <div style="background:#ffffff;border-radius:6px;overflow:hidden;border:1px solid rgba(13,45,107,0.1);display:flex;flex-direction:column;">
-        <div style="height:24mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
+        <div style="height:32mm;overflow:hidden;background:var(--paper);flex-shrink:0;">
           <img src="./assets/atracoes/pernambuco/ilha-itamaraca.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'">
         </div>
-        <div style="padding:2mm 3mm 2.5mm;flex:1;display:flex;flex-direction:column;">
+        <div style="padding:2.5mm;flex:1;display:flex;flex-direction:column;">
           <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:1px 3.5mm;border-radius:20px;background:rgba(120,53,15,0.10);color:#7c2d12;margin-bottom:1.5mm;">🌴 Litoral Norte · ~50 km</span>
-          <div style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1mm;">Ilha de Itamaracá</div>
-          <p style="font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Fortaleza Orange do século XVII, praias tranquilas e o Centro IBAMA de reabilitação do peixe-boi. Roteiro histórico e natural.</p>
+          <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);line-height:1.2;margin-bottom:1.5mm;">Ilha de Itamaracá</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.75;line-height:1.4;margin:0;">Fortaleza Orange do século XVII, praias tranquilas e peixe-boi.</p>
         </div>
       </div>
   </div>
 
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div>
 </div>
@@ -2369,7 +2296,7 @@ section {
   </div>
 
   <div style="display:flex;align-items:center;gap:2.5mm;margin-bottom:3mm;">
-    <span style="font-family:'DM Sans',sans-serif;font-size:8pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">ALAGOAS</span>
+    <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">ALAGOAS</span>
     <div style="height:0.5px;flex:1;background:var(--gold-line);"></div>
   </div>
 
@@ -2382,8 +2309,8 @@ section {
           onerror="this.parentElement.style.background='var(--paper)'">
       </div>
       <div style="padding:3mm 4mm;">
-        <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Sururu ao Coco</div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">O molusco símbolo do estado, cozido na própria concha com leite de coco, azeite de dendê e coentro.</p>
+        <div style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Sururu ao Coco</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">O molusco símbolo do estado, cozido na própria concha com leite de coco, azeite de dendê e coentro.</p>
       </div>
     </div>
 
@@ -2394,8 +2321,8 @@ section {
           onerror="this.parentElement.style.background='var(--paper)'">
       </div>
       <div style="padding:3mm 4mm;">
-        <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Chiclete de Camarão</div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">Camarões salteados mergulhados em uma mistura cremosa de requeijão, creme de leite e queijos gratinados.</p>
+        <div style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Chiclete de Camarão</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">Camarões salteados mergulhados em uma mistura cremosa de requeijão, creme de leite e queijos gratinados.</p>
       </div>
     </div>
 
@@ -2406,8 +2333,8 @@ section {
           onerror="this.parentElement.style.background='var(--paper)'">
       </div>
       <div style="padding:3mm 4mm;">
-        <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Peixada Alagoana</div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">Peixe fresco (geralmente robalo ou cioba) cozido com legumes, batata, cenoura e ovos, acompanhado de pirão.</p>
+        <div style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Peixada Alagoana</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">Peixe fresco (geralmente robalo ou cioba) cozido com legumes, batata, cenoura e ovos, acompanhado de pirão.</p>
       </div>
     </div>
 
@@ -2418,14 +2345,14 @@ section {
           onerror="this.parentElement.style.background='var(--paper)'">
       </div>
       <div style="padding:3mm 4mm;">
-        <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Caldo de Kenga</div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">Famoso caldo feito com frango, macaxeira e bacon — prato de conforto típico das feiras e mercados alagoanos.</p>
+        <div style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Caldo de Kenga</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">Famoso caldo feito com frango, macaxeira e bacon — prato de conforto típico das feiras e mercados alagoanos.</p>
       </div>
     </div>
 
   </div>
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div></div>
 
@@ -2442,7 +2369,7 @@ section {
   </div>
 
   <div style="display:flex;align-items:center;gap:2.5mm;margin-bottom:3mm;">
-    <span style="font-family:'DM Sans',sans-serif;font-size:8pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">PERNAMBUCO</span>
+    <span style="font-family:'DM Sans',sans-serif;font-size:10pt;font-weight:700;letter-spacing:2.5px;color:var(--gold);white-space:nowrap;">PERNAMBUCO</span>
     <div style="height:0.5px;flex:1;background:var(--gold-line);"></div>
   </div>
 
@@ -2455,8 +2382,8 @@ section {
           onerror="this.parentElement.style.background='var(--paper)'">
       </div>
       <div style="padding:3mm 4mm;flex:1;">
-        <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Cartola</div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">Sobremesa típica recifense feita com banana frita, queijo manteiga, açúcar e canela — simples e inesquecível.</p>
+        <div style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Cartola</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">Sobremesa típica recifense feita com banana frita, queijo manteiga, açúcar e canela — simples e inesquecível.</p>
       </div>
     </div>
 
@@ -2467,8 +2394,8 @@ section {
           onerror="this.parentElement.style.background='var(--paper)'">
       </div>
       <div style="padding:3mm 4mm;flex:1;">
-        <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Bolo de Rolo</div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">Patrimônio imaterial de Pernambuco — massa finíssima enrolada com doce de goiaba derretido.</p>
+        <div style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Bolo de Rolo</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">Patrimônio imaterial de Pernambuco — massa finíssima enrolada com doce de goiaba derretido.</p>
       </div>
     </div>
 
@@ -2479,8 +2406,8 @@ section {
           onerror="this.parentElement.style.background='var(--paper)'">
       </div>
       <div style="padding:3mm 4mm;flex:1;">
-        <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Carne de Sol e Charque</div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">Cortes bovinos curados, servidos com macaxeira, feijão verde ou farofa — presença obrigatória nas mesas do sertão.</p>
+        <div style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Carne de Sol e Charque</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">Cortes bovinos curados, servidos com macaxeira, feijão verde ou farofa — presença obrigatória nas mesas do sertão.</p>
       </div>
     </div>
 
@@ -2491,14 +2418,14 @@ section {
           onerror="this.parentElement.style.background='var(--paper)'">
       </div>
       <div style="padding:3mm 4mm;flex:1;">
-        <div style="font-family:'DM Sans',sans-serif;font-size:11pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Chambaril</div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">Cozido robusto feito com ossobuco bovino, servido com pirão — prato de conforto da culinária pernambucana.</p>
+        <div style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:700;color:var(--azul);margin-bottom:1.5mm;">Chambaril</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:12pt;color:var(--azul);opacity:0.8;line-height:1.45;margin:0;">Cozido robusto feito com ossobuco bovino, servido com pirão — prato de conforto da culinária pernambucana.</p>
       </div>
     </div>
 
   </div>
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div></div>
 
@@ -2567,7 +2494,7 @@ section {
   </div>
 
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
     <span class="pf-num">20</span>
   </div>
 </div>
@@ -2594,31 +2521,31 @@ section {
     <div style="flex:1;display:flex;flex-direction:column;gap:1.5mm;">
       <div>
         <div style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--azul);margin-bottom:1mm;">Praia & Sol</div>
-        <div style="background:#ffffff;box-shadow:0 1px 8px rgba(0,0,0,0.05);"><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Biquíni / maio (leve, várias peças)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Saída de praia ou canga</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Protetor solar FPS 50+ (essencial!)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Protetor labial com FPS</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Chapéu de aba larga ou boné</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Óculos de sol</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Toalha de praia</span></div></div>
+        <div style="background:#ffffff;box-shadow:0 1px 8px rgba(0,0,0,0.05);"><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Biquíni / maio (leve, várias peças)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Saída de praia ou canga</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Protetor solar FPS 50+ (essencial!)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Protetor labial com FPS</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Chapéu de aba larga ou boné</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Óculos de sol</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Toalha de praia</span></div></div>
       </div>
-      <div>
+      <div style="margin-top:3mm;">
         <div style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--azul);margin-bottom:1mm;">Eletrônicos</div>
-        <div style="background:#ffffff;box-shadow:0 1px 8px rgba(0,0,0,0.05);"><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Celular + carregador</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Power bank carregado</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Câmera fotográfica</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Fone de ouvido</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Cabo USB extra</span></div></div>
+        <div style="background:#ffffff;box-shadow:0 1px 8px rgba(0,0,0,0.05);"><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Celular + carregador</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Power bank carregado</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Câmera fotográfica</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Fone de ouvido</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Cabo USB extra</span></div></div>
       </div>
     </div>
     <div style="flex:1;display:flex;flex-direction:column;gap:1.5mm;">
       <div>
         <div style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--azul);margin-bottom:1mm;">Roupas</div>
-        <div style="background:#ffffff;box-shadow:0 1px 8px rgba(0,0,0,0.05);"><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Vestidos leves / saias</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Blusas de tecido leve</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Shorts</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Calças (jantar e feira)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Roupa Social (feira)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Roupas íntimas</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Meias (para o avião)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Jaqueta (chuva à noite)</span></div></div>
+        <div style="background:#ffffff;box-shadow:0 1px 8px rgba(0,0,0,0.05);"><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Vestidos leves / saias</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Blusas de tecido leve</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Shorts</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Calças (jantar e feira)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Roupa Social (feira)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Roupas íntimas</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Meias (para o avião)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Jaqueta (chuva à noite)</span></div></div>
       </div>
-      <div>
+      <div style="margin-top:3mm;">
         <div style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--azul);margin-bottom:1mm;">Saúde</div>
-        <div style="background:#ffffff;box-shadow:0 1px 8px rgba(0,0,0,0.05);"><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Repelente (essencial no Nordeste)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Antidiarreico</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Analgésico (paracetamol)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Curativos e esparadrapo</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Medicamentos pessoais</span></div></div>
+        <div style="background:#ffffff;box-shadow:0 1px 8px rgba(0,0,0,0.05);"><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Repelente (essencial no Nordeste)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Antidiarreico</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Analgésico (paracetamol)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Curativos e esparadrapo</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Medicamentos pessoais</span></div></div>
       </div>
     </div>
     <div style="flex:1;display:flex;flex-direction:column;gap:1.5mm;">
       <div>
         <div style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--azul);margin-bottom:1mm;">Calçados</div>
-        <div style="background:#ffffff;box-shadow:0 1px 8px rgba(0,0,0,0.05);"><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Chinelo (praia)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Sandália ou rasteirinha</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Tênis leve (Olinda, caminhadas)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Sapato para jantares (opcional)</span></div></div>
+        <div style="background:#ffffff;box-shadow:0 1px 8px rgba(0,0,0,0.05);"><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Chinelo (praia)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Sandália ou rasteirinha</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Tênis leve (Olinda, caminhadas)</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Sapato para jantares (opcional)</span></div></div>
       </div>
       <div>
         <div style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--azul);margin-bottom:1mm;">Higiene & Extras</div>
-        <div style="background:#ffffff;box-shadow:0 1px 8px rgba(0,0,0,0.05);"><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Necessaire organizada</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Desodorante</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Shampoo + condicionador</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Hidratante labial e corporal</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Maquiagem leve</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Absorventes / itens femininos</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Guarda-chuva compacto</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Bolsa de praia / sacola extra</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Garrafa reutilizável</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">Secador / chapinha</span></div></div>
+        <div style="background:#ffffff;box-shadow:0 1px 8px rgba(0,0,0,0.05);"><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Necessaire organizada</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Desodorante</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Shampoo + condicionador</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Hidratante labial e corporal</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Maquiagem leve</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Absorventes / itens femininos</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Guarda-chuva compacto</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Bolsa de praia / sacola extra</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Garrafa reutilizável</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">Secador / chapinha</span></div></div>
       </div>
     </div>
   </div>
@@ -2627,13 +2554,13 @@ section {
   <div style="margin-top:2mm;">
     <div style="font-family:'DM Sans',sans-serif;font-size:9pt;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--azul);margin-bottom:1mm;">✏️ Minhas adições</div>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:#ffffff;box-shadow:0 1px 8px rgba(0,0,0,0.05);">
-      <div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">&nbsp;</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">&nbsp;</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">&nbsp;</span></div></div>
-      <div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">&nbsp;</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">&nbsp;</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">&nbsp;</span></div></div>
-      <div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">&nbsp;</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">&nbsp;</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10pt;color:var(--ink);">&nbsp;</span></div></div>
+      <div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">&nbsp;</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">&nbsp;</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">&nbsp;</span></div></div>
+      <div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">&nbsp;</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">&nbsp;</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">&nbsp;</span></div></div>
+      <div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">&nbsp;</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;border-bottom:0.5px solid var(--hairline);"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">&nbsp;</span></div><div style="display:flex;align-items:center;gap:2.5mm;padding:1.5mm 3mm;"><div style="width:3.5mm;height:3.5mm;border:0.5px solid #d4cbb8;flex-shrink:0;"></div><span style="font-family:'DM Sans',sans-serif;font-size:11pt;color:var(--ink);">&nbsp;</span></div></div>
     </div>
   </div>
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
     <span class="pf-num">22</span>
   </div>
 </div>
@@ -2668,7 +2595,7 @@ section {
   </div>
 
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu">Menu Principal</a>
   </div>
 </div>
 </div>
@@ -2739,7 +2666,7 @@ section {
 
   </div>
   <div class="pf">
-    <a href="#menu-pratico" class="pf-menu" style="color:rgba(255,255,255,0.6);">Menu Principal</a>
+    <a href="#menu-v2" class="pf-menu" style="color:rgba(255,255,255,0.6);">Menu Principal</a>
   </div>
 </div>
 
