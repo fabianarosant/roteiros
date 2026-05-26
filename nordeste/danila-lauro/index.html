@@ -444,7 +444,29 @@ section {
   }
   section { page-break-before: auto !important; margin: 0 !important; border: none !important; }
   .fact, .grid-3 { page-break-inside: avoid !important; break-inside: avoid !important; }
+  .topbar, .nav-drawer, .nav-overlay { display: none !important; }
 }
+
+/* ══ TOPBAR + HAMBURGER (screen only) ══ */
+.topbar { position: fixed; top: 0; left: 0; right: 0; height: 52px; background: rgba(13,45,107,0.42); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid rgba(255,255,255,0.10); transition: background 0.3s; }
+.topbar:hover { background: rgba(13,45,107,0.62); }
+.topbar-logo { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.65); letter-spacing: 3px; text-transform: uppercase; text-decoration: none; }
+.topbar-right { display: flex; align-items: center; gap: 12px; }
+.topbar-destino { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.60); letter-spacing: 2px; text-transform: uppercase; }
+.hamburger-btn { width: 44px; height: 44px; background: none; border: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 0; border-radius: 6px; transition: background 0.2s; -webkit-tap-highlight-color: transparent; touch-action: manipulation; user-select: none; -webkit-user-select: none; }
+.hamburger-btn:hover { background: rgba(255,255,255,0.10); }
+.hamburger-btn span { display: block; width: 22px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+.hamburger-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger-btn.open span:nth-child(2) { opacity: 0; }
+.hamburger-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-drawer { position: fixed; top: 52px; right: 0; width: 250px; height: calc(100vh - 52px); background: rgba(13,45,107,0.58); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); border-left: 1px solid rgba(255,255,255,0.08); z-index: 199; overflow-y: auto; padding: 12px 0 32px; transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); box-shadow: -4px 0 32px rgba(0,0,0,0.28); }
+.nav-drawer.open { transform: translateX(0); }
+.nav-overlay { position: fixed; inset: 52px 0 0 0; background: rgba(0,0,0,0.22); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); z-index: 198; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+.nav-overlay.open { opacity: 1; pointer-events: all; }
+.nav-section { display: block; padding: 12px 20px 6px; font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+.nav-link { display: block; padding: 8px 20px; color: rgba(255,255,255,0.80); text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.5px; transition: color 0.15s, background 0.15s; border-left: 2px solid transparent; }
+.nav-link:hover { color: white; background: rgba(255,255,255,0.07); border-left-color: var(--gold); }
+.nav-link.destaque { color: var(--gold); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: 11px; padding: 10px 20px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 4px; }
 
 /* ══════════════════════════════════════════════
    PH-CIDADE — nome da cidade no cabeçalho de cada página
@@ -838,6 +860,46 @@ section {
 </head>
 <body>
 
+<!-- TOPBAR + HAMBURGER (screen only — hidden on print) -->
+<div class="topbar">
+  <span class="topbar-logo">Vamos Carimbar</span>
+  <div class="topbar-right">
+    <span class="topbar-destino">Danila · Jul 2026</span>
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</div>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<nav class="nav-drawer" id="navDrawer">
+  <span class="nav-section">Planejamento</span>
+  <a class="nav-link" href="#nossa-rota">Nossa Rota</a>
+  <a class="nav-link" href="#perfil-viajante">Perfil: Danila</a>
+  <a class="nav-link" href="#opcoes-roteiro">Opções de Roteiro</a>
+  <a class="nav-link" href="#curadoria-voos">Curadoria Voos</a>
+  <a class="nav-link" href="#curadoria-hospedagens">Curadoria Hospedagens</a>
+  <a class="nav-link" href="#sobre-o-destino">Sobre o Destino</a>
+  <a class="nav-link" href="#guia-gastronomico">Gastronomia</a>
+  <a class="nav-link" href="#financeiro">Financeiro</a>
+  <span class="nav-section">Roteiro</span>
+  <a class="nav-link" href="#checklist-viagem">Checklist Viagem</a>
+  <a class="nav-link" href="#menu-dias">Roteiro Macro</a>
+  <a class="nav-link" href="#dia01">Dia 01</a>
+  <a class="nav-link" href="#dia01">Dia 02</a>
+  <a class="nav-link" href="#dia01">Dia 03</a>
+  <a class="nav-link" href="#dia01">Dia 04</a>
+  <a class="nav-link" href="#dia01">Dia 05</a>
+  <a class="nav-link" href="#dia01">Dia 06</a>
+  <a class="nav-link" href="#dia01">Dia 07</a>
+  <a class="nav-link" href="#dia01">Dia 08</a>
+  <a class="nav-link" href="#dia01">Dia 09</a>
+  <a class="nav-link" href="#dia01">Dia 10</a>
+  <a class="nav-link" href="#dia01">Dia 11</a>
+  <a class="nav-link" href="#dia01">Dia 12</a>
+</nav>
+
 <!-- ══════════════════════════════════════════
      CAPA — página 1
      CUSTOMIZÁVEL: foto, nome da cidade, badge de dias
@@ -886,6 +948,79 @@ section {
 </div>
 </section>
 
+
+<!-- ══════════════════════════════════════════
+     MENU V2 — versão dark glass (teste)
+══════════════════════════════════════════ -->
+<section>
+<div id="menu-v2" class="pagina" style="padding:0;overflow:hidden;position:relative;">
+  <img src="./assets/capas/menu-pratico-bg.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;">
+  <div style="position:relative;z-index:2;width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+
+    <!-- Wrapper com logo posicionado acima -->
+    <div style="position:relative;width:172mm;margin-top:14mm;">
+
+      <!-- Bolinha com logo -->
+      <div style="position:absolute;top:-18mm;left:50%;transform:translateX(-50%);width:34mm;height:34mm;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.12);padding:1.5mm;z-index:3;">
+        <img src="./assets/branding/logo-vamos-carimbar-azul.png" style="width:30mm;height:30mm;object-fit:contain;">
+      </div>
+
+      <!-- Retângulo azul -->
+      <div style="background:linear-gradient(135deg,rgba(13,45,107,0.97) 0%,rgba(26,74,158,0.94) 55%,rgba(34,85,168,0.94) 100%);border-radius:18px;padding:16mm 12mm 14mm;box-sizing:border-box;box-shadow:0 14px 52px rgba(0,0,0,0.38);">
+
+        <!-- Cabeçalho centralizado -->
+        <div style="text-align:center;margin-top:8mm;margin-bottom:8mm;">
+          <span style="font-family:'Fraunces',serif;font-style:italic;font-weight:350;font-size:54pt;color:#ffffff;line-height:0.92;letter-spacing:-1px;font-variation-settings:'opsz' 144,'wght' 350;display:block;">Menu Principal</span>
+          <div style="margin-top:4mm;">
+            <p style="font-family:'DM Sans',sans-serif;font-size:14pt;font-weight:500;color:rgba(255,255,255,0.88);margin:0 0 1mm;line-height:1.2;">Seja bem-vinda,</p>
+            <p style="font-family:'Pinyon Script',cursive;font-size:32pt;color:#ffffff;margin:0;line-height:1.0;">Danila Lauro!</p>
+          </div>
+        </div>
+
+        <!-- Layout 2 colunas: links esquerdo | dias direito -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 8mm;">
+
+          <!-- Coluna esquerda: links de seção -->
+          <div style="padding-right:8mm;">
+            <div style="display:flex;flex-direction:column;">
+              <a href="#nossa-rota"            style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Nossa Rota</a>
+              <a href="#perfil-viajante"       style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Perfil: Danila</a>
+              <a href="#opcoes-roteiro"        style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Opções de Roteiro</a>
+              <a href="#curadoria-voos"        style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Curadoria Voos</a>
+              <a href="#curadoria-hospedagens" style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Curadoria Hospedagens</a>
+              <a href="#sobre-o-destino"       style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Sobre o Destino</a>
+              <a href="#guia-gastronomico"     style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Gastronomia</a>
+              <a href="#financeiro"            style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;text-transform:uppercase;letter-spacing:1px;">Financeiro</a>
+            </div>
+          </div>
+
+          <!-- Coluna direita: checklist + dias -->
+          <div style="display:flex;flex-direction:column;">
+            <!-- Links roteiro -->
+            <a href="#checklist-viagem" style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.12);text-transform:uppercase;letter-spacing:1px;">Checklist Viagem</a>
+            <a href="#menu-dias"        style="font-family:'DM Sans',sans-serif;font-size:13pt;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:3.5mm 0;border-bottom:0.5px solid rgba(255,255,255,0.20);text-transform:uppercase;letter-spacing:1px;">Roteiro Macro</a>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5mm;margin-top:3.5mm;">
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 01</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 02</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 03</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 04</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 05</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 06</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 07</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 08</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 09</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 10</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 11</a>
+              <a href="#dia01" style="font-family:'DM Sans',sans-serif;font-size:12pt;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:2.5mm 0;border:0.5px solid rgba(255,255,255,0.20);text-align:center;letter-spacing:1px;border-radius:4px;text-transform:uppercase;">Dia 12</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
 <!-- ══════════════════════════════════════════
      MENU PRÁTICO — página 3
@@ -1655,7 +1790,7 @@ section {
   </div>
 
   <div style="margin-bottom:5mm;">
-    <div style="font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:34pt;color:var(--azul);line-height:0.95;letter-spacing:-0.5px;font-variation-settings:'opsz' 144;margin-bottom:1.5mm;">Estimativa Financeira</div>
+    <div style="font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:38pt;color:var(--azul);line-height:0.95;letter-spacing:-0.5px;font-variation-settings:'opsz' 144;margin-bottom:1.5mm;">Estimativa Financeira</div>
     <p style="font-family:'DM Sans',sans-serif;font-size:9.5pt;color:var(--azul);opacity:0.55;margin:0;">Nordeste · Julho 2026 · valores estimados, sujeitos a atualização</p>
   </div>
 
@@ -1757,7 +1892,7 @@ section {
 
   <!-- Total -->
   <div style="background:var(--azul);border-radius:6px;padding:3.5mm 4mm;display:grid;grid-template-columns:1fr 38mm;align-items:center;margin-bottom:3mm;">
-    <span style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">TOTAL ESTIMADO</span>
+    <span style="font-family:'DM Sans',sans-serif;font-size:9.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ffffff;">TOTAL ESTIMADO</span>
     <span style="font-family:'Fraunces',serif;font-style:italic;font-size:18pt;font-weight:300;color:#ffffff;text-align:right;font-variation-settings:'opsz' 72;">R$ {{TOTAL}}</span>
   </div>
 
@@ -2711,6 +2846,30 @@ section {
       el.addEventListener('input', salvar);
     });
   });
+})();
+</script>
+
+<script>
+(function() {
+  function init() {
+    var btn = document.getElementById('hamburgerBtn');
+    var drawer = document.getElementById('navDrawer');
+    var overlay = document.getElementById('navOverlay');
+    if (!btn || !drawer || !overlay) return;
+    function close() { btn.classList.remove('open'); drawer.classList.remove('open'); overlay.classList.remove('open'); }
+    function open() { btn.classList.add('open'); drawer.classList.add('open'); overlay.classList.add('open'); }
+    function toggle() { drawer.classList.contains('open') ? close() : open(); }
+    btn.addEventListener('touchend', function(e) { e.preventDefault(); e.stopPropagation(); toggle(); });
+    btn.addEventListener('click', function(e) { e.stopPropagation(); toggle(); });
+    overlay.addEventListener('touchend', function(e) { e.preventDefault(); close(); });
+    overlay.addEventListener('click', close);
+    drawer.querySelectorAll('a.nav-link').forEach(function(l) {
+      l.addEventListener('touchend', function(e) { e.stopPropagation(); setTimeout(close, 150); });
+      l.addEventListener('click', function() { setTimeout(close, 150); });
+    });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+  }
+  document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', init) : init();
 })();
 </script>
 
