@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Fernanda e Isabella · Lago di Como · Jun 2026</name>
+
+  <!-- ═══ ESTILOS ═══ -->
+
+  <Style id="s_hotel">
+    <IconStyle>
+      <color>ffc9a227</color>
+      <scale>1.2</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/lodging.png</href></Icon>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+
+  <Style id="s_porto">
+    <IconStyle>
+      <color>ff1a3a5c</color>
+      <scale>1.2</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/ferry.png</href></Icon>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+
+  <Style id="s_atracao">
+    <IconStyle>
+      <color>ff2a6a3a</color>
+      <scale>1.2</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/star.png</href></Icon>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+
+  <Style id="s_restaurante">
+    <IconStyle>
+      <color>ffb05a1a</color>
+      <scale>1.1</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/dining.png</href></Icon>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+
+  <Style id="s_bar">
+    <IconStyle>
+      <color>ffb05a1a</color>
+      <scale>1.1</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/bar.png</href></Icon>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+
+  <Style id="s_passeio">
+    <IconStyle>
+      <color>ff1a3a5c</color>
+      <scale>1.1</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/camera.png</href></Icon>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+
+  <Style id="s_transfer">
+    <IconStyle>
+      <color>ff555555</color>
+      <scale>1.0</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/airports.png</href></Icon>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- BELLAGIO — Base das amigas         -->
+  <!-- ═══════════════════════════════════ -->
+
+  <Folder>
+    <name>🌸 Bellagio</name>
+
+    <Placemark>
+      <name>🏨 Locanda La Pergola · Pescallo</name>
+      <description>Hotel das amigas. Acesso por escadarias — somente hóspedes têm acesso de carro. Táxi/water taxi recomendado para chegada com bagagem.</description>
+      <styleUrl>#s_hotel</styleUrl>
+      <Point><coordinates>9.2645,45.9860,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>⚓ Porto Principal de Bellagio · Piazza Mazzini</name>
+      <description>Porto onde saem os traghetti para Cadenabbia e Varenna. Ponto de táxi também aqui.</description>
+      <styleUrl>#s_porto</styleUrl>
+      <Point><coordinates>9.2587,45.9842,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>📸 Salita Serbelloni</name>
+      <description>Escadarias floridas medievais — a foto mais famosa de Bellagio. DIA 01 · ~18h.</description>
+      <styleUrl>#s_passeio</styleUrl>
+      <Point><coordinates>9.2620,45.9855,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>📸 Punta Spartivento</name>
+      <description>Ponta da península onde o lago se divide em dois braços. Vista 360°. DIA 01 · ~18h.</description>
+      <styleUrl>#s_passeio</styleUrl>
+      <Point><coordinates>9.2680,45.9872,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍦 Smooth Operators Gelato</name>
+      <description>O melhor gelato de Bellagio. No caminho da Salita ao Hotel Florence.</description>
+      <styleUrl>#s_restaurante</styleUrl>
+      <Point><coordinates>9.2598,45.9843,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🥂 Hotel Florence · T Bar</name>
+      <description>Drinks no terraço com vista pro lago. Pôr do sol ~21h em junho. DIA 01 · 20h. Aberto a não-hóspedes.</description>
+      <styleUrl>#s_bar</styleUrl>
+      <Point><coordinates>9.2602,45.9844,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍝 Restaurante La Pergola</name>
+      <description>No próprio hotel. Terraço à beira do lago. Especialidade: peixes frescos do lago e massas caseiras. DIA 01 · Almoço.</description>
+      <styleUrl>#s_restaurante</styleUrl>
+      <Point><coordinates>9.2645,45.9862,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍝 Barchetta</name>
+      <description>Opção de jantar em Bellagio.</description>
+      <styleUrl>#s_restaurante</styleUrl>
+      <Point><coordinates>9.2591,45.9843,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍝 Trattoria San Giacomo</name>
+      <description>Opção de jantar em Bellagio.</description>
+      <styleUrl>#s_restaurante</styleUrl>
+      <Point><coordinates>9.2607,45.9848,0</coordinates></Point>
+    </Placemark>
+
+  </Folder>
+
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- LENNO — DIA 02                      -->
+  <!-- ═══════════════════════════════════ -->
+
+  <Folder>
+    <name>🏛 Lenno · DIA 02</name>
+
+    <Placemark>
+      <name>⚓ Porto de Lenno · Piazza XI Febbraio</name>
+      <description>Desembarque do battello vindo de Bellagio. Da praça, caminhar 5 min pelo calçadão até o Lido di Lenno.</description>
+      <styleUrl>#s_porto</styleUrl>
+      <Point><coordinates>9.2184,45.9691,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🛶 Lido di Lenno · Taxi Boat Shuttle</name>
+      <description>Ponto de saída do taxi boat shuttle para Villa del Balbianello. Vaivém a cada 10-15 min. €9-10 ida e volta. Sem reserva necessária.</description>
+      <styleUrl>#s_porto</styleUrl>
+      <Point><coordinates>9.2168,45.9695,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🏛 Villa del Balbianello</name>
+      <description>Jardins suspensos sobre o lago. Cenário de Casino Royale (007) e Star Wars. Acesso apenas de barco ou trilha. Jardins €11-15 / Visita completa €22 (reserva com meses de antecedência). Aberta Ter-Dom 10h-18h (fechada 2ª e 4ª). Melhor horário: 11h-12h.</description>
+      <styleUrl>#s_atracao</styleUrl>
+      <Point><coordinates>9.2150,45.9673,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>⛪ Battistero di San Giovanni · Piazza XI Febbraio</name>
+      <description>Batistério medieval — um dos mais preservados do Lago di Como. Parada fotogênica. DIA 02 · tarde.</description>
+      <styleUrl>#s_passeio</styleUrl>
+      <Point><coordinates>9.2182,45.9693,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>📸 A Passeggiata · Lenno</name>
+      <description>Calçadão plano à beira do lago. Tranquilo e fotogênico.</description>
+      <styleUrl>#s_passeio</styleUrl>
+      <Point><coordinates>9.2178,45.9700,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍝 Trattoria Santo Stefano · Lenno</name>
+      <description>Opção de almoço em Lenno. DIA 02 · ~14h.</description>
+      <styleUrl>#s_restaurante</styleUrl>
+      <Point><coordinates>9.2176,45.9696,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍦 Gelateria Fabbrica del Gelato · Lenno</name>
+      <description>Gelato após o almoço, antes de voltar para Bellagio.</description>
+      <styleUrl>#s_restaurante</styleUrl>
+      <Point><coordinates>9.2180,45.9694,0</coordinates></Point>
+    </Placemark>
+
+  </Folder>
+
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- VARENNA — DIA 03                    -->
+  <!-- ═══════════════════════════════════ -->
+
+  <Folder>
+    <name>⚓ Varenna · DIA 03</name>
+
+    <Placemark>
+      <name>⚓ Porto di Varenna</name>
+      <description>Chegada de balsa vindo de Bellagio (~15 min). Foto obrigatória: ficar na área externa lado direito na aproximação — fachadas coloridas refletidas na água.</description>
+      <styleUrl>#s_porto</styleUrl>
+      <Point><coordinates>9.2853,46.0148,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>📸 Passeggiata degli Innamorati</name>
+      <description>O calçadão mais romântico do lago — construído sobre a água. Vista para Bellagio e os Alpes. DIA 03 · 10h15 · 30 min.</description>
+      <styleUrl>#s_passeio</styleUrl>
+      <Point><coordinates>9.2838,46.0140,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>📸 Riva Grande e as Contrade</name>
+      <description>Ruelas medievais, igrejas, escadarias de pedra e casas coloridas. O coração de Varenna. DIA 03 · 10h45 até 12h30.</description>
+      <styleUrl>#s_passeio</styleUrl>
+      <Point><coordinates>9.2845,46.0152,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍝 Bar Il Molo</name>
+      <description>Almoço à beira do lago em Varenna. Simples, bom, vista incrível. DIA 03 · ~13h.</description>
+      <styleUrl>#s_restaurante</styleUrl>
+      <Point><coordinates>9.2849,46.0147,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🏛 Villa Cipressi</name>
+      <description>Jardins históricos em terraços com vista pro lago. Floridos, tranquilos, fotogênicos. €10/pessoa · ~1h. DIA 03 · 14h.</description>
+      <styleUrl>#s_atracao</styleUrl>
+      <Point><coordinates>9.2855,46.0130,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🏛 Villa Monastero</name>
+      <description>Da Villa Cipressi: vire à direita, 100m. O Loggiato — varanda de colunas de mármore branco, moldura perfeita para fotos. €13 jardins / €17 com museu · ~1h45. DIA 03 · 16h.</description>
+      <styleUrl>#s_atracao</styleUrl>
+      <Point><coordinates>9.2858,46.0122,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍝 La Lanterna Bellagio</name>
+      <description>Jantar em Bellagio. DIA 03 · noite (após voltar de Varenna).</description>
+      <styleUrl>#s_restaurante</styleUrl>
+      <Point><coordinates>9.2594,45.9845,0</coordinates></Point>
+    </Placemark>
+
+  </Folder>
+
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- TREMEZZO — DIA 04                   -->
+  <!-- ═══════════════════════════════════ -->
+
+  <Folder>
+    <name>🏛 Tremezzo · DIA 04</name>
+
+    <Placemark>
+      <name>⚓ Porto Cadenabbia · Traghetto</name>
+      <description>Saída do traghetto de Bellagio. ~5 min de travessia. €5/pessoa. Da chegada: 5 min a pé até Villa Carlotta.</description>
+      <styleUrl>#s_porto</styleUrl>
+      <Point><coordinates>9.2147,45.9981,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🏛 Villa Carlotta</name>
+      <description>Jardins botânicos em terraços abertos. Esculturas de Canova e Thorvaldsen. €15/pessoa · 2h30. 1ª hora: Palácio (varandas + esculturas) · 2ª hora: Jardins (cítricos, bambus, samambaias). Melhor luz: 11h. Todos os dias 9h-19h30. DIA 04 · 10h.</description>
+      <styleUrl>#s_atracao</styleUrl>
+      <Point><coordinates>9.2135,46.0028,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍝 Ristorante Azalea · Piazza Filzi</name>
+      <description>Massas com frutos do mar em terraço charmoso sobre a água. 10 min da Villa Carlotta. DIA 04 · ~12h30.</description>
+      <styleUrl>#s_restaurante</styleUrl>
+      <Point><coordinates>9.2138,46.0040,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🌳 Parco Civico Teresio Olivelli</name>
+      <description>Fonte barroca central, sombra e calma. ~30 min. DIA 04 · ~14h.</description>
+      <styleUrl>#s_passeio</styleUrl>
+      <Point><coordinates>9.2125,46.0042,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>📸 Lungolago · Tremezzo</name>
+      <description>Calçadão plano à beira do lago. Vista direta para Bellagio do outro lado. DIA 04 · ~14h30.</description>
+      <styleUrl>#s_passeio</styleUrl>
+      <Point><coordinates>9.2130,46.0050,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>⛪ Chiesa dei Santi Quirico e Giulitta</name>
+      <description>Fachada barroca fotogênica. Parada rápida. DIA 04 · ~15h.</description>
+      <styleUrl>#s_passeio</styleUrl>
+      <Point><coordinates>9.2132,46.0038,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🥂 Grand Hotel Tremezzo · T Bar / T Beach</name>
+      <description>T Beach: clube de praia flutuante. T Bar: terraço panorâmico com drinks. Aberto a não-hóspedes. 5 min da Piazza Filzi. Pôr do sol ~21h. DIA 04 · ~16h.</description>
+      <styleUrl>#s_bar</styleUrl>
+      <Point><coordinates>9.2134,46.0072,0</coordinates></Point>
+    </Placemark>
+
+  </Folder>
+
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- TRANSFERS (Milão)                   -->
+  <!-- ═══════════════════════════════════ -->
+
+  <Folder>
+    <name>✈ Transfers</name>
+
+    <Placemark>
+      <name>🏨 Hotel Uptown Palace · Milão</name>
+      <description>Hotel em Milão antes de ir para Bellagio. Checkout: 9h30 do DIA 01.</description>
+      <styleUrl>#s_hotel</styleUrl>
+      <Point><coordinates>9.1965,45.4680,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>✈ Aeroporto Malpensa (MXP)</name>
+      <description>Embarque 13h do DIA 01/07. Transfer Daniel Palombo €220. Saída recomendada de Bellagio às 8h.</description>
+      <styleUrl>#s_transfer</styleUrl>
+      <Point><coordinates>8.7231,45.6301,0</coordinates></Point>
+    </Placemark>
+
+  </Folder>
+
+</Document>
+</kml>
