@@ -870,24 +870,29 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
   <span class="titulo-principal">🏨 Curadoria de Hospedagens</span>
   <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 24px;max-width:640px;">Para cada cidade da viagem, selecionamos <strong style="color:var(--azul);">4 opções de hospedagem</strong> organizadas por perfil de investimento — para vocês escolherem com segurança e reservarem direto.</p>
 
-  <!-- ══════ PERNOITE SÃO PAULO · GRU ══════ -->
-  <div style="margin:8px 0 14px;display:flex;align-items:center;gap:12px;">
-    <div style="flex:1;height:2px;background:linear-gradient(to right,var(--azul-claro),transparent);border-radius:2px;"></div>
-    <div style="font-family:'Playfair Display',serif;font-size:17px;color:var(--azul);font-weight:700;white-space:nowrap;">🛬 Pernoite — São Paulo · GRU</div>
-    <div style="flex:1;height:2px;background:linear-gradient(to left,var(--azul-claro),transparent);border-radius:2px;"></div>
-  </div>
-  <p style="font-family:'Poppins',sans-serif;font-size:11.5px;color:#64748b;text-align:center;margin:-4px 0 20px;line-height:1.7;"><strong>19/10 (segunda) → 20/10 (terça)</strong> · 1 noite · Para chegarem descansados ao voo internacional às 22h do dia 20</p>
-
-  <!-- GRU 1 — Airport Hotel Gru RECOMENDADO -->
-  <div class="voo-card voo-conforto" style="margin-bottom:16px;">
-    <div class="voo-card-header">
-      <div style="flex:1;">
-        <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:white;line-height:1.3;margin-bottom:3px;">Airport Hotel Gru</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.85);">⭐⭐⭐ · Bela Vista, Guarulhos · Transfer gratuito</div>
-      </div>
-      <div style="background:rgba(255,255,255,0.25);border-radius:8px;padding:4px 10px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;color:white;white-space:nowrap;flex-shrink:0;">✓ Recomendado</div>
+  <!-- ══════ PERNOITE — SÃO PAULO · GRU ══════ -->
+  <div style="background:var(--azul-medio);border-radius:14px;padding:18px 22px;margin:28px 0 18px;display:flex;align-items:center;gap:14px;">
+    <div style="font-size:28px;">🛬</div>
+    <div>
+      <div style="font-family:'Playfair Display',serif;font-size:19px;color:white;font-weight:700;">Pernoite — São Paulo · GRU</div>
+      <div style="font-family:'Poppins',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.85);">19/10 (segunda) → 20/10 (terça) · 1 noite · Para chegarem descansados ao voo internacional às 22h do dia 20</div>
     </div>
-    <div class="voo-card-body">
+  </div>
+  <!-- Airport Hotel Gru -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div class="voo-print-box is-placeholder" style="height:180px;border-radius:0;margin:0;">
+      <img src="./assets/hospedagem/gru/airport-hotel-gru.jpg" alt="Airport Hotel Gru" loading="lazy"
+        onload="this.parentElement.classList.remove('is-placeholder')"
+        onerror="this.parentElement.classList.add('is-placeholder')">
+    </div>
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Airport Hotel Gru</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐ · Bela Vista, Guarulhos · Transfer gratuito</div>
+        </div>
+        <span style="background:#c9a227;color:white;font-family:'Poppins',sans-serif;font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;">✓ Recomendado</span>
+      </div>
       <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
         <div class="voo-info-item">
           <span class="voo-info-label">Check-in</span>
@@ -902,28 +907,26 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
           <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 376</span>
         </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">
-        <strong style="color:var(--azul);display:block;margin-bottom:4px;">Melhor equilíbrio entre conforto e investimento.</strong>
-        Hotel moderno e bem avaliado a poucos minutos do aeroporto de Guarulhos. Oferece um nível de conforto superior para a noite anterior ao embarque internacional — chegam descansados, sem correria. Café da manhã incluso e transfer gratuito até o terminal.
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">☕ Café incluso</span>
-        <span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🚌 Transfer gratuito</span>
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">💰 Mais econômico</span>
-      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;"><strong style='color:var(--azul);display:block;margin-bottom:4px;'>Melhor equilíbrio entre conforto e investimento.</strong>Hotel moderno e bem avaliado a poucos minutos do aeroporto de Guarulhos. Oferece um nível de conforto superior para a noite anterior ao embarque internacional — chegam descansados, sem correria. Café da manhã incluso e transfer gratuito até o terminal.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">☕ Café incluso</span><span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🚌 Transfer gratuito</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">💰 Mais econômico</span></div>
       <a href="https://www.booking.com/hotel/br/airport-gru-ltda.pt-br.html?aid=2311236&label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652796015463%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101240%3Ali%3Adec%3Adm&sid=0ce82a685da3e7632045e06e1563fd15&checkin=2026-10-19&checkout=2026-10-20&dest_id=13922&dest_type=hotel&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
     </div>
   </div>
-
-  <!-- GRU 2 — Sleep Inn -->
-  <div class="voo-card voo-custo" style="margin-bottom:32px;">
-    <div class="voo-card-header">
-      <div style="flex:1;">
-        <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:white;line-height:1.3;margin-bottom:3px;">Sleep Inn Aeroporto de Guarulhos</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.85);">⭐⭐⭐ · Taboão, Guarulhos · Transfer gratuito</div>
-      </div>
+  <!-- Sleep Inn Aeroporto de Guarulhos -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div class="voo-print-box is-placeholder" style="height:180px;border-radius:0;margin:0;">
+      <img src="./assets/hospedagem/gru/sleep-inn-gru.jpg" alt="Sleep Inn Aeroporto de Guarulhos" loading="lazy"
+        onload="this.parentElement.classList.remove('is-placeholder')"
+        onerror="this.parentElement.classList.add('is-placeholder')">
     </div>
-    <div class="voo-card-body">
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Sleep Inn Aeroporto de Guarulhos</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐ · Taboão, Guarulhos · Transfer gratuito</div>
+        </div>
+        
+      </div>
       <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
         <div class="voo-info-item">
           <span class="voo-info-label">Check-in</span>
@@ -938,35 +941,34 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
           <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 550</span>
         </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">
-        Hospedagem prática e funcional próxima ao Aeroporto Internacional de Guarulhos. Boa alternativa para quem busca conforto e praticidade para a pernoite antes do embarque. Transfer gratuito até o terminal incluso.
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">☕ Café incluso</span>
-        <span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🚌 Transfer gratuito</span>
-      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Hospedagem prática e funcional próxima ao Aeroporto Internacional de Guarulhos. Boa alternativa para quem busca conforto e praticidade para a pernoite antes do embarque. Transfer gratuito até o terminal incluso.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">☕ Café incluso</span><span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🚌 Transfer gratuito</span></div>
       <a href="https://www.booking.com/hotel/br/sleep-inn-guarulhos.pt-br.html?label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652796015463%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101240%3Ali%3Adec%3Adm&aid=2311236&ucfs=1&checkin=2026-10-19&checkout=2026-10-20&dest_id=2120957&dest_type=hotel&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
     </div>
   </div>
-
-  <!-- ══════ DALLAS ══════ -->
-  <div style="margin:8px 0 14px;display:flex;align-items:center;gap:12px;">
-    <div style="flex:1;height:2px;background:linear-gradient(to right,var(--azul-claro),transparent);border-radius:2px;"></div>
-    <div style="font-family:'Playfair Display',serif;font-size:17px;color:var(--azul);font-weight:700;white-space:nowrap;">🤠 Dallas · Texas</div>
-    <div style="flex:1;height:2px;background:linear-gradient(to left,var(--azul-claro),transparent);border-radius:2px;"></div>
-  </div>
-  <p style="font-family:'Poppins',sans-serif;font-size:11.5px;color:#64748b;text-align:center;margin:-4px 0 20px;line-height:1.7;"><strong>21/10 (quarta) → 27/10 (terça)</strong> · 6 noites · Região de Las Colinas / Irving</p>
-
-  <!-- Dallas 1 — Hampton Inn RECOMENDADO -->
-  <div class="voo-card voo-conforto" style="margin-bottom:16px;">
-    <div class="voo-card-header">
-      <div style="flex:1;">
-        <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:white;line-height:1.3;margin-bottom:3px;">Hampton Inn Dallas Irving Las Colinas</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.85);">⭐⭐⭐ · 820 W Walnut Hill Ln, Irving, TX</div>
-      </div>
-      <div style="background:rgba(255,255,255,0.25);border-radius:8px;padding:4px 10px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;color:white;white-space:nowrap;flex-shrink:0;">✓ Recomendado</div>
+  <!-- ══════ DALLAS · TEXAS ══════ -->
+  <div style="background:var(--azul-medio);border-radius:14px;padding:18px 22px;margin:28px 0 18px;display:flex;align-items:center;gap:14px;">
+    <div style="font-size:28px;">🤠</div>
+    <div>
+      <div style="font-family:'Playfair Display',serif;font-size:19px;color:white;font-weight:700;">Dallas · Texas</div>
+      <div style="font-family:'Poppins',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.85);">21/10 (quarta) → 27/10 (terça) · 6 noites · Região de Las Colinas / Irving</div>
     </div>
-    <div class="voo-card-body">
+  </div>
+  <!-- Hampton Inn Dallas Irving Las Colinas -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div class="voo-print-box is-placeholder" style="height:180px;border-radius:0;margin:0;">
+      <img src="./assets/hospedagem/dallas/hampton-inn.jpg" alt="Hampton Inn Dallas Irving Las Colinas" loading="lazy"
+        onload="this.parentElement.classList.remove('is-placeholder')"
+        onerror="this.parentElement.classList.add('is-placeholder')">
+    </div>
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Hampton Inn Dallas Irving Las Colinas</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐ · 820 W Walnut Hill Ln, Irving, TX</div>
+        </div>
+        <span style="background:#c9a227;color:white;font-family:'Poppins',sans-serif;font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;">✓ Recomendado</span>
+      </div>
       <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
         <div class="voo-info-item">
           <span class="voo-info-label">Check-in</span>
@@ -981,28 +983,26 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
           <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 4.124</span>
         </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">
-        <strong style="color:var(--azul);display:block;margin-bottom:4px;">Excelente custo-benefício e localização estratégica.</strong>
-        Localizado em Las Colinas — uma das regiões mais modernas, organizadas e seguras da área metropolitana de Dallas. Fácil acesso a Dallas, Fort Worth, Grapevine, Arlington e ao aeroporto DFW. Café da manhã incluso.
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">☕ Café incluso</span>
-        <span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">💰 Mais econômico</span>
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">📍 Las Colinas</span>
-      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;"><strong style='color:var(--azul);display:block;margin-bottom:4px;'>Excelente custo-benefício e localização estratégica.</strong>Localizado em Las Colinas — uma das regiões mais modernas, organizadas e seguras da área metropolitana de Dallas. Fácil acesso a Dallas, Fort Worth, Grapevine, Arlington e ao aeroporto DFW. Café da manhã incluso.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">☕ Café incluso</span><span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">💰 Mais econômico</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">📍 Las Colinas</span></div>
       <a href="https://www.booking.com/hotel/us/hampton-inn-dallas-irving-las-colinas.pt-br.html?aid=2127529&label=metagha-link-LUBR-hotel-49119_dev-desktop_los-6_bw-133_dow-Wednesday_defdate-0_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20261021_ppt-&sid=0ce82a685da3e7632045e06e1563fd15&checkin=2026-10-21&checkout=2026-10-27&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
     </div>
   </div>
-
-  <!-- Dallas 2 — Sandman Signature -->
-  <div class="voo-card voo-custo" style="margin-bottom:16px;">
-    <div class="voo-card-header">
-      <div style="flex:1;">
-        <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:white;line-height:1.3;margin-bottom:3px;">Sandman Signature Dallas Las Colinas</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.85);">⭐⭐⭐⭐ · Irving, TX (Las Colinas)</div>
-      </div>
+  <!-- Sandman Signature Dallas Las Colinas -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div class="voo-print-box is-placeholder" style="height:180px;border-radius:0;margin:0;">
+      <img src="./assets/hospedagem/dallas/sandman-signature.jpg" alt="Sandman Signature Dallas Las Colinas" loading="lazy"
+        onload="this.parentElement.classList.remove('is-placeholder')"
+        onerror="this.parentElement.classList.add('is-placeholder')">
     </div>
-    <div class="voo-card-body">
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Sandman Signature Dallas Las Colinas</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐⭐ · Irving, TX (Las Colinas)</div>
+        </div>
+        
+      </div>
       <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
         <div class="voo-info-item">
           <span class="voo-info-label">Check-in</span>
@@ -1017,26 +1017,26 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
           <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 5.479</span>
         </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">
-        Localizado em Las Colinas com localização estratégica para explorar Dallas, Fort Worth, Grapevine, Arlington e o aeroporto DFW. Hotel de categoria superior com estrutura completa e excelentes avaliações.
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">⭐ 4 estrelas</span>
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">📍 Las Colinas</span>
-      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Localizado em Las Colinas com localização estratégica para explorar Dallas, Fort Worth, Grapevine, Arlington e o aeroporto DFW. Hotel de categoria superior com estrutura completa e excelentes avaliações.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">⭐ 4 estrelas</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">📍 Las Colinas</span></div>
       <a href="https://www.booking.com/hotel/us/sandman-signature-las-colinas-amp-suites.pt-br.html?label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652828998892%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101243%3Ali%3Adec%3Adm&sid=f8e1ab598a3d51217d5c9f6199900555&aid=2311236&ucfs=1&checkin=2026-10-21&checkout=2026-10-27&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
     </div>
   </div>
-
-  <!-- Dallas 3 — Tru by Hilton -->
-  <div class="voo-card voo-custo" style="margin-bottom:16px;">
-    <div class="voo-card-header">
-      <div style="flex:1;">
-        <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:white;line-height:1.3;margin-bottom:3px;">Tru by Hilton Dallas Market Center</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.85);">⭐⭐⭐ · 1949 N Stemmons Fwy, Dallas, TX</div>
-      </div>
+  <!-- Tru by Hilton Dallas Market Center -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div class="voo-print-box is-placeholder" style="height:180px;border-radius:0;margin:0;">
+      <img src="./assets/hospedagem/dallas/tru-hilton-dallas.jpg" alt="Tru by Hilton Dallas Market Center" loading="lazy"
+        onload="this.parentElement.classList.remove('is-placeholder')"
+        onerror="this.parentElement.classList.add('is-placeholder')">
     </div>
-    <div class="voo-card-body">
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Tru by Hilton Dallas Market Center</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐ · 1949 N Stemmons Fwy, Dallas, TX</div>
+        </div>
+        
+      </div>
       <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
         <div class="voo-info-item">
           <span class="voo-info-label">Check-in</span>
@@ -1051,26 +1051,26 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
           <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 5.199</span>
         </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">
-        Hotel moderno da rede Hilton com quartos confortáveis, excelente padrão de limpeza e café da manhã incluso. Boa escolha para quem passa a maior parte do dia explorando Dallas–Fort Worth e busca custo-benefício na hospedagem. <strong style="color:#92600a;">⚠️ Parking à parte: US$ 15/noite.</strong>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">☕ Café incluso</span>
-        <span style="background:#fef3c7;color:#92600a;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🅿️ Parking US$15/noite</span>
-      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Hotel moderno da rede Hilton com quartos confortáveis, excelente padrão de limpeza e café da manhã incluso. Boa escolha para quem passa a maior parte do dia explorando Dallas–Fort Worth e busca custo-benefício na hospedagem. <strong style='color:#92600a;'>⚠️ Parking à parte: US$ 15/noite.</strong></div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">☕ Café incluso</span><span style="background:#fef3c7;color:#92600a;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🅿️ Parking US$15/noite</span></div>
       <a href="https://www.booking.com/hotel/us/tru-by-hilton-dallas-market-center.pt-br.html?aid=356937&label=metagha-link-LUBR-hotel-6475586_dev-desktop_los-6_bw-134_dow-Wednesday_defdate-0_room-0_gstadt-2_rateid-public_aud-9181519621_gacid-21411116873_mcid-10_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20261021_ppt-_lp-2076_r-11552877099762300139&sid=0ce82a685da3e7632045e06e1563fd15&checkin=2026-10-21&checkout=2026-10-27&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
     </div>
   </div>
-
-  <!-- Dallas 4 — Lorenzo Hotel -->
-  <div class="voo-card voo-custo" style="margin-bottom:32px;">
-    <div class="voo-card-header">
-      <div style="flex:1;">
-        <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:white;line-height:1.3;margin-bottom:3px;">Lorenzo Hotel Dallas — Tapestry by Hilton</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.85);">⭐⭐⭐⭐ · 1011 S Akard St, Dallas, TX (Downtown)</div>
-      </div>
+  <!-- Lorenzo Hotel Dallas — Tapestry by Hilton -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div class="voo-print-box is-placeholder" style="height:180px;border-radius:0;margin:0;">
+      <img src="./assets/hospedagem/dallas/lorenzo-hotel.jpg" alt="Lorenzo Hotel Dallas — Tapestry by Hilton" loading="lazy"
+        onload="this.parentElement.classList.remove('is-placeholder')"
+        onerror="this.parentElement.classList.add('is-placeholder')">
     </div>
-    <div class="voo-card-body">
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Lorenzo Hotel Dallas — Tapestry by Hilton</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐⭐ · 1011 S Akard St, Dallas, TX (Downtown)</div>
+        </div>
+        
+      </div>
       <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
         <div class="voo-info-item">
           <span class="voo-info-label">Check-in</span>
@@ -1085,36 +1085,34 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
           <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 5.900</span>
         </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">
-        Hotel boutique da coleção Tapestry by Hilton com decoração diferenciada, ambientes sofisticados e excelente estrutura. A opção mais exclusiva da seleção para quem busca uma estadia diferenciada no coração do Downtown Dallas. <strong style="color:#92600a;">⚠️ Parking à parte: US$ 20/noite.</strong>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">⭐ 4 estrelas</span>
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏙️ Downtown Dallas</span>
-        <span style="background:#fef3c7;color:#92600a;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🅿️ Parking US$20/noite</span>
-      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Hotel boutique da coleção Tapestry by Hilton com decoração diferenciada, ambientes sofisticados e excelente estrutura. A opção mais exclusiva da seleção para quem busca uma estadia diferenciada no coração do Downtown Dallas. <strong style='color:#92600a;'>⚠️ Parking à parte: US$ 20/noite.</strong></div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">⭐ 4 estrelas</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏙️ Downtown Dallas</span><span style="background:#fef3c7;color:#92600a;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🅿️ Parking US$20/noite</span></div>
       <a href="https://www.booking.com/hotel/us/lorenzo-hotel-dallas-tapestry-collection-by-hilton.pt-br.html?label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652828998892%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101243%3Ali%3Adec%3Adm&sid=f8e1ab598a3d51217d5c9f6199900555&aid=2311236&ucfs=1&checkin=2026-10-21&checkout=2026-10-27&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
     </div>
   </div>
-
-  <!-- ══════ MIAMI ══════ -->
-  <div style="margin:8px 0 14px;display:flex;align-items:center;gap:12px;">
-    <div style="flex:1;height:2px;background:linear-gradient(to right,var(--azul-claro),transparent);border-radius:2px;"></div>
-    <div style="font-family:'Playfair Display',serif;font-size:17px;color:var(--azul);font-weight:700;white-space:nowrap;">🌴 Miami · Flórida</div>
-    <div style="flex:1;height:2px;background:linear-gradient(to left,var(--azul-claro),transparent);border-radius:2px;"></div>
-  </div>
-  <p style="font-family:'Poppins',sans-serif;font-size:11.5px;color:#64748b;text-align:center;margin:-4px 0 20px;line-height:1.7;"><strong>27/10 (terça) → 31/10 (sábado)</strong> · 4 noites · Miami Beach / Brickell</p>
-
-  <!-- Miami 1 — Villa Italia RECOMENDADO -->
-  <div class="voo-card voo-conforto" style="margin-bottom:16px;">
-    <div class="voo-card-header">
-      <div style="flex:1;">
-        <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:white;line-height:1.3;margin-bottom:3px;">Villa Italia South Beach</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.85);">⭐⭐⭐ · South of Fifth, Miami Beach</div>
-      </div>
-      <div style="background:rgba(255,255,255,0.25);border-radius:8px;padding:4px 10px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;color:white;white-space:nowrap;flex-shrink:0;">✓ Recomendado</div>
+  <!-- ══════ MIAMI · FLÓRIDA ══════ -->
+  <div style="background:var(--azul-medio);border-radius:14px;padding:18px 22px;margin:28px 0 18px;display:flex;align-items:center;gap:14px;">
+    <div style="font-size:28px;">🌴</div>
+    <div>
+      <div style="font-family:'Playfair Display',serif;font-size:19px;color:white;font-weight:700;">Miami · Flórida</div>
+      <div style="font-family:'Poppins',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.85);">27/10 (terça) → 31/10 (sábado) · 4 noites · Miami Beach / Brickell</div>
     </div>
-    <div class="voo-card-body">
+  </div>
+  <!-- Villa Italia South Beach -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div class="voo-print-box is-placeholder" style="height:180px;border-radius:0;margin:0;">
+      <img src="./assets/hospedagem/miami/villa-italia.jpg" alt="Villa Italia South Beach" loading="lazy"
+        onload="this.parentElement.classList.remove('is-placeholder')"
+        onerror="this.parentElement.classList.add('is-placeholder')">
+    </div>
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Villa Italia South Beach</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐ · South of Fifth, Miami Beach</div>
+        </div>
+        <span style="background:#c9a227;color:white;font-family:'Poppins',sans-serif;font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;">✓ Recomendado</span>
+      </div>
       <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
         <div class="voo-info-item">
           <span class="voo-info-label">Check-in</span>
@@ -1129,28 +1127,26 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
           <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 2.891</span>
         </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">
-        <strong style="color:var(--azul);display:block;margin-bottom:4px;">Região privilegiada de South Beach.</strong>
-        Localizado em South of Fifth — uma das áreas mais agradáveis e valorizadas de Miami Beach. Tranquila, sofisticada, a poucos minutos de caminhada da praia e do South Pointe Park. Ambiente ideal para casais. Estacionamento público disponível próximo (~US$ 20/dia).
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏖️ Próximo à praia</span>
-        <span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">💰 Melhor preço</span>
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">📍 South of Fifth</span>
-      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;"><strong style='color:var(--azul);display:block;margin-bottom:4px;'>Região privilegiada de South Beach.</strong>Localizado em South of Fifth — uma das áreas mais agradáveis e valorizadas de Miami Beach. Tranquila, sofisticada, a poucos minutos de caminhada da praia e do South Pointe Park. Ambiente ideal para casais. Estacionamento público disponível próximo (~US$ 20/dia).</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏖️ Próximo à praia</span><span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">💰 Melhor preço</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">📍 South of Fifth</span></div>
       <a href="https://www.booking.com/hotel/us/villa-italia-miami-beach.pt-br.html?label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652828998892%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101243%3Ali%3Adec%3Adm&sid=f8e1ab598a3d51217d5c9f6199900555&aid=2311236&ucfs=1&checkin=2026-10-27&checkout=2026-10-31&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
     </div>
   </div>
-
-  <!-- Miami 2 — Tropics Hotel -->
-  <div class="voo-card voo-custo" style="margin-bottom:16px;">
-    <div class="voo-card-header">
-      <div style="flex:1;">
-        <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:white;line-height:1.3;margin-bottom:3px;">Tropics Hotel Miami Beach</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.85);">⭐⭐⭐ · Collins Avenue, South Beach</div>
-      </div>
+  <!-- Tropics Hotel Miami Beach -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div class="voo-print-box is-placeholder" style="height:180px;border-radius:0;margin:0;">
+      <img src="./assets/hospedagem/miami/tropics-hotel.jpg" alt="Tropics Hotel Miami Beach" loading="lazy"
+        onload="this.parentElement.classList.remove('is-placeholder')"
+        onerror="this.parentElement.classList.add('is-placeholder')">
     </div>
-    <div class="voo-card-body">
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Tropics Hotel Miami Beach</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐ · Collins Avenue, South Beach</div>
+        </div>
+        
+      </div>
       <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
         <div class="voo-info-item">
           <span class="voo-info-label">Check-in</span>
@@ -1165,26 +1161,26 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
           <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 2.846</span>
         </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">
-        Alternativa interessante para quem prioriza localização e praticidade em Miami Beach. Próximo à Collins Avenue e a poucos minutos de caminhada da praia — fácil acesso às principais atrações de South Beach. Proposta mais simples, com agradável área externa e piscina.
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏖️ Próximo à praia</span>
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏊 Piscina</span>
-      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Alternativa interessante para quem prioriza localização e praticidade em Miami Beach. Próximo à Collins Avenue e a poucos minutos de caminhada da praia — fácil acesso às principais atrações de South Beach. Proposta mais simples, com agradável área externa e piscina.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏖️ Próximo à praia</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏊 Piscina</span></div>
       <a href="https://www.booking.com/hotel/us/tropics-miami-beach-miami-beach.pt-br.html?label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652828998892%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101243%3Ali%3Adec%3Adm&sid=f8e1ab598a3d51217d5c9f6199900555&aid=2311236&ucfs=1&checkin=2026-10-27&checkout=2026-10-31&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
     </div>
   </div>
-
-  <!-- Miami 3 — Kasa El Paseo -->
-  <div class="voo-card voo-custo" style="margin-bottom:16px;">
-    <div class="voo-card-header">
-      <div style="flex:1;">
-        <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:white;line-height:1.3;margin-bottom:3px;">Kasa El Paseo Miami Beach</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.85);">⭐⭐⭐⭐ · Española Way, South Beach</div>
-      </div>
+  <!-- Kasa El Paseo Miami Beach -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div class="voo-print-box is-placeholder" style="height:180px;border-radius:0;margin:0;">
+      <img src="./assets/hospedagem/miami/kasa-el-paseo.jpg" alt="Kasa El Paseo Miami Beach" loading="lazy"
+        onload="this.parentElement.classList.remove('is-placeholder')"
+        onerror="this.parentElement.classList.add('is-placeholder')">
     </div>
-    <div class="voo-card-body">
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Kasa El Paseo Miami Beach</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐⭐ · Española Way, South Beach</div>
+        </div>
+        
+      </div>
       <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
         <div class="voo-info-item">
           <span class="voo-info-label">Check-in</span>
@@ -1199,26 +1195,26 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
           <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 3.032</span>
         </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">
-        Localizado na charmosa Española Way — uma das ruas mais fotogênicas e autênticas de South Beach. Cercado por restaurantes, cafés e lojas, oferece uma experiência genuína de Miami Beach. Bom custo-benefício para a categoria 4 estrelas.
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">⭐ 4 estrelas</span>
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">📍 Española Way</span>
-      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Localizado na charmosa Española Way — uma das ruas mais fotogênicas e autênticas de South Beach. Cercado por restaurantes, cafés e lojas, oferece uma experiência genuína de Miami Beach. Bom custo-benefício para a categoria 4 estrelas.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">⭐ 4 estrelas</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">📍 Española Way</span></div>
       <a href="https://www.booking.com/hotel/us/el-paseo.pt-br.html?aid=2311236&label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652828998892%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101243%3Ali%3Adec%3Adm&sid=f8e1ab598a3d51217d5c9f6199900555&ucfs=1&checkin=2026-10-27&checkout=2026-10-31&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
     </div>
   </div>
-
-  <!-- Miami 4 — Tru by Hilton Brickell -->
-  <div class="voo-card voo-custo" style="margin-bottom:32px;">
-    <div class="voo-card-header">
-      <div style="flex:1;">
-        <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:white;line-height:1.3;margin-bottom:3px;">Tru by Hilton Miami West Brickell</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.85);">⭐⭐⭐ · 1931 SW 3rd Ave, Brickell, Miami</div>
-      </div>
+  <!-- Tru by Hilton Miami West Brickell -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div class="voo-print-box is-placeholder" style="height:180px;border-radius:0;margin:0;">
+      <img src="./assets/hospedagem/miami/tru-hilton-brickell.jpg" alt="Tru by Hilton Miami West Brickell" loading="lazy"
+        onload="this.parentElement.classList.remove('is-placeholder')"
+        onerror="this.parentElement.classList.add('is-placeholder')">
     </div>
-    <div class="voo-card-body">
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Tru by Hilton Miami West Brickell</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐ · 1931 SW 3rd Ave, Brickell, Miami</div>
+        </div>
+        
+      </div>
       <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
         <div class="voo-info-item">
           <span class="voo-info-label">Check-in</span>
@@ -1233,35 +1229,34 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
           <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 3.762</span>
         </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">
-        Opção para quem prefere ficar na parte continental de Miami. Hotel moderno e econômico com padrão de qualidade Hilton e fácil acesso às regiões de Brickell, Downtown Miami e ao aeroporto. Não está em Miami Beach, mas garante conforto e logística descomplicada.
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">☕ Café incluso</span>
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">📍 Brickell</span>
-      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Opção para quem prefere ficar na parte continental de Miami. Hotel moderno e econômico com padrão de qualidade Hilton e fácil acesso às regiões de Brickell, Downtown Miami e ao aeroporto. Não está em Miami Beach, mas garante conforto e logística descomplicada.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">☕ Café incluso</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">📍 Brickell</span></div>
       <a href="https://www.booking.com/hotel/us/tru-by-hilton-miami-west-brickell.pt-br.html?label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652828998892%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101243%3Ali%3Adec%3Adm&sid=f8e1ab598a3d51217d5c9f6199900555&aid=2311236&ucfs=1&checkin=2026-10-27&checkout=2026-10-31&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
     </div>
   </div>
-
-  <!-- ══════ ORLANDO ══════ -->
-  <div style="margin:8px 0 14px;display:flex;align-items:center;gap:12px;">
-    <div style="flex:1;height:2px;background:linear-gradient(to right,var(--azul-claro),transparent);border-radius:2px;"></div>
-    <div style="font-family:'Playfair Display',serif;font-size:17px;color:var(--azul);font-weight:700;white-space:nowrap;">🎡 Orlando · Flórida</div>
-    <div style="flex:1;height:2px;background:linear-gradient(to left,var(--azul-claro),transparent);border-radius:2px;"></div>
-  </div>
-  <p style="font-family:'Poppins',sans-serif;font-size:11.5px;color:#64748b;text-align:center;margin:-4px 0 20px;line-height:1.7;"><strong>31/10 (sábado) → 04/11 (quarta)</strong> · 4 noites · Lake Buena Vista / International Drive</p>
-
-  <!-- Orlando 1 — Pestana RECOMENDADO -->
-  <div class="voo-card voo-conforto" style="margin-bottom:16px;">
-    <div class="voo-card-header">
-      <div style="flex:1;">
-        <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:white;line-height:1.3;margin-bottom:3px;">Pestana Orlando Suites — Lake Buena Vista</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.85);">⭐⭐⭐⭐ · Lake Buena Vista, Orlando · próximo Disney</div>
-      </div>
-      <div style="background:rgba(255,255,255,0.25);border-radius:8px;padding:4px 10px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;color:white;white-space:nowrap;flex-shrink:0;">✓ Recomendado</div>
+  <!-- ══════ ORLANDO · FLÓRIDA ══════ -->
+  <div style="background:var(--azul-medio);border-radius:14px;padding:18px 22px;margin:28px 0 18px;display:flex;align-items:center;gap:14px;">
+    <div style="font-size:28px;">🎡</div>
+    <div>
+      <div style="font-family:'Playfair Display',serif;font-size:19px;color:white;font-weight:700;">Orlando · Flórida</div>
+      <div style="font-family:'Poppins',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.85);">31/10 (sábado) → 04/11 (quarta) · 4 noites · Lake Buena Vista / International Drive</div>
     </div>
-    <div class="voo-card-body">
+  </div>
+  <!-- Pestana Orlando Suites — Lake Buena Vista -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div class="voo-print-box is-placeholder" style="height:180px;border-radius:0;margin:0;">
+      <img src="./assets/hospedagem/orlando/pestana-orlando.jpg" alt="Pestana Orlando Suites — Lake Buena Vista" loading="lazy"
+        onload="this.parentElement.classList.remove('is-placeholder')"
+        onerror="this.parentElement.classList.add('is-placeholder')">
+    </div>
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Pestana Orlando Suites — Lake Buena Vista</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐⭐ · Lake Buena Vista, Orlando · próximo Disney</div>
+        </div>
+        <span style="background:#c9a227;color:white;font-family:'Poppins',sans-serif;font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;">✓ Recomendado</span>
+      </div>
       <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
         <div class="voo-info-item">
           <span class="voo-info-label">Check-in</span>
@@ -1276,28 +1271,26 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
           <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 2.412</span>
         </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">
-        <strong style="color:var(--azul);display:block;margin-bottom:4px;">Melhor custo-benefício de Orlando na seleção.</strong>
-        Hotel moderno e muito bem avaliado, com quartos amplos e instalações recentes. Localização estratégica próxima aos parques Disney, ao aeroporto e às principais rodovias de Orlando. Café da manhã pode ser incluído na reserva.
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">⭐ 4 estrelas</span>
-        <span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">💰 Melhor preço 4★</span>
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏰 Próximo Disney</span>
-      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;"><strong style='color:var(--azul);display:block;margin-bottom:4px;'>Melhor custo-benefício de Orlando na seleção.</strong>Hotel moderno e muito bem avaliado, com quartos amplos e instalações recentes. Localização estratégica próxima aos parques Disney, ao aeroporto e às principais rodovias de Orlando. Café da manhã pode ser incluído na reserva.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">⭐ 4 estrelas</span><span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">💰 Melhor preço 4★</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏰 Próximo Disney</span></div>
       <a href="https://www.booking.com/hotel/us/pestana-orlando-suites.pt-br.html?label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652828998892%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101243%3Ali%3Adec%3Adm&sid=f8e1ab598a3d51217d5c9f6199900555&aid=2311236&ucfs=1&checkin=2026-10-31&checkout=2026-11-04&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
     </div>
   </div>
-
-  <!-- Orlando 2 — Sonesta ES Suites -->
-  <div class="voo-card voo-custo" style="margin-bottom:16px;">
-    <div class="voo-card-header">
-      <div style="flex:1;">
-        <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:white;line-height:1.3;margin-bottom:3px;">Sonesta ES Suites Orlando — Lake Buena Vista</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.85);">⭐⭐⭐ · Lake Buena Vista, Orlando</div>
-      </div>
+  <!-- Sonesta ES Suites Orlando — Lake Buena Vista -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div class="voo-print-box is-placeholder" style="height:180px;border-radius:0;margin:0;">
+      <img src="./assets/hospedagem/orlando/sonesta-suites.jpg" alt="Sonesta ES Suites Orlando — Lake Buena Vista" loading="lazy"
+        onload="this.parentElement.classList.remove('is-placeholder')"
+        onerror="this.parentElement.classList.add('is-placeholder')">
     </div>
-    <div class="voo-card-body">
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Sonesta ES Suites Orlando — Lake Buena Vista</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐ · Lake Buena Vista, Orlando</div>
+        </div>
+        
+      </div>
       <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
         <div class="voo-info-item">
           <span class="voo-info-label">Check-in</span>
@@ -1312,26 +1305,26 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
           <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 2.690</span>
         </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">
-        Hotel com perfil de residência temporária — suítes espaçosas com cozinha completa, sala de estar e ambientes mais amplos. Boa alternativa para quem deseja mais espaço e comodidade durante a estadia. Localizado próximo ao complexo Disney.
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🍳 Cozinha inclusa</span>
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏰 Próximo Disney</span>
-      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Hotel com perfil de residência temporária — suítes espaçosas com cozinha completa, sala de estar e ambientes mais amplos. Boa alternativa para quem deseja mais espaço e comodidade durante a estadia. Localizado próximo ao complexo Disney.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🍳 Cozinha inclusa</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏰 Próximo Disney</span></div>
       <a href="https://www.booking.com/hotel/us/sonesta-suites-es-lake-buena-vista.pt-br.html?label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652828998892%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101243%3Ali%3Adec%3Adm&sid=f8e1ab598a3d51217d5c9f6199900555&aid=2311236&ucfs=1&checkin=2026-10-31&checkout=2026-11-04&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
     </div>
   </div>
-
-  <!-- Orlando 3 — Monreale Express -->
-  <div class="voo-card voo-custo" style="margin-bottom:16px;">
-    <div class="voo-card-header">
-      <div style="flex:1;">
-        <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:white;line-height:1.3;margin-bottom:3px;">Hotel Monreale Express International Drive</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.85);">⭐⭐⭐ · International Drive, Orlando</div>
-      </div>
+  <!-- Hotel Monreale Express International Drive -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div class="voo-print-box is-placeholder" style="height:180px;border-radius:0;margin:0;">
+      <img src="./assets/hospedagem/orlando/monreale-express.jpg" alt="Hotel Monreale Express International Drive" loading="lazy"
+        onload="this.parentElement.classList.remove('is-placeholder')"
+        onerror="this.parentElement.classList.add('is-placeholder')">
     </div>
-    <div class="voo-card-body">
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Hotel Monreale Express International Drive</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐ · International Drive, Orlando</div>
+        </div>
+        
+      </div>
       <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
         <div class="voo-info-item">
           <span class="voo-info-label">Check-in</span>
@@ -1346,26 +1339,26 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
           <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 1.600</span>
         </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">
-        Melhor opção econômica da seleção. Localizado na International Drive — fácil acesso à Universal Orlando Resort, restaurantes, lojas e outlets. Quartos confortáveis e estrutura simples. Ideal para quem vai passar a maior parte do tempo nos parques e quer economizar na hospedagem.
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">💰 Mais econômico</span>
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">📍 International Drive</span>
-      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Melhor opção econômica da seleção. Localizado na International Drive — fácil acesso à Universal Orlando Resort, restaurantes, lojas e outlets. Quartos confortáveis e estrutura simples. Ideal para quem vai passar a maior parte do tempo nos parques e quer economizar na hospedagem.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">💰 Mais econômico</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">📍 International Drive</span></div>
       <a href="https://www.booking.com/hotel/us/orlando-continental-plaza.pt-br.html?label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652828998892%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101243%3Ali%3Adec%3Adm&sid=f8e1ab598a3d51217d5c9f6199900555&aid=2311236&ucfs=1&checkin=2026-10-31&checkout=2026-11-04&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
     </div>
   </div>
-
-  <!-- Orlando 4 — Holiday Inn Disney Springs -->
-  <div class="voo-card voo-custo" style="margin-bottom:32px;">
-    <div class="voo-card-header">
-      <div style="flex:1;">
-        <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:white;line-height:1.3;margin-bottom:3px;">Holiday Inn Orlando — Disney Springs® Area</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.85);">⭐⭐⭐⭐ · Disney Springs, Lake Buena Vista</div>
-      </div>
+  <!-- Holiday Inn Orlando — Disney Springs® Area -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div class="voo-print-box is-placeholder" style="height:180px;border-radius:0;margin:0;">
+      <img src="./assets/hospedagem/orlando/holiday-inn-disney.jpg" alt="Holiday Inn Orlando — Disney Springs® Area" loading="lazy"
+        onload="this.parentElement.classList.remove('is-placeholder')"
+        onerror="this.parentElement.classList.add('is-placeholder')">
     </div>
-    <div class="voo-card-body">
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Holiday Inn Orlando — Disney Springs® Area</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐⭐ · Disney Springs, Lake Buena Vista</div>
+        </div>
+        
+      </div>
       <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
         <div class="voo-info-item">
           <span class="voo-info-label">Check-in</span>
@@ -1380,14 +1373,8 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
           <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 3.262</span>
         </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">
-        Localizado na área oficial de Disney Springs — próximo de restaurantes, lojas e entretenimento do complexo. Transporte gratuito para os parques Disney incluso e excelente infraestrutura. A opção mais completa em termos de experiência Disney fora dos resorts oficiais.
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">⭐ 4 estrelas</span>
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🚌 Transporte p/ parques</span>
-        <span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏰 Disney Springs</span>
-      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Localizado na área oficial de Disney Springs — próximo de restaurantes, lojas e entretenimento do complexo. Transporte gratuito para os parques Disney incluso e excelente infraestrutura. A opção mais completa em termos de experiência Disney fora dos resorts oficiais.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">⭐ 4 estrelas</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🚌 Transporte p/ parques</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏰 Disney Springs</span></div>
       <a href="https://www.booking.com/hotel/us/holiday-inn-hotels-downtown-disney-resort-area.pt-br.html?aid=2311236&label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652828998892%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101243%3Ali%3Adec%3Adm&sid=f8e1ab598a3d51217d5c9f6199900555&ucfs=1&checkin=2026-10-31&checkout=2026-11-04&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
     </div>
   </div>
