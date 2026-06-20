@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Fernanda &amp; Isabella · DIA 02 — Lenno · Balbianello · Cernobbio</name>
+
+  <Style id="s_ferry">
+    <IconStyle>
+      <scale>1.2</scale>
+      <Icon><href>https://drive.usercontent.google.com/download?id=1Hmhf7S_xvZVO8R_yq5Fxwn3EdEKEwM1v&amp;export=view</href></Icon>
+      <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+  <Style id="s_default">
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+  <Style id="s_bus">
+    <IconStyle>
+      <scale>1.2</scale>
+      <Icon><href>https://drive.usercontent.google.com/download?id=1B8Ya1iC-ZY5N7K0kaMg_MRfy19Ym35BZ&amp;export=view</href></Icon>
+      <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+  <Style id="s_drink">
+    <IconStyle>
+      <scale>1.2</scale>
+      <Icon><href>https://drive.usercontent.google.com/download?id=1epqZKoXjcnuBmgeNEn6TK9YmRvctNPiH&amp;export=view</href></Icon>
+      <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+  <Style id="s_restaurante">
+    <IconStyle>
+      <scale>1.2</scale>
+      <Icon><href>https://drive.usercontent.google.com/download?id=17pfPQnqimy0c7eaiPRuCgLUC89VuvJq-&amp;export=view</href></Icon>
+      <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+
+  <Placemark>
+    <name>— Porto di Bellagio (saída ferry 8h20)</name>
+    <styleUrl>#s_ferry</styleUrl>
+    <Point><coordinates>9.2587,45.9842,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Porto di Lenno · Piazza XI Febbraio (desembarque 8h35)</name>
+    <styleUrl>#s_ferry</styleUrl>
+    <Point><coordinates>9.2184,45.9691,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Lido di Lenno · Taxi Boat Shuttle → Balbianello (9h)</name>
+    <styleUrl>#s_ferry</styleUrl>
+    <Point><coordinates>9.2168,45.9695,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Villa del Balbianello</name>
+    <styleUrl>#s_default</styleUrl>
+    <Point><coordinates>9.215,45.9673,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Centrinho de Lenno · Almoço walk-in 12h30</name>
+    <styleUrl>#s_default</styleUrl>
+    <Point><coordinates>9.2184,45.9691,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Ponto Ônibus Lenno · Igreja (C10 → Cernobbio) 13h30</name>
+    <styleUrl>#s_bus</styleUrl>
+    <Point><coordinates>9.2178,45.9692,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Ponto Ônibus Cernobbio · Via Adda (chegada C10)</name>
+    <styleUrl>#s_bus</styleUrl>
+    <Point><coordinates>9.0778,45.8447,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Villa d'Este · Bar Canova · 15h</name>
+    <styleUrl>#s_drink</styleUrl>
+    <Point><coordinates>9.0798,45.8449,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Ponto Ônibus Cernobbio · Via Adda (C10 volta 17h36 ou 18h36)</name>
+    <styleUrl>#s_bus</styleUrl>
+    <Point><coordinates>9.0778,45.8447,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Pier Lenno → Bellagio (ferry 20h05)</name>
+    <styleUrl>#s_ferry</styleUrl>
+    <Point><coordinates>9.2184,45.9691,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Punta Spartivento · Bellagio (20h30)</name>
+    <styleUrl>#s_default</styleUrl>
+    <Point><coordinates>9.268,45.9872,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Ristorante La Punta · Jantar 22h</name>
+    <styleUrl>#s_restaurante</styleUrl>
+    <Point><coordinates>9.2645,45.9909,0</coordinates></Point>
+  </Placemark>
+
+</Document>
+</kml>

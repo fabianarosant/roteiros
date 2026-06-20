@@ -1,0 +1,42 @@
+{
+  "Vecchia Varenna, Varenna, Lecco, Italy|it": {
+    "lat": 46.0148,
+    "lon": 9.2851,
+    "manual": true
+  },
+  "Piazza Garibaldi, Menaggio, Como, Italy|it": {
+    "lat": 46.0196,
+    "lon": 9.2373,
+    "manual": true
+  },
+  "Lungolago Castelli, Menaggio, Como, Italy|it": {
+    "lat": 46.0191,
+    "lon": 9.2378,
+    "manual": true
+  },
+  "Imbarcadero di Menaggio, Menaggio, Como, Italy|it": {
+    "lat": 46.0193,
+    "lon": 9.2381,
+    "manual": true
+  },
+  "Ristorante La Grolla, Menaggio, Como, Italy|it": {
+    "lat": 46.0236885,
+    "lon": 9.2421175
+  },
+  "Gelateria del Borgo, Bellagio, Como, Italy|it": {
+    "lat": 45.9871347,
+    "lon": 9.2620305
+  },
+  "Hotel Florence, Bellagio, Como, Italy|it": {
+    "lat": 45.9879506,
+    "lon": 9.2606589
+  },
+  "Ristorante Barchetta, Bellagio, Como, Italy|it": {
+    "lat": 45.9873303,
+    "lon": 9.261305
+  },
+  "Bar Il Molo, Varenna, Lecco, Italy|it": {
+    "lat": 46.0098052,
+    "lon": 9.2821977
+  }
+}

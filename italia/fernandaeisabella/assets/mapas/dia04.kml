@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Fernanda &amp; Isabella · DIA 04 — Tremezzo · Villa Carlotta</name>
+
+  <Style id="s_ferry">
+    <IconStyle>
+      <scale>1.2</scale>
+      <Icon><href>https://drive.usercontent.google.com/download?id=1Hmhf7S_xvZVO8R_yq5Fxwn3EdEKEwM1v&amp;export=view</href></Icon>
+      <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+  <Style id="s_default">
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+  <Style id="s_restaurante">
+    <IconStyle>
+      <scale>1.2</scale>
+      <Icon><href>https://drive.usercontent.google.com/download?id=17pfPQnqimy0c7eaiPRuCgLUC89VuvJq-&amp;export=view</href></Icon>
+      <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+
+  <Placemark>
+    <name>— Porto di Bellagio (ferry 8h20 → Tremezzo)</name>
+    <styleUrl>#s_ferry</styleUrl>
+    <Point><coordinates>9.2587,45.9842,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Pier Tremezzo (desembarque 8h50)</name>
+    <styleUrl>#s_ferry</styleUrl>
+    <Point><coordinates>9.2147,45.9981,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Villa Carlotta · 10h</name>
+    <styleUrl>#s_default</styleUrl>
+    <Point><coordinates>9.2135,46.0028,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Chiosco Villa Carlotta · Almoço 13h</name>
+    <styleUrl>#s_restaurante</styleUrl>
+    <Point><coordinates>9.2135,46.0028,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Centrinho de Tremezzo · Parco Olivelli</name>
+    <styleUrl>#s_default</styleUrl>
+    <Point><coordinates>9.2125,46.0042,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Lungolago di Tremezzo · Piazza Filzi</name>
+    <styleUrl>#s_default</styleUrl>
+    <Point><coordinates>9.213,46.004,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Grand Hotel Tremezzo · Da Giacomo al Lago · 15h</name>
+    <styleUrl>#s_restaurante</styleUrl>
+    <Point><coordinates>9.2134,46.0072,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Pier Tremezzo → Bellagio (saída 17h12)</name>
+    <styleUrl>#s_ferry</styleUrl>
+    <Point><coordinates>9.2147,45.9981,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Villa Melzi · Bellagio 18h</name>
+    <styleUrl>#s_default</styleUrl>
+    <Point><coordinates>9.2532,45.9791,0</coordinates></Point>
+  </Placemark>
+
+</Document>
+</kml>
