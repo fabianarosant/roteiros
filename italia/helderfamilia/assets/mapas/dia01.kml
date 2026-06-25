@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Fernanda &amp; Isabella · DIA 01 — Chegada + Bellagio</name>
+
+  <Style id="s_ferry">
+    <IconStyle>
+      <scale>1.2</scale>
+      <Icon><href>https://drive.usercontent.google.com/download?id=1Hmhf7S_xvZVO8R_yq5Fxwn3EdEKEwM1v&amp;export=view</href></Icon>
+      <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+  <Style id="s_default">
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+  <Style id="s_restaurante">
+    <IconStyle>
+      <scale>1.2</scale>
+      <Icon><href>https://drive.usercontent.google.com/download?id=17pfPQnqimy0c7eaiPRuCgLUC89VuvJq-&amp;export=view</href></Icon>
+      <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+  <Style id="s_sobremesa">
+    <IconStyle>
+      <scale>1.2</scale>
+      <Icon><href>https://drive.usercontent.google.com/download?id=1RD80r8fkH7Ob84vl-HvS89SeWDlUpAoA&amp;export=view</href></Icon>
+      <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+  <Style id="s_drink">
+    <IconStyle>
+      <scale>1.2</scale>
+      <Icon><href>https://drive.usercontent.google.com/download?id=1epqZKoXjcnuBmgeNEn6TK9YmRvctNPiH&amp;export=view</href></Icon>
+      <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+
+  <Placemark>
+    <name>— Porto di Bellagio · Piazza Mazzini</name>
+    <styleUrl>#s_ferry</styleUrl>
+    <Point><coordinates>9.2587,45.9842,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Salita Serbelloni · Bellagio</name>
+    <styleUrl>#s_default</styleUrl>
+    <Point><coordinates>9.262,45.9855,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Ruelas medievais · Centrinho de Bellagio</name>
+    <styleUrl>#s_default</styleUrl>
+    <Point><coordinates>9.261,45.9848,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Ristorante Bilacus · Almoço 13h</name>
+    <styleUrl>#s_restaurante</styleUrl>
+    <Point><coordinates>9.2617,45.9851,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Gelateria del Borgo · Sobremesa</name>
+    <styleUrl>#s_sobremesa</styleUrl>
+    <Point><coordinates>9.2620305,45.9871347,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Pier Hotel La Pergola · Saída Barco Privado 16h</name>
+    <styleUrl>#s_ferry</styleUrl>
+    <Point><coordinates>9.2645,45.986,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Hotel Florence · Bar 20h</name>
+    <styleUrl>#s_drink</styleUrl>
+    <Point><coordinates>9.2606589,45.9879506,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Ristorante Barchetta · Jantar 22h</name>
+    <styleUrl>#s_restaurante</styleUrl>
+    <Point><coordinates>9.261305,45.9873303,0</coordinates></Point>
+  </Placemark>
+
+</Document>
+</kml>

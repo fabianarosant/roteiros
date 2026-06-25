@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Fernanda &amp; Isabella · DIA 03 — Varenna</name>
+
+  <Style id="s_ferry">
+    <IconStyle>
+      <scale>1.2</scale>
+      <Icon><href>https://drive.usercontent.google.com/download?id=1Hmhf7S_xvZVO8R_yq5Fxwn3EdEKEwM1v&amp;export=view</href></Icon>
+      <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+  <Style id="s_default">
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+  <Style id="s_restaurante">
+    <IconStyle>
+      <scale>1.2</scale>
+      <Icon><href>https://drive.usercontent.google.com/download?id=17pfPQnqimy0c7eaiPRuCgLUC89VuvJq-&amp;export=view</href></Icon>
+      <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+
+  <Placemark>
+    <name>— Porto di Bellagio (ferry 8h10 ou 9h10 → Varenna)</name>
+    <styleUrl>#s_ferry</styleUrl>
+    <Point><coordinates>9.2587,45.9842,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Porto di Varenna (desembarque)</name>
+    <styleUrl>#s_ferry</styleUrl>
+    <Point><coordinates>9.2853,46.0148,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Villa Cipressi · Varenna</name>
+    <styleUrl>#s_default</styleUrl>
+    <Point><coordinates>9.2855,46.013,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Villa Monastero · O Loggiato</name>
+    <styleUrl>#s_default</styleUrl>
+    <Point><coordinates>9.2858,46.0122,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Bar Il Molo · Almoço 12h</name>
+    <styleUrl>#s_restaurante</styleUrl>
+    <Point><coordinates>9.2821977,46.0098052,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Passeggiata degli Innamorati</name>
+    <styleUrl>#s_default</styleUrl>
+    <Point><coordinates>9.2838,46.014,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Riva Grande · Varenna</name>
+    <styleUrl>#s_default</styleUrl>
+    <Point><coordinates>9.2845,46.0152,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Piazza San Giorgio · Igreja de San Giorgio</name>
+    <styleUrl>#s_default</styleUrl>
+    <Point><coordinates>9.2845,46.0152,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Porto di Varenna (volta 18h45 ou 19h08 → Bellagio)</name>
+    <styleUrl>#s_ferry</styleUrl>
+    <Point><coordinates>9.2853,46.0148,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Hotel Suisse Bellagio · Jantar 20h</name>
+    <styleUrl>#s_restaurante</styleUrl>
+    <Point><coordinates>9.2608,45.987,0</coordinates></Point>
+  </Placemark>
+
+</Document>
+</kml>

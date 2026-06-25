@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Fernanda &amp; Isabella · Infraestrutura</name>
+
+  <Style id="s_airport">
+    <IconStyle>
+      <scale>1.2</scale>
+      <Icon><href>https://drive.usercontent.google.com/download?id=1exX-ZKbp-SbyK5uSr3ToOKkjrtYOG-Pc&amp;export=view</href></Icon>
+      <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+  <Style id="s_hotel">
+    <IconStyle>
+      <scale>1.2</scale>
+      <Icon><href>https://drive.usercontent.google.com/download?id=1FUQ0QRgf6CLFmX8SPVWHFs90Qct8faFA&amp;export=view</href></Icon>
+      <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+    </IconStyle>
+    <LabelStyle><scale>0.9</scale></LabelStyle>
+  </Style>
+
+  <Placemark>
+    <name>— Aeroporto Malpensa (MXP)</name>
+    <styleUrl>#s_airport</styleUrl>
+    <Point><coordinates>8.7231,45.6301,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>— Hotel Locanda La Pergola · Pescallo · Bellagio</name>
+    <styleUrl>#s_hotel</styleUrl>
+    <Point><coordinates>9.2645,45.986,0</coordinates></Point>
+  </Placemark>
+
+</Document>
+</kml>
