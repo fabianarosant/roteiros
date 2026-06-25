@@ -51,6 +51,8 @@ body {
   padding: 24px 0;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 section {
@@ -4731,8 +4733,9 @@ Compras pontuais: souvenirs e lembranças. Buggy sem dunas.</textarea>
     function close() { btn.classList.remove('open'); drawer.classList.remove('open'); overlay.classList.remove('open'); }
     function open() { btn.classList.add('open'); drawer.classList.add('open'); overlay.classList.add('open'); }
     function toggle() { drawer.classList.contains('open') ? close() : open(); }
-    btn.addEventListener('touchend', function(e) { e.preventDefault(); e.stopPropagation(); toggle(); });
-    btn.addEventListener('click', function(e) { e.stopPropagation(); toggle(); });
+    var didTouch = false;
+    btn.addEventListener('touchend', function(e) { e.preventDefault(); e.stopPropagation(); didTouch = true; toggle(); setTimeout(function(){ didTouch = false; }, 400); });
+    btn.addEventListener('click', function(e) { e.stopPropagation(); if (!didTouch) toggle(); });
     overlay.addEventListener('touchend', function(e) { e.preventDefault(); close(); });
     overlay.addEventListener('click', close);
     drawer.querySelectorAll('a.nav-link').forEach(function(l) {
