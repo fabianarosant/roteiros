@@ -18,6 +18,28 @@
 
 ---
 
+## Geração de PDF
+
+Quando a Fabiana pedir para gerar o PDF de um roteiro de cliente, usar o script `gerar-pdf.js` do projeto de infoprodutos. Ele usa Puppeteer + Ghostscript e está configurado e testado para gerar PDFs compatíveis com iPhone, Mac Preview e Chrome — **não alterar o script**.
+
+**Comando:**
+```bash
+cd /Users/fabianarosant/roteiros/infoprodutos && node gerar-pdf.js ../clientes-personalizados/{pais}/{cliente}/pdf-index.html ../clientes-personalizados/{pais}/{cliente}/{cliente}-{destino}.pdf
+```
+
+**Exemplo real (Danila Lauro Nordeste):**
+```bash
+cd /Users/fabianarosant/roteiros/infoprodutos && node gerar-pdf.js ../clientes-personalizados/nordeste/danila-lauro/pdf-index.html ../clientes-personalizados/nordeste/danila-lauro/danila-nordeste.pdf
+```
+
+**Regras:**
+- O arquivo de entrada é sempre o `pdf-index.html` da pasta do cliente (não o `index.html`)
+- O script serve os assets via HTTP local — caminhos relativos `./assets/` funcionam corretamente
+- O output vai na mesma pasta do cliente
+- Nunca gerar sem autorização explícita da Fabiana
+
+---
+
 ## O que é este projeto
 
 Roteiros de viagem personalizados em HTML, criados pela Fabiana (Vamos Carimbar) para clientes. Cada roteiro é um único arquivo `index.html` com design system próprio, seções interativas e conteúdo completo da viagem.

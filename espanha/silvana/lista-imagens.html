@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Imagens · Silvana · Espanha</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; line-height: 1.5; color: #1a1d26; background: #f0ece4; padding: 28px 20px; }
+
+    /* ── HEADER ── */
+    .header { max-width: 860px; margin: 0 auto 20px; display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .header-title { font-size: 26px; font-weight: 800; color: #0d2d6b; line-height: 1; }
+    .header-sub { font-size: 12px; color: #6b7280; margin-top: 4px; }
+    .progress-wrap { flex: 1; min-width: 180px; max-width: 260px; }
+    .progress-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #6b7280; margin-bottom: 5px; display: flex; justify-content: space-between; }
+    .progress-bar { height: 8px; background: #ddd8cc; border-radius: 4px; overflow: hidden; }
+    .progress-fill { height: 100%; background: #16a34a; border-radius: 4px; transition: width 0.3s; width: 0%; }
+
+    /* ── AVISO ── */
+    .aviso { max-width: 860px; margin: 0 auto 20px; background: #fffbea; border-left: 3px solid #d97706; padding: 8px 14px; font-size: 12px; color: #374151; }
+    .aviso strong { color: #92400e; }
+
+    /* ── BOARD ── */
+    .board { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+
+    /* ── SEÇÃO ── */
+    .secao { background: white; border: 1px solid #e0dbd0; }
+    .secao-header { padding: 9px 14px; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: white; display: flex; align-items: center; justify-content: space-between; }
+    .secao-capas       .secao-header { background: #0d2d6b; }
+    .secao-gastronomia .secao-header { background: #8B1A1A; }
+    .secao-dia         .secao-header { background: #1a3a6b; }
+    .secao-count { font-size: 10px; font-weight: 600; opacity: 0.75; letter-spacing: 0; text-transform: none; }
+
+    /* ── ITEM ── */
+    .item { display: flex; align-items: flex-start; gap: 10px; padding: 9px 14px; border-bottom: 1px solid #f0ece4; transition: background 0.15s; cursor: pointer; }
+    .item:last-child { border-bottom: none; }
+    .item:hover { background: #faf8f4; }
+    .item.done { background: #f0fdf4; }
+    .item.done .item-path { text-decoration: line-through; color: #9ca3af; }
+    .item.done .item-desc { color: #9ca3af; }
+
+    .item-check { width: 16px; height: 16px; border: 1.5px solid #d1cabb; border-radius: 3px; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
+    .item.done .item-check { background: #16a34a; border-color: #16a34a; }
+    .item.done .item-check::after { content: '✓'; font-size: 10px; color: white; font-weight: 800; line-height: 1; }
+
+    .item-body { flex: 1; min-width: 0; }
+    .item-path { font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; font-size: 11.5px; color: #0d2d6b; word-break: break-all; }
+    .item-desc { font-size: 11px; color: #6b7280; margin-top: 2px; }
+
+    /* ── BOTÃO LIMPAR ── */
+    .footer { max-width: 860px; margin: 20px auto 0; text-align: right; }
+    .btn-reset { font-size: 11px; color: #9ca3af; cursor: pointer; background: none; border: none; padding: 4px 0; text-decoration: underline; }
+    .btn-reset:hover { color: #6b7280; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="header-title">Silvana · Espanha</div>
+    <div class="header-sub">Espanha &nbsp;·&nbsp; Lista de imagens para os assets</div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-label"><span>Imagens salvas</span><span id="prog-count">0 / 0</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="prog-fill"></div></div>
+  </div>
+</div>
+
+<div class="aviso">
+  <strong>Como usar:</strong> clique no item para marcar como salvo. O progresso fica salvo no browser — pode fechar e reabrir à vontade. Cada imagem deve ser salva com o caminho exato indicado, a partir da pasta <strong>silvana/</strong>.
+</div>
+
+<div class="board" id="board">
+
+  <!-- ── CAPAS & HERO ─────────────────────────────────────────────────────── -->
+  <div class="secao secao-capas">
+    <div class="secao-header">Capas &amp; Hero <span class="secao-count"></span></div>
+
+    <div class="item" data-id="capa-espanha">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/capas/capa-espanha.jpg</div>
+        <div class="item-desc">Capa principal do roteiro — foto vertical impactante (Barcelona, Costa Brava ou pôr do sol espanhol)</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="espanha-hero">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/capas/espanha-hero.jpg</div>
+        <div class="item-desc">Hero da página de Boas-vindas — panorâmica horizontal da Espanha</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="menu-pratico-bg">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/capas/menu-pratico-bg.png</div>
+        <div class="item-desc">Fundo do Menu Prático e do Encerramento — imagem com overlay azul escuro</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="espanha-lateral">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/cidades/espanha-lateral.jpg</div>
+        <div class="item-desc">Foto lateral da seção Sobre a Espanha — vertical, ~60mm largura</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="cartao-nomad">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/parceiros/cartao-nomad.png</div>
+        <div class="item-desc">Imagem do Cartão Nomad — seção Financeiro (com fundo transparente)</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── GASTRONOMIA ────────────────────────────────────────────────────────── -->
+  <div class="secao secao-gastronomia">
+    <div class="secao-header">Gastronomia · Pratos Típicos <span class="secao-count"></span></div>
+
+    <div class="item" data-id="gast-pa-amb-tomaquet">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/gastronomia/pa-amb-tomaquet.jpg</div>
+        <div class="item-desc">Pa amb tomàquet — pão esfregado com tomate e azeite, culinária catalã</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="gast-patatas-bravas">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/gastronomia/patatas-bravas.jpg</div>
+        <div class="item-desc">Patatas bravas — batatas fritas com molho picante e aioli</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="gast-croquetas">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/gastronomia/croquetas.jpg</div>
+        <div class="item-desc">Croquetas — tapa clássica espanhola</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="gast-fideua">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/gastronomia/fideuà.jpg</div>
+        <div class="item-desc">Fideuà — macarrão fino com frutos do mar, prato catalão</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="gast-suquet-de-peix">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/gastronomia/suquet-de-peix.jpg</div>
+        <div class="item-desc">Suquet de peix — ensopado de peixe dos pescadores da Costa Brava</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="gast-jamon-iberico">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/gastronomia/jamon-iberico.jpg</div>
+        <div class="item-desc">Jamón ibérico — presunto curado, iguaria espanhola</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="gast-paella-valenciana">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/gastronomia/paella-valenciana.jpg</div>
+        <div class="item-desc">Paella valenciana — arroz de açafrão com frutos do mar</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="gast-crema-catalana">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/gastronomia/crema-catalana.jpg</div>
+        <div class="item-desc">Crema catalana — creme de laranja e canela com crosta de açúcar</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="gast-gazpacho">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/gastronomia/gazpacho.jpg</div>
+        <div class="item-desc">Gazpacho — sopa fria de tomate, pepino e pimentão</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── DIA 01 ──────────────────────────────────────────────────────────────── -->
+  <div class="secao secao-dia">
+    <div class="secao-header">Dia 01 · O Coração Histórico — Barcelona <span class="secao-count"></span></div>
+
+    <div class="item" data-id="d01-placa-catalunya">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-01/placa-catalunya.jpg</div>
+        <div class="item-desc">Plaça de Catalunya — praça central de Barcelona, ponto de partida</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d01-ramblas">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-01/ramblas.jpg</div>
+        <div class="item-desc">La Rambla — boulevard central de Barcelona com floristas e artistas</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d01-boqueria">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-01/boqueria.jpg</div>
+        <div class="item-desc">Mercat de la Boqueria — mercado histórico com cores e produtos frescos</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d01-placa-reial">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-01/placa-reial.jpg</div>
+        <div class="item-desc">Plaça Reial — praça neoclássica no Bairro Gótico com palmeiras</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d01-catedral-barcelona">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-01/catedral-barcelona.jpg</div>
+        <div class="item-desc">Catedral de Barcelona — gótica, século XIV, claustro com gansos</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d01-rua-del-bisbe">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-01/rua-del-bisbe.jpg</div>
+        <div class="item-desc">Pont del Bisbe — ponte gótica entre dois palácios no Bairro Gótico</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d01-sant-felip-neri">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-01/sant-felip-neri.jpg</div>
+        <div class="item-desc">Plaça de Sant Felip Neri — praça escondida com marcas de guerra civil</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d01-barceloneta">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-01/barceloneta.jpg</div>
+        <div class="item-desc">Barceloneta — praia urbana de Barcelona com calçadão e mar</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d01-aquario">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-01/aquario.jpg</div>
+        <div class="item-desc">Aquário de Barcelona — túnel submerso com tubarões no Port Vell</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── DIA 02 ──────────────────────────────────────────────────────────────── -->
+  <div class="secao secao-dia">
+    <div class="secao-header">Dia 02 · Sagrada Família &amp; Gaudí <span class="secao-count"></span></div>
+
+    <div class="item" data-id="d02-sagrada-familia">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-02/sagrada-familia.jpg</div>
+        <div class="item-desc">Sagrada Família — basílica de Gaudí em construção desde 1882</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d02-pedrera">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-02/pedrera.jpg</div>
+        <div class="item-desc">La Pedrera (Casa Milà) — terraço ondulado com chaminés esculturais</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d02-casa-batllo">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-02/casa-batllo.jpg</div>
+        <div class="item-desc">Casa Batlló — fachada de escamas azuis e ossos de dragão</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d02-park-guell">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-02/park-guell.jpg</div>
+        <div class="item-desc">Park Güell — terraço de mosaico com vista panorâmica de Barcelona</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── DIA 03 ──────────────────────────────────────────────────────────────── -->
+  <div class="secao secao-dia">
+    <div class="secao-header">Dia 03 · Arco, Camp Nou &amp; Montjuïc <span class="secao-count"></span></div>
+
+    <div class="item" data-id="d03-arco-triunfo">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-03/arco-triunfo.jpg</div>
+        <div class="item-desc">Arco del Triunfo — portal mourisco, entrada da Exposição Universal de 1888</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d03-ciutadella">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-03/ciutadella.jpg</div>
+        <div class="item-desc">Parc de la Ciutadella — lago, cascata monumental e jardins</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d03-camp-nou">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-03/camp-nou.jpg</div>
+        <div class="item-desc">Camp Nou — estádio do FC Barcelona, maior da Europa</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d03-teleferico-montjuic">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-03/teleferico-montjuic.jpg</div>
+        <div class="item-desc">Teleférico de Montjuïc — cabine com vista do porto e da cidade</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d03-castelo-montjuic">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-03/castelo-montjuic.jpg</div>
+        <div class="item-desc">Castelo de Montjuïc — fortaleza a 173m com vista panorâmica do Mediterrâneo</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── DIA 04 ──────────────────────────────────────────────────────────────── -->
+  <div class="secao secao-dia">
+    <div class="secao-header">Dia 04 · Montserrat → Cadaqués <span class="secao-count"></span></div>
+
+    <div class="item" data-id="d04-montserrat">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-04/montserrat.jpg</div>
+        <div class="item-desc">Montserrat — montanha de pedra com Santuário e Moreneta</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d04-funicular-sant-joan">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-04/funicular-sant-joan.jpg</div>
+        <div class="item-desc">Funicular de Sant Joan — trilha e vista das cristas de Montserrat</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d04-cadaques">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-04/cadaques.jpg</div>
+        <div class="item-desc">Cadaqués — vila branca de pescadores no Mediterrâneo, chegada ao entardecer</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── DIA 05 ──────────────────────────────────────────────────────────────── -->
+  <div class="secao secao-dia">
+    <div class="secao-header">Dia 05 · Dalí e o Fim do Mundo <span class="secao-count"></span></div>
+
+    <div class="item" data-id="d05-dali-portlligat">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-05/dali-portlligat.jpg</div>
+        <div class="item-desc">Casa-Museu Dalí em Portlligat — ovo gigante no topo, enseada azul</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d05-cap-de-creus">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-05/cap-de-creus.jpg</div>
+        <div class="item-desc">Cap de Creus — ponta mais oriental da Península Ibérica, rochas e farol</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d05-cadaques-tarde">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-05/cadaques-tarde.jpg</div>
+        <div class="item-desc">Cadaqués ao entardecer — Igreja de Santa Maria e calçadão branco refletindo o sol</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── DIA 06 ──────────────────────────────────────────────────────────────── -->
+  <div class="secao secao-dia">
+    <div class="secao-header">Dia 06 · Besalú, Girona &amp; Litoral Central <span class="secao-count"></span></div>
+
+    <div class="item" data-id="d06-besalu">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-06/besalu.jpg</div>
+        <div class="item-desc">Besalú — ponte medieval românica, um dos cenários medievais mais bem preservados da Catalunha</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d06-call-jueu">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-06/call-jueu.jpg</div>
+        <div class="item-desc">Call Jueu — ruelas medievais do bairro judeu mais preservado da Europa</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d06-catedral">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-06/catedral.jpg</div>
+        <div class="item-desc">Catedral de Girona — escadaria da cena de Game of Thrones, nave gótica mais larga do mundo</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d06-muralla">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-06/muralla.jpg</div>
+        <div class="item-desc">Passeig de la Muralla — topo das muralhas carolíngias com vista panorâmica de Girona</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d06-onyar">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-06/onyar.jpg</div>
+        <div class="item-desc">Rio Onyar — casas coloridas refletidas na água, cartão-postal de Girona</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d06-pont-de-ferro">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-06/pont-de-ferro.jpg</div>
+        <div class="item-desc">Pont de Ferro — ponte metálica projetada por Gustave Eiffel nos anos 1870</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d06-rocambolesc">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-06/rocambolesc.jpg</div>
+        <div class="item-desc">Rocambolesc — sorveteria artesanal de Jordi Roca, confeiteiro do El Celler de Can Roca (3★ Michelin)</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── DIA 07 ──────────────────────────────────────────────────────────────── -->
+  <div class="secao secao-dia">
+    <div class="secao-header">Dia 07 · Pals, Begur &amp; Calas <span class="secao-count"></span></div>
+
+    <div class="item" data-id="d07-pals">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-07/pals.jpg</div>
+        <div class="item-desc">Pals — vila medieval de pedra dourada com torre redonda e vista para o mar</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d07-castell-begur">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-07/castell-begur.jpg</div>
+        <div class="item-desc">Castelo de Begur — ruínas do século XI com vista 360° da Costa Brava</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d07-cala-sa-tuna">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-07/cala-sa-tuna.jpg</div>
+        <div class="item-desc">Cala Sa Tuna — enseada de água cristalina com casas de pescadores</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── DIA 08 ──────────────────────────────────────────────────────────────── -->
+  <div class="secao secao-dia">
+    <div class="secao-header">Dia 08 · Calella, Palamós &amp; Castell <span class="secao-count"></span></div>
+
+    <div class="item" data-id="d08-calella-vila">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-08/calella-vila.jpg</div>
+        <div class="item-desc">Calella de Palafrugell — ruas caiadas de branco, jardins de hortênsias, calçadão histórico</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d08-calella-voltes">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-08/calella-voltes.jpg</div>
+        <div class="item-desc">Les Voltes — arcos brancos centenários na Platja de Port Bo, cartão-postal da Costa Brava</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d08-cami-ronda">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-08/cami-ronda.jpg</div>
+        <div class="item-desc">Camí de Ronda — trilha costeira histórica de Calella a Llafranc, penhascos sobre o Mediterrâneo</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d08-porto-palamos">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-08/porto-palamos.jpg</div>
+        <div class="item-desc">Porto de Palamós — barcos de pesca, famoso pela Gamba de Palamós</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d08-platja-castell">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-08/platja-castell.jpg</div>
+        <div class="item-desc">Platja de Castell — praia virgem sem desenvolvimento, joia escondida da Costa Brava</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── DIA 09 ──────────────────────────────────────────────────────────────── -->
+  <div class="secao secao-dia">
+    <div class="secao-header">Dia 09 · Tossa de Mar → Valência <span class="secao-count"></span></div>
+
+    <div class="item" data-id="d09-tossa-mar">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-09/tossa-mar.jpg</div>
+        <div class="item-desc">Tossa de Mar · Vila Vella — única fortaleza medieval habitada da costa catalã, muralhas sobre o Mediterrâneo</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d09-platja-gran-tossa">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-09/platja-gran-tossa.jpg</div>
+        <div class="item-desc">Platja Gran de Tossa de Mar — praia com as muralhas medievais ao fundo, água turquesa em setembro</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d09-valencia-plaza">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-09/valencia-plaza.jpg</div>
+        <div class="item-desc">Valência · Plaza del Ayuntamiento — chegada à cidade, centro histórico iluminado</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── DIA 10 ──────────────────────────────────────────────────────────────── -->
+  <div class="secao secao-dia">
+    <div class="secao-header">Dia 10 · Valência · Artes, Mercado &amp; Paella <span class="secao-count"></span></div>
+
+    <div class="item" data-id="d10-cidade-artes">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-10/cidade-artes.jpg</div>
+        <div class="item-desc">Cidade das Artes e das Ciências — Calatrava, prédios brancos refletidos nos lagos</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d10-mercado-central-valencia">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-10/mercado-central-valencia.jpg</div>
+        <div class="item-desc">Mercado Central de Valência — cúpula art nouveau, maior mercado de ferro e vidro do mundo</div>
+      </div>
+    </div>
+
+    <div class="item" data-id="d10-torres-serranos">
+      <div class="item-check"></div>
+      <div class="item-body">
+        <div class="item-path">assets/atracoes/dia-10/torres-serranos.jpg</div>
+        <div class="item-desc">Torres de Serranos — portal medieval do século XIV, pôr do sol sobre Valência</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footer">
+  <button class="btn-reset" onclick="resetar()">Limpar todas as marcações</button>
+</div>
+
+<script>
+  const CITY = 'silvana-espanha';
+
+  function storageKey(id) { return CITY + ':' + id; }
+
+  function atualizarProgresso() {
+    var items = document.querySelectorAll('.item');
+    var done  = document.querySelectorAll('.item.done').length;
+    var total = items.length;
+    document.getElementById('prog-count').textContent = done + ' / ' + total;
+    document.getElementById('prog-fill').style.width  = (total > 0 ? (done / total * 100) : 0) + '%';
+
+    document.querySelectorAll('.secao').forEach(function(sec) {
+      var secItems = sec.querySelectorAll('.item');
+      var secDone  = sec.querySelectorAll('.item.done').length;
+      var cnt = sec.querySelector('.secao-count');
+      if (cnt) cnt.textContent = secDone + ' / ' + secItems.length;
+    });
+  }
+
+  function toggleItem(el) {
+    el.classList.toggle('done');
+    localStorage.setItem(storageKey(el.dataset.id), el.classList.contains('done') ? '1' : '0');
+    atualizarProgresso();
+  }
+
+  function carregarEstado() {
+    document.querySelectorAll('.item').forEach(function(el) {
+      if (localStorage.getItem(storageKey(el.dataset.id)) === '1') {
+        el.classList.add('done');
+      }
+      el.addEventListener('click', function() { toggleItem(el); });
+    });
+    atualizarProgresso();
+  }
+
+  function resetar() {
+    if (!confirm('Limpar todas as marcações?')) return;
+    document.querySelectorAll('.item').forEach(function(el) {
+      el.classList.remove('done');
+      localStorage.removeItem(storageKey(el.dataset.id));
+    });
+    atualizarProgresso();
+  }
+
+  document.addEventListener('DOMContentLoaded', carregarEstado);
+</script>
+
+</body>
+</html>
