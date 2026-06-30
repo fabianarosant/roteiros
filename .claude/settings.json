@@ -16,7 +16,13 @@
       "Bash(find /Users/fabianarosant/roteiros -type f | grep -v \"node_modules\" | grep -v \".git\" | grep -i -E \"kml|infoproduto|instruc|readme|doc\" | head -20)",
       "Read(//Users/fabianarosant/roteiros/**)",
       "Bash(ls /Users/fabianarosant/roteiros/)",
-      "Bash(python3 gerar-kmls.py)"
+      "Bash(python3 gerar-kmls.py)",
+      "Bash(grep -n \"margin:0\\\\|h1 {.*margin\\\\|h2 {.*margin\\\\|\\\\*, \" /Users/fabianarosant/roteiros/clientes-personalizados/espanha/silvana/index.html)",
+      "Bash(open /Users/fabianarosant/roteiros/clientes-personalizados/espanha/silvana/index.html)",
+      "Read(//Users/fabianarosant/roteiros/infoprodutos/**)",
+      "Bash(node gerar-pdf.js \"../clientes-personalizados/espanha/silvana/index - pdf.html\" \"../clientes-personalizados/espanha/silvana/silvana-espanha.pdf\")",
+      "Bash(cp \"/Users/fabianarosant/roteiros/clientes-personalizados/espanha/silvana/index - pdf.html\" \"/Users/fabianarosant/roteiros/clientes-personalizados/espanha/silvana/index-pdf.html\")",
+      "Bash(node gerar-pdf.js \"../clientes-personalizados/espanha/silvana/index-pdf.html\" \"../clientes-personalizados/espanha/silvana/silvana-espanha.pdf\")"
     ]
   }
 }
