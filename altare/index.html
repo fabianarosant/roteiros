@@ -7,7 +7,7 @@
 <title>ALTARE VIDROS — Elevar o Padrão do Cuidado</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 
 /* ══════════════════════════════════════════════
@@ -17,12 +17,12 @@
   --preto:          #0A0A0A;
   --grafite:        #232323;
   --dourado:        #C9A66B;
-  --dourado-suave:  rgba(201,166,107,0.55);
+  --dourado-suave:  rgba(201,166,107,0.70);
   --areia:          #D8CCBA;
   --marfim:         #F4F1EB;
   --branco:         #FFFFFF;
 
-  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Raleway', sans-serif;
   --font-body:    'Montserrat', sans-serif;
 
   --pad-section: 130px;
@@ -57,23 +57,31 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 32px 56px;
-  transition: background 0.5s ease, padding 0.5s ease, border-color 0.5s ease;
+  padding: 14px 56px;
+  transition: background 0.5s ease, padding 0.5s ease, border-color 0.5s ease, backdrop-filter 0.5s ease, box-shadow 0.5s ease;
   border-bottom: 1px solid transparent;
 }
 #header.scrolled {
-  background: rgba(10,10,10,0.96);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  padding: 20px 56px;
-  border-bottom-color: rgba(201,166,107,0.12);
+  background: rgba(10,10,10,0.42);
+  backdrop-filter: blur(22px) saturate(1.5);
+  -webkit-backdrop-filter: blur(22px) saturate(1.5);
+  padding: 10px 56px;
+  border-bottom-color: rgba(255,255,255,0.14);
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.06), 0 8px 30px rgba(0,0,0,0.25);
 }
 
 .header-logo {
-  height: 34px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   flex-shrink: 0;
+  filter: drop-shadow(0 1px 6px rgba(0,0,0,0.5));
+  margin: -12px 0;
+  transition: height 0.5s ease, margin 0.5s ease;
+}
+#header.scrolled .header-logo {
+  height: 64px;
+  margin: -10px 0;
 }
 
 .header-nav {
@@ -130,85 +138,110 @@ body {
 }
 
 /* ══════════════════════════════════════════════
-   MENU OVERLAY FULLSCREEN
+   MENU SIDEBAR (glass, lateral direita)
 ══════════════════════════════════════════════ */
-#menu-overlay {
+.menu-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 250;
-  background: #0A0A0A;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  z-index: 240;
+  background: rgba(0,0,0,0.55);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.55s cubic-bezier(.77,0,.175,1);
+  transition: opacity 0.5s ease;
+  backdrop-filter: blur(2px);
 }
-#menu-overlay.open {
+.menu-backdrop.open {
   opacity: 1;
   pointer-events: all;
 }
 
+#menu-overlay {
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  width: 420px;
+  max-width: 90vw;
+  z-index: 250;
+  background: rgba(10,10,10,0.42);
+  backdrop-filter: blur(22px) saturate(1.5);
+  -webkit-backdrop-filter: blur(22px) saturate(1.5);
+  border-left: 1px solid rgba(255,255,255,0.14);
+  box-shadow: inset 1px 0 0 rgba(255,255,255,0.06), -20px 0 60px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  padding: 0 48px;
+  transform: translateX(100%);
+  transition: transform 0.55s cubic-bezier(.77,0,.175,1);
+  overflow-y: auto;
+}
+#menu-overlay.open {
+  transform: translateX(0);
+}
+
 .overlay-top {
-  position: absolute;
-  top: 32px; left: 56px;
+  position: sticky;
+  top: 0;
+  padding: 32px 0 24px;
+  background: linear-gradient(rgba(10,10,10,0.55) 60%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
 }
 .overlay-logo {
-  height: 32px;
+  height: 84px;
   width: auto;
   object-fit: contain;
 }
+.overlay-close {
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.55);
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+  background: none; border: none; padding: 0;
+  font-family: var(--font-body);
+  line-height: 1;
+}
+.overlay-close:hover { color: var(--dourado); }
 
 .overlay-nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 4px;
+  align-items: flex-start;
+  gap: 0;
+  padding-bottom: 32px;
 }
 .overlay-nav a {
   font-family: var(--font-display);
-  font-size: clamp(40px, 7vw, 76px);
-  font-weight: 300;
-  color: rgba(255,255,255,0.85);
-  letter-spacing: 1px;
-  line-height: 1.25;
+  font-size: 17px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.78);
+  letter-spacing: 0.5px;
+  line-height: 1;
   position: relative;
   display: inline-block;
   transition: color 0.3s;
+  padding: 9px 0;
 }
 .overlay-nav a::after {
   content: '';
   position: absolute;
-  bottom: 4px; left: 0;
+  bottom: 6px; left: 0;
   width: 0; height: 1px;
   background: var(--dourado);
-  transition: width 0.45s ease;
+  transition: width 0.4s ease;
 }
 .overlay-nav a:hover { color: var(--dourado); }
 .overlay-nav a:hover::after { width: 100%; }
 
-.overlay-bottom {
-  position: absolute;
-  bottom: 48px; left: 0; right: 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-.overlay-divider {
-  width: 40px; height: 1px;
+.overlay-nav .nav-divider {
+  display: block;
+  width: 20px; height: 1px;
   background: rgba(201,166,107,0.3);
+  margin: 10px 0;
 }
-.overlay-tagline {
-  font-family: var(--font-body);
-  font-size: 9px;
-  font-weight: 500;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: rgba(201,166,107,0.5);
-}
+
 
 /* ══════════════════════════════════════════════
    ANIMAÇÕES DE SCROLL
@@ -247,7 +280,12 @@ body {
   margin-bottom: 28px;
 }
 .label-gold--muted {
-  color: rgba(201,166,107,0.55);
+  color: var(--dourado);
+}
+/* em fundos claros (marfim), o dourado perde força — usar tom quente escuro */
+#conceito .label-gold,
+#metodo .label-gold {
+  color: #8a7560;
 }
 .gold-line {
   display: block;
@@ -295,10 +333,10 @@ body {
    § HERO
 ══════════════════════════════════════════════ */
 /*
-  FOTO HERO — Para adicionar imagem de fundo:
-  Descomente a linha background-image abaixo e aponte para o arquivo:
-  ex.: url('./assets/images/hero-ambiente.jpg')
-  Sugestão: casa com piso de vidro, fachada envidraçada ou varanda com vista.
+  FOTO HERO — Para adicionar imagem:
+  Salve o arquivo em: assets/images/hero-bg.jpg
+  Depois descomente a linha background-image abaixo.
+  Sugestão: casa com fachada envidraçada, ambiente luminoso com vidros, varanda com vista.
 */
 #hero {
   min-height: 100vh;
@@ -310,9 +348,10 @@ body {
   position: relative;
   overflow: hidden;
   background-color: var(--preto);
-  /* background-image: url('./assets/images/hero-bg.jpg'); */
+  background-image: url('./assets/images/capa.png');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 /* overlay escuro para legibilidade quando houver foto */
 #hero::before {
@@ -346,19 +385,19 @@ body {
   max-width: 860px;
 }
 .hero-logo {
-  height: 72px;
-  width: auto;
+  width: min(320px, 60%);
+  height: auto;
   object-fit: contain;
-  margin: 0 auto 56px;
+  margin: 0 auto 20px;
+  display: block;
 }
 .hero-tagline {
-  font-family: var(--font-display);
-  font-size: clamp(34px, 5.5vw, 68px);
-  font-weight: 300;
-  font-style: italic;
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(22px, 3.2vw, 44px);
+  font-weight: 400;
   color: white;
-  line-height: 1.15;
-  letter-spacing: 0.5px;
+  line-height: 1.35;
+  letter-spacing: 1.5px;
   margin-bottom: 28px;
 }
 .hero-sub {
@@ -367,7 +406,7 @@ body {
   font-weight: 500;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.80);
   margin-bottom: 60px;
 }
 .hero-sub .sep {
@@ -383,43 +422,20 @@ body {
   flex-wrap: wrap;
 }
 
-.hero-scroll-hint {
-  position: absolute;
-  bottom: 44px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  color: rgba(255,255,255,0.3);
-  font-family: var(--font-body);
-  font-size: 8.5px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-.scroll-line {
-  width: 1px;
-  height: 48px;
-  background: linear-gradient(to bottom, rgba(201,166,107,0.5), transparent);
-  animation: scrollDrop 2s ease-in-out infinite;
-}
-@keyframes scrollDrop {
-  0%, 100% { transform: scaleY(1); opacity: 1; }
-  50% { transform: scaleY(0.6); opacity: 0.4; }
-}
 
 /* ══════════════════════════════════════════════
    § MANIFESTO
 ══════════════════════════════════════════════ */
 /*
   FOTO MANIFESTO — Opcional, fundo de ambiente nobre:
-  #manifesto { background-image: url('./assets/images/manifesto-bg.jpg'); }
+  Acrescentar em #manifesto: background-image: url('./assets/images/manifesto-bg.jpg');
   Sugestão: vitrine de loja de luxo, corredor envidraçado, lobby de hotel.
 */
 #manifesto {
   background: var(--preto);
+  /* background-image: url('./assets/images/manifesto-bg.jpg'); */
+  background-size: cover;
+  background-position: center;
   padding: var(--pad-section) 0;
   position: relative;
   overflow: hidden;
@@ -430,6 +446,7 @@ body {
   top: 0; left: 0; right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--dourado-suave), transparent);
+  z-index: 0;
 }
 #manifesto::after {
   content: '';
@@ -437,48 +454,60 @@ body {
   bottom: 0; left: 0; right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--dourado-suave), transparent);
+  z-index: 0;
 }
+#manifesto .wrap { position: relative; z-index: 1; }
 
-.manifesto-inner {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 0 56px;
-  text-align: center;
+.manifesto-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 96px;
+  align-items: start;
 }
-.manifesto-text {
-  font-family: var(--font-display);
-  font-size: clamp(20px, 3.2vw, 34px);
-  font-weight: 300;
-  font-style: italic;
-  color: rgba(255,255,255,0.82);
-  line-height: 1.75;
-}
-.manifesto-text p + p { margin-top: 1.4em; }
-.manifesto-text strong {
-  font-style: normal;
-  font-weight: 600;
-  color: white;
-}
-
-.manifesto-assinatura {
+.manifesto-side {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin-top: 64px;
+  gap: 40px;
+  position: sticky;
+  top: 110px;
+}
+.manifesto-side-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .manifesto-logo-round {
-  width: 64px;
-  height: 64px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
 }
 .manifesto-slogan {
   font-family: var(--font-body);
-  font-size: 9.5px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 4.5px;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
   color: var(--dourado);
+  line-height: 2.0;
+}
+
+.manifesto-text {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.5vw, 18px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.80);
+  line-height: 2.0;
+  letter-spacing: 0.1px;
+}
+.manifesto-text p + p { margin-top: 1.8em; }
+.manifesto-fechamento {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.5vw, 18px);
+  font-weight: 500;
+  color: rgba(255,255,255,0.92);
+  margin-top: 2.4em !important;
+  padding-left: 24px;
+  border-left: 2px solid var(--dourado);
 }
 
 /* ══════════════════════════════════════════════
@@ -499,7 +528,7 @@ body {
 .conceito-titulo {
   font-family: var(--font-display);
   font-size: clamp(44px, 6.5vw, 88px);
-  font-weight: 300;
+  font-weight: 600;
   color: var(--preto);
   line-height: 1.0;
   margin-top: 24px;
@@ -512,12 +541,11 @@ body {
   padding-bottom: 8px;
 }
 .conceito-frase-grande {
-  font-family: var(--font-display);
-  font-size: clamp(18px, 2.4vw, 26px);
-  font-weight: 400;
-  font-style: italic;
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.9vw, 21px);
+  font-weight: 300;
   color: #5a4e3d;
-  line-height: 1.5;
+  line-height: 1.8;
   margin-bottom: 28px;
 }
 .conceito-texto {
@@ -608,7 +636,7 @@ body {
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 300;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.65);
   max-width: 480px;
   margin: 0 auto;
   line-height: 1.8;
@@ -629,6 +657,20 @@ body {
 }
 .servico-card:hover { background: #2a2a2a; }
 
+.servico-img {
+  display: block;
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  object-position: center;
+  margin: -60px 0 32px;
+  filter: grayscale(20%) brightness(0.82);
+  transition: filter 0.5s ease;
+}
+.servico-card:hover .servico-img {
+  filter: grayscale(0%) brightness(0.95);
+}
+
 .servico-card::after {
   content: '';
   position: absolute;
@@ -639,16 +681,6 @@ body {
 }
 .servico-card:hover::after { width: calc(100% - 104px); }
 
-.servico-num {
-  font-family: var(--font-display);
-  font-size: 64px;
-  font-weight: 300;
-  color: rgba(201,166,107,0.15);
-  line-height: 1;
-  display: block;
-  margin-bottom: 20px;
-  letter-spacing: -2px;
-}
 .servico-titulo {
   font-family: var(--font-display);
   font-size: 30px;
@@ -677,7 +709,7 @@ body {
   font-family: var(--font-body);
   font-size: 12px;
   font-weight: 400;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.72);
   padding-left: 18px;
   position: relative;
   line-height: 1.6;
@@ -692,11 +724,19 @@ body {
 }
 
 /* ══════════════════════════════════════════════
-   § O RITUAL
+   § O MÉTODO
 ══════════════════════════════════════════════ */
-#ritual {
+#metodo {
   background: var(--marfim);
   padding: var(--pad-section) 0;
+}
+
+.metodo-logo {
+  display: block;
+  margin: 0 auto 56px;
+  height: 96px;
+  width: auto;
+  object-fit: contain;
 }
 
 .ritual-header {
@@ -727,6 +767,26 @@ body {
   color: #6b5f50;
 }
 .ritual-desc p + p { margin-top: 1em; }
+
+.ritual-expansao {
+  margin-top: 64px;
+  padding: 32px 40px;
+  border-left: 2px solid var(--dourado);
+  background: rgba(201,166,107,0.05);
+}
+.ritual-expansao p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(15px, 1.5vw, 18px);
+  font-weight: 400;
+  color: #5a4e3d;
+  line-height: 1.8;
+}
+.ritual-expansao p strong {
+  font-weight: 700;
+  font-style: normal;
+  color: var(--dourado);
+}
 
 .ritual-steps {
   border-top: 1px solid var(--areia);
@@ -795,7 +855,7 @@ body {
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 300;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.65);
   max-width: 480px;
   margin: 0 auto;
   line-height: 1.8;
@@ -914,12 +974,16 @@ body {
   z-index: 1;
   max-width: 880px;
   margin: 0 auto;
+  padding: 56px 64px;
+  background: rgba(10,10,10,0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201,166,107,0.12);
 }
 .frase-grande {
   font-family: var(--font-display);
   font-size: clamp(26px, 4.5vw, 58px);
-  font-weight: 300;
-  font-style: italic;
+  font-weight: 400;
   color: white;
   line-height: 1.35;
   margin: 24px 0 36px;
@@ -991,7 +1055,7 @@ body {
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 300;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.80);
   line-height: 1.8;
   margin-bottom: 56px;
 }
@@ -1031,93 +1095,1049 @@ body {
   display: block;
 }
 
+
 /* ══════════════════════════════════════════════
-   § FOOTER
+   GLASS UTILITY
 ══════════════════════════════════════════════ */
-footer {
-  background: #050505;
-  border-top: 1px solid rgba(201,166,107,0.10);
-  padding: 72px 0 52px;
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
 }
-.footer-inner {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 56px;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 48px;
-  align-items: center;
+.glass-dark {
+  background: rgba(10,10,10,0.50);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(201,166,107,0.12);
 }
-.footer-left {}
-.footer-logo {
-  height: 26px; width: auto;
-  object-fit: contain;
-  opacity: 0.7;
-  margin-bottom: 14px;
-}
-.footer-local {
-  font-family: var(--font-body);
-  font-size: 9.5px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.25);
+.glass-warm {
+  background: rgba(201,166,107,0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201,166,107,0.16);
 }
 
-.footer-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+/* ══════════════════════════════════════════════
+   § HISTÓRIA
+══════════════════════════════════════════════ */
+#historia {
+  background: var(--marfim);
+  padding: var(--pad-section) 0;
 }
-.footer-logo-round {
-  width: 36px; height: 36px;
-  object-fit: contain;
-  opacity: 0.35;
+.historia-inner {
+  max-width: 780px;
+  margin: 0 auto 96px;
 }
-.footer-copy {
+.historia-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 600;
+  color: var(--preto);
+  line-height: 1.1;
+  margin: 24px 0 8px;
+}
+.historia-sub {
+  font-family: var(--font-display);
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-style: italic;
+  font-weight: 400;
+  color: #7a6b54;
+  margin-bottom: 48px;
+}
+.historia-corpo p {
   font-family: var(--font-body);
-  font-size: 8.5px;
-  letter-spacing: 1.5px;
-  color: rgba(255,255,255,0.18);
+  font-size: clamp(14px, 1.4vw, 16px);
+  font-weight: 300;
+  line-height: 2.0;
+  color: #6b5f50;
+}
+.historia-corpo p + p { margin-top: 1.6em; }
+.historia-corpo strong {
+  color: var(--preto);
+  font-weight: 600;
+}
+.historia-fechamento {
+  margin-top: 2.4em;
+  padding-left: 24px;
+  border-left: 2px solid var(--dourado);
+  font-family: var(--font-body);
+  font-size: clamp(14px, 1.4vw, 16px);
+  font-weight: 500;
+  color: var(--preto);
+  line-height: 1.9;
+}
+.historia-amem {
+  margin-top: 40px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  color: #8a7560;
+}
+
+.fundadores-label {
   text-align: center;
-  line-height: 1.8;
+  margin-bottom: 56px;
+}
+.fundadores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--areia);
+}
+.fundador-card {
+  background: var(--marfim);
+  padding: 52px 36px 40px;
+  text-align: center;
+  transition: background 0.4s;
+}
+.fundador-card:hover { background: #ede9e1; }
+.fundador-foto {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto 28px;
+  box-shadow: 0 0 0 1px rgba(201,166,107,0.35), 0 0 0 6px var(--marfim);
+  transition: box-shadow 0.4s;
+  display: block;
+}
+.fundador-card:hover .fundador-foto {
+  box-shadow: 0 0 0 1px rgba(201,166,107,0.6), 0 0 0 6px #ede9e1;
+}
+.fundador-info {
+  padding: 0;
+}
+.fundador-nome {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--preto);
+  display: block;
+  margin-bottom: 8px;
+}
+.fundador-cargo {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 400;
+  color: #6b5f50;
+  line-height: 1.7;
 }
 
-.footer-right { text-align: right; }
-.footer-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  align-items: flex-end;
+/* ══════════════════════════════════════════════
+   § O QUE ACREDITAMOS
+══════════════════════════════════════════════ */
+#acreditamos {
+  background: var(--grafite);
+  padding: var(--pad-section) 0;
 }
-.footer-nav a {
+.acreditamos-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px;
+  align-items: center;
+}
+.acreditamos-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 600;
+  color: white;
+  line-height: 1.1;
+  margin-top: 24px;
+}
+.acreditamos-texto {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.78);
+  line-height: 2.0;
+}
+.acreditamos-texto p + p { margin-top: 1.5em; }
+.acreditamos-destaque {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.92);
+  border-left: 2px solid var(--dourado);
+  padding: 16px 24px;
+  margin-top: 2em;
+  background: rgba(201,166,107,0.06);
+  backdrop-filter: blur(8px);
+}
+
+/* ══════════════════════════════════════════════
+   § PROMESSA DE MARCA
+══════════════════════════════════════════════ */
+#promessa {
+  background: var(--marfim);
+  padding: var(--pad-section) 0;
+}
+.promessa-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 600;
+  color: var(--preto);
+  line-height: 1.1;
+  margin-top: 24px;
+  margin-bottom: 72px;
+}
+.promessa-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--areia);
+}
+.promessa-card {
+  background: var(--marfim);
+  padding: 52px 44px;
+  position: relative;
+  transition: background 0.4s;
+}
+.promessa-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: transparent;
+  transition: background 0.4s;
+}
+.promessa-card:hover { background: #ede9e1; }
+.promessa-card:hover::before { background: var(--dourado); }
+.promessa-card-nivel {
   font-family: var(--font-body);
   font-size: 9.5px;
-  font-weight: 400;
-  letter-spacing: 2.5px;
+  font-weight: 600;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.28);
+  color: #8a7560;
+  display: block;
+  margin-bottom: 20px;
+}
+.promessa-card-titulo {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--preto);
+  display: block;
+  margin-bottom: 16px;
+}
+.promessa-card-texto {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: #6b5f50;
+  line-height: 1.9;
+}
+
+/* ══════════════════════════════════════════════
+   § INIMIGO DA MARCA
+══════════════════════════════════════════════ */
+
+.inimigo-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 600;
+  color: white;
+  line-height: 1.1;
+  margin: 24px 0 16px;
+}
+.inimigo-subtitulo {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.65);
+  max-width: 560px;
+  line-height: 1.8;
+  margin-bottom: 56px;
+}
+.inimigo-palavras {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 64px;
+  padding: 44px 48px;
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(32px) saturate(1.4);
+  -webkit-backdrop-filter: blur(32px) saturate(1.4);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-top-color: rgba(255,255,255,0.30);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.20),
+    inset 0 -1px 0 rgba(255,255,255,0.05),
+    0 8px 40px rgba(0,0,0,0.35);
+}
+.inimigo-palavra {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.8vw, 32px);
+  font-weight: 400;
+  color: rgba(255,255,255,0.25);
   transition: color 0.3s;
 }
-.footer-nav a:hover { color: var(--dourado); }
+.inimigo-palavra:hover { color: rgba(201,166,107,0.85); }
+.inimigo-sep {
+  color: rgba(201,166,107,0.3);
+  margin: 0 16px;
+  font-size: 20px;
+}
+.inimigo-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.inimigo-table thead tr {
+  border-bottom: 1px solid rgba(201,166,107,0.2);
+}
+.inimigo-table tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: background 0.3s;
+}
+.inimigo-table tbody tr:hover { background: rgba(255,255,255,0.02); }
+.inimigo-table th {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dourado);
+  text-align: left;
+  padding: 0 0 20px;
+}
+.inimigo-table th:last-child { padding-left: 48px; }
+.inimigo-table td {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.72);
+  padding: 22px 0;
+  line-height: 1.7;
+  vertical-align: top;
+}
+.inimigo-table td:first-child {
+  font-weight: 500;
+  color: rgba(255,255,255,0.82);
+  width: 180px;
+}
+.inimigo-table td:last-child {
+  padding-left: 48px;
+  font-style: italic;
+  color: rgba(255,255,255,0.80);
+}
+.inimigo-table td strong {
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+  font-style: normal;
+}
+.inimigo-contraste {
+  margin-top: 56px;
+  padding: 40px 48px;
+  background: rgba(201,166,107,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(201,166,107,0.15);
+  border-left: 3px solid var(--dourado);
+}
+.inimigo-contraste-label {
+  font-family: var(--font-body);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--dourado);
+  display: block;
+  margin-bottom: 16px;
+}
+.inimigo-contraste-texto {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.9;
+}
+.inimigo-contraste-texto strong {
+  color: white;
+  font-weight: 500;
+}
 
-.footer-bottom {
-  max-width: var(--container);
-  margin: 48px auto 0;
-  padding: 28px 56px 0;
-  border-top: 1px solid rgba(255,255,255,0.04);
+/* ══════════════════════════════════════════════
+   § IDENTIDADE VISUAL
+══════════════════════════════════════════════ */
+#identidade {
+  background: var(--marfim);
+  padding: var(--pad-section) 0 0;
+}
+.identidade-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 600;
+  color: var(--preto);
+  line-height: 1.1;
+  margin-top: 24px;
+  margin-bottom: 80px;
+}
+.identidade-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+}
+.identidade-bloco-titulo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--preto);
+  display: block;
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--areia);
+}
+.paleta-itens {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+.paleta-item { display: flex; flex-direction: column; gap: 8px; }
+.paleta-amostra {
+  height: 80px;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.paleta-nome {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  color: #5a4e3d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.paleta-hex {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 400;
+  color: #8a7560;
+}
+.logos-itens {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.logo-versao {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 28px;
+}
+.logo-versao--escura { background: #0A0A0A; }
+.logo-versao--clara {
+  background: white;
+  border: 1px solid var(--areia);
+}
+.logo-versao-img { height: 32px; width: auto; object-fit: contain; flex-shrink: 0; }
+.logo-versao-info { display: flex; flex-direction: column; gap: 3px; }
+.logo-versao-nome {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.logo-versao--escura .logo-versao-nome { color: rgba(255,255,255,0.65); }
+.logo-versao--clara .logo-versao-nome { color: var(--preto); }
+.logo-versao-desc {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.logo-versao--escura .logo-versao-desc { color: rgba(255,255,255,0.35); }
+.logo-versao--clara .logo-versao-desc { color: #8a7560; }
+
+.logo-resumo {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--areia);
+}
+.logo-resumo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.logo-resumo-tags span {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #8a7560;
+  padding: 7px 14px;
+  border: 1px solid var(--areia);
+  border-radius: 20px;
+}
+.logo-resumo-texto {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: #6b5f50;
+  line-height: 1.9;
+  max-width: 640px;
+}
+.logo-resumo-texto strong {
+  color: var(--preto);
+  font-weight: 600;
+}
+.logo-resumo-texto em {
+  font-style: italic;
+  color: #7a6b54;
+}
+
+.identidade-mockup-full {
+  width: 100%;
+  margin-top: 64px;
+  line-height: 0;
+}
+.identidade-mockup-full img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ══════════════════════════════════════════════
+   § STORYTELLING
+══════════════════════════════════════════════ */
+#storytelling {
+  background-color: var(--preto);
+  background-image: url('./assets/images/fundoescuro.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: var(--pad-section) 0;
+  position: relative;
+  overflow: hidden;
+}
+#storytelling::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(8,8,8,0.78);
+  z-index: 0;
+}
+#storytelling > * {
+  position: relative;
+  z-index: 1;
+}
+.storytelling-inner {
+  max-width: 840px;
+}
+.storytelling-lede {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 300;
+  color: white;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  margin: 24px 0 64px;
+}
+.storytelling-corpo {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.4vw, 17px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.72);
+  line-height: 2.1;
+}
+.storytelling-corpo p + p { margin-top: 2em; }
+.storytelling-paradoxo {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.5vw, 19px);
+  font-weight: 400;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.9;
+  font-style: italic;
+  padding: 36px 40px;
+  border-left: 2px solid var(--dourado);
+  margin: 48px 0;
+  background: rgba(255,255,255,0.025);
+  backdrop-filter: blur(8px);
+}
+.storytelling-fechamento {
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(201,166,107,0.18);
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.5vw, 34px);
+  font-weight: 500;
+  color: white;
+  line-height: 1.3;
+}
+
+/* — acreditamos crenças — */
+.acreditamos-crenca {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 20px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  align-items: start;
+}
+.acreditamos-crenca:last-child { border-bottom: none; }
+.acreditamos-num {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--dourado);
+  letter-spacing: 1px;
+  padding-top: 4px;
+  opacity: 0.7;
+}
+.acreditamos-crenca p {
+  font-family: var(--font-body);
+  font-size: clamp(14px, 1.4vw, 16px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.9;
+  margin: 0;
+}
+.acreditamos-crenca p strong {
+  color: rgba(255,255,255,0.90);
+  font-weight: 500;
+}
+
+/* ══════════════════════════════════════════════
+   § MISSÃO · VISÃO · VALORES
+══════════════════════════════════════════════ */
+#mvv {
+  background: var(--marfim);
+  padding: var(--pad-section) 0;
+}
+.mvv-mv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--areia);
+  margin: 48px 0 80px;
+}
+.mvv-card {
+  background: #FFFFFF;
+  padding: 52px 52px 56px;
+  position: relative;
+  transition: background 0.4s;
+  border-top: 2px solid transparent;
+  transition: background 0.4s, border-color 0.4s;
+}
+.mvv-card:hover { background: var(--marfim); border-top-color: var(--dourado); }
+.mvv-card-label {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: #8a7560;
+  display: block;
+  margin-bottom: 8px;
+}
+.mvv-card-sub {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(10,10,10,0.38);
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 28px;
+}
+.mvv-card-texto {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 300;
+  color: rgba(10,10,10,0.85);
+  line-height: 1.65;
+}
+.mvv-card-texto em {
+  font-style: italic;
+  color: #7a6b54;
+}
+.mvv-valores-titulo {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: #8a7560;
+  display: block;
+  margin-bottom: 40px;
+}
+.mvv-valores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--areia);
+  margin-top: 8px;
+}
+.mvv-valor {
+  background: #FFFFFF;
+  padding: 44px 44px;
+  position: relative;
+  transition: background 0.4s, border-color 0.4s;
+  border-top: 2px solid transparent;
+}
+
+.mvv-valor:hover { background: var(--marfim); border-top-color: var(--dourado); }
+.mvv-valor-nome {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--preto);
+  display: block;
+  margin-bottom: 14px;
+}
+.mvv-valor-desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: #6b5f50;
+  line-height: 1.85;
+}
+
+/* ══════════════════════════════════════════════
+   § FRASES DE POSICIONAMENTO
+══════════════════════════════════════════════ */
+#frases-posicionamento {
+  background: var(--preto);
+  padding: var(--pad-section) 0;
+  position: relative;
+  overflow: hidden;
+}
+.frases-pos-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+.frases-pos-glow--1 { width: 420px; height: 420px; background: rgba(201,166,107,0.16); top: -140px; left: -120px; }
+.frases-pos-glow--2 { width: 380px; height: 380px; background: rgba(201,166,107,0.10); bottom: -160px; right: 5%; }
+.frases-pos-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 58px);
+  font-weight: 600;
+  color: white;
+  line-height: 1.1;
+  margin: 24px 0 72px;
+  position: relative;
+  z-index: 1;
+}
+.frases-categorias {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+.frases-grupo-titulo {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dourado);
+  display: block;
+  margin-bottom: 24px;
+  opacity: 0.8;
+}
+.frases-wall {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.frase-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(18px) saturate(1.3);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-top-color: rgba(255,255,255,0.24);
+  border-radius: 14px;
+  padding: 22px 26px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.10), 0 8px 28px rgba(0,0,0,0.25);
+  transition: transform 0.35s ease, background 0.35s ease, border-color 0.35s ease;
+  cursor: default;
+  max-width: 420px;
+}
+.frase-card:hover {
+  background: rgba(201,166,107,0.10);
+  border-color: rgba(201,166,107,0.35);
+  transform: translateY(-4px);
+}
+.frase-card span {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.45;
+}
+.frase-card em {
+  font-style: italic;
+  color: var(--dourado);
+  font-weight: 400;
+}
+.frase-card--lg {
+  max-width: 100%;
+}
+.frase-card--lg span {
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 300;
+}
+
+/* ══════════════════════════════════════════════
+   § PÚBLICO-ALVO (ESTRATÉGIA)
+══════════════════════════════════════════════ */
+#publico-estrategia {
+  background: var(--marfim);
+  padding: var(--pad-section) 0;
+}
+.pe-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 58px);
+  font-weight: 600;
+  color: var(--preto);
+  line-height: 1.1;
+  margin: 24px 0 72px;
+}
+.pe-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--areia);
+}
+.pe-card {
+  background: #FFFFFF;
+  padding: 52px 44px;
+  position: relative;
+  transition: background 0.4s, border-color 0.4s;
+  border-top: 2px solid transparent;
+}
+.pe-card:hover { background: var(--marfim); border-top-color: var(--dourado); }
+.pe-card-num {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 300;
+  color: rgba(10,10,10,0.05);
+  line-height: 1;
+  display: block;
+  margin-bottom: 16px;
+}
+.pe-card-tipo {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #8a7560;
+  display: block;
+  margin-bottom: 10px;
+}
+.pe-card-titulo {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--preto);
+  display: block;
+  margin-bottom: 8px;
+}
+.pe-card-compra {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--dourado);
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.pe-card-desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: #6b5f50;
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+.pe-card-quote {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(10,10,10,0.72);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.pe-card-comunicar {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 400;
+  color: rgba(10,10,10,0.5);
+  line-height: 1.7;
+  padding-top: 16px;
+  border-top: 1px solid var(--areia);
+}
+.pe-card-comunicar strong {
+  font-weight: 600;
+  color: rgba(10,10,10,0.65);
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* ══════════════════════════════════════════════
+   § DIFERENCIAIS
+══════════════════════════════════════════════ */
+#diferenciais {
+  background: var(--preto);
+  padding: var(--pad-section) 0;
+}
+.diferenciais-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 58px);
+  font-weight: 600;
+  color: white;
+  line-height: 1.1;
+  margin: 24px 0 64px;
+}
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(201,166,107,0.15);
+}
+.diferencial-card {
+  background: #0D0D0D;
+  padding: 48px 52px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s;
+}
+.diferencial-card:hover { background: #161616; }
+.diferencial-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: transparent;
+  transition: background 0.4s;
+}
+.diferencial-card:hover::before { background: var(--dourado); }
+.diferencial-num {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--dourado);
+  opacity: 0.65;
+  display: block;
+  margin-bottom: 18px;
+}
+.diferencial-texto {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.68);
+  line-height: 1.8;
+}
+.diferencial-texto strong {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  display: block;
+  margin-bottom: 8px;
+}
+.diferencial-card:last-child { grid-column: 1 / -1; }
+
+/* ══════════════════════════════════════════════
+   § RESUMO POSICIONAMENTO
+══════════════════════════════════════════════ */
+#resumo-pos {
+  background: var(--grafite);
+  padding: var(--pad-section) 0;
+  position: relative;
+  overflow: hidden;
+}
+.resumo-pos-glow {
+  position: absolute;
+  width: 520px; height: 520px;
+  border-radius: 50%;
+  background: rgba(201,166,107,0.16);
+  filter: blur(120px);
+  top: -200px; right: -120px;
+  pointer-events: none;
+  z-index: 0;
+}
+#resumo-pos .wrap { position: relative; z-index: 1; }
+.resumo-pos-inner {
+  max-width: 760px;
+}
+.resumo-pos-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 58px);
+  font-weight: 600;
+  color: white;
+  line-height: 1.1;
+  margin: 24px 0 56px;
+}
+.resumo-pos-panel {
+  background: rgba(10,10,10,0.42);
+  backdrop-filter: blur(22px) saturate(1.5);
+  -webkit-backdrop-filter: blur(22px) saturate(1.5);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-top-color: rgba(255,255,255,0.22);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 20px 60px rgba(0,0,0,0.35);
+  padding: 52px 60px;
+}
+.resumo-pos-texto {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.5vw, 18px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.80);
+  line-height: 2.0;
+}
+.resumo-pos-texto strong {
+  color: var(--dourado);
+  font-weight: 500;
+}
+
+/* — logo squares grid — */
+.logos-squares {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.logo-sq {
+  aspect-ratio: 4/3;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px;
 }
-.footer-bottom-text {
-  font-family: var(--font-display);
-  font-size: 11px;
-  font-style: italic;
-  font-weight: 300;
-  color: rgba(201,166,107,0.3);
-  letter-spacing: 1px;
+.logo-sq--preto   { background: #0A0A0A; }
+.logo-sq--grafite { background: #232323; }
+.logo-sq--branco  { background: #FFFFFF; border: 1px solid #e8e4dc; }
+.logo-sq--marfim  { background: #F4F1EB; border: 1px solid #ddd8ce; }
+.logo-sq img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* — uniforme — */
+.identidade-uniforme {
+  margin: 0 0 64px;
+}
+.identidade-uniforme-img {
+  width: 100%;
+  max-width: 960px;
+  display: block;
+  margin: 24px auto 0;
+  border-radius: 4px;
 }
 
 /* ══════════════════════════════════════════════
@@ -1129,38 +2149,52 @@ footer {
   .ritual-header { grid-template-columns: 1fr; gap: 24px; }
   .ritual-desc { padding-top: 0; }
   .publicos-grid { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: 1fr; text-align: center; }
-  .footer-right { text-align: center; }
-  .footer-nav { align-items: center; }
-  .footer-logo { margin-left: auto; margin-right: auto; }
+  .diferenciais-grid { grid-template-columns: 1fr; }
+  .fundadores-grid { grid-template-columns: 1fr; }
+  .acreditamos-layout { grid-template-columns: 1fr; gap: 48px; }
+  .mvv-mv { grid-template-columns: 1fr; }
+  .mvv-valores-grid { grid-template-columns: 1fr 1fr; }
+  .frases-grupos { grid-template-columns: 1fr; gap: 56px; }
+  .pe-cards { grid-template-columns: 1fr; }
+  .promessa-cards { grid-template-columns: 1fr; }
+  .identidade-grid { grid-template-columns: 1fr; gap: 56px; }
 }
 
 @media (max-width: 768px) {
   :root { --pad-section: 80px; }
-  #header { padding: 22px 28px; }
-  #header.scrolled { padding: 16px 28px; }
+  #header { padding: 12px 28px; }
+  #header.scrolled { padding: 8px 28px; }
   .header-nav { display: none; }
   .wrap { padding: 0 28px; }
   .servicos-grid { grid-template-columns: 1fr; }
   .conceito-cards { grid-template-columns: 1fr; }
-  .manifesto-inner,
   .contato-inner { padding: 0 28px; }
+  .manifesto-layout { grid-template-columns: 1fr; gap: 48px; }
+  .manifesto-side { position: static; flex-direction: row; align-items: center; flex-wrap: wrap; gap: 28px; }
+  .manifesto-side-logo { flex-direction: row; align-items: center; gap: 16px; }
   .ritual-step { grid-template-columns: 1fr; gap: 16px; }
   .ritual-step { margin: 0 -28px; padding-left: 28px; padding-right: 28px; }
   .ritual-step-num { font-size: 48px; margin-bottom: -8px; }
-  .overlay-top { left: 28px; }
-  .footer-inner,
-  .footer-bottom { padding-left: 28px; padding-right: 28px; }
   #frase-destaque { padding: 100px 28px; }
+  .frase-destaque-inner { padding: 40px 32px; }
+  #menu-overlay { width: 100vw; padding: 0 28px; }
+  .inimigo-palavras { flex-direction: column; align-items: flex-start; gap: 10px; padding: 28px 28px; }
+  .inimigo-sep { display: none; }
+  .inimigo-table th:last-child, .inimigo-table td:last-child { padding-left: 24px; }
+  .inimigo-contraste { padding: 28px 32px; }
+  .mvv-valores-grid { grid-template-columns: 1fr; }
+  .logo-resumo-texto { max-width: 100%; }
 }
 
 @media (max-width: 480px) {
-  .hero-logo { height: 52px; }
+  .hero-logo { width: min(200px, 72%); }
   .hero-btns { flex-direction: column; gap: 14px; }
   .servico-card,
   .publico-card,
   .conceito-card { padding: 44px 28px; }
-  .overlay-nav a { font-size: 36px; }
+  .overlay-nav a { font-size: 28px; }
+  .paleta-itens { grid-template-columns: repeat(3, 1fr); }
+  .logos-squares { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
 </head>
@@ -1173,11 +2207,10 @@ footer {
   </a>
 
   <nav class="header-nav" aria-label="Navegação principal">
-    <a href="#manifesto">Manifesto</a>
-    <a href="#conceito">A Marca</a>
+    <a href="#conceito">Posicionamento</a>
+    <a href="#identidade">Identidade</a>
     <a href="#servicos">Serviços</a>
-    <a href="#ritual">O Ritual</a>
-    <a href="#contato">Contato</a>
+    <a href="#metodo">Método</a>
   </nav>
 
   <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
@@ -1187,25 +2220,34 @@ footer {
   </button>
 </header>
 
-<!-- ══ MENU OVERLAY ══ -->
+<!-- ══ MENU BACKDROP ══ -->
+<div id="menu-backdrop" class="menu-backdrop" aria-hidden="true"></div>
+
+<!-- ══ MENU SIDEBAR ══ -->
 <div id="menu-overlay" role="dialog" aria-label="Menu de navegação">
   <div class="overlay-top">
     <img src="assets/logotipo/LOGO BRANCA PNG.png" alt="ALTARE" class="overlay-logo">
+    <button class="overlay-close" id="overlay-close" aria-label="Fechar menu">✕</button>
   </div>
 
   <nav class="overlay-nav" aria-label="Menu completo">
-    <a href="#manifesto" class="overlay-link">Manifesto</a>
-    <a href="#conceito" class="overlay-link">A Marca</a>
+    <a href="#conceito" class="overlay-link">Conceito</a>
+    <a href="#storytelling" class="overlay-link">Storytelling</a>
+    <a href="#historia" class="overlay-link">História</a>
+    <a href="#acreditamos" class="overlay-link">Propósito</a>
+    <a href="#mvv" class="overlay-link">Missão &amp; Visão</a>
+    <span class="nav-divider"></span>
+    <a href="#frases-posicionamento" class="overlay-link">Frases</a>
+    <a href="#publico-estrategia" class="overlay-link">Público-Alvo</a>
+    <a href="#diferenciais" class="overlay-link">Diferenciais</a>
+    <a href="#resumo-pos" class="overlay-link">Resumo</a>
+    <span class="nav-divider"></span>
+    <a href="#identidade" class="overlay-link">Identidade Visual</a>
     <a href="#servicos" class="overlay-link">Serviços</a>
-    <a href="#ritual" class="overlay-link">O Ritual</a>
-    <a href="#publicos" class="overlay-link">Para Quem</a>
+    <a href="#metodo" class="overlay-link">O Método</a>
+    <span class="nav-divider"></span>
     <a href="#contato" class="overlay-link">Contato</a>
   </nav>
-
-  <div class="overlay-bottom">
-    <div class="overlay-divider"></div>
-    <p class="overlay-tagline">Araxá e região</p>
-  </div>
 </div>
 
 <!-- ══════════════════════════════════════════════
@@ -1233,45 +2275,10 @@ footer {
     </p>
     <div class="hero-btns" data-reveal data-d="3">
       <a href="#servicos" class="btn-primary">Nossos Serviços</a>
-      <a href="#manifesto" class="btn-outline-light">Conheça a Marca</a>
+      <a href="#conceito" class="btn-outline-light">Conheça a Marca</a>
     </div>
   </div>
 
-  <div class="hero-scroll-hint" aria-hidden="true">
-    <span>Rolar</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════
-     § MANIFESTO
-     FOTO: Opcional — ambiente nobre com vidros, lobby, galeria de arte.
-══════════════════════════════════════════════ -->
-<section id="manifesto">
-  <div class="manifesto-inner">
-    <span class="label-gold" data-reveal>Manifesto</span>
-    <span class="gold-line gold-line--center" data-reveal data-d="1" style="margin-bottom:56px;"></span>
-
-    <div class="manifesto-text" data-reveal data-d="2">
-      <p>O vidro é a primeira coisa que comunica um ambiente,<br>antes de qualquer pessoa entrar.</p>
-      <p>Limpo, ele deixa a luz passar e o espaço ganha presença.<br>
-      Manchado, opaco ou riscado, vai apagando esse espaço aos poucos —<br>
-      e fica no ar uma sensação de descuido difícil de explicar.</p>
-      <p>A ALTARE cuida disso com método: avalia o vidro, protege o ambiente,<br>
-      restaura a transparência e entrega com acabamento.</p>
-      <p><strong>Mais luz, mais brilho, mais valor — é o que devolvemos.</strong></p>
-    </div>
-
-    <div class="manifesto-assinatura" data-reveal data-d="3">
-      <div class="gold-line gold-line--center"></div>
-      <img
-        src="assets/logotipo/LOGO REDONDA DOURADA.png"
-        alt="ALTARE"
-        class="manifesto-logo-round"
-      >
-      <span class="manifesto-slogan">ALTARE. Elevar o Padrão do Cuidado.</span>
-    </div>
-  </div>
 </section>
 
 <!-- ══════════════════════════════════════════════
@@ -1281,7 +2288,7 @@ footer {
   <div class="wrap">
     <div class="conceito-header">
       <div>
-        <span class="label-gold" data-reveal>A Grande Ideia</span>
+        <span class="label-gold" data-reveal>Conceito de Marca</span>
         <h2 class="conceito-titulo" data-reveal data-d="1">
           Vidro é<br><em>passagem</em><br>de luz.
         </h2>
@@ -1337,6 +2344,418 @@ footer {
 </section>
 
 <!-- ══════════════════════════════════════════════
+     § STORYTELLING
+══════════════════════════════════════════════ -->
+<section id="storytelling">
+  <div class="wrap">
+    <div class="storytelling-inner">
+      <span class="label-gold label-gold--muted" data-reveal>Storytelling</span>
+      <p class="storytelling-lede" data-reveal data-d="1">
+        O vidro é provavelmente a superfície que você mais olha e menos enxerga.
+      </p>
+
+      <div class="storytelling-corpo" data-reveal data-d="2">
+        <p>Ele está na janela por onde você vê a manhã chegar. No box onde o dia começa. Na vitrine que decide se alguém entra ou passa reto. Na fachada que fala da empresa antes de qualquer funcionário falar. O vidro está sempre ali, no meio do caminho entre você e o mundo — e justamente por ser transparente, ele desaparece. A gente olha através dele e esquece que ele existe.</p>
+      </div>
+
+      <blockquote class="storytelling-paradoxo" data-reveal data-d="3">
+        Esse é o paradoxo do vidro: ele só faz o trabalho dele quando some. Quando está impecável, você não vê o vidro — vê a luz que ele deixa passar, a vista que ele emoldura, o ambiente que ele deixa respirar. O vidro limpo é invisível, e é exatamente por isso que funciona.
+      </blockquote>
+
+      <div class="storytelling-corpo" data-reveal data-d="4">
+        <p>Por isso o vidro não é uma superfície qualquer. É a pele dos ambientes — a parte que mostra, que protege e que comunica ao mesmo tempo. Limpeza e tratamento de vidros é devolver ao espaço a luz, a clareza e o valor que ele perdeu sem perceber.</p>
+      </div>
+
+      <p class="storytelling-fechamento" data-reveal data-d="5">
+        É disso que a ALTARE cuida.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     § HISTÓRIA
+══════════════════════════════════════════════ -->
+<section id="historia">
+  <div class="wrap">
+    <div class="historia-inner">
+      <span class="label-gold" style="color:#8a7560;" data-reveal>História</span>
+      <h2 class="historia-titulo" data-reveal data-d="1">Como a marca nasceu</h2>
+      <p class="historia-sub" data-reveal data-d="1">Três amigos, uma decisão e um padrão novo pra Araxá.</p>
+
+      <div class="historia-corpo" data-reveal data-d="2">
+        <p>Tudo começou com uma porta que se fechou. Thiago trabalhava em uma empresa especializada em vidros, fachadas e placas solares em Araxá, e conhecia o ofício por dentro. Quando o dono encerrou as atividades, a cidade inteira ficou com a demanda em aberto — mais de 300 clientes sem saber pra quem ligar.</p>
+        <p>Onde alguns viram um fim, Thiago, Eric e João Victor viram um começo. Três amigos — irmãos na fé antes de sócios — que decidiram construir do zero a própria empresa, com marca, processo e padrão que a cidade ainda não tinha visto.</p>
+      </div>
+
+      <p class="historia-fechamento" data-reveal data-d="3">
+        Nasceu a ALTARE: não de uma oportunidade fácil, mas da decisão de <strong>elevar o padrão</strong> de um serviço que sempre foi tratado como comum.
+      </p>
+      <p class="historia-amem" data-reveal data-d="3">Um projeto para glorificar Deus.</p>
+    </div>
+
+    <div class="fundadores-label" data-reveal>
+      <span class="label-gold" style="color:#8a7560;">Fundadores</span>
+    </div>
+    <div class="fundadores-grid" data-reveal data-d="1">
+      <div class="fundador-card">
+        <img class="fundador-foto" src="./assets/images/thiago.png" alt="Thiago Campos">
+        <div class="fundador-info">
+          <span class="fundador-nome">Thiago Campos</span>
+          <p class="fundador-cargo">Empresário. Olhar técnico e de expansão.</p>
+        </div>
+      </div>
+      <div class="fundador-card">
+        <img class="fundador-foto" src="./assets/images/eric.png" alt="Eric de Paula">
+        <div class="fundador-info">
+          <span class="fundador-nome">Eric de Paula</span>
+          <p class="fundador-cargo">Empresário, mentor financeiro e de investimentos. Visão estratégica e técnica.</p>
+        </div>
+      </div>
+      <div class="fundador-card">
+        <img class="fundador-foto" src="./assets/images/joao.png" alt="João Victor Müller">
+        <div class="fundador-info">
+          <span class="fundador-nome">João Victor Müller</span>
+          <p class="fundador-cargo">Empresário e investidor financeiro. Visão estratégica de negócio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     § O QUE ACREDITAMOS
+══════════════════════════════════════════════ -->
+<section id="acreditamos">
+  <div class="wrap">
+    <div class="acreditamos-layout">
+      <div data-reveal>
+        <span class="label-gold label-gold--muted">Propósito</span>
+        <h2 class="acreditamos-titulo">O que a ALTARE<br>acredita</h2>
+      </div>
+      <div class="acreditamos-texto" data-reveal data-d="1">
+        <div class="acreditamos-crenca">
+          <span class="acreditamos-num">01</span>
+          <p>A gente acredita que o <strong>invisível importa</strong>. Que o detalhe que ninguém repara é justamente o que separa um lugar comum de um lugar que se nota.</p>
+        </div>
+        <div class="acreditamos-crenca">
+          <span class="acreditamos-num">02</span>
+          <p>Acreditamos que <strong>cuidar é um ato técnico</strong>, não um improviso. Que chegar, limpar e ir embora é fácil — difícil é avaliar, proteger, restaurar e entregar com método. E que é nesse "difícil" que mora a diferença.</p>
+        </div>
+        <div class="acreditamos-crenca">
+          <span class="acreditamos-num">03</span>
+          <p>Acreditamos que o <strong>vidro é superfície de valor</strong>, não superfície qualquer. Que ele merece ser tratado pelo que comunica, não só pelo que suja.</p>
+        </div>
+        <div class="acreditamos-crenca">
+          <span class="acreditamos-num">04</span>
+          <p>Acreditamos que <strong>toda luz que entra num ambiente eleva</strong> quem está dentro. E que devolver essa luz é, no fundo, devolver valor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     § MISSÃO · VISÃO · VALORES
+══════════════════════════════════════════════ -->
+<section id="mvv">
+  <div class="wrap">
+    <span class="label-gold label-gold--muted" data-reveal>Fundamentos</span>
+    <h2 class="acreditamos-titulo" data-reveal data-d="1" style="color:var(--preto);margin-top:20px;margin-bottom:0;">Missão, Visão<br>e Valores</h2>
+
+    <div class="mvv-mv" data-reveal data-d="2">
+      <div class="mvv-card">
+        <span class="mvv-card-label">Missão</span>
+        <span class="mvv-card-sub">por que existimos, hoje</span>
+        <p class="mvv-card-texto">Elevar o padrão do cuidado com vidros em Araxá e região — devolvendo <em>luz, estética e valor</em> aos ambientes, com técnica, método e zelo.</p>
+      </div>
+      <div class="mvv-card">
+        <span class="mvv-card-label">Visão</span>
+        <span class="mvv-card-sub">onde queremos chegar</span>
+        <p class="mvv-card-texto">Ser a <em>referência</em> em cuidado especializado de vidros na região — e expandir a operação e treinamentos para fora do Brasil nos próximos 5 anos.</p>
+      </div>
+    </div>
+
+    <span class="mvv-valores-titulo" data-reveal>Valores — como nos comportamos</span>
+    <div class="mvv-valores-grid" data-reveal data-d="1">
+      <div class="mvv-valor">
+        <span class="mvv-valor-nome">Transparência</span>
+        <p class="mvv-valor-desc">No vidro e na palavra. Clareza em prazo, preço e acordo — sem meia-verdade.</p>
+      </div>
+      <div class="mvv-valor">
+        <span class="mvv-valor-nome">Cuidado técnico</span>
+        <p class="mvv-valor-desc">Método acima de improviso. Avaliar, proteger, restaurar e entregar com acabamento.</p>
+      </div>
+      <div class="mvv-valor">
+        <span class="mvv-valor-nome">Zelo</span>
+        <p class="mvv-valor-desc">O espaço do cliente é patrimônio. Proteger, não danificar, devolver melhor do que se encontrou.</p>
+      </div>
+      <div class="mvv-valor">
+        <span class="mvv-valor-nome">Excelência</span>
+        <p class="mvv-valor-desc">Bem feito não é custo, é reputação. Padrão acima do comum, sempre.</p>
+      </div>
+      <div class="mvv-valor">
+        <span class="mvv-valor-nome">Confiança</span>
+        <p class="mvv-valor-desc">Palavra que se cumpre. Com o cliente, com o prazo e entre os sócios — prosperar juntos.</p>
+      </div>
+      <div class="mvv-valor">
+        <span class="mvv-valor-nome">Responsabilidade</span>
+        <p class="mvv-valor-desc">Segurança e correção. Trabalho seguro em altura, postura correta, obrigações em dia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     § FRASES DE POSICIONAMENTO
+══════════════════════════════════════════════ -->
+<section id="frases-posicionamento">
+  <div class="frases-pos-glow frases-pos-glow--1"></div>
+  <div class="frases-pos-glow frases-pos-glow--2"></div>
+  <div class="wrap">
+    <span class="label-gold label-gold--muted" data-reveal style="position:relative;z-index:1;">Copy & Tom de Voz</span>
+    <h2 class="frases-pos-titulo" data-reveal data-d="1">Frases de<br>Posicionamento</h2>
+
+    <div class="frases-categorias">
+      <div data-reveal data-d="2">
+        <span class="frases-grupo-titulo">Assinaturas & Taglines</span>
+        <div class="frases-wall">
+          <div class="frase-card frase-card--lg"><span>ALTARE é <em>elevar o padrão do cuidado.</em></span></div>
+          <div class="frase-card"><span>Elevando ambientes, <em>restaurando valor.</em></span></div>
+          <div class="frase-card frase-card--lg"><span><em>Devolvemos a luz.</em></span></div>
+          <div class="frase-card"><span>Onde a luz passa, <em>o valor sobe.</em></span></div>
+          <div class="frase-card"><span>Transparência — <em>no vidro e na palavra.</em></span></div>
+          <div class="frase-card"><span>O novo padrão em cuidado com vidros.</span></div>
+          <div class="frase-card"><span>Vidros tratados como valor.</span></div>
+        </div>
+      </div>
+
+      <div data-reveal data-d="3">
+        <span class="frases-grupo-titulo">Frases de Consciência</span>
+        <div class="frases-wall">
+          <div class="frase-card"><span>Ambientes bem cuidados comunicam antes mesmo de alguém entrar.</span></div>
+          <div class="frase-card"><span>A fachada da sua empresa <em>também faz parte da sua venda.</em></span></div>
+          <div class="frase-card"><span>Vidros limpos ampliam luz, presença e percepção de valor.</span></div>
+        </div>
+      </div>
+
+      <div data-reveal data-d="4">
+        <span class="frases-grupo-titulo">Frases de Método</span>
+        <div class="frases-wall">
+          <div class="frase-card"><span>Limpeza profissional não é improviso. <em>É processo.</em></span></div>
+          <div class="frase-card"><span>O cuidado técnico evita danos, preserva materiais e melhora o acabamento.</span></div>
+          <div class="frase-card"><span>Vidros limpos, restaurados e protegidos.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     § PÚBLICO-ALVO (ESTRATÉGIA)
+══════════════════════════════════════════════ -->
+<section id="publico-estrategia">
+  <div class="wrap">
+    <span class="label-gold" style="color:#8a7560;" data-reveal>Estratégia Comercial</span>
+    <h2 class="pe-titulo" data-reveal data-d="1">Público<br>Alvo</h2>
+    <div class="pe-cards" data-reveal data-d="2">
+      <div class="pe-card">
+        <span class="pe-card-num">01</span>
+        <span class="pe-card-tipo">Residencial Premium</span>
+        <span class="pe-card-titulo">Casas & Apartamentos</span>
+        <span class="pe-card-compra">compra confiança</span>
+        <p class="pe-card-desc">Casas, apartamentos, condomínios, áreas gourmet, varandas, boxes, vidros altos, pergolados, coberturas e lustres.</p>
+        <p class="pe-card-quote">"Não quer 'o mais barato'. Quer alguém que entre na casa com cuidado, proteja os móveis, não quebre nada, não suje tudo e entregue acabamento fino."</p>
+        <div class="pe-card-comunicar">
+          <strong>Comunicar</strong>
+          Zelo, segurança, postura dentro da casa, acabamento.
+        </div>
+      </div>
+      <div class="pe-card">
+        <span class="pe-card-num">02</span>
+        <span class="pe-card-tipo">Comercial Local</span>
+        <span class="pe-card-titulo">Lojas & Empresas</span>
+        <span class="pe-card-compra">compra imagem</span>
+        <p class="pe-card-desc">Lojas, clínicas, restaurantes, escritórios, concessionárias, hotéis, pousadas, escolas, igrejas, academias, imobiliárias e empresas com fachada de vidro.</p>
+        <p class="pe-card-quote">"Vitrine suja não parece detalhe — parece desleixo. E desleixo custa percepção."</p>
+        <div class="pe-card-comunicar">
+          <strong>Comunicar</strong>
+          Fachada como parte da venda, imagem profissional, recorrência/manutenção.
+        </div>
+      </div>
+      <div class="pe-card">
+        <span class="pe-card-num">03</span>
+        <span class="pe-card-tipo">Técnico / Funcional</span>
+        <span class="pe-card-titulo">Estruturas Especiais</span>
+        <span class="pe-card-compra">compra resultado e preservação</span>
+        <p class="pe-card-desc">Placas solares, fachadas, coberturas, toldos, ACM, vidros manchados, restauração/proteção de vidro.</p>
+        <p class="pe-card-quote">"Não quero dor de cabeça. Quero alguém confiável, que saiba o que faz, cobre justo, chegue no horário, cuide do meu espaço e entregue resultado visível."</p>
+        <div class="pe-card-comunicar">
+          <strong>Comunicar</strong>
+          Eficiência, durabilidade, segurança, técnica.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     § DIFERENCIAIS
+══════════════════════════════════════════════ -->
+<section id="diferenciais">
+  <div class="wrap">
+    <span class="label-gold label-gold--muted" data-reveal>Por que a ALTARE</span>
+    <h2 class="diferenciais-titulo" data-reveal data-d="1">Diferenciais</h2>
+    <div class="diferenciais-grid" data-reveal data-d="2">
+      <div class="diferencial-card">
+        <span class="diferencial-num">01</span>
+        <p class="diferencial-texto"><strong>Especialistas em vidro.</strong>Foco total, não generalista.</p>
+      </div>
+      <div class="diferencial-card">
+        <span class="diferencial-num">02</span>
+        <p class="diferencial-texto"><strong>Trabalho com método.</strong>Avalia, executa e acompanha — cada serviço segue um processo.</p>
+      </div>
+      <div class="diferencial-card">
+        <span class="diferencial-num">03</span>
+        <p class="diferencial-texto"><strong>Proteção do seu espaço.</strong>Cuidado com móveis, piso e acabamentos durante o serviço.</p>
+      </div>
+      <div class="diferencial-card">
+        <span class="diferencial-num">04</span>
+        <p class="diferencial-texto"><strong>Acabamento de alto padrão.</strong>Resultado conferido, sem detalhe deixado pra trás.</p>
+      </div>
+      <div class="diferencial-card">
+        <span class="diferencial-num">05</span>
+        <p class="diferencial-texto"><strong>Pós-venda de verdade.</strong>Acompanhamento e lembrete de manutenção depois da entrega.</p>
+      </div>
+      <div class="diferencial-card">
+        <span class="diferencial-num">06</span>
+        <p class="diferencial-texto"><strong>Preço claro e prazo cumprido.</strong>Transparência no orçamento e na palavra.</p>
+      </div>
+      <div class="diferencial-card">
+        <span class="diferencial-num">07</span>
+        <p class="diferencial-texto"><strong>Atendimento feito pelos donos.</strong>Compromisso de quem é responsável pela marca.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     § RESUMO POSICIONAMENTO
+══════════════════════════════════════════════ -->
+<section id="resumo-pos">
+  <div class="resumo-pos-glow"></div>
+  <div class="wrap">
+    <div class="resumo-pos-inner">
+      <span class="label-gold label-gold--muted" data-reveal>Branding</span>
+      <h2 class="resumo-pos-titulo" data-reveal data-d="1">POSICIONAMENTO CENTRAL</h2>
+      <div class="resumo-pos-panel" data-reveal data-d="2">
+        <p class="resumo-pos-texto">
+          A ALTARE é uma empresa <strong>especialista em estética, limpeza, restauração e proteção de vidros</strong>, que eleva o padrão de cuidado de ambientes residenciais e comerciais em Araxá e região. Com técnica, segurança, acabamento e processo, atua em vidros, fachadas, placas solares, lustres e estruturas especiais, <strong>restaurando a beleza, a conservação e o valor percebido dos espaços.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     § IDENTIDADE VISUAL
+══════════════════════════════════════════════ -->
+<section id="identidade">
+  <div class="wrap">
+    <span class="label-gold" style="color:#8a7560;" data-reveal>Identidade Visual</span>
+    <h2 class="identidade-titulo" data-reveal data-d="1">A cara da marca</h2>
+
+    <div class="identidade-grid">
+      <!-- PALETA -->
+      <div data-reveal data-d="2">
+        <span class="identidade-bloco-titulo">Paleta de Cores</span>
+        <div class="paleta-itens">
+          <div class="paleta-item">
+            <div class="paleta-amostra" style="background:#0A0A0A;"></div>
+            <span class="paleta-nome">Preto Ônix</span>
+            <span class="paleta-hex">#0A0A0A</span>
+          </div>
+          <div class="paleta-item">
+            <div class="paleta-amostra" style="background:#232323;"></div>
+            <span class="paleta-nome">Grafite</span>
+            <span class="paleta-hex">#232323</span>
+          </div>
+          <div class="paleta-item">
+            <div class="paleta-amostra" style="background:#C9A66B;"></div>
+            <span class="paleta-nome">Dourado</span>
+            <span class="paleta-hex">#C9A66B</span>
+          </div>
+          <div class="paleta-item">
+            <div class="paleta-amostra" style="background:#D8CCBA;border:1px solid #ccc;"></div>
+            <span class="paleta-nome">Areia</span>
+            <span class="paleta-hex">#D8CCBA</span>
+          </div>
+          <div class="paleta-item">
+            <div class="paleta-amostra" style="background:#F4F1EB;border:1px solid #ccc;"></div>
+            <span class="paleta-nome">Marfim</span>
+            <span class="paleta-hex">#F4F1EB</span>
+          </div>
+          <div class="paleta-item">
+            <div class="paleta-amostra" style="background:#FFFFFF;border:1px solid #ccc;"></div>
+            <span class="paleta-nome">Branco Pérola</span>
+            <span class="paleta-hex">#FFFFFF</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOGOS -->
+      <div data-reveal data-d="3">
+        <span class="identidade-bloco-titulo">Versões do Logotipo</span>
+        <div class="logos-squares">
+          <div class="logo-sq logo-sq--preto">
+            <img src="assets/logotipo/LOGO BRANCA PNG.png" alt="Logo branca">
+          </div>
+          <div class="logo-sq logo-sq--grafite">
+            <img src="assets/logotipo/LOGO DOURADA.png" alt="Logo dourada">
+          </div>
+          <div class="logo-sq logo-sq--branco">
+            <img src="assets/logotipo/LOGO PRETA PNG.png" alt="Logo preta">
+          </div>
+          <div class="logo-sq logo-sq--preto">
+            <img src="assets/logotipo/LOGO REDONDA BRANCA PNG.png" alt="Logo redonda branca">
+          </div>
+          <div class="logo-sq logo-sq--grafite">
+            <img src="assets/logotipo/LOGO REDONDA DOURADA.png" alt="Logo redonda dourada">
+          </div>
+          <div class="logo-sq logo-sq--marfim">
+            <img src="assets/logotipo/LOGO REDONDA PRETA.png" alt="Logo redonda preta">
+          </div>
+        </div>
+
+        <!-- RESUMO DO LOGO -->
+        <div class="logo-resumo" data-reveal data-d="4">
+          <div class="logo-resumo-tags">
+            <span>Premium</span><span>Alto padrão</span><span>Sofisticação</span><span>Confiança</span><span>Valor</span>
+          </div>
+          <p class="logo-resumo-texto">O traço do "A" não é um "A" comum — ele tem um <em>swash</em> que sobe, como um movimento ascendente. É a tradução visual do verbo da marca: <strong>elevar</strong>. Tipografia de alto padrão, paleta de luxo discreto e um selo que assina cada trabalho com a marca de quem cuidou.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- UNIFORME -->
+    <div class="identidade-uniforme" data-reveal data-d="5">
+      <span class="identidade-bloco-titulo">Uniforme</span>
+      <img src="assets/images/uniforme.png" alt="Uniforme ALTARE Vidros" class="identidade-uniforme-img">
+    </div>
+  </div>
+
+  <!-- MOCKUP — full bleed -->
+  <div class="identidade-mockup-full" data-reveal data-d="6">
+    <img src="assets/images/mockup.png" alt="Aplicação da marca ALTARE">
+  </div>
+
+  <!-- MOCKUP FACHADA — full bleed -->
+  <div class="identidade-mockup-full" data-reveal data-d="7" style="margin-top:0;">
+    <img src="assets/images/altarefachada.png" alt="Aplicação da marca ALTARE em fachada">
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
      § SERVIÇOS
      FOTO: fachada comercial, box de banheiro luxuoso, vitrine iluminada.
 ══════════════════════════════════════════════ -->
@@ -1359,7 +2778,7 @@ footer {
 
       <!-- Residencial -->
       <div class="servico-card" data-reveal>
-        <span class="servico-num">01</span>
+        <img class="servico-img" src="./assets/images/servico1.png" alt="Vidros Residenciais">
         <span class="servico-titulo">Vidros Residenciais</span>
         <span class="servico-subtag">Casa · Apartamento · Condomínio</span>
         <ul class="servico-lista">
@@ -1373,7 +2792,7 @@ footer {
 
       <!-- Comercial -->
       <div class="servico-card" data-reveal data-d="1">
-        <span class="servico-num">02</span>
+        <img class="servico-img" src="./assets/images/servico2.png" alt="Vidros Comerciais">
         <span class="servico-titulo">Vidros Comerciais</span>
         <span class="servico-subtag">Lojas · Clínicas · Empresas</span>
         <ul class="servico-lista">
@@ -1387,7 +2806,7 @@ footer {
 
       <!-- Especiais -->
       <div class="servico-card" data-reveal data-d="2">
-        <span class="servico-num">03</span>
+        <img class="servico-img" src="./assets/images/servico3.png" alt="Vidros Especiais">
         <span class="servico-titulo">Vidros Especiais</span>
         <span class="servico-subtag">Altura · Difícil Acesso · Energia</span>
         <ul class="servico-lista">
@@ -1401,7 +2820,7 @@ footer {
 
       <!-- Restauração -->
       <div class="servico-card" data-reveal data-d="3">
-        <span class="servico-num">04</span>
+        <img class="servico-img" src="./assets/images/servico4.png" alt="Restauração e Proteção">
         <span class="servico-titulo">Restauração e Proteção</span>
         <span class="servico-subtag">Conservação · Prevenção · Durabilidade</span>
         <ul class="servico-lista">
@@ -1417,30 +2836,41 @@ footer {
   </div>
 </section>
 
+
 <!-- ══════════════════════════════════════════════
-     § O RITUAL ALTARE
+     § O MÉTODO ALTARE
 ══════════════════════════════════════════════ -->
-<section id="ritual">
+<section id="metodo">
   <div class="wrap">
+
+    <img src="assets/images/altareglass.png" alt="ALTARE Glass" class="metodo-logo" data-reveal>
 
     <div class="ritual-header">
       <div>
         <span class="label-gold" data-reveal>O Método</span>
         <h2 class="ritual-titulo" data-reveal data-d="1">
-          O Ritual<br><em>ALTARE</em>
+          O Método<br><em>ALTARE GLASS</em>
         </h2>
       </div>
       <div class="ritual-desc" data-reveal data-d="2">
         <p>
           É isto que separa a ALTARE do "chega e limpa".
-          Chamamos de <strong>ritual</strong> porque reforça reverência e cuidado —
-          combina com a ideia do altar.
+          São cinco etapas estruturadas que garantem consistência, cuidado e resultado —
         </p>
         <p style="margin-top:1em;">
           Cinco pilares que funcionam ao mesmo tempo como roteiro de execução
           e como argumento de venda. Limpeza profissional não é improviso. É processo.
         </p>
       </div>
+    </div>
+
+    <div class="ritual-expansao" data-reveal data-d="3">
+      <p>
+        O Método ALTARE Glass nasce em Araxá — mas o padrão não nasceu para ficar só aqui.
+        O próximo passo é a <strong>expansão internacional</strong> do método: novas praças
+        e treinamentos em outros países, levando o mesmo rigor de avaliação, proteção, execução,
+        entrega e pós-venda para onde houver vidro a cuidar.
+      </p>
     </div>
 
     <div class="ritual-steps">
@@ -1509,91 +2939,6 @@ footer {
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-     § PARA QUEM
-══════════════════════════════════════════════ -->
-<section id="publicos">
-  <div class="wrap">
-
-    <div class="publicos-header">
-      <span class="label-gold label-gold--muted" data-reveal>Nosso Público</span>
-      <h2 class="publicos-titulo" data-reveal data-d="1">
-        Para quem<br>fazemos.
-      </h2>
-      <p class="publicos-sub" data-reveal data-d="2">
-        O discurso muda em cada frente, porque o que cada público compra é diferente.
-      </p>
-    </div>
-
-  </div>
-
-  <div class="wrap" style="max-width:100%;padding:0;">
-    <div class="publicos-grid">
-
-      <div class="publico-card" data-reveal>
-        <span class="publico-tag">01 — Residencial</span>
-        <span class="publico-titulo">Premium</span>
-        <span class="publico-subtitulo">Casas · Apartamentos · Condomínios</span>
-        <p class="publico-texto">
-          Não quer o mais barato. Quer alguém que entre na casa com cuidado,
-          proteja os móveis, não quebre nada, não suje tudo e entregue
-          acabamento fino.
-        </p>
-        <div class="publico-compra">
-          <span class="publico-compra-label">O que compra</span>
-          <span class="publico-compra-valor">Confiança</span>
-        </div>
-      </div>
-
-      <div class="publico-card" data-reveal data-d="1">
-        <span class="publico-tag">02 — Comercial</span>
-        <span class="publico-titulo">Local</span>
-        <span class="publico-subtitulo">Lojas · Clínicas · Escritórios</span>
-        <p class="publico-texto">
-          Vitrine suja não parece detalhe — parece desleixo.
-          E desleixo custa percepção.
-          A fachada da empresa faz parte da venda dela.
-        </p>
-        <div class="publico-compra">
-          <span class="publico-compra-label">O que compra</span>
-          <span class="publico-compra-valor">Imagem</span>
-        </div>
-      </div>
-
-      <div class="publico-card" data-reveal data-d="2">
-        <span class="publico-tag">03 — Técnico</span>
-        <span class="publico-titulo">Funcional</span>
-        <span class="publico-subtitulo">Placas Solares · Fachadas · ACM</span>
-        <p class="publico-texto">
-          "Não quero dor de cabeça. Quero alguém confiável, que saiba o que faz,
-          cobre justo, chegue no horário, cuide do meu espaço e entregue
-          resultado visível."
-        </p>
-        <div class="publico-compra">
-          <span class="publico-compra-label">O que compra</span>
-          <span class="publico-compra-valor">Resultado e Preservação</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════
-     § FRASE DESTAQUE
-     FOTO: vidros no contraluz, luz solar, ambiente clean.
-══════════════════════════════════════════════ -->
-<section id="frase-destaque">
-  <div class="frase-destaque-inner">
-    <span class="gold-line gold-line--center" data-reveal></span>
-    <blockquote class="frase-grande" data-reveal data-d="1">
-      "Ambientes bem cuidados comunicam<br>
-      antes mesmo de alguém entrar.<br>
-      <em>Onde a luz passa, o valor sobe.</em>"
-    </blockquote>
-    <span class="frase-autor" data-reveal data-d="2">ALTARE VIDROS — Araxá e Região</span>
-  </div>
-</section>
 
 <!-- ══════════════════════════════════════════════
      § CONTATO / CTA
@@ -1632,37 +2977,6 @@ footer {
 </section>
 
 <!-- ══ FOOTER ══ -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-left">
-      <img src="assets/logotipo/LOGO BRANCA PNG.png" alt="ALTARE VIDROS" class="footer-logo">
-      <p class="footer-local">Araxá e Região · MG</p>
-    </div>
-    <div class="footer-center">
-      <img src="assets/logotipo/LOGO REDONDA BRANCA PNG.png" alt="" class="footer-logo-round" aria-hidden="true">
-      <p class="footer-copy">
-        ALTARE VIDROS<br>
-        Elevando ambientes, restaurando valor.
-      </p>
-    </div>
-    <div class="footer-right">
-      <nav class="footer-nav" aria-label="Navegação rodapé">
-        <a href="#manifesto">Manifesto</a>
-        <a href="#conceito">A Marca</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#ritual">O Ritual</a>
-        <a href="#publicos">Para Quem</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span class="footer-bottom-text">
-      Transparência — no vidro e na palavra.
-    </span>
-  </div>
-</footer>
-
 <script>
 /* ──────────────────────────────────────────────
    HEADER: sólido ao rolar
@@ -1679,14 +2993,19 @@ const hamburger   = document.getElementById('hamburger');
 const menuOverlay = document.getElementById('menu-overlay');
 const overlayLinks = menuOverlay.querySelectorAll('.overlay-link');
 
+const menuBackdrop  = document.getElementById('menu-backdrop');
+const overlayClose  = document.getElementById('overlay-close');
+
 function openMenu() {
   menuOverlay.classList.add('open');
+  menuBackdrop.classList.add('open');
   hamburger.classList.add('open');
   hamburger.setAttribute('aria-expanded', 'true');
   document.body.style.overflow = 'hidden';
 }
 function closeMenu() {
   menuOverlay.classList.remove('open');
+  menuBackdrop.classList.remove('open');
   hamburger.classList.remove('open');
   hamburger.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
@@ -1695,11 +3014,11 @@ function closeMenu() {
 hamburger.addEventListener('click', () => {
   menuOverlay.classList.contains('open') ? closeMenu() : openMenu();
 });
+if (overlayClose) overlayClose.addEventListener('click', closeMenu);
+menuBackdrop.addEventListener('click', closeMenu);
 
 overlayLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    closeMenu();
-  });
+  link.addEventListener('click', () => { closeMenu(); });
 });
 
 document.addEventListener('keydown', e => {
