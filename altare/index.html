@@ -2165,8 +2165,12 @@ body {
   #header { padding: 12px 28px; }
   #header.scrolled { padding: 8px 28px; }
   .header-nav { display: none; }
-  .header-logo { height: 48px; margin: -6px 0; }
-  #header.scrolled .header-logo { height: 40px; margin: -4px 0; }
+  .header-logo { height: 64px; margin: -8px 0; }
+  #header.scrolled .header-logo { height: 52px; margin: -6px 0; }
+  .logos-squares { grid-template-columns: repeat(2, 1fr); }
+  .logo-sq { padding: 22px; }
+  .logo-resumo-tags { gap: 8px; }
+  .logo-resumo-tags span { font-size: 9px; padding: 5px 11px; }
   #hero { background-attachment: scroll; }
   #storytelling { background-attachment: scroll; }
   #frase-destaque { background-attachment: scroll; }
@@ -2197,7 +2201,6 @@ body {
   .publico-card,
   .conceito-card { padding: 44px 28px; }
   .paleta-itens { grid-template-columns: repeat(3, 1fr); }
-  .logos-squares { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
 </head>
@@ -2319,6 +2322,9 @@ body {
           O altar é o lugar onde algo comum passa a ser tratado como se tivesse valor.
           É esse o gesto da marca — e o nome já carrega o verbo: <strong>elevar</strong>.
           O nome chega com presença; não precisa explicar demais.
+        </p>
+        <p class="conceito-card-texto" style="margin-top:1.4em; font-style:italic; color:#8a7560;">
+          Um projeto para glorificar a Deus.
         </p>
       </div>
       <div class="conceito-card" data-reveal data-d="1">
