@@ -1,0 +1,2384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Briefing · Identidade Visual — Vamos Carimbar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ═══════════════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════════════ */
+:root {
+  --navy:        #1a2d4a;
+  --navy-medio:  #2c4a6e;
+  --navy-suave:  #4a6080;
+  --navy-light:  #c8daf0;
+  --navy-xlight: #eef4fb;
+
+  --azul:        #2563a8;
+  --azul-claro:  #bfdbfe;
+  --azul-xclaro: #eff6ff;
+
+  --nude:        #f7f3ee;
+  --nude-warm:   #ece4d8;
+  --nude-medium: #d5c9b8;
+  --nude-dark:   #a89888;
+
+  --branco:      #ffffff;
+  --texto:       #1a2d4a;
+  --texto-suave: #5a7090;
+  --borda:       #d8e4ef;
+  --sombra:      rgba(26,45,74,0.07);
+
+  --font-display: 'Raleway', sans-serif;
+  --font-body:    'Montserrat', sans-serif;
+}
+
+/* ═══════════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: #0c1c2e;
+  color: var(--branco);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ═══════════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════════ */
+.header {
+  background: linear-gradient(rgba(8,18,36,0.62), rgba(8,18,36,0.52)), url('./assets/irrigacao.png') center/cover no-repeat;
+  border-bottom: none;
+  padding: 130px 24px 110px;
+  min-height: 55vh;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.45) 40%, var(--azul-claro) 60%, transparent 100%);
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; right: -60px;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.07);
+  opacity: 0.6;
+  pointer-events: none;
+}
+.header-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 100px;
+  padding: 6px 16px;
+  margin-bottom: 32px;
+  backdrop-filter: blur(4px);
+}
+.header-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 6vw, 60px);
+  font-weight: 200;
+  color: white;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.35);
+}
+.header-titulo em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--azul-claro);
+}
+.header-subtitulo {
+  font-family: var(--font-display);
+  font-size: clamp(13px, 2vw, 17px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.header-linha {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.38), transparent);
+  margin: 0 auto 24px;
+}
+.header-desc {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.68);
+  line-height: 1.8;
+  max-width: 420px;
+  margin: 0 auto;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.2);
+}
+.header-desc .hl {
+  color: var(--azul-claro);
+  font-weight: 500;
+}
+
+/* ═══════════════════════════════════════════════
+   NAV STICKY
+═══════════════════════════════════════════════ */
+.nav {
+  position: sticky;
+  top: 0; z-index: 100;
+  background: rgba(247,243,238,0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--nude-warm);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 12px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--nude-dark);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+}
+.nav-link:hover {
+  color: var(--navy);
+  border-bottom-color: var(--navy-light);
+}
+.nav-num {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--nude-warm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--navy-suave);
+  transition: all 0.2s;
+}
+.nav-link:hover .nav-num {
+  background: var(--navy);
+  color: white;
+}
+
+/* ═══════════════════════════════════════════════
+   CONTAINER
+═══════════════════════════════════════════════ */
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ═══════════════════════════════════════════════
+   SEÇÃO
+═══════════════════════════════════════════════ */
+.secao {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--nude-warm);
+}
+.secao:last-child { border-bottom: none; }
+
+.secao-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 52px;
+}
+.secao-num {
+  width: 46px; height: 46px;
+  flex-shrink: 0;
+  border: 1.5px solid var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-top: 1px;
+  background: var(--branco);
+}
+.secao-info {}
+.secao-titulo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.secao-desc {
+  font-size: 12px;
+  color: var(--texto-suave);
+  line-height: 1.7;
+}
+.secao-desc .hl { color: var(--azul); font-weight: 500; }
+
+/* ═══════════════════════════════════════════════
+   GRUPO DE PERGUNTAS
+═══════════════════════════════════════════════ */
+.perguntas {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ── Pergunta simples ── */
+.pergunta {}
+.pergunta-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--navy-medio);
+  margin-bottom: 12px;
+}
+.pergunta-hint {
+  display: block;
+  font-size: 14px;
+  color: var(--texto-suave);
+  margin-top: -7px;
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+.pergunta-hint .hl { color: var(--azul); font-weight: 500; }
+
+/* Input underline */
+.inp {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid var(--nude-medium);
+  padding: 10px 2px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--texto);
+  outline: none;
+  transition: border-color 0.3s;
+}
+.inp:focus { border-bottom-color: var(--navy); }
+.inp::placeholder { color: var(--nude-dark); font-style: italic; font-weight: 300; }
+
+/* Textarea */
+.txta {
+  width: 100%;
+  background: var(--branco);
+  border: 1.5px solid var(--nude-warm);
+  border-radius: 10px;
+  padding: 16px 18px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--texto);
+  outline: none;
+  resize: vertical;
+  min-height: 96px;
+  line-height: 1.75;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.txta:focus {
+  border-color: var(--navy-light);
+  box-shadow: 0 0 0 3px rgba(26,45,74,0.05);
+}
+.txta::placeholder { color: var(--nude-dark); font-style: italic; font-weight: 300; }
+
+/* Grid de 2 colunas para perguntas curtas */
+.perguntas-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 28px;
+}
+@media(max-width: 560px){ .perguntas-2col { grid-template-columns: 1fr; } }
+
+/* ── Diferenciais com checkbox + textarea ── */
+.dif-topics { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+
+.dif-topic {
+  border: 1.5px solid var(--borda);
+  border-radius: 12px;
+  background: var(--branco);
+  overflow: hidden;
+  transition: border-color 0.2s, background 0.2s;
+}
+.dif-topic:has(.dif-cb:checked) {
+  border-color: var(--navy);
+  background: var(--navy-xlight);
+}
+.dif-topic-outros {
+  border-style: dashed;
+}
+
+.dif-topic-row {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  gap: 0;
+}
+.dif-cb { display: none; }
+
+.dif-topic-label {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  cursor: pointer;
+  user-select: none;
+  flex: 1;
+}
+.dif-chk {
+  width: 18px; height: 18px;
+  border: 1.5px solid var(--nude-medium);
+  border-radius: 5px;
+  display: inline-flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+  background: var(--branco);
+}
+.dif-cb:checked + .dif-topic-label .dif-chk {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+.dif-cb:checked + .dif-topic-label .dif-chk::after {
+  content: '';
+  width: 4px; height: 8px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.dif-topic-icone {
+  font-size: 16px;
+  line-height: 1;
+}
+.dif-topic-nome {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy-suave);
+  letter-spacing: 0.2px;
+  transition: color 0.2s;
+}
+.dif-cb:checked + .dif-topic-label .dif-topic-nome {
+  color: var(--navy);
+}
+.dif-txta {
+  border-radius: 0 0 10px 10px !important;
+  border: none !important;
+  border-top: 1px solid var(--nude-warm) !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 12px 18px !important;
+  font-size: 13px !important;
+  min-height: 72px !important;
+}
+
+/* ═══════════════════════════════════════════════
+   ATRIBUTOS — pills clicáveis
+═══════════════════════════════════════════════ */
+.atributos-intro {
+  font-size: 13px;
+  color: var(--texto-suave);
+  line-height: 1.75;
+  margin-bottom: 28px;
+  padding: 18px 20px;
+  background: var(--azul-xclaro);
+  border-left: 3px solid var(--azul-claro);
+  border-radius: 0 8px 8px 0;
+}
+.atributos-intro strong { color: var(--navy); }
+
+.atributos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.atr-cb { display: none; }
+.atr-cb + label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border: 1.5px solid var(--borda);
+  border-radius: 100px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--navy-suave);
+  background: var(--branco);
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+.atr-cb + label:hover {
+  border-color: var(--navy-light);
+  background: var(--navy-xlight);
+  color: var(--navy);
+}
+.atr-cb:checked + label {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--branco);
+}
+
+.atr-box {
+  width: 14px; height: 14px;
+  border: 1.5px solid currentColor;
+  border-radius: 3px;
+  display: inline-flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+.atr-cb:checked + label .atr-box {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.45);
+}
+.atr-cb:checked + label .atr-box::after {
+  content: '';
+  width: 4px; height: 7px;
+  border-right: 1.5px solid #fff;
+  border-bottom: 1.5px solid #fff;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.atributos-obs {
+  margin-top: 20px;
+}
+
+/* ═══════════════════════════════════════════════
+   SIMBOLOGIA — radio cards
+═══════════════════════════════════════════════ */
+.simb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(138px, 1fr));
+  gap: 12px;
+}
+@media(max-width: 480px){ .simb-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.simb-radio { display: none; }
+.simb-card {
+  border: 1.5px solid var(--borda);
+  border-radius: 14px;
+  padding: 22px 14px 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.22s;
+  background: var(--branco);
+}
+.simb-card:hover {
+  border-color: var(--navy-light);
+  background: var(--navy-xlight);
+}
+.simb-radio:checked + .simb-card {
+  border-color: var(--navy);
+  background: var(--azul-xclaro);
+  box-shadow: 0 0 0 3px rgba(26,45,74,0.07);
+}
+.simb-icon { font-size: 30px; display: block; margin-bottom: 12px; }
+.simb-titulo {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--navy);
+  display: block;
+  margin-bottom: 5px;
+}
+.simb-desc {
+  font-size: 10px;
+  color: var(--texto-suave);
+  line-height: 1.5;
+}
+
+/* ── Subgrupo de pergunta com recuo ── */
+.pergunta-sub {
+  padding-left: 20px;
+  border-left: 2px solid var(--nude-warm);
+}
+
+/* ═══════════════════════════════════════════════
+   PERSONALIDADE — toggles de dupla escala
+═══════════════════════════════════════════════ */
+.escala-wrap { display: flex; flex-direction: column; gap: 18px; }
+.escala-item {}
+.escala-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.escala-label-a {
+  font-size: 11px; font-weight: 600; color: var(--navy-medio);
+}
+.escala-label-b {
+  font-size: 11px; font-weight: 600; color: var(--navy-suave);
+}
+.escala-track {
+  display: flex;
+  gap: 6px;
+}
+.esc-radio { display: none; }
+.esc-dot {
+  flex: 1;
+  height: 8px;
+  border-radius: 100px;
+  background: var(--nude-warm);
+  cursor: pointer;
+  transition: background 0.2s;
+  border: 1.5px solid var(--nude-medium);
+}
+.esc-radio:checked + .esc-dot {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+.escala-track:hover .esc-dot { border-color: var(--navy-light); }
+
+/* ═══════════════════════════════════════════════
+   REFERÊNCIAS — dois cards lado a lado
+═══════════════════════════════════════════════ */
+.ref-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+@media(max-width: 520px){ .ref-grid { grid-template-columns: 1fr; } }
+
+.ref-card {
+  background: var(--branco);
+  border-radius: 12px;
+  padding: 22px 20px;
+}
+.ref-card.admira { border: 1.5px solid var(--azul-claro); }
+.ref-card.evita  { border: 1.5px solid #f0c4b4; }
+
+.ref-card-titulo {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.admira .ref-card-titulo { color: var(--azul); }
+.evita  .ref-card-titulo { color: #b05a3a; }
+
+.ref-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.admira .ref-dot { background: var(--azul-claro); }
+.evita  .ref-dot { background: #f0b8a0; }
+
+/* ═══════════════════════════════════════════════
+   CHECKLIST SIMPLES (canais, materiais)
+═══════════════════════════════════════════════ */
+.cl { display: flex; flex-direction: column; gap: 10px; }
+.cl-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cl-item input[type="checkbox"] {
+  width: 17px; height: 17px;
+  accent-color: var(--navy);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.cl-item label {
+  font-size: 13px;
+  color: var(--texto);
+  cursor: pointer;
+}
+
+/* ── Grid 2×2 para checklists ── */
+.cl-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 24px;
+}
+@media(max-width: 480px){ .cl-2col { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════════════
+   DIVISOR INTERNO
+═══════════════════════════════════════════════ */
+.divisor {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--nude-warm), transparent);
+  margin: 40px 0;
+}
+
+/* ═══════════════════════════════════════════════
+   TAG DE CONTEXTO
+═══════════════════════════════════════════════ */
+.ctx-nota {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--azul-xclaro);
+  border: 1px solid var(--azul-claro);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--azul);
+  margin-bottom: 28px;
+}
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+.footer {
+  background: var(--branco);
+  border-top: 1px solid var(--nude-warm);
+  padding: 52px 24px;
+  text-align: center;
+}
+.footer-marca {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--nude-dark);
+  margin-bottom: 16px;
+}
+.footer-linha {
+  width: 32px;
+  height: 1px;
+  background: var(--nude-medium);
+  margin: 0 auto 16px;
+}
+.footer-texto {
+  font-size: 11px;
+  color: var(--nude-dark);
+  line-height: 1.7;
+}
+
+/* ═══════════════════════════════════════════════
+   SCROLL SMOOTH para âncoras dentro de nav
+═══════════════════════════════════════════════ */
+
+
+/* ═══════════════════════════════════════════════
+   HEADER FIXO + HAMBURGER MENU (estilo Altare)
+═══════════════════════════════════════════════ */
+#bf-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 52px;
+  transition: background 0.5s ease, padding 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+  border-bottom: 1px solid transparent;
+}
+#bf-header.scrolled {
+  background: rgba(10,18,32,0.48);
+  backdrop-filter: blur(22px) saturate(1.4);
+  -webkit-backdrop-filter: blur(22px) saturate(1.4);
+  padding: 13px 52px;
+  border-bottom-color: rgba(255,255,255,0.09);
+  box-shadow: 0 4px 28px rgba(0,0,0,0.22);
+}
+.bf-marca {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.82);
+  user-select: none;
+}
+
+/* ── Hamburguer ── */
+.bf-hamburger {
+  width: 44px; height: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 6px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  flex-shrink: 0;
+}
+.bf-hamburger span {
+  display: block;
+  height: 1.5px;
+  background: rgba(255,255,255,0.85);
+  transition: transform 0.45s cubic-bezier(.77,0,.175,1), opacity 0.3s, width 0.35s;
+}
+.bf-hamburger span:nth-child(1) { width: 28px; }
+.bf-hamburger span:nth-child(2) { width: 20px; }
+.bf-hamburger span:nth-child(3) { width: 28px; }
+.bf-hamburger.open span:nth-child(1) { width: 28px; transform: rotate(45deg) translate(5.5px,5.5px); }
+.bf-hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
+.bf-hamburger.open span:nth-child(3) { width: 28px; transform: rotate(-45deg) translate(5.5px,-5.5px); }
+
+/* ── Backdrop ── */
+.bf-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 240;
+  background: rgba(0,0,0,0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.bf-backdrop.open { opacity: 1; pointer-events: all; }
+
+/* ── Sidebar / Menu overlay ── */
+#bf-menu {
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  width: 380px;
+  max-width: 88vw;
+  z-index: 250;
+  background: rgba(10,18,32,0.48);
+  backdrop-filter: blur(26px) saturate(1.5);
+  -webkit-backdrop-filter: blur(26px) saturate(1.5);
+  border-left: 1px solid rgba(255,255,255,0.1);
+  box-shadow: inset 1px 0 0 rgba(255,255,255,0.05), -20px 0 60px rgba(0,0,0,0.38);
+  display: flex;
+  flex-direction: column;
+  padding: 0 44px;
+  transform: translateX(100%);
+  transition: transform 0.55s cubic-bezier(.77,0,.175,1);
+  overflow-y: auto;
+}
+#bf-menu.open { transform: translateX(0); }
+
+.bf-menu-top {
+  position: sticky;
+  top: 0;
+  padding: 28px 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.bf-menu-marca {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+
+.bf-menu-links {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 0;
+}
+.bf-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: color 0.22s, padding-left 0.22s;
+}
+.bf-menu-link:hover { color: white; padding-left: 8px; }
+.bf-menu-link:last-child { border-bottom: none; }
+.bf-menu-num {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.28);
+  width: 20px;
+  flex-shrink: 0;
+}
+
+.bf-menu-footer {
+  padding: 28px 0 44px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.bf-menu-footer p {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 200;
+  color: rgba(255,255,255,0.28);
+  line-height: 1.4;
+}
+.bf-menu-footer em { font-style: italic; color: var(--azul-claro); opacity: 0.65; }
+
+@media(max-width: 640px){
+  #bf-header { padding: 18px 24px; }
+  #bf-header.scrolled { padding: 13px 24px; }
+  #bf-menu { padding: 0 28px; }
+}
+
+/* ═══════════════════════════════════════════════
+   DARK THEME — overrides
+═══════════════════════════════════════════════ */
+
+/* Nav */
+.nav { background: rgba(10,20,38,0.97); border-bottom-color: rgba(255,255,255,0.06); }
+.nav-link { color: rgba(255,255,255,0.75); }
+.nav-link:hover { color: rgba(255,255,255,0.88); border-bottom-color: rgba(255,255,255,0.22); }
+.nav-num { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.5); }
+.nav-link:hover .nav-num { background: rgba(255,255,255,0.16); color: white; }
+
+/* Seções */
+.secao { border-bottom-color: rgba(255,255,255,0.06); }
+.secao-num { border-color: rgba(255,255,255,0.32); color: rgba(255,255,255,0.78); background: transparent; }
+.secao-titulo { color: white; }
+.secao-desc { color: rgba(255,255,255,1); }
+.secao-desc .hl { color: var(--azul-claro); }
+
+/* Labels e hints */
+.pergunta-label { color: white; }
+.pergunta-hint { color: white; }
+.pergunta-hint .hl { color: var(--azul-claro); }
+
+/* Inputs underline */
+.inp { background: #f5f0e8; color: #1a2d4a; border-bottom-color: #c4b09a; border-radius: 6px 6px 0 0; padding: 10px 12px 10px; }
+.inp:focus { border-bottom-color: #1a2d4a; }
+.inp::placeholder { color: #a89888; font-style: italic; }
+
+/* Textareas */
+.txta { background: #f5f0e8; border-color: #d5c9b8; color: #1a2d4a; }
+.txta:focus { border-color: #a89888; box-shadow: 0 0 0 3px rgba(168,152,136,0.15); }
+.txta::placeholder { color: #b8a898; font-style: italic; }
+
+/* Atributos intro */
+.atributos-intro { background: rgba(255,255,255,0.05); border-left-color: rgba(191,219,254,0.5); color: white; }
+.atributos-intro strong { color: white; }
+
+/* Pills de atributos */
+.atr-cb + label { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.22); color: white; }
+.atr-cb + label:hover { background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.45); color: white; }
+.atr-cb:checked + label { background: white; border-color: white; color: var(--navy); }
+.atr-cb:checked + label .atr-box { background: rgba(26,45,74,0.15); border-color: rgba(26,45,74,0.4); }
+.atr-cb:checked + label .atr-box::after { border-right-color: var(--navy); border-bottom-color: var(--navy); }
+
+/* Simbologia cards */
+.simb-card { background: rgba(255,255,255,0.055); border-color: rgba(255,255,255,0.11); }
+.simb-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.26); }
+.simb-radio:checked + .simb-card { background: rgba(255,255,255,0.14); border-color: white; box-shadow: 0 0 0 3px rgba(255,255,255,0.05); }
+.simb-titulo { color: white; }
+.simb-desc { color: rgba(255,255,255,1); }
+
+/* Escalas de personalidade */
+.escala-label-a { color: white; }
+.escala-label-b { color: rgba(255,255,255,0.85); }
+.esc-dot { background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.13); }
+.esc-radio:checked + .esc-dot { background: white; border-color: white; }
+
+/* Referências */
+.ref-card { background: rgba(255,255,255,0.04); }
+.ref-card.admira { border-color: rgba(191,219,254,0.22); }
+.ref-card.evita  { border-color: rgba(240,180,160,0.22); }
+.ref-card-titulo.admira { color: #93c5fd; }
+.ref-card-titulo.evita  { color: #f0b8a0; }
+.admira .ref-dot { background: rgba(191,219,254,0.35); }
+.evita  .ref-dot { background: rgba(240,180,160,0.35); }
+
+/* Diferenciais (dif-topic) */
+.dif-topic { background: white; border-color: #e0d4c4; }
+.dif-topic:has(.dif-cb:checked) { background: white; border-color: var(--navy); box-shadow: 0 0 0 2px rgba(26,45,74,0.1); }
+.dif-topic-outros { border-color: #d5c9b8; }
+.dif-chk { border-color: #c4b09a; background: white; }
+.dif-cb:checked + .dif-topic-label .dif-chk { background: var(--navy); border-color: var(--navy); }
+.dif-cb:checked + .dif-topic-label .dif-chk::after { border-right-color: white; border-bottom-color: white; }
+.dif-topic-nome { color: var(--navy); }
+.dif-cb:checked + .dif-topic-label .dif-topic-nome { color: var(--navy); font-weight: 700; }
+.dif-txta { border-top-color: #e0d4c4 !important; background: #faf8f5 !important; color: #1a2d4a !important; }
+
+/* Checklist */
+.cl-item label { color: white; }
+.cl-item input[type="checkbox"] { accent-color: var(--azul-claro); }
+
+/* Divisor */
+.divisor { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.07), transparent); }
+
+/* Pergunta sub */
+.pergunta-sub { border-left-color: rgba(255,255,255,0.08); }
+
+/* Footer */
+.footer { background: rgba(0,0,0,0.22); border-top-color: rgba(255,255,255,0.06); }
+.footer-marca { color: rgba(255,255,255,0.28); }
+.footer-linha { background: rgba(255,255,255,0.07); }
+.footer-texto { color: rgba(255,255,255,0.22); }
+
+
+/* ── Prazos grid ── */
+.prazos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 32px;
+}
+@media(max-width: 560px){ .prazos-grid { grid-template-columns: 1fr; } }
+
+.prazo-card {
+  background: white;
+  border: 1.5px solid #e0d4c4;
+  border-radius: 14px;
+  padding: 24px 20px;
+  text-align: center;
+}
+.prazo-num {
+  font-family: var(--font-display);
+  font-size: 52px;
+  font-weight: 200;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.prazo-unidade {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--azul);
+  margin-bottom: 12px;
+}
+.prazo-titulo {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--navy);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.prazo-desc {
+  font-size: 12px;
+  color: var(--texto-suave);
+  line-height: 1.6;
+}
+
+/* ── Blocos de condição ── */
+.condicao-bloco {
+  background: white;
+  border: 1.5px solid #e0d4c4;
+  border-radius: 14px;
+  padding: 24px 24px;
+  margin-bottom: 14px;
+}
+.condicao-atencao {
+  border-color: #f0c4b0;
+  background: #fffaf8;
+}
+.condicao-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.condicao-icone { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+.condicao-titulo {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.3px;
+  margin-bottom: 3px;
+}
+.condicao-subtitulo {
+  font-size: 10px;
+  color: var(--texto-suave);
+  letter-spacing: 0.5px;
+}
+.condicao-badge {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+.badge-incluso {
+  background: var(--azul-xclaro);
+  color: var(--azul);
+  border: 1px solid var(--azul-claro);
+}
+.badge-extra {
+  background: #fff0e8;
+  color: #b05a3a;
+  border: 1px solid #f0c4b0;
+}
+.condicao-texto {
+  font-size: 13px;
+  color: var(--texto-suave);
+  line-height: 1.75;
+}
+.condicao-texto strong { color: var(--navy); }
+
+
+
+/* ── Paletas de cores ── */
+.paleta-wrap { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+
+.paleta-radio { display: none; }
+.paleta-card {
+  border: 1.5px solid #e0d4c4;
+  border-radius: 14px;
+  background: white;
+  padding: 20px 22px 16px;
+  cursor: pointer;
+  transition: all 0.22s;
+  user-select: none;
+}
+.paleta-card:hover { border-color: #b8a898; }
+.paleta-radio:checked + .paleta-card {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(26,45,74,0.09);
+}
+
+.paleta-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.paleta-check {
+  width: 16px; height: 16px;
+  border: 1.5px solid #c4b09a;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.2s;
+  background: white;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.paleta-radio:checked + .paleta-card .paleta-check {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+.paleta-radio:checked + .paleta-card .paleta-check::after {
+  content: '';
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: white;
+}
+.paleta-nome {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.5px;
+}
+.paleta-tag {
+  margin-left: auto;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  background: var(--nude);
+  border: 1px solid #d5c9b8;
+  border-radius: 100px;
+  padding: 3px 10px;
+}
+.paleta-desc {
+  font-size: 11.5px;
+  color: var(--texto-suave);
+  line-height: 1.6;
+  margin-bottom: 14px;
+  padding-left: 26px;
+}
+.paleta-swatches {
+  display: flex;
+  gap: 6px;
+}
+.swatch-col { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.swatch-cor {
+  height: 46px;
+  border-radius: 8px;
+  transition: transform 0.15s;
+}
+.paleta-card:hover .swatch-cor { transform: scaleY(1.04); }
+.swatch-hex {
+  font-size: 9px;
+  font-weight: 600;
+  color: #a89888;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+.swatch-nome {
+  font-size: 9.5px;
+  font-weight: 600;
+  color: var(--navy-suave);
+  text-align: center;
+}
+
+/* ── Nota de reunião (prompt para aprofundar) ── */
+.nota-reuniao {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: rgba(191,219,254,0.08);
+  border: 1px solid rgba(191,219,254,0.2);
+  border-left: 3px solid rgba(191,219,254,0.5);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 14px;
+  margin-top: 12px;
+}
+.nota-icon { font-size: 14px; flex-shrink: 0; line-height: 1.6; }
+.nota-reuniao p {
+  font-size: 12.5px;
+  color: rgba(191,219,254,0.85);
+  line-height: 1.7;
+  margin: 0;
+}
+.nota-reuniao strong { color: var(--azul-claro); font-weight: 700; }
+
+/* ── Indicador de salvamento ── */
+#save-indicator {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: rgba(26,45,74,0.92);
+  color: white;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 9px 18px;
+  border-radius: 100px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+#save-indicator.visible { opacity: 1; transform: translateY(0); }
+
+/* ── Arte cards (cartão, papel timbrado, etc.) ── */
+.arte-card {
+  background: white;
+  border: 1.5px solid #e0d4c4;
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin-top: 20px;
+}
+.arte-card-titulo {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--navy-medio);
+}
+
+@media print {
+  .nav { display: none; }
+  .secao { break-inside: avoid; }
+  .header::before { display: none; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════ HEADER FIXO + MENU ══════════════════════ -->
+<header id="bf-header">
+  <div class="bf-marca">Fabiana Rosant</div>
+  <button class="bf-hamburger" id="bf-hamburger" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<div class="bf-backdrop" id="bf-backdrop"></div>
+
+<nav id="bf-menu">
+  <div class="bf-menu-top">
+    <div class="bf-menu-marca">Fabiana Rosant</div>
+    <button class="bf-hamburger" id="bf-close" aria-label="Fechar">
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="bf-menu-links">
+    <a href="#posicionamento" class="bf-menu-link"><span class="bf-menu-num">01</span>Posicionamento</a>
+    <a href="#atributos"      class="bf-menu-link"><span class="bf-menu-num">02</span>Atributos</a>
+    <a href="#personalidade"  class="bf-menu-link"><span class="bf-menu-num">03</span>Personalidade</a>
+    <a href="#identidade"     class="bf-menu-link"><span class="bf-menu-num">04</span>Identidade Visual</a>
+    <a href="#referencias"    class="bf-menu-link"><span class="bf-menu-num">05</span>Referências</a>
+    <a href="#comunicacao"    class="bf-menu-link"><span class="bf-menu-num">06</span>Artes &amp; Papelaria</a>
+    <a href="#logistica"      class="bf-menu-link"><span class="bf-menu-num">07</span>Prazos &amp; Condições</a>
+  </div>
+  <div class="bf-menu-footer">
+    <p>Briefing de<br><em>Identidade Visual</em></p>
+  </div>
+</nav>
+
+<!-- ══════════════════════ HEADER ══════════════════════ -->
+<header class="header">
+  <h1 class="header-titulo">Briefing<br><em>Identidade Visual</em></h1>
+  <div class="header-linha"></div>
+  <p class="header-desc">Consultoria estratégica para desenvolvimento do projeto de posicionamento e identidade visual.</p>
+</header>
+
+
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 1 — POSICIONAMENTO
+════════════════════════════════════════════════ -->
+<section id="posicionamento">
+  <div class="container">
+    <div class="secao">
+
+      <div class="secao-header">
+        <div class="secao-num">01</div>
+        <div class="secao-info">
+          <div class="secao-titulo">Posicionamento</div>
+          <p class="secao-desc">
+            Vamos entender quem é a empresa, o que faz e para quem.
+            Quanto mais detalhado, melhor.
+          </p>
+        </div>
+      </div>
+
+      <div class="perguntas">
+
+        <!-- 1.1 Nome da Marca -->
+        <div class="pergunta">
+          <label class="pergunta-label">Nome da Marca</label>
+          <span class="pergunta-hint"><span class="hl">Tal</span> significa <span class="hl">orvalho</span> em hebraico — referência direta à irrigação e às origens israelenses da tecnologia Talgil. <span class="hl">Tech</span> de tecnologia. Juntos: <span class="hl">Taltech = Tecnologia do Orvalho</span>. Nome confirmado. A definir: o complemento — <span class="hl">Ltda</span>, <span class="hl">Irrigação</span> ou <span class="hl">Irrigation</span> (em inglês).</span>
+          <input class="inp" type="text" value="Taltech" placeholder="Taltech · Taltech Irrigação · Taltech Irrigation · Taltech Ltda">
+        </div>
+
+        <!-- 1.2 História -->
+        <div class="pergunta">
+          <label class="pergunta-label">História de Fundação</label>
+          <span class="pergunta-hint">Quem são os fundadores? Como surgiu a empresa? Qual foi o ponto de virada ou a motivação inicial?</span>
+          <textarea class="txta" rows="4" placeholder="Conte a história de origem da empresa — os fundadores, o ano, a motivação, os primeiros passos...">A Taltech nasce da experiência de 21 anos da NetaSul — primeira empresa de irrigação do Sul de Minas, fundada pelos mesmos sócios que assumiram a operação há 9 anos. Desde então, a marca se tornou referência por oferecer soluções inovadoras, consolidando parceria estratégica com a Talgil, multinacional israelense líder global em tecnologia de irrigação. Essa parceria abriu uma expressiva demanda no mercado brasileiro, que a Taltech surge para atender com identidade, escala e tecnologia próprias.
+
+Para preservar a independência comercial — e evitar sobreposição com a NetaSul junto aos mesmos clientes — a Taltech opera com uma face pública neutra: João Gabriel Loyola, diretor comercial e consultor responsável pelo relacionamento com canais, representantes e produtores em todo o Brasil.</textarea>
+        </div>
+
+        <!-- 1.3 O que faz + atuação -->
+        <div class="pergunta">
+          <label class="pergunta-label">O que a empresa faz</label>
+          <span class="pergunta-hint">Em resumo: qual o <span class="hl">core business</span>? Em quais regiões, cidades ou estados atua?</span>
+          <textarea class="txta" rows="3">A Taltech fornece controladores inteligentes de irrigação e uma plataforma integrada de gestão e monitoramento. Os controladores são instalados na casinha de irrigação e, por meio da plataforma digital, o produtor tem controle total do sistema — com monitoramento em tempo real, inteligência artificial e acesso via aplicativo mobile. A empresa atua em todo o Brasil, atendendo canais de distribuição e grandes produtores via venda direta.</textarea>
+          <div class="nota-reuniao">
+            <span class="nota-icon">💬</span>
+            <p><strong>Aprofundar na reunião:</strong> Como funciona a automação na prática — app, painel físico, telemetria? Quais culturas atendem mais (soja, milho, cana, fruticultura)? "Todo o país" é via distribuidores, representantes ou operação própria? Qual o tamanho médio das operações que atendem?</p>
+          </div>
+        </div>
+
+        <!-- 1.4 Serviços / Produtos -->
+        <div class="pergunta">
+          <label class="pergunta-label">Serviços e Produtos Oferecidos</label>
+          <span class="pergunta-hint">Liste tudo o que a empresa oferece hoje — projetos, instalações, manutenção, consultoria, produtos físicos, etc.</span>
+          <textarea class="txta" rows="4">• Controladores inteligentes de irrigação (equipamento Talgil — referência israelense, adaptado para a realidade brasileira)
+• Plataforma digital de gestão e monitoramento com inteligência artificial
+• App mobile para controle do sistema em campo
+• Suporte técnico a canais e revendas
+• Venda direta para grandes produtores
+• Intermediação e comunicação com fabricantes (parte mecânica)
+• Modelo de assinatura mensal com opções acessíveis e personalizadas (plataforma em camadas)</textarea>
+          <div class="nota-reuniao">
+            <span class="nota-icon">💬</span>
+            <p><strong>Aprofundar na reunião:</strong> Só vendem o equipamento ou fazem projeto + instalação também? Têm suporte técnico pós-venda? Desenvolvem software/app próprio ou usam plataforma de terceiros? Existe algum produto carro-chefe ou linha principal? Qual o ticket médio de um projeto?</p>
+          </div>
+        </div>
+
+        <!-- 1.5 Público-alvo -->
+        <div class="pergunta">
+          <label class="pergunta-label">Público-Alvo</label>
+          <span class="pergunta-hint">Em poucas palavras: quem compra de vocês? Perfil, setor, porte de operação, região.</span>
+          <textarea class="txta" rows="4">Dois públicos principais:
+• Canais de distribuição: revendas, representantes e distribuidores que comercializam os controladores e a plataforma Taltech. Para esses, a empresa oferece suporte técnico, suporte de vendas e relacionamento próximo.
+• Produtores rurais (clientes finais): agricultores que buscam mais controle, eficiência e inteligência na irrigação. Para os de maior porte, o atendimento é via venda direta.</textarea>
+          <div class="nota-reuniao">
+            <span class="nota-icon">💬</span>
+            <p><strong>Aprofundar na reunião:</strong> O que são "canais" — distribuidores, revendedores, integradores técnicos? E os clientes finais — produtores de qual porte e cultura? Quem decide a compra: o produtor, o técnico agrônomo, o gestor da fazenda? Têm um cliente ideal ou perfil de maior sucesso?</p>
+          </div>
+        </div>
+
+        <!-- 1.6 Diferenciais -->
+        <div class="pergunta">
+          <label class="pergunta-label">Diferenciais da Marca</label>
+          <span class="pergunta-hint">Marque os temas que se aplicam e descreva como cada um é um diferencial real da empresa.</span>
+
+          <div class="dif-topics">
+
+            <div class="dif-topic">
+              <div class="dif-topic-row">
+                <input class="dif-cb" type="checkbox" id="dif-tec" checked>
+                <label class="dif-topic-label" for="dif-tec">
+                  <span class="dif-chk"></span>
+                  <span class="dif-topic-icone">⚡</span>
+                  <span class="dif-topic-nome">Tecnologia</span>
+                </label>
+              </div>
+              <textarea class="txta dif-txta" rows="2">Plataforma com inteligência artificial integrada: monitora condições climáticas, umidade da lavoura e realiza checklists automáticos para aferir os equipamentos periodicamente. O produtor tem controle total via app mobile — irrigação inteligente na palma da mão. A marca contará com um mascote-robô como aplicação criativa da identidade visual.</textarea>
+            </div>
+
+            <div class="dif-topic">
+              <div class="dif-topic-row">
+                <input class="dif-cb" type="checkbox" id="dif-prod" checked>
+                <label class="dif-topic-label" for="dif-prod">
+                  <span class="dif-chk"></span>
+                  <span class="dif-topic-icone">📈</span>
+                  <span class="dif-topic-nome">Produtividade</span>
+                </label>
+              </div>
+              <textarea class="txta dif-txta" rows="2" placeholder="Como a solução aumenta a produtividade do produtor na prática? Tem número ou case real?">O déficit hídrico pode causar perdas de até 66% na produtividade da lavoura; o excesso de irrigação, até 27%. A plataforma Taltech garante a quantidade certa de água, no momento certo — baseada em dados, não em estimativa. Resultado: mais produtividade com menos desperdício.</textarea>
+            </div>
+
+            <div class="dif-topic">
+              <div class="dif-topic-row">
+                <input class="dif-cb" type="checkbox" id="dif-lucr" checked>
+                <label class="dif-topic-label" for="dif-lucr">
+                  <span class="dif-chk"></span>
+                  <span class="dif-topic-icone">💰</span>
+                  <span class="dif-topic-nome">Lucratividade</span>
+                </label>
+              </div>
+              <textarea class="txta dif-txta" rows="2" placeholder="Como a solução impacta a lucratividade — redução de custo, menos desperdício, maior margem?">Menor custo com mão de obra, energia e água. Modelo de assinatura mensal com diferentes camadas de acesso, tornando a solução acessível e escalável. Mais resultado financeiro para o produtor com menor investimento de gestão.</textarea>
+            </div>
+
+            <div class="dif-topic">
+              <div class="dif-topic-row">
+                <input class="dif-cb" type="checkbox" id="dif-aut" checked>
+                <label class="dif-topic-label" for="dif-aut">
+                  <span class="dif-chk"></span>
+                  <span class="dif-topic-icone">🔁</span>
+                  <span class="dif-topic-nome">Automação</span>
+                </label>
+              </div>
+              <textarea class="txta dif-txta" rows="2" placeholder="Ex: Projetos com controle automatizado por aplicativo, acionamento por setores e programação de irrigação...">Inteligência artificial integrada à plataforma: comunica-se com condições climáticas e umidade da lavoura em tempo real, e executa checklists automáticos para aferir os equipamentos periodicamente — sem depender da ação manual do produtor. A marca contará também com um mascote-robô como personagem de IA para comunicação digital.</textarea>
+            </div>
+
+            <div class="dif-topic">
+              <div class="dif-topic-row">
+                <input class="dif-cb" type="checkbox" id="dif-pre" checked>
+                <label class="dif-topic-label" for="dif-pre">
+                  <span class="dif-chk"></span>
+                  <span class="dif-topic-icone">🎯</span>
+                  <span class="dif-topic-nome">Precisão</span>
+                </label>
+              </div>
+              <textarea class="txta dif-txta" rows="2" placeholder="Ex: Projetos dimensionados com software especializado, garantindo uniformidade de distribuição acima de 90%...">Baseada em dados de condições climáticas, umidade do solo e eficiência do equipamento, a plataforma indica exatamente o que a planta precisa e quando. Menos estimativa, mais ciência aplicada ao campo. Precisão é o que transforma tecnologia em resultado real para o produtor.</textarea>
+            </div>
+
+            <div class="dif-topic">
+              <div class="dif-topic-row">
+                <input class="dif-cb" type="checkbox" id="dif-eco" checked>
+                <label class="dif-topic-label" for="dif-eco">
+                  <span class="dif-chk"></span>
+                  <span class="dif-topic-icone">💧</span>
+                  <span class="dif-topic-nome">Economia</span>
+                </label>
+              </div>
+              <textarea class="txta dif-txta" rows="2" placeholder="Ex: Redução comprovada de até 40% no consumo de água e energia em relação a sistemas convencionais...">Economia em três frentes: financeira (menos mão de obra, gestão mais eficiente), energética (uso otimizado dos sistemas de bombeamento) e hídrica (aplicação precisa reduz o desperdício). Sustentabilidade que também representa saving real para o produtor.</textarea>
+            </div>
+
+            <div class="dif-topic">
+              <div class="dif-topic-row">
+                <input class="dif-cb" type="checkbox" id="dif-sus" checked>
+                <label class="dif-topic-label" for="dif-sus">
+                  <span class="dif-chk"></span>
+                  <span class="dif-topic-icone">🌱</span>
+                  <span class="dif-topic-nome">Sustentabilidade</span>
+                </label>
+              </div>
+              <textarea class="txta dif-txta" rows="2" placeholder="Ex: Uso racional da água, menor impacto ambiental, soluções alinhadas às exigências do ESG no agronegócio...">A irrigação mal gerenciada é uma das principais causas de desperdício no agro. Com monitoramento inteligente, cada gota é aproveitada — contribuindo para a preservação dos recursos hídricos. O não uso correto da irrigação gera perda de até 66% na produtividade; o excesso, cerca de 27%.</textarea>
+            </div>
+
+            <div class="dif-topic">
+              <div class="dif-topic-row">
+                <input class="dif-cb" type="checkbox" id="dif-eqp" checked>
+                <label class="dif-topic-label" for="dif-eqp">
+                  <span class="dif-chk"></span>
+                  <span class="dif-topic-icone">🔧</span>
+                  <span class="dif-topic-nome">Equipamentos</span>
+                </label>
+              </div>
+              <textarea class="txta dif-txta" rows="2" placeholder="Ex: Trabalhamos com as melhores marcas do mercado — Netafim, Hunter, Rain Bird — com suporte técnico especializado...">Equipamento Talgil: 38 anos de mercado, desenvolvido em Israel para condições extremas (deserto, céu aberto). Opera via rádio — diferente dos concorrentes que usam ar/hidráulico — o que reduz custo e praticamente elimina a necessidade de manutenção. Simples, robusto e adaptado para a realidade brasileira com IA e conectividade.</textarea>
+            </div>
+
+            <div class="dif-topic dif-topic-outros">
+              <div class="dif-topic-row">
+                <input class="dif-cb" type="checkbox" id="dif-out" checked>
+                <label class="dif-topic-label" for="dif-out">
+                  <span class="dif-chk"></span>
+                  <span class="dif-topic-icone">✦</span>
+                  <span class="dif-topic-nome">Outros Diferenciais</span>
+                </label>
+              </div>
+              <textarea class="txta dif-txta" rows="3" placeholder="Descreva qualquer outro diferencial importante que não se encaixa nos temas acima...">Suporte próximo ao canal e ao produtor: a Taltech não apenas fornece tecnologia — mantém um relacionamento de parceria ativa com revendas e produtores. O João Gabriel Loyola, como face comercial da marca, garante atendimento consultivo e próximo em todo o processo de venda e pós-venda.</textarea>
+            </div>
+
+          </div>
+          <div class="nota-reuniao">
+            <span class="nota-icon">💬</span>
+            <p><strong>Aprofundar na reunião:</strong> "Tecnologia, produtividade e lucratividade" é o que todo concorrente também promete. O que na tecnologia de vocês é concretamente diferente? Tem algum número real — "cliente reduziu X% no consumo de água" ou "aumentou X% na produção"? Qual é o argumento que convence o produtor na hora da venda?</p>
+          </div>
+
+        </div>
+
+        <!-- 1.7 Concorrentes -->
+        <div class="pergunta">
+          <label class="pergunta-label">Principais Concorrentes</label>
+          <span class="pergunta-hint">Quem são os concorrentes diretos que você conhece? Pode ser marcas regionais ou nacionais.</span>
+          <textarea class="txta" rows="2" placeholder="Ex: Irrigatec, NaanDanJain Brasil, Netafim...">• Netafim — Growsphere
+• GSI — Galcon
+• Rain Bird</textarea>
+        </div>
+
+        <!-- 1.8 Slogan -->
+        <div class="pergunta">
+          <label class="pergunta-label">Slogan ou Frase Complementar</label>
+          <span class="pergunta-hint">Tagline confirmada: <span class="hl">Tecnologia no Agronegócio</span>. Alternativas levantadas: <span class="hl">Irrigação Inteligente</span> · <span class="hl">Tecnologia na Palma da Mão</span> · <span class="hl">Sustentabilidade na Irrigação</span> — todas com tecnologia + agronegócio ou irrigação.</span>
+          <input class="inp" type="text" value="Tecnologia no Agronegócio" placeholder="Ex: Água inteligente para o campo · Tecnologia que irriga o futuro · ...">
+        </div>
+
+      </div><!-- /perguntas -->
+    </div><!-- /secao -->
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 2 — ATRIBUTOS
+════════════════════════════════════════════════ -->
+<section id="atributos">
+  <div class="container">
+    <div class="secao">
+
+      <div class="secao-header">
+        <div class="secao-num">02</div>
+        <div class="secao-info">
+          <div class="secao-titulo">Atributos da Marca</div>
+          <p class="secao-desc">
+            Selecione as palavras que <span class="hl">representam a essência</span> da sua marca.
+            Não existe número certo — marque todas que fizerem sentido.
+          </p>
+        </div>
+      </div>
+
+      <div class="atributos-intro">
+        <strong>Como funciona:</strong> clique nas palavras que traduzem o que você quer que a sua marca transmita. Esses atributos guiam todas as decisões visuais: cores, tipografia, formas.
+      </div>
+
+      <div class="atributos-grid">
+
+        <input class="atr-cb" type="checkbox" id="atr-confianca" name="atributos" checked value="Confiança">
+        <label for="atr-confianca"><span class="atr-box"></span> Confiança</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-tecnologia" name="atributos" checked value="Tecnologia">
+        <label for="atr-tecnologia"><span class="atr-box"></span> Tecnologia</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-precisao" name="atributos" checked value="Precisão">
+        <label for="atr-precisao"><span class="atr-box"></span> Precisão</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-eficiencia" name="atributos" checked value="Eficiência">
+        <label for="atr-eficiencia"><span class="atr-box"></span> Eficiência</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-sustentabilidade" name="atributos" checked value="Sustentabilidade">
+        <label for="atr-sustentabilidade"><span class="atr-box"></span> Sustentabilidade</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-seguranca" name="atributos" value="Segurança">
+        <label for="atr-seguranca"><span class="atr-box"></span> Segurança</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-profissionalismo" name="atributos" value="Profissionalismo">
+        <label for="atr-profissionalismo"><span class="atr-box"></span> Profissionalismo</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-inovacao" name="atributos" checked value="Inovação">
+        <label for="atr-inovacao"><span class="atr-box"></span> Inovação</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-robustez" name="atributos" checked value="Robustez">
+        <label for="atr-robustez"><span class="atr-box"></span> Robustez</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-cuidado" name="atributos" value="Cuidado">
+        <label for="atr-cuidado"><span class="atr-box"></span> Cuidado</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-economia" name="atributos" value="Economia de água">
+        <label for="atr-economia"><span class="atr-box"></span> Economia de água</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-qualidade" name="atributos" value="Qualidade técnica">
+        <label for="atr-qualidade"><span class="atr-box"></span> Qualidade técnica</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-modernidade" name="atributos" checked value="Modernidade">
+        <label for="atr-modernidade"><span class="atr-box"></span> Modernidade</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-comprometimento" name="atributos" value="Comprometimento">
+        <label for="atr-comprometimento"><span class="atr-box"></span> Comprometimento</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-solucao" name="atributos" checked value="Solução inteligente">
+        <label for="atr-solucao"><span class="atr-box"></span> Solução inteligente</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-altop" name="atributos" checked value="Alto padrão">
+        <label for="atr-altop"><span class="atr-box"></span> Alto padrão</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-parceria" name="atributos" checked value="Parceria">
+        <label for="atr-parceria"><span class="atr-box"></span> Parceria</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-tradicao" name="atributos" value="Tradição">
+        <label for="atr-tradicao"><span class="atr-box"></span> Tradição</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-expertise" name="atributos" checked value="Expertise">
+        <label for="atr-expertise"><span class="atr-box"></span> Expertise</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-resultados" name="atributos" value="Resultados comprovados">
+        <label for="atr-resultados"><span class="atr-box"></span> Resultados comprovados</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-campo" name="atributos" checked value="Proximidade com o campo">
+        <label for="atr-campo"><span class="atr-box"></span> Proximidade com o campo</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-lideranca" name="atributos" value="Liderança">
+        <label for="atr-lideranca"><span class="atr-box"></span> Liderança</label>
+
+
+        <input class="atr-cb" type="checkbox" id="atr-atend" name="atributos" checked value="Atendimento personalizado">
+        <label for="atr-atend"><span class="atr-box"></span> Atendimento personalizado</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-suporte" name="atributos" checked value="Suporte pós-venda">
+        <label for="atr-suporte"><span class="atr-box"></span> Suporte pós-venda</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-custo" name="atributos" value="Custo-benefício">
+        <label for="atr-custo"><span class="atr-box"></span> Custo-benefício</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-rapidez" name="atributos" value="Rapidez na execução">
+        <label for="atr-rapidez"><span class="atr-box"></span> Rapidez na execução</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-credib" name="atributos" checked value="Credibilidade">
+        <label for="atr-credib"><span class="atr-box"></span> Credibilidade</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-regional" name="atributos" value="Presença regional">
+        <label for="atr-regional"><span class="atr-box"></span> Presença regional</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-experiencia" name="atributos" checked value="Experiência no setor">
+        <label for="atr-experiencia"><span class="atr-box"></span> Experiência no setor</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-transp" name="atributos" value="Transparência">
+        <label for="atr-transp"><span class="atr-box"></span> Transparência</label>
+
+        <input class="atr-cb" type="checkbox" id="atr-relac" name="atributos" value="Relacionamento duradouro">
+        <label for="atr-relac"><span class="atr-box"></span> Relacionamento duradouro</label>
+
+      </div>
+
+      <div class="atributos-obs" style="margin-top: 24px;">
+        <div class="pergunta">
+          <label class="pergunta-label">Outros atributos que gostaria de adicionar</label>
+          <input class="inp" type="text" value="Suporte próximo ao canal e ao produtor" placeholder="Escreva palavras adicionais separadas por vírgula...">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 3 — PERSONALIDADE
+════════════════════════════════════════════════ -->
+<section id="personalidade">
+  <div class="container">
+    <div class="secao">
+
+      <div class="secao-header">
+        <div class="secao-num">03</div>
+        <div class="secao-info">
+          <div class="secao-titulo">Personalidade da Marca</div>
+          <p class="secao-desc">
+            Se a sua marca fosse uma pessoa, como ela seria? Essas escalas ajudam a definir
+            o <span class="hl">tom visual e comunicativo</span> da identidade.
+          </p>
+        </div>
+      </div>
+
+      <div class="perguntas">
+
+        <!-- Escalas de personalidade -->
+        <div class="pergunta">
+          <label class="pergunta-label">Posicione a marca nas escalas abaixo</label>
+          <span class="pergunta-hint">Clique no ponto que melhor representa o equilíbrio entre os dois extremos.</span>
+
+          <div class="escala-wrap" style="margin-top: 20px;">
+
+            <div class="escala-item">
+              <div class="escala-labels">
+                <span class="escala-label-a">Clássica / Tradicional</span>
+                <span class="escala-label-b">Moderna / Contemporânea</span>
+              </div>
+              <div class="escala-track">
+                <input class="esc-radio" type="radio" name="esc1" id="e1a"><label class="esc-dot" for="e1a"></label>
+                <input class="esc-radio" type="radio" name="esc1" id="e1b"><label class="esc-dot" for="e1b"></label>
+                <input class="esc-radio" type="radio" name="esc1" id="e1c"><label class="esc-dot" for="e1c"></label>
+                <input class="esc-radio" type="radio" name="esc1" id="e1d"><label class="esc-dot" for="e1d"></label>
+                <input class="esc-radio" type="radio" name="esc1" id="e1e" checked><label class="esc-dot" for="e1e"></label>
+              </div>
+            </div>
+
+            <div class="escala-item">
+              <div class="escala-labels">
+                <span class="escala-label-a">Séria / Técnica</span>
+                <span class="escala-label-b">Próxima / Acessível</span>
+              </div>
+              <div class="escala-track">
+                <input class="esc-radio" type="radio" name="esc2" id="e2a"><label class="esc-dot" for="e2a"></label>
+                <input class="esc-radio" type="radio" name="esc2" id="e2b" checked><label class="esc-dot" for="e2b"></label>
+                <input class="esc-radio" type="radio" name="esc2" id="e2c"><label class="esc-dot" for="e2c"></label>
+                <input class="esc-radio" type="radio" name="esc2" id="e2d"><label class="esc-dot" for="e2d"></label>
+                <input class="esc-radio" type="radio" name="esc2" id="e2e"><label class="esc-dot" for="e2e"></label>
+              </div>
+            </div>
+
+            <div class="escala-item">
+              <div class="escala-labels">
+                <span class="escala-label-a">Simples / Direta</span>
+                <span class="escala-label-b">Sofisticada / Premium</span>
+              </div>
+              <div class="escala-track">
+                <input class="esc-radio" type="radio" name="esc3" id="e3a"><label class="esc-dot" for="e3a"></label>
+                <input class="esc-radio" type="radio" name="esc3" id="e3b"><label class="esc-dot" for="e3b"></label>
+                <input class="esc-radio" type="radio" name="esc3" id="e3c"><label class="esc-dot" for="e3c"></label>
+                <input class="esc-radio" type="radio" name="esc3" id="e3d" checked><label class="esc-dot" for="e3d"></label>
+                <input class="esc-radio" type="radio" name="esc3" id="e3e"><label class="esc-dot" for="e3e"></label>
+              </div>
+            </div>
+
+            <div class="escala-item">
+              <div class="escala-labels">
+                <span class="escala-label-a">Enraizada no campo</span>
+                <span class="escala-label-b">Alta tecnologia / Agtech</span>
+              </div>
+              <div class="escala-track">
+                <input class="esc-radio" type="radio" name="esc4" id="e4a"><label class="esc-dot" for="e4a"></label>
+                <input class="esc-radio" type="radio" name="esc4" id="e4b"><label class="esc-dot" for="e4b"></label>
+                <input class="esc-radio" type="radio" name="esc4" id="e4c"><label class="esc-dot" for="e4c"></label>
+                <input class="esc-radio" type="radio" name="esc4" id="e4d" checked><label class="esc-dot" for="e4d"></label>
+                <input class="esc-radio" type="radio" name="esc4" id="e4e"><label class="esc-dot" for="e4e"></label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- "Se fosse uma pessoa" -->
+        <div class="pergunta">
+          <label class="pergunta-label">Se a sua marca fosse uma pessoa...</label>
+          <span class="pergunta-hint">Como ela se vestiria? Como falaria? Qual seria a profissão dela? Qual celebridade, personagem ou figura ela lembraria?</span>
+          <textarea class="txta" rows="3" placeholder="Ex: Seria um engenheiro agrônomo de 40 anos — sério, competente, mas que fala a língua do produtor rural. Se vestisse bem, mas sem exagero. Lembraria o Léo Bianchini da Globo Rural...">Um engenheiro agrônomo de alto nível — competente, preciso, atualizado com as últimas tecnologias — mas que fala a língua do produtor. Veste-se bem sem ostentação, transita com segurança entre o escritório e a lavoura. Tem autoridade técnica, mas é acessível. É o perfil do João Gabriel Loyola na frente: moderno, confiante, enraizado no agro.</textarea>
+        </div>
+
+        <!-- Tom de voz -->
+        <div class="pergunta">
+          <label class="pergunta-label">Tom de Voz da Marca</label>
+          <span class="pergunta-hint">Como a marca fala com seus clientes? Técnico e formal? Próximo e descontraído? Inspire-se em um exemplo se quiser.</span>
+          <textarea class="txta" rows="2" placeholder="Ex: Técnico, mas acessível — explica de forma clara sem jargões excessivos. Confiante, direto ao ponto.">Moderno, direto e enraizado no agro. Fala de tecnologia de forma que o produtor entende — sem jargões técnicos excessivos, mas com autoridade e precisão. Nem distante demais, nem informal demais. A linguagem de quem domina a tecnologia e entende do campo.</textarea>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 4 — IDENTIDADE VISUAL
+════════════════════════════════════════════════ -->
+<section id="identidade">
+  <div class="container">
+    <div class="secao">
+
+      <div class="secao-header">
+        <div class="secao-num">04</div>
+        <div class="secao-info">
+          <div class="secao-titulo">Identidade Visual</div>
+          <p class="secao-desc">
+            Cores, formas e símbolos. Aqui definimos as <span class="hl">diretrizes visuais</span>
+            que vão compor a marca.
+          </p>
+        </div>
+      </div>
+
+      <div class="perguntas">
+
+        <!-- 4.1 Cores -->
+        <div class="pergunta">
+          <label class="pergunta-label">Cores Preferidas ou Referências</label>
+          <span class="pergunta-hint">
+            Já tem alguma cor em mente? Existe um espaço físico já pintado, uniforme, veículo ou material com cor que deve combinar com a logo?
+            Pode citar cores, tons ou referências visuais.
+          </span>
+          <textarea class="txta" rows="3">Verde e azul.</textarea>
+          <div class="nota-reuniao">
+            <span class="nota-icon">💬</span>
+            <p><strong>Aprofundar na reunião:</strong> Que tom de verde e azul? Mais vibrante e agro (como John Deere) ou sóbrio e tech (como Totvs, SAP)? Já existe alguma cor nos equipamentos, veículos ou uniforme que precisa combinar? Uma das cores seria dominante ou as duas teriam peso igual?</p>
+          </div>
+        </div>
+
+
+        <!-- Paletas sugeridas -->
+        <div class="pergunta">
+          <label class="pergunta-label">Paletas de Referência — Verde &amp; Azul</label>
+          <span class="pergunta-hint">Três propostas de combinação para apresentar na reunião. Clique na paleta que mais se aproxima da direção desejada.</span>
+
+          <div class="paleta-wrap">
+
+            <!-- Paleta 1 — Força do Campo -->
+            <input class="paleta-radio" type="radio" name="paleta" id="pal1">
+            <label class="paleta-card" for="pal1">
+              <div class="paleta-header">
+                <span class="paleta-check"></span>
+                <span class="paleta-nome">Força &amp; Tradição</span>
+                <span class="paleta-tag">Agro · Robusto</span>
+              </div>
+              <p class="paleta-desc">Tons escuros e sólidos — transmite credibilidade, raízes no campo e presença de mercado.</p>
+              <div class="paleta-swatches">
+                <div class="swatch-col">
+                  <div class="swatch-cor" style="background:#1A4731;"></div>
+                  <span class="swatch-nome">Verde Floresta</span>
+                  <span class="swatch-hex">#1A4731</span>
+                </div>
+                <div class="swatch-col">
+                  <div class="swatch-cor" style="background:#276B47;"></div>
+                  <span class="swatch-nome">Verde Campo</span>
+                  <span class="swatch-hex">#276B47</span>
+                </div>
+                <div class="swatch-col">
+                  <div class="swatch-cor" style="background:#1B3A6B;"></div>
+                  <span class="swatch-nome">Azul Marinho</span>
+                  <span class="swatch-hex">#1B3A6B</span>
+                </div>
+                <div class="swatch-col">
+                  <div class="swatch-cor" style="background:#2C5282;"></div>
+                  <span class="swatch-nome">Azul Royal</span>
+                  <span class="swatch-hex">#2C5282</span>
+                </div>
+                <div class="swatch-col">
+                  <div class="swatch-cor" style="background:#D1C9B8; border: 1px solid #c4b09a;"></div>
+                  <span class="swatch-nome">Areia</span>
+                  <span class="swatch-hex">#D1C9B8</span>
+                </div>
+              </div>
+            </label>
+
+            <!-- Paleta 2 — Tecnologia & Precisão -->
+            <input class="paleta-radio" type="radio" name="paleta" id="pal2">
+            <label class="paleta-card" for="pal2">
+              <div class="paleta-header">
+                <span class="paleta-check"></span>
+                <span class="paleta-nome">Tecnologia &amp; Precisão</span>
+                <span class="paleta-tag">Tech · Inovador</span>
+              </div>
+              <p class="paleta-desc">Vibrante e moderno — posiciona a empresa como referência em inovação e soluções de alta performance.</p>
+              <div class="paleta-swatches">
+                <div class="swatch-col">
+                  <div class="swatch-cor" style="background:#027A55;"></div>
+                  <span class="swatch-nome">Verde Tech</span>
+                  <span class="swatch-hex">#027A55</span>
+                </div>
+                <div class="swatch-col">
+                  <div class="swatch-cor" style="background:#10B87A;"></div>
+                  <span class="swatch-nome">Verde Vivo</span>
+                  <span class="swatch-hex">#10B87A</span>
+                </div>
+                <div class="swatch-col">
+                  <div class="swatch-cor" style="background:#1D4ED8;"></div>
+                  <span class="swatch-nome">Azul Elétrico</span>
+                  <span class="swatch-hex">#1D4ED8</span>
+                </div>
+                <div class="swatch-col">
+                  <div class="swatch-cor" style="background:#3B82F6;"></div>
+                  <span class="swatch-nome">Azul Claro</span>
+                  <span class="swatch-hex">#3B82F6</span>
+                </div>
+                <div class="swatch-col">
+                  <div class="swatch-cor" style="background:#EFF6FF; border: 1px solid #c4b09a;"></div>
+                  <span class="swatch-nome">Branco Azulado</span>
+                  <span class="swatch-hex">#EFF6FF</span>
+                </div>
+              </div>
+            </label>
+
+            <!-- Paleta 3 — Sustentabilidade & Crescimento -->
+            <input class="paleta-radio" type="radio" name="paleta" id="pal3">
+            <label class="paleta-card" for="pal3">
+              <div class="paleta-header">
+                <span class="paleta-check"></span>
+                <span class="paleta-nome">Sustentabilidade &amp; Crescimento</span>
+                <span class="paleta-tag">Clean · Contemporâneo</span>
+              </div>
+              <p class="paleta-desc">Leve e sofisticado — conecta tecnologia com natureza, ideal para um posicionamento sustentável e premium.</p>
+              <div class="paleta-swatches">
+                <div class="swatch-col">
+                  <div class="swatch-cor" style="background:#0D9063;"></div>
+                  <span class="swatch-nome">Verde Esmeralda</span>
+                  <span class="swatch-hex">#0D9063</span>
+                </div>
+                <div class="swatch-col">
+                  <div class="swatch-cor" style="background:#34D399;"></div>
+                  <span class="swatch-nome">Verde Menta</span>
+                  <span class="swatch-hex">#34D399</span>
+                </div>
+                <div class="swatch-col">
+                  <div class="swatch-cor" style="background:#0284C7;"></div>
+                  <span class="swatch-nome">Azul Céu</span>
+                  <span class="swatch-hex">#0284C7</span>
+                </div>
+                <div class="swatch-col">
+                  <div class="swatch-cor" style="background:#38BDF8;"></div>
+                  <span class="swatch-nome">Azul Água</span>
+                  <span class="swatch-hex">#38BDF8</span>
+                </div>
+                <div class="swatch-col">
+                  <div class="swatch-cor" style="background:#F0FDF4; border: 1px solid #c4b09a;"></div>
+                  <span class="swatch-nome">Branco Esverdeado</span>
+                  <span class="swatch-hex">#F0FDF4</span>
+                </div>
+              </div>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- 4.2 Cores a evitar -->
+        <div class="pergunta">
+          <label class="pergunta-label">Cores que Devem ser Evitadas</label>
+          <input class="inp" type="text" placeholder="Ex: Vermelho, rosa, cores muito vibrantes...">
+        </div>
+
+        <div class="divisor"></div>
+
+        <!-- 4.3 Tipo de simbologia preferida -->
+        <div class="pergunta">
+          <label class="pergunta-label" style="margin-bottom: 20px;">Simbologia — Tipo de Logo</label>
+          <span class="pergunta-hint" style="margin-bottom: 20px;">De qual forma você prefere que sua marca seja visualmente representada?</span>
+
+          <div class="simb-grid">
+
+            <input class="simb-radio" type="radio" name="simb-tipo" id="st-wordmark">
+            <label class="simb-card" for="st-wordmark">
+              <span class="simb-icon">𝗔𝗕</span>
+              <span class="simb-titulo">Wordmark</span>
+              <span class="simb-desc">Só o nome da empresa, com tipografia única e exclusiva</span>
+            </label>
+
+            <input class="simb-radio" type="radio" name="simb-tipo" id="st-lettermark">
+            <label class="simb-card" for="st-lettermark">
+              <span class="simb-icon">TT</span>
+              <span class="simb-titulo">Lettermark</span>
+              <span class="simb-desc">Iniciais ou sigla da empresa com design exclusivo</span>
+            </label>
+
+            <input class="simb-radio" type="radio" name="simb-tipo" id="st-brandmark">
+            <label class="simb-card" for="st-brandmark">
+              <span class="simb-icon">◈</span>
+              <span class="simb-titulo">Brandmark</span>
+              <span class="simb-desc">Ícone ou símbolo, sem o nome. Pode ser usado sozinho</span>
+            </label>
+
+            <input class="simb-radio" type="radio" name="simb-tipo" id="st-combo" checked>
+            <label class="simb-card" for="st-combo">
+              <span class="simb-icon">◈ AB</span>
+              <span class="simb-titulo">Combinado</span>
+              <span class="simb-desc">Símbolo + nome juntos — o mais completo e versátil</span>
+            </label>
+
+            <input class="simb-radio" type="radio" name="simb-tipo" id="st-emblema">
+            <label class="simb-card" for="st-emblema">
+              <span class="simb-icon">🛡</span>
+              <span class="simb-titulo">Emblema</span>
+              <span class="simb-desc">Escudo ou brasão que encapsula nome e símbolo juntos</span>
+            </label>
+
+            <input class="simb-radio" type="radio" name="simb-tipo" id="st-sem-pref">
+            <label class="simb-card" for="st-sem-pref">
+              <span class="simb-icon">✦</span>
+              <span class="simb-titulo">Sem preferência</span>
+              <span class="simb-desc">Deixo a critério do projeto — quero ver sugestões</span>
+            </label>
+
+          </div>
+        </div>
+
+        <div class="divisor"></div>
+
+        <!-- 4.4 Simbologia — elementos -->
+        <div class="pergunta">
+          <label class="pergunta-label">Simbologia — Elementos em Mente</label>
+          <span class="pergunta-hint">
+            Querem um <span class="hl">símbolo forte e com significado</span>, mas ainda sem ideia definida. Use a reunião para explorar o que "forte" significa para eles e o que o símbolo deve comunicar.
+          </span>
+          <textarea class="txta" rows="3">Logo combinada: símbolo + nome. Símbolo tecnológico com referência ao agro de forma conceitual e com significado. Possibilidade de mascote-robô como aplicação alternativa da marca — personagem de IA para comunicação digital. Tipografia moderna com detalhes diferentes, letras de fácil leitura, estilo técnico e arrojado. Abordagem sofisticada, enraizada no agro e conceitual.</textarea>
+          <div class="nota-reuniao">
+            <span class="nota-icon">💬</span>
+            <p><strong>Aprofundar na reunião:</strong> "Forte" para eles é impacto visual ou profundidade de significado? O símbolo deve remeter à água, à irrigação, ao campo, à tecnologia ou à combinação de mais de um? Existe alguma forma geométrica, animal, elemento da natureza ou conceito que admiram em outras logos — mesmo fora do agro?</p>
+          </div>
+        </div>
+
+        <!-- 4.5 Abordagem visual -->
+        <div class="pergunta">
+          <label class="pergunta-label">Abordagem Visual Preferida</label>
+          <span class="pergunta-hint">Como você prefere que o símbolo/ícone seja representado?</span>
+
+          <div class="simb-grid" style="margin-top: 16px;">
+
+            <input class="simb-radio" type="radio" name="simb-abord" id="sa-figurativo">
+            <label class="simb-card" for="sa-figurativo">
+              <span class="simb-icon">🌾</span>
+              <span class="simb-titulo">Figurativo</span>
+              <span class="simb-desc">Objeto reconhecível — gota, planta, equipamento, terra</span>
+            </label>
+
+            <input class="simb-radio" type="radio" name="simb-abord" id="sa-abstrato">
+            <label class="simb-card" for="sa-abstrato">
+              <span class="simb-icon">◆</span>
+              <span class="simb-titulo">Abstrato</span>
+              <span class="simb-desc">Formas geométricas que transmitem conceito e sensação</span>
+            </label>
+
+            <input class="simb-radio" type="radio" name="simb-abord" id="sa-misto" checked>
+            <label class="simb-card" for="sa-misto">
+              <span class="simb-icon">◈</span>
+              <span class="simb-titulo">Misto</span>
+              <span class="simb-desc">Figurativo com tratamento abstrato — moderno e versátil</span>
+            </label>
+
+            <input class="simb-radio" type="radio" name="simb-abord" id="sa-sem-pref2">
+            <label class="simb-card" for="sa-sem-pref2">
+              <span class="simb-icon">✦</span>
+              <span class="simb-titulo">Sem preferência</span>
+              <span class="simb-desc">Aberto a todas as possibilidades</span>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- 4.6 Estilo gráfico -->
+        <div class="pergunta">
+          <label class="pergunta-label">Estilo Gráfico</label>
+          <span class="pergunta-hint">Se pudesse escolher a "vibe" visual da identidade, qual estaria mais próxima do que você imagina?</span>
+
+          <div class="simb-grid" style="margin-top: 16px;">
+
+            <input class="simb-radio" type="radio" name="simb-estilo" id="se-minimalista">
+            <label class="simb-card" for="se-minimalista">
+              <span class="simb-icon">—</span>
+              <span class="simb-titulo">Minimalista</span>
+              <span class="simb-desc">Clean, poucos elementos, muito espaço em branco</span>
+            </label>
+
+            <input class="simb-radio" type="radio" name="simb-estilo" id="se-tecnico" checked>
+            <label class="simb-card" for="se-tecnico">
+              <span class="simb-icon">⚙</span>
+              <span class="simb-titulo">Técnico</span>
+              <span class="simb-desc">Preciso, linhas retas, transmite engenharia e exatidão</span>
+            </label>
+
+            <input class="simb-radio" type="radio" name="simb-estilo" id="se-organico">
+            <label class="simb-card" for="se-organico">
+              <span class="simb-icon">🌿</span>
+              <span class="simb-titulo">Orgânico</span>
+              <span class="simb-desc">Curvas suaves, conectado à natureza e ao campo</span>
+            </label>
+
+            <input class="simb-radio" type="radio" name="simb-estilo" id="se-arrojado">
+            <label class="simb-card" for="se-arrojado">
+              <span class="simb-icon">▲</span>
+              <span class="simb-titulo">Arrojado</span>
+              <span class="simb-desc">Forte, marcante, ousado — transmite poder e liderança</span>
+            </label>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 5 — REFERÊNCIAS
+════════════════════════════════════════════════ -->
+<section id="referencias">
+  <div class="container">
+    <div class="secao">
+
+      <div class="secao-header">
+        <div class="secao-num">05</div>
+        <div class="secao-info">
+          <div class="secao-titulo">Referências Visuais</div>
+          <p class="secao-desc">
+            O que você <span class="hl">admira</span> e o que definitivamente <span style="color:#b05a3a;">não quer</span> se parecer.
+            Pode citar marcas do agro, de tecnologia, de qualquer setor — o que importa é a sensação visual.
+          </p>
+        </div>
+      </div>
+
+      <div class="perguntas">
+
+        <!-- Admira / Evita -->
+        <div class="pergunta">
+          <label class="pergunta-label">Marcas de Referência</label>
+          <span class="pergunta-hint">Liste marcas (do agro, tech, qualquer setor) cujo visual você <span class="hl">admira</span> — e explique por quê cada uma te atrai.</span>
+
+          <div class="ref-grid" style="margin-top: 16px;">
+            <div class="ref-card admira">
+              <div class="ref-card-titulo admira"><span class="ref-dot"></span>Admiro / Gosto</div>
+              <textarea class="txta" rows="5" placeholder="Ex:&#10;• John Deere — forte, identidade clara, séria&#10;• Totvs — tecnológica mas acessível&#10;• ..."></textarea>
+            </div>
+            <div class="ref-card evita">
+              <div class="ref-card-titulo evita"><span class="ref-dot"></span>Não quero me parecer com</div>
+              <textarea class="txta" rows="5" placeholder="Ex:&#10;• Marcas muito coloridas / chamativas&#10;• Visual muito genérico de agro&#10;• ...">• Concorrentes diretos: Galcon, Netafim / Growsphere, Rain Bird
+• 3V3 Tecnologia
+— Nada que remeta visualmente à concorrência ou ao genérico do agronegócio</textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Referências externas -->
+        <div class="pergunta">
+          <label class="pergunta-label">Links ou Imagens de Inspiração</label>
+          <span class="pergunta-hint">Se tiver logos, sites, posts ou imagens que inspiram, pode colar os links ou mencionar aqui. Pinterest, Instagram, qualquer fonte.</span>
+          <textarea class="txta" rows="3" placeholder="Cole links, descreva imagens, mencione perfis de Instagram ou sites que visualmente se aproximam do que você imagina..."></textarea>
+        </div>
+
+        <!-- Sensação -->
+        <div class="pergunta">
+          <label class="pergunta-label">Sensação que a Marca Deve Transmitir</label>
+          <span class="pergunta-hint">Quando alguém olha para a logo da Taltech pela primeira vez, qual é a sensação que você quer que ela tenha?</span>
+          <textarea class="txta" rows="2" placeholder="Ex: Confiança imediata. Que é uma empresa séria, de alto nível técnico, mas que entende o campo.">Confiança imediata. A sensação de estar diante de uma empresa séria, de alto nível técnico, que domina a tecnologia e entende o campo. Confiabilidade e solução.</textarea>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 6 — ARTES & PAPELARIA
+════════════════════════════════════════════════ -->
+<section id="comunicacao">
+  <div class="container">
+    <div class="secao">
+
+      <div class="secao-header">
+        <div class="secao-num">06</div>
+        <div class="secao-info">
+          <div class="secao-titulo">Artes &amp; Papelaria</div>
+          <p class="secao-desc">
+            Artes <span class="hl">inclusas no projeto</span>. Para cada peça, precisamos das informações
+            que serão aplicadas no layout.
+          </p>
+        </div>
+      </div>
+
+      <div class="perguntas">
+
+        <!-- Cartão de visitas -->
+        <div class="pergunta">
+          <label class="pergunta-label">🪪 Cartão de Visitas</label>
+          <span class="pergunta-hint">Informe os dados de cada pessoa que terá cartão. Se for mais de uma, descreva separadamente abaixo.</span>
+
+          <div class="arte-card">
+            <div class="arte-card-titulo">Pessoa 1</div>
+            <div class="perguntas-2col" style="margin-top: 16px;">
+              <div class="pergunta">
+                <label class="pergunta-label">Nome completo</label>
+                <input class="inp" type="text" value="João Gabriel Loyola" placeholder="Ex: João da Silva">
+              </div>
+              <div class="pergunta">
+                <label class="pergunta-label">Cargo / Função</label>
+                <input class="inp" type="text" value="Diretor Comercial" placeholder="Ex: Diretor Comercial">
+              </div>
+              <div class="pergunta">
+                <label class="pergunta-label">Telefone / WhatsApp</label>
+                <input class="inp" type="text" placeholder="Ex: (34) 9 9999-9999">
+              </div>
+              <div class="pergunta">
+                <label class="pergunta-label">E-mail</label>
+                <input class="inp" type="text" placeholder="Ex: joao@taltech.com.br">
+              </div>
+              <div class="pergunta">
+                <label class="pergunta-label">Site</label>
+                <input class="inp" type="text" placeholder="Ex: www.taltech.com.br">
+              </div>
+              <div class="pergunta">
+                <label class="pergunta-label">Endereço (se aplicável)</label>
+                <input class="inp" type="text" placeholder="Ex: Rua X, 123 — Cidade · Estado">
+              </div>
+            </div>
+          </div>
+
+          <div class="arte-card" style="margin-top: 16px;">
+            <div class="arte-card-titulo">Pessoa 2 <span style="font-weight:400; opacity:0.6;">(se houver)</span></div>
+            <div class="perguntas-2col" style="margin-top: 16px;">
+              <div class="pergunta">
+                <label class="pergunta-label">Nome completo</label>
+                <input class="inp" type="text" placeholder="Ex: Maria Souza">
+              </div>
+              <div class="pergunta">
+                <label class="pergunta-label">Cargo / Função</label>
+                <input class="inp" type="text" placeholder="Ex: Eng. Agrônoma">
+              </div>
+              <div class="pergunta">
+                <label class="pergunta-label">Telefone / WhatsApp</label>
+                <input class="inp" type="text" placeholder="">
+              </div>
+              <div class="pergunta">
+                <label class="pergunta-label">E-mail</label>
+                <input class="inp" type="text" placeholder="">
+              </div>
+            </div>
+          </div>
+
+          <div class="pergunta" style="margin-top: 20px;">
+            <label class="pergunta-label">Observações do Cartão</label>
+            <textarea class="txta" rows="2" placeholder="Formato preferido (horizontal / vertical)? Há alguma informação extra — CREA, registro, redes sociais?"></textarea>
+          </div>
+        </div>
+
+        <!-- Papel timbrado -->
+        <div class="pergunta">
+          <label class="pergunta-label">📄 Papel Timbrado</label>
+          <span class="pergunta-hint">Arte inclusa no projeto. Para qual finalidade será usado principalmente — propostas, contratos, relatórios?</span>
+          <textarea class="txta" rows="3" placeholder="Ex: Principalmente para propostas comerciais e contratos. Gostaria que constasse o CNPJ e endereço completo no rodapé..."></textarea>
+        </div>
+
+        <!-- Assinatura de e-mail -->
+        <div class="pergunta">
+          <label class="pergunta-label">✉️ Assinatura de E-mail</label>
+          <span class="pergunta-hint">Arte inclusa no projeto. Os dados serão os mesmos do cartão de visitas? Algum detalhe diferente?</span>
+          <textarea class="txta" rows="3" placeholder="Ex: Mesmos dados do cartão. / Incluir também o LinkedIn da empresa. / Apenas nome, cargo e telefone..."></textarea>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SEÇÃO 7 — PRAZOS & CONDIÇÕES
+════════════════════════════════════════════════ -->
+<section id="logistica">
+  <div class="container">
+    <div class="secao">
+
+      <div class="secao-header">
+        <div class="secao-num">07</div>
+        <div class="secao-info">
+          <div class="secao-titulo">Prazos &amp; Condições</div>
+          <p class="secao-desc">
+            Informações do contrato — <span class="hl">transparência e clareza</span> em todas as etapas do projeto.
+          </p>
+        </div>
+      </div>
+
+      <!-- Grid de prazos principais -->
+      <div class="prazos-grid">
+
+        <div class="prazo-card">
+          <div class="prazo-num">12</div>
+          <div class="prazo-unidade">dias úteis</div>
+          <div class="prazo-titulo">Desenvolvimento</div>
+          <p class="prazo-desc">Prazo total estimado para a proposta inicial da identidade visual, contados a partir da reunião de briefing.</p>
+        </div>
+
+        <div class="prazo-card">
+          <div class="prazo-num">3</div>
+          <div class="prazo-unidade">dias úteis</div>
+          <div class="prazo-titulo">Por rodada de ajuste</div>
+          <p class="prazo-desc">Prazo adicional concedido a cada rodada de alterações solicitada dentro dos limites do contrato.</p>
+        </div>
+
+        <div class="prazo-card">
+          <div class="prazo-num">4</div>
+          <div class="prazo-unidade">dias úteis</div>
+          <div class="prazo-titulo">Entrega dos arquivos</div>
+          <p class="prazo-desc">Após aprovação final e quitação integral do saldo, os arquivos são enviados via e-mail e WhatsApp.</p>
+        </div>
+
+      </div>
+
+      <!-- Rodadas de alteração -->
+      <div class="condicao-bloco">
+        <div class="condicao-header">
+          <span class="condicao-icone">🔄</span>
+          <div>
+            <div class="condicao-titulo">Rodadas de Alteração</div>
+            <div class="condicao-subtitulo">Cláusula 5.1 — 5.2</div>
+          </div>
+          <span class="condicao-badge badge-incluso">3 rodadas inclusas</span>
+        </div>
+        <p class="condicao-texto">
+          Durante o processo de criação, a CONTRATANTE tem direito a até <strong>3 (três) rodadas de alterações significativas</strong>, desde que os ajustes estejam alinhados ao briefing aprovado, à consultoria estratégica realizada e à direção criativa definida.
+        </p>
+        <p class="condicao-texto" style="margin-top: 10px;">
+          As alterações podem ser solicitadas <strong>apenas antes da aprovação final da marca</strong>. Após a aprovação e entrega dos arquivos, o projeto é considerado concluído.
+        </p>
+      </div>
+
+      <!-- Excedente -->
+      <div class="condicao-bloco condicao-atencao">
+        <div class="condicao-header">
+          <span class="condicao-icone">⚠️</span>
+          <div>
+            <div class="condicao-titulo">Alterações Excedentes</div>
+            <div class="condicao-subtitulo">Cláusula 5.3</div>
+          </div>
+          <span class="condicao-badge badge-extra">Taxa adicional</span>
+        </div>
+        <p class="condicao-texto">
+          Alterações que ultrapassem as 3 rodadas previstas, ou que fujam do briefing, da consultoria estratégica ou da direção criativa aprovada, serão cobradas à taxa de <strong>R$ 300,00 por alteração</strong>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="save-indicator">✓ Salvo</div>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer class="footer">
+  <div class="footer-marca">Fabiana Rosant</div>
+  <div class="footer-linha"></div>
+  <p class="footer-texto">
+    Briefing de Identidade Visual<br>
+    Projeto desenvolvido por Fabiana Rosant
+  </p>
+</footer>
+
+
+<script>
+/* ── Auto-save no localStorage ── */
+(function(){
+  var CHAVE = 'briefing_taltech_v2';
+  var timer = null;
+  var indicador = null;
+
+  function campos() {
+    return document.querySelectorAll('input[type="text"], input[type="checkbox"], input[type="radio"], textarea');
+  }
+
+  function salvar() {
+    var dados = {};
+    campos().forEach(function(el, i) {
+      var k = el.id || ('f_' + i);
+      dados[k] = (el.type === 'checkbox' || el.type === 'radio') ? el.checked : el.value;
+    });
+    try { localStorage.setItem(CHAVE, JSON.stringify(dados)); } catch(e) {}
+    mostrarSalvo();
+  }
+
+  function restaurar() {
+    var raw = '';
+    try { raw = localStorage.getItem(CHAVE) || ''; } catch(e) {}
+    if (!raw) return;
+    var dados = JSON.parse(raw);
+    campos().forEach(function(el, i) {
+      var k = el.id || ('f_' + i);
+      if (dados[k] === undefined) return;
+      if (el.type === 'checkbox' || el.type === 'radio') {
+        el.checked = dados[k];
+      } else {
+        el.value = dados[k];
+      }
+    });
+  }
+
+  function mostrarSalvo() {
+    if (!indicador) indicador = document.getElementById('save-indicator');
+    if (!indicador) return;
+    indicador.classList.add('visible');
+    clearTimeout(indicador._t);
+    indicador._t = setTimeout(function(){ indicador.classList.remove('visible'); }, 1800);
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    restaurar();
+    indicador = document.getElementById('save-indicator');
+    document.addEventListener('change', function(){ clearTimeout(timer); timer = setTimeout(salvar, 400); });
+    document.addEventListener('input',  function(){ clearTimeout(timer); timer = setTimeout(salvar, 800); });
+  });
+})();
+
+/* ── Menu hamburger ── */
+(function(){
+  var header     = document.getElementById('bf-header');
+  var hamburger  = document.getElementById('bf-hamburger');
+  var menu       = document.getElementById('bf-menu');
+  var backdrop   = document.getElementById('bf-backdrop');
+  var closeBtn   = document.getElementById('bf-close');
+
+  function abrirMenu() {
+    menu.classList.add('open');
+    backdrop.classList.add('open');
+    hamburger.classList.add('open');
+  }
+  function fecharMenu() {
+    menu.classList.remove('open');
+    backdrop.classList.remove('open');
+    hamburger.classList.remove('open');
+  }
+
+  hamburger.addEventListener('click', function(){
+    menu.classList.contains('open') ? fecharMenu() : abrirMenu();
+  });
+  backdrop.addEventListener('click', fecharMenu);
+  if (closeBtn) closeBtn.addEventListener('click', fecharMenu);
+
+  // Fechar ao clicar em link do menu
+  menu.querySelectorAll('.bf-menu-link').forEach(function(link){
+    link.addEventListener('click', fecharMenu);
+  });
+
+  // Efeito de scroll no header
+  window.addEventListener('scroll', function(){
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+})();
+</script>
+
+</body>
+</html>
