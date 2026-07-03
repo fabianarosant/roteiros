@@ -1131,7 +1131,7 @@ body {
 }
 .swatch-col { flex: 1; display: flex; flex-direction: column; gap: 4px; }
 .swatch-cor {
-  height: 46px;
+  height: 90px;
   border-radius: 8px;
   transition: transform 0.15s;
 }
@@ -1149,27 +1149,6 @@ body {
   color: var(--navy-suave);
   text-align: center;
 }
-
-/* ── Nota de reunião (prompt para aprofundar) ── */
-.nota-reuniao {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  background: rgba(191,219,254,0.08);
-  border: 1px solid rgba(191,219,254,0.2);
-  border-left: 3px solid rgba(191,219,254,0.5);
-  border-radius: 0 8px 8px 0;
-  padding: 12px 14px;
-  margin-top: 12px;
-}
-.nota-icon { font-size: 14px; flex-shrink: 0; line-height: 1.6; }
-.nota-reuniao p {
-  font-size: 12.5px;
-  color: rgba(191,219,254,0.85);
-  line-height: 1.7;
-  margin: 0;
-}
-.nota-reuniao strong { color: var(--azul-claro); font-weight: 700; }
 
 /* ── Indicador de salvamento ── */
 #save-indicator {
@@ -1285,11 +1264,17 @@ body {
 
       <div class="perguntas">
 
+        <!-- 1.0 Resumo de Posicionamento -->
+        <div class="pergunta">
+          <label class="pergunta-label">Resumo de Posicionamento</label>
+          <p style="font-size:14.5px; line-height:1.8; color:var(--texto); background:var(--nude); border-left:3px solid var(--azul); border-radius:0 8px 8px 0; padding:18px 20px; margin:0;">A Taltech é uma empresa de tecnologia para o agronegócio, com soluções robustas e precisas de irrigação para canais, representantes técnicos e produtores rurais. O centro dessa solução é a automação e inovação tecnológica. Uma plataforma com inteligência artificial cruza clima, umidade da lavoura e desempenho do equipamento em tempo real, avisando o produtor antes que a perda de água, energia ou produtividade aconteça, transformando economia e sustentabilidade em resultado prático. Essa inteligência é aplicada sobre um equipamento israelense consolidado no mercado há 38 anos, robusto o suficiente para operar em condições extremas como deserto e céu aberto. No Brasil, a Taltech traduz e adapta essa tecnologia para a realidade do produtor, em português e com suporte próximo. O resultado é tecnologia, precisão, sustentabilidade e proximidade reunidas em um único sistema: o agronegócio na palma da mão.</p>
+        </div>
+
         <!-- 1.1 Nome da Marca -->
         <div class="pergunta">
           <label class="pergunta-label">Nome da Marca</label>
-          <span class="pergunta-hint"><span class="hl">Tal</span> significa <span class="hl">orvalho</span> em hebraico — referência direta à irrigação e às origens israelenses da tecnologia Talgil. <span class="hl">Tech</span> de tecnologia. Juntos: <span class="hl">Taltech = Tecnologia do Orvalho</span>. Nome confirmado. A definir: o complemento — <span class="hl">Ltda</span>, <span class="hl">Irrigação</span> ou <span class="hl">Irrigation</span> (em inglês).</span>
-          <input class="inp" type="text" value="Taltech" placeholder="Taltech · Taltech Irrigação · Taltech Irrigation · Taltech Ltda">
+          <span class="pergunta-hint"><span class="hl">Tal</span> significa <span class="hl">orvalho</span> em hebraico — referência direta à irrigação e às origens israelenses da tecnologia Talgil. <span class="hl">Tech</span> de tecnologia. Juntos: <span class="hl">Taltech = Tecnologia do Orvalho</span>. Nome confirmado: <span class="hl">Taltech</span>. Quem completa o nome é a tagline: <span class="hl">Tecnologia no Agronegócio</span>.</span>
+          <input class="inp" type="text" value="Taltech" placeholder="Taltech">
         </div>
 
         <!-- 1.2 História -->
@@ -1306,10 +1291,31 @@ Para preservar a independência comercial — e evitar sobreposição com a Neta
           <label class="pergunta-label">O que a empresa faz</label>
           <span class="pergunta-hint">Em resumo: qual o <span class="hl">core business</span>? Em quais regiões, cidades ou estados atua?</span>
           <textarea class="txta" rows="3">A Taltech fornece controladores inteligentes de irrigação e uma plataforma integrada de gestão e monitoramento. Os controladores são instalados na casinha de irrigação e, por meio da plataforma digital, o produtor tem controle total do sistema — com monitoramento em tempo real, inteligência artificial e acesso via aplicativo mobile. A empresa atua em todo o Brasil, atendendo canais de distribuição e grandes produtores via venda direta.</textarea>
-          <div class="nota-reuniao">
-            <span class="nota-icon">💬</span>
-            <p><strong>Aprofundar na reunião:</strong> Como funciona a automação na prática — app, painel físico, telemetria? Quais culturas atendem mais (soja, milho, cana, fruticultura)? "Todo o país" é via distribuidores, representantes ou operação própria? Qual o tamanho médio das operações que atendem?</p>
-          </div>
+        </div>
+
+        <!-- 1.3b Missão -->
+        <div class="pergunta">
+          <label class="pergunta-label">Missão</label>
+          <span class="pergunta-hint">O propósito da marca hoje — por que ela existe.</span>
+          <textarea class="txta" rows="3">Levar tecnologia de irrigação de ponta mundial ao produtor brasileiro, em uma plataforma acessível, inteligente e construída para a realidade do campo.</textarea>
+        </div>
+
+        <!-- 1.3c Visão -->
+        <div class="pergunta">
+          <label class="pergunta-label">Visão</label>
+          <span class="pergunta-hint">Onde a marca quer chegar — o horizonte que orienta as próximas décadas.</span>
+          <textarea class="txta" rows="3">Ser a tecnologia de irrigação inteligente mais confiável do Brasil — presente do pequeno ao grande produtor, em todas as regiões e culturas, como sinônimo de precisão, eficiência e proximidade com o campo.</textarea>
+        </div>
+
+        <!-- 1.3d Valores -->
+        <div class="pergunta">
+          <label class="pergunta-label">Valores</label>
+          <span class="pergunta-hint">Os princípios que orientam como a marca age, decide e se relaciona.</span>
+          <textarea class="txta" rows="6">• Precisão — decisão guiada por dado, nunca por estimativa; a exatidão do orvalho aplicada à tecnologia.
+• Proximidade — relacionamento verdadeiro com canais e produtores, do primeiro contato ao pós-venda.
+• Sustentabilidade — uso racional da água como compromisso prático, não discurso.
+• Simplicidade — tecnologia sofisticada entregue de forma simples, acessível e fácil de operar no campo.
+• Confiança — 21 anos de experiência em irrigação e parceria com a Talgil, referência mundial, sustentando cada entrega.</textarea>
         </div>
 
         <!-- 1.4 Serviços / Produtos -->
@@ -1323,10 +1329,6 @@ Para preservar a independência comercial — e evitar sobreposição com a Neta
 • Venda direta para grandes produtores
 • Intermediação e comunicação com fabricantes (parte mecânica)
 • Modelo de assinatura mensal com opções acessíveis e personalizadas (plataforma em camadas)</textarea>
-          <div class="nota-reuniao">
-            <span class="nota-icon">💬</span>
-            <p><strong>Aprofundar na reunião:</strong> Só vendem o equipamento ou fazem projeto + instalação também? Têm suporte técnico pós-venda? Desenvolvem software/app próprio ou usam plataforma de terceiros? Existe algum produto carro-chefe ou linha principal? Qual o ticket médio de um projeto?</p>
-          </div>
         </div>
 
         <!-- 1.5 Público-alvo -->
@@ -1336,10 +1338,6 @@ Para preservar a independência comercial — e evitar sobreposição com a Neta
           <textarea class="txta" rows="4">Dois públicos principais:
 • Canais de distribuição: revendas, representantes e distribuidores que comercializam os controladores e a plataforma Taltech. Para esses, a empresa oferece suporte técnico, suporte de vendas e relacionamento próximo.
 • Produtores rurais (clientes finais): agricultores que buscam mais controle, eficiência e inteligência na irrigação. Para os de maior porte, o atendimento é via venda direta.</textarea>
-          <div class="nota-reuniao">
-            <span class="nota-icon">💬</span>
-            <p><strong>Aprofundar na reunião:</strong> O que são "canais" — distribuidores, revendedores, integradores técnicos? E os clientes finais — produtores de qual porte e cultura? Quem decide a compra: o produtor, o técnico agrônomo, o gestor da fazenda? Têm um cliente ideal ou perfil de maior sucesso?</p>
-          </div>
         </div>
 
         <!-- 1.6 Diferenciais -->
@@ -1458,10 +1456,6 @@ Para preservar a independência comercial — e evitar sobreposição com a Neta
             </div>
 
           </div>
-          <div class="nota-reuniao">
-            <span class="nota-icon">💬</span>
-            <p><strong>Aprofundar na reunião:</strong> "Tecnologia, produtividade e lucratividade" é o que todo concorrente também promete. O que na tecnologia de vocês é concretamente diferente? Tem algum número real — "cliente reduziu X% no consumo de água" ou "aumentou X% na produção"? Qual é o argumento que convence o produtor na hora da venda?</p>
-          </div>
 
         </div>
 
@@ -1477,8 +1471,7 @@ Para preservar a independência comercial — e evitar sobreposição com a Neta
         <!-- 1.8 Slogan -->
         <div class="pergunta">
           <label class="pergunta-label">Slogan ou Frase Complementar</label>
-          <span class="pergunta-hint">Tagline confirmada: <span class="hl">Tecnologia no Agronegócio</span>. Alternativas levantadas: <span class="hl">Irrigação Inteligente</span> · <span class="hl">Tecnologia na Palma da Mão</span> · <span class="hl">Sustentabilidade na Irrigação</span> — todas com tecnologia + agronegócio ou irrigação.</span>
-          <input class="inp" type="text" value="Tecnologia no Agronegócio" placeholder="Ex: Água inteligente para o campo · Tecnologia que irriga o futuro · ...">
+          <span class="pergunta-hint">Tagline confirmada: <span class="hl">Tecnologia no Agronegócio</span>. Alternativas levantadas: <span class="hl">Irrigação Inteligente</span> · <span class="hl">Sustentabilidade na Irrigação</span> · <span class="hl">Tecnologia na Palma da Mão</span>.</span>
         </div>
 
       </div><!-- /perguntas -->
@@ -1742,6 +1735,14 @@ Para preservar a independência comercial — e evitar sobreposição com a Neta
 
       <div class="perguntas">
 
+        <!-- 4.0 Conceito -->
+        <div class="pergunta">
+          <label class="pergunta-label">Conceito · Big Idea</label>
+          <span class="pergunta-hint">Conceito confirmado — é ele que deve guiar toda a comunicação da marca, do símbolo ao tom de voz.</span>
+          <p style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--azul); margin: 6px 0 10px;">A precisão do orvalho</p>
+          <textarea class="txta" rows="8">O orvalho é o sistema de irrigação mais preciso que existe na natureza: aparece exatamente onde e quando a lavoura precisa, sem desperdício, sem excesso, sem barulho. É discreto, mas essencial pra vida da planta. É esse fenômeno que dá nome à marca — Taltech, "tecnologia do orvalho" em hebraico — e é ele que deve guiar toda a comunicação: uma tecnologia que rega o campo brasileiro com a mesma exatidão, silenciosamente eficiente, sempre presente, nunca em excesso. Esse conceito une, numa imagem só, os atributos centrais da marca: precisão, sustentabilidade e proximidade — sem precisar dizer nenhuma dessas palavras.</textarea>
+        </div>
+
         <!-- 4.1 Cores -->
         <div class="pergunta">
           <label class="pergunta-label">Cores Preferidas ou Referências</label>
@@ -1750,134 +1751,25 @@ Para preservar a independência comercial — e evitar sobreposição com a Neta
             Pode citar cores, tons ou referências visuais.
           </span>
           <textarea class="txta" rows="3">Verde e azul.</textarea>
-          <div class="nota-reuniao">
-            <span class="nota-icon">💬</span>
-            <p><strong>Aprofundar na reunião:</strong> Que tom de verde e azul? Mais vibrante e agro (como John Deere) ou sóbrio e tech (como Totvs, SAP)? Já existe alguma cor nos equipamentos, veículos ou uniforme que precisa combinar? Uma das cores seria dominante ou as duas teriam peso igual?</p>
-          </div>
         </div>
 
 
         <!-- Paletas sugeridas -->
         <div class="pergunta">
-          <label class="pergunta-label">Paletas de Referência — Verde &amp; Azul</label>
-          <span class="pergunta-hint">Três propostas de combinação para apresentar na reunião. Clique na paleta que mais se aproxima da direção desejada.</span>
+          <label class="pergunta-label">Cores de Referência — Verde &amp; Azul</label>
+          <span class="pergunta-hint">As duas cores-base já definidas. A combinação de tons a partir delas (tints, shades, acentos) fica livre para o desenvolvimento da identidade.</span>
 
-          <div class="paleta-wrap">
-
-            <!-- Paleta 1 — Força do Campo -->
-            <input class="paleta-radio" type="radio" name="paleta" id="pal1">
-            <label class="paleta-card" for="pal1">
-              <div class="paleta-header">
-                <span class="paleta-check"></span>
-                <span class="paleta-nome">Força &amp; Tradição</span>
-                <span class="paleta-tag">Agro · Robusto</span>
-              </div>
-              <p class="paleta-desc">Tons escuros e sólidos — transmite credibilidade, raízes no campo e presença de mercado.</p>
-              <div class="paleta-swatches">
-                <div class="swatch-col">
-                  <div class="swatch-cor" style="background:#1A4731;"></div>
-                  <span class="swatch-nome">Verde Floresta</span>
-                  <span class="swatch-hex">#1A4731</span>
-                </div>
-                <div class="swatch-col">
-                  <div class="swatch-cor" style="background:#276B47;"></div>
-                  <span class="swatch-nome">Verde Campo</span>
-                  <span class="swatch-hex">#276B47</span>
-                </div>
-                <div class="swatch-col">
-                  <div class="swatch-cor" style="background:#1B3A6B;"></div>
-                  <span class="swatch-nome">Azul Marinho</span>
-                  <span class="swatch-hex">#1B3A6B</span>
-                </div>
-                <div class="swatch-col">
-                  <div class="swatch-cor" style="background:#2C5282;"></div>
-                  <span class="swatch-nome">Azul Royal</span>
-                  <span class="swatch-hex">#2C5282</span>
-                </div>
-                <div class="swatch-col">
-                  <div class="swatch-cor" style="background:#D1C9B8; border: 1px solid #c4b09a;"></div>
-                  <span class="swatch-nome">Areia</span>
-                  <span class="swatch-hex">#D1C9B8</span>
-                </div>
-              </div>
-            </label>
-
-            <!-- Paleta 2 — Tecnologia & Precisão -->
-            <input class="paleta-radio" type="radio" name="paleta" id="pal2">
-            <label class="paleta-card" for="pal2">
-              <div class="paleta-header">
-                <span class="paleta-check"></span>
-                <span class="paleta-nome">Tecnologia &amp; Precisão</span>
-                <span class="paleta-tag">Tech · Inovador</span>
-              </div>
-              <p class="paleta-desc">Vibrante e moderno — posiciona a empresa como referência em inovação e soluções de alta performance.</p>
-              <div class="paleta-swatches">
-                <div class="swatch-col">
-                  <div class="swatch-cor" style="background:#027A55;"></div>
-                  <span class="swatch-nome">Verde Tech</span>
-                  <span class="swatch-hex">#027A55</span>
-                </div>
-                <div class="swatch-col">
-                  <div class="swatch-cor" style="background:#10B87A;"></div>
-                  <span class="swatch-nome">Verde Vivo</span>
-                  <span class="swatch-hex">#10B87A</span>
-                </div>
-                <div class="swatch-col">
-                  <div class="swatch-cor" style="background:#1D4ED8;"></div>
-                  <span class="swatch-nome">Azul Elétrico</span>
-                  <span class="swatch-hex">#1D4ED8</span>
-                </div>
-                <div class="swatch-col">
-                  <div class="swatch-cor" style="background:#3B82F6;"></div>
-                  <span class="swatch-nome">Azul Claro</span>
-                  <span class="swatch-hex">#3B82F6</span>
-                </div>
-                <div class="swatch-col">
-                  <div class="swatch-cor" style="background:#EFF6FF; border: 1px solid #c4b09a;"></div>
-                  <span class="swatch-nome">Branco Azulado</span>
-                  <span class="swatch-hex">#EFF6FF</span>
-                </div>
-              </div>
-            </label>
-
-            <!-- Paleta 3 — Sustentabilidade & Crescimento -->
-            <input class="paleta-radio" type="radio" name="paleta" id="pal3">
-            <label class="paleta-card" for="pal3">
-              <div class="paleta-header">
-                <span class="paleta-check"></span>
-                <span class="paleta-nome">Sustentabilidade &amp; Crescimento</span>
-                <span class="paleta-tag">Clean · Contemporâneo</span>
-              </div>
-              <p class="paleta-desc">Leve e sofisticado — conecta tecnologia com natureza, ideal para um posicionamento sustentável e premium.</p>
-              <div class="paleta-swatches">
-                <div class="swatch-col">
-                  <div class="swatch-cor" style="background:#0D9063;"></div>
-                  <span class="swatch-nome">Verde Esmeralda</span>
-                  <span class="swatch-hex">#0D9063</span>
-                </div>
-                <div class="swatch-col">
-                  <div class="swatch-cor" style="background:#34D399;"></div>
-                  <span class="swatch-nome">Verde Menta</span>
-                  <span class="swatch-hex">#34D399</span>
-                </div>
-                <div class="swatch-col">
-                  <div class="swatch-cor" style="background:#0284C7;"></div>
-                  <span class="swatch-nome">Azul Céu</span>
-                  <span class="swatch-hex">#0284C7</span>
-                </div>
-                <div class="swatch-col">
-                  <div class="swatch-cor" style="background:#38BDF8;"></div>
-                  <span class="swatch-nome">Azul Água</span>
-                  <span class="swatch-hex">#38BDF8</span>
-                </div>
-                <div class="swatch-col">
-                  <div class="swatch-cor" style="background:#F0FDF4; border: 1px solid #c4b09a;"></div>
-                  <span class="swatch-nome">Branco Esverdeado</span>
-                  <span class="swatch-hex">#F0FDF4</span>
-                </div>
-              </div>
-            </label>
-
+          <div class="paleta-swatches" style="max-width:260px;">
+            <div class="swatch-col">
+              <div class="swatch-cor" style="background:#11218F;"></div>
+              <span class="swatch-nome">Sapphire Night</span>
+              <span class="swatch-hex">#11218F</span>
+            </div>
+            <div class="swatch-col">
+              <div class="swatch-cor" style="background:#2E8B57;"></div>
+              <span class="swatch-nome">Sea Green</span>
+              <span class="swatch-hex">#2E8B57</span>
+            </div>
           </div>
         </div>
 
@@ -1947,13 +1839,9 @@ Para preservar a independência comercial — e evitar sobreposição com a Neta
         <div class="pergunta">
           <label class="pergunta-label">Simbologia — Elementos em Mente</label>
           <span class="pergunta-hint">
-            Querem um <span class="hl">símbolo forte e com significado</span>, mas ainda sem ideia definida. Use a reunião para explorar o que "forte" significa para eles e o que o símbolo deve comunicar.
+            Querem um <span class="hl">símbolo forte e com significado</span>, conectado ao conceito "A precisão do orvalho".
           </span>
-          <textarea class="txta" rows="3">Logo combinada: símbolo + nome. Símbolo tecnológico com referência ao agro de forma conceitual e com significado. Possibilidade de mascote-robô como aplicação alternativa da marca — personagem de IA para comunicação digital. Tipografia moderna com detalhes diferentes, letras de fácil leitura, estilo técnico e arrojado. Abordagem sofisticada, enraizada no agro e conceitual.</textarea>
-          <div class="nota-reuniao">
-            <span class="nota-icon">💬</span>
-            <p><strong>Aprofundar na reunião:</strong> "Forte" para eles é impacto visual ou profundidade de significado? O símbolo deve remeter à água, à irrigação, ao campo, à tecnologia ou à combinação de mais de um? Existe alguma forma geométrica, animal, elemento da natureza ou conceito que admiram em outras logos — mesmo fora do agro?</p>
-          </div>
+          <textarea class="txta" rows="4">Símbolo que remeta ao orvalho — a gota, a precisão, o brilho — com leitura de tecnologia e modernidade, não apenas natureza. Logo combinada: símbolo + nome. Símbolo tecnológico com referência ao agro de forma conceitual e com significado. Possibilidade de mascote-robô como aplicação alternativa da marca — personagem de IA para comunicação digital. Tipografia moderna com detalhes diferentes, letras de fácil leitura, estilo técnico e arrojado. Abordagem sofisticada, enraizada no agro e conceitual.</textarea>
         </div>
 
         <!-- 4.5 Abordagem visual -->
@@ -1997,32 +1885,32 @@ Para preservar a independência comercial — e evitar sobreposição com a Neta
         <!-- 4.6 Estilo gráfico -->
         <div class="pergunta">
           <label class="pergunta-label">Estilo Gráfico</label>
-          <span class="pergunta-hint">Se pudesse escolher a "vibe" visual da identidade, qual estaria mais próxima do que você imagina?</span>
+          <span class="pergunta-hint">Direção confirmada: <span class="hl">Técnico</span> + <span class="hl">Arrojado</span> — precisão de engenharia com uma presença forte e marcante.</span>
 
           <div class="simb-grid" style="margin-top: 16px;">
 
-            <input class="simb-radio" type="radio" name="simb-estilo" id="se-minimalista">
+            <input class="simb-radio" type="checkbox" name="simb-estilo" id="se-minimalista">
             <label class="simb-card" for="se-minimalista">
               <span class="simb-icon">—</span>
               <span class="simb-titulo">Minimalista</span>
               <span class="simb-desc">Clean, poucos elementos, muito espaço em branco</span>
             </label>
 
-            <input class="simb-radio" type="radio" name="simb-estilo" id="se-tecnico" checked>
+            <input class="simb-radio" type="checkbox" name="simb-estilo" id="se-tecnico" checked>
             <label class="simb-card" for="se-tecnico">
               <span class="simb-icon">⚙</span>
               <span class="simb-titulo">Técnico</span>
               <span class="simb-desc">Preciso, linhas retas, transmite engenharia e exatidão</span>
             </label>
 
-            <input class="simb-radio" type="radio" name="simb-estilo" id="se-organico">
+            <input class="simb-radio" type="checkbox" name="simb-estilo" id="se-organico">
             <label class="simb-card" for="se-organico">
               <span class="simb-icon">🌿</span>
               <span class="simb-titulo">Orgânico</span>
               <span class="simb-desc">Curvas suaves, conectado à natureza e ao campo</span>
             </label>
 
-            <input class="simb-radio" type="radio" name="simb-estilo" id="se-arrojado">
+            <input class="simb-radio" type="checkbox" name="simb-estilo" id="se-arrojado" checked>
             <label class="simb-card" for="se-arrojado">
               <span class="simb-icon">▲</span>
               <span class="simb-titulo">Arrojado</span>
@@ -2030,6 +1918,13 @@ Para preservar a independência comercial — e evitar sobreposição com a Neta
             </label>
 
           </div>
+        </div>
+
+        <!-- 4.6 Estilo tipográfico -->
+        <div class="pergunta">
+          <label class="pergunta-label">Estilo da Tipografia</label>
+          <span class="pergunta-hint">Direção confirmada para a família tipográfica da marca.</span>
+          <textarea class="txta" rows="4">Tipografia de fácil leitura e caráter contemporâneo, com um detalhe de desenho que confere exclusividade sem comprometer a legibilidade. Traços de peso médio a encorpado — nada de hastes finas ou delicadas —, transmitindo robustez e solidez técnica com uma execução visual moderna e limpa.</textarea>
         </div>
 
       </div>
