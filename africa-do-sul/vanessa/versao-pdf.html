@@ -1476,6 +1476,103 @@ section.cidade-clean strong[style*="color:white"]{
   border:1.5px solid #fb923c;
 }
 
+/* ══════════════════════════════════════════════
+   PAGINAÇÃO PDF — PÁGINA A4 (versão para gerar PDF)
+══════════════════════════════════════════════ */
+body{ background:#525659; padding:24px 0; }
+section{ width:210mm; margin:0 auto; padding:0; background:transparent; }
+/* checklist de mala: acordeão sempre aberto no PDF (não há clique possível na versão impressa) */
+.checklist-acordeao-conteudo{ max-height:none !important; overflow:visible !important; }
+.checklist-acordeao-btn .seta{ display:none; }
+.pagina{
+  width:210mm;
+  height:297mm;
+  box-sizing:border-box;
+  padding:14mm 16mm 17mm;
+  background:white;
+  box-shadow:0 4px 24px rgba(0,0,0,0.35);
+  margin:0 auto 6mm;
+  position:relative;
+  overflow:hidden;
+  display:block;
+}
+.ph{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-bottom:6px;
+  margin-bottom:5mm;
+  border-bottom:1px solid var(--cinza-borda);
+}
+.ph-left, .ph-right{
+  font-family:"Poppins",sans-serif;
+  font-size:8.5px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#94a3b8;
+  white-space:nowrap;
+}
+.ph-right{ display:flex; align-items:center; gap:6px; }
+.ph-cidade{
+  font-family:"Magnolia Script",cursive;
+  font-size:15px;
+  letter-spacing:0;
+  text-transform:none;
+  color:var(--azul-medio);
+}
+.pf{
+  position:absolute;
+  left:16mm;
+  right:16mm;
+  bottom:8mm;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.pf-menu{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:5px 14px;
+  background:white;
+  border:1px solid var(--cinza-borda);
+  border-radius:20px;
+  color:#94a3b8;
+  font-family:"Poppins",sans-serif;
+  font-size:9px;
+  font-weight:500;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+.pf-menu::before{ content:"↑"; font-size:10px; }
+.pf-num{
+  position:absolute;
+  right:0;
+  font-family:"Poppins",sans-serif;
+  font-size:8.5px;
+  font-weight:600;
+  letter-spacing:1px;
+  color:#94a3b8;
+}
+@media print {
+  @page { size: A4 portrait; margin: 0; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background: white !important; padding: 0 !important; }
+  .pagina {
+    page-break-after: always;
+    break-after: page;
+    margin: 0 !important;
+    box-shadow: none !important;
+    height: 297mm !important;
+    max-height: 297mm !important;
+    overflow: hidden !important;
+  }
+  section { page-break-before: auto !important; margin: 0 !important; border: none !important; }
+  .topbar, .nav-drawer, .nav-overlay { display: none !important; }
+}
+
 </style>
 </head>
 
@@ -1524,7 +1621,7 @@ section.cidade-clean strong[style*="color:white"]{
 <div class="main-content">
 
 <!-- CAPA -->
-<section id="capa">
+<section id="capa" class="pagina" style="padding:0;height:297mm;max-height:297mm;margin:0 auto 6mm;">
   <img class="capa-bg-img" src="./assets/capas/capa-africa-do-sul.png" alt="África do Sul">
   <div class="capa-overlay"></div>
   <div class="capa-inner">
@@ -1538,7 +1635,7 @@ section.cidade-clean strong[style*="color:white"]{
   </div>
 </section>
 
-<section id="menu-pratico">
+<section id="menu-pratico" class="pagina" style="padding:0;height:297mm;max-height:297mm;margin:0 auto 6mm;">
   <div class="menu-pratico-bg"></div>
   <div class="menu-pratico-card">
     <div class="mp-logo-wrapper">
@@ -1568,7 +1665,8 @@ section.cidade-clean strong[style*="color:white"]{
   </div>
 </section>
 
-<section id="menu-dias">
+<section id="menu-dias" class="pagina">
+<div class="ph"><span class="ph-left">Roteiro Macro</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
 <div class="vg-page" style="padding-top:0;">
   <div class="vg-header">
     <span class="vg-titulo-h titulo-principal">Roteiro Macro 🇿🇦</span>
@@ -1604,8 +1702,8 @@ section.cidade-clean strong[style*="color:white"]{
     <a class="vg-card" href="#volta"><div class="vg-card-header"><span class="vg-dia-num">✈️ Volta</span><span class="vg-dia-data">01/08 · Sábado</span></div><div class="vg-card-body"><span class="vg-destino-tag">Cidade do Cabo → Porto Alegre</span><ul class="vg-items"><li>Café + checkout hotel</li><li>CPT → GRU às 12h50</li><li>Conexão em Guarulhos</li><li>GRU → POA às 22h · chegada 23h55</li></ul></div></a>
 
   </div>
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
 <script>
@@ -1618,8 +1716,9 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
 
-<section id="cidade" class="secao-wrapper" style="background:#eef4fb;">
-<div class="page secao">
+<section id="cidade" class="pagina">
+<div class="ph"><span class="ph-left">Sobre o Destino</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page secao" style="max-width:100%;padding:0;">
 
   <div class="pais-hero">
     <img src="./assets/capas/hero-africa-do-sul.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0;" alt="África do Sul">
@@ -1682,7 +1781,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
   <div class="dica-box"><span class="dica-box-label">🦁 Julho é o melhor mês para Safari</span><p>O inverno seco é a estação ideal para ver animais no Pilanesberg e no Kruger. A vegetação rasteira deixa a savana aberta, os animais se concentram nos pontos de água e o frio afasta os insetos. O game drive da manhã começa cedo por um motivo: ao amanhecer os predadores ainda estão ativos e a luz é espetacular para fotos.</p></div>
 
-  <span class="info-label" style="margin-top:20px;display:block;">Documentos Necessários</span>
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Sobre o Destino · Documentos</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page secao" style="max-width:100%;padding:0;">
+
+  <span class="info-label" style="margin-top:0;display:block;">Documentos Necessários</span>
   <div class="card-lista">
     <div class="card-lista-item">
       <span class="card-lista-emoji">🛂</span>
@@ -1742,13 +1849,13 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
-
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="dinheiro" class="secao-wrapper">
-<div class="page secao">
+<section id="dinheiro" class="pagina">
+<div class="ph"><span class="ph-left">Guia Financeiro</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page secao" style="max-width:100%;padding:0;">
   <span class="titulo-principal">Guia Financeiro</span>
 
   <div class="card-grid card-grid-gold">
@@ -1826,12 +1933,13 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="clima" class="secao-wrapper">
-<div class="page secao">
+<section id="clima" class="pagina">
+<div class="ph"><span class="ph-left">Clima & Checklist de Mala</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page secao" style="max-width:100%;padding:0;">
   <span class="titulo-principal">Checklist Clima e Mala</span>
   <div class="dica2-box"><span class="dica2-label">❄️ JULHO — INVERNO SECO NO SUL DA ÁFRICA</span>
     <p><strong>Pilanesberg (21–24/07):</strong> Manhãs e noites geladas, entre 3–8°C no game drive do amanhecer. Dias amenos com 18–22°C. Não subestime o frio do carro aberto na savana às 5h da manhã — várias camadas são essenciais.</p>
@@ -1840,6 +1948,15 @@ document.addEventListener('DOMContentLoaded', function(){
     <p style="margin-top:8px;">Regra de ouro: camadas sobrepostas funcionam melhor do que uma peça só pesada. O dia aquece, mas a manhã e a noite pedem casaco bom.</p>
   </div>
 
+  <div class="dica-box"><span class="dica-box-label">🦁 Dica de Safari — O que não levar</span><p>No game drive, evite roupas de cores vibrantes como vermelho, laranja e amarelo — elas chamam atenção dos animais e quebram o camuflado natural da savana. Perfume forte também é contraindicado. Quanto mais neutro, melhor a experiência para todos.</p></div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Clima & Checklist de Mala · Checklist</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page secao" style="max-width:100%;padding:0;">
   <div class="checklist-grid">
     <div>
       <div class="checklist-acordeao">
@@ -1929,14 +2046,13 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-  <div class="dica-box"><span class="dica-box-label">🦁 Dica de Safari — O que não levar</span><p>No game drive, evite roupas de cores vibrantes como vermelho, laranja e amarelo — elas chamam atenção dos animais e quebram o camuflado natural da savana. Perfume forte também é contraindicado. Quanto mais neutro, melhor a experiência para todos.</p></div>
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
-
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="frases" class="secao-wrapper">
-<div class="page secao">
+<section id="frases" class="pagina">
+<div class="ph"><span class="ph-left">Frases Mágicas</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page secao" style="max-width:100%;padding:0;">
   <span class="titulo-principal">Frases Mágicas</span>
 
   <div class="card-frases">
@@ -1972,6 +2088,15 @@ document.addEventListener('DOMContentLoaded', function(){
     <div class="card-frases-item"><span class="card-frases-it">No ice, please</span><span class="card-frases-pt">— Sem gelo, por favor (útil no inverno)</span></div>
   </div>
 
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Frases Mágicas</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page secao" style="max-width:100%;padding:0;">
+
   <div class="card-frases">
     <div class="card-frases-header"><span class="card-frases-titulo">🚕 TRANSPORTE & LOGÍSTICA</span></div>
     <div class="card-frases-item"><span class="card-frases-it">Could you take us to…?</span><span class="card-frases-pt">— Pode nos levar a…?</span></div>
@@ -1991,13 +2116,14 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
 
   <div class="dica-box"><span class="dica-box-label">💡 Dica de Comunicação</span><p>A África do Sul é anglófona no turismo — o inglês é suficiente em 100% dos lugares que vão visitar. O diferencial é o tom: os sul-africanos são calorosos, gostam de conversa e se encantam quando estrangeiros demonstram curiosidade genuína sobre o país. Uma pergunta sobre a vida local ou sobre os animais que o guia ama mais abre portas imediatamente. O "howzit?" no lugar do simples "hi" já quebra o gelo na hora.</p></div>
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="guia-gastronomico" class="secao-wrapper" style="background:#f8fbff;">
-<div class="page secao">
+<section id="guia-gastronomico" class="pagina">
+<div class="ph"><span class="ph-left">Guia Gastronômico</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page secao" style="max-width:100%;padding:0;">
   <span class="titulo-principal">Guia Gastronômico</span>
   <p style="font-size:13px;line-height:1.85;color:#64748b;max-width:860px;">
     A culinária sul-africana é um reflexo direto da sua história: indígena, holandesa, malaia, britânica e portuguesa misturadas em um prato só. Em Cape Town especialmente, a cena gastronômica é surpreendente — a cidade está entre as melhores do mundo para comer bem, com restaurantes que levam os ingredientes locais com muito mais seriedade do que o turista espera. Do braai de fim de tarde ao bunny chow do centro, cada refeição conta uma história diferente.
@@ -2013,7 +2139,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <p>A conta em restaurantes geralmente precisa ser pedida: <em>Can we have the bill, please?</em>. Gorjeta de 10–15% é esperada e faz parte do salário do garçom. Água não vem de graça — peça "still water" (sem gás) ou "sparkling" (com gás). Pedidos com kids menu existem nos lugares familiares, mas peça na entrada.</p>
     </div>
   </div>
-  
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Guia Gastronômico · Pratos Típicos</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page secao" style="max-width:100%;padding:0;">
 
     <div class="legenda-glass" style="background:white;border:1px solid #e5edf7;backdrop-filter:none;-webkit-backdrop-filter:none;">
       <span class="legenda-glass-titulo" style="color:var(--azul);border-bottom:1px solid #edf2f7;">Pratos & Comidas Típicas</span>
@@ -2070,12 +2203,13 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
     </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="legendas" class="secao-wrapper">
-<div class="page secao">
+<section id="legendas" class="pagina">
+<div class="ph"><span class="ph-left">Legendas do Roteiro</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page secao" style="max-width:100%;padding:0;">
 
   <span class="titulo-principal">Legendas do Roteiro</span>
   <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.7;margin-bottom:24px;">Tudo que você precisa saber para usar este roteiro com confiança e autonomia — do primeiro ao último dia.</p>
@@ -2173,12 +2307,12 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="pilanesberg" class="cidade-clean" style="--cidade-bg:url('./assets/cidades/pilanesberg/pilanesberg-capa.jpg');background:linear-gradient(135deg,#3d2b1f 0%,#7a5c3a 50%,#3d2b1f 100%);overflow:hidden;">
-<div class="page secao" style="color:white;padding-top:40px;">
+<section id="pilanesberg" class="cidade-clean pagina" style="--cidade-bg:url('./assets/cidades/pilanesberg/pilanesberg-capa.jpg');background:linear-gradient(135deg,#3d2b1f 0%,#7a5c3a 50%,#3d2b1f 100%);padding:0;min-height:297mm;height:297mm;max-height:297mm;">
+<div class="page secao" style="color:white;padding-top:40px;height:297mm;box-sizing:border-box;overflow:hidden;">
 <span class="cidade-nome">Pilanesberg</span>
 
   <p class="cidade-resumo">O Pilanesberg é uma das experiências de safari mais acessíveis e impressionantes da África do Sul. O parque ocupa a cratera de um vulcão extinto e abriga os Big Five em liberdade total: leão, leopardo, elefante, rinoceronte e búfalo africano. O inverno seco de julho é o momento ideal — vegetação rasteira, animais concentrados nos pontos de água e céus absolutamente limpos para os amanheceres mais bonitos da viagem.</p>
@@ -2216,8 +2350,9 @@ document.addEventListener('DOMContentLoaded', function(){
 </div>
 </section>
 
-<section id="dia01" class="dia-secao">
-<div class="page">
+<section id="dia01" class="pagina">
+<div class="ph"><span class="ph-left">Dia 01 · Chegada · Check-in Lodge</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="dia-header-card">
     <div class="dia-header-pill-top">
@@ -2236,6 +2371,14 @@ document.addEventListener('DOMContentLoaded', function(){
     <span class="dica-box-label">📋 Resumo do Dia</span>
     <p>Dia longo de viagem — noite de avião, conexão em Guarulhos e pouso em Joanesburgo às 07h05. Depois de imigração e retirada de bagagens, o guia da Agência Viin Africa estará esperando para o transfer privativo até o Pilanesberg — com uma parada especial no Santuário dos Elefantes pelo caminho. Chegada ao KWA Maritane por volta das 13h-14h. Almoço no lodge, descanso e jantar incluso com vista para a savana. Noite cedo para recuperar o sono depois de uma longa viagem.</p>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 01 · Chegada · Check-in Lodge</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- CHEGADA EM JOANESBURGO -->
   <div class="atracao-nova">
@@ -2260,6 +2403,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 01 · Chegada · Check-in Lodge</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <!-- TRANSFER -->
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
@@ -2283,6 +2434,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 01 · Chegada · Check-in Lodge</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <!-- SANTUÁRIO DOS ELEFANTES -->
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
@@ -2305,6 +2464,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="dica-item"><span class="dica-item-icon">🐘</span><div><span class="dica-item-label">LUIGI</span>Deixa o Luigi se aproximar com calma e no ritmo dele — as primeiras vezes que a criança percebe o tamanho real de um elefante são inesquecíveis. Guardem esse momento para a memória, não só no celular.</div></div>
     </div>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 01 · Chegada · Check-in Lodge</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- CHECK-IN E HOSPEDAGEM -->
   <div class="atracao-nova">
@@ -2340,6 +2507,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 01 · Chegada · Check-in Lodge</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <!-- ALMOÇO NO LODGE -->
   <span class="rest-titulo-script">Almoço no Lodge</span>
   <div class="restaurante" style="margin-bottom:24px;">
@@ -2356,6 +2531,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 01 · Chegada · Check-in Lodge</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <!-- JANTAR -->
   <span class="rest-titulo-script">Jantar no Lodge</span>
   <div class="restaurante" style="margin-bottom:24px;">
@@ -2371,12 +2554,13 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="dia02" class="dia-secao">
-<div class="page">
+<section id="dia02" class="pagina">
+<div class="ph"><span class="ph-left">Dia 02 · Morning Game Drive · Lodge</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="dia-header-card">
     <div class="dia-header-pill-top">
@@ -2395,6 +2579,14 @@ document.addEventListener('DOMContentLoaded', function(){
     <span class="dica-box-label">📋 Resumo do Dia</span>
     <p>Dia completo no Pilanesberg — começando antes do sol nascer. O morning game drive sai às 05h30, quando os animais ainda estão ativos e a savana está coberta pela neblina azul do frio de julho. Retorno ao lodge para o café da manhã com fome de verdade. À tarde, o túnel subterrâneo de observação, piscina aquecida e descanso com calma.</p>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 02 · Morning Game Drive · Lodge</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- MORNING GAME DRIVE -->
   <div class="atracao-nova">
@@ -2425,6 +2617,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 02 · Morning Game Drive · Lodge</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <!-- CAFÉ DA MANHÃ -->
   <span class="rest-titulo-script">Café da Manhã</span>
   <div class="restaurante" style="margin-bottom:24px;">
@@ -2438,6 +2638,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <p>💰 <strong>Incluso na diária</strong></p>
     </div>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 02 · Morning Game Drive · Lodge</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- TÚNEL DE OBSERVAÇÃO -->
   <div class="atracao-nova">
@@ -2461,6 +2669,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 02 · Morning Game Drive · Lodge</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <!-- ALMOÇO -->
   <span class="rest-titulo-script">Almoço</span>
   <div class="restaurante" style="margin-bottom:24px;">
@@ -2474,6 +2690,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="rest-prato">Cardápio rotativo com saladas, sanduíches e pratos quentes. Almoço leve antes de aproveitar a piscina e o túnel de observação com calma.</div>
     </div>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 02 · Morning Game Drive · Lodge</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- JANTAR -->
   <span class="rest-titulo-script">Jantar</span>
@@ -2489,12 +2713,13 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="dia03" class="dia-secao">
-<div class="page">
+<section id="dia03" class="pagina">
+<div class="ph"><span class="ph-left">Dia 03 · Pôr do Sol na Savana</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="dia-header-card">
     <div class="dia-header-pill-top">
@@ -2513,6 +2738,14 @@ document.addEventListener('DOMContentLoaded', function(){
     <span class="dica-box-label">📋 Resumo do Dia</span>
     <p>Manhã mais relaxada — sem safari cedo. Café com calma, piscina, mirante, túnel de observação. Aproveitem o lodge com um ritmo mais solto. À tarde, o game drive do pôr do sol promete a melhor luz dos três dias — céu de inverno limpo, sol baixo e animals saindo para se alimentar. Grandes chances de ver os Big Five. Jantar e noite de despedida do parque.</p>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 03 · Pôr do Sol na Savana</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- MANHÃ LIVRE -->
   <div class="atracao-nova">
@@ -2537,6 +2770,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 03 · Pôr do Sol na Savana</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <!-- ALMOÇO -->
   <span class="rest-titulo-script">Almoço no Lodge</span>
   <div class="restaurante" style="margin-bottom:24px;">
@@ -2550,6 +2791,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="rest-prato">Última chance de almoçar com a vista da savana com calma antes da partida amanhã. Aproveitem.</div>
     </div>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 03 · Pôr do Sol na Savana</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- GAME DRIVE TARDE -->
   <div class="atracao-nova">
@@ -2575,6 +2824,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 03 · Pôr do Sol na Savana</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <!-- JANTAR -->
   <span class="rest-titulo-script">Jantar de Despedida do Pilanesberg</span>
   <div class="restaurante" style="margin-bottom:24px;">
@@ -2594,12 +2851,13 @@ document.addEventListener('DOMContentLoaded', function(){
     <p>Arrumem as malas antes de dormir hoje para não perder tempo amanhã após o safari. O checkout do KWA Maritane é pela manhã do dia 24/07 — confirme na recepção o horário exato de saída e o status do transfer de volta a Joanesburgo.</p>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="dia04" class="dia-secao">
-<div class="page">
+<section id="dia04" class="pagina">
+<div class="ph"><span class="ph-left">Dia 04 · Último Safari · Joanesburgo</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="dia-header-card">
     <div class="dia-header-pill-top">
@@ -2618,6 +2876,14 @@ document.addEventListener('DOMContentLoaded', function(){
     <span class="dica-box-label">📋 Resumo do Dia</span>
     <p>Último amanhecer no Pilanesberg — game drive de despedida às 5h, café da manhã, checkout e 2h30 de transfer de volta a Joanesburgo. Check-in no Garden Court Sandton City. Tarde tranquila na Nelson Mandela Square e no Sandton City Mall — elegante, seguro e com ótimas opções para jantar. Amanhã cedo tem voo para Cidade do Cabo.</p>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 04 · Último Safari · Joanesburgo</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- ÚLTIMO GAME DRIVE -->
   <div class="atracao-nova">
@@ -2642,6 +2908,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 04 · Último Safari · Joanesburgo</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <!-- CHECKOUT -->
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
@@ -2655,6 +2929,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <p class="atracao-nova-desc">Último café da manhã com vista para a savana. Aproveitem com calma — o transfer sai às 11h. Confiram se nada ficou para trás no quarto, devolvam chaves e cartões do lodge e perguntem na recepção se precisam de algum comprovante para a saída do parque.</p>
     </div>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 04 · Último Safari · Joanesburgo</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- TRANSFER DE VOLTA -->
   <div class="atracao-nova">
@@ -2675,12 +2957,12 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="joanesburgo" class="cidade-clean" style="--cidade-bg:url('./assets/cidades/joanesburgo/joanesburgo-capa.jpg');background:linear-gradient(135deg,#1a1a2e 0%,#2d3561 50%,#1a1a2e 100%);overflow:hidden;">
-<div class="page secao" style="color:white;padding-top:40px;">
+<section id="joanesburgo" class="cidade-clean pagina" style="--cidade-bg:url('./assets/cidades/joanesburgo/joanesburgo-capa.jpg');background:linear-gradient(135deg,#1a1a2e 0%,#2d3561 50%,#1a1a2e 100%);padding:0;min-height:297mm;height:297mm;max-height:297mm;">
+<div class="page secao" style="color:white;padding-top:40px;height:297mm;box-sizing:border-box;overflow:hidden;">
 <span class="cidade-nome">Joanesburgo</span>
 
   <p class="cidade-resumo">Capital econômica da África do Sul, JoBurg pulsa com energia contraditória: arranha-céus de vidro ao lado de grafites políticos, shoppings de luxo a minutos de bairros históricos que ainda guardam as cicatrizes do apartheid.</p>
@@ -2718,8 +3000,9 @@ document.addEventListener('DOMContentLoaded', function(){
 </section>
 
 <!-- ════════════════════════════════ DIA 04 — JOANESBURGO (continuação) -->
-<section id="dia04b" class="dia-secao">
-<div class="page">
+<section id="dia04b" class="pagina">
+<div class="ph"><span class="ph-left">Dia 04 · Joanesburgo · Sandton</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
@@ -2752,6 +3035,14 @@ document.addEventListener('DOMContentLoaded', function(){
     <p>O trajeto do hotel até a Nelson Mandela Square passa pelo interior do <strong>Sandton City Mall</strong> — é seguro e coberto, literalmente 3 minutos. Durante o dia, circular nessa área é tranquilo: é como andar no eixo empresarial de São Paulo, com atenção básica aos pertences. Se preferirem, Uber ou Bolt cobre o trajeto em menos de 5 minutos por um custo mínimo. <strong>Fora do perímetro do Sandton City e da praça, sempre de Uber — não circulem a pé nas ruas adjacentes.</strong></p>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 04 · Joanesburgo · Sandton</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <span class="rest-titulo-script">Almoço na Chegada a Joanesburgo</span>
   <div class="restaurante" style="margin-bottom:24px;">
     <div class="restaurante-header">
@@ -2766,6 +3057,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <p><span class="reserva-direto">✅ Sem reserva — chegada direta</span></p>
     </div>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 04 · Joanesburgo · Sandton</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- SANDTON -->
   <div class="atracao-nova">
@@ -2794,6 +3093,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 04 · Joanesburgo · Sandton</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🛍️</div>
@@ -2819,6 +3126,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 04 · Joanesburgo · Sandton</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <!-- JANTAR SANDTON -->
   <span class="rest-titulo-script">Sugestão de Jantar na Mandela Square</span>
   <div class="restaurante" style="margin-bottom:24px;">
@@ -2840,12 +3155,13 @@ document.addEventListener('DOMContentLoaded', function(){
     <p>O voo FlySafair <strong>JNB → CPT sai às 09h35</strong>. O check-in no aeroporto precisa ser feito até as 08h00. O Uber/Bolt do hotel ao aeroporto O.R. Tambo leva em média 40–50 min saindo de Sandton. Saída do hotel: <strong>06h40 no máximo</strong>. Confiram o despertador antes de dormir.</p>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="dia05" class="dia-secao">
-<div class="page">
+<section id="dia05" class="pagina">
+<div class="ph"><span class="ph-left">Dia 05 · Joanesburgo → Cidade do Cabo</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="dia-header-card">
     <div class="dia-header-pill-top">
@@ -2864,6 +3180,14 @@ document.addEventListener('DOMContentLoaded', function(){
     <span class="dica-box-label">📋 Resumo do Dia</span>
     <p>Cedo no hotel — Uber ou Bolt do Garden Court ao Aeroporto O.R. Tambo, voo FlySafair de 2h20 para Cidade do Cabo. Na chegada em Cape Town, o guia da Agência Viin Africa estará esperando no aeroporto: transfer privativo que inclui visita à Table Mountain pelo caminho antes do check-in no hotel. A montanha entra hoje sem estresse extra — com guia em português e sem precisar se preocupar com ingresso ou transporte. Depois da montanha, check-in no SunSquare e jantar no Kloof Street House.</p>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 05 · Joanesburgo → Cidade do Cabo</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
@@ -2884,6 +3208,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 05 · Joanesburgo → Cidade do Cabo</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">✈️</div>
@@ -2901,13 +3233,12 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="cidade-do-cabo" class="cidade-clean" style="--cidade-bg:url('./assets/cidades/cidade-do-cabo/cidade-do-cabo.png');background:linear-gradient(135deg,#0f3460 0%,#16697a 50%,#0f3460 100%);overflow:hidden;">
-<div class="page secao" style="color:white;padding-top:40px;">
+<section id="cidade-do-cabo" class="cidade-clean pagina" style="--cidade-bg:url('./assets/cidades/cidade-do-cabo/cidade-do-cabo.png');background:linear-gradient(135deg,#0f3460 0%,#16697a 50%,#0f3460 100%);padding:0;min-height:297mm;height:297mm;max-height:297mm;">
+<div class="page secao" style="color:white;padding-top:40px;height:297mm;box-sizing:border-box;overflow:hidden;">
 <span class="cidade-nome">Cidade do Cabo</span>
 
   <p class="cidade-resumo">Cape Town é uma das cidades mais bonitas do mundo. O Oceano Atlântico em um lado, o Índico do outro, Camps Bay com suas palmeiras e montanhas ao fundo, o colorido de Bo-Kaap subindo a encosta, vinícolas a 45 minutos da cidade. Natureza, gastronomia, história, arte e o pôr do sol mais bonito da África do Sul.</p>
@@ -2945,8 +3276,9 @@ document.addEventListener('DOMContentLoaded', function(){
 </section>
 
 <!-- ════════════════════════════════ DIA 05 — CITY BOWL (continuação) -->
-<section id="dia05b" class="dia-secao">
-<div class="page">
+<section id="dia05b" class="pagina">
+<div class="ph"><span class="ph-left">Dia 05 · Table Mountain · City Bowl</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="dica2-box">
     <span class="dica2-label">🍽️ Almocem no aeroporto antes do transfer</span>
@@ -2968,6 +3300,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 05 · Table Mountain · City Bowl</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <!-- TRANSFER AGÊNCIA CHEGADA CPT -->
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
@@ -2987,6 +3327,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <p class="atracao-nova-desc">Na saída do aeroporto, o guia da Agência Viin Africa estará esperando. Antes de deixar as malas no hotel, o roteiro já começa com o point mais icônico de Cape Town: a Table Mountain. Com o guia conduzindo em português, a visita é mais relaxada — sem se preocupar com transporte, ingresso ou como chegar. Depois da montanha, o guia deixa vocês no SunSquare para o check-in.</p>
     </div>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 05 · Table Mountain · City Bowl</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- TABLE MOUNTAIN -->
   <div class="atracao-nova">
@@ -3017,6 +3365,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 05 · Table Mountain · City Bowl</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🏨</div>
@@ -3041,6 +3397,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 05 · Table Mountain · City Bowl</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <div class="dica2-box">
     <span class="dica2-label">😴 Dia longo — duas opções sem culpa</span>
     <p>Chegada, Table Mountain e check-in — é bastante para um dia de viagem. Se a energia não estiver lá, duas opções sem precisar pensar: o <strong>McDonald's na mesma rua do hotel</strong>, a poucos minutos a pé, ou o próprio <strong>restaurante do hotel (Vigour &amp; Verve)</strong> no térreo, com pizzas no forno a lenha e menu infantil pro Luigi. Sem julgamento — a viagem ainda tem muito pela frente. Se estiverem dispostos a sair, a sugestão abaixo vale muito a pena.</p>
@@ -3061,12 +3425,13 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="dia06" class="dia-secao">
-<div class="page">
+<section id="dia06" class="pagina">
+<div class="ph"><span class="ph-left">Dia 06 · Table Mountain · Camps Bay · Catamaran</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="dia-header-card">
     <div class="dia-header-pill-top">
@@ -3090,6 +3455,14 @@ document.addEventListener('DOMContentLoaded', function(){
     <span class="dica2-label">📅 Table Mountain — segunda oportunidade</span>
     <p><strong>Se o tempo não fechou ontem:</strong> a agência volta com pick-up às 08h00 — essa é a segunda oportunidade, inclusa no mesmo pacote. Retornam ao hotel por volta das 11h30 e seguem para Camps Bay no início da tarde.</p>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 06 · Table Mountain · Camps Bay · Catamaran</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
@@ -3120,6 +3493,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 06 · Table Mountain · Camps Bay · Catamaran</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <span class="rest-titulo-script">Almoço em Camps Bay</span>
   <div class="restaurante" style="margin-bottom:24px;">
     <div class="restaurante-header">
@@ -3139,6 +3520,14 @@ document.addEventListener('DOMContentLoaded', function(){
     <span class="dica2-label">🍢 Camps Bay tem de tudo na calçada</span>
     <p>A orla de Camps Bay é uma das mais animadas de Cape Town — cafés com mesas na calçada, food trucks, quiosques de comida de rua, sorveteria e vários restaurantes um do lado do outro. Fiquem à vontade para explorar e escolher o que pedir na hora. Deixamos uma indicação mais certinha logo abaixo caso queiram ir sem pensar.</p>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 06 · Table Mountain · Camps Bay · Catamaran</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
@@ -3168,6 +3557,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 06 · Table Mountain · Camps Bay · Catamaran</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <span class="rest-titulo-script">Jantar em Camps Bay</span>
   <div class="restaurante" style="margin-bottom:24px;">
     <div class="restaurante-header">
@@ -3183,12 +3580,13 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="dia07" class="dia-secao">
-<div class="page">
+<section id="dia07" class="pagina">
+<div class="ph"><span class="ph-left">Dia 07 · Robben Island · Aquário · GOLD</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="dia-header-card">
     <div class="dia-header-pill-top">
@@ -3207,6 +3605,14 @@ document.addEventListener('DOMContentLoaded', function(){
     <span class="dica-box-label">📋 Resumo do Dia</span>
     <p>Dois dos pontos mais marcantes de Cape Town num único dia: a Robben Island pela manhã, onde Nelson Mandela passou 18 dos seus 27 anos de prisão, e o Two Oceans Aquarium no V&A Waterfront à tarde — tubarões, tartarugas e a colônia de pinguins africanos num aquário cheio de vida. O embarque é às 08h15 no Nelson Mandela Gateway, com o tour guiado por um ex-prisioneiro político começando às 09h00. De volta ao Waterfront por volta do meio-dia, dá tempo de almoçar por ali antes do aquário à tarde (a 5 minutos a pé do Gateway). Retorno ao hotel no fim da tarde para uma pausa antes do grande jantar da viagem: o GOLD Restaurant às 19h15.</p>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 07 · Robben Island · Aquário · GOLD</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
     <div class="atracao-nova">
     <div class="atracao-nova-topo">
@@ -3239,6 +3645,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="dica-item"><span class="dica-item-icon">🧒</span><div><span class="dica-item-label">PARA O LUIGI</span>O tour tem partes pesadas — a história do apartheid é contada de forma direta. Para crianças curiosas como o Luigi, é uma das experiências mais marcantes da viagem. Respondam as perguntas dele com calma — ele vai perguntar bastante.</div></div>
     </div>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 07 · Robben Island · Aquário · GOLD</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
@@ -3279,6 +3693,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 07 · Robben Island · Aquário · GOLD</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
 <div class="atracao-nova">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🥁</div>
@@ -3307,12 +3729,13 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="dia08" class="dia-secao">
-<div class="page">
+<section id="dia08" class="pagina">
+<div class="ph"><span class="ph-left">Dia 08 · Giraffe House · Vinícolas Stellenbosch</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="dia-header-card">
     <div class="dia-header-pill-top">
@@ -3331,6 +3754,14 @@ document.addEventListener('DOMContentLoaded', function(){
     <span class="dica-box-label">📋 Resumo do Dia</span>
     <p>Dia nas vinícolas de Stellenbosch com a Agência Viin Africa — começa com uma parada na Giraffe House e passa por duas vinícolas: Spier e Hazendal. Degustação, espaços especiais para as crianças, almoço na Spier e guia em português o dia todo. O Luigi vai de girafas a segway a parquinho interativo. O guia retorna vocês ao hotel no final da tarde. Noite tranquila — jantar no próprio hotel.</p>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 08 · Giraffe House · Vinícolas Stellenbosch</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- TOUR GERAL — VIIN AFRICA -->
   <div class="atracao-nova">
@@ -3351,6 +3782,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="dica-item"><span class="dica-item-icon">🍷</span><div><span class="dica-item-label">PINOTAGE</span>O Pinotage é a uva sul-africana por excelência — criada nos anos 1920, é um cruzamento de Pinot Noir com Cinsault. Tem notas de frutas vermelhas, especiarias e fumaça. Peçam sempre uma taça para comparar com os clássicos europeus.</div></div>
     </div>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 08 · Giraffe House · Vinícolas Stellenbosch</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- GIRAFFE HOUSE -->
   <div class="atracao-nova">
@@ -3380,6 +3819,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 08 · Giraffe House · Vinícolas Stellenbosch</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <!-- SPIER -->
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
@@ -3408,6 +3855,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 08 · Giraffe House · Vinícolas Stellenbosch</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <!-- HAZENDAL -->
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
@@ -3435,6 +3890,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 08 · Giraffe House · Vinícolas Stellenbosch</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <span class="rest-titulo-script">Jantar no próprio hotel</span>
   <div class="restaurante" style="margin-bottom:24px;">
     <div class="restaurante-header">
@@ -3450,12 +3913,13 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="dia09" class="dia-secao">
-<div class="page">
+<section id="dia09" class="pagina">
+<div class="ph"><span class="ph-left">Dia 09 · Hermanus · Baleias · Benguela Cove</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="dia-header-card">
     <div class="dia-header-pill-top">
@@ -3474,6 +3938,14 @@ document.addEventListener('DOMContentLoaded', function(){
     <span class="dica-box-label">📋 Resumo do Dia</span>
     <p>Dia todo fora de Cape Town com a Agência Viin Africa — destino: Hermanus, a capital mundial das baleias. Saída às 06h30 do hotel — o guia conduz o dia inteiro em português. A Santana, coordenadora da Viin Africa em Cape Town, antecipou o passeio de barco para 09h00 para garantir as melhores condições do mar: check-in às 08h30 na Southern Right Charters, ~2h no nível das baleias. Retorno do barco por volta das 11h00, almoço em Hermanus, e à tarde: visita à Benguela Cove Wine Estate — vinícola boutique à beira do lago, com degustação e boa estrutura para toda a família. Retorno ao hotel no fim da tarde.</p>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 09 · Hermanus · Baleias · Benguela Cove</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- PASSEIO DIA TODO -->
   <div class="atracao-nova">
@@ -3503,6 +3975,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="dica-item"><span class="dica-item-icon">🧒</span><div><span class="dica-item-label">PARA O LUIGI</span>O tamanho das baleias vistas de perto, os saltos e os sons são uma das experiências mais inesquecíveis para criança. Uma das melhores cenas da viagem inteira.</div></div>
     </div>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 09 · Hermanus · Baleias · Benguela Cove</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- SOUTHERN RIGHT CHARTERS -->
   <div class="atracao-nova">
@@ -3534,6 +4014,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <div class="dica-item"><span class="dica-item-icon">💵</span><div><span class="dica-item-label">TAXA DO HARBOUR</span>R5 em dinheiro por carro para entrar no harbour. Avisem o guia da agência — ele provavelmente cuida disso, mas confirme na chegada a Hermanus.</div></div>
     </div>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 09 · Hermanus · Baleias · Benguela Cove</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="dica2-box">
     <span class="dica2-label">🍽️ Almoço em Hermanus · após o barco</span>
@@ -3571,6 +4059,13 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 09 · Hermanus · Baleias · Benguela Cove</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <span class="rest-titulo-script">Sugestão de Jantar</span>
   <div class="restaurante" style="margin-bottom:24px;">
@@ -3587,12 +4082,13 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="dia10" class="dia-secao">
-<div class="page">
+<section id="dia10" class="pagina">
+<div class="ph"><span class="ph-left">Dia 10 · City Tour · Kirstenbosch · Waterfront</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="dia-header-card">
     <div class="dia-header-pill-top">
@@ -3611,6 +4107,14 @@ document.addEventListener('DOMContentLoaded', function(){
     <span class="dica-box-label">📋 Resumo do Dia</span>
     <p>Meia manhã com a Agência Viin Africa — city tour privativo pelos pontos icônicos de Cape Town: Bo-Kaap com as casinhas coloridas, Company's Garden e o centro histórico. O guia devolve no hotel por volta do meio-dia. À tarde, o Kirstenbosch National Botanical Garden — um dos mais extraordinários do mundo, na encosta da Table Mountain, com a passarela Boomslang nas copas das árvores. No fim da tarde, Uber/Bolt até o V&A Waterfront para jantar e últimas compras.</p>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 10 · City Tour · Kirstenbosch · Waterfront</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- CITY TOUR COM AGÊNCIA -->
   <div class="atracao-nova">
@@ -3640,6 +4144,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 10 · City Tour · Kirstenbosch · Waterfront</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <span class="rest-titulo-script">Almoço perto do hotel</span>
   <div class="restaurante" style="margin-bottom:24px;">
     <div class="restaurante-header">
@@ -3654,6 +4166,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <p><span class="reserva-direto">✅ Sem reserva</span></p>
     </div>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 10 · City Tour · Kirstenbosch · Waterfront</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- TWO OCEANS AQUARIUM -->
     <div class="atracao-nova">
@@ -3687,6 +4207,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 10 · City Tour · Kirstenbosch · Waterfront</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
 <div class="atracao-nova">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">⚓</div>
@@ -3712,6 +4240,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 10 · City Tour · Kirstenbosch · Waterfront</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <span class="rest-titulo-script">Sugestão de Jantar</span>
   <div class="restaurante" style="margin-bottom:24px;">
     <div class="restaurante-header">
@@ -3727,12 +4263,13 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="dia11" class="dia-secao">
-<div class="page">
+<section id="dia11" class="pagina">
+<div class="ph"><span class="ph-left">Dia 11 · Península do Cabo · Último Dia</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="dia-header-card">
     <div class="dia-header-pill-top">
@@ -3751,6 +4288,14 @@ document.addEventListener('DOMContentLoaded', function(){
     <span class="dica-box-label">📋 Resumo do Dia</span>
     <p>Último dia inteiro em Cape Town — e dos mais épicos. O guia da Agência Viin Africa busca no hotel cedo para o tour completo da Península do Cabo: Muizenberg com as casinhas coloridas de surf, Simon's Town para almoço, os pinguins-africanos em Boulders Beach, o Cape Point Nature Reserve com o Cabo da Boa Esperança, Chapman's Peak Drive cortando a falésia sobre o mar e Hout Bay com as focas. Retorno ao hotel no fim da tarde. À noite: V&A Waterfront para últimas compras e o jantar de despedida da África do Sul.</p>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 11 · Península do Cabo · Último Dia</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- DISTRICT SIX -->
     <div class="atracao-nova">
@@ -3888,6 +4433,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 11 · Península do Cabo · Último Dia</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
 <div class="atracao-nova">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">⚓</div>
@@ -3914,6 +4467,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia 11 · Península do Cabo · Último Dia</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
     <span class="rest-titulo-script">Jantar de Despedida — Cape Town</span>
   <div class="restaurante" style="margin-bottom:24px;">
     <div class="restaurante-header">
@@ -3934,14 +4495,15 @@ document.addEventListener('DOMContentLoaded', function(){
     <p>O voo <strong>CPT → GRU sai às 12h50</strong>. Check-in no aeroporto: até <strong>10h30</strong>. O Aeroporto Internacional de Cidade do Cabo fica a ~25 min de Uber/Bolt do hotel — Saída recomendada: <strong>09h30</strong>. Façam o check-in online na véspera pelo app da companhia aérea. Café da manhã incluso no hotel — aproveitem antes de partir.</p>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
 
 
-<section id="checklist-reservas" class="secao-wrapper">
-<div class="page secao">
+<section id="checklist-reservas" class="pagina">
+<div class="ph"><span class="ph-left">Checklist de Reservas</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page secao" style="max-width:100%;padding:0;">
   <span class="titulo-principal">Checklist de Reservas</span>
   <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#64748b;line-height:1.7;margin-bottom:8px;">Tudo que precisa ser reservado/comprado antes. Cada item tem duas opções de preço para comparar. Quando confirmar uma reserva, será atualizado com check aqui.</p>
   <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:8px 12px;margin-bottom:20px;font-family:'Poppins',sans-serif;font-size:10px;color:#9a3412;line-height:1.6;">
@@ -3993,6 +4555,14 @@ document.addEventListener('DOMContentLoaded', function(){
 
     </div>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Checklist de Reservas · Passeios Cidade do Cabo</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page secao" style="max-width:100%;padding:0;">
 
   <!-- ══ PASSEIOS E INGRESSOS CIDADE DO CABO ══ -->
   <div class="card" style="margin-bottom:16px;">
@@ -4172,6 +4742,15 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Checklist de Reservas · Restaurantes e Ingressos</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page secao" style="max-width:100%;padding:0;">
+
   <!-- ══ RESTAURANTES ══ -->
   <div class="card" style="margin-bottom:16px;">
     <div class="card-header"><span class="card-header-icon">🍽️</span><span class="card-header-titulo">Restaurantes — Reserva Direta</span></div>
@@ -4298,6 +4877,15 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
     </div>
   </div>
+
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Resumo Financeiro</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page secao" style="max-width:100%;padding:0;">
 
   <!-- ══ RESUMO FINANCEIRO ══ -->
   <div style="margin-bottom:20px;">
@@ -4440,12 +5028,13 @@ document.addEventListener('DOMContentLoaded', function(){
     <div style="font-size:9px;color:#94a3b8;margin-top:8px;line-height:1.6;padding:0 2px;">* Câmbio estimado R$ 0,34/ZAR. Valores de passeios são médias — confirmar na reserva. Voo internacional, alimentação e outros custos variáveis não incluídos nos totais acima.</div>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="dia12" class="dia-secao">
-<div class="page">
+<section id="dia12" class="pagina">
+<div class="ph"><span class="ph-left">Dia Extra · Passeios Alternativos</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="dia-header-card">
     <div class="dia-header-pill-top">
@@ -4464,6 +5053,14 @@ document.addEventListener('DOMContentLoaded', function(){
     <span class="dica-box-label">📋 Sobre este dia</span>
     <p>Este não é um dia com data fixa — é uma reserva de opções para caso sobre tempo livre em algum ponto da viagem, ou para os dias de chuva ou vento forte em Cape Town, quando os passeios ao ar livre podem não valer tanto a pena. Por isso não colocamos horários: escolham o que fizer sentido no momento, de acordo com o clima e o tempo disponível. Separamos os passeios cobertos — ideais pra chuva — dos passeios ao ar livre, que funcionam bem como programa extra num dia de sol de sobra.</p>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia Extra · Passeios Alternativos</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- IZIKO PLANETARIUM -->
   <div class="atracao-nova">
@@ -4487,6 +5084,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia Extra · Passeios Alternativos</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <!-- CENTRO HISTÓRICO -->
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
@@ -4505,6 +5110,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <p class="atracao-nova-desc">Passeio pela região histórica de Cidade do Cabo, com arquitetura colonial, praças e importantes marcos da história sul-africana. Uma forma tranquila de conhecer o centro da cidade fora do roteiro principal, caminhando entre prédios antigos e pontos que contam parte da história da colonização e da resistência do país.</p>
     </div>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia Extra · Passeios Alternativos</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <!-- COMPANY'S GARDEN -->
   <div class="atracao-nova">
@@ -4528,6 +5141,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia Extra · Passeios Alternativos</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <!-- GREEN POINT PARK -->
   <div class="atracao-nova">
     <div class="atracao-nova-topo">
@@ -4546,6 +5167,14 @@ document.addEventListener('DOMContentLoaded', function(){
       <p class="atracao-nova-desc">Parque urbano com áreas verdes, playground e belas vistas da cidade. Excelente opção para as crianças gastarem energia correndo à vontade, com bastante espaço e estrutura para uma tarde tranquila entre um passeio e outro.</p>
     </div>
   </div>
+
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia Extra · Passeios Alternativos</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
 
   <div class="dica2-box">
     <span class="dica2-label">🌆 Opções para Tardes Livres</span>
@@ -4571,6 +5200,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
+</div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
+</section>
+
+<section class="pagina">
+<div class="ph"><span class="ph-left">Dia Extra · Passeios Alternativos</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page" style="max-width:100%;padding:0;">
+
   <span class="rest-titulo-script">OU</span>
 
   <!-- ZEITZ MOCAA -->
@@ -4595,12 +5232,13 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="volta" class="secao-wrapper">
-<div class="page secao">
+<section id="volta" class="pagina">
+<div class="ph"><span class="ph-left">Volta para Casa</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
+<div class="page secao" style="max-width:100%;padding:0;">
   <span class="titulo-principal">✈️ Volta para Casa</span>
   <div class="card" style="margin-bottom:20px;">
     <div class="card-header"><span class="card-header-icon">🚌</span><span class="card-header-titulo">Saída do Hotel — 01/08 · Sábado</span></div>
@@ -4647,11 +5285,12 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
     </div>
   </div>
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+
 </div>
+<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
 </section>
 
-<section id="encerramento" style="position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+<section id="encerramento" class="pagina" style="padding:0;height:297mm;max-height:297mm;margin:0 auto 6mm;position:relative;display:flex;align-items:center;justify-content:center;">
   <div style="position:absolute;inset:0;background-image:url('./assets/capas/menu-pratico-bg.png');background-size:cover;background-position:center;z-index:0;"></div>
   <div style="position:relative;z-index:2;background:linear-gradient(135deg,rgba(13,45,107,0.95) 0%,rgba(26,74,158,0.92) 50%,rgba(34,85,168,0.92) 100%);border-radius:20px;padding:56px 40px 48px;max-width:420px;width:calc(100% - 48px);text-align:center;box-shadow:0 12px 48px rgba(0,0,0,0.35);">
     <div style="position:absolute;top:-52px;left:50%;transform:translateX(-50%);width:90px;height:90px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.12);padding:6px;">
@@ -4664,7 +5303,7 @@ document.addEventListener('DOMContentLoaded', function(){
 </section>
 
 <!-- ════════════════════════════════ REDES SOCIAIS -->
-<section style="background:#f8fafc;padding:64px 24px 56px;text-align:center;">
+<section class="pagina" style="background:#f8fafc;padding:64px 24px 56px;text-align:center;display:flex;align-items:center;justify-content:center;">
   <div style="max-width:360px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:0;">
 
     <!-- Foto -->
