@@ -301,7 +301,7 @@ body{
 .restaurante-body p{ margin: 6px 0; }
 /* ── CHECKLIST ── */
 .checklist-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
-.checklist-item{ display: flex; align-items: center; gap: 8px; padding: 7px 14px; font-size: 12.5px; border-bottom: 1px solid var(--cinza-claro); }
+.checklist-item{ display: flex; align-items: center; gap: 8px; padding: 4px 14px; font-size: 12.5px; border-bottom: 1px solid var(--cinza-claro); }
 .checklist-item input[type="checkbox"]{ accent-color: var(--azul); width: 14px; height: 14px; cursor: pointer; }
 /* ── ENCERRAMENTO ── */
 #encerramento{
@@ -774,14 +774,14 @@ body{
       gap: 14px;
     }}
 @media (max-width: 480px) {#capa .capa-pais{ font-size: 100px !important; }.card2-grid{ grid-template-columns: 1fr 1fr !important; }}
-.checklist-acordeao{ margin: 4px 0; }
+.checklist-acordeao{ margin: 0 0 6px; }
 .checklist-acordeao-btn{
     width: 100%;
     background: var(--azul-medio);
     color: white;
     border: none;
     border-radius: 10px;
-    padding: 12px 18px;
+    padding: 8px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -810,7 +810,7 @@ body{
     max-height: 2000px;
   }
 .checklist-acordeao-inner{
-    padding-top: 8px;
+    padding-top: 4px;
   }
 .ingresso-box .ingresso-box /* ════ CABEÇALHO DOS DIAS — REDESIGN ════ */
 .dia-header-titulo-novo{
@@ -1983,7 +1983,6 @@ document.addEventListener('DOMContentLoaded', function(){
           <div class="checklist-item"><input type="checkbox"> Roupas neutras e discretas para o safari (bege, cáqui, cinza — sem cores vibrantes)</div>
         </div></div>
       </div>
-      <br>
       <div class="checklist-acordeao">
         <button class="checklist-acordeao-btn" onclick="toggleAcordeao(this)">
           <span>▼ CALÇADOS</span><span class="seta">▼</span>
@@ -1995,7 +1994,6 @@ document.addEventListener('DOMContentLoaded', function(){
           <div class="checklist-item"><input type="checkbox"> Sapato casual para jantares e saídas em cidade</div>
         </div></div>
       </div>
-      <br>
       <div class="checklist-acordeao">
         <button class="checklist-acordeao-btn" onclick="toggleAcordeao(this)">
           <span>▼ ACESSÓRIOS</span><span class="seta">▼</span>
@@ -2024,7 +2022,6 @@ document.addEventListener('DOMContentLoaded', function(){
           <div class="checklist-item"><input type="checkbox"> Lenços umedecidos</div>
         </div></div>
       </div>
-      <br>
       <div class="checklist-acordeao">
         <button class="checklist-acordeao-btn" onclick="toggleAcordeao(this)">
           <span>▼ SAÚDE</span><span class="seta">▼</span>
@@ -2038,7 +2035,6 @@ document.addEventListener('DOMContentLoaded', function(){
           <div class="checklist-item"><input type="checkbox"> Consultar médico sobre malária antes de viajar</div>
         </div></div>
       </div>
-      <br>
       <div class="checklist-acordeao">
         <button class="checklist-acordeao-btn" onclick="toggleAcordeao(this)">
           <span>▼ ELETRÔNICOS</span><span class="seta">▼</span>
