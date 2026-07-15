@@ -221,17 +221,17 @@ body{
 .mp-cols{ display: grid; grid-template-columns: 1fr 1fr; gap: 32px; width: 100%; align-items: start; }
 .mp-col-left{ display: flex; flex-direction: column; }
 .mp-col-right{ display: flex; flex-direction: column; }
-.mp-dias-label{ font-family:"Poppins",sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--azul-medio); text-align:center; margin:0 0 10px; }
-.mp-dias-grid{ display:grid; grid-template-columns:1fr 1fr; gap:7px; width:100%; }
+.mp-dias-grid{ display:flex; flex-direction:column; gap:6px; width:100%; }
 .mp-btn-dia{
-    display:block; text-align:center; text-decoration:none;
-    background: linear-gradient(135deg,#c8a96e,#dbbf8a); color:white; font-weight:700;
-    padding: 9px 6px; border-radius: 7px;
-    font-family:"Poppins",sans-serif; font-size: 10px; letter-spacing: 1px; text-transform:uppercase;
+    display:flex; align-items:center; justify-content:space-between; text-decoration:none;
+    background: linear-gradient(135deg,#c8a96e,#dbbf8a); color:white;
+    padding: 8px 16px; border-radius: 7px;
     box-shadow: 0 3px 0 rgba(0,0,0,0.14);
     transition: background 0.2s, transform 0.15s;
   }
 .mp-btn-dia:hover{ background: linear-gradient(135deg,#b8956a,#c8a96e); transform: translateY(-1px); }
+.mp-btn-dia-num{ font-family:"Poppins",sans-serif; font-size:16px; font-weight:800; letter-spacing:1px; text-transform:uppercase; }
+.mp-btn-dia-data{ font-family:"Poppins",sans-serif; font-size:10.5px; font-weight:600; letter-spacing:0.5px; text-transform:uppercase; color:rgba(255,255,255,0.85); }
 .mp-titulo{
     font-family: "Poppins", sans-serif; font-size: 13px; font-weight: 600;
     letter-spacing: 3px; text-transform: uppercase; color: var(--azul);
@@ -1640,7 +1640,7 @@ section{ width:210mm; margin:0 auto; padding:0; background:transparent; }
   <div class="capa-inner">
     <img class="capa-logo-img" src="./assets/branding/logo-vamos-carimbar-branco.png" alt="Vamos Carimbar">
     <div class="capa-bottom">
-      <span class="capa-pais">África do Sul</span>
+      <span class="capa-pais">África<br>do Sul</span>
       <span class="capa-roteiro-txt">Roteiro</span>
       <span class="capa-nomes">Vanessa, Felipe &amp; Luigi</span>
       <span class="capa-datas-txt">Julho de 2026</span>
@@ -1670,29 +1670,23 @@ section{ width:210mm; margin:0 auto; padding:0; background:transparent; }
         <a class="mp-btn" href="#frases">Frases Mágicas</a>
         <a class="mp-btn" href="#guia-gastronomico">Guia Gastronômico</a>
         <a class="mp-btn" href="#legendas">Legendas do Roteiro</a>
-
-        <div style="font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--azul-medio);text-align:center;margin:12px 0 6px;padding-top:0;">Roteiro por Região</div>
-        <a class="mp-btn" href="#pilanesberg">Pilanesberg — Safari</a>
-        <a class="mp-btn" href="#joanesburgo">Joanesburgo</a>
-        <a class="mp-btn" href="#cidade-do-cabo">Cidade do Cabo</a>
       </div>
 
       <div class="mp-col-right">
-        <div class="mp-dias-label">Ir Direto pro Dia</div>
         <div class="mp-dias-grid">
-          <a class="mp-btn-dia" href="#dia01">Dia 01</a>
-          <a class="mp-btn-dia" href="#dia02">Dia 02</a>
-          <a class="mp-btn-dia" href="#dia03">Dia 03</a>
-          <a class="mp-btn-dia" href="#dia04">Dia 04</a>
-          <a class="mp-btn-dia" href="#dia05">Dia 05</a>
-          <a class="mp-btn-dia" href="#dia06">Dia 06</a>
-          <a class="mp-btn-dia" href="#dia07">Dia 07</a>
-          <a class="mp-btn-dia" href="#dia08">Dia 08</a>
-          <a class="mp-btn-dia" href="#dia09">Dia 09</a>
-          <a class="mp-btn-dia" href="#dia10">Dia 10</a>
-          <a class="mp-btn-dia" href="#dia11">Dia 11</a>
-          <a class="mp-btn-dia" href="#dia12">Dia Extra</a>
-          <a class="mp-btn-dia" href="#volta" style="grid-column:1 / -1;">✈️ Volta pra Casa</a>
+          <a class="mp-btn-dia" href="#dia01"><span class="mp-btn-dia-num">Dia 01</span><span class="mp-btn-dia-data">21/07 · Ter</span></a>
+          <a class="mp-btn-dia" href="#dia02"><span class="mp-btn-dia-num">Dia 02</span><span class="mp-btn-dia-data">22/07 · Qua</span></a>
+          <a class="mp-btn-dia" href="#dia03"><span class="mp-btn-dia-num">Dia 03</span><span class="mp-btn-dia-data">23/07 · Qui</span></a>
+          <a class="mp-btn-dia" href="#dia04"><span class="mp-btn-dia-num">Dia 04</span><span class="mp-btn-dia-data">24/07 · Sex</span></a>
+          <a class="mp-btn-dia" href="#dia05"><span class="mp-btn-dia-num">Dia 05</span><span class="mp-btn-dia-data">25/07 · Sáb</span></a>
+          <a class="mp-btn-dia" href="#dia06"><span class="mp-btn-dia-num">Dia 06</span><span class="mp-btn-dia-data">26/07 · Dom</span></a>
+          <a class="mp-btn-dia" href="#dia07"><span class="mp-btn-dia-num">Dia 07</span><span class="mp-btn-dia-data">27/07 · Seg</span></a>
+          <a class="mp-btn-dia" href="#dia08"><span class="mp-btn-dia-num">Dia 08</span><span class="mp-btn-dia-data">28/07 · Ter</span></a>
+          <a class="mp-btn-dia" href="#dia09"><span class="mp-btn-dia-num">Dia 09</span><span class="mp-btn-dia-data">29/07 · Qua</span></a>
+          <a class="mp-btn-dia" href="#dia10"><span class="mp-btn-dia-num">Dia 10</span><span class="mp-btn-dia-data">30/07 · Qui</span></a>
+          <a class="mp-btn-dia" href="#dia11"><span class="mp-btn-dia-num">Dia 11</span><span class="mp-btn-dia-data">31/07 · Sex</span></a>
+          <a class="mp-btn-dia" href="#dia12"><span class="mp-btn-dia-num">Dia Extra</span><span class="mp-btn-dia-data">Se precisar</span></a>
+          <a class="mp-btn-dia" href="#volta"><span class="mp-btn-dia-num">✈️ Volta</span><span class="mp-btn-dia-data">01/08 · Sáb</span></a>
         </div>
       </div>
     </div>
