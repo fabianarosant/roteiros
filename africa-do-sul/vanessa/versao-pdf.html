@@ -218,7 +218,7 @@ body{
     box-shadow: 0 8px 40px rgba(0,0,0,0.13);
     display: flex; flex-direction: column; align-items: center;
   }
-.mp-cols{ display: grid; grid-template-columns: 1fr 1fr; gap: 24px; width: 100%; align-items: start; }
+.mp-cols{ display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 24px; width: 100%; align-items: start; }
 .mp-col-left{ display: flex; flex-direction: column; }
 .mp-col-right{ display: flex; flex-direction: column; }
 .mp-dias-grid{ display:flex; flex-direction:column; gap:11px; width:100%; }
@@ -1661,7 +1661,7 @@ section{ width:210mm; margin:0 auto; padding:0; background:transparent; }
         <a class="mp-btn" href="#menu-dias">Roteiro Macro</a>
         <div style="display:flex;gap:8px;width:100%;">
           <a class="mp-btn" href="https://www.google.com/maps/d/u/0/edit?mid=1qSaxtXFAicpVWmB0kx6ykmF1DYGVYOw&usp=sharing" target="_blank" style="flex:1;text-align:center;">🗺️ Mapa Pilanesberg</a>
-          <a class="mp-btn" href="https://www.google.com/maps/d/u/0/edit?mid=1au-Krji-lASRmZFBArcq9tb9xGgnfxA&usp=sharing" target="_blank" style="flex:1;text-align:center;letter-spacing:0.5px;">🗺️ Mapa<br><span style="white-space:nowrap;">Cape Town</span></a>
+          <a class="mp-btn" href="https://www.google.com/maps/d/u/0/edit?mid=1au-Krji-lASRmZFBArcq9tb9xGgnfxA&usp=sharing" target="_blank" style="flex:1;text-align:center;white-space:nowrap;">🗺️ Mapa Cape Town</a>
         </div>
 
         <div style="font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--azul-medio);text-align:center;margin:12px 0 6px;">Guia Informativo</div>
@@ -2784,7 +2784,7 @@ document.addEventListener('DOMContentLoaded', function(){
 <div class="ph"><span class="ph-left">Dia 04 · Último Safari · Joanesburgo</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
 <div class="page" style="max-width:100%;padding:0;">
 
-  <div class="dia-header-card">
+  <div class="dia-header-card" style="margin-bottom:8px;">
     <div class="dia-header-pill-top">
       <span class="dia-header-titulo-novo">Dia 04</span>
       <div class="dia-header-data-wrap">
@@ -2797,14 +2797,14 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
   </div>
 
-  <div class="dica-box">
+  <div class="dica-box" style="margin:0 0 8px;padding:6px 16px;">
     <span class="dica-box-label">📋 Resumo do Dia</span>
-    <p>Último amanhecer no Pilanesberg — game drive de despedida às 5h, café da manhã, checkout e 2h30 de transfer de volta a Joanesburgo. Check-in no Garden Court Sandton City. Tarde tranquila na Nelson Mandela Square e no Sandton City Mall — elegante, seguro e com ótimas opções para jantar. Amanhã cedo tem voo para Cidade do Cabo.</p>
+    <p>Último amanhecer no Pilanesberg — game drive de despedida, café da manhã e 2h30 de transfer a Joanesburgo. Check-in no Garden Court Sandton City e tarde na Nelson Mandela Square. Amanhã cedo, voo para Cidade do Cabo.</p>
   </div>
 
   <!-- ÚLTIMO GAME DRIVE -->
-  <div class="atracao-nova">
-    <div class="atracao-nova-topo">
+  <div class="atracao-nova" style="margin-bottom:8px;">
+    <div class="atracao-nova-topo" style="padding:8px 18px 6px;">
       <div class="atracao-nova-num" style="font-size:16px;">🦁</div>
       <div class="atracao-nova-info">
         <span class="atracao-nova-nome">Último Game Drive — Despedida do Pilanesberg <span class="atracao-data">Dia 04 · 24/07 · Sexta</span></span>
@@ -2812,29 +2812,21 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
       <span class="selo selo-incluso">✓ Incluso</span>
     </div>
-    <div class="atracao-info-faixa">
+    <div class="atracao-info-faixa" style="padding:6px 18px;">
       <div><span class="info-label">Saída</span><span class="info-valor">05h00 — recepção do lodge</span></div>
       <div><span class="info-label">Retorno</span><span class="info-valor">~08h30 · seguido de café e checkout</span></div>
       <span class="info-atencao">💰 A diária inclui 1 game drive/dia. Hoje: <strong>amanhecer incluso</strong> — único safari do dia. Saem do lodge logo após o café. Malas arrumadas antes!</span>
     </div>
-    <div class="atracao-nova-corpo">
+    <div class="atracao-nova-corpo" style="padding-bottom:8px;">
       <p class="atracao-nova-desc">O último safari tem um peso especial — é o momento de absorver tudo de uma vez: o cheiro da savana, o silêncio antes do sol nascer, os sons dos animais acordando. Os guias costumam colocar um esforço extra no safari de saída, conhecendo o histórico de avistamentos dos dias anteriores. Se ainda não viram todos os Big Five, é a chance — mas mesmo que não completem a lista, a experiência de três dias no Pilanesberg já é algo que vai ficar muito tempo na memória de vocês três.</p>
     </div>
-    <div class="dicas-box">
+    <div class="dicas-box" style="padding:8px 12px;">
       <div class="dica-item"><span class="dica-item-icon">🎁</span><div><span class="dica-item-label">GORJETA DO GUIA</span>No retorno do último safari é o momento certo para agradecer o guia com a gorjeta. ZAR 100–150 para a família é o padrão — pode ser em Rand ou em dólar.</div></div>
     </div>
   </div>
 
-</div>
-<div class="pf"><a href="#menu-pratico" class="pf-menu">Menu Principal</a></div>
-</section>
-
-<section class="pagina">
-<div class="ph"><span class="ph-left">Dia 04 · Último Safari · Joanesburgo</span><span class="ph-right">Vamos Carimbar <span class="ph-cidade">África do Sul</span></span></div>
-<div class="page" style="max-width:100%;padding:0;">
-
   <!-- CHECKOUT -->
-  <div class="atracao-nova">
+  <div class="atracao-nova" style="margin:8px 0;">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">☕</div>
       <div class="atracao-nova-info">
@@ -2842,13 +2834,13 @@ document.addEventListener('DOMContentLoaded', function(){
         <span class="atracao-nova-cat">☕ 09h30 · incluso · saída às 11h00</span>
       </div>
     </div>
-    <div class="atracao-nova-corpo">
+    <div class="atracao-nova-corpo" style="padding-bottom:8px;">
       <p class="atracao-nova-desc">Último café da manhã com vista para a savana. Aproveitem com calma — o transfer sai às 11h. Confiram se nada ficou para trás no quarto, devolvam chaves e cartões do lodge e perguntem na recepção se precisam de algum comprovante para a saída do parque.</p>
     </div>
   </div>
 
   <!-- TRANSFER DE VOLTA -->
-  <div class="atracao-nova">
+  <div class="atracao-nova" style="margin:8px 0;">
     <div class="atracao-nova-topo">
       <div class="atracao-nova-num" style="font-size:16px;">🚐</div>
       <div class="atracao-nova-info">
@@ -2857,11 +2849,11 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
       <span class="selo" style="background:#fff7ed;border:1.5px solid #fed7aa;color:#9a3412;">🇧🇷 Agência · Privativo</span>
     </div>
-    <div class="atracao-info-faixa">
+    <div class="atracao-info-faixa" style="padding:6px 18px;">
       <div><span class="info-label">Saída</span><span class="info-valor">11h00 — portão do KWA Maritane</span></div>
       <div><span class="info-label">Status</span><span class="info-valor">✓ Reservado · R$ 2.000</span></div>
     </div>
-    <div class="atracao-nova-corpo">
+    <div class="atracao-nova-corpo" style="padding-bottom:8px;">
       <p class="atracao-nova-desc">De volta à cidade — o contraste do transfer é marcante: savana aberta, animais livres e silêncio absoluto do lado de lá; Joanesburgo com o skyline de arranha-céus surgindo no horizonte do outro. São 2h30 de estrada com o guia da agência, em português. Destino: Garden Court Sandton City, no bairro mais seguro e sofisticado de Joanesburgo.</p>
     </div>
   </div>
