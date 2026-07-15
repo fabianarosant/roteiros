@@ -57,7 +57,6 @@ body{
     text-transform: uppercase;
     text-decoration: none;
   }
-.topbar-right{ display: flex; align-items: center; gap: 12px; }
 .topbar-destino{
     font-family: "DM Sans", sans-serif;
     font-size: 11px;
@@ -66,71 +65,6 @@ body{
     letter-spacing: 2px;
     text-transform: uppercase;
   }
-.hamburger-btn{
-    width: 44px; height: 44px;
-    background: none; border: none; cursor: pointer;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    gap: 5px; padding: 0; border-radius: 6px;
-    transition: background 0.2s;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-    user-select: none; -webkit-user-select: none;
-  }
-.hamburger-btn:hover{ background: rgba(255,255,255,0.1); }
-.hamburger-btn span{
-    display: block; width: 22px; height: 2px;
-    background: white; border-radius: 2px; transition: all 0.3s;
-  }
-.hamburger-btn.open span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
-.hamburger-btn.open span:nth-child(2){ opacity: 0; }
-.hamburger-btn.open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
-/* ── DRAWER ── */
-.nav-drawer{
-    position: fixed; top: 52px; right: 0;
-    width: 240px; height: calc(100vh - 52px);
-    background: rgba(26,58,92,0.55);
-    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-    border-left: 1px solid rgba(255,255,255,0.06);
-    z-index: 199; overflow-y: auto;
-    padding: 12px 0 32px;
-    transform: translateX(100%);
-    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
-    box-shadow: -4px 0 32px rgba(0,0,0,0.3);
-  }
-.nav-drawer.open{ transform: translateX(0); }
-.nav-overlay{
-    position: fixed; inset: 52px 0 0 0;
-    background: rgba(0,0,0,0.25);
-    backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px);
-    z-index: 198; opacity: 0; pointer-events: none; transition: opacity 0.3s;
-  }
-.nav-overlay.open{ opacity: 1; pointer-events: all; }
-.nav-item{
-    display: block; padding: 7px 20px;
-    color: rgba(255,255,255,0.75); text-decoration: none;
-    font-family: "Poppins", sans-serif;
-    font-size: 11px; font-weight: 500;
-    transition: color 0.15s;
-  }
-.nav-item:hover{ color: white; }
-.nav-menu-principal{
-    display: block; padding: 12px 20px 10px;
-    color: white; text-decoration: none;
-    font-family: "Poppins", sans-serif;
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 1.5px; text-transform: uppercase;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    margin-bottom: 8px;
-  }
-.nav-menu-principal:hover{ color: white; }
-.nav-cidade{
-    display: block; padding: 10px 20px 2px;
-    font-family: "Magnolia Script", cursive;
-    font-size: 18px; color: white;
-    text-decoration: none;
-  }
-.nav-cidade:hover{ color: rgba(255,255,255,0.75); }
 /* ── MAIN ── */
 .main-content{ margin-left: 0; min-height: 100vh; }
 /* ── CAPA ── */
@@ -1583,7 +1517,7 @@ section{ width:210mm; margin:0 auto; padding:0; background:transparent; }
     overflow: hidden !important;
   }
   section { page-break-before: auto !important; margin: 0 !important; border: none !important; }
-  .topbar, .nav-drawer, .nav-overlay { display: none !important; }
+  .topbar { display: none !important; }
 }
 
 </style>
@@ -1594,42 +1528,8 @@ section{ width:210mm; margin:0 auto; padding:0; background:transparent; }
 <!-- TOPBAR -->
 <div class="topbar">
   <span class="topbar-logo">Vamos Carimbar</span>
-  <div class="topbar-right">
-    <span class="topbar-destino">África do Sul · Jul 2026</span>
-    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+  <span class="topbar-destino">África do Sul · Jul 2026</span>
 </div>
-
-<div class="nav-overlay" id="navOverlay"></div>
-<nav class="nav-drawer" id="navDrawer">
-
-  <a class="nav-menu-principal" href="#menu-pratico">MENU PRINCIPAL</a>
-  <a class="nav-menu-principal" href="#checklist-reservas">✦ Checklist Reservas e Resumo Financeiro</a>
-
-  <a class="nav-cidade" href="#pilanesberg">Pilanesberg</a>
-  <a class="nav-item" href="#dia01">Dia 01 · 21/07 · Terça</a>
-  <a class="nav-item" href="#dia02">Dia 02 · 22/07 · Quarta</a>
-  <a class="nav-item" href="#dia03">Dia 03 · 23/07 · Quinta</a>
-  <a class="nav-item" href="#dia04">Dia 04 · 24/07 · Sexta</a>
-
-  <a class="nav-cidade" href="#joanesburgo">Joanesburgo</a>
-  <a class="nav-item" href="#dia04b">Dia 04 · tarde · Sandton</a>
-
-  <a class="nav-cidade" href="#cidade-do-cabo">Cidade do Cabo</a>
-  <a class="nav-item" href="#dia05">Dia 05 · 25/07 · Sábado</a>
-  <a class="nav-item" href="#dia06">Dia 06 · 26/07 · Domingo</a>
-  <a class="nav-item" href="#dia07">Dia 07 · 27/07 · Segunda</a>
-  <a class="nav-item" href="#dia08">Dia 08 · 28/07 · Terça</a>
-  <a class="nav-item" href="#dia09">Dia 09 · 29/07 · Quarta</a>
-  <a class="nav-item" href="#dia10">Dia 10 · 30/07 · Quinta</a>
-  <a class="nav-item" href="#dia11">Dia 11 · 31/07 · Sexta</a>
-  <a class="nav-item" href="#dia12">🎲 Dia Extra · Alternativos</a>
-
-  <a class="nav-item" href="#volta">✈️ Volta · 01/08 · Sábado</a>
-
-</nav>
 
 <div class="main-content">
 
@@ -5057,31 +4957,6 @@ document.addEventListener('DOMContentLoaded', function(){
 </section>
 
 </div><!-- fim main-content -->
-
-<script>
-(function() {
-  function init() {
-    var btn = document.getElementById('hamburgerBtn');
-    var drawer = document.getElementById('navDrawer');
-    var overlay = document.getElementById('navOverlay');
-    if (!btn || !drawer || !overlay) return;
-    function close() { btn.classList.remove('open'); drawer.classList.remove('open'); overlay.classList.remove('open'); }
-    function open() { btn.classList.add('open'); drawer.classList.add('open'); overlay.classList.add('open'); }
-    function toggle() { drawer.classList.contains('open') ? close() : open(); }
-    btn.addEventListener('touchend', function(e) { e.preventDefault(); e.stopPropagation(); toggle(); });
-    btn.addEventListener('click', function(e) { e.stopPropagation(); toggle(); });
-    overlay.addEventListener('touchend', function(e) { e.preventDefault(); close(); });
-    overlay.addEventListener('click', close);
-    var links = drawer.querySelectorAll('a.nav-item');
-    links.forEach(function(l) {
-      l.addEventListener('touchend', function(e) { e.stopPropagation(); setTimeout(close, 150); });
-      l.addEventListener('click', function() { setTimeout(close, 150); });
-    });
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
-  }
-  document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', init) : init();
-})();
-</script>
 
 <script>
 function toggleAcordeao(btn) {
