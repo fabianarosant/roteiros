@@ -214,24 +214,24 @@ body{
 .menu-pratico-card{
     position: relative; z-index: 2; background: white;
     border-radius: 16px; padding: 56px 32px 36px;
-    width: 100%; max-width: 680px;
+    width: 100%; max-width: 560px;
     box-shadow: 0 8px 40px rgba(0,0,0,0.13);
     display: flex; flex-direction: column; align-items: center;
   }
-.mp-cols{ display: grid; grid-template-columns: 1fr 1fr; gap: 32px; width: 100%; align-items: start; }
+.mp-cols{ display: grid; grid-template-columns: 1fr 1fr; gap: 24px; width: 100%; align-items: start; }
 .mp-col-left{ display: flex; flex-direction: column; }
 .mp-col-right{ display: flex; flex-direction: column; }
 .mp-dias-grid{ display:flex; flex-direction:column; gap:6px; width:100%; }
 .mp-btn-dia{
     display:flex; align-items:center; justify-content:space-between; text-decoration:none;
     background: linear-gradient(135deg,#c8a96e,#dbbf8a); color:white;
-    padding: 8px 16px; border-radius: 7px;
+    padding: 7px 12px; border-radius: 7px;
     box-shadow: 0 3px 0 rgba(0,0,0,0.14);
     transition: background 0.2s, transform 0.15s;
   }
 .mp-btn-dia:hover{ background: linear-gradient(135deg,#b8956a,#c8a96e); transform: translateY(-1px); }
-.mp-btn-dia-num{ font-family:"Poppins",sans-serif; font-size:16px; font-weight:800; letter-spacing:1px; text-transform:uppercase; }
-.mp-btn-dia-data{ font-family:"Poppins",sans-serif; font-size:10.5px; font-weight:600; letter-spacing:0.5px; text-transform:uppercase; color:rgba(255,255,255,0.85); }
+.mp-btn-dia-num{ font-family:"Poppins",sans-serif; font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase; }
+.mp-btn-dia-data{ font-family:"Poppins",sans-serif; font-size:9px; font-weight:600; letter-spacing:0.5px; text-transform:uppercase; color:rgba(255,255,255,0.85); }
 .mp-titulo{
     font-family: "Poppins", sans-serif; font-size: 13px; font-weight: 600;
     letter-spacing: 3px; text-transform: uppercase; color: var(--azul);
@@ -1659,17 +1659,20 @@ section{ width:210mm; margin:0 auto; padding:0; background:transparent; }
     <div class="mp-cols">
       <div class="mp-col-left">
         <a class="mp-btn" href="#menu-dias">Roteiro Macro</a>
-        <a class="mp-btn" href="#checklist-reservas" style="background:linear-gradient(135deg,#c8a96e,#dbbf8a);color:white;font-weight:700;">✦ Checklist Reservas e SubTotal</a>
         <div style="display:flex;gap:8px;width:100%;">
           <a class="mp-btn" href="https://www.google.com/maps/d/u/0/edit?mid=1qSaxtXFAicpVWmB0kx6ykmF1DYGVYOw&usp=sharing" target="_blank" style="flex:1;text-align:center;">🗺️ Mapa Pilanesberg</a>
           <a class="mp-btn" href="https://www.google.com/maps/d/u/0/edit?mid=1au-Krji-lASRmZFBArcq9tb9xGgnfxA&usp=sharing" target="_blank" style="flex:1;text-align:center;">🗺️ Mapa Cape Town</a>
         </div>
+
+        <div style="font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--azul-medio);text-align:center;margin:12px 0 6px;">Guia Informativo</div>
         <a class="mp-btn" href="#cidade">Sobre a África do Sul</a>
         <a class="mp-btn" href="#dinheiro">Guia Financeiro</a>
         <a class="mp-btn" href="#clima">Clima &amp; Checklist Mala</a>
         <a class="mp-btn" href="#frases">Frases Mágicas</a>
         <a class="mp-btn" href="#guia-gastronomico">Guia Gastronômico</a>
         <a class="mp-btn" href="#legendas">Legendas do Roteiro</a>
+
+        <a class="mp-btn" href="#checklist-reservas" style="background:linear-gradient(135deg,#c8a96e,#dbbf8a);color:white;font-weight:700;margin-top:12px;">✦ Checklist Reservas e SubTotal</a>
       </div>
 
       <div class="mp-col-right">
