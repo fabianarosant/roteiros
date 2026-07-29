@@ -7,84 +7,312 @@
 <title>Identidade Visual — Samuel Borges</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<header class="sb-header">
-  <div class="sb-header-inner">
-    <div class="sb-brand">
-      <div class="sb-brand-name">SAMUEL <span>BORGES</span></div>
-      <div class="sb-brand-tag">Central de Conteúdo &amp; Narrativas</div>
-    </div>
-    <nav class="sb-nav">
-      <a href="posicionamento.html">Posicionamento</a>
-      <a href="identidade-visual.html" class="active">Identidade Visual</a>
-      <a href="estrategia-conteudo.html">Estratégia de Conteúdo</a>
-      <a href="index.html#narrativas">Narrativas</a>
-      <a href="index.html#agenda">Agenda de Posts</a>
-    </nav>
+<header class="sb-fixed-header">
+  <div class="sb-fixed-header-brand">SAMUEL <span>BORGES</span></div>
+  <div class="sb-fixed-header-left">
+    <a href="index.html" class="sb-fixed-header-back">← Menu Principal</a>
+    <button class="sb-hamburger-btn" id="sbHamburgerBtn" onclick="sbToggleTopics()" aria-label="Abrir índice de tópicos">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
-<section class="sb-hero">
-  <a class="sb-breadcrumb" href="index.html">← Menu Principal</a>
-  <div class="sb-eyebrow">Página fixa de consulta</div>
-  <h1 class="sb-title">Identidade Visual</h1>
+<nav class="sb-topics-menu" id="sbTopicsMenu">
+  <div class="sb-topics-menu-inner">
+    <a href="#paleta" onclick="sbToggleTopics()"><span>01</span>Paleta de Cores</a>
+    <a href="#tipografia" onclick="sbToggleTopics()"><span>02</span>Tipografias</a>
+    <a href="#diretrizes" onclick="sbToggleTopics()"><span>03</span>Diretrizes de Foto e Vídeo</a>
+    <a href="#logotipo" onclick="sbToggleTopics()"><span>04</span>Logotipo</a>
+    <a href="#instagram" onclick="sbToggleTopics()"><span>05</span>Id Visual Instagram</a>
+    <a href="#estilos-arte" onclick="sbToggleTopics()"><span>06</span>Estilos Gráficos de Arte</a>
+  </div>
+</nav>
+
+<script>
+function sbToggleTopics(){
+  document.getElementById('sbTopicsMenu').classList.toggle('is-open');
+  document.getElementById('sbHamburgerBtn').classList.toggle('is-active');
+}
+</script>
+
+<section class="sb-hero" style="padding-top:100px;">
+  <h1 class="sb-title">IDENTIDADE VISUAL</h1>
   <p class="sb-subtitle">Elegante, minimalista, sem serifas. A base visual que todo conteúdo — vídeo, capa, story — deve seguir.</p>
 </section>
 
 <section class="sb-section">
 
-  <div class="sb-block">
-    <div class="sb-block-title">Paleta de cores</div>
-    <div class="sb-swatches">
-      <div class="sb-swatch">
-        <div class="sb-swatch-color" style="background:#0A0A0A;"></div>
-        <div class="sb-swatch-info">
-          <div class="sb-swatch-name">Preto</div>
-          <div class="sb-swatch-hex">#0A0A0A</div>
+  <div class="sb-num-block" id="paleta">
+    <div class="sb-num-block-head">
+      <span class="sb-num">01</span>
+      <h2 class="sb-num-title">Paleta de Cores</h2>
+    </div>
+    <div class="sb-num-block-body">
+      <div class="sb-swatches">
+        <div class="sb-swatch">
+          <div class="sb-swatch-color" style="background:#0A0A0A;"></div>
+          <div class="sb-swatch-info">
+            <div class="sb-swatch-name">Preto</div>
+            <div class="sb-swatch-hex">#0A0A0A</div>
+          </div>
         </div>
-      </div>
-      <div class="sb-swatch">
-        <div class="sb-swatch-color" style="background:#0B1F3A;"></div>
-        <div class="sb-swatch-info">
-          <div class="sb-swatch-name">Azul Marinho</div>
-          <div class="sb-swatch-hex">#0B1F3A</div>
+        <div class="sb-swatch">
+          <div class="sb-swatch-color" style="background:#0B1F3A;"></div>
+          <div class="sb-swatch-info">
+            <div class="sb-swatch-name">Azul Marinho</div>
+            <div class="sb-swatch-hex">#0B1F3A</div>
+          </div>
         </div>
-      </div>
-      <div class="sb-swatch">
-        <div class="sb-swatch-color" style="background:#C9A66B;"></div>
-        <div class="sb-swatch-info">
-          <div class="sb-swatch-name">Dourado</div>
-          <div class="sb-swatch-hex">#C9A66B</div>
+        <div class="sb-swatch">
+          <div class="sb-swatch-color" style="background:#C9A66B;"></div>
+          <div class="sb-swatch-info">
+            <div class="sb-swatch-name">Dourado</div>
+            <div class="sb-swatch-hex">#C9A66B</div>
+          </div>
         </div>
-      </div>
-      <div class="sb-swatch">
-        <div class="sb-swatch-color" style="background:#FFFFFF;"></div>
-        <div class="sb-swatch-info">
-          <div class="sb-swatch-name">Branco</div>
-          <div class="sb-swatch-hex">#FFFFFF</div>
+        <div class="sb-swatch">
+          <div class="sb-swatch-color" style="background:#FFFFFF;"></div>
+          <div class="sb-swatch-info">
+            <div class="sb-swatch-name">Branco</div>
+            <div class="sb-swatch-hex">#FFFFFF</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="sb-block">
-    <div class="sb-block-title">Tipografia</div>
-    <p style="font-family:'Montserrat',sans-serif; font-weight:300; font-size:28px; margin-bottom:8px;">Montserrat — títulos e destaques</p>
-    <p style="font-family:'Inter',sans-serif; font-size:15px; color:var(--branco-suave);">Inter — textos corridos e legendas. Ambas sem serifa, para uma leitura limpa e contemporânea.</p>
+  <div class="sb-num-block sb-num-block--light" id="tipografia">
+    <div class="sb-num-block-head">
+      <span class="sb-num">02</span>
+      <h2 class="sb-num-title">Tipografias</h2>
+    </div>
+    <div class="sb-num-block-body">
+      <div class="sb-font-sample is-placeholder">
+        <img src="assets/images/tipografia/monument.png" alt="Monument"
+          onload="this.parentElement.classList.remove('is-placeholder')"
+          onerror="this.parentElement.classList.add('is-placeholder')">
+      </div>
+      <p><strong>Aplicação:</strong> palavra ou expressão de maior impacto na arte — maiúscula e grande.</p>
+
+      <p style="font-family:'Times New Roman',Times,serif; font-style:italic; font-weight:700; font-size:32px; color:var(--marinho); margin:28px 0 6px;">Times New Roman Italic</p>
+      <p><strong>Aplicação:</strong> palavra ou frase de destaque serifada dentro da arte.</p>
+
+      <p style="font-family:'Be Vietnam Pro',sans-serif; font-weight:600; font-size:24px; color:var(--marinho); margin:28px 0 6px;">Be Vietnam Pro</p>
+      <p><strong>Aplicação:</strong> corpo de texto dentro das artes.</p>
+    </div>
   </div>
 
-  <div class="sb-block">
-    <div class="sb-block-title">Diretrizes de foto e vídeo</div>
-    <div class="sb-placeholder">Aguardando: enquadramento preferido, tipo de luz, cenários recomendados/evitados, uso de legendas nos vídeos, etc.</div>
+  <div class="sb-num-block" id="diretrizes">
+    <div class="sb-num-block-head">
+      <span class="sb-num">03</span>
+      <h2 class="sb-num-title">Diretrizes de Foto e Vídeo</h2>
+    </div>
+    <div class="sb-num-block-body">
+      <div class="sb-placeholder">Aguardando: enquadramento preferido, tipo de luz, cenários recomendados/evitados, uso de legendas nos vídeos, etc.</div>
+    </div>
   </div>
 
-  <div class="sb-block">
-    <div class="sb-block-title">Logotipo</div>
-    <div class="sb-placeholder">Aguardando: se houver logo ou assinatura visual, ela entra aqui.</div>
+  <div class="sb-num-block sb-num-block--light" id="logotipo">
+    <div class="sb-num-block-head">
+      <span class="sb-num">04</span>
+      <h2 class="sb-num-title">Logotipo</h2>
+    </div>
+    <div class="sb-num-block-body">
+      <div class="sb-duo sb-glass">
+        <div class="sb-duo-item" style="font-size:clamp(18px,2.6vw,26px);">Minimalista · Elegante · Prático</div>
+      </div>
+      <div class="sb-placeholder">Direção definida. Aguardando: a peça final do logo ou assinatura visual, quando estiver pronta.</div>
+    </div>
+  </div>
+
+  <div class="sb-num-block" id="instagram">
+    <div class="sb-num-block-head">
+      <span class="sb-num">05</span>
+      <h2 class="sb-num-title">Id Visual Instagram</h2>
+    </div>
+    <div class="sb-num-block-body">
+      <p class="sb-lede">Simulação de como o perfil vai aparecer no Instagram.</p>
+
+      <!--
+        FOTO DE PERFIL — salvar em: assets/images/instagram/avatar.jpg
+        DESTAQUES — salvar em: assets/images/instagram/destaque1.jpg até destaque5.jpg (nessa ordem: Comece Aqui, Fé Prática, Família, Perguntas, Hábitos)
+        FEED — salvar em: assets/images/instagram/feed1.jpg até feed9.jpg (feed1, feed2, feed3 são as fixadas do ensaio/vídeos já gravados)
+      -->
+      <div class="sb-ig-mockup">
+
+        <div class="sb-ig-profile">
+          <div class="sb-ig-avatar is-placeholder">
+            <img src="assets/images/instagram/avatar.jpg" alt="Foto de perfil" loading="lazy"
+              onload="this.parentElement.classList.remove('is-placeholder')"
+              onerror="this.parentElement.classList.add('is-placeholder')">
+          </div>
+          <div class="sb-ig-info">
+            <div class="sb-ig-name">Samuel Borges</div>
+            <div class="sb-ig-handle">@samuelborgespr</div>
+          </div>
+        </div>
+
+        <div class="sb-ig-bio">
+          <p>Fé prática e direção</p>
+          <p>Princípios bíblicos para a vida dentro e fora da igreja</p>
+          <p>Esposo @</p>
+          <p>Pastor @ieqcentral</p>
+        </div>
+
+        <div class="sb-ig-highlights">
+          <div class="sb-ig-highlight">
+            <div class="sb-ig-highlight-circle is-placeholder">
+              <img src="assets/images/instagram/destaque1.jpg" alt="Comece aqui" loading="lazy"
+                onload="this.parentElement.classList.remove('is-placeholder')"
+                onerror="this.parentElement.classList.add('is-placeholder')">
+            </div>
+            <span class="sb-ig-highlight-label">Comece aqui</span>
+          </div>
+          <div class="sb-ig-highlight">
+            <div class="sb-ig-highlight-circle is-placeholder">
+              <img src="assets/images/instagram/destaque2.jpg" alt="Fé Prática" loading="lazy"
+                onload="this.parentElement.classList.remove('is-placeholder')"
+                onerror="this.parentElement.classList.add('is-placeholder')">
+            </div>
+            <span class="sb-ig-highlight-label">Fé Prática</span>
+          </div>
+          <div class="sb-ig-highlight">
+            <div class="sb-ig-highlight-circle is-placeholder">
+              <img src="assets/images/instagram/destaque3.jpg" alt="Família" loading="lazy"
+                onload="this.parentElement.classList.remove('is-placeholder')"
+                onerror="this.parentElement.classList.add('is-placeholder')">
+            </div>
+            <span class="sb-ig-highlight-label">Família</span>
+          </div>
+          <div class="sb-ig-highlight">
+            <div class="sb-ig-highlight-circle is-placeholder">
+              <img src="assets/images/instagram/destaque4.jpg" alt="Perguntas" loading="lazy"
+                onload="this.parentElement.classList.remove('is-placeholder')"
+                onerror="this.parentElement.classList.add('is-placeholder')">
+            </div>
+            <span class="sb-ig-highlight-label">Perguntas</span>
+          </div>
+          <div class="sb-ig-highlight">
+            <div class="sb-ig-highlight-circle is-placeholder">
+              <img src="assets/images/instagram/destaque5.jpg" alt="Hábitos" loading="lazy"
+                onload="this.parentElement.classList.remove('is-placeholder')"
+                onerror="this.parentElement.classList.add('is-placeholder')">
+            </div>
+            <span class="sb-ig-highlight-label">Hábitos</span>
+          </div>
+        </div>
+
+        <div class="sb-ig-feed">
+          <div class="sb-ig-feed-item is-placeholder is-pinned">
+            <img src="assets/images/instagram/feed1.jpg" alt="Post 1" loading="lazy"
+              onload="this.parentElement.classList.remove('is-placeholder')"
+              onerror="this.parentElement.classList.add('is-placeholder')">
+          </div>
+          <div class="sb-ig-feed-item is-placeholder is-pinned">
+            <img src="assets/images/instagram/feed2.jpg" alt="Post 2" loading="lazy"
+              onload="this.parentElement.classList.remove('is-placeholder')"
+              onerror="this.parentElement.classList.add('is-placeholder')">
+          </div>
+          <div class="sb-ig-feed-item is-placeholder is-pinned">
+            <img src="assets/images/instagram/feed3.jpg" alt="Post 3" loading="lazy"
+              onload="this.parentElement.classList.remove('is-placeholder')"
+              onerror="this.parentElement.classList.add('is-placeholder')">
+          </div>
+          <div class="sb-ig-feed-item is-placeholder">
+            <img src="assets/images/instagram/feed4.jpg" alt="Post 4" loading="lazy"
+              onload="this.parentElement.classList.remove('is-placeholder')"
+              onerror="this.parentElement.classList.add('is-placeholder')">
+          </div>
+          <div class="sb-ig-feed-item is-placeholder">
+            <img src="assets/images/instagram/feed5.jpg" alt="Post 5" loading="lazy"
+              onload="this.parentElement.classList.remove('is-placeholder')"
+              onerror="this.parentElement.classList.add('is-placeholder')">
+          </div>
+          <div class="sb-ig-feed-item is-placeholder">
+            <img src="assets/images/instagram/feed6.jpg" alt="Post 6" loading="lazy"
+              onload="this.parentElement.classList.remove('is-placeholder')"
+              onerror="this.parentElement.classList.add('is-placeholder')">
+          </div>
+          <div class="sb-ig-feed-item is-placeholder">
+            <img src="assets/images/instagram/feed7.jpg" alt="Post 7" loading="lazy"
+              onload="this.parentElement.classList.remove('is-placeholder')"
+              onerror="this.parentElement.classList.add('is-placeholder')">
+          </div>
+          <div class="sb-ig-feed-item is-placeholder">
+            <img src="assets/images/instagram/feed8.jpg" alt="Post 8" loading="lazy"
+              onload="this.parentElement.classList.remove('is-placeholder')"
+              onerror="this.parentElement.classList.add('is-placeholder')">
+          </div>
+          <div class="sb-ig-feed-item is-placeholder">
+            <img src="assets/images/instagram/feed9.jpg" alt="Post 9" loading="lazy"
+              onload="this.parentElement.classList.remove('is-placeholder')"
+              onerror="this.parentElement.classList.add('is-placeholder')">
+          </div>
+        </div>
+
+        <div class="sb-ig-feed-caption">📌 As 3 primeiras são as fixadas — ensaio e vídeos já gravados</div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="sb-num-block sb-num-block--light" id="estilos-arte">
+    <div class="sb-num-block-head">
+      <span class="sb-num">06</span>
+      <h2 class="sb-num-title">Estilos Gráficos de Arte</h2>
+    </div>
+    <div class="sb-num-block-body">
+      <p class="sb-lede">Cada estilo abaixo é um "molde" recorrente pras artes — pra manter consistência visual sem engessar a criação.</p>
+
+      <!-- Salvar as referências em: assets/images/estilos/frases-1.jpg e frases-2.jpg -->
+      <div class="sb-estilo-arte">
+        <div class="sb-estilo-arte-imgs">
+          <div class="sb-estilo-arte-img is-placeholder">
+            <img src="assets/images/estilos/frases-1.jpg" alt="Estilo Frases — fundo claro" loading="lazy"
+              onload="this.parentElement.classList.remove('is-placeholder')"
+              onerror="this.parentElement.classList.add('is-placeholder')">
+          </div>
+          <div class="sb-estilo-arte-img is-placeholder">
+            <img src="assets/images/estilos/frases-2.jpg" alt="Estilo Frases — fundo azul-marinho" loading="lazy"
+              onload="this.parentElement.classList.remove('is-placeholder')"
+              onerror="this.parentElement.classList.add('is-placeholder')">
+          </div>
+        </div>
+        <div class="sb-estilo-arte-info">
+          <div class="sb-estilo-arte-nome">Frases</div>
+          <p>Arte só de texto, sem foto — usada pra frases de impacto, princípios e reflexões curtas que "param o scroll".</p>
+          <p><strong>Tipografia:</strong> Be Vietnam, por volta de 44px, texto alinhado à esquerda (nunca centralizado). Uma palavra-chave da frase sempre em negrito, o resto no peso regular — é o que dá ritmo de leitura.</p>
+          <p><strong>Fundo:</strong> duas opções alternáveis — azul-marinho (gradiente escuro, texto branco) ou claro (textura suave tipo mármore, texto azul-marinho). A escolha do fundo depende do tom da frase: mais claro pra algo leve/reflexivo, mais escuro pra algo com mais peso/autoridade.</p>
+          <p><strong>Assinatura:</strong> @samuelborgespr discreto, alinhado ao centro, na base da arte.</p>
+        </div>
+      </div>
+
+      <!-- Salvar a referência em: assets/images/estilos/anuncios-1.jpg -->
+      <div class="sb-estilo-arte">
+        <div class="sb-estilo-arte-imgs">
+          <div class="sb-estilo-arte-img is-placeholder">
+            <img src="assets/images/estilos/anuncios-1.jpg" alt="Estilo Anúncios e Capas" loading="lazy"
+              onload="this.parentElement.classList.remove('is-placeholder')"
+              onerror="this.parentElement.classList.add('is-placeholder')">
+          </div>
+        </div>
+        <div class="sb-estilo-arte-info">
+          <div class="sb-estilo-arte-nome">Anúncios &amp; Capas</div>
+          <p>Usado pra anúncios de série, avisos importantes e capas de Reels — o formato mais "de impacto" da identidade, pensado pra parar o feed.</p>
+          <p><strong>Fundo:</strong> foto real (do culto, de Samuel pregando) com overlay em gradiente azul-marinho escuro, dando profundidade e garantindo contraste pro texto por cima.</p>
+          <p><strong>Palavra em destaque:</strong> fonte Monument, enorme, centralizada, em caixa alta — é o elemento mais forte da arte. Deve ser sempre uma palavra curta e direta (ex: "MILAGRES").</p>
+          <p><strong>Complemento em itálico:</strong> uma palavra curta em Times New Roman Italic (ex: "série"), posicionada logo acima da palavra em Monument — cria contraste de textura entre o traço fino serifado e o peso bruto da fonte de destaque.</p>
+          <p><strong>Linha de apoio:</strong> Be Vietnam regular, menor, com a informação prática (data, período, tema).</p>
+          <p><strong>Assinatura:</strong> @samuelborgespr no topo, centralizado, pequeno.</p>
+        </div>
+      </div>
+
+    </div>
   </div>
 
 </section>
