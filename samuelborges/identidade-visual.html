@@ -24,10 +24,10 @@
 
 <nav class="sb-topics-menu" id="sbTopicsMenu">
   <div class="sb-topics-menu-inner">
-    <a href="#paleta" onclick="sbToggleTopics()"><span>01</span>Paleta de Cores</a>
-    <a href="#tipografia" onclick="sbToggleTopics()"><span>02</span>Tipografias</a>
+    <a href="#logotipo" onclick="sbToggleTopics()"><span>01</span>Logotipo</a>
+    <a href="#paleta" onclick="sbToggleTopics()"><span>02</span>Paleta de Cores</a>
     <a href="#diretrizes" onclick="sbToggleTopics()"><span>03</span>Diretrizes de Foto e Vídeo</a>
-    <a href="#logotipo" onclick="sbToggleTopics()"><span>04</span>Logotipo</a>
+    <a href="#tipografia" onclick="sbToggleTopics()"><span>04</span>Tipografias</a>
     <a href="#instagram" onclick="sbToggleTopics()"><span>05</span>Id Visual Instagram</a>
     <a href="#estilos-arte" onclick="sbToggleTopics()"><span>06</span>Estilos Gráficos de Arte</a>
   </div>
@@ -42,15 +42,55 @@ function sbToggleTopics(){
 
 <section class="sb-hero" style="padding-top:100px;">
   <h1 class="sb-title">IDENTIDADE VISUAL</h1>
-  <p class="sb-subtitle">Elegante, minimalista, sem serifas. A base visual que todo conteúdo — vídeo, capa, story — deve seguir.</p>
 </section>
 
 <section class="sb-section">
 
-  <div class="sb-num-block" id="paleta">
-    <div class="sb-num-block-head">
+  <div class="sb-num-block sb-num-block--acordeao" id="logotipo">
+    <div class="sb-num-block-head" onclick="this.closest('.sb-num-block').classList.toggle('is-collapsed')">
       <span class="sb-num">01</span>
+      <h2 class="sb-num-title">Logotipo</h2>
+      <span class="sb-num-block-head-chevron">▼</span>
+    </div>
+    <div class="sb-num-block-body">
+      <p>A identidade visual parte do encontro entre dois universos que fazem parte da sua trajetória: a solidez de um líder e a sensibilidade de um pastor.</p>
+      <p>O resultado é uma marca contemporânea, firme e elegante, capaz de comunicar autoridade sem distanciamento e espiritualidade sem recorrer a símbolos óbvios ou genéricos.</p>
+      <p>A diferença de peso tipográfico representa bem a personalidade da marca:</p>
+      <div class="sb-quote">"Firme na mensagem, leve na forma de comunicar."</div>
+      <p>As versões vertical, horizontal e circular garantem flexibilidade para diferentes aplicações — desde o Instagram até materiais impressos, capas, vídeos, eventos e possíveis projetos futuros.</p>
+
+      <div class="sb-tags" style="justify-content:flex-start; margin-top:24px;">
+        <span class="sb-card-tag">Minimalista</span>
+        <span class="sb-card-tag">Elegante</span>
+        <span class="sb-card-tag">Prático</span>
+      </div>
+
+      <!-- Mockups do logo — salvar em: assets/images/logo/logo1.jpg, logo2.jpg, logo3.jpg (adicionar mais conforme necessário) -->
+      <div class="sb-logo-grid">
+        <div class="sb-logo-item is-placeholder">
+          <img src="assets/images/logo/logo1.jpg" alt="Mockup do logo 1" loading="lazy"
+            onload="this.parentElement.classList.remove('is-placeholder')"
+            onerror="this.parentElement.classList.add('is-placeholder')">
+        </div>
+        <div class="sb-logo-item is-placeholder">
+          <img src="assets/images/logo/logo2.jpg" alt="Mockup do logo 2" loading="lazy"
+            onload="this.parentElement.classList.remove('is-placeholder')"
+            onerror="this.parentElement.classList.add('is-placeholder')">
+        </div>
+        <div class="sb-logo-item is-placeholder">
+          <img src="assets/images/logo/logo3.jpg" alt="Mockup do logo 3" loading="lazy"
+            onload="this.parentElement.classList.remove('is-placeholder')"
+            onerror="this.parentElement.classList.add('is-placeholder')">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sb-num-block sb-num-block--acordeao" id="paleta">
+    <div class="sb-num-block-head" onclick="this.closest('.sb-num-block').classList.toggle('is-collapsed')">
+      <span class="sb-num">02</span>
       <h2 class="sb-num-title">Paleta de Cores</h2>
+      <span class="sb-num-block-head-chevron">▼</span>
     </div>
     <div class="sb-num-block-body">
       <div class="sb-swatches">
@@ -86,54 +126,74 @@ function sbToggleTopics(){
     </div>
   </div>
 
-  <div class="sb-num-block sb-num-block--light" id="tipografia">
-    <div class="sb-num-block-head">
-      <span class="sb-num">02</span>
-      <h2 class="sb-num-title">Tipografias</h2>
-    </div>
-    <div class="sb-num-block-body">
-      <div class="sb-font-sample is-placeholder">
-        <img src="assets/images/tipografia/monument.png" alt="Monument"
-          onload="this.parentElement.classList.remove('is-placeholder')"
-          onerror="this.parentElement.classList.add('is-placeholder')">
-      </div>
-      <p><strong>Aplicação:</strong> palavra ou expressão de maior impacto na arte — maiúscula e grande.</p>
-
-      <p style="font-family:'Times New Roman',Times,serif; font-style:italic; font-weight:700; font-size:32px; color:var(--marinho); margin:28px 0 6px;">Times New Roman Italic</p>
-      <p><strong>Aplicação:</strong> palavra ou frase de destaque serifada dentro da arte.</p>
-
-      <p style="font-family:'Be Vietnam Pro',sans-serif; font-weight:600; font-size:24px; color:var(--marinho); margin:28px 0 6px;">Be Vietnam Pro</p>
-      <p><strong>Aplicação:</strong> corpo de texto dentro das artes.</p>
-    </div>
-  </div>
-
-  <div class="sb-num-block" id="diretrizes">
-    <div class="sb-num-block-head">
+  <div class="sb-num-block sb-num-block--acordeao" id="tipografia">
+    <div class="sb-num-block-head" onclick="this.closest('.sb-num-block').classList.toggle('is-collapsed')">
       <span class="sb-num">03</span>
-      <h2 class="sb-num-title">Diretrizes de Foto e Vídeo</h2>
+      <h2 class="sb-num-title">Tipografias</h2>
+      <span class="sb-num-block-head-chevron">▼</span>
     </div>
     <div class="sb-num-block-body">
-      <div class="sb-placeholder">Aguardando: enquadramento preferido, tipo de luz, cenários recomendados/evitados, uso de legendas nos vídeos, etc.</div>
-    </div>
-  </div>
 
-  <div class="sb-num-block sb-num-block--light" id="logotipo">
-    <div class="sb-num-block-head">
-      <span class="sb-num">04</span>
-      <h2 class="sb-num-title">Logotipo</h2>
-    </div>
-    <div class="sb-num-block-body">
-      <div class="sb-duo sb-glass">
-        <div class="sb-duo-item" style="font-size:clamp(18px,2.6vw,26px);">Minimalista · Elegante · Prático</div>
+      <div class="sb-acordeao-list">
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <div class="sb-acordeao-titulo">Monument</div>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <div class="sb-font-sample is-placeholder">
+                <img src="assets/images/tipografia/monument.png" alt="Monument"
+                  onload="this.parentElement.classList.remove('is-placeholder')"
+                  onerror="this.parentElement.classList.add('is-placeholder')">
+              </div>
+              <p><strong>Aplicação:</strong> palavra ou expressão de maior impacto na arte — maiúscula e grande.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <div class="sb-acordeao-titulo">Times New Roman Italic</div>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <p style="font-family:'Times New Roman',Times,serif; font-style:italic; font-weight:700; font-size:32px; color:var(--marinho); margin-bottom:10px;">Times New Roman Italic</p>
+              <p><strong>Aplicação:</strong> palavra ou frase de destaque serifada dentro da arte.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <div class="sb-acordeao-titulo">Be Vietnam Pro</div>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <p style="font-family:'Be Vietnam Pro',sans-serif; font-weight:600; font-size:24px; color:var(--marinho); margin-bottom:10px;">Be Vietnam Pro</p>
+              <p><strong>Aplicação:</strong> corpo de texto dentro das artes.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div class="sb-placeholder">Direção definida. Aguardando: a peça final do logo ou assinatura visual, quando estiver pronta.</div>
     </div>
   </div>
 
-  <div class="sb-num-block" id="instagram">
-    <div class="sb-num-block-head">
+  <div class="sb-num-block sb-num-block--light sb-num-block--acordeao" id="instagram">
+    <div class="sb-num-block-head" onclick="this.closest('.sb-num-block').classList.toggle('is-collapsed')">
       <span class="sb-num">05</span>
       <h2 class="sb-num-title">Id Visual Instagram</h2>
+      <span class="sb-num-block-head-chevron">▼</span>
     </div>
     <div class="sb-num-block-body">
       <p class="sb-lede">Simulação de como o perfil vai aparecer no Instagram.</p>
@@ -261,57 +321,83 @@ function sbToggleTopics(){
     </div>
   </div>
 
-  <div class="sb-num-block sb-num-block--light" id="estilos-arte">
-    <div class="sb-num-block-head">
+  <div class="sb-num-block sb-num-block--acordeao" id="estilos-arte">
+    <div class="sb-num-block-head" onclick="this.closest('.sb-num-block').classList.toggle('is-collapsed')">
       <span class="sb-num">06</span>
       <h2 class="sb-num-title">Estilos Gráficos de Arte</h2>
+      <span class="sb-num-block-head-chevron">▼</span>
     </div>
     <div class="sb-num-block-body">
       <p class="sb-lede">Cada estilo abaixo é um "molde" recorrente pras artes — pra manter consistência visual sem engessar a criação.</p>
 
-      <!-- Salvar as referências em: assets/images/estilos/frases-1.jpg e frases-2.jpg -->
-      <div class="sb-estilo-arte">
-        <div class="sb-estilo-arte-imgs">
-          <div class="sb-estilo-arte-img is-placeholder">
-            <img src="assets/images/estilos/frases-1.jpg" alt="Estilo Frases — fundo claro" loading="lazy"
-              onload="this.parentElement.classList.remove('is-placeholder')"
-              onerror="this.parentElement.classList.add('is-placeholder')">
-          </div>
-          <div class="sb-estilo-arte-img is-placeholder">
-            <img src="assets/images/estilos/frases-2.jpg" alt="Estilo Frases — fundo azul-marinho" loading="lazy"
-              onload="this.parentElement.classList.remove('is-placeholder')"
-              onerror="this.parentElement.classList.add('is-placeholder')">
-          </div>
-        </div>
-        <div class="sb-estilo-arte-info">
-          <div class="sb-estilo-arte-nome">Frases</div>
-          <p>Arte só de texto, sem foto — usada pra frases de impacto, princípios e reflexões curtas que "param o scroll".</p>
-          <p><strong>Tipografia:</strong> Be Vietnam, por volta de 44px, texto alinhado à esquerda (nunca centralizado). Uma palavra-chave da frase sempre em negrito, o resto no peso regular — é o que dá ritmo de leitura.</p>
-          <p><strong>Fundo:</strong> duas opções alternáveis — azul-marinho (gradiente escuro, texto branco) ou claro (textura suave tipo mármore, texto azul-marinho). A escolha do fundo depende do tom da frase: mais claro pra algo leve/reflexivo, mais escuro pra algo com mais peso/autoridade.</p>
-          <p><strong>Assinatura:</strong> @samuelborgespr discreto, alinhado ao centro, na base da arte.</p>
-        </div>
-      </div>
+      <div class="sb-acordeao-list">
 
-      <!-- Salvar a referência em: assets/images/estilos/anuncios-1.jpg -->
-      <div class="sb-estilo-arte">
-        <div class="sb-estilo-arte-imgs">
-          <div class="sb-estilo-arte-img is-placeholder">
-            <img src="assets/images/estilos/anuncios-1.jpg" alt="Estilo Anúncios e Capas" loading="lazy"
-              onload="this.parentElement.classList.remove('is-placeholder')"
-              onerror="this.parentElement.classList.add('is-placeholder')">
+        <!-- Salvar as referências em: assets/images/estilos/frases-1.jpg e frases-2.jpg -->
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <div class="sb-acordeao-titulo">Frases</div>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <div class="sb-estilo-arte" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
+                <div class="sb-estilo-arte-imgs">
+                  <div class="sb-estilo-arte-img is-placeholder">
+                    <img src="assets/images/estilos/frases-1.jpg" alt="Estilo Frases — fundo claro" loading="lazy"
+                      onload="this.parentElement.classList.remove('is-placeholder')"
+                      onerror="this.parentElement.classList.add('is-placeholder')">
+                  </div>
+                  <div class="sb-estilo-arte-img is-placeholder">
+                    <img src="assets/images/estilos/frases-2.jpg" alt="Estilo Frases — fundo azul-marinho" loading="lazy"
+                      onload="this.parentElement.classList.remove('is-placeholder')"
+                      onerror="this.parentElement.classList.add('is-placeholder')">
+                  </div>
+                </div>
+                <div class="sb-estilo-arte-info">
+                  <p>Arte só de texto, sem foto — usada pra frases de impacto, princípios e reflexões curtas que "param o scroll".</p>
+                  <p><strong>Tipografia:</strong> Be Vietnam, por volta de 44px, texto alinhado à esquerda (nunca centralizado). Uma palavra-chave da frase sempre em negrito, o resto no peso regular — é o que dá ritmo de leitura.</p>
+                  <p><strong>Fundo:</strong> duas opções alternáveis — azul-marinho (gradiente escuro, texto branco) ou claro (textura suave tipo mármore, texto azul-marinho). A escolha do fundo depende do tom da frase: mais claro pra algo leve/reflexivo, mais escuro pra algo com mais peso/autoridade.</p>
+                  <p><strong>Assinatura:</strong> @samuelborgespr discreto, alinhado ao centro, na base da arte.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="sb-estilo-arte-info">
-          <div class="sb-estilo-arte-nome">Anúncios &amp; Capas</div>
-          <p>Usado pra anúncios de série, avisos importantes e capas de Reels — o formato mais "de impacto" da identidade, pensado pra parar o feed.</p>
-          <p><strong>Fundo:</strong> foto real (do culto, de Samuel pregando) com overlay em gradiente azul-marinho escuro, dando profundidade e garantindo contraste pro texto por cima.</p>
-          <p><strong>Palavra em destaque:</strong> fonte Monument, enorme, centralizada, em caixa alta — é o elemento mais forte da arte. Deve ser sempre uma palavra curta e direta (ex: "MILAGRES").</p>
-          <p><strong>Complemento em itálico:</strong> uma palavra curta em Times New Roman Italic (ex: "série"), posicionada logo acima da palavra em Monument — cria contraste de textura entre o traço fino serifado e o peso bruto da fonte de destaque.</p>
-          <p><strong>Linha de apoio:</strong> Be Vietnam regular, menor, com a informação prática (data, período, tema).</p>
-          <p><strong>Assinatura:</strong> @samuelborgespr no topo, centralizado, pequeno.</p>
-        </div>
-      </div>
 
+        <!-- Salvar a referência em: assets/images/estilos/anuncios-1.jpg -->
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <div class="sb-acordeao-titulo">Anúncios &amp; Capas</div>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <div class="sb-estilo-arte" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
+                <div class="sb-estilo-arte-imgs">
+                  <div class="sb-estilo-arte-img is-placeholder">
+                    <img src="assets/images/estilos/anuncios-1.jpg" alt="Estilo Anúncios e Capas" loading="lazy"
+                      onload="this.parentElement.classList.remove('is-placeholder')"
+                      onerror="this.parentElement.classList.add('is-placeholder')">
+                  </div>
+                </div>
+                <div class="sb-estilo-arte-info">
+                  <p>Usado pra anúncios de série, avisos importantes e capas de Reels — o formato mais "de impacto" da identidade, pensado pra parar o feed.</p>
+                  <p><strong>Fundo:</strong> foto real (do culto, de Samuel pregando) com overlay em gradiente azul-marinho escuro, dando profundidade e garantindo contraste pro texto por cima.</p>
+                  <p><strong>Palavra em destaque:</strong> fonte Monument, enorme, centralizada, em caixa alta — é o elemento mais forte da arte. Deve ser sempre uma palavra curta e direta (ex: "MILAGRES").</p>
+                  <p><strong>Complemento em itálico:</strong> uma palavra curta em Times New Roman Italic (ex: "série"), posicionada logo acima da palavra em Monument — cria contraste de textura entre o traço fino serifado e o peso bruto da fonte de destaque.</p>
+                  <p><strong>Linha de apoio:</strong> Be Vietnam regular, menor, com a informação prática (data, período, tema).</p>
+                  <p><strong>Assinatura:</strong> @samuelborgespr no topo, centralizado, pequeno.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 
