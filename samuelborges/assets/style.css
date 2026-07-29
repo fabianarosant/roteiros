@@ -1297,6 +1297,7 @@ body {
   border-radius: 999px;
   padding: 4px 12px;
   margin-bottom: 14px;
+  white-space: nowrap;
 }
 .sb-card-tag--pilar {
   color: var(--branco);
