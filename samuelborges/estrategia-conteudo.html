@@ -7,54 +7,544 @@
 <title>Estratégia de Conteúdo — Samuel Borges</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<header class="sb-header">
-  <div class="sb-header-inner">
-    <div class="sb-brand">
-      <div class="sb-brand-name">SAMUEL <span>BORGES</span></div>
-      <div class="sb-brand-tag">Central de Conteúdo &amp; Narrativas</div>
-    </div>
-    <nav class="sb-nav">
-      <a href="posicionamento.html">Posicionamento</a>
-      <a href="identidade-visual.html">Identidade Visual</a>
-      <a href="estrategia-conteudo.html" class="active">Estratégia de Conteúdo</a>
-      <a href="index.html#narrativas">Narrativas</a>
-      <a href="index.html#agenda">Agenda de Posts</a>
-    </nav>
+<header class="sb-fixed-header">
+  <div class="sb-fixed-header-brand">SAMUEL <span>BORGES</span></div>
+  <div class="sb-fixed-header-left">
+    <a href="index.html" class="sb-fixed-header-back">← Menu Principal</a>
+    <button class="sb-hamburger-btn" id="sbHamburgerBtn" onclick="sbToggleTopics()" aria-label="Abrir índice de tópicos">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
-<section class="sb-hero">
-  <a class="sb-breadcrumb" href="index.html">← Menu Principal</a>
-  <div class="sb-eyebrow">Página fixa de consulta</div>
-  <h1 class="sb-title">Estratégia de Conteúdo</h1>
-  <p class="sb-subtitle">Os pilares, formatos e a cadência que orientam o que vai pra Agenda de Posts.</p>
+<nav class="sb-topics-menu" id="sbTopicsMenu">
+  <div class="sb-topics-menu-inner">
+    <a href="#territorio-marca" onclick="sbToggleTopics()"><span>01</span>Território de Marca</a>
+    <a href="#pilares-conteudo" onclick="sbToggleTopics()"><span>02</span>Pilares de Conteúdo</a>
+    <a href="#quadros-conteudo" onclick="sbToggleTopics()"><span>03</span>Quadros de Conteúdo</a>
+    <a href="#objetivos" onclick="sbToggleTopics()"><span>04</span>Objetivos</a>
+    <a href="#ecossistema" onclick="sbToggleTopics()"><span>05</span>Tipos de Conteúdo</a>
+    <a href="#pilares-quadros-formatos" onclick="sbToggleTopics()"><span>06</span>Entenda a Diferença</a>
+    <a href="#adaptacao-digital" onclick="sbToggleTopics()"><span>07</span>Estratégia de Adaptação para o Digital</a>
+  </div>
+</nav>
+
+<script>
+function sbToggleTopics(){
+  document.getElementById('sbTopicsMenu').classList.toggle('is-open');
+  document.getElementById('sbHamburgerBtn').classList.toggle('is-active');
+}
+</script>
+
+<section class="sb-hero" style="padding-top:100px;">
+  <h1 class="sb-title">ESTRATÉGIA DE CONTEÚDO</h1>
 </section>
 
 <section class="sb-section">
 
-  <div class="sb-block">
-    <div class="sb-block-title">Pilares de conteúdo</div>
-    <div class="sb-placeholder">Aguardando: os grandes temas recorrentes (ex: ensino bíblico, bastidores da igreja, testemunhos, vida pessoal/família).</div>
+  <div class="sb-num-block" id="territorio-marca">
+    <div class="sb-num-block-head">
+      <span class="sb-num">01</span>
+      <h2 class="sb-num-title">Território de Marca</h2>
+    </div>
+    <div class="sb-num-block-body">
+      <p style="font-family:var(--font-titulo-italico); font-style:italic; font-weight:700; letter-spacing:-0.01em; font-size:clamp(16px,2.2vw,21px); color:var(--dourado);">Princípios Bíblicos Aplicados à Vida Real</p>
+
+      <p>Dentro desse território, Samuel poderá comunicar sobre:</p>
+      <div class="sb-tags">
+        <span class="sb-card-tag">Bíblia</span>
+        <span class="sb-card-tag">Fé</span>
+        <span class="sb-card-tag">Direção</span>
+        <span class="sb-card-tag">Propósito</span>
+        <span class="sb-card-tag">Casamento</span>
+        <span class="sb-card-tag">Paternidade</span>
+        <span class="sb-card-tag">Criação dos Filhos</span>
+        <span class="sb-card-tag">Família</span>
+        <span class="sb-card-tag">Liderança</span>
+        <span class="sb-card-tag">Trabalho</span>
+        <span class="sb-card-tag">Disciplina</span>
+        <span class="sb-card-tag">Hábitos</span>
+        <span class="sb-card-tag">Responsabilidade</span>
+        <span class="sb-card-tag">Decisões</span>
+        <span class="sb-card-tag">Administração</span>
+        <span class="sb-card-tag">Serviço</span>
+        <span class="sb-card-tag">Chamado</span>
+        <span class="sb-card-tag">Obediência</span>
+        <span class="sb-card-tag">Experiências Pessoais</span>
+        <span class="sb-card-tag">Legado</span>
+        <span class="sb-card-tag">Vida Ministerial</span>
+        <span class="sb-card-tag">Construção da Igreja</span>
+      </div>
+
+      <p>A conexão entre todos esses temas é a pergunta:</p>
+      <div class="sb-quote">"Como a Palavra de Deus direciona essa área da vida?"</div>
+    </div>
   </div>
 
-  <div class="sb-block">
-    <div class="sb-block-title">Formatos</div>
-    <div class="sb-placeholder">Aguardando: Reels, Stories, posts estáticos, carrosséis — quais fazem sentido e com que propósito cada um.</div>
+  <div class="sb-num-block" id="pilares-conteudo">
+    <div class="sb-num-block-head">
+      <span class="sb-num">02</span>
+      <h2 class="sb-num-title">Pilares de Conteúdo</h2>
+    </div>
+    <div class="sb-num-block-body">
+
+      <div class="sb-acordeao-list">
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <div class="sb-acordeao-titulo">Pilar 1 — Palavra que Direciona</div>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <p>Conteúdos centrados na Bíblia e nas pregações.</p>
+              <div class="sb-acordeao-quote">"O que a Bíblia nos ensina sobre isso?"</div>
+              <p><strong>Temas:</strong></p>
+              <ul>
+                <li>cortes de cultos;</li>
+                <li>explicação de passagens;</li>
+                <li>palavras curtas;</li>
+                <li>mensagens para a semana;</li>
+                <li>princípios bíblicos;</li>
+                <li>fé;</li>
+                <li>oração;</li>
+                <li>obediência;</li>
+                <li>milagres;</li>
+                <li>salvação;</li>
+                <li>decisões espirituais.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <div class="sb-acordeao-titulo">Pilar 2 — Fé na Prática</div>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <p>Aplica os princípios bíblicos a situações cotidianas.</p>
+              <div class="sb-acordeao-quote">"Como esse princípio aparece na vida real?"</div>
+              <p><strong>Temas:</strong></p>
+              <ul>
+                <li>hábitos;</li>
+                <li>disciplina;</li>
+                <li>decisões;</li>
+                <li>caráter;</li>
+                <li>responsabilidade;</li>
+                <li>administração do tempo;</li>
+                <li>escolhas;</li>
+                <li>constância;</li>
+                <li>ação;</li>
+                <li>trabalho;</li>
+                <li>vida cristã fora da igreja.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <div class="sb-acordeao-titulo">Pilar 3 — Dentro de Casa</div>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <p>Conteúdos sobre casamento, família e criação dos filhos.</p>
+              <div class="sb-acordeao-quote">"Como a Palavra direciona nossa casa?"</div>
+              <p><strong>Temas:</strong></p>
+              <ul>
+                <li>intencionalidade entre marido e esposa;</li>
+                <li>construção do lar;</li>
+                <li>comunicação no casamento;</li>
+                <li>presença;</li>
+                <li>criação dos filhos;</li>
+                <li>disciplina;</li>
+                <li>papéis e responsabilidades;</li>
+                <li>liderança espiritual;</li>
+                <li>hábitos familiares;</li>
+                <li>experiências do casal;</li>
+                <li>aprendizados da paternidade.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <div class="sb-acordeao-titulo">Pilar 4 — Liderança, Trabalho e Propósito</div>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <p>Conecta fé, profissão, responsabilidade e excelência.</p>
+              <div class="sb-acordeao-quote">"Como servir a Deus através daquilo que fazemos?"</div>
+              <p><strong>Temas:</strong></p>
+              <ul>
+                <li>carreira;</li>
+                <li>liderança;</li>
+                <li>administração;</li>
+                <li>finanças como responsabilidade;</li>
+                <li>estudo;</li>
+                <li>preparação;</li>
+                <li>foco;</li>
+                <li>decisões profissionais;</li>
+                <li>propósito;</li>
+                <li>chamado;</li>
+                <li>servir a Deus no trabalho;</li>
+                <li>excelência;</li>
+                <li>gestão de pessoas e recursos.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <div class="sb-acordeao-titulo">Pilar 5 — História e Vida Pessoal</div>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <p>Conteúdos ligados à história de Samuel, à construção de sua voz e à pessoa por trás do pastor.</p>
+              <div class="sb-acordeao-quote">"O que Deus estava construindo em cada fase?"</div>
+              <div class="sb-acordeao-quote">"O que essa experiência comum revela sobre quem ele é?"</div>
+              <p><strong>Temas:</strong></p>
+              <ul>
+                <li>história;</li>
+                <li>corrida;</li>
+                <li>beach tennis;</li>
+                <li>futebol;</li>
+                <li>São Paulo Futebol Clube;</li>
+                <li>filmes de ação e investigação;</li>
+                <li>chocolate;</li>
+                <li>rotina caseira;</li>
+                <li>momentos em família;</li>
+                <li>bastidores;</li>
+                <li>leituras;</li>
+                <li>cenas comuns do dia;</li>
+                <li>viagens.</li>
+              </ul>
+              <p>Esses conteúdos não devem aparecer de maneira aleatória. Sempre que possível, podem gerar conexão, narrativa ou reflexão.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 
-  <div class="sb-block">
-    <div class="sb-block-title">Frequência</div>
-    <div class="sb-placeholder">Aguardando: quantos posts/Reels por semana, dias e horários ideais.</div>
+  <div class="sb-num-block sb-num-block--light" id="quadros-conteudo">
+    <div class="sb-num-block-head">
+      <span class="sb-num">03</span>
+      <h2 class="sb-num-title">Quadros de Conteúdo</h2>
+    </div>
+    <div class="sb-num-block-body">
+
+      <div class="sb-acordeao-list">
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <span class="sb-card-tag">Formato: Stories</span>
+              <div class="sb-acordeao-titulo">Por quê, pastor?!</div>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <p>Caixinha de perguntas. Um espaço para responder, de forma bíblica, clara e próxima, às dúvidas reais das pessoas sobre fé, Bíblia, igreja e vida cristã.</p>
+              <div class="sb-acordeao-quote">"Qual dúvida sobre fé ou vida cristã você gostaria que eu respondesse?"</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <span class="sb-card-tag">Formato: Reels</span>
+              <div class="sb-acordeao-titulo">Quando o Culto Acaba</div>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <p>A Palavra não termina no domingo.</p>
+              <p>Este quadro mostra como a fé continua no casamento, na criação dos filhos, no trabalho, nos hábitos, nas decisões e nas situações comuns da vida.</p>
+              <p>Também aproxima o público da pessoa por trás do pastor, conectando experiências, rotina, família, carreira e aprendizados pessoais aos princípios que ele prega.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <span class="sb-card-tag">Formato: Reels</span>
+              <div class="sb-acordeao-titulo">Fé Prática</div>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <p>Um princípio bíblico transformado em uma atitude possível.</p>
+              <p>Cada conteúdo deve entregar um ensinamento claro e uma forma concreta de aplicá-lo na vida: uma oração, uma mudança de postura, uma pergunta para reflexão, uma decisão ou um passo de obediência.</p>
+              <p>A pessoa não termina o vídeo apenas inspirada. Ela termina sabendo o que pode fazer com aquela mensagem.</p>
+              <p>É o quadro que responde:</p>
+              <div class="sb-acordeao-quote">"Como colocar essa Palavra em prática hoje?"</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <span class="sb-card-tag">Formato: Arte Estática ou Carrossel</span>
+              <div class="sb-acordeao-titulo">Guarda essa Palavra</div>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <p>Reúne frases, princípios, trechos de pregações e ensinamentos que merecem ser lembrados, salvos e compartilhados.</p>
+              <p>O nome nasce de um código real da sua comunicação e funciona como um chamado para interromper a rolagem e guardar uma verdade.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 
-  <div class="sb-block">
-    <div class="sb-block-title">Funil</div>
-    <div class="sb-placeholder">Aguardando: como o conteúdo conduz de atenção → conexão → aproximação da igreja.</div>
+  <div class="sb-num-block sb-num-block--light" id="objetivos">
+    <div class="sb-num-block-head">
+      <span class="sb-num">04</span>
+      <h2 class="sb-num-title">Objetivos</h2>
+    </div>
+    <div class="sb-num-block-body">
+      <div class="sb-highlight sb-glass">
+        <div class="sb-highlight-label">Objetivo principal</div>
+        <p>Construir uma presença digital pastoral que amplie o alcance da Palavra, fortaleça a autoridade de Samuel e aproxime pessoas da fé e da IEQ Central.</p>
+      </div>
+
+      <div class="sb-subhead">Objetivos Secundários</div>
+      <ul>
+        <li>apresentar Samuel além do púlpito;</li>
+        <li>criar conexão com pessoas de Araxá e de outras cidades;</li>
+        <li>alcançar novos públicos através de cortes;</li>
+        <li>fortalecer a relação com os membros da igreja;</li>
+        <li>criar uma biblioteca de mensagens;</li>
+        <li>estabelecer séries reconhecíveis;</li>
+        <li>transformar a comunicação presencial em uma linguagem digital;</li>
+        <li>gerar caminhos para salvação, discipulado e participação na igreja.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sb-num-block" id="ecossistema">
+    <div class="sb-num-block-head">
+      <span class="sb-num">05</span>
+      <h2 class="sb-num-title">Tipos de Conteúdo</h2>
+    </div>
+    <div class="sb-num-block-body">
+
+      <div class="sb-subhead">Conteúdo de Alcance</div>
+      <p>Assuntos amplos, perguntas, cortes fortes, bordões, analogias e frases que interrompem a atenção.</p>
+      <p><strong>Objetivo:</strong> alcançar novas pessoas.</p>
+
+      <div class="sb-subhead">Conteúdo de Conexão</div>
+      <p>Família, rotina, hobbies, bastidores, história pessoal e vulnerabilidades contextualizadas.</p>
+      <p><strong>Objetivo:</strong> fazer o público conhecer o homem por trás da mensagem.</p>
+
+      <div class="sb-subhead">Conteúdo de Autoridade</div>
+      <p>Exposição bíblica, liderança, carreira, formação, experiência ministerial e respostas mais profundas.</p>
+      <p><strong>Objetivo:</strong> construir confiança.</p>
+
+      <div class="sb-subhead">Conteúdo de Comunidade</div>
+      <p>Caixinhas, perguntas, comentários, convites, agenda da igreja, batismos, Ceia e momentos da IEQ Central.</p>
+      <p><strong>Objetivo:</strong> aproximar o público da igreja local e criar relacionamento.</p>
+
+      <div class="sb-subhead">Conteúdo de Transformação</div>
+      <p>Mensagens de salvação, apelos, testemunhos, decisões, princípios e conteúdos que conduzam a uma ação.</p>
+      <p><strong>Objetivo:</strong> levar a mensagem para além da informação.</p>
+
+    </div>
+  </div>
+
+  <div class="sb-num-block" id="pilares-quadros-formatos">
+    <div class="sb-num-block-head">
+      <span class="sb-num">06</span>
+      <h2 class="sb-num-title">Entenda a Diferença</h2>
+    </div>
+    <div class="sb-num-block-body">
+      <p class="sb-lede">Os pilares, os quadros e os formatos cumprem funções diferentes dentro da estratégia.</p>
+
+      <div class="sb-acordeao-list">
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <div class="sb-acordeao-titulo">Pilares de Conteúdo</div>
+              <span class="sb-acordeao-sub">Sobre o que vamos falar</span>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <p>Os pilares definem sobre quais assuntos a marca fala.</p>
+              <p>Eles funcionam como grandes territórios temáticos e garantem que a comunicação permaneça conectada ao posicionamento.</p>
+              <p>No perfil de Samuel, os pilares orientam conteúdos sobre:</p>
+              <ul>
+                <li>Palavra e fé;</li>
+                <li>fé aplicada à vida;</li>
+                <li>casamento, família e criação dos filhos;</li>
+                <li>liderança, trabalho e propósito;</li>
+                <li>história, ministério e experiências pessoais;</li>
+                <li>rotina e vida além do pastoreio.</li>
+              </ul>
+              <p>Os pilares respondem à pergunta:</p>
+              <div class="sb-acordeao-quote">"Sobre o que vamos falar?"</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <div class="sb-acordeao-titulo">Quadros de Conteúdo</div>
+              <span class="sb-acordeao-sub">Como transformamos isso em série</span>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <p>Os quadros são séries recorrentes, como pequenos programas dentro do perfil.</p>
+              <p>Eles criam repetição, reconhecimento e identidade. Com o tempo, o público passa a reconhecer o nome, a proposta e a dinâmica de cada quadro.</p>
+              <p>Um mesmo quadro pode abordar temas de diferentes pilares.</p>
+              <p>Por exemplo, o quadro "Por quê, pastor?!" pode responder a uma dúvida sobre oração, casamento, criação dos filhos, trabalho ou vida cristã.</p>
+              <p>O quadro não define necessariamente o assunto. Ele define a maneira recorrente como aquele conteúdo será apresentado.</p>
+              <p>Os quadros respondem à pergunta:</p>
+              <div class="sb-acordeao-quote">"Como podemos transformar esse assunto em uma série reconhecível?"</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <div class="sb-acordeao-titulo">Formatos</div>
+              <span class="sb-acordeao-sub">De que maneira será entregue</span>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <p>Os formatos são as maneiras como o conteúdo será publicado:</p>
+              <ul>
+                <li>Reels;</li>
+                <li>Stories;</li>
+                <li>carrossel;</li>
+                <li>arte estática;</li>
+                <li>live;</li>
+                <li>vídeo mais longo;</li>
+                <li>corte de culto.</li>
+              </ul>
+              <p>Os formatos sugeridos para cada quadro representam o ponto de partida mais natural, mas não precisam se tornar regras rígidas.</p>
+              <p>O "Por quê, pastor?!", por exemplo, pode nascer em uma caixinha nos Stories, ser respondido em vídeo e depois se transformar em Reel ou carrossel.</p>
+              <p>Já "Guarda essa palavra" pode aparecer como arte estática, carrossel, vídeo curto ou até como uma frase publicada nos Stories.</p>
+              <p>Os formatos respondem à pergunta:</p>
+              <div class="sb-acordeao-quote">"De que maneira esse conteúdo será entregue?"</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-acordeao-item">
+          <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
+            <div class="sb-acordeao-info">
+              <div class="sb-acordeao-titulo">Como a Estratégia Funciona</div>
+              <span class="sb-acordeao-sub">Pilar + Quadro + Formato</span>
+            </div>
+            <span class="sb-acordeao-chevron">▼</span>
+          </button>
+          <div class="sb-acordeao-content">
+            <div class="sb-acordeao-content-inner">
+              <p>Um conteúdo pode nascer da combinação entre três decisões:</p>
+              <ul>
+                <li><strong>Pilar:</strong> qual tema será abordado?</li>
+                <li><strong>Quadro:</strong> qual série ou linguagem será utilizada?</li>
+                <li><strong>Formato:</strong> como esse conteúdo será publicado?</li>
+              </ul>
+              <p>Exemplo:</p>
+              <p><strong>Pilar:</strong> família e casamento</p>
+              <p><strong>Quadro:</strong> Por quê, pastor?!</p>
+              <p><strong>Formato:</strong> Reel</p>
+              <p><strong>Tema:</strong> Por que alguns casamentos esfriam mesmo quando ainda existe amor?</p>
+              <p>Outro exemplo:</p>
+              <p><strong>Pilar:</strong> liderança e propósito</p>
+              <p><strong>Quadro:</strong> Fé prática</p>
+              <p><strong>Formato:</strong> carrossel</p>
+              <p><strong>Tema:</strong> Três atitudes para desenvolver disciplina naquilo que Deus confiou a você.</p>
+              <p>Dessa forma, os pilares evitam que a comunicação perca direção, enquanto os quadros evitam que o perfil pareça uma sequência de conteúdos desconectados.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="sb-num-block" id="adaptacao-digital">
+    <div class="sb-num-block-head">
+      <span class="sb-num">07</span>
+      <h2 class="sb-num-title">Estratégia de Adaptação para o Digital</h2>
+    </div>
+    <div class="sb-num-block-body">
+      <p class="sb-lede">No culto, Samuel fala para uma comunidade reunida.</p>
+      <p class="sb-lede">No digital, precisa falar com uma pessoa.</p>
+      <p>Por isso, alguns códigos serão preservados e outros adaptados.</p>
+
+      <div class="sb-subhead">Preservar</div>
+      <div class="sb-tags">
+        <span class="sb-card-tag">Bordões Espontâneos</span>
+        <span class="sb-card-tag">Humor</span>
+        <span class="sb-card-tag">Perguntas</span>
+        <span class="sb-card-tag">Analogias</span>
+        <span class="sb-card-tag">Narrativa</span>
+        <span class="sb-card-tag">Firmeza</span>
+        <span class="sb-card-tag">Autoridade</span>
+        <span class="sb-card-tag">Jeito de Construir Respostas</span>
+        <span class="sb-card-tag">"Presta Atenção, Araxá! Brasil!" nos Cortes</span>
+        <span class="sb-card-tag">Josicleyde</span>
+        <span class="sb-card-tag">Reações Naturais</span>
+      </div>
+
+      <div class="sb-subhead">Adaptar</div>
+      <p>"Olha para o seu vizinho" pode se tornar:</p>
+      <div class="sb-quote">"Envie para a pessoa que precisa ouvir isso."</div>
+
+      <p>"Nenhum amém?" pode aparecer nos cortes, mas não precisa ser simulado em vídeos gravados.</p>
+
+      <p>"Presta atenção, Brasil!" pode ser mantido em mensagens de maior impacto, enquanto conteúdos mais íntimos podem começar com:</p>
+      <div class="sb-quote">"Presta atenção nisso."</div>
+
+      <p>Nos vídeos gravados, Samuel não deve tentar reproduzir artificialmente a energia do púlpito.</p>
+      <p>A câmera exige proximidade, conversa e direção para uma única pessoa.</p>
+    </div>
   </div>
 
 </section>

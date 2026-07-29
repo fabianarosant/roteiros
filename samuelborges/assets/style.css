@@ -67,13 +67,19 @@ body {
 .sb-destaque-italico {
   font-family: var(--font-titulo-italico);
   font-style: italic;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: -0.01em;
 }
 .sb-destaque-sans {
   font-family: var(--font-destaque-sans);
   font-weight: 600;
   letter-spacing: -0.02em;
+}
+.sb-titulo-vietnam {
+  font-family: var(--font-destaque-sans);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: -0.01em;
 }
 
 /* ── Header (nav sticky das páginas internas) ── */
@@ -565,7 +571,7 @@ body {
   font-style: normal;
   font-weight: 500;
   text-transform: none;
-  font-size: clamp(26px, 3.6vw, 38px);
+  font-size: clamp(29px, 4vw, 42px);
   letter-spacing: -0.01em;
   color: var(--branco);
 }
@@ -664,7 +670,7 @@ body {
 /* pull-quote de destaque dentro do texto */
 .sb-quote {
   font-family: var(--font-titulo-italico);
-  font-weight: 500;
+  font-weight: 700;
   font-style: italic;
   font-size: clamp(19px, 2.4vw, 24px);
   line-height: 1.55;
@@ -756,6 +762,7 @@ body {
 .sb-tags {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   margin: 4px 0 24px;
 }
@@ -1035,6 +1042,145 @@ body {
   font-style: italic;
 }
 
+/* ── Acordeão genérico (narrativas em carrossel, explicações, etc.) ── */
+.sb-narrativas-list,
+.sb-acordeao-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.sb-acordeao-item {
+  background: var(--branco);
+  border-radius: 16px;
+  box-shadow: var(--sombra-card);
+  overflow: hidden;
+}
+.sb-acordeao-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 26px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: inherit;
+}
+.sb-acordeao-toggle:hover { background: rgba(11,31,58,0.03); }
+.sb-acordeao-info { display: flex; flex-direction: column; gap: 8px; }
+.sb-acordeao-titulo {
+  font-family: var(--font-destaque-sans);
+  font-weight: 500;
+  font-size: 21px;
+  letter-spacing: -0.01em;
+  color: var(--marinho);
+}
+.sb-acordeao-sub { font-size: 12.5px; color: var(--texto-corpo); }
+.sb-acordeao-chevron {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--nude-linha);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dourado-texto);
+  font-size: 11px;
+  transition: transform 0.3s ease;
+}
+.sb-acordeao-item.is-open .sb-acordeao-chevron { transform: rotate(180deg); }
+.sb-acordeao-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.sb-acordeao-item.is-open .sb-acordeao-content { max-height: 8000px; }
+.sb-acordeao-content-inner {
+  padding: 4px 26px 30px;
+  border-top: 1px solid var(--nude-linha);
+}
+/* texto corrido dentro do acordeão (blocos conceituais) */
+.sb-acordeao-content-inner > p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--texto-corpo);
+  margin: 18px 0 0;
+}
+.sb-acordeao-content-inner > p strong { color: var(--dourado-texto); font-weight: 600; }
+.sb-acordeao-content-inner > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 14px 0 0;
+}
+.sb-acordeao-content-inner > ul li {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--texto-corpo);
+  padding-left: 18px;
+  position: relative;
+}
+.sb-acordeao-content-inner > ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  background: var(--dourado-texto);
+  border-radius: 50%;
+}
+.sb-acordeao-quote {
+  font-family: var(--font-titulo-italico);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--marinho);
+  border-left: 2px solid var(--dourado-texto);
+  padding-left: 16px;
+  margin: 18px 0 0;
+}
+/* cards de carrossel dentro do acordeão (narrativas) */
+.sb-narrativa-card {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--nude-linha);
+}
+.sb-narrativa-card:first-child { padding-top: 22px; }
+.sb-narrativa-card:last-child { border-bottom: none; padding-bottom: 0; }
+.sb-narrativa-card-label {
+  font-family: var(--font-display);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dourado-texto);
+  margin-bottom: 12px;
+}
+.sb-narrativa-card p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--texto-corpo);
+  margin-bottom: 10px;
+}
+.sb-narrativa-card p:last-child { margin-bottom: 0; }
+.sb-narrativa-card p strong { color: var(--dourado-texto); font-weight: 600; }
+.sb-narrativa-capa-nome {
+  font-family: var(--font-destaque-sans);
+  font-weight: 500;
+  font-size: 26px;
+  color: var(--marinho);
+  margin-bottom: 8px;
+}
+.sb-narrativa-capa-tag {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--texto-corpo);
+}
+
 /* ── Cards (Narrativas) ── */
 .sb-cards {
   display: grid;
@@ -1056,11 +1202,22 @@ body {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--dourado-texto);
-  border: 1px solid var(--dourado-suave);
+  color: var(--branco);
+  border: 1px solid var(--dourado);
   border-radius: 999px;
   padding: 4px 12px;
   margin-bottom: 14px;
+}
+.sb-card-tag--pilar {
+  color: var(--branco);
+  border-color: var(--dourado);
+}
+/* dentro de cards brancos ou seções nude, o texto branco não tem contraste — volta pro bronze */
+.sb-card .sb-card-tag,
+.sb-symbol-card .sb-card-tag,
+.sb-num-block--light .sb-card-tag {
+  color: var(--dourado-texto);
+  border-color: var(--dourado-suave);
 }
 .sb-card-title {
   font-family: var(--font-display);
