@@ -239,10 +239,11 @@ body {
   left: 0;
   right: 0;
   z-index: 199;
-  background: rgba(10,10,10,0.92);
-  backdrop-filter: blur(18px) saturate(1.5);
-  -webkit-backdrop-filter: blur(18px) saturate(1.5);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: rgba(11,31,58,0.42);
+  backdrop-filter: blur(20px) saturate(1.5);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.10), 0 12px 34px rgba(0,0,0,0.28);
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -1430,7 +1431,7 @@ body {
 .sb-logo-grid {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0;
   margin-top: 28px;
 }
 .sb-logo-item {
@@ -1441,7 +1442,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.sb-logo-item img { width: 100%; height: 100%; object-fit: contain; }
+.sb-logo-item img { width: 100%; height: 100%; object-fit: cover; }
 .sb-logo-item.is-placeholder { border: 1px dashed var(--linha); border-radius: 12px; }
 .sb-logo-item.is-placeholder img { display: none; }
 .sb-logo-item.is-placeholder::before {
@@ -1571,7 +1572,7 @@ body {
   margin-top: 22px;
 }
 .sb-ig-feed-item {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   background: #fafafa;
   overflow: hidden;
   position: relative;
