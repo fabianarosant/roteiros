@@ -561,12 +561,12 @@ body {
   flex-shrink: 0;
 }
 .sb-num-title {
-  font-family: var(--font-display);
+  font-family: var(--font-destaque-sans);
   font-style: normal;
-  font-weight: 300;
-  text-transform: uppercase;
+  font-weight: 500;
+  text-transform: none;
   font-size: clamp(26px, 3.6vw, 38px);
-  letter-spacing: 0.1em;
+  letter-spacing: -0.01em;
   color: var(--branco);
 }
 .sb-num-block-body p {
