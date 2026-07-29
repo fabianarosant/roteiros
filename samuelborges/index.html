@@ -42,9 +42,16 @@
     <div class="sb-section-count">4 ideias a executar</div>
   </div>
 
+  <div class="sb-filter-row">
+    <button class="sb-filter-btn is-active" onclick="sbFilterNarrativas('todos', this)">Todos</button>
+    <button class="sb-filter-btn" onclick="sbFilterNarrativas('aprovar', this)">🕓 Aprovar</button>
+    <button class="sb-filter-btn" onclick="sbFilterNarrativas('gravar', this)">🎙️ A Gravar</button>
+    <button class="sb-filter-btn" onclick="sbFilterNarrativas('postado', this)">✅ Postado</button>
+  </div>
+
   <div class="sb-narrativas-list">
 
-    <div class="sb-acordeao-item">
+    <div class="sb-acordeao-item" data-status="aprovar">
       <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
         <div class="sb-acordeao-info">
           <div class="sb-acordeao-tags-row">
@@ -136,7 +143,7 @@
       </div>
     </div>
 
-    <div class="sb-acordeao-item">
+    <div class="sb-acordeao-item" data-status="gravar">
       <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
         <div class="sb-acordeao-info">
           <div class="sb-acordeao-tags-row">
@@ -178,7 +185,7 @@
       </div>
     </div>
 
-    <div class="sb-acordeao-item">
+    <div class="sb-acordeao-item" data-status="gravar">
       <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
         <div class="sb-acordeao-info">
           <div class="sb-acordeao-tags-row">
@@ -220,7 +227,7 @@
       </div>
     </div>
 
-    <div class="sb-acordeao-item">
+    <div class="sb-acordeao-item" data-status="gravar">
       <button class="sb-acordeao-toggle" onclick="this.closest('.sb-acordeao-item').classList.toggle('is-open')">
         <div class="sb-acordeao-info">
           <div class="sb-acordeao-tags-row">
@@ -271,6 +278,16 @@
 <footer class="sb-footer">
   Estratégia de Branding e Posicionamento desenvolvida por Fabiana Rosant © Direitos Reservados 2026
 </footer>
+
+<script>
+function sbFilterNarrativas(status, btn){
+  document.querySelectorAll('.sb-narrativas-list .sb-acordeao-item').forEach(function(item){
+    item.style.display = (status === 'todos' || item.dataset.status === status) ? '' : 'none';
+  });
+  document.querySelectorAll('.sb-filter-btn').forEach(function(b){ b.classList.remove('is-active'); });
+  btn.classList.add('is-active');
+}
+</script>
 
 </body>
 </html>
