@@ -942,6 +942,7 @@
   .selo-azul  { background: #fdf6ec; color: #8a6830; border: 1.5px solid #c8a96e; }
   .selo-dourado { background: #fef9c3; color: #854d0e; border: 1.5px solid #ca8a04; }
   .selo-vermelho { background: #fee2e2; color: #991b1b; border: 1.5px solid #dc2626; }
+  .selo-pago { background: #f0fdf4; color: #166534; border: 1.5px solid #16a34a; }
 
   /* SELOS RESTAURANTES */
   .reserva-essencial   { background: #fee2e2; color: #991b1b; border-radius: 6px; padding: 4px 10px; font-size: 10px; font-weight: 700; }
@@ -2190,7 +2191,7 @@
     <a class="vg-card" href="#dia01"><div class="vg-card-header"><span class="vg-dia-num">DIA 01</span><span class="vg-dia-data">04/08 · Terça</span></div><div class="vg-card-body"><span class="vg-destino-tag">Roma</span><ul class="vg-items"><li>Fontana di Trevi</li><li>Piazza di Spagna + Via Condotti</li><li>Pantheon + Piazza Navona</li><li>Campo de' Fiori à noite</li></ul></div></a>
     <a class="vg-card" href="#dia02"><div class="vg-card-header"><span class="vg-dia-num">DIA 02</span><span class="vg-dia-data">05/08 · Quarta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Roma</span><ul class="vg-items"><li>Coliseu + Arco de Constantino</li><li>Fórum Romano + Palatino</li><li>Altare della Patria</li><li>Madonna dei Monti + Ice Club</li></ul></div></a>
     <a class="vg-card" href="#dia03"><div class="vg-card-header"><span class="vg-dia-num">DIA 03</span><span class="vg-dia-data">06/08 · Quinta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Roma</span><ul class="vg-items"><li>Praça São Pedro + Basílica</li><li>Museus Vaticano + Sistina</li><li>Castel Sant'Angelo</li><li>Villa Borghese + Pôr do sol</li></ul></div></a>
-    <a class="vg-card" href="#dia04"><div class="vg-card-header"><span class="vg-dia-num">DIA 04</span><span class="vg-dia-data">07/08 · Sexta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Nápoles</span><ul class="vg-items"><li>Checkout Roma · Trem 9h41 (Italo)</li><li>Spaccanapoli + Sansevero</li><li>Da Michele + Lungomare</li><li>Nápoles → Sorrento</li></ul></div></a>
+    <a class="vg-card" href="#dia04"><div class="vg-card-header"><span class="vg-dia-num">DIA 04</span><span class="vg-dia-data">07/08 · Sexta</span></div><div class="vg-card-body"><span class="vg-destino-tag">Nápoles</span><ul class="vg-items"><li>Checkout Roma · Trem 9h41 (Italo)</li><li>Spaccanapoli + San Gregorio Armeno</li><li>Da Michele + Lungomare</li><li>Nápoles → Sorrento</li></ul></div></a>
     <a class="vg-card" href="#dia05"><div class="vg-card-header"><span class="vg-dia-num">DIA 05</span><span class="vg-dia-data">08/08 · Sábado</span></div><div class="vg-card-body"><span class="vg-destino-tag">Sorrento</span><ul class="vg-items"><li>City walk · Vallone + Chiostro</li><li>Sorrento Lift → Bagni Salvatore</li><li>Twins Gourmet jantar</li></ul></div></a>
     <a class="vg-card" href="#dia06"><div class="vg-card-header"><span class="vg-dia-num">DIA 06</span><span class="vg-dia-data">09/08 · Domingo</span></div><div class="vg-card-body"><span class="vg-destino-tag">Costa Amalfitana ⛵</span><ul class="vg-items"><li>Passeio de barco completo</li><li>Li Galli · Fiordo di Furore · Grotta</li><li>Amalfi + Positano</li><li>Retorno Sorrento</li></ul></div></a>
     <a class="vg-card" href="#dia07"><div class="vg-card-header"><span class="vg-dia-num">DIA 07</span><span class="vg-dia-data">10/08 · Segunda</span></div><div class="vg-card-body"><span class="vg-destino-tag">Amalfi + Ravello</span><ul class="vg-items"><li>Ferry → Amalfi · Arsenale</li><li>Catedral + Via Lorenzo</li><li>SITA → Ravello + almoço</li><li>Villa Cimbrone pôr do sol</li></ul></div></a>
@@ -2564,16 +2565,30 @@
 
   <span class="titulo-principal">Checklist Reservas</span>
 
-  <!-- PRIORIDADE -->
-  <div style="font-family:'Poppins',sans-serif;font-size:9px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#dc2626;margin:16px 0 12px;padding:7px 12px;background:#fef2f2;border-left:4px solid #dc2626;border-radius:0 8px 8px 0;">
-    🎟️ PRIORIDADE · risco real de esgotar
+  <!-- RESERVAS CONFIRMADAS -->
+  <div style="font-family:'Poppins',sans-serif;font-size:9px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#166534;margin:16px 0 12px;padding:7px 12px;background:#f0fdf4;border-left:4px solid #16a34a;border-radius:0 8px 8px 0;">
+    ✅ RESERVAS CONFIRMADAS · ordem dos dias
   </div>
-  <p style="font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;margin:-4px 0 14px;">
-  <strong>Sites oficiais:</strong> Ingresso no valor oficial (mais barato), porém liberado por lotes (entre 30 e 60 dias antes). É necessário acompanhar e comprar assim que abrir, pois esgota rapidamente. Não possui flexibilidade: após a compra, não é possível alterar data, cancelar ou solicitar reembolso.
-    <br><br>
-  <strong>Sites Parceiros:</strong> Permitem reserva antecipada, mesmo antes da liberação no site oficial pois eles garantem o ingresso quando os lotes abrem. Mais flexibilidade, com possibilidade de cancelamento e reembolso até alguns dias antes. Outro diferencial é a reserva de tours, passeios de barco personalizados e guia turístico. O valor é um pouco mais alto do que no site oficial. Recomendamos o GetYourGuide e temos <strong>Cupom de 5% de desconto:</strong> <span class="rest-recomendado-badge badge-bom" style="flex-shrink:0;">VAMOSCARIMBAR5</span></p>
 
   <div class="card-lista">
+
+    <div class="card-lista-item">
+      <span class="buy-check done"></span>
+      <div class="card-lista-info">
+        <span class="card-lista-titulo">Fontana di Trevi </span>
+        <span class="card-lista-desc">Dia 01 · 04/08 Terça · <strong>✅ Reservado · R$13/pessoa</strong></span>
+      </div>
+      <a class="btn-gold" href="https://www.vivaticket.com" target="_blank" style="margin-top:0;flex-shrink:0;">✦ vivaticket.com</a>
+    </div>
+
+    <div class="card-lista-item">
+      <span class="buy-check done"></span>
+      <div class="card-lista-info">
+        <span class="card-lista-titulo">Pantheon</span>
+        <span class="card-lista-desc">Dia 01 · 04/08 Terça · <strong>✅ Reservado antecipado</strong> · <strong>US$11,91/pessoa ≈ R$67</strong></span>
+      </div>
+      <a class="btn-gold" href="https://www.pantheonroma.com" target="_blank" style="margin-top:0;flex-shrink:0;">✦ pantheonroma.com</a>
+    </div>
 
     <div class="card-lista-item">
       <span class="buy-check done"></span>
@@ -2581,9 +2596,16 @@
         <span class="card-lista-titulo">Coliseu + Fórum Romano + Palatino</span>
         <span class="card-lista-desc">Dia 02 · 05/08 Quarta · entrada às 9h · <strong>✅ Reservado via GetYourGuide · com guia de áudio</strong> · levar fone de ouvido próprio · <strong>R$260/pessoa</strong></span>
         <div class="card-lista-links">
-          <a class="btn-gold" href="https://ticketing.colosseo.it/en/eventi/24h-colosseo-foro-romano-palatino/" target="_blank">✦ site oficial</a>
-          <a class="btn-gold" href="https://gyg.me/gJXF8mUC" target="_blank">✦ site parceiro</a>
+          <a class="btn-gold" href="https://gyg.me/gJXF8mUC" target="_blank">✦ GetYourGuide</a>
         </div>
+      </div>
+    </div>
+
+    <div class="card-lista-item">
+      <span class="buy-check done"></span>
+      <div class="card-lista-info">
+        <span class="card-lista-titulo">Giggetto — Reserva de Mesa</span>
+        <span class="card-lista-desc">Dia 02 · 05/08 Quarta · <strong>✅ Reservado · 13h</strong> · €20-50/pessoa · ficou hypado com a série Emily in Paris · 📞 dúvidas: 06 6861105</span>
       </div>
     </div>
 
@@ -2593,10 +2615,18 @@
         <span class="card-lista-titulo">Museus do Vaticano + Capela Sistina</span>
         <span class="card-lista-desc">Dia 03 · 06/08 Quinta · entrada às 10h · <strong>✅ Reservado via GetYourGuide</strong> · <strong>R$330/pessoa</strong></span>
         <div class="card-lista-links">
-          <a class="btn-gold" href="https://www.museivaticani.va" target="_blank">✦ site oficial</a>
-          <a class="btn-gold" href="https://gyg.me/RV6tzdoa" target="_blank">✦ site parceiro</a>
+          <a class="btn-gold" href="https://gyg.me/RV6tzdoa" target="_blank">✦ GetYourGuide</a>
         </div>
       </div>
+    </div>
+
+    <div class="card-lista-item">
+      <span class="buy-check done"></span>
+      <div class="card-lista-info">
+        <span class="card-lista-titulo">Castel Sant'Angelo</span>
+        <span class="card-lista-desc">Dia 03 · 06/08 Quinta · entrada às 13h · <strong>✅ Reservado via site oficial · €18/pessoa</strong></span>
+      </div>
+      <a class="btn-gold" href="https://www.coopculture.it" target="_blank" style="margin-top:0;flex-shrink:0;">✦ coopculture.it</a>
     </div>
 
     <div class="card-lista-item">
@@ -2605,19 +2635,9 @@
         <span class="card-lista-titulo">Galleria Borghese</span>
         <span class="card-lista-desc">Dia 03 · 06/08 Quinta · sessão das 17h · <strong>✅ Reservado via site oficial · visita guiada de 2h · €55/pessoa</strong></span>
         <div class="card-lista-links">
-          <a class="btn-gold" href="https://www.galleriaborghese.it" target="_blank">✦ site oficial</a>
-          <a class="btn-gold" href="https://gyg.me/qJqzXDQO" target="_blank">✦ site parceiro</a>
+          <a class="btn-gold" href="https://www.galleriaborghese.it" target="_blank">✦ galleriaborghese.it</a>
         </div>
       </div>
-    </div>
-
-    <div class="card-lista-item">
-      <span class="buy-check"></span>
-      <div class="card-lista-info">
-        <span class="card-lista-titulo">Crazy Pizza — Reserva de Mesa</span>
-        <span class="card-lista-desc">Dia 03 · 06/08 Quinta · jantar · Via Veneto 167 · reserva online ou pelo site</span>
-      </div>
-      <a class="btn-gold" href="https://www.sevenrooms.com/explore/crazypizzarome/reservations/create/search?_gl=1*1xrugwa*_gcl_au*MTEwMDEyMDE5NC4xNzc1MTUyODYx" target="_blank" style="margin-top:0;flex-shrink:0;">✦ reservar</a>
     </div>
 
     <div class="card-lista-item">
@@ -2643,10 +2663,10 @@
     </div>
 
     <div class="card-lista-item">
-      <span class="buy-check"></span>
+      <span class="buy-check done"></span>
       <div class="card-lista-info">
         <span class="card-lista-titulo">Bagni Salvatore Beach Club — Sorrento</span>
-        <span class="card-lista-desc">Dia 05 · 08/08 Sábado · dia inteiro · ⏳ E-mail enviado, aguardando resposta</span>
+        <span class="card-lista-desc">Dia 05 · 08/08 Sábado · dia inteiro · <strong>✅ Reservado via direct do Instagram</strong></span>
         <div class="card-lista-links">
           <a class="btn-gold" href="https://www.instagram.com/bagnisalvatore" target="_blank">✦ Instagram</a>
         </div>
@@ -2665,12 +2685,21 @@
     </div>
 
     <div class="card-lista-item">
-      <span class="buy-check"></span>
+      <span class="buy-check done"></span>
       <div class="card-lista-info">
-        <span class="card-lista-titulo">Salvatore Ravello 1958 — Reserva de Mesa</span>
-        <span class="card-lista-desc">Dia 07 · 10/08 Segunda · almoço · Via della Repubblica 2, Ravello · reserva pelo site ou e-mail</span>
+        <span class="card-lista-titulo">Ferry Sorrento → Amalfi</span>
+        <span class="card-lista-desc">Dia 07 · 10/08 Segunda · saída <strong>8h50</strong> · chegada <strong>10h10</strong> · <strong>✅ Reservado · €24/pessoa</strong></span>
       </div>
-      <a class="btn-gold" href="https://www.salvatoreravello.com" target="_blank" style="margin-top:0;flex-shrink:0;">✦ reservar</a>
+      <a class="btn-gold" href="https://www.ferryhopper.com" target="_blank" style="margin-top:0;flex-shrink:0;">✦ ferryhopper.com</a>
+    </div>
+
+    <div class="card-lista-item">
+      <span class="buy-check done"></span>
+      <div class="card-lista-info">
+        <span class="card-lista-titulo">Ferry Sorrento → Positano</span>
+        <span class="card-lista-desc">Dia 08 · 11/08 Terça · saída <strong>8h50</strong> · chegada <strong>9h30</strong> · <strong>✅ Reservado · €21/pessoa</strong></span>
+      </div>
+      <a class="btn-gold" href="https://www.ferryhopper.com" target="_blank" style="margin-top:0;flex-shrink:0;">✦ ferryhopper.com</a>
     </div>
 
     <div class="card-lista-item">
@@ -2687,6 +2716,15 @@
     <div class="card-lista-item">
       <span class="buy-check done"></span>
       <div class="card-lista-info">
+        <span class="card-lista-titulo">Ferry Sorrento → Capri</span>
+        <span class="card-lista-desc">Dia 09 · 12/08 Quarta · saída <strong>8h</strong> · <strong>✅ Reservado · €24/pessoa</strong></span>
+      </div>
+      <a class="btn-gold" href="https://www.ferryhopper.com" target="_blank" style="margin-top:0;flex-shrink:0;">✦ ferryhopper.com</a>
+    </div>
+
+    <div class="card-lista-item">
+      <span class="buy-check done"></span>
+      <div class="card-lista-info">
         <span class="card-lista-titulo">Passeio de Barco — Ilha de Capri</span>
         <span class="card-lista-desc">Dia 09 · 12/08 Quarta · saída ~10h da Marina Grande · <strong>✅ Reservado via GetYourGuide · R$155/pessoa</strong></span>
         <div class="card-lista-links">
@@ -2696,12 +2734,12 @@
     </div>
 
     <div class="card-lista-item">
-      <span class="buy-check"></span>
+      <span class="buy-check done"></span>
       <div class="card-lista-info">
-        <span class="card-lista-titulo">Bianca Rooftop — Hotel La Palma, Capri</span>
-        <span class="card-lista-desc">Dia 09 · 12/08 Quarta · jantar · dress code island chic · jantar only · o mais disputado de Capri à noite</span>
+        <span class="card-lista-titulo">Ferry Capri → Nápoles</span>
+        <span class="card-lista-desc">Dia 10 · 13/08 Quinta · saída <strong>12h40</strong> · Marina Grande → Molo Beverello · <strong>✅ Reservado · €29,50/pessoa</strong></span>
       </div>
-      <a class="btn-gold" href="https://www.oetkerhotels.com/hotels/hotel-la-palma/restaurants-bars/bianca/" target="_blank" style="margin-top:0;flex-shrink:0;">✦ Reservar</a>
+      <a class="btn-gold" href="https://www.ferryhopper.com" target="_blank" style="margin-top:0;flex-shrink:0;">✦ ferryhopper.com</a>
     </div>
 
     <div class="card-lista-item">
@@ -2732,8 +2770,7 @@
         <span class="card-lista-titulo">Villa Balbianello — Lenno</span>
         <span class="card-lista-desc">Dia 12 · 15/08 Sábado · <strong>10h40</strong> · <strong>✅ Reservado · R$185/pessoa</strong> · Combo: Transfer compartilhado Lenno + Jardins com acesso VIP · Ponto de encontro: Lungo Lago Guido Delmati 7, Lenno (CO)</span>
         <div class="card-lista-links">
-          <a class="btn-gold" href="https://fondoambiente.it/luoghi/villa-del-balbianello" target="_blank">✦ site oficial</a>
-          <a class="btn-gold" href="https://gyg.me/wtzhzZcv" target="_blank">✦ site parceiro</a>
+          <a class="btn-gold" href="https://gyg.me/wtzhzZcv" target="_blank">✦ GetYourGuide</a>
         </div>
       </div>
     </div>
@@ -2784,39 +2821,12 @@
 
   </div>
 
-  <!-- PRÉ-VIAGEM -->
-  <div style="font-family:'Poppins',sans-serif;font-size:9px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#b45309;margin:28px 0 12px;padding:7px 12px;background:#fffbeb;border-left:4px solid #b45309;border-radius:0 8px 8px 0;">
-    🎟️ PRÉ-VIAGEM · evitar filas nas bilheterias
+  <!-- SUGESTÕES PRA DECIDIR NA HORA -->
+  <div style="font-family:'Poppins',sans-serif;font-size:9px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#1a3a5c;margin:28px 0 12px;padding:7px 12px;background:#eff6ff;border-left:4px solid #1a3a5c;border-radius:0 8px 8px 0;">
+    🤔 Sugestões pra decidir na hora
   </div>
-  <p style="font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;margin:-4px 0 14px;">Podem ser comprados na hora, mas comprar antes evita filas kilométricas nas bilheterias. Esses recomendamos comprar no site oficial mesmo, mas podem comparar valores no getyourguide.</p>
 
   <div class="card-lista">
-
-    <div class="card-lista-item">
-      <span class="buy-check done"></span>
-      <div class="card-lista-info">
-        <span class="card-lista-titulo">Fontana di Trevi </span>
-        <span class="card-lista-desc">Dia 01 · 04/08 Terça · <strong>✅ Reservado · R$13/pessoa</strong></span>
-      </div>
-      <a class="btn-gold" href="https://www.vivaticket.com" target="_blank" style="margin-top:0;flex-shrink:0;">✦ vivaticket.com</a>
-    </div>
-
-    <div class="card-lista-item">
-      <span class="buy-check"></span>
-      <div class="card-lista-info">
-        <span class="card-lista-titulo">Pantheon</span>
-        <span class="card-lista-desc">Dia 01 · 04/08 Terça · <strong>€5/pessoa</strong> · pode comprar na hora, mas fila em agosto · online é mais rápido</span>
-      </div>
-      <a class="btn-gold" href="https://www.pantheonroma.com" target="_blank" style="margin-top:0;flex-shrink:0;">✦ pantheonroma.com</a>
-    </div>
-
-    <div class="card-lista-item">
-      <span class="buy-check done"></span>
-      <div class="card-lista-info">
-        <span class="card-lista-titulo">Giggetto — Reserva de Mesa</span>
-        <span class="card-lista-desc">Dia 02 · 05/08 Quarta · <strong>✅ Reservado · 13h</strong> · €20-50/pessoa · ficou hypado com a série Emily in Paris · 📞 dúvidas: 06 6861105</span>
-      </div>
-    </div>
 
     <div class="card-lista-item">
       <span class="buy-check"></span>
@@ -2846,24 +2856,6 @@
     </div>
 
     <div class="card-lista-item">
-      <span class="buy-check done"></span>
-      <div class="card-lista-info">
-        <span class="card-lista-titulo">Castel Sant'Angelo</span>
-        <span class="card-lista-desc">Dia 03 · 06/08 Quinta · entrada às 13h · <strong>✅ Reservado via site oficial · €18/pessoa</strong></span>
-      </div>
-      <a class="btn-gold" href="https://www.coopculture.it" target="_blank" style="margin-top:0;flex-shrink:0;">✦ coopculture.it</a>
-    </div>
-
-    <div class="card-lista-item">
-      <span class="buy-check"></span>
-      <div class="card-lista-info">
-        <span class="card-lista-titulo">Cappella Sansevero — Nápoles</span>
-        <span class="card-lista-desc">Dia 04 · 07/08 Sexta · <strong>€10/pessoa</strong> · Cristo Velato · fila reduzida com compra online · espaço pequeno</span>
-      </div>
-      <a class="btn-gold" href="https://www.museosansevero.it" target="_blank" style="margin-top:0;flex-shrink:0;">✦ museosansevero.it</a>
-    </div>
-
-    <div class="card-lista-item">
       <span class="buy-check"></span>
       <div class="card-lista-info">
         <span class="card-lista-titulo">Alfred Trattoria Moderna — Reserva de Mesa</span>
@@ -2873,39 +2865,30 @@
     </div>
 
     <div class="card-lista-item">
-      <span class="buy-check done"></span>
+      <span class="buy-check"></span>
       <div class="card-lista-info">
-        <span class="card-lista-titulo">Ferry Sorrento → Amalfi</span>
-        <span class="card-lista-desc">Dia 07 · 10/08 Segunda · saída <strong>8h50</strong> · chegada <strong>10h10</strong> · <strong>✅ Reservado · €24/pessoa</strong></span>
+        <span class="card-lista-titulo">Salvatore Ravello 1958 — Reserva de Mesa</span>
+        <span class="card-lista-desc">Dia 07 · 10/08 Segunda · almoço · Via della Repubblica 2, Ravello · reserva pelo site ou e-mail</span>
       </div>
-      <a class="btn-gold" href="https://www.ferryhopper.com" target="_blank" style="margin-top:0;flex-shrink:0;">✦ ferryhopper.com</a>
+      <a class="btn-gold" href="https://www.salvatoreravello.com" target="_blank" style="margin-top:0;flex-shrink:0;">✦ reservar</a>
     </div>
 
     <div class="card-lista-item">
-      <span class="buy-check done"></span>
+      <span class="buy-check"></span>
       <div class="card-lista-info">
-        <span class="card-lista-titulo">Ferry Sorrento → Positano</span>
-        <span class="card-lista-desc">Dia 08 · 11/08 Terça · saída <strong>8h50</strong> · chegada <strong>9h30</strong> · <strong>✅ Reservado · €21/pessoa</strong></span>
+        <span class="card-lista-titulo">Bianca Rooftop — Hotel La Palma, Capri</span>
+        <span class="card-lista-desc">Dia 09 · 12/08 Quarta · jantar · dress code island chic · jantar only · o mais disputado de Capri à noite</span>
       </div>
-      <a class="btn-gold" href="https://www.ferryhopper.com" target="_blank" style="margin-top:0;flex-shrink:0;">✦ ferryhopper.com</a>
+      <a class="btn-gold" href="https://www.oetkerhotels.com/hotels/hotel-la-palma/restaurants-bars/bianca/" target="_blank" style="margin-top:0;flex-shrink:0;">✦ Reservar</a>
     </div>
 
     <div class="card-lista-item">
-      <span class="buy-check done"></span>
+      <span class="buy-check"></span>
       <div class="card-lista-info">
-        <span class="card-lista-titulo">Ferry Sorrento → Capri</span>
-        <span class="card-lista-desc">Dia 09 · 12/08 Quarta · saída <strong>8h</strong> · <strong>✅ Reservado · €24/pessoa</strong></span>
+        <span class="card-lista-titulo">Duomo di Milano — Terraço</span>
+        <span class="card-lista-desc">Dia 11 · 14/08 Sexta · <strong>~€3</strong> só a catedral · <strong>~€10-15</strong> com o terraço · reserve em ticket.duomomilano.it para evitar fila</span>
       </div>
-      <a class="btn-gold" href="https://www.ferryhopper.com" target="_blank" style="margin-top:0;flex-shrink:0;">✦ ferryhopper.com</a>
-    </div>
-
-    <div class="card-lista-item">
-      <span class="buy-check done"></span>
-      <div class="card-lista-info">
-        <span class="card-lista-titulo">Ferry Capri → Nápoles</span>
-        <span class="card-lista-desc">Dia 10 · 13/08 Quinta · saída <strong>12h40</strong> · Marina Grande → Molo Beverello · <strong>✅ Reservado · €29,50/pessoa</strong></span>
-      </div>
-      <a class="btn-gold" href="https://www.ferryhopper.com" target="_blank" style="margin-top:0;flex-shrink:0;">✦ ferryhopper.com</a>
+      <a class="btn-gold" href="https://ticket.duomomilano.it" target="_blank" style="margin-top:0;flex-shrink:0;">✦ ticket.duomomilano.it</a>
     </div>
 
     <div class="card-lista-item">
@@ -2917,6 +2900,23 @@
       <a class="btn-gold" href="https://www.bellagiosilvio.com" target="_blank" style="margin-top:0;flex-shrink:0;">✦ reservar</a>
     </div>
 
+    <div class="card-lista-item">
+      <span class="buy-check"></span>
+      <div class="card-lista-info">
+        <span class="card-lista-titulo">Monte San Salvatore — Funicular (Lugano)</span>
+        <span class="card-lista-desc">Dia 14 · 17/08 Segunda · <strong>~CHF 30/pessoa</strong> ida e volta · sem reserva necessária, mas pode comprar online para evitar fila do meio-dia</span>
+      </div>
+      <a class="btn-gold" href="https://www.montesansalvatore.ch" target="_blank" style="margin-top:0;flex-shrink:0;">✦ montesansalvatore.ch</a>
+    </div>
+
+    <div class="card-lista-item">
+      <span class="buy-check"></span>
+      <div class="card-lista-info">
+        <span class="card-lista-titulo">Gandria — Barco (Lugano)</span>
+        <span class="card-lista-desc">Dia 14 · 17/08 Segunda · <strong>~CHF 12–20/pessoa</strong> · sem reserva necessária, mas vale conferir horários oficiais no dia anterior</span>
+      </div>
+      <a class="btn-gold" href="https://www.lakelugano.ch" target="_blank" style="margin-top:0;flex-shrink:0;">✦ lakelugano.ch</a>
+    </div>
 
     <div class="card-lista-item">
       <span class="buy-check"></span>
@@ -2970,10 +2970,11 @@
         <div style="padding:9px 16px;border-bottom:1px solid var(--cinza-claro);">
           <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
             <span style="font-family:'Poppins',sans-serif;font-size:12.5px;color:var(--texto);">🎟️ Passeios pagos e ingressos</span>
-            <span style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--azul);">R$1.879,00 <span style="font-size:10.5px;font-weight:400;">+ €103 <span style="color:#64748b;">≈ R$618</span></span></span>
+            <span style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--azul);">R$1.946,00 <span style="font-size:10.5px;font-weight:400;">+ €103 <span style="color:#64748b;">≈ R$618</span></span></span>
           </div>
           <div style="padding-left:16px;display:flex;flex-direction:column;gap:3px;">
             <div style="display:flex;justify-content:space-between;font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;"><span>Fontana di Trevi</span><span>R$13,00</span></div>
+            <div style="display:flex;justify-content:space-between;font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;"><span>Pantheon (reservado antecipado)</span><span>US$11,91 <span style="color:#94a3b8;">≈ R$67</span></span></div>
             <div style="display:flex;justify-content:space-between;font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;"><span>Coliseu + Fórum Romano + Palatino (GetYourGuide)</span><span>R$260,00</span></div>
             <div style="display:flex;justify-content:space-between;font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;"><span>Museus do Vaticano + Capela Sistina (GetYourGuide)</span><span>R$330,00</span></div>
             <div style="display:flex;justify-content:space-between;font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;"><span>Galleria Borghese (site oficial)</span><span>€55,00 <span style="color:#94a3b8;">≈ R$330</span></span></div>
@@ -2992,8 +2993,8 @@
         <div style="background:#f0f7ff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;">
           <span style="font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;color:var(--azul);text-transform:uppercase;letter-spacing:0.5px;">Total parcial pré-viagem</span>
           <div style="text-align:right;">
-            <div style="font-family:'Poppins',sans-serif;font-size:15px;font-weight:800;color:var(--azul);">R$18.383,12</div>
-            <div style="font-family:'Poppins',sans-serif;font-size:10px;color:#64748b;margin-top:2px;">R$16.298,12 + €347,50 (≈ R$2.085 · cotação R$6,00/€)</div>
+            <div style="font-family:'Poppins',sans-serif;font-size:15px;font-weight:800;color:var(--azul);">R$18.450,12</div>
+            <div style="font-family:'Poppins',sans-serif;font-size:10px;color:#64748b;margin-top:2px;">R$16.365,12 + €347,50 (≈ R$2.085 · cotação R$6,00/€)</div>
           </div>
         </div>
       </div>
@@ -3032,8 +3033,8 @@
         <div style="font-family:'Poppins',sans-serif;font-size:10.5px;color:rgba(255,255,255,0.75);">Pré-viagem + estimativa durante viagem</div>
       </div>
       <div style="text-align:right;">
-        <div style="font-family:'Poppins',sans-serif;font-size:22px;font-weight:800;color:white;">R$25.583,12</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:10px;color:rgba(255,255,255,0.6);margin-top:2px;">R$18.383,12 pré-viagem + R$7.200,00 estimativa</div>
+        <div style="font-family:'Poppins',sans-serif;font-size:22px;font-weight:800;color:white;">R$25.650,12</div>
+        <div style="font-family:'Poppins',sans-serif;font-size:10px;color:rgba(255,255,255,0.6);margin-top:2px;">R$18.450,12 pré-viagem + R$7.200,00 estimativa</div>
       </div>
     </div>
 
@@ -3071,6 +3072,11 @@
     <div class="card-header"><span class="card-header-icon">🎟</span><span class="card-header-titulo">Selos de Acesso — Atrações</span></div>
     <div class="card-body">
       <div style="display:flex;flex-direction:column;gap:12px;">
+
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span class="selo selo-pago" style="flex-shrink:0;">✅ Pago | Reserva 10h</span>
+          <span style="font-size:12px;color:#475569;">Já reservado e pago — o horário indicado é o da entrada/atividade. Só precisam comparecer.</span>
+        </div>
 
         <div style="display:flex;align-items:center;gap:12px;">
           <span class="selo selo-vermelho" style="flex-shrink:0;">🎟️ Prioridade</span>
@@ -3427,7 +3433,7 @@
         <span class="atracao-nova-nome">Fontana di Trevi <span class="atracao-data">Dia 01 · 04/08 · Terça</span></span>
         <span class="atracao-nova-cat">✨ Experiência Única — a maior fonte barroca do mundo</span>
       </div>
-      <span class="selo selo-dourado">🎟️ Pré-viagem</span>
+      <span class="selo selo-pago">✅ Pago | Reserva 15h30</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">👣 10 min a pé do hotel</span></div>
@@ -3560,7 +3566,7 @@
         <span class="atracao-nova-nome">Pantheon <span class="atracao-data">Dia 01 · 04/08 · Terça</span></span>
         <span class="atracao-nova-cat">🏛 História & Cultura — o edifício mais bem preservado da Roma Antiga</span>
       </div>
-      <span class="selo selo-dourado">🎟️ Pré-viagem</span>
+      <span class="selo selo-pago">✅ Pago | Reserva 18h</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">👣 4 min do Giolitti</span></div>
@@ -3575,11 +3581,8 @@
       <p class="atracao-nova-desc">O Pantheon é o maior mistério da arquitetura romana: construído em 125 d.C. por Adriano sobre os alicerces de um templo anterior de Agripa (cujo nome permanece na fachada por humildade imperial), é o edifício de cúpula não reforçada mais largo do mundo — <strong>43,3 metros de diâmetro</strong>, exatamente igual à altura do teto ao piso. Por 19 séculos ninguém conseguiu reproduzir a receita do concreto romano. O óculo de <strong>9 metros</strong> no teto é a única entrada de luz — e de chuva, que escoa por 22 drenos dissimulados no piso levemente inclinado. Rafael escolheu ser enterrado aqui em 1520. Também repousam aqui Vittorio Emanuele II e Umberto I, primeiros reis da Itália unificada.</p>
     </div>
     <div class="ingresso-box">
-      <div class="ingresso-box-topo">
-        <span class="ingresso-box-titulo">Ingresso no Local</span>
-        <span class="ingresso-badge">Bilheteria na entrada</span>
-      </div>
-      <p><strong>€5</strong> por pessoa ≈ R$31 · Compra na bilheteria ou online</p>
+      <div class="ingresso-box-topo"><span class="ingresso-box-titulo">✅ Reservado · 18h</span></div>
+      <p><strong>US$11,91</strong> por pessoa ≈ R$67 · comprado antecipado online</p>
       <a class="btn-gold" href="https://museiitaliani.it/musei/33f77159-0acd-40c4-8524-701f33aae108" target="_blank">✦ Comprar ingresso oficial</a>
     </div>
     <div class="dicas-box">
@@ -3804,7 +3807,7 @@
         <span class="atracao-nova-nome">Coliseu <span class="atracao-data">Dia 02 · 05/08 · Quarta</span></span>
         <span class="atracao-nova-cat">🏛 História & Cultura — o maior anfiteatro do mundo antigo</span>
       </div>
-      <span class="selo selo-vermelho">🎟️ Prioridade</span>
+      <span class="selo selo-pago">✅ Pago | Reserva 9h</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">👣 2 min da Via Nicola Salvi</span></div>
@@ -3821,11 +3824,10 @@
       <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CARIMBE</span>Do segundo andar, a foto com o Arco de Constantino ao fundo enquadrado pelos arcos do Coliseu. É o ângulo que a maioria perde por ficar no térreo.</div></div>
     </div>
     <div class="ingresso-box">
-      <div class="ingresso-box-topo"><span class="ingresso-box-titulo">Ingresso Obrigatório Antecipado</span><span class="ingresso-badge">30 dias antes</span></div>
-      <p><strong>€18</strong> por pessoa · cobre as 03 atrações: Coliseu + Fórum Romano + Monte Palatino. O ingresso tem horário marcado apenas para o Coliseu, com validade de 24h ou 48h para os outros dois locais.</p>
+      <div class="ingresso-box-topo"><span class="ingresso-box-titulo">✅ Reservado · 9h</span></div>
+      <p><strong>R$260</strong> por pessoa · comprado via GetYourGuide · cobre as 03 atrações: Coliseu + Fórum Romano + Monte Palatino. O ingresso tem horário marcado apenas para o Coliseu, com validade de 24h ou 48h para os outros dois locais.</p>
       <p>🎧 Ingresso com áudio guia — é um aplicativo no celular. <strong>Levar fone de ouvido próprio.</strong></p>
-      <a class="btn-gold" href="https://ticketing.colosseo.it/en/eventi/24h-colosseo-foro-romano-palatino/" target="_blank">✦ site oficial</a>
-      <a class="btn-gold" href="https://gyg.me/gJXF8mUC" target="_blank">✦ gyg áudio guia</a>
+      <a class="btn-gold" href="https://gyg.me/gJXF8mUC" target="_blank">✦ GetYourGuide</a>
     </div>
   </div>
 
@@ -4199,7 +4201,7 @@
         <span class="atracao-nova-nome">Museus do Vaticano + Capela Sistina <span class="atracao-data">Dia 03 · 06/08 · Quinta</span></span>
         <span class="atracao-nova-cat">🎨 Arte & Museus — a maior coleção de arte do mundo</span>
       </div>
-      <span class="selo selo-vermelho">🎟️ Prioridade</span>
+      <span class="selo selo-pago">✅ Pago | Reserva 10h</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">👣 10 min da Basílica · entrada na Via dei Musei</span></div>
@@ -4217,11 +4219,9 @@
       <div class="dica-item"><span class="dica-item-icon">💡</span><div><span class="dica-item-label">DICA</span>Em agosto com ingresso antecipado ainda pode ter 20–30 min de fila de controle. Cheguem às 10h em ponto. Dentro da Sistina é proibido fotografar (mas todos tiram com flash desligado). O audioguia em português vale muito.</div></div>
     </div>
     <div class="ingresso-box">
-      <div class="ingresso-box-topo"><span class="ingresso-box-titulo">Ingresso Obrigatório Antecipado</span><span class="ingresso-badge">Esgota em agosto</span></div>
-      <p><strong>€20</strong> por pessoa ≈ R$124 · inclui Museus + Capela Sistina</p>
-      <p>⚠️ Em agosto as entradas esgotam semanas antes — comprem logo após receber o roteiro.</p>
-      <a class="btn-gold" href="https://www.museivaticani.va" target="_blank">✦ site oficial</a>
-      <a class="btn-gold" href="https://gyg.me/RV6tzdoa" target="_blank">✦ site parceiro</a>
+      <div class="ingresso-box-topo"><span class="ingresso-box-titulo">✅ Reservado · 10h</span></div>
+      <p><strong>R$330</strong> por pessoa · comprado via GetYourGuide · inclui Museus + Capela Sistina</p>
+      <a class="btn-gold" href="https://gyg.me/RV6tzdoa" target="_blank">✦ GetYourGuide</a>
     </div>
   </div>
 
@@ -4265,7 +4265,7 @@
           <span class="atracao-nova-nome">Castel Sant'Angelo <span class="atracao-data">Dia 03 · 06/08 · Quinta</span></span>
           <span class="atracao-nova-cat">🏛 História & Cultura — mausoléu, fortaleza, prisão e palácio papal</span>
         </div>
-        <span class="selo selo-dourado">🎟️ Pré-viagem</span>
+        <span class="selo selo-pago">✅ Pago | Reserva 13h</span>
       </div>
       <div class="atracao-info-faixa">
         <div><span class="info-label">Trajeto</span><span class="info-valor">👣 15 min dos Museus do Vaticano · pela Ponte Sant'Angelo</span></div>
@@ -4353,7 +4353,7 @@
         <span class="atracao-nova-nome">Galleria Borghese <span class="atracao-data">Dia 03 · 06/08 · Quinta</span></span>
         <span class="atracao-nova-cat">🎨 Arte & Museus — o museu mais bonito de Roma · Bernini, Caravaggio, Canova</span>
       </div>
-      <span class="selo selo-vermelho">🎟️ Prioridade</span>
+      <span class="selo selo-pago">✅ Pago | Reserva 17h</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">👣 5 min do lago · dentro da Villa Borghese</span></div>
@@ -4408,22 +4408,22 @@
     <div class="restaurante restaurante-com-foto">
       <div class="restaurante-header">
         <div class="rest-letra">🍽</div>
-        <div class="rest-nome">Crazy Pizza<span class="rest-recomendado-badge badge-premium">✨ Experiência Premium</span></div>
+        <div class="rest-nome">Pastificio Guerra<span class="rest-recomendado-badge badge-economico">💰 Econômico</span></div>
       </div>
       <div class="restaurante-body">
-        <p>📍 Via Vittorio Veneto 167 · <strong>10 min a pé da Villa Borghese</strong> · no coração da Dolce Vita</p>
-        <p>Culinária: Pizzaria de luxo do chef Flavio Briatore · pizza ultra fina sem fermento · DJ set ao vivo todas as noites</p>
-        <p>💰 <strong>€25–45</strong> ≈ R$155–279 por pessoa · experiência premium</p>
-        <div class="rest-prato">Pizza romana fina croccante com ingredientes premium + cocktail da casa. O show de malabares com a massa é o espetáculo. Reserva essencial — em agosto lota todo dia.</div>
-        <p><span class="reserva-essencial">🔴 Reserva essencial</span></p>
-        <a class="link-rest" href="https://crazypizza.com/rome/" target="_blank">↗ Mais informações</a>
+        <p>📍 Via della Croce 8 · <strong>~15 min a pé da Villa Borghese/Terrazza del Pincio</strong>, descendo pelo Tridente até a Piazza di Spagna</p>
+        <p>Culinária: pastifício artesanal desde 1918 · massa fresca feita na hora, só para viagem — sem mesas, comem andando ou num degrau da praça</p>
+        <p>💰 <strong>€5,00</strong> ≈ R$31 por porção generosa · preço fixo</p>
+        <div class="rest-prato">Cardápio muda todo dia — sempre 2 opções (uma de carne, uma vegetariana) entre clássicos romanos como cacio e pepe, amatriciana e carbonara. Vem num copo grande de plástico, com garfo, pronto pra comer na rua — e ainda inclui um copinho de vinho da casa (tinto ou branco) no preço.</div>
+        <p><span class="reserva-direto">✅ Sem reserva · balcão de rua, chegar e pedir</span></p>
+        <a class="link-rest" href="https://www.instagram.com/pastificio_guerra1918/" target="_blank">↗ Mais informações</a>
       </div>
     </div>
   </div>
 
   <div class="dica-box" style="margin-top:16px;">
     <span class="dica-box-label">🌙 De volta ao hotel — a caminhada mais bonita de Roma</span>
-    <p>Da Crazy Pizza até o hotel são <strong>20 min a pé</strong> — descem pela Via Veneto, passam pela Via del Tritone e chegam à <strong>Fontana di Trevi</strong> (que à noite está quase vazia e iluminada — gratuita). Uma oportunidade única de vê-la sem multidão. De lá mais 10 min a pé até o hotel no Monti. Se estiverem muito cansadas, Uber/FREE NOW do ponto: <strong>≈ €10</strong>, 10 min.</p>
+    <p>Do Pastificio Guerra até o hotel são <strong>~25 min a pé</strong> — de Via della Croce sobem em direção à Via del Tritone e chegam à <strong>Fontana di Trevi</strong> (que à noite está quase vazia e iluminada — gratuita). Uma oportunidade única de vê-la sem multidão. De lá mais 10 min a pé até o hotel no Monti. Se estiverem muito cansadas, Uber/FREE NOW do ponto: <strong>≈ €10</strong>, 10 min.</p>
   </div>
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
@@ -4527,7 +4527,7 @@
     <span class="dica-box-label">📋 Resumo Diário</span>
     <p>Dia de travessia — saída cedo de Roma para Nápoles. Manhã no centro histórico napolitano, almoço obrigatório na Da Michele e tarde na orla antes do trem para Sant'Agnello.</p>
   </div>
-  <div class="resumo-pontos"><span class="resumo-ponto"><span class="resumo-ponto-num">01</span>Spaccanapoli</span><span class="resumo-ponto"><span class="resumo-ponto-num">02</span>Via San Gregorio</span><span class="resumo-ponto"><span class="resumo-ponto-num">03</span>Cappella Sansevero</span><span class="resumo-ponto"><span class="resumo-ponto-num">04</span>Duomo di Napoli</span><span class="resumo-ponto"><span class="resumo-ponto-num">05</span>Da Michele</span><span class="resumo-ponto"><span class="resumo-ponto-num">06</span>Piazza Plebiscito</span><span class="resumo-ponto"><span class="resumo-ponto-num">07</span>Castel dell'Ovo</span></div>
+  <div class="resumo-pontos"><span class="resumo-ponto"><span class="resumo-ponto-num">01</span>Spaccanapoli</span><span class="resumo-ponto"><span class="resumo-ponto-num">02</span>Via San Gregorio</span><span class="resumo-ponto"><span class="resumo-ponto-num">03</span>Duomo di Napoli</span><span class="resumo-ponto"><span class="resumo-ponto-num">04</span>Da Michele</span><span class="resumo-ponto"><span class="resumo-ponto-num">05</span>Piazza Plebiscito</span><span class="resumo-ponto"><span class="resumo-ponto-num">06</span>Castel dell'Ovo</span></div>
 
   
 
@@ -4668,45 +4668,14 @@
   <div class="atracao-nova-topo">
       <div class="atracao-nova-num">03</div>
       <div class="atracao-nova-info">
-        <span class="atracao-nova-nome">Cappella Sansevero <span class="atracao-data">Dia 04 · 07/08 · Sexta</span></span>
-        <span class="atracao-nova-cat">🎨 Arte & Museus — o Cristo Velado mais impressionante do mundo</span>
-      </div>
-      <span class="selo selo-dourado">🎟️ Pré-viagem</span>
-    </div>
-    <div class="atracao-info-faixa">
-      <div><span class="info-label">Trajeto</span><span class="info-valor">👣 2 min da Via San Gregorio Armeno</span></div>
-      <div><span class="info-label">Horário</span><span class="info-valor">🕐 11h30 · 30–40 min</span></div>
-      <span class="info-atencao"><strong>⚠️</strong> Pequena mas lotada — vá logo cedo ou compre online. Em agosto fila de 30 min sem reserva.</span>
-    </div>
-    <div class="atracao-nova-corpo">
-      <div class="atracao-img-box is-placeholder">
-      <img src="./assets/atracoes/dia-04/sansevero.avif" alt="Cristo Velado Sansevero" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
-      <span>Cristo Velado Sansevero</span>
-    </div>
-      <p class="atracao-nova-desc">A Cappella Sansevero guarda o <strong>Cristo Velato</strong> de Giuseppe Sanmartino (1753) — Cristo morto coberto por um véu de mármore tão fino que parece tecido real: as dobras, a textura, os traços do rosto sob o pano. Esculpido de um único bloco de mármore por um artista de 29 anos, é considerada por muitos a maior escultura do século XVIII e possivelmente a mais tecnicamente impossível da história. Também abriga os enigmáticos <em>Macchine Anatomiche</em> — dois esqueletos com sistema vascular em arame preservado por processo desconhecido. Nápoles esconde esta joia a dois passos do barulho do centro.</p>
-    </div>
-    <div class="ingresso-box">
-      <div class="ingresso-box-topo"><span class="ingresso-box-titulo">Ingresso no Local</span><span class="ingresso-badge">Recomendado comprar online</span></div>
-      <p><strong>€10</strong> por pessoa ≈ R$62 · Horários: Qua–Mon 9h–19h (fechado terças)</p>
-      <a class="btn-gold" href="https://www.museosansevero.it" target="_blank">✦ Comprar ingresso online</a>
-    </div>
-    <div class="dicas-box">
-      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CARIMBE</span>Fotos são permitidas. O Cristo Velato de frente com a luz lateral — circulem a escultura lentamente: o véu de mármore muda com cada ângulo.</div></div>
-    </div>
-  </div>
-
-  <div class="atracao-nova">
-  <div class="atracao-nova-topo">
-      <div class="atracao-nova-num">04</div>
-      <div class="atracao-nova-info">
         <span class="atracao-nova-nome">Duomo di Napoli — San Gennaro <span class="atracao-data">Dia 04 · 07/08 · Sexta</span></span>
         <span class="atracao-nova-cat">🏛 História & Cultura — a catedral do patrono de Nápoles</span>
       </div>
       <span class="selo selo-verde">🔵 Gratuito</span>
     </div>
     <div class="atracao-info-faixa">
-      <div><span class="info-label">Trajeto</span><span class="info-valor">👣 8 min da Cappella Sansevero</span></div>
-      <div><span class="info-label">Horário</span><span class="info-valor">🕐 12h15 · 20 min</span></div>
+      <div><span class="info-label">Trajeto</span><span class="info-valor">👣 5 min a pé da Via San Gregorio Armeno</span></div>
+      <div><span class="info-label">Horário</span><span class="info-valor">🕐 11h45 · 20 min</span></div>
     </div>
     <div class="atracao-nova-corpo">
       <div class="atracao-img-box is-placeholder">
@@ -4722,10 +4691,10 @@
   </div>
 
   <!-- ══ ALMOÇO — DA MICHELE ══ -->
-  <!-- ══ ATRAÇÃO 05 ══ -->
+  <!-- ══ ATRAÇÃO 04 ══ -->
   <div class="atracao-nova">
   <div class="atracao-nova-topo">
-      <div class="atracao-nova-num">05</div>
+      <div class="atracao-nova-num">04</div>
       <div class="atracao-nova-info">
         <span class="atracao-nova-nome">L'Antica Pizzeria da Michele <span class="atracao-data">Dia 04 · 07/08 · Sexta</span></span>
         <span class="atracao-nova-cat">🍝 Gastronomia — a pizza mais famosa do mundo desde 1870</span>
@@ -4749,10 +4718,10 @@
     </div>
   </div>
 
-  <!-- ══ ATRAÇÃO 06 ══ -->
+  <!-- ══ ATRAÇÃO 05 ══ -->
   <div class="atracao-nova">
   <div class="atracao-nova-topo">
-      <div class="atracao-nova-num">06</div>
+      <div class="atracao-nova-num">05</div>
       <div class="atracao-nova-info">
         <span class="atracao-nova-nome">Piazza del Plebiscito <span class="atracao-data">Dia 04 · 07/08 · Sexta</span></span>
         <span class="atracao-nova-cat">✨ Experiência Única — a maior praça de Nápoles, de frente para o golfo</span>
@@ -4776,9 +4745,10 @@
     </div>
   </div>
 
+  <!-- ══ ATRAÇÃO 06 ══ -->
   <div class="atracao-nova">
   <div class="atracao-nova-topo">
-      <div class="atracao-nova-num">07</div>
+      <div class="atracao-nova-num">06</div>
       <div class="atracao-nova-info">
         <span class="atracao-nova-nome">Castel dell'Ovo <span class="atracao-data">Dia 04 · 07/08 · Sexta</span></span>
         <span class="atracao-nova-cat">🏛 História & Cultura — o castelo mais antigo de Nápoles</span>
@@ -5210,7 +5180,7 @@
         <span class="atracao-nova-nome">Bagni Salvatore Beach Club <span class="atracao-data">Dia 05 · 08/08 · Sábado</span></span>
         <span class="atracao-nova-cat">🌿 Natureza — tarde inteira no beach club sobre ruínas romanas</span>
       </div>
-      <span class="selo selo-vermelho">🎟️ Prioridade</span>
+      <span class="selo selo-pago">✅ Pago | Reserva 11h</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">👣 2 min da saída do elevador · Marina Piccola</span></div>
@@ -5225,7 +5195,7 @@
     </div>
     <div class="dicas-box">
       <div class="dica-item"><span class="dica-item-icon">💡</span><div><span class="dica-item-label">DICA — COMO FUNCIONA O BEACH CLUB</span>
-      Espreguiçadeiras e guarda-sol reservados por dia inteiro · ~<strong>€25/espreguiçadeira + €10/guarda-sol</strong> · para duas pessoas ~€60–70. Reserve pelo Instagram <strong>@bagnisalvatore</strong>. Cabines, chuveiros e banheiros inclusos. Bar com petiscos, drinks e almoço leve. Os preços seguem o padrão da Costa Amalfitana.</div></div>
+      Espreguiçadeiras e guarda-sol reservados por dia inteiro · ~<strong>€25/espreguiçadeira + €10/guarda-sol</strong> · para duas pessoas ~€60–70. <strong>✅ Reservado via direct do Instagram @bagnisalvatore.</strong> Cabines, chuveiros e banheiros inclusos. Bar com petiscos, drinks e almoço leve. Os preços seguem o padrão da Costa Amalfitana.</div></div>
       <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CARIMBE</span>Da espreguiçadeira com as ruínas romanas emergindo na água ao lado — uma das composições mais únicas de toda a viagem.</div></div>
     </div>
   </div>
@@ -5319,7 +5289,7 @@
         <span class="atracao-nova-nome">Passeio de Barco — Costa Amalfitana Completa <span class="atracao-data">Dia 06 · 09/08 · Domingo</span></span>
         <span class="atracao-nova-cat">✨ Experiência Única — o passeio mais completo da Costa, só acessível de barco</span>
       </div>
-      <span class="selo selo-vermelho">🎟️ Prioridade</span>
+      <span class="selo selo-pago">✅ Pago | Reserva 9h</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Saída</span><span class="info-valor">⛵ Marina Piccola, Sorrento · ~9h</span></div>
@@ -5454,8 +5424,8 @@
       <div class="dica-item"><span class="dica-item-icon">💡</span><div><span class="dica-item-label">DICA</span>Levem protetor solar à prova d'água, enjoo (se tiverem propensão — o mar em agosto costuma estar calmo, mas tenham à mão), câmera com protecção para água e dinheiro em espécie para a Grotta (€5–6 pago na entrada). Snacks e água são fornecidos pelos melhores passeios.</div></div>
     </div>
     <div class="ingresso-box">
-      <div class="ingresso-box-topo"><span class="ingresso-box-titulo">Reserva Antecipada Obrigatória</span><span class="ingresso-badge">Esgota em agosto</span></div>
-      <p>Passeio compartilhado (grupo pequeno, até 12 pessoas): <strong>€60–100</strong>/pessoa · dia inteiro saindo de Marina Piccola</p>
+      <div class="ingresso-box-topo"><span class="ingresso-box-titulo">✅ Reservado · 9h</span></div>
+      <p><strong>R$936</strong> por pessoa · comprado via GetYourGuide · passeio compartilhado (grupo pequeno, até 12 pessoas) · dia inteiro saindo de Marina Piccola</p>
       <a class="btn-gold" href="https://gyg.me/vevcOT50" target="_blank">✦ GetYourGuide</a>
     </div>
   </div>
@@ -5914,7 +5884,7 @@
         <span class="atracao-nova-nome">Da Ferdinando Beach Club — Praia Fornillo <span class="atracao-data">Dia 08 · 11/08 · Terça</span></span>
         <span class="atracao-nova-cat">🌿 Natureza — o beach club mais charmoso de Positano, na praia mais tranquila</span>
       </div>
-      <span class="selo selo-vermelho">🎟️ Prioridade</span>
+      <span class="selo selo-pago">✅ Pago | Reserva 10h40</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">👣 Chegada pelo final da Via Positanesi d'America</span></div>
@@ -5928,13 +5898,13 @@
       <p class="atracao-nova-desc">O Da Ferdinando está na Praia Fornillo desde 1953 — fundado quando Ferdinando começou a alugar barcos para o primeiro turista que chegou. Hoje seus filhos e netos mantêm o mesmo espírito: família, boa comida, serviço atento e sem pretensão. É o beach club mais citado de Positano entre quem sabe — tranquilo, com música jazz de fundo, frutos do mar frescos, paddleboards e flutuadores para alugar. E um barco gratuito do clube leva de volta ao porto principal às 16h.</p>
     </div>
     <div class="dicas-box">
-      <div class="dica-item"><span class="dica-item-icon">💡</span><div><span class="dica-item-label">DICA — COMO FUNCIONA</span>Reserve pelo site <strong>daferdinandobeachclub.com</strong> — em agosto esgota. Espreguiçadeira + guarda-sol: ~<strong>€45/pessoa</strong>. O restaurante serve frutos do mar frescos, spaghetti alle vongole e cocktails. Bota d'água recomendada (pedras na entrada). O barco gratuito do clube sai às 16h de volta ao porto principal de Positano.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">💡</span><div><span class="dica-item-label">DICA — COMO FUNCIONA</span>Já reservado pelo site <strong>daferdinandobeachclub.com</strong>. Espreguiçadeira + guarda-sol: ~<strong>€45/pessoa</strong>. O restaurante serve frutos do mar frescos, spaghetti alle vongole e cocktails. Bota d'água recomendada (pedras na entrada). O barco gratuito do clube sai às 16h de volta ao porto principal de Positano.</div></div>
       <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CARIMBE</span>Da espreguiçadeira olhando para o mar com Positano ao fundo — a cidade inteira visível das pedras da Praia Fornillo. A foto mais relaxada e bonita da viagem.</div></div>
     </div>
     <div class="ingresso-box">
-      <div class="ingresso-box-topo"><span class="ingresso-box-titulo">Reserva Antecipada</span><span class="ingresso-badge">Esgota em agosto</span></div>
+      <div class="ingresso-box-topo"><span class="ingresso-box-titulo">✅ Reservado · 10h40</span></div>
       <p>~<strong>€45/pessoa</strong> · espreguiçadeira + guarda-sol dia inteiro · restaurante e bar incluídos</p>
-      <a class="btn-gold" href="https://www.daferdinandobeachclub.com" target="_blank">✦ Reservar em daferdinandobeachclub.com</a>
+      <a class="btn-gold" href="https://www.daferdinandobeachclub.com" target="_blank">✦ daferdinandobeachclub.com</a>
     </div>
   </div>
 
@@ -6132,7 +6102,7 @@
         <span class="atracao-nova-nome">Passeio de Barco — Ilha de Capri Completa <span class="atracao-data">Dia 09 · 12/08 · Quarta</span></span>
         <span class="atracao-nova-cat">✨ Experiência Única — a Grotta Azzurra e os segredos da costa de Capri só de barco</span>
       </div>
-      <span class="selo selo-vermelho">🎟️ Prioridade</span>
+      <span class="selo selo-pago">✅ Pago | Reserva 10h</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Saída</span><span class="info-valor">⛵ Marina Grande, Capri · ~10/11h</span></div>
@@ -6283,8 +6253,8 @@
       <div class="dica-item"><span class="dica-item-icon">💡</span><div><span class="dica-item-label">DICA</span>A Grotta Azzurra pode fechar por mar agitado ou vento. Se o passeio não incluir ou ela estiver fechada, há a opção de chegar de ônibus de Anacapri e entrar de bote da costa. O ticket extra é ~€15/pessoa.</div></div>
     </div>
     <div class="ingresso-box">
-      <div class="ingresso-box-topo"><span class="ingresso-box-titulo">Reserva Antecipada</span><span class="ingresso-badge">Esgota em agosto</span></div>
-      <p>Passeio de barco ao redor da ilha com Grotta Azzurra: <strong>€30–60</strong>/pessoa · saída Marina Grande ~10h · ~4h de duração</p>
+      <div class="ingresso-box-topo"><span class="ingresso-box-titulo">✅ Reservado · 10h</span></div>
+      <p><strong>R$155</strong> por pessoa · comprado via GetYourGuide · passeio de barco ao redor da ilha com Grotta Azzurra · saída Marina Grande ~10h · ~4h de duração</p>
       <a class="btn-gold" href="https://gyg.me/NV0pNl13" target="_blank">✦ GetYourGuide</a>
     </div>
   </div>
@@ -6870,7 +6840,8 @@
     </div>
     <div class="ingresso-box">
       <div class="ingresso-box-topo"><span class="ingresso-box-titulo">Ingresso no local</span><span class="ingresso-badge">~€10–15 com terraço</span></div>
-      <p><strong>~€3</strong> só a catedral · <strong>~€10–15</strong> com o terraço (escada ou elevador) · reserve em <strong>ticketone.it</strong> para evitar fila</p>
+      <p><strong>~€3</strong> só a catedral · <strong>~€10–15</strong> com o terraço (escada ou elevador) · reserve em <strong>ticket.duomomilano.it</strong> para evitar fila</p>
+      <a class="btn-gold" href="https://ticket.duomomilano.it" target="_blank">✦ ticket.duomomilano.it</a>
     </div>
   </div>
 
@@ -7231,7 +7202,7 @@
         <span class="atracao-nova-nome">Villa Balbianello — Lenno <span class="atracao-data">Dia 12 · 15/08 · Sábado</span></span>
         <span class="atracao-nova-cat">✨ Experiência Única — a villa mais cinematográfica do Lago di Como</span>
       </div>
-      <span class="selo selo-vermelho">🎟️ Prioridade</span>
+      <span class="selo selo-pago">✅ Pago | Reserva 10h40</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Ponto de encontro</span><span class="info-valor">📍 Lungo Lago Guido Delmati 7, Lenno (CO)</span></div>
@@ -7308,7 +7279,7 @@
         <span class="atracao-nova-nome">Villa Carlotta — Tremezzo <span class="atracao-data">Dia 12 · 15/08 · Sábado</span></span>
         <span class="atracao-nova-cat">🌿 Natureza — jardins botânicos românticos com vista para Bellagio</span>
       </div>
-      <span class="selo selo-dourado">🎟️ Pré-viagem</span>
+      <span class="selo selo-pago">✅ Pago | Reserva 13h</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">👣 15 min a pé de Lenno ou ferry Lenno → Tremezzo</span></div>
@@ -7440,7 +7411,7 @@
         <span class="atracao-nova-nome">Villa Monastero — Jardins sobre o lago <span class="atracao-data">Dia 13 · 16/08 · Domingo</span></span>
         <span class="atracao-nova-cat">🌿 Natureza — jardins botânicos com 800m de comprimento beira-lago</span>
       </div>
-      <span class="selo selo-dourado">🎟️ Pré-viagem</span>
+      <span class="selo selo-pago">✅ Pago | Reserva 10h30</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">👣 5 min da Piazza San Giorgio</span></div>
@@ -7806,7 +7777,7 @@
       <span class="atracao-nova-nome">Monte San Salvatore <span class="atracao-data">Dia 14 · 17/08 · Segunda</span></span>
       <span class="atracao-nova-cat">✨ Experiência Única — a vista panorâmica mais impressionante de Lugano</span>
     </div>
-    <span class="selo selo-vermelho">🎟️ Prioridade</span>
+    <span class="selo selo-dourado">🟡 Ingresso no Local</span>
   </div>
   <div class="atracao-info-faixa">
     <div><span class="info-label">Trajeto</span><span class="info-valor">🚇/👣 Centro → Lugano Paradiso + funicular</span></div>
@@ -7892,7 +7863,7 @@
       <span class="atracao-nova-nome">Gandria — passeio de barco e pôr do sol <span class="atracao-data">Dia 14 · 17/08 · Segunda</span></span>
       <span class="atracao-nova-cat">✨ Experiência Única — a vila mais charmosa do fim do dia</span>
     </div>
-    <span class="selo selo-vermelho">🎟️ Prioridade</span>
+    <span class="selo selo-dourado">🟡 Ingresso no Local</span>
   </div>
   <div class="atracao-info-faixa">
     <div><span class="info-label">Trajeto</span><span class="info-valor">🚤 Barco de Lugano → Gandria · ~20 min</span></div>
@@ -8109,6 +8080,20 @@
   </div>
 </div>
 
+<div class="restaurante" style="margin-bottom:12px;">
+  <div class="restaurante-header">
+    <div class="rest-letra">🍽</div>
+    <div class="rest-nome">Trapizzino<span class="rest-recomendado-badge badge-economico">💰 Econômico</span></div>
+  </div>
+  <div class="restaurante-body">
+    <p>📍 Piazza Trilussa, 46 · <strong>ao lado da Taverna Trilussa</strong></p>
+    <p>Culinária: invenção romana · triângulo de pizza de massa alta recheado com pratos tradicionais cozidos · para viagem ou comer na praça</p>
+    <p>💰 <strong>~€5,00</strong> por pessoa · opção econômica e rápida</p>
+    <div class="rest-prato">O trapizzino é um triângulo de pizza de massa alta recheado com pratos tradicionais cozidos — como frango com pimentão ou almôndegas ao molho. Custa cerca de €5,00 e sustenta muito bem. Ótima opção pra quem preferir um jantar mais leve e informal, sentadas na Piazza Trilussa.</div>
+    <p><span class="reserva-direto">✅ Sem reserva · balcão de rua</span></p>
+  </div>
+</div>
+
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
 </div>
 </section>
@@ -8262,6 +8247,22 @@
       <span>Piazza Santa Maria Trastevere Rome basilica</span>
     </div>
       <p class="atracao-nova-desc">A Basílica di Santa Maria in Trastevere é uma das mais antigas de Roma — mosaicos dourados do século XII na fachada, Bernini e Fontana dentro. Mas o verdadeiro programa é sentar na fonte da piazza à noite e ver o bairro acordar para a noite — músicos de rua, casais, famílias, estudantes universitários. É o Trastevere que os moradores conhecem e que os turistas raramente param para realmente ver.</p>
+    </div>
+  </div>
+
+  <!-- ALMOÇO / LANCHE -->
+  <span class="rest-titulo-script">Sugestão pro Almoço/Lanche</span>
+  <div class="restaurante" style="margin-bottom:12px;">
+    <div class="restaurante-header">
+      <div class="rest-letra">🍽</div>
+      <div class="rest-nome">Giselda<span class="rest-recomendado-badge badge-economico">💰 Econômico</span></div>
+    </div>
+    <div class="restaurante-body">
+      <p>📍 Viale di Trastevere 52 · <strong>perto do Hotel Trastevere</strong></p>
+      <p>Culinária: forno/gastronomia self-service · pizza al taglio, lasanha e pratos quentes prontos, para comer no local ou levar</p>
+      <p>💰 <strong>€10–15</strong> por pessoa · opção rápida e econômica</p>
+      <div class="rest-prato">Pizza al taglio (pizza fatiada, vendida por peso) e lasanha são os destaques do balcão de gastronomia. Ótima opção pra um almoço ou lanche rápido e informal antes de seguir para as próximas atrações do dia.</div>
+      <p><span class="reserva-direto">✅ Sem reserva · self-service</span></p>
     </div>
   </div>
 
