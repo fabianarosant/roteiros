@@ -1192,6 +1192,28 @@ body {
   padding: 4px 26px 30px;
   border-top: 1px solid var(--nude-linha);
 }
+.sb-video-ref {
+  background: rgba(201,166,107,0.08);
+  border: 1px solid var(--dourado-suave);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 18px 0;
+}
+.sb-video-ref a {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--dourado-texto);
+  margin-bottom: 8px;
+}
+.sb-video-ref a:hover { text-decoration: underline; }
+.sb-video-ref p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--texto-corpo);
+  margin: 0;
+}
 /* texto corrido dentro do acordeão (blocos conceituais) */
 .sb-acordeao-content-inner > p {
   font-size: 14px;
