@@ -1214,6 +1214,15 @@ body {
   color: var(--texto-corpo);
   margin: 0;
 }
+
+.sb-spotify-embed {
+  margin: 18px 0;
+}
+.sb-spotify-embed iframe {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+}
 /* texto corrido dentro do acordeão (blocos conceituais) */
 .sb-acordeao-content-inner > p {
   font-size: 14px;
