@@ -165,6 +165,8 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
 }
 .prose strong { color: var(--azul-marinho); font-weight: 700; }
 .prose p + p { margin-top: 3.5mm; }
+.prose .grifo { color: var(--fluor-deep); font-weight: 700; }
+.prose .serifa { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; color: var(--azul-marinho); }
 
 .lead {
   font-family: 'Inter', sans-serif;
@@ -421,17 +423,8 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   text-align: center;
   padding: 7mm 8mm;
   margin: 8mm 0;
-  border-top: 1.5px solid var(--gold);
-  border-bottom: 1.5px solid var(--gold);
-}
-.principio-eyebrow {
-  display: block;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9pt;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--gold);
+  background: var(--gold-bg);
+  border: 1px solid var(--gold);
 }
 .principio-texto {
   font-family: 'Space Grotesk', sans-serif;
@@ -439,7 +432,6 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   font-size: 18pt;
   line-height: 1.4;
   color: var(--azul-marinho);
-  margin-top: 4mm;
   max-width: 145mm;
   margin-left: auto;
   margin-right: auto;
@@ -706,74 +698,30 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
 /* ══════════════════════════════════════════════
    FICHA DE PREENCHIMENTO (levantamento receita/despesas/dívida)
 ══════════════════════════════════════════════ */
-.planilha-box {
-  background: var(--azul-claro);
-  border: 1px solid var(--azul-medio);
-  padding: 5mm 6mm;
-  margin: 6mm 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5mm;
-}
-.planilha-box-texto { flex: 1; }
-.planilha-box-titulo {
-  display: block;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 12.5pt;
-  color: var(--azul-marinho);
-  margin-bottom: 1mm;
-}
-.planilha-box-desc { font-family: 'Inter', sans-serif; font-size: 10pt; line-height: 1.45; color: var(--grafite-suave); }
-.planilha-box-btn {
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  background: var(--azul-marinho);
-  color: #ffffff;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 8.5pt;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 3mm 5mm;
-  white-space: nowrap;
-}
-.planilha-nota {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 8pt;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: var(--azul-medio);
-  margin-top: 6mm;
-  display: block;
-}
-
 .ficha-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 8mm; align-items: start; }
 .ficha-categoria { margin-bottom: 5mm; }
 .ficha-categoria-titulo {
   display: block;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 8.5pt;
+  font-size: 9.5pt;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--azul-marinho);
   border-bottom: 1.5px solid var(--gold);
-  padding-bottom: 1.5mm;
-  margin-bottom: 1.5mm;
+  padding-bottom: 2mm;
+  margin-bottom: 2mm;
 }
 .ficha-linha {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 3mm;
-  padding: 1.5mm 0;
+  padding: 2mm 0;
   border-bottom: 0.5px dotted var(--linha);
 }
-.ficha-linha-label { font-family: 'Inter', sans-serif; font-size: 9.5pt; font-weight: 500; color: var(--grafite-suave); flex: 1; }
-.ficha-linha-valor { font-family: 'JetBrains Mono', monospace; font-size: 8.5pt; color: var(--grafite-mute); white-space: nowrap; flex-shrink: 0; }
+.ficha-linha-label { font-family: 'Inter', sans-serif; font-size: 11pt; font-weight: 500; color: var(--grafite-suave); flex: 1; }
+.ficha-linha-valor { font-family: 'JetBrains Mono', monospace; font-size: 10pt; color: var(--grafite-mute); white-space: nowrap; flex-shrink: 0; }
 .ficha-blank { display: inline-block; width: 15mm; height: 3mm; border-bottom: 1px solid var(--grafite-mute); vertical-align: -1mm; }
 .ficha-blank.mini { width: 7mm; }
 .ficha-total {
@@ -787,6 +735,38 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
 }
 .ficha-total-label { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 13pt; color: var(--azul-marinho); }
 .ficha-total-valor { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 12pt; color: var(--azul-marinho); }
+
+/* ══════════════════════════════════════════════
+   TABELA DE DÍVIDAS (parcelas / valor parcela / total)
+══════════════════════════════════════════════ */
+.divida-header {
+  display: grid;
+  grid-template-columns: 1fr 20mm 24mm 24mm;
+  gap: 2mm;
+  padding-bottom: 2mm;
+  border-bottom: 1.5px solid var(--gold);
+  margin-bottom: 1mm;
+}
+.divida-header span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--azul-marinho);
+  text-align: center;
+}
+.divida-header span:first-child { text-align: left; }
+.divida-linha {
+  display: grid;
+  grid-template-columns: 1fr 20mm 24mm 24mm;
+  gap: 2mm;
+  align-items: baseline;
+  padding: 2mm 0;
+  border-bottom: 0.5px dotted var(--linha);
+}
+.divida-nome { font-family: 'Inter', sans-serif; font-size: 10pt; font-weight: 500; color: var(--grafite-suave); }
+.divida-campo { text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 8.5pt; color: var(--grafite-mute); white-space: nowrap; }
 .ficha-total .ficha-blank { width: 30mm; height: 4mm; border-bottom: 1.5px solid var(--azul-marinho); }
 
 /* ══════════════════════════════════════════════
@@ -818,11 +798,11 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
 .sumario-cap { margin-bottom: 8mm; break-inside: avoid; }
 .sumario-cap-titulo {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 3mm;
-  padding-bottom: 2mm;
-  border-bottom: 1.5px solid var(--gold);
-  margin-bottom: 3mm;
+  background: var(--azul-marinho);
+  padding: 3.5mm 4.5mm;
+  margin-bottom: 3.5mm;
 }
 .sumario-cap-num {
   font-family: 'JetBrains Mono', monospace;
@@ -833,27 +813,21 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
 .sumario-cap-titulo span:last-child {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  font-size: 16pt;
-  color: var(--azul-marinho);
+  font-size: 15pt;
+  color: #ffffff;
 }
 .sumario-item {
   display: block;
   font-family: 'Inter', sans-serif;
-  font-size: 12pt;
-  line-height: 1.4;
+  font-weight: 600;
+  font-size: 10pt;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  line-height: 1.5;
   color: var(--grafite-suave);
   padding: 2mm 0;
 }
 .sumario-item:hover { color: var(--fluor-deep); }
-.sumario-topo {
-  display: block;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 14pt;
-  color: var(--azul-marinho);
-  padding: 1.5mm 0;
-  margin-bottom: 6mm;
-}
 
 /* ══════════════════════════════════════════════
    CITAÇÃO PESSOAL (capítulo memorial — serifada)
@@ -901,6 +875,62 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
 .foto-box.is-placeholder .foto-box-fallback { display: flex; }
 
 /* ══════════════════════════════════════════════
+   PÁGINA COM FOTO DE FUNDO EM TELA CHEIA
+══════════════════════════════════════════════ */
+.foto-full {
+  position: relative;
+  background: var(--azul-marinho);
+  overflow: hidden;
+}
+.foto-full img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.foto-full.is-placeholder img { display: none; }
+.foto-full-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13,27,66,0.45) 0%, rgba(13,27,66,0.6) 100%);
+}
+.foto-full-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 22mm;
+}
+.foto-full-frase {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 27pt;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  max-width: 150mm;
+}
+.foto-full-assinatura {
+  display: block;
+  margin-top: 8mm;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.foto-full-fallback {
+  display: none;
+  position: absolute;
+  top: 8mm;
+  left: 8mm;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8pt;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.45);
+}
+.foto-full.is-placeholder .foto-full-fallback { display: block; }
+
+/* ══════════════════════════════════════════════
    PROJETO SOCIAL — bloco de contribuição Pix
 ══════════════════════════════════════════════ */
 .pix-box {
@@ -935,6 +965,37 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   font-size: 10pt;
   color: var(--grafite-mute);
   margin-top: 2mm;
+}
+
+/* ══════════════════════════════════════════════
+   GRADE DE TAGS (retângulos azuis lado a lado)
+══════════════════════════════════════════════ */
+.tags-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 5mm 0; }
+.tags-grid .tag {
+  background: var(--azul-claro);
+  border: 1px solid var(--azul-medio);
+  color: var(--azul-marinho);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 9.5pt;
+  text-align: center;
+  padding: 3.5mm 2mm;
+  line-height: 1.3;
+}
+
+/* ══════════════════════════════════════════════
+   GRADE DE PAÍSES (foto + nome)
+══════════════════════════════════════════════ */
+.paises-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm 4mm; margin: 6mm 0; }
+.pais-item { display: flex; flex-direction: column; align-items: center; gap: 2mm; }
+.pais-item .foto-box { width: 100%; height: 40mm; margin: 0; }
+.pais-nome {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 9pt;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--azul-marinho);
 }
 
 /* ══════════════════════════════════════════════
@@ -1061,8 +1122,9 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   <a class="nav-link" href="#capitulo-03-dia-a-dia" style="padding-left:36px;font-size:13px;">↳ Controle no dia a dia</a>
   <a class="nav-link" href="#capitulo-03-cartao" style="padding-left:36px;font-size:13px;">↳ Cartão de crédito</a>
   <a class="nav-link" href="#capitulo-03-parcelar" style="padding-left:36px;font-size:13px;">↳ Como usar o cartão de crédito</a>
+  <a class="nav-link" href="#capitulo-03-vencimento" style="padding-left:36px;font-size:13px;">↳ Qual a melhor data de vencimento</a>
   <a class="nav-link" href="#capitulo-03-consumismo" style="padding-left:36px;font-size:13px;">↳ Consumismo</a>
-  <a class="nav-link" href="#capitulo-03-divida-quando" style="padding-left:36px;font-size:13px;">↳ Quando vale a pena se endividar</a>
+  <a class="nav-link" href="#capitulo-03-divida-quando" style="padding-left:36px;font-size:13px;">↳ Vale a pena fazer empréstimo?</a>
   <a class="nav-link" href="#capitulo-04">04 · Planos de ação financeiro</a>
   <a class="nav-link" href="#capitulo-04-sos" style="padding-left:36px;font-size:13px;">↳ Plano SOS Emergência</a>
   <a class="nav-link" href="#capitulo-04-organizacao" style="padding-left:36px;font-size:13px;">↳ Plano Organização Financeira</a>
@@ -1074,9 +1136,11 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   <a class="nav-link" href="#capitulo-05-primeiros-10mil" style="padding-left:36px;font-size:13px;">↳ Os primeiros R$ 10 mil</a>
   <a class="nav-link" href="#capitulo-05-renda" style="padding-left:36px;font-size:13px;">↳ A educação aumentou minha renda</a>
   <a class="nav-link" href="#capitulo-05-carro" style="padding-left:36px;font-size:13px;">↳ Meu primeiro carro</a>
+  <a class="nav-link" href="#capitulo-05-segundo-carro" style="padding-left:36px;font-size:13px;">↳ Evoluindo com responsabilidade</a>
   <a class="nav-link" href="#capitulo-05-liberdade" style="padding-left:36px;font-size:13px;">↳ Liberdade inegociável</a>
   <a class="nav-link" href="#capitulo-05-casamento" style="padding-left:36px;font-size:13px;">↳ Mesmo propósito</a>
   <a class="nav-link" href="#capitulo-05-milhas" style="padding-left:36px;font-size:13px;">↳ Como as milhas entraram</a>
+  <a class="nav-link" href="#capitulo-05-paises" style="padding-left:36px;font-size:13px;">↳ Países que já conheci</a>
   <a class="nav-link" href="#capitulo-05-nao-e-so-dinheiro" style="padding-left:36px;font-size:13px;">↳ Não é só sobre dinheiro</a>
   <a class="nav-link" href="#capitulo-05-comeco" style="padding-left:36px;font-size:13px;">↳ Sua história não precisa começar grande</a>
   <a class="nav-link" href="#capitulo-05-sonhos" style="padding-left:36px;font-size:13px;">↳ Os sonhos precisam de direção</a>
@@ -1116,6 +1180,23 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
 </section>
 
 <!-- ══════════════════════════════════════════
+     FOTO DE ABERTURA + FRASE DE IMPACTO
+══════════════════════════════════════════ -->
+<section>
+<div class="pagina foto-full is-placeholder">
+  <img src="./assets/fotos/eric-capa.jpg" alt="Eric de Paula" loading="lazy"
+    onload="this.parentElement.classList.remove('is-placeholder')"
+    onerror="this.parentElement.classList.add('is-placeholder')">
+  <span class="foto-full-fallback">📷 Foto: Eric de Paula</span>
+  <div class="foto-full-overlay"></div>
+  <div class="foto-full-content">
+    <p class="foto-full-frase">"Sua organização financeira glorifica a Deus."</p>
+    <span class="foto-full-assinatura">Eric de Paula</span>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════
      MENU PRINCIPAL
 ══════════════════════════════════════════ -->
 <section>
@@ -1127,13 +1208,13 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
 
   <div class="section-head">
     <h1 class="sec-h2" style="font-size:32pt;margin-top:3mm;">Menu <span class="accent">Principal</span></h1>
-    <p class="lead" style="margin-top:3mm;max-width:none;">Este é um guia interativo — clique nos tópicos e acesse rapidamente as páginas.</p>
+    <div class="dica-box" style="margin-top:4mm;">
+      <p style="margin:0;font-size:11.5pt;white-space:nowrap;">Guia interativo: clique nos tópicos para navegar.</p>
+    </div>
   </div>
 
   <div class="sumario-2col">
     <div>
-      <a class="sumario-topo" href="#sobre">Sobre este guia</a>
-
       <div class="sumario-cap">
         <a class="sumario-cap-titulo" href="#capitulo-01"><span class="sumario-cap-num">01</span><span>Fundamentos</span></a>
         <a class="sumario-item" href="#capitulo-01">Educação financeira começa aqui</a>
@@ -1163,7 +1244,7 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
         <a class="sumario-item" href="#capitulo-03">Gastar não é o problema</a>
         <a class="sumario-item" href="#capitulo-03-cartao">Cartão de crédito</a>
         <a class="sumario-item" href="#capitulo-03-consumismo">Consumismo</a>
-        <a class="sumario-item" href="#capitulo-03-divida-quando">Quando vale a pena se endividar</a>
+        <a class="sumario-item" href="#capitulo-03-divida-quando">Vale a pena fazer empréstimo?</a>
       </div>
 
       <div class="sumario-cap">
@@ -1793,7 +1874,7 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   <div class="momento-conceito" style="margin-top:0;">
     <div class="conceito-item" style="margin-bottom:0;">
       <span class="conceito-termo">CDI</span>
-      <p class="conceito-def">É uma taxa muito usada como referência em investimentos de renda fixa. Você vai encontrar expressões como "rende 90% do CDI", "100% do CDI" ou "110% do CDI".</p>
+      <p class="conceito-def">É a sigla de Certificado de Depósito Interbancário — uma taxa usada como referência em investimentos de renda fixa. Na prática, o CDI anda muito próximo da Selic: quando ela sobe ou desce, o CDI acompanha de perto, quase colado. Por isso, você vai encontrar expressões como "rende 90% do CDI", "100% do CDI" ou "110% do CDI" — sempre comparando o rendimento a essa referência que se move junto com a taxa básica de juros do país.</p>
     </div>
     <p class="conceito-porque">
       <span class="conceito-porque-label">Por que importa</span>
@@ -2291,15 +2372,7 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   <div class="section-head">
     <span class="eyebrow">Ficha de preenchimento</span>
     <h2 class="sec-h2" style="margin-top:3mm;">Levantamento de <span class="accent">receitas</span></h2>
-    <p class="lead" style="margin-top:4mm;">Liste tudo que entra, mês a mês. Pode preencher aqui no papel ou direto na planilha online — o conteúdo é o mesmo.</p>
-  </div>
-
-  <div class="planilha-box">
-    <div class="planilha-box-texto">
-      <span class="planilha-box-titulo">Planilha online</span>
-      <span class="planilha-box-desc">Mesmas categorias, com cálculo automático dos totais. Preencha pelo computador ou celular.</span>
-    </div>
-    <a class="planilha-box-btn" href="#">COLOCAR LINK AQUI ↗</a>
+    <p class="lead" style="margin-top:4mm;">Liste tudo que entra, mês a mês.</p>
   </div>
 
   <div class="dica-box">
@@ -2394,7 +2467,7 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
         <div class="ficha-linha"><span class="ficha-linha-label">Plano funerário</span><span class="ficha-linha-valor">R$ <span class="ficha-blank"></span></span></div>
         <div class="ficha-linha"><span class="ficha-linha-label">Medicamentos</span><span class="ficha-linha-valor">R$ <span class="ficha-blank"></span></span></div>
         <div class="ficha-linha"><span class="ficha-linha-label">Terapias / psicólogo</span><span class="ficha-linha-valor">R$ <span class="ficha-blank"></span></span></div>
-        <div class="ficha-linha"><span class="ficha-linha-label">Acompanhamento médico particular</span><span class="ficha-linha-valor">R$ <span class="ficha-blank"></span></span></div>
+        <div class="ficha-linha"><span class="ficha-linha-label">Acompanhamento médico</span><span class="ficha-linha-valor">R$ <span class="ficha-blank"></span></span></div>
         <div class="ficha-linha"><span class="ficha-linha-label">Outros: <span class="ficha-blank" style="width:22mm;"></span></span><span class="ficha-linha-valor">R$ <span class="ficha-blank"></span></span></div>
       </div>
       <div class="ficha-categoria">
@@ -2488,36 +2561,36 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   <div class="section-head">
     <span class="eyebrow">Ficha de preenchimento</span>
     <h2 class="sec-h2" style="margin-top:3mm;">Levantamento de <span class="accent">dívidas</span></h2>
-    <p class="lead" style="margin-top:4mm;">Liste cada dívida em aberto. Se tiver mais de um cartão ou financiamento, repita a linha ou use a planilha online, que tem espaço pra detalhamento mês a mês.</p>
+    <p class="lead" style="margin-top:4mm;">Liste cada dívida em aberto. Se tiver mais de um cartão ou financiamento, repita a linha.</p>
   </div>
 
   <div class="ficha-categoria">
     <span class="ficha-categoria-titulo">Bancos e instituições financeiras</span>
-    <div class="ficha-linha"><span class="ficha-linha-label">Cartão de crédito</span><span class="ficha-linha-valor">Parcelado? <span class="ficha-blank mini"></span> · R$ <span class="ficha-blank"></span></span></div>
-    <div class="ficha-linha"><span class="ficha-linha-label">Financiamento — casa</span><span class="ficha-linha-valor">Parcelado? <span class="ficha-blank mini"></span> · R$ <span class="ficha-blank"></span></span></div>
-    <div class="ficha-linha"><span class="ficha-linha-label">Financiamento — terreno</span><span class="ficha-linha-valor">Parcelado? <span class="ficha-blank mini"></span> · R$ <span class="ficha-blank"></span></span></div>
-    <div class="ficha-linha"><span class="ficha-linha-label">Financiamento — carro/moto</span><span class="ficha-linha-valor">Parcelado? <span class="ficha-blank mini"></span> · R$ <span class="ficha-blank"></span></span></div>
-    <div class="ficha-linha"><span class="ficha-linha-label">Financiamento — faculdade</span><span class="ficha-linha-valor">Parcelado? <span class="ficha-blank mini"></span> · R$ <span class="ficha-blank"></span></span></div>
-    <div class="ficha-linha"><span class="ficha-linha-label">Empréstimo monetário</span><span class="ficha-linha-valor">Parcelado? <span class="ficha-blank mini"></span> · R$ <span class="ficha-blank"></span></span></div>
-    <div class="ficha-linha"><span class="ficha-linha-label">Cheque especial</span><span class="ficha-linha-valor">Parcelado? <span class="ficha-blank mini"></span> · R$ <span class="ficha-blank"></span></span></div>
+    <div class="divida-header"><span>Dívida</span><span>Parcelas</span><span>Valor parcela</span><span>Valor total</span></div>
+    <div class="divida-linha"><span class="divida-nome">Cartão de crédito</span><span class="divida-campo"><span class="ficha-blank mini"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span></div>
+    <div class="divida-linha"><span class="divida-nome">Financiamento — casa</span><span class="divida-campo"><span class="ficha-blank mini"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span></div>
+    <div class="divida-linha"><span class="divida-nome">Financiamento — terreno</span><span class="divida-campo"><span class="ficha-blank mini"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span></div>
+    <div class="divida-linha"><span class="divida-nome">Financiamento — carro/moto</span><span class="divida-campo"><span class="ficha-blank mini"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span></div>
+    <div class="divida-linha"><span class="divida-nome">Financiamento — faculdade</span><span class="divida-campo"><span class="ficha-blank mini"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span></div>
+    <div class="divida-linha"><span class="divida-nome">Empréstimo monetário</span><span class="divida-campo"><span class="ficha-blank mini"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span></div>
+    <div class="divida-linha"><span class="divida-nome">Cheque especial</span><span class="divida-campo"><span class="ficha-blank mini"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span></div>
   </div>
 
   <div class="ficha-categoria">
     <span class="ficha-categoria-titulo">Outras dívidas</span>
-    <div class="ficha-linha"><span class="ficha-linha-label">Empréstimo com pessoas próximas</span><span class="ficha-linha-valor">Parcelado? <span class="ficha-blank mini"></span> · R$ <span class="ficha-blank"></span></span></div>
-    <div class="ficha-linha"><span class="ficha-linha-label">Carnê / boleto de loja</span><span class="ficha-linha-valor">Parcelado? <span class="ficha-blank mini"></span> · R$ <span class="ficha-blank"></span></span></div>
-    <div class="ficha-linha"><span class="ficha-linha-label">Judiciais (pensão, multas, etc.)</span><span class="ficha-linha-valor">Parcelado? <span class="ficha-blank mini"></span> · R$ <span class="ficha-blank"></span></span></div>
-    <div class="ficha-linha"><span class="ficha-linha-label">Saúde (consultas/exames/plano em aberto)</span><span class="ficha-linha-valor">Parcelado? <span class="ficha-blank mini"></span> · R$ <span class="ficha-blank"></span></span></div>
-    <div class="ficha-linha"><span class="ficha-linha-label">Impostos (IPTU, IPVA, IR, etc.)</span><span class="ficha-linha-valor">Parcelado? <span class="ficha-blank mini"></span> · R$ <span class="ficha-blank"></span></span></div>
-    <div class="ficha-linha"><span class="ficha-linha-label">Outros: <span class="ficha-blank" style="width:22mm;"></span></span><span class="ficha-linha-valor">Parcelado? <span class="ficha-blank mini"></span> · R$ <span class="ficha-blank"></span></span></div>
+    <div class="divida-header"><span>Dívida</span><span>Parcelas</span><span>Valor parcela</span><span>Valor total</span></div>
+    <div class="divida-linha"><span class="divida-nome">Empréstimo com pessoas próximas</span><span class="divida-campo"><span class="ficha-blank mini"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span></div>
+    <div class="divida-linha"><span class="divida-nome">Carnê / boleto de loja</span><span class="divida-campo"><span class="ficha-blank mini"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span></div>
+    <div class="divida-linha"><span class="divida-nome">Judiciais (pensão, multas, etc.)</span><span class="divida-campo"><span class="ficha-blank mini"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span></div>
+    <div class="divida-linha"><span class="divida-nome">Saúde (consultas/exames/plano em aberto)</span><span class="divida-campo"><span class="ficha-blank mini"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span></div>
+    <div class="divida-linha"><span class="divida-nome">Impostos (IPTU, IPVA, IR, etc.)</span><span class="divida-campo"><span class="ficha-blank mini"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span></div>
+    <div class="divida-linha"><span class="divida-nome">Outros: <span class="ficha-blank" style="width:18mm;"></span></span><span class="divida-campo"><span class="ficha-blank mini"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span><span class="divida-campo">R$<span class="ficha-blank" style="width:14mm;"></span></span></div>
   </div>
 
   <div class="ficha-total">
     <span class="ficha-total-label">Total geral em dívidas</span>
     <span class="ficha-total-valor">R$ <span class="ficha-blank"></span></span>
   </div>
-
-  <span class="planilha-nota">📎 Planilha completa (com detalhamento mês a mês): COLOCAR LINK AQUI</span>
 
   <div class="pf"><a href="#menu" class="pf-menu">Menu Principal</a></div>
 </div>
@@ -2815,7 +2888,6 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   </ul>
 
   <div class="principio-box">
-    <span class="principio-eyebrow">Princípio do capítulo</span>
     <p class="principio-texto">Controlar gastos não é sobre gastar menos.<br>É sobre gastar de acordo com o que você decidiu que importa.</p>
   </div>
 
@@ -2898,27 +2970,28 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
     <p>Eu utilizo e oriento meus alunos a utilizarem um aplicativo financeiro chamado <strong>Mobills</strong>, que tem versão gratuita e atende muito bem. É mais prático que planilha — está sempre na palma da mão, no celular, e não tem desculpa pra não anotar receita e gasto na hora. É fácil, prático e acessível.</p>
   </div>
 
-  <p class="prose">Nele, você consegue reunir informações como:</p>
-  <ul class="lista-prosa" style="margin-top:2mm;">
-    <li>contas</li>
-    <li>cartões</li>
-    <li>receitas</li>
-    <li>despesas</li>
-    <li>categorias</li>
-    <li>limites de gastos</li>
-    <li>objetivos financeiros</li>
-  </ul>
+  <div class="foto-box is-placeholder" style="width:75mm;height:75mm;margin:5mm auto;background:transparent;">
+    <img src="./assets/fotos/mobills1.png" alt="App Mobills" style="object-fit:contain;"
+      onload="this.parentElement.classList.remove('is-placeholder')"
+      onerror="this.parentElement.classList.add('is-placeholder')">
+    <span class="foto-box-fallback">📱 Imagem: app Mobills</span>
+  </div>
 
-  <p class="frase-impacto">Você não precisa utilizar todos os recursos de uma vez. Comece apenas pelo básico.</p>
+  <div style="display:flex;gap:4mm;justify-content:center;margin-bottom:5mm;flex-wrap:wrap;">
+    <a href="https://mobills.com.br" target="_blank" class="pill marinho" style="text-decoration:none;">📲 Instale o app</a>
+    <a href="https://mobills.com.br" target="_blank" class="pill fluor" style="text-decoration:none;">🌐 Acesse pela web</a>
+  </div>
 
-  <span class="subconceito-titulo">Passo 1 — Cadastre suas contas</span>
-  <p class="prose">Inclua os lugares em que você movimenta dinheiro:</p>
-  <ul class="lista-prosa" style="margin-top:2mm;margin-bottom:0;">
-    <li>conta bancária</li>
-    <li>conta digital</li>
-    <li>carteira</li>
-    <li>dinheiro em espécie</li>
-  </ul>
+  <p class="prose" style="margin-top:2mm;">No <strong>Mobills</strong> você consegue reunir informações como:</p>
+  <div class="tags-grid">
+    <span class="tag">Contas</span>
+    <span class="tag">Cartões</span>
+    <span class="tag">Receitas</span>
+    <span class="tag">Despesas</span>
+    <span class="tag">Categorias</span>
+    <span class="tag">Limites de gastos</span>
+    <span class="tag">Objetivos financeiros</span>
+  </div>
 
   <div class="pf"><a href="#menu" class="pf-menu">Menu Principal</a></div>
 </div>
@@ -2934,10 +3007,16 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
     <span class="ph-right">Guia Financeiro <em>· Eric de Paula</em></span>
   </div>
 
-  <div class="alerta-box" style="margin-top:2mm;">
-    <span class="alerta-box-titulo">Atenção</span>
-    <p>Não inclua o limite do cheque especial como saldo. Limite é crédito, não dinheiro seu.</p>
-  </div>
+  <span class="eyebrow" style="display:block;margin-top:2mm;">Passo a passo prático</span>
+
+  <span class="subconceito-titulo" style="margin-top:3mm;">Passo 1 — Cadastre suas contas</span>
+  <p class="prose">Inclua os lugares em que você movimenta dinheiro:</p>
+  <ul class="lista-prosa" style="margin-top:2mm;margin-bottom:0;">
+    <li>conta bancária</li>
+    <li>conta digital</li>
+    <li>carteira</li>
+    <li>dinheiro em espécie</li>
+  </ul>
 
   <span class="subconceito-titulo">Passo 2 — Cadastre seus cartões</span>
   <p class="prose">Informe:</p>
@@ -2960,7 +3039,10 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
     <li>outros recebimentos</li>
   </ul>
 
-  <p class="frase-impacto">Uma renda esperada não deve ser registrada como disponível antes de chegar.</p>
+  <div class="alerta-box">
+    <span class="alerta-box-titulo">Atenção</span>
+    <p>Limite do cheque especial não é saldo — é crédito, não dinheiro seu. E renda esperada não deve ser registrada como disponível antes de chegar.</p>
+  </div>
 
   <div class="pf"><a href="#menu" class="pf-menu">Menu Principal</a></div>
 </div>
@@ -3032,7 +3114,6 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   </div>
 
   <div class="principio-box">
-    <span class="principio-eyebrow">Princípio do capítulo</span>
     <p class="principio-texto">O objetivo não é ter um aplicativo impecável.<br>É ter informações suficientes para tomar decisões melhores.</p>
   </div>
 
@@ -3147,6 +3228,53 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
 </section>
 
 <!-- ══════════════════════════════════════════
+     CAPÍTULO 03 — QUAL A MELHOR DATA DE VENCIMENTO
+══════════════════════════════════════════ -->
+<section>
+<div id="capitulo-03-vencimento" class="pagina">
+  <div class="ph">
+    <span class="ph-left">Capítulo 03 · Controle e consumo</span>
+    <span class="ph-right">Guia Financeiro <em>· Eric de Paula</em></span>
+  </div>
+
+  <div class="section-head">
+    <h2 class="sec-h2" style="margin-top:3mm;">Qual a melhor data de <span class="accent">vencimento</span>?</h2>
+    <p class="lead" style="margin-top:4mm;">O ideal é configurar o vencimento da fatura para o último dia do mês — ou, no máximo, para o primeiro dia do mês seguinte.</p>
+  </div>
+
+  <p class="prose">Se a fatura vence no meio do mês, o cartão cria um descompasso: o que você gasta agora só é cobrado, de fato, semanas depois — misturado com despesas do mês seguinte. Esse atraso pode virar bola de neve: você vai sempre pagando um pedaço do mês passado junto com o mês atual, sem nunca saber ao certo quanto já está comprometido.</p>
+
+  <div class="comparacao-grid">
+    <div class="pessoa-card positivo">
+      <span class="pessoa-nome" style="font-size:13pt;">Vencimento no fim do mês</span>
+      <ul class="quadrante-lista" style="margin-top:2mm;margin-bottom:0;">
+        <li>o que você gasta no mês é cobrado no mesmo mês</li>
+        <li>gasto e fatura ficam alinhados</li>
+        <li>mais fácil enxergar quanto já está comprometido</li>
+      </ul>
+    </div>
+    <div class="pessoa-card negativo">
+      <span class="pessoa-nome" style="font-size:13pt;">Vencimento no meio do mês</span>
+      <ul class="quadrante-lista" style="margin-top:2mm;margin-bottom:0;">
+        <li>compras dos últimos dias "vazam" pra fatura seguinte</li>
+        <li>você paga por gastos de dois meses misturados</li>
+        <li>mais fácil perder a noção do que já foi gasto</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="prose">O cartão de crédito é, na prática, um empréstimo — a instituição paga a sua compra na hora, e você devolve depois. Esse prazo não pode se estender além de 30 dias, porque os juros do rotativo são abusivos.</p>
+  <p class="prose" style="margin-top:3.5mm;">Se o cartão não existisse, você gastaria o dinheiro durante o próprio mês — não teria como comprar hoje e só sentir o impacto dali a 40 dias. O cartão deve funcionar assim também: uma ferramenta de praticidade, não um jeito de esticar o tempo entre gastar e pagar.</p>
+
+  <div class="principio-box">
+    <p class="principio-texto">Gasta-se no mês, paga-se no mês.</p>
+  </div>
+
+  <div class="pf"><a href="#menu" class="pf-menu">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════
      CAPÍTULO 03 — CONSUMISMO
 ══════════════════════════════════════════ -->
 <section>
@@ -3195,7 +3323,7 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   </div>
 
   <div class="section-head">
-    <h2 class="sec-h2" style="margin-top:3mm;">Quando vale a pena se <span class="accent">endividar</span></h2>
+    <h2 class="sec-h2" style="margin-top:3mm;">Vale a pena fazer <span class="accent">empréstimo</span>?</h2>
   </div>
 
   <div class="comparacao-grid">
@@ -3223,6 +3351,7 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
     <div class="conceito-item">
       <span class="conceito-termo">Consórcio</span>
       <p class="conceito-def">Você entra num grupo e paga parcelas; o contemplado (por sorteio ou lance) recebe a carta de crédito. Não há juros, mas há taxa de administração, e o prazo pra ser contemplado é incerto.</p>
+      <p class="conceito-def" style="margin-top:1.5mm;font-style:italic;font-size:11pt;"><strong>Minha opinião:</strong> só optaria por consórcio se já tivesse o dinheiro pra dar um lance que contemplasse a carta imediatamente.</p>
     </div>
     <div class="conceito-item" style="margin-bottom:0;">
       <span class="conceito-termo">Financiamento</span>
@@ -3235,8 +3364,7 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   </div>
 
   <div class="principio-box">
-    <span class="principio-eyebrow">Princípio do capítulo</span>
-    <p class="principio-texto">Toda dívida tem um preço. A pergunta nunca é só "cabe no bolso" — é "o que estou comprando vale esse preço total?"</p>
+    <p class="principio-texto">Empréstimo bom financia o futuro. Empréstimo ruim cobra do futuro.</p>
   </div>
 
   <div class="pf"><a href="#menu" class="pf-menu">Menu Principal</a></div>
@@ -3520,7 +3648,6 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   </div>
 
   <div class="principio-box">
-    <span class="principio-eyebrow">Princípio do capítulo</span>
     <p class="principio-texto">Investir bem começa muito antes de escolher onde investir. Começa em ter, antes, uma base organizada.</p>
   </div>
 
@@ -3534,7 +3661,7 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
 <section>
 <div class="pagina capitulo-divisor">
   <span class="divisor-num">Capítulo 05</span>
-  <h2 class="divisor-titulo">Como a educação financeira transformou a minha vida</h2>
+  <h2 class="divisor-titulo" style="font-size:36pt;max-width:170mm;">Como a educação financeira<br>transformou a minha vida</h2>
   <div class="divisor-linha"></div>
   <p class="divisor-frase">Liberdade não é construída de uma única vez. Ela nasce em decisões pequenas.</p>
 </div>
@@ -3554,17 +3681,10 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
     <h2 class="sec-h2" style="margin-top:3mm;">Segurança, não <span class="accent">luxo</span></h2>
   </div>
 
-  <p class="prose">Durante muito tempo, dinheiro não significou luxo para mim. Significou segurança.</p>
+  <p class="prose">Durante muito tempo, dinheiro não significou luxo para mim. Significou <span class="grifo">segurança</span>.</p>
   <p class="prose" style="margin-top:3.5mm;">Venho de uma família humilde. Perdi meu pai ainda jovem e acompanhei de perto a luta da minha mãe para suprir as necessidades da nossa casa — o peso das contas, das responsabilidades e das decisões que precisavam ser tomadas mesmo quando o dinheiro era curto.</p>
 
-  <div class="foto-box is-placeholder">
-    <img src="./assets/fotos/familia.jpg" alt="Família de Eric de Paula" loading="lazy"
-      onload="this.parentElement.classList.remove('is-placeholder')"
-      onerror="this.parentElement.classList.add('is-placeholder')">
-    <span class="foto-box-fallback">📷 Foto: família</span>
-  </div>
-
-  <p class="prose">Essa realidade despertou algo em mim desde muito cedo. Eu queria entender como poderia ganhar mais, cuidar melhor do que recebia e construir uma vida diferente para o meu futuro. Não porque quisesse parecer rico — mas porque queria ter escolhas.</p>
+  <p class="prose" style="margin-top:3.5mm;">Essa realidade despertou algo em mim desde muito cedo. Eu queria entender como poderia ganhar mais, cuidar melhor do que recebia e construir uma vida diferente para o meu futuro. Não porque quisesse parecer rico — mas porque queria ter <span class="grifo">escolhas</span>.</p>
   <p class="prose" style="margin-top:3.5mm;">Queria ajudar minha família, conquistar minhas coisas e não passar a vida inteira dependendo da sorte ou esperando que algum problema se resolvesse sozinho.</p>
 
   <div class="citacao-pessoal">Foi assim que minha educação financeira começou: antes dos livros, dos cursos e dos investimentos. Ela começou dentro de casa, observando a realidade.</div>
@@ -3587,14 +3707,10 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
     <h2 class="sec-h2" style="margin-top:3mm;">Meu primeiro <span class="accent">hábito</span></h2>
   </div>
 
-  <div class="foto-box is-placeholder">
-    <img src="./assets/fotos/primeiro-emprego.jpg" alt="Eric aos 14 anos, primeiro emprego" loading="lazy"
-      onload="this.parentElement.classList.remove('is-placeholder')"
-      onerror="this.parentElement.classList.add('is-placeholder')">
-    <span class="foto-box-fallback">📷 Foto: primeiro emprego, 14 anos</span>
-  </div>
+  <p class="prose">Aprendi a guardar dinheiro antes mesmo de ter meu primeiro emprego — observando meu pai, enquanto ele ainda era vivo. Todos os dias, ao chegar do trabalho, ele colocava uma moedinha dentro de uma garrafa pet transparente que ficava em cima da estante. Não era muito. Mas era <span class="grifo">todos os dias</span>.</p>
+  <p class="prose" style="margin-top:3.5mm;">Depois de um tempo, ele me deu um cofrinho. E eu comecei a imitar aquele gesto — <span class="serifa">guardar um pouco, sempre</span>.</p>
 
-  <p class="prose">Comecei a trabalhar aos 14 anos como office boy. Meu salário era pequeno — não havia grandes valores para administrar, mas eu já entendia que não poderia gastar tudo o que entrava.</p>
+  <p class="prose" style="margin-top:3.5mm;">Foi por isso que, quando consegui meu primeiro emprego como office boy, aos 14 anos, guardar dinheiro foi fácil: o hábito já estava <span class="grifo">enraizado</span>. O salário era pequeno — não havia grandes valores para administrar —, mas eu já sabia que não poderia gastar tudo o que entrava.</p>
   <p class="prose" style="margin-top:3.5mm;">Desde aquela época, comecei a guardar uma parte. Nem sempre era muito: em alguns meses, R$ 50; em outros, um pouco mais. O valor mudava, mas o hábito permanecia. Desde então, nunca mais parei de guardar dinheiro.</p>
 
   <div class="citacao-pessoal">A organização financeira não começa quando você passa a ganhar muito. Ela começa quando decide cuidar do pouco.</div>
@@ -3620,19 +3736,20 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
     <h2 class="sec-h2" style="margin-top:3mm;">Minha primeira <span class="accent">conquista</span></h2>
   </div>
 
-  <p class="prose">Meu primeiro bem foi uma bicicleta. Eu a conquistei com o dinheiro do meu trabalho e da minha organização.</p>
-  <p class="prose" style="margin-top:3.5mm;">Pode parecer uma conquista simples perto de uma casa, um carro ou um investimento. Mas aquela bicicleta representava muito: era a prova de que eu conseguia trabalhar, planejar, esperar e conquistar.</p>
+  <p class="prose">Minha mãe me deu uma bicicleta — <span class="serifa">com muito esforço da parte dela</span>. Foi com essa bicicleta que comecei a trabalhar.</p>
+  <p class="prose" style="margin-top:3.5mm;">Minha primeira conquista de verdade, comprada com o meu próprio dinheiro, foi um computador. Fui até a loja e escolhi cada peça: o monitor, o teclado, o mouse. Aquele mouse, aliás, está comigo até hoje — já tem <span class="grifo">30 anos</span> e continua funcionando.</p>
 
   <div class="foto-box is-placeholder">
-    <img src="./assets/fotos/bicicleta.jpg" alt="Primeira bicicleta" loading="lazy"
+    <img src="./assets/fotos/computador.jpg" alt="Primeiro computador" loading="lazy"
       onload="this.parentElement.classList.remove('is-placeholder')"
       onerror="this.parentElement.classList.add('is-placeholder')">
-    <span class="foto-box-fallback">📷 Foto: a bicicleta</span>
+    <span class="foto-box-fallback">📷 Foto: o computador</span>
   </div>
 
-  <p class="prose">Eu a guardo até hoje, com muito carinho. Não apenas pelo objeto — mas por tudo o que ele representa.</p>
+  <p class="prose">Em paralelo, usei esse mesmo esforço pra ajudar minha mãe: nossa casa não tinha laje, era direto pro telhado, e eu ajudei a pagar um forro de PVC pra cobrir aquilo.</p>
+  <p class="prose" style="margin-top:3.5mm;">Anos depois, quando as coisas já tinham melhorado, doei esse computador pra uma família que precisava.</p>
 
-  <div class="citacao-pessoal">Quando olho para ela, lembro de onde comecei. Lembro que toda construção importante começa pequena — e aquilo que hoje parece pouco pode ser o primeiro degrau de uma história muito maior.</div>
+  <div class="citacao-pessoal">Não foi só uma compra. Foi a prova de que o meu trabalho podia virar escolha — e de que escolha, quando dá certo, também pode ser repartida.</div>
 
   <div class="pf"><a href="#menu" class="pf-menu">Menu Principal</a></div>
 </div>
@@ -3652,9 +3769,9 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
     <h2 class="sec-h2" style="margin-top:3mm;">Os primeiros R$ <span class="accent">10 mil</span></h2>
   </div>
 
-  <p class="prose">Aos <strong>[inserir idade correta]</strong> anos, alcancei meus primeiros R$ 10 mil investidos.</p>
-  <p class="prose" style="margin-top:3.5mm;">Esse valor não apareceu de uma vez. Não foi resultado de uma aposta, de uma oportunidade milagrosa ou de uma renda extraordinária. Foi construído aos poucos — com trabalho, organização, escolhas conscientes e a decisão de guardar uma parte, mesmo quando o valor parecia pequeno.</p>
-  <p class="prose" style="margin-top:3.5mm;">Para algumas pessoas, R$ 10 mil podem parecer muito. Para outras, pouco. Para mim, naquele momento, significavam a confirmação de que o processo funcionava — eu estava começando a transformar renda em patrimônio. O dinheiro que entrava não desaparecia completamente: uma parte permanecia, crescia e começava a construir minha segurança.</p>
+  <p class="prose">Aos <span class="grifo">16 anos</span>, alcancei meus primeiros R$ 10 mil investidos — mesmo já tendo usado parte do que guardava para comprar o computador e ajudar minha mãe com o forro de PVC.</p>
+  <p class="prose" style="margin-top:3.5mm;">Esse valor não apareceu de uma vez. Não foi resultado de uma aposta, de uma oportunidade milagrosa ou de uma renda extraordinária. O segredo foi, antes de tudo, guardar, guardar, guardar — e, quando o valor começou a crescer, pesquisar sobre investimentos.</p>
+  <p class="prose" style="margin-top:3.5mm;">Foi aí que descobri os juros compostos e comecei pela renda fixa, com o básico do básico: o Tesouro Direto. Na época havia muito pouca informação disponível — e eu ainda precisava pagar TED no banco só para conseguir mandar o dinheiro pra corretora.</p>
 
   <div class="citacao-pessoal">Investir não começa na escolha de um produto financeiro. Começa muito antes.</div>
 
@@ -3686,8 +3803,9 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   </div>
 
   <p class="prose">Organização financeira não significa apenas reduzir gastos. Em alguns momentos, também precisamos encontrar formas de aumentar nossa capacidade de ganhar dinheiro.</p>
-  <p class="prose" style="margin-top:3.5mm;">Por isso, fiz uma formação profissional na área elétrica. Meu objetivo era claro: desenvolver uma profissão, entrar em uma empresa e melhorar meu salário. Eu sabia que, para mudar minha renda, precisaria aumentar meu conhecimento e minha capacidade profissional.</p>
-  <p class="prose" style="margin-top:3.5mm;">Quando comecei a ganhar mais, continuei com os mesmos princípios. Não transformei todo aumento de renda em aumento imediato de gastos — passei a guardar mais. Isso fez uma grande diferença: ganhar mais sem organização pode apenas criar uma vida mais cara; ganhar mais mantendo os pés no chão pode acelerar a construção de segurança e de liberdade.</p>
+  <p class="prose" style="margin-top:3.5mm;">Eu não tinha condições de pagar uma faculdade. Mas aqui em Araxá várias empresas oferecem oportunidades de <span class="grifo">estudar e ganhar dinheiro ao mesmo tempo</span> — como o Senai e a bolsa do Cefet. Pra mim, naquela época, era a oportunidade certa.</p>
+  <p class="prose" style="margin-top:3.5mm;">Como sempre tive facilidade com matemática, escolhi a área elétrica, que exigia bastante cálculo e onde eu tinha melhor desempenho. Entrei no Senai, estudei elétrica e já ganhava um dinheirinho enquanto trabalhava meio período — os três períodos do dia ocupados, entre trabalho e estudo.</p>
+  <p class="prose" style="margin-top:3.5mm;">Depois fiz o Cefet, e isso abriu a oportunidade de entrar numa empresa onde pude crescer ainda mais: meu salário foi aumentando com o tempo.</p>
 
   <div class="citacao-pessoal">A renda maior abre possibilidades. A educação financeira impede que essas possibilidades sejam desperdiçadas.</div>
 
@@ -3710,19 +3828,43 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   </div>
 
   <div class="foto-box is-placeholder">
-    <img src="./assets/fotos/escort.jpg" alt="Escort 1990" loading="lazy"
+    <img src="./assets/fotos/escort.jpg" alt="Ford Escort 1994 AP 1.8" loading="lazy"
       onload="this.parentElement.classList.remove('is-placeholder')"
       onerror="this.parentElement.classList.add('is-placeholder')">
-    <span class="foto-box-fallback">📷 Foto: o Escort 1990</span>
+    <span class="foto-box-fallback">📷 Foto: o Escort 1994</span>
   </div>
 
-  <p class="prose">Meu primeiro carro foi um Escort 1990 que já estava na família. Era antigo e simples, mas tenho muito carinho por ele.</p>
-  <p class="prose" style="margin-top:3.5mm;">Naquele momento, eu não precisava provar nada para ninguém. Não precisava comprar um carro acima da minha realidade só para transmitir uma imagem de sucesso. O Escort cumpria sua função e cabia na fase que eu estava vivendo.</p>
+  <p class="prose">Comprei meu primeiro carro em 2020, com 25 anos. Mas eu já poderia ter comprado antes — só que uma coisa é <span class="grifo">poder comprar</span>, outra é <span class="grifo">comprar e conseguir manter</span>. Eu sabia que, além do carro, viriam IPVA, manutenção, seguro e gasolina.</p>
+  <p class="prose" style="margin-top:3.5mm;">Podia ter financiado um mais novo, mas meu foco era prosperar e sair daquela fase o mais rápido possível — então dei passos calculados. Até os 25 anos, andei de transporte público e, principalmente, de bicicleta, pedalando pra cima e pra baixo, até poder ter um carro de forma responsável.</p>
 
   <div class="citacao-pessoal">Nunca viver uma vida acima do meu padrão apenas para parecer estar em uma fase que ainda não construí.</div>
 
-  <p class="prose">Isso não significa que não devemos desejar coisas melhores — podemos querer conforto, uma casa melhor, viagens, um carro mais novo. O problema não está no sonho. Começa quando tentamos antecipá-lo usando dívidas que não conseguimos sustentar.</p>
-  <p class="prose" style="margin-top:3.5mm;">Existem conquistas que precisam de tempo. E esperar não significa ficar parado — significa continuar construindo sem comprometer a própria paz.</p>
+  <p class="prose">O carro que comprei é muito especial: um Ford Escort 1994, AP 1.8, que já estava na família havia mais de 20 anos. Meu tio foi o primeiro dono, e meu pai, quando criança, andava nele com ele. Ao longo dos anos, meu tio comprou esse carro de volta três vezes, chegou a vender pro próprio filho — e foi dele que eu comprei.</p>
+
+  <div class="pf"><a href="#menu" class="pf-menu">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CAPÍTULO 05 — SEGUNDO CARRO
+══════════════════════════════════════════ -->
+<section>
+<div id="capitulo-05-segundo-carro" class="pagina">
+  <div class="ph">
+    <span class="ph-left">Capítulo 05 · Minha história</span>
+    <span class="ph-right">Guia Financeiro <em>· Eric de Paula</em></span>
+  </div>
+
+  <div class="section-head">
+    <h2 class="sec-h2" style="margin-top:3mm;">Evoluindo com <span class="accent">responsabilidade</span></h2>
+  </div>
+
+  <p class="prose">Aos 28 anos, comprei um segundo carro — mais confortável e mais seguro pra viajar. E, por uma decisão financeira, passamos a manter apenas o mais novo: por segurança, logística e a nossa casa.</p>
+  <p class="prose" style="margin-top:3.5mm;">Em julho de 2026, vendi oficialmente o Escort — pra uma pessoa que já reformou ele totalmente e vai cuidar dele melhor do que eu cuidaria. Não foi uma decisão fácil, mas fez sentido: os sonhos mudam, a gente evolui, amadurece, e assim é a vida.</p>
+
+  <div class="principio-box">
+    <p class="principio-texto">Evoluir não é esquecer de onde você veio. É saber a hora certa de deixar ir.</p>
+  </div>
 
   <div class="pf"><a href="#menu" class="pf-menu">Menu Principal</a></div>
 </div>
@@ -3823,6 +3965,81 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
   <p class="prose" style="margin-top:5mm;">Em nossa história, a educação financeira veio primeiro. As milhas entraram como uma ferramenta complementar — a união entre organização, planejamento de viagens e conhecimento dos programas que ajudou a ampliar nossas possibilidades.</p>
 
   <p class="frase-impacto">Nós não viajamos simplesmente porque tínhamos milhas. Viajamos porque construímos uma vida em que os sonhos tinham espaço no orçamento — e as milhas ajudavam a tornar alguns caminhos mais acessíveis.</p>
+
+  <div class="pf"><a href="#menu" class="pf-menu">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CAPÍTULO 05 — PAÍSES QUE JÁ CONHECEU
+══════════════════════════════════════════ -->
+<section>
+<div id="capitulo-05-paises" class="pagina">
+  <div class="ph">
+    <span class="ph-left">Capítulo 05 · Minha história</span>
+    <span class="ph-right">Guia Financeiro <em>· Eric de Paula</em></span>
+  </div>
+
+  <div class="section-head">
+    <h2 class="sec-h2" style="margin-top:3mm;">Alguns países que já <span class="accent">conheci</span></h2>
+  </div>
+
+  <p class="prose">As milhas e a organização financeira me proporcionaram conhecer <strong>[inserir países]</strong> e outros países.</p>
+
+  <div class="paises-grid">
+    <div class="pais-item">
+      <div class="foto-box is-placeholder">
+        <img src="./assets/fotos/pais-1.jpg" alt="[País 1]" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+        <span class="foto-box-fallback">📷</span>
+      </div>
+      <span class="pais-nome">[País 1]</span>
+    </div>
+    <div class="pais-item">
+      <div class="foto-box is-placeholder">
+        <img src="./assets/fotos/pais-2.jpg" alt="[País 2]" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+        <span class="foto-box-fallback">📷</span>
+      </div>
+      <span class="pais-nome">[País 2]</span>
+    </div>
+    <div class="pais-item">
+      <div class="foto-box is-placeholder">
+        <img src="./assets/fotos/pais-3.jpg" alt="[País 3]" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+        <span class="foto-box-fallback">📷</span>
+      </div>
+      <span class="pais-nome">[País 3]</span>
+    </div>
+    <div class="pais-item">
+      <div class="foto-box is-placeholder">
+        <img src="./assets/fotos/pais-4.jpg" alt="[País 4]" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+        <span class="foto-box-fallback">📷</span>
+      </div>
+      <span class="pais-nome">[País 4]</span>
+    </div>
+    <div class="pais-item">
+      <div class="foto-box is-placeholder">
+        <img src="./assets/fotos/pais-5.jpg" alt="[País 5]" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+        <span class="foto-box-fallback">📷</span>
+      </div>
+      <span class="pais-nome">[País 5]</span>
+    </div>
+    <div class="pais-item">
+      <div class="foto-box is-placeholder">
+        <img src="./assets/fotos/pais-6.jpg" alt="[País 6]" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+        <span class="foto-box-fallback">📷</span>
+      </div>
+      <span class="pais-nome">[País 6]</span>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:6mm;">
+    <p class="prose" style="margin-bottom:3mm;">Gostaria de saber mais?</p>
+    <a class="contato-link" href="https://wa.me/5534998182166" target="_blank" style="justify-content:center;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      <span>Entre em contato no WhatsApp</span>
+    </a>
+  </div>
 
   <div class="pf"><a href="#menu" class="pf-menu">Menu Principal</a></div>
 </div>
@@ -3960,6 +4177,28 @@ section { width: 210mm; margin: 0 auto; display: block; padding: 0; background: 
 
   <p class="prose">Você não controla tudo o que acontecerá. Imprevistos continuarão existindo. Os preços poderão aumentar. A renda poderá mudar. Planos poderão precisar de ajustes.</p>
   <p class="prose" style="margin-top:3.5mm;">Mas, quanto mais conhecimento e organização você tiver, maior será sua capacidade de responder à vida sem perder completamente o caminho.</p>
+
+  <div class="pf"><a href="#menu" class="pf-menu">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CAPÍTULO 05 — O CRIADOR É MAIOR QUE A CRIAÇÃO
+══════════════════════════════════════════ -->
+<section>
+<div id="capitulo-05-fe" class="pagina">
+  <div class="ph">
+    <span class="ph-left">Capítulo 05 · Minha história</span>
+    <span class="ph-right">Guia Financeiro <em>· Eric de Paula</em></span>
+  </div>
+
+  <p class="prose" style="margin-top:9mm;">Como cristão, hoje eu tenho uma maturidade que antes eu não tinha: entender que é Deus quem concede o fôlego da vida e a capacidade de trabalhar e conquistar riquezas. Sem a permissão dele, nada do que eu construí seria possível.</p>
+
+  <div class="citacao-pessoal" style="font-size:21pt;line-height:1.45;border-left-width:4px;padding-left:8mm;margin:8mm 0;">"Porém te lembrarás do Senhor teu Deus, pois ele é quem te dá força para adquirires riquezas."<span style="display:block;font-family:'JetBrains Mono',monospace;font-style:normal;font-weight:700;font-size:11pt;letter-spacing:2px;text-transform:uppercase;color:var(--fluor-deep);margin-top:4mm;">Deuteronômio 8:18</span></div>
+
+  <p class="prose">Enquanto eu ainda estava longe de Jesus, perdido no mundo, ele já permitia que eu conquistasse algumas coisas. Encontrá-lo, depois, me deu a chance de devolver tudo isso a ele — de mostrar que cada conquista foi, na verdade, honra e glória dele. É ele quem sustenta a nossa família.</p>
+
+  <p class="prose" style="margin-top:3.5mm;">Ele é um Deus de organização, um Deus que provém. Mais precioso do que se organizar, juntar dinheiro e realizar sonhos é saber que <span class="grifo">o Criador é maior que a criação</span> — e que cuidar do seu dinheiro também é uma forma de honrar e glorificar a Deus.</p>
 
   <div class="pf"><a href="#menu" class="pf-menu">Menu Principal</a></div>
 </div>

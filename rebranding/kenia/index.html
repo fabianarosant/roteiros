@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Rebranding Kenia — Plataforma de Marca &amp; Estudo de Naming</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --preto: #141414;
+    --amarelo: #f8cb09;
+    --amarelo-claro: #fdf1b8;
+    --amarelo-claro2: #fff8e0;
+    --amarelo-texto: #e0a300;
+    --branco: #ffffff;
+    --linha: #e9e4d2;
+    --cinza-texto: #6b6b64;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    font-family:'DM Sans', 'Poppins', sans-serif;
+    color: var(--preto);
+    background:#525659;
+    padding:24px 0;
+    font-size:17px;
+    line-height:1.6;
+  }
+
+  /* ── ESTRUTURA DE PÁGINA A4 ── */
+  section{ width:210mm; margin:0 auto; padding:0; background:transparent; }
+  .pagina{
+    width:210mm;
+    min-height:297mm;
+    box-sizing:border-box;
+    padding:16mm 18mm 20mm;
+    background: var(--branco);
+    box-shadow:0 4px 24px rgba(0,0,0,0.35);
+    margin:0 auto 6mm;
+    position:relative;
+  }
+  .pagina.pagina-escura{ background: var(--preto); color: var(--branco); }
+
+  .ph{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-bottom:8px; margin-bottom:9mm;
+    border-bottom:2px solid var(--preto);
+    font-family:'Poppins',sans-serif; font-size:8.5px; font-weight:700;
+    letter-spacing:2px; text-transform:uppercase; color:var(--cinza-texto);
+  }
+  .pagina-escura .ph{ border-bottom-color:var(--amarelo); color:rgba(255,255,255,0.5); }
+  .ph-right{ display:flex; align-items:center; gap:8px; }
+  .ph-marca{ font-weight:800; color:inherit; }
+
+  .pf{ position:absolute; left:0; right:0; bottom:8mm; text-align:center; font-family:'Poppins',sans-serif; font-size:9px; font-weight:600; letter-spacing:1.5px; color:var(--cinza-texto); }
+  .pagina-escura .pf{ color:rgba(255,255,255,0.4); }
+
+  /* ── TIPOGRAFIA GERAL ── */
+  .eyebrow{
+    font-family:'Poppins',sans-serif; font-size:11px; font-weight:800;
+    letter-spacing:1.5px; text-transform:uppercase; color:var(--preto);
+    background:var(--amarelo); display:inline-block; padding:4px 11px;
+    border-radius:3px; margin-bottom:12px;
+  }
+  .pagina-escura .eyebrow{ background:var(--amarelo); color:var(--preto); }
+  .num-secao{
+    font-family:'Poppins',sans-serif; font-weight:800;
+    font-size:13px; letter-spacing:1px; color:var(--cinza-texto); display:block; margin-bottom:4px;
+  }
+  .pagina-escura .num-secao{ color:rgba(255,255,255,0.45); }
+  h2.titulo-secao{
+    font-family:'Poppins',sans-serif; font-weight:800; font-size:27px; text-transform:uppercase;
+    color: var(--preto); line-height:1.2; margin-bottom:16px; letter-spacing:-0.2px;
+  }
+  .pagina-escura h2.titulo-secao{ color: var(--branco); }
+  .corpo p{ font-family:'DM Sans', sans-serif; font-size:18px; line-height:1.85; margin-bottom:16px; color:var(--preto); }
+  .corpo p:last-child{ margin-bottom:0; }
+  .pagina-escura .corpo p{ color: rgba(255,255,255,0.9); }
+  .corpo strong{ color:var(--amarelo-texto); font-weight:800; }
+  .pagina-escura .corpo strong{ color:var(--amarelo); }
+
+  /* ── DESTAQUE ESPECIAL (usar só quando pedido) ── */
+  .marca-texto{ background:var(--amarelo); color:var(--preto); font-weight:700; padding:1px 5px; border-radius:3px; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+
+  /* ── CARD DE DECISÃO (retângulo amarelo sólido) ── */
+  .decisao-card{ background:var(--amarelo); border-radius:14px; padding:26px 28px; margin:6px 0 24px; }
+  .decisao-label{ display:inline-block; background:var(--preto); color:var(--amarelo); font-family:'Poppins',sans-serif; font-size:10px; font-weight:800; letter-spacing:2px; text-transform:uppercase; padding:4px 13px; border-radius:20px; margin-bottom:14px; }
+  .decisao-titulo{ display:block; font-family:'Poppins',sans-serif; font-weight:900; text-transform:uppercase; font-size:24px; color:var(--preto); line-height:1.2; margin-bottom:14px; letter-spacing:-0.3px; }
+  .decisao-texto{ font-family:'DM Sans',sans-serif; font-size:16.5px; line-height:1.75; color:var(--preto); }
+
+  /* ── ATRIBUTOS (pills soltos, sem retângulo grande) ── */
+  .atributos-wrap{ margin:20px 0 24px; }
+  .atributos-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+  .atributo-item{ display:flex; align-items:center; justify-content:center; text-align:center; background:var(--amarelo); color:var(--preto); font-family:'Poppins',sans-serif; font-weight:800; font-size:13.5px; letter-spacing:0.5px; text-transform:uppercase; padding:14px 8px; border-radius:8px; }
+
+  /* ── COMPARATIVO O QUE É / O QUE NÃO É ── */
+  .compara-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:8px; }
+  .compara-titulo{ display:inline-block; font-family:'Poppins',sans-serif; font-weight:800; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; padding:5px 13px; border-radius:20px; margin-bottom:14px; }
+  .compara-col.sim .compara-titulo{ background:var(--preto); color:var(--amarelo); }
+  .compara-col.nao .compara-titulo{ background:var(--branco); color:var(--cinza-texto); border:1.5px solid var(--linha); }
+  .compara-item{ display:flex; align-items:flex-start; gap:8px; padding:7px 0; font-family:'DM Sans',sans-serif; font-size:16px; line-height:1.45; }
+  .compara-col.sim .compara-item{ color:var(--preto); font-weight:600; }
+  .compara-col.sim .compara-item::before{ content:'✓'; color:var(--amarelo-texto); font-weight:800; flex-shrink:0; }
+  .compara-col.nao .compara-item{ color:var(--cinza-texto); text-decoration:line-through; text-decoration-color:var(--linha); }
+  .compara-col.nao .compara-item::before{ content:'✕'; color:var(--linha); font-weight:700; flex-shrink:0; }
+
+  /* ── CARDS DE VALORES ── */
+  .valores-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:8px; }
+  .valor-card{ border:1px solid var(--linha); border-radius:12px; padding:18px 19px; background:var(--amarelo-claro2); }
+  .valor-card.full{ grid-column:1 / -1; }
+  .valor-num{ display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%; background:var(--preto); color:var(--amarelo); font-family:'Poppins',sans-serif; font-weight:800; font-size:11px; margin-bottom:10px; }
+  .valor-titulo{ display:block; font-family:'Poppins',sans-serif; font-weight:900; text-transform:uppercase; font-size:14.5px; letter-spacing:0.3px; color:var(--preto); margin-bottom:7px; }
+  .valor-texto{ font-family:'DM Sans',sans-serif; font-size:13px; line-height:1.6; color:var(--preto); }
+
+  /* ── FICHA DO PROJETO ── */
+  .ficha{
+    display:flex; gap:0; border:1px solid var(--linha); border-radius:10px;
+    overflow:hidden; margin-bottom:22px;
+  }
+  .ficha-item{ flex:1; padding:12px 16px; border-right:1px solid var(--linha); background:var(--amarelo-claro2); }
+  .ficha-item:last-child{ border-right:none; }
+  .ficha-label{ display:block; font-family:'Poppins',sans-serif; font-size:8.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--cinza-texto); margin-bottom:4px; }
+  .ficha-valor{ display:block; font-family:'DM Sans',sans-serif; font-weight:600; font-size:15px; color:var(--preto); line-height:1.4; }
+
+  /* ── DESTAQUE / SÍNTESE ── */
+  .destaque{
+    background: var(--amarelo-claro); border-left:4px solid var(--preto);
+    border-radius:0 8px 8px 0; padding:16px 20px; margin:18px 0;
+  }
+  .destaque p{ font-family:'Poppins',sans-serif; font-weight:700; font-size:17px; color:var(--preto); line-height:1.55; margin:0; }
+  .destaque-label{ display:block; font-family:'Poppins',sans-serif; font-size:8.5px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--preto); margin-bottom:6px; }
+
+  /* ── CARDS DE DUAS COLUNAS (dois tempos) ── */
+  .duo-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:18px 0; }
+  .duo-card{ border:1px solid var(--linha); border-radius:12px; padding:18px 18px 16px; background:var(--amarelo-claro2); }
+  .duo-card.noite{ background:var(--preto); }
+  .duo-card-tag{ display:inline-block; font-family:'Poppins',sans-serif; font-size:8.5px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:var(--amarelo); background:var(--preto); padding:4px 10px; border-radius:20px; margin-bottom:10px; }
+  .duo-card.noite .duo-card-tag{ background:var(--amarelo); color:var(--preto); }
+  .duo-card-titulo{ display:block; font-family:'Poppins',sans-serif; font-weight:800; text-transform:uppercase; font-size:16px; color:var(--preto); margin-bottom:8px; }
+  .duo-card.noite .duo-card-titulo{ color:var(--branco); }
+  .duo-card p{ font-size:15px; line-height:1.75; color:var(--preto); }
+  .duo-card.noite p{ color:rgba(255,255,255,0.85); }
+
+  /* ── QUOTE GRANDE (declaração de posicionamento) ── */
+  .quote-pagina{ display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; min-height:100%; padding:20mm 6mm; }
+  .quote-pagina .aspas{ font-family:'Poppins',sans-serif; font-weight:900; font-size:70px; color:var(--amarelo); line-height:1; margin-bottom:6px; }
+  .quote-pagina .quote-texto{ font-family:'Poppins',sans-serif; font-weight:700; font-size:23px; line-height:1.5; color:var(--branco); max-width:145mm; }
+  .quote-pagina .quote-fonte{ margin-top:26px; font-family:'Poppins',sans-serif; font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--amarelo); }
+
+  /* ── DUO ARQUÉTIPOS ── */
+  .arquetipo-grid{ display:grid; grid-template-columns:1fr auto 1fr; gap:14px; align-items:stretch; margin:20px 0; }
+  .arquetipo-card{ border:1px solid var(--linha); border-radius:12px; padding:18px; text-align:center; background:var(--amarelo-claro2); }
+  .arquetipo-plus{ display:flex; align-items:center; justify-content:center; font-family:'Poppins',sans-serif; font-weight:900; font-size:22px; color:var(--preto); }
+  .arquetipo-tag{ display:inline-block; font-family:'Poppins',sans-serif; font-size:8px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:var(--amarelo); background:var(--preto); padding:3px 9px; border-radius:3px; margin-bottom:10px; }
+  .arquetipo-nome{ display:block; font-family:'Poppins',sans-serif; font-weight:900; text-transform:uppercase; font-size:19px; color:var(--preto); margin-bottom:8px; }
+  .arquetipo-desc{ font-size:14.5px; line-height:1.65; color:var(--cinza-texto); }
+
+  /* ── LISTAS DE DIFERENCIAIS ── */
+  .diferencial-bloco{ margin-bottom:20px; }
+  .diferencial-bloco:last-child{ margin-bottom:0; }
+  .diferencial-tag{ display:inline-block; background:var(--preto); color:var(--amarelo); font-family:'Poppins',sans-serif; font-size:10.5px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; padding:5px 13px; border-radius:20px; margin-bottom:10px; }
+  .diferencial-lista{ list-style:none; }
+  .diferencial-lista li{ font-family:'DM Sans',sans-serif; font-size:14.5px; line-height:1.65; color:var(--preto); padding-left:18px; position:relative; margin-bottom:5px; }
+  .diferencial-lista li:last-child{ margin-bottom:0; }
+  .diferencial-lista li::before{ content:'—'; position:absolute; left:0; color:var(--amarelo-texto); font-weight:700; }
+
+  /* ── LEITURAS / INSIGHTS ── */
+  .insight-card{ border-left:4px solid var(--preto); background:var(--amarelo-claro); border-radius:0 8px 8px 0; padding:14px 18px; margin-bottom:12px; }
+  .insight-card:last-child{ margin-bottom:0; }
+  .insight-num{ display:inline-block; font-family:'Poppins',sans-serif; font-weight:900; font-size:14px; color:var(--preto); margin-right:6px; }
+  .insight-card p{ display:inline; font-size:15px; line-height:1.75; color:var(--preto); }
+
+  /* ── CRITÉRIOS (checklist) ── */
+  .criterios-lista{ margin-top:8px; }
+  .criterio-item{ display:flex; align-items:flex-start; gap:12px; padding:13px 0; border-bottom:1px solid var(--linha); }
+  .criterio-item:last-child{ border-bottom:none; }
+  .pagina-escura .criterio-item{ border-bottom-color:rgba(255,255,255,0.15); }
+  .criterio-check{ flex-shrink:0; width:24px; height:24px; border-radius:50%; background:var(--preto); color:var(--amarelo); display:flex; align-items:center; justify-content:center; font-family:'Poppins',sans-serif; font-size:11px; font-weight:800; }
+  .pagina-escura .criterio-check{ background:var(--amarelo); color:var(--preto); }
+  .criterio-texto{ font-size:15px; line-height:1.7; color:var(--preto); padding-top:2px; }
+  .pagina-escura .criterio-texto{ color:rgba(255,255,255,0.9); }
+  .criterio-texto strong{ color:var(--amarelo-texto); font-weight:800; }
+  .pagina-escura .criterio-texto strong{ color:var(--amarelo); }
+
+  /* ── PÁGINA DE ALTERNATIVA DE NOME ── */
+  .alternativa-wrap{ display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:225mm; text-align:center; }
+  .alternativa-nome{ display:block; font-family:'Poppins',sans-serif; font-weight:900; text-transform:uppercase; font-size:52px; color:var(--branco); line-height:1.1; margin-top:24px; letter-spacing:-0.5px; }
+
+  /* ── PLACEHOLDER (espaço reservado pra prints) ── */
+  .placeholder-box{ border:1.5px dashed var(--linha); border-radius:10px; padding:20px 22px; margin:16px 0; background:#fafaf7; }
+  .placeholder-box p{ font-family:'DM Sans',sans-serif; font-size:13.5px; line-height:1.6; color:var(--cinza-texto); margin:0; }
+  .placeholder-box .placeholder-tag{ display:block; font-family:'Poppins',sans-serif; font-size:10px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:var(--cinza-texto); margin-bottom:8px; }
+  .placeholder-box img{ max-width:100%; border-radius:6px; display:block; border:1px solid var(--linha); }
+  .placeholder-box.is-placeholder img{ display:none; }
+  .placeholder-box:not(.is-placeholder){ border-style:solid; background:var(--branco); }
+  .placeholder-box:not(.is-placeholder) .placeholder-fallback-text{ display:none; }
+
+  /* ── OUTROS NOMES ESTUDADOS ── */
+  .nome-estudado{ border-bottom:1px solid var(--linha); padding:14px 0; }
+  .nome-estudado:last-child{ border-bottom:none; padding-bottom:0; }
+  .nome-estudado-topo{ display:flex; align-items:center; gap:10px; margin-bottom:6px; flex-wrap:wrap; }
+  .nome-estudado-nome{ font-family:'Poppins',sans-serif; font-weight:800; font-size:15.5px; color:var(--preto); }
+  .nome-estudado-selo{ display:inline-block; font-family:'Poppins',sans-serif; font-size:9px; font-weight:800; letter-spacing:1px; text-transform:uppercase; padding:3px 10px; border-radius:20px; }
+  .selo-reserva{ background:var(--amarelo); color:var(--preto); }
+  .selo-descartado{ background:var(--branco); color:var(--cinza-texto); border:1.5px solid var(--linha); }
+  .nome-estudado-texto{ font-family:'DM Sans',sans-serif; font-size:13.5px; line-height:1.6; color:var(--preto); }
+
+  /* ── SLOGANS / ASSINATURAS ── */
+  .slogan-box{ border-left:4px solid var(--amarelo); background:var(--amarelo-claro2); border-radius:0 8px 8px 0; padding:13px 18px; margin-bottom:10px; }
+  .slogan-box:last-child{ margin-bottom:0; }
+  .slogan-box p{ font-family:'Poppins',sans-serif; font-weight:700; font-size:15px; color:var(--preto); margin:0; }
+  .alt-serie-label{ display:block; font-family:'Poppins',sans-serif; font-weight:700; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--cinza-texto); margin-bottom:10px; }
+  .alt-topico{ display:inline-block; background:var(--amarelo); color:var(--preto); font-family:'Poppins',sans-serif; font-weight:800; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; padding:5px 13px; border-radius:20px; margin-bottom:12px; }
+
+  /* ── PRÓXIMOS PASSOS ── */
+  .passo-item{ display:flex; gap:16px; margin-bottom:20px; }
+  .passo-item:last-child{ margin-bottom:0; }
+  .passo-num{ flex-shrink:0; width:38px; height:38px; border-radius:50%; border:2px solid var(--amarelo); color:var(--amarelo); display:flex; align-items:center; justify-content:center; font-family:'Poppins',sans-serif; font-weight:800; font-size:16px; }
+  .passo-corpo-titulo{ display:block; font-family:'Poppins',sans-serif; font-size:13px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--amarelo); margin-bottom:4px; }
+  .passo-corpo p{ font-size:15px; line-height:1.75; color:rgba(255,255,255,0.75); }
+  .passo-etapa-selo{ display:inline-block; font-family:'Poppins',sans-serif; font-size:8px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:var(--preto); background:var(--amarelo); padding:2px 9px; border-radius:12px; margin-left:8px; vertical-align:middle; }
+
+  /* ── SUMÁRIO ── */
+  .sumario-lista{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px; }
+  .sumario-item{ display:flex; flex-direction:column; gap:6px; background:var(--amarelo); border-radius:9px; padding:12px 15px; text-decoration:none; cursor:pointer; transition:transform 0.1s; }
+  .sumario-item:hover{ transform:translateY(-1px); }
+  .sumario-num{ display:inline-block; width:fit-content; background:var(--branco); color:var(--preto); font-family:'Poppins',sans-serif; font-weight:800; font-size:10px; letter-spacing:0.5px; padding:2px 8px; border-radius:5px; }
+  .sumario-titulo{ font-family:'Poppins',sans-serif; font-size:13.5px; font-weight:800; color:var(--preto); line-height:1.25; }
+  .sumario-pagina{ font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; color:rgba(20,20,20,0.55); }
+
+  /* ── TAGS ── */
+  .tag-pill{ display:inline-block; font-family:'Poppins',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.3px; background:var(--amarelo); color:var(--preto); padding:3px 11px; border-radius:20px; }
+
+  /* ── MANIFESTO ── */
+  .manifesto-corpo p{ font-family:'Poppins',sans-serif; font-weight:500; font-size:17px; line-height:1.8; color:var(--branco); margin-bottom:16px; }
+  .manifesto-corpo p:last-child{ margin-bottom:0; }
+  .manifesto-final{ font-weight:800; color:var(--amarelo); }
+
+  /* ── CAPA ── */
+  #capa{ display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 20mm; }
+  #capa .capa-titulo{ font-family:'Poppins',sans-serif; font-style:normal; font-weight:900; text-transform:uppercase; font-size:64px; line-height:1.05; margin-bottom:18px; letter-spacing:-0.5px; }
+  #capa .capa-titulo .ct-branco{ color:var(--branco); }
+  #capa .capa-titulo .ct-amarelo{ color:var(--amarelo); }
+  #capa .capa-linha{ width:70px; height:3px; background:var(--amarelo); margin:22px 0; }
+  #capa .capa-subtitulo{ font-family:'Poppins',sans-serif; font-weight:600; font-size:17px; font-style:normal; color:rgba(255,255,255,0.9); margin-bottom:8px; }
+  #capa .capa-tipo{ font-family:'Poppins',sans-serif; font-size:10.5px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.45); margin-top:6px; }
+  #capa .capa-rodape{ position:absolute; bottom:20mm; left:0; right:0; text-align:center; font-family:'Poppins',sans-serif; font-size:9.5px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.4); }
+
+  /* ── MENU HAMBÚRGUER ── */
+  .hamburger-btn{
+    position:fixed; top:18px; right:18px; z-index:300;
+    width:46px; height:46px; border-radius:50%;
+    background:var(--preto); border:none; cursor:pointer;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px;
+    box-shadow:0 3px 14px rgba(0,0,0,0.35);
+    -webkit-tap-highlight-color:transparent;
+  }
+  .hamburger-btn span{ display:block; width:20px; height:2px; background:var(--amarelo); border-radius:2px; transition:all 0.25s; }
+  .hamburger-btn.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .hamburger-btn.open span:nth-child(2){ opacity:0; }
+  .hamburger-btn.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+  .nav-overlay{
+    position:fixed; inset:0; background:rgba(0,0,0,0.4); z-index:298;
+    opacity:0; pointer-events:none; transition:opacity 0.25s;
+  }
+  .nav-overlay.open{ opacity:1; pointer-events:all; }
+
+  .nav-drawer{
+    position:fixed; top:0; right:0; bottom:0; width:280px; max-width:82vw;
+    background:var(--preto); z-index:299; overflow-y:auto;
+    padding:80px 0 32px; transform:translateX(100%);
+    transition:transform 0.3s cubic-bezier(0.4,0,0.2,1);
+    box-shadow:-6px 0 30px rgba(0,0,0,0.4);
+  }
+  .nav-drawer.open{ transform:translateX(0); }
+  .nav-drawer-titulo{ display:block; padding:0 24px 14px; font-family:'Poppins',sans-serif; font-weight:800; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--amarelo); border-bottom:1px solid rgba(255,255,255,0.1); margin-bottom:8px; }
+  .nav-item{
+    display:flex; align-items:baseline; gap:10px; padding:9px 24px;
+    color:rgba(255,255,255,0.8); text-decoration:none;
+    font-family:'Poppins',sans-serif; font-size:12.5px; font-weight:600;
+    transition:color 0.15s, background 0.15s;
+  }
+  .nav-item:hover{ color:var(--branco); background:rgba(255,255,255,0.06); }
+  .nav-item-num{ font-weight:800; color:var(--amarelo); font-size:11px; flex-shrink:0; }
+
+  @media print {
+    @page{ size:A4 portrait; margin:0; }
+    *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+    body{ background:white !important; padding:0 !important; }
+    .pagina{ page-break-after:always; break-after:page; margin:0 auto !important; box-shadow:none !important; }
+    section{ page-break-before:auto !important; margin:0 !important; border:none !important; }
+    .hamburger-btn, .nav-drawer, .nav-overlay{ display:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<button class="hamburger-btn" id="hamburgerBtn" onclick="toggleNavDrawer()" aria-label="Abrir menu">
+  <span></span><span></span><span></span>
+</button>
+<div class="nav-overlay" id="navOverlay" onclick="toggleNavDrawer()"></div>
+<nav class="nav-drawer" id="navDrawer">
+  <span class="nav-drawer-titulo">Projeto Rebranding · Kenia</span>
+  <a class="nav-item" href="#capa" onclick="toggleNavDrawer()"><span class="nav-item-num">—</span>Capa</a>
+  <a class="nav-item" href="#sec-contexto" onclick="toggleNavDrawer()"><span class="nav-item-num">01</span>Contexto do Projeto</a>
+  <a class="nav-item" href="#sec-historia" onclick="toggleNavDrawer()"><span class="nav-item-num">02</span>A História</a>
+  <a class="nav-item" href="#sec-resumo" onclick="toggleNavDrawer()"><span class="nav-item-num">03</span>Resumo &amp; Promessa</a>
+  <a class="nav-item" href="#sec-decisao1" onclick="toggleNavDrawer()"><span class="nav-item-num">04</span>Decisão 01</a>
+  <a class="nav-item" href="#sec-territorio" onclick="toggleNavDrawer()"><span class="nav-item-num">05</span>Território</a>
+  <a class="nav-item" href="#sec-valores" onclick="toggleNavDrawer()"><span class="nav-item-num">06</span>Valores</a>
+  <a class="nav-item" href="#sec-publico" onclick="toggleNavDrawer()"><span class="nav-item-num">07</span>Público &amp; Personalidade</a>
+  <a class="nav-item" href="#sec-diferenciais" onclick="toggleNavDrawer()"><span class="nav-item-num">08</span>Diferenciais</a>
+  <a class="nav-item" href="#sec-decisao2" onclick="toggleNavDrawer()"><span class="nav-item-num">09</span>Decisão 02</a>
+  <a class="nav-item" href="#sec-mercado" onclick="toggleNavDrawer()"><span class="nav-item-num">10</span>Estudo de Mercado</a>
+  <a class="nav-item" href="#sec-decisao3" onclick="toggleNavDrawer()"><span class="nav-item-num">11</span>Decisão 03</a>
+  <a class="nav-item" href="#sec-estudonomes" onclick="toggleNavDrawer()"><span class="nav-item-num">12</span>O Estudo dos Nomes</a>
+  <a class="nav-item" href="#sec-alt01" onclick="toggleNavDrawer()"><span class="nav-item-num">13</span>Alternativa 01</a>
+  <a class="nav-item" href="#sec-alt02" onclick="toggleNavDrawer()"><span class="nav-item-num">14</span>Alternativa 02</a>
+  <a class="nav-item" href="#sec-alt03" onclick="toggleNavDrawer()"><span class="nav-item-num">15</span>Alternativa 03</a>
+  <a class="nav-item" href="#sec-outrosnomes" onclick="toggleNavDrawer()"><span class="nav-item-num">16</span>Outros Nomes Estudados</a>
+  <a class="nav-item" href="#sec-proximos" onclick="toggleNavDrawer()"><span class="nav-item-num">17</span>Próximos Passos</a>
+</nav>
+<script>
+function toggleNavDrawer(){
+  document.getElementById('navDrawer').classList.toggle('open');
+  document.getElementById('navOverlay').classList.toggle('open');
+  document.getElementById('hamburgerBtn').classList.toggle('open');
+}
+</script>
+
+<div class="main-content">
+
+<!-- ══ CAPA ══ -->
+<section>
+<div class="pagina pagina-escura" id="capa">
+  <span class="capa-titulo"><span class="ct-branco">Projeto</span><br><span class="ct-amarelo">Rebranding</span></span>
+  <div class="capa-linha"></div>
+  <span class="capa-subtitulo">Posicionamento e Estudo de Naming</span>
+  <span class="capa-tipo">Da Hakuna Batata a uma Marca Própria</span>
+  <div class="capa-rodape">Shopping Boulevard · Araxá — Documento estratégico · Agosto de 2026</div>
+<div class="pf">01 / 34</div>
+</div>
+</section>
+
+<!-- ══ SUMÁRIO ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>Sumário</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="eyebrow">Índice</span>
+<h2 class="titulo-secao">Menu Principal</h2>
+<div class="sumario-lista">
+  <a class="sumario-item" href="#sec-contexto"><span class="sumario-num">01</span><span class="sumario-titulo">Contexto do Projeto</span><span class="sumario-pagina">Pág. 03</span></a>
+  <a class="sumario-item" href="#sec-historia"><span class="sumario-num">02</span><span class="sumario-titulo">A História que Sustenta Tudo</span><span class="sumario-pagina">Pág. 04</span></a>
+  <a class="sumario-item" href="#sec-resumo"><span class="sumario-num">03</span><span class="sumario-titulo">Resumo de Posicionamento &amp; Promessa</span><span class="sumario-pagina">Pág. 05</span></a>
+  <a class="sumario-item" href="#sec-decisao1"><span class="sumario-num">04</span><span class="sumario-titulo">Decisões Estratégicas</span><span class="sumario-pagina">Pág. 06</span></a>
+  <a class="sumario-item" href="#sec-territorio"><span class="sumario-num">05</span><span class="sumario-titulo">Território</span><span class="sumario-pagina">Pág. 07</span></a>
+  <a class="sumario-item" href="#sec-valores"><span class="sumario-num">06</span><span class="sumario-titulo">Valores</span><span class="sumario-pagina">Pág. 08</span></a>
+  <a class="sumario-item" href="#sec-publico"><span class="sumario-num">07</span><span class="sumario-titulo">Público</span><span class="sumario-pagina">Pág. 09</span></a>
+  <a class="sumario-item" href="#sec-diferenciais"><span class="sumario-num">08</span><span class="sumario-titulo">Diferenciais</span><span class="sumario-pagina">Pág. 11</span></a>
+  <a class="sumario-item" href="#sec-decisao2"><span class="sumario-num">09</span><span class="sumario-titulo">Decisões Estratégicas</span><span class="sumario-pagina">Pág. 12</span></a>
+  <a class="sumario-item" href="#sec-mercado"><span class="sumario-num">10</span><span class="sumario-titulo">Estudo de Mercado</span><span class="sumario-pagina">Pág. 13</span></a>
+  <a class="sumario-item" href="#sec-decisao3"><span class="sumario-num">11</span><span class="sumario-titulo">Decisões Estratégicas</span><span class="sumario-pagina">Pág. 14</span></a>
+  <a class="sumario-item" href="#sec-estudonomes"><span class="sumario-num">12</span><span class="sumario-titulo">O Estudo dos Nomes</span><span class="sumario-pagina">Pág. 15</span></a>
+  <a class="sumario-item" href="#sec-alt01"><span class="sumario-num">13</span><span class="sumario-titulo">Alternativa 01</span><span class="sumario-pagina">Pág. 16</span></a>
+  <a class="sumario-item" href="#sec-alt02"><span class="sumario-num">14</span><span class="sumario-titulo">Alternativa 02</span><span class="sumario-pagina">Pág. 22</span></a>
+  <a class="sumario-item" href="#sec-alt03"><span class="sumario-num">15</span><span class="sumario-titulo">Alternativa 03</span><span class="sumario-pagina">Pág. 27</span></a>
+  <a class="sumario-item" href="#sec-outrosnomes"><span class="sumario-num">16</span><span class="sumario-titulo">Outros Nomes Estudados</span><span class="sumario-pagina">Pág. 33</span></a>
+  <a class="sumario-item" href="#sec-proximos"><span class="sumario-num">17</span><span class="sumario-titulo">Próximos Passos</span><span class="sumario-pagina">Pág. 34</span></a>
+</div>
+<div class="pf">02 / 34</div>
+</div>
+</section>
+
+<!-- ══ 01 — CONTEXTO ══ -->
+<section>
+<div class="pagina" id="sec-contexto">
+<div class="ph"><span>01 · Contexto</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="num-secao">01</span>
+<h2 class="titulo-secao">Contexto do Projeto</h2>
+
+<div class="ficha">
+  <div class="ficha-item">
+    <span class="ficha-label">Cliente</span>
+    <span class="ficha-valor">Nova marca sucessora da operação Hakuna Batata</span>
+  </div>
+  <div class="ficha-item">
+    <span class="ficha-label">Local</span>
+    <span class="ficha-valor">Shopping Boulevard, Araxá</span>
+  </div>
+  <div class="ficha-item">
+    <span class="ficha-label">Etapa</span>
+    <span class="ficha-valor">Posicionamento fechado antes do nome e do visual</span>
+  </div>
+</div>
+
+<div class="corpo">
+<p>A cliente possui uma operação consolidada há anos como franquia Hakuna Batata, localizada no shopping de Araxá.</p>
+<p>O objetivo é deixar a franquia, eliminar os custos recorrentes de royalties e construir uma marca própria, mantendo toda a credibilidade conquistada ao longo dos anos.</p>
+<p>O maior receio da cliente é a reação dos clientes diante da mudança de nome.</p>
+<p>A estratégia do projeto será mostrar que o patrimônio construído não pertence ao nome da franquia, mas à experiência, ao atendimento, à qualidade e à confiança que ela construiu ao longo dos anos.</p>
+<p>O rebranding será apresentado como uma evolução da empresa, e não como uma ruptura.</p>
+</div>
+<div class="pf">03 / 34</div>
+</div>
+</section>
+
+<!-- ══ 02 — HISTÓRIA ══ -->
+<section>
+<div class="pagina" id="sec-historia">
+<div class="ph"><span>02 · A História</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="num-secao">02</span>
+<h2 class="titulo-secao">A História que Sustenta Tudo</h2>
+<div class="corpo">
+<p>A Kenia trabalha com alimentação há vinte anos. Antes de ser dona, ela já era a alma da operação, a gerente que tocava a unidade de Araxá praticamente sozinha. Quando a rede passou por dificuldade e havia contratos de lojas prestes a fechar, ela fez o movimento mais corajoso possível: em vez de sair, comprou a briga. Em 01 de abril de 2019 deixou de ser funcionária para virar proprietária.</p>
+<p>Desde então ela carrega uma contradição silenciosa. O ponto é dela, a cozinha é dela, o atendimento é dela, o suor é dela, mas o nome e as regras sempre foram de outro. A franquia dava pouca assistência e recusava as sugestões de cardápio que ela, que vive de cozinha, sabia que fariam sentido. Mesmo assim ela adaptou o que pôde. Na prática, o cardápio de hoje já é muito mais a Kenia do que a franquia.</p>
+<p>É por isso que este projeto não é uma reinvenção. É um reconhecimento. A marca nova não inventa nada, ela oficializa uma autoria que já existe há anos. Pela primeira vez, o negócio vai ter um nome que pertence a quem realmente o construiu. Essa é a espinha da narrativa, e é ela que vai dar emoção ao lançamento.</p>
+</div>
+<div class="pf">04 / 34</div>
+</div>
+</section>
+
+<!-- ══ 03 — RESUMO DE POSICIONAMENTO ══ -->
+<section>
+<div class="pagina" id="sec-resumo">
+<div class="ph"><span>03 · Resumo de Posicionamento</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="num-secao">03</span>
+<h2 class="titulo-secao">Resumo de Posicionamento</h2>
+<div class="corpo">
+<p>Uma marca de comida caseira, porções e pratos executivos, localizada no Shopping Boulevard de Araxá, feita pra receber bem. Aqui a comida é preparada de verdade na cozinha, com ingredientes e temperos frescos, no capricho de quem cozinha com amor. É esse cuidado artesanal que dá o sabor de comida caseira, aquele gosto que aquece e aconchega, e que faz toda a diferença.</p>
+<p><strong>A batata é o coração da marca</strong>, presente em praticamente todos os pratos e com variedade pra todos os momentos. Os pratos prontos e fartos do dia a dia, porções generosas pra dividir com a família e os amigos e a bebida gelada pra fechar um happy hour. Comida honesta, farta e a um preço justo, servida com o carinho de quem gosta de ver o cliente feliz.</p>
+</div>
+<div class="destaque">
+  <span class="destaque-label">O convite da marca</span>
+  <p>Uma opção pra desacelerar, que transforma a batata num motivo pra aproveitar as pequenas coisas do dia e da vida.</p>
+</div>
+
+<span class="eyebrow" style="font-size:10px;margin-top:14px;">A Promessa</span>
+<div class="corpo" style="margin-top:6px;">
+  <p style="font-size:19px;font-weight:600;">Comida de verdade, feita na hora e servida com fartura, que faz você sair satisfeito e com vontade de voltar, sem pesar no bolso.</p>
+</div>
+<div class="pf">05 / 34</div>
+</div>
+</section>
+
+<!-- ══ 04 — DECISÕES ESTRATÉGICAS ══ -->
+<section>
+<div class="pagina pagina-escura" id="sec-decisao1">
+<div class="ph"><span>04 · Decisões Estratégicas</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="num-secao">04</span>
+<h2 class="titulo-secao">Decisões Estratégicas</h2>
+
+<div class="decisao-card">
+  <span class="decisao-label">Decisão 01</span>
+  <span class="decisao-titulo">"Batata" Permanece no Nome</span>
+  <p class="decisao-texto">Escolha estratégica a partir do posicionamento. A batata é o coração da marca, o fio que costura o cardápio inteiro e o elemento que o público já criou associação.</p>
+</div>
+
+<span class="eyebrow" style="font-size:10px;">Estudo</span>
+<div class="corpo">
+<p>A marca nunca vendeu batata em si. Ela vende comida de verdade, farta e honesta, e usa a batata como fio condutor. O ícone e o consumo são coisas diferentes, e é justamente aí que mora a força: a batata dá o nome, a leveza e a memória afetiva, enquanto a comida de verdade dá a substância, a fidelidade e o faturamento.</p>
+</div>
+<p style="font-family:'Poppins',sans-serif; font-style:italic; font-weight:600; font-size:24px; color:var(--branco); margin-top:22px; line-height:1.4;">A batata é assinatura da marca.</p>
+<div class="pf">06 / 34</div>
+</div>
+</section>
+
+<!-- ══ 05 — TERRITÓRIO ══ -->
+<section>
+<div class="pagina" id="sec-territorio">
+<div class="ph"><span>05 · Território</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="num-secao">05</span>
+<h2 class="titulo-secao">Território</h2>
+<span class="eyebrow" style="font-size:10px;">O que é, o que não é</span>
+<div class="corpo">
+<p>A nova marca não é fast-food, não é batataria e não é boteco. Ela ocupa um território mais verdadeiro e mais defensável: o de <strong>cozinha brasileira honesta dentro do shopping</strong>. Comida de verdade, feita na hora, com tempero de comida caseira, servida com fartura e a preço justo, num ambiente descontraído onde a família se sente à vontade.</p>
+</div>
+
+<div class="compara-grid">
+  <div class="compara-col sim">
+    <span class="compara-titulo">O que é</span>
+    <div class="compara-item">Comida caseira</div>
+    <div class="compara-item">Comida de verdade</div>
+    <div class="compara-item">Feita com calma e capricho (artesanal)</div>
+    <div class="compara-item">Farta e generosa</div>
+    <div class="compara-item">Preço justo</div>
+    <div class="compara-item">Aconchegante / acolhedora</div>
+    <div class="compara-item">Descontraída</div>
+    <div class="compara-item">Familiar</div>
+    <div class="compara-item">Ponto de encontro</div>
+    <div class="compara-item">Sem frescura</div>
+    <div class="compara-item">Comida mineira</div>
+    <div class="compara-item">Tempero fresco</div>
+  </div>
+  <div class="compara-col nao">
+    <span class="compara-titulo">O que não é</span>
+    <div class="compara-item">Fast-food</div>
+    <div class="compara-item">Comida industrial / congelada</div>
+    <div class="compara-item">Requentada / de micro-ondas</div>
+    <div class="compara-item">Sem graça / sem alma</div>
+    <div class="compara-item">Cara / inacessível</div>
+    <div class="compara-item">Formal / sofisticada demais</div>
+    <div class="compara-item">Fria / impessoal</div>
+    <div class="compara-item">Apressada</div>
+    <div class="compara-item">Genérica</div>
+    <div class="compara-item">Só batataria</div>
+    <div class="compara-item">Só lanchonete</div>
+  </div>
+</div>
+<div class="pf">07 / 34</div>
+</div>
+</section>
+
+<!-- ══ 06 — VALORES ══ -->
+<section>
+<div class="pagina" id="sec-valores">
+<div class="ph"><span>06 · Valores</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="num-secao">06</span>
+<h2 class="titulo-secao">Valores</h2>
+
+<div class="valores-grid">
+  <div class="valor-card">
+    <span class="valor-num">01</span>
+    <span class="valor-titulo">Simplicidade</span>
+    <p class="valor-texto">A marca acredita no simples bem feito. Comida honesta, sem complicação, do jeito que se faz em casa. Nada de frescura, só o que é bom de verdade.</p>
+  </div>
+  <div class="valor-card">
+    <span class="valor-num">02</span>
+    <span class="valor-titulo">Respeito</span>
+    <p class="valor-texto">Respeito com o cliente, com a comida e com o dinheiro de quem escolhe a casa. Cada pessoa é tratada com atenção e cada prato é feito com seriedade.</p>
+  </div>
+  <div class="valor-card">
+    <span class="valor-num">03</span>
+    <span class="valor-titulo">Dedicação</span>
+    <p class="valor-texto">Tudo é preparado com cuidado na cozinha, com tempero fresco e capricho. O zelo aparece no sabor, no empratamento e até na embalagem.</p>
+  </div>
+  <div class="valor-card">
+    <span class="valor-num">04</span>
+    <span class="valor-titulo">Sabor de Verdade</span>
+    <p class="valor-texto">Tudo é feito com ingredientes frescos e tempero caprichado, do jeito artesanal, comida de verdade pra aproveitar uma pausa na rotina ou um momento especial.</p>
+  </div>
+  <div class="valor-card">
+    <span class="valor-num">05</span>
+    <span class="valor-titulo">Preço Justo</span>
+    <p class="valor-texto">Comer bem não pode ser privilégio. A marca preza por fartura a um preço acessível, pra caber no dia a dia de quem trabalha e quer comer de verdade.</p>
+  </div>
+  <div class="valor-card">
+    <span class="valor-num">06</span>
+    <span class="valor-titulo">Família</span>
+    <p class="valor-texto">A marca é ponto de encontro, de reunião, de comemoração. Um lugar feito pra estar junto, onde a família e os amigos se sentem em casa.</p>
+  </div>
+  <div class="valor-card full">
+    <span class="valor-num">07</span>
+    <span class="valor-titulo">Acolhimento</span>
+    <p class="valor-texto">Aqui todo mundo é recebido com sorriso e alto astral. A maior satisfação da casa é ver o cliente sair feliz, bem servido e com vontade de voltar.</p>
+  </div>
+</div>
+<div class="pf">08 / 34</div>
+</div>
+</section>
+
+<!-- ══ 06 — PÚBLICO ══ -->
+<section>
+<div class="pagina" id="sec-publico">
+<div class="ph"><span>07 · Público</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="num-secao">07</span>
+<h2 class="titulo-secao">Público</h2>
+
+<div class="duo-grid">
+  <div class="duo-card">
+    <span class="duo-card-tag">Almoço de Semana</span>
+    <span class="duo-card-titulo">Prato de verdade</span>
+    <p>Prato-feito farto e caprichado a partir de vinte reais — arroz, feijão, batata, salada e proteína. Comida mineira de todo dia, pra matar a fome sem pesar no bolso do trabalhador, do lojista, do jovem em intervalo.</p>
+  </div>
+  <div class="duo-card noite">
+    <span class="duo-card-tag">Noite &amp; Fim de Semana</span>
+    <span class="duo-card-titulo">A casa vira programa</span>
+    <p>Porções generosas no sistema Para Nós e Para Todos — picanha, filé, recheadas, burgers e chopp gelado na caneca. A refeição vira encontro: aniversário, confraternização, sexta com os amigos.</p>
+  </div>
+</div>
+
+<div class="corpo">
+<p>Uma casa, dois ritmos. O almoço nutre, a noite celebra. Esse é o coração do posicionamento, e é o que impede a marca de ser só mais uma batataria ou só mais uma hamburgueria de praça de alimentação.</p>
+</div>
+
+<div class="corpo" style="margin-top:14px;">
+<p>O público dessa marca é tão variado quanto o cardápio, e se organiza pelos dois tempos da casa. No almoço do dia a dia, quem chega é o trabalhador, o lojista do próprio shopping, o jovem no intervalo, gente que tem pouco tempo e quer comer bem sem gastar muito. Buscam uma refeição de verdade, farta e caprichada, que dê conta da fome e caiba no bolso. Já na noite e no fim de semana, a casa recebe outro momento da vida: a família que sai pra comemorar, o grupo de amigos que divide uma porção com o chopp gelado, o público mais adulto que quer relaxar e ficar à vontade. São ocasiões diferentes, mas todas giram em torno da mesma coisa: comida boa e a companhia de quem se gosta.</p>
+<p>No fundo, é uma marca para todo mundo, sem deixar de ter personalidade. Ela fala com a família e com o trabalhador, com o jovem e com o cliente fiel de anos, e conversa com todos de igual pra igual, com afeto e sem frescura. O que une essas pessoas não é a idade nem o bolso, é o mesmo desejo simples: sentar, comer de verdade e sair satisfeito. É exatamente essa a maior alegria da casa, ver o cliente e a família saírem felizes, de barriga cheia e com vontade de voltar.</p>
+</div>
+<div class="pf">09 / 34</div>
+</div>
+</section>
+
+<!-- ══ 04 — PÚBLICO (CONTINUAÇÃO) ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>07 · Personalidade</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="num-secao">07</span>
+<h2 class="titulo-secao">Personalidade</h2>
+<div class="corpo">
+<p>Esse tipo de público pede uma marca com simplicidade, bom humor e alto astral. E aqui vale um ponto importante: isso não é só um jeito de falar, é a personalidade da marca inteira, que precisa aparecer em tudo. No nome, nas cores, no símbolo, na embalagem, no atendimento e em cada post. Tudo comunica, e tudo precisa falar essa mesma língua, a língua do povão, sem palavra difícil e sem pose, como quem puxa papo e chama pra sentar na mesa.</p>
+</div>
+
+<span class="eyebrow" style="font-size:10px;background:none;color:var(--preto);padding:0;">Atributos da Marca</span>
+<div class="atributos-wrap">
+  <div class="atributos-grid">
+    <span class="atributo-item">Simplicidade</span>
+    <span class="atributo-item">Alto Astral</span>
+    <span class="atributo-item">Acolhedor</span>
+    <span class="atributo-item">Acessível</span>
+    <span class="atributo-item">Família</span>
+    <span class="atributo-item">Divertida</span>
+  </div>
+</div>
+
+<span class="eyebrow" style="font-size:10px;background:none;color:var(--preto);padding:0;">Arquétipos, em resumo</span>
+<div class="arquetipo-grid" style="margin-top:8px;">
+  <div class="arquetipo-card">
+    <span class="arquetipo-tag">Principal</span>
+    <span class="arquetipo-nome">O Cuidador</span>
+    <p class="arquetipo-desc">Aquele que alimenta, acolhe e faz a pessoa se sentir em casa.</p>
+  </div>
+  <div class="arquetipo-plus">+</div>
+  <div class="arquetipo-card">
+    <span class="arquetipo-tag">Apoio</span>
+    <span class="arquetipo-nome">O Sujeito Comum</span>
+    <p class="arquetipo-desc">O lado povão no melhor sentido: honesto, acessível, sem pompa, que fala a língua de todo mundo.</p>
+  </div>
+</div>
+<div class="pf">10 / 34</div>
+</div>
+</section>
+
+<!-- ══ 08 — DIFERENCIAIS ══ -->
+<section>
+<div class="pagina" id="sec-diferenciais">
+<div class="ph"><span>08 · Diferenciais</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="num-secao">08</span>
+<h2 class="titulo-secao">Diferenciais</h2>
+
+<div class="diferencial-bloco">
+  <span class="diferencial-tag">No sabor e na cozinha — o que ninguém copia</span>
+  <ul class="diferencial-lista">
+    <li>Tempero: tudo é feito na cozinha, mais artesanal</li>
+    <li>Comida mineira, familiar</li>
+    <li>Todos os sanduíches artesanais</li>
+    <li>Batata tradicional palito</li>
+  </ul>
+</div>
+
+<div class="diferencial-bloco">
+  <span class="diferencial-tag">No atendimento e na experiência</span>
+  <ul class="diferencial-lista">
+    <li>Atendimento com educação, sorriso, entrega correta, alto astral</li>
+    <li>Empratamento caprichado</li>
+    <li>Embalagem bem feita, produtos separados, cuidado na entrega (salão e delivery)</li>
+  </ul>
+</div>
+
+<div class="diferencial-bloco">
+  <span class="diferencial-tag">No preço e nas âncoras de fluxo</span>
+  <ul class="diferencial-lista">
+    <li>Preço acessível</li>
+    <li>Prato do dia como grande chamariz</li>
+    <li>Cartão fidelidade (a cada 10, no sanduíche e na batata assada)</li>
+  </ul>
+</div>
+
+<div class="diferencial-bloco">
+  <span class="diferencial-tag">Na bebida — a âncora da noite</span>
+  <ul class="diferencial-lista">
+    <li>Chopp na caneca gelada, marca Kaiser</li>
+  </ul>
+</div>
+
+<div class="diferencial-bloco">
+  <span class="diferencial-tag">O que ainda vai entrar — evolução do cardápio</span>
+  <ul class="diferencial-lista">
+    <li>Pernil acebolado, costelinha ao molho barbecue, pratos/kits (ex: bife a cavalo, que hoje não tem)</li>
+    <li>Sobremesa (ainda não existe)</li>
+    <li>Novos sabores de batata assada: bife bovino e parmegiana</li>
+  </ul>
+</div>
+<div class="pf">11 / 34</div>
+</div>
+</section>
+
+<!-- ══ 09 — DECISÕES ESTRATÉGICAS (2) ══ -->
+<section>
+<div class="pagina pagina-escura" id="sec-decisao2">
+<div class="ph"><span>09 · Decisões Estratégicas</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="num-secao">09</span>
+<h2 class="titulo-secao">Decisões Estratégicas</h2>
+
+<div class="decisao-card">
+  <span class="decisao-label">Decisão 02</span>
+  <span class="decisao-titulo">Um Nome Simples, que Qualquer Um Entende</span>
+  <p class="decisao-texto">O público mostra o caminho do nome. Uma marca que fala a língua do povão, que recebe o trabalhador no almoço e a família no fim de semana, não pode ter um nome complicado. O nome precisa ser à cara de quem ele serve: simples, claro e sem frescura.</p>
+</div>
+
+<span class="eyebrow" style="font-size:10px;">Estudo</span>
+<div class="corpo">
+<p>E tem um cuidado a mais nessa escolha: o nome deve usar palavras ou combinações que já existem e que todo mundo já conhece. Uma palavra do dia a dia, que a pessoa escuta e entende na hora, sem precisar decifrar. Isso porque uma palavra conhecida já vem cheia de significado e sentimento na cabeça das pessoas, ela desperta uma imagem, uma memória, uma sensação familiar.</p>
+</div>
+<div class="pf">12 / 34</div>
+</div>
+</section>
+
+<!-- ══ 10 — ESTUDO DE MERCADO ══ -->
+<section>
+<div class="pagina" id="sec-mercado">
+<div class="ph"><span>10 · Estudo de Mercado</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="num-secao">10</span>
+<h2 class="titulo-secao">Estudo de Mercado</h2>
+
+<h2 class="titulo-secao" style="font-size:19px;">Todo Mundo é Concorrente</h2>
+<div class="corpo">
+<p>Antes de olhar os nomes, vale entender uma coisa sobre concorrência. No ramo de alimentação, o concorrente não é só quem vende o mesmo prato que você. É todo restaurante, lanchonete ou estabelecimento que vende comida, porque todos disputam a mesma decisão do cliente: a de onde comer hoje. Quando uma família resolve sair pra comer, ou quando alguém abre o aplicativo com fome, a batataria disputa a atenção com a pizzaria, com o japonês, com a marmita e com a hamburgueria ao mesmo tempo. A pergunta na cabeça do cliente não é "onde tem batata?", é "onde a gente vai comer?"</p>
+</div>
+
+<h2 class="titulo-secao" style="font-size:19px;margin-top:20px;">Afunilando: os Nomes com "Batata" em Araxá</h2>
+<ul class="diferencial-lista" style="margin:6px 0 18px;">
+  <li><strong>Hakuna Batata</strong> — a operação atual</li>
+  <li><strong>Potato Chef / Potato Chef Gourmet</strong> (@potato_chefoficial) — "a melhor batata", batata assada, delivery</li>
+  <li><strong>Batata Recheada Dona Cheffa</strong> — batata recheada artesanal</li>
+</ul>
+<div class="corpo">
+<p>Entre todas, a Hakuna Batata (a operação atual) é justamente a que mais se diferencia, porque é a única que combina a batata com um cardápio de pratos prontos e executivos no almoço, além das porções e dos hambúrgueres. Ou seja, dentro do universo das batatas de Araxá, essa operação já ocupa um espaço mais amplo e mais completo que as concorrentes. Ela não é só uma batataria de delivery noturno, é uma casa de comida de verdade que serve o dia inteiro, do prato do almoço à porção da noite.</p>
+</div>
+<div class="pf">13 / 34</div>
+</div>
+</section>
+
+<!-- ══ 11 — DECISÕES ESTRATÉGICAS (3) ══ -->
+<section>
+<div class="pagina pagina-escura" id="sec-decisao3">
+<div class="ph"><span>11 · Decisões Estratégicas</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="num-secao">11</span>
+<h2 class="titulo-secao">Decisões Estratégicas</h2>
+
+<div class="decisao-card">
+  <span class="decisao-label">Decisão 03</span>
+  <span class="decisao-titulo">As Facilidades que o Nome Precisa Ter</span>
+  <p class="decisao-texto">O nome precisa ser fácil de falar, fácil de encontrar, carregado de sentimento familiar e grande o bastante pra caber um universo de marca inteiro.</p>
+</div>
+
+<span class="eyebrow" style="font-size:10px;">Estudo</span>
+<div class="criterios-lista">
+  <div class="criterio-item"><span class="criterio-check">1</span><span class="criterio-texto"><strong>Fácil de falar.</strong> O nome precisa cair bem na boca, tanto pra quem já está nele quanto pra quem está indo. Aquela frase natural do dia a dia, "tô no tal lugar", "vamos no tal lugar", tem que rolar sem esforço. Um nome que trava na hora de falar nunca vira boca a boca, e é o boca a boca que faz uma marca crescer.</span></div>
+  <div class="criterio-item"><span class="criterio-check">2</span><span class="criterio-texto"><strong>Fácil de digitar e de encontrar.</strong> No mundo do delivery, o nome é digitado antes de ser comido. Se a pessoa não sabe como se escreve, não acha a marca no aplicativo, e uma marca que não é encontrada perde a venda. O nome tem que ser intuitivo de buscar, no balcão e na tela do celular.</span></div>
+  <div class="criterio-item"><span class="criterio-check">3</span><span class="criterio-texto"><strong>Carregar um sentimento familiar.</strong> O nome precisa usar palavras que a pessoa já conhece e já sente, aquele "eu sei o que isso significa" que vem na hora. Uma palavra conhecida já chega cheia de imagem e de afeto na cabeça do cliente, e a marca aproveita esse sentimento que já existe, em vez de tentar criar um do zero.</span></div>
+  <div class="criterio-item"><span class="criterio-check">4</span><span class="criterio-texto"><strong>Ter espaço pra construir um universo.</strong> Um bom nome não é só um nome, é uma semente. Ele precisa ter uma essência forte o bastante pra crescer e virar um mundo inteiro: o jeito de batizar os pratos, as porções e os combos, o tom da comunicação, o personagem, a identidade. O nome certo é aquele que abre caminho pra tudo isso, que dá pano pra manga, que serve de base pra uma marca completa e cheia de personalidade.</span></div>
+</div>
+<div class="pf">14 / 34</div>
+</div>
+</section>
+
+<!-- ══ 11 — O ESTUDO DOS NOMES ══ -->
+<section>
+<div class="pagina" id="sec-estudonomes">
+<div class="ph"><span>12 · O Estudo dos Nomes</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="num-secao">12</span>
+<h2 class="titulo-secao">O Estudo dos Nomes</h2>
+<div class="corpo">
+<p>A partir das três decisões, um estudo aprofundado de nomes foi conduzido para chegar às melhores opções. Não se tratou de escolher nomes bonitos, e sim de encontrar nomes que funcionassem de verdade, aprovados em uma série de critérios rigorosos. Cada ideia apresentada a seguir passou por esse filtro.</p>
+</div>
+
+<span class="eyebrow" style="font-size:10px;">Para entrar na seleção final, cada nome precisou</span>
+<div class="criterios-lista">
+  <div class="criterio-item"><span class="criterio-check">1</span><span class="criterio-texto"><strong>Atender às três decisões.</strong> Manter a batata como coração da marca, ser simples e fácil de falar, e ter espaço para construir um universo próprio. Um nome que falhasse em qualquer uma dessas três frentes foi descartado.</span></div>
+  <div class="criterio-item"><span class="criterio-check">2</span><span class="criterio-texto"><strong>Ser diferente da concorrência local.</strong> Foi feito um levantamento dos restaurantes e casas de comida do mesmo nicho em Araxá e região, para garantir que o nome escolhido não se confunda com nenhum concorrente. A marca precisa se destacar na cidade, não parecer mais uma no meio das outras.</span></div>
+  <div class="criterio-item"><span class="criterio-check">3</span><span class="criterio-texto"><strong>Ter caminho livre de registro.</strong> Cada nome foi pensado para ter viabilidade de registro de marca no INPI, na classe de serviços de alimentação, além de disponibilidade de perfil nas redes sociais e de domínio na internet. De nada adianta um nome perfeito que não pode ser registrado ou usado como marca oficial.</span></div>
+  <div class="criterio-item"><span class="criterio-check">4</span><span class="criterio-texto"><strong>Ser fácil de encontrar no digital.</strong> O nome precisa ser intuitivo de buscar e digitar nos aplicativos de delivery e nas redes, onde boa parte dos clientes procura a marca. Um nome difícil de escrever é um cliente perdido.</span></div>
+  <div class="criterio-item"><span class="criterio-check">5</span><span class="criterio-texto"><strong>Traduzir a essência da marca.</strong> Mais do que soar bem, cada nome precisou carregar o espírito do negócio, a comida de verdade, o aconchego, a fartura, e conversar com o público de forma natural e afetuosa.</span></div>
+</div>
+<div class="pf">15 / 34</div>
+</div>
+</section>
+
+<!-- ══ 12 — ALTERNATIVA 01 ══ -->
+<section>
+<div class="pagina pagina-escura" id="sec-alt01">
+<div class="ph"><span>13 · Alternativa 01</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<div class="alternativa-wrap">
+  <span class="eyebrow" style="font-size:12px;padding:6px 16px;">Alternativa 01</span>
+  <span class="alternativa-nome">Batata &amp; Brasa</span>
+  <span style="display:block;font-family:'Poppins',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:0.3px;color:rgba(255,255,255,0.55);margin-top:16px;">Opção apresentada em reunião pela família e que tem viabilidade</span>
+</div>
+<div class="pf">16 / 34</div>
+</div>
+</section>
+
+<!-- ══ 12 — ALTERNATIVA 01 · PONTOS 1 e 2 ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>13 · Alternativa 01</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="alt-serie-label">Batata &amp; Brasa</span>
+<span class="alt-topico">1 · Simplicidade</span>
+<h2 class="titulo-secao" style="font-size:21px;">Um Nome Simples, Sonoro e que Gruda</h2>
+<div class="corpo">
+<p>Batata &amp; Brasa nasce de uma dupla que soa bem no primeiro instante. As duas palavras começam com o mesmo som, o "B" forte, e essa repetição cria uma musicalidade natural que gruda no ouvido. É o mesmo recurso por trás de nomes que a gente nunca esquece, como Coco Bambu. O nome tem ritmo, tem batida, e é curto o bastante pra ser dito de uma vez só, sem esforço. Fala em voz alta e sente: Batata e Brasa. Rola fácil, soa gostoso e fica na cabeça sozinho.</p>
+</div>
+
+<span class="alt-topico" style="margin-top:8px;">2 · Familiaridade</span>
+<h2 class="titulo-secao" style="font-size:21px;">Uma Palavra que Todo Mundo já Entende</h2>
+<div class="corpo">
+<p>Ninguém precisa explicar o que é brasa. É uma das palavras mais familiares e apetitosas da comida brasileira. Brasa é o fogo que assa, é o cheiro que abre o apetite, é o ponto certo da carne, é o calor do preparo feito com cuidado. Ao ouvir "brasa", a pessoa já sente na hora o aconchego de comida quente e bem-feita. O nome não precisa de tradução nem de esforço, ele comunica sozinho, na linguagem que o público já domina. É a palavra do dia a dia carregando o afeto que já existe.</p>
+</div>
+<div class="pf">17 / 34</div>
+</div>
+</section>
+
+<!-- ══ 12 — ALTERNATIVA 01 · PONTO 3 ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>13 · Alternativa 01</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="alt-serie-label">Batata &amp; Brasa</span>
+<span class="alt-topico">3 · Viabilidade</span>
+<h2 class="titulo-secao" style="font-size:21px;">Estudo de Viabilidade</h2>
+<div class="corpo">
+<p>A viabilidade do nome foi verificada em três frentes: a busca por registro de marca no INPI, na classe de serviços de alimentação, a pesquisa de concorrentes do mesmo nicho em Araxá e região, e a disponibilidade de perfil e domínio no digital.</p>
+</div>
+
+<h2 class="titulo-secao" style="font-size:18px;margin-top:18px;">Análise do Nome "Brasa" em Araxá e Região</h2>
+<div class="corpo">
+<p>A busca por estabelecimentos que usam a palavra "brasa" no nome mostrou um cenário favorável. Em Araxá, existe o Brasa Casa Rústica, um restaurante no bairro São Geraldo que trabalha com marmitex. Apesar de compartilhar a palavra "brasa", ele não tem nenhuma relação com o universo da batata nem com o mesmo tipo de proposta, o que afasta o risco de confusão entre as marcas. São públicos e conceitos diferentes, então a coexistência não representa problema.</p>
+<p>Em Belo Horizonte, foi identificado um estabelecimento que usa "batata" e "brasa" juntos, porém apenas no nome de um prato do cardápio, e não como nome do restaurante. Não se trata de uma marca com esse nome, e não há registro relacionado, o que significa que a expressão não está protegida nem apropriada por ninguém como marca. Portanto, também não há impedimento por esse lado.</p>
+<p>Em resumo, a combinação "Batata &amp; Brasa" não encontra concorrente direto nem registro que a impeça. A palavra "brasa" aparece na região de forma isolada e em contexto diferente, sem gerar conflito com a proposta da nova marca.</p>
+</div>
+
+<div class="placeholder-box is-placeholder">
+  <span class="placeholder-tag">📎 Print do INPI</span>
+  <img src="./assets/prints/alternativa-01/inpi-batata-brasa.png" alt="Print da busca no INPI — Batata &amp; Brasa"
+    onload="this.parentElement.classList.remove('is-placeholder')"
+    onerror="this.parentElement.classList.add('is-placeholder')">
+  <p class="placeholder-fallback-text">Prints do INPI e da disponibilidade de perfil/domínio.</p>
+</div>
+<div class="pf">18 / 34</div>
+</div>
+</section>
+
+<!-- ══ 12 — ALTERNATIVA 01 · PONTO 4 ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>13 · Alternativa 01</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="alt-serie-label">Batata &amp; Brasa</span>
+<span class="alt-topico">4 · Aplicação</span>
+<h2 class="titulo-secao" style="font-size:21px;">Como o Nome se Usa no Dia a Dia</h2>
+<div class="corpo">
+<p>Na prática, o nome funciona tanto no jeito completo quanto no apelido natural que o cliente vai criar. A marca é a Batata &amp; Brasa, mas na boca do povo vira "a Brasa", como em "vou ali na Brasa" ou "bora pra Batata &amp; Brasa". O nome aceita o carinho da abreviação sem perder a identidade, e é isso que faz um lugar virar ponto na cidade. O artigo cai natural, a gente fala "a Brasa", "lá na Brasa", do mesmo jeito espontâneo que se fala de um lugar querido de sempre.</p>
+</div>
+<div class="pf">19 / 34</div>
+</div>
+</section>
+
+<!-- ══ 12 — ALTERNATIVA 01 · PONTO 5 ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>13 · Alternativa 01</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="alt-serie-label">Batata &amp; Brasa</span>
+<span class="alt-topico">5 · Universo</span>
+<h2 class="titulo-secao" style="font-size:21px;">O Universo de Marca</h2>
+<div class="corpo">
+<p>Batata &amp; Brasa vive no território do calor honesto. É a antítese do congelado da praça de alimentação: aqui a comida tem fogo, tem cheiro, tem vida. O nome carrega os dois tempos da casa. No almoço, a brasa é a cozinha viva que capricha no prato do trabalhador. À noite, a brasa é o programa, a picanha na mesa, o chopp gelado, a roda de amigos. A personalidade que nasce daí é calorosa, farta e sem frescura, com o sorriso de quem gosta de receber. Se a marca fosse uma pessoa, seria o dono do lugar que te chama pelo nome, capricha na porção e ainda puxa conversa. O visual pode explorar o quente, o dourado, o aconchego do fogo, tudo o que dá água na boca antes mesmo do prato chegar.</p>
+</div>
+<div class="pf">20 / 34</div>
+</div>
+</section>
+
+<!-- ══ 12 — ALTERNATIVA 01 · PONTO 6 ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>13 · Alternativa 01</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="alt-serie-label">Batata &amp; Brasa</span>
+<span class="alt-topico">6 · Cardápio &amp; Slogans</span>
+<h2 class="titulo-secao" style="font-size:21px;">Naming do Cardápio, Conexões e Slogans</h2>
+<div class="corpo">
+<p>O universo da brasa organiza o cardápio inteiro com naturalidade, dando nome próprio a cada linha.</p>
+<p>Os pratos executivos do dia a dia podem virar <strong>Na Brasa do Dia</strong>. As porções da noite viram <strong>Brasa Braba</strong> (a de dividir com os amigos). As carnes nobres, como a picanha e o filé, viram <strong>Alta Brasa</strong>. As batatas recheadas viram <strong>Batata na Brasa</strong>. E o chopp e as bebidas geladas viram <strong>Pra Refrescar a Brasa</strong>, criando um contraste gostoso entre o quente da comida e o gelado da bebida.</p>
+</div>
+
+<span class="eyebrow" style="font-size:10px;">Direções de assinatura possíveis</span>
+<div>
+  <div class="slogan-box"><p>"Comida de verdade, no calor da brasa."</p></div>
+  <div class="slogan-box"><p>"Aqui, tudo passa pela brasa."</p></div>
+  <div class="slogan-box"><p>"Da batata à brasa, comida de verdade."</p></div>
+</div>
+
+<div class="corpo" style="margin-top:16px;">
+<p>O mascote pode ser uma batata simpática com um toque de brasa, um rubor quente nas bochechas, farta e sorridente, pronta pra receber.</p>
+</div>
+<div class="pf">21 / 34</div>
+</div>
+</section>
+
+<!-- ══ 14 — ALTERNATIVA 02 ══ -->
+<section>
+<div class="pagina pagina-escura" id="sec-alt02">
+<div class="ph"><span>14 · Alternativa 02</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<div class="alternativa-wrap">
+  <span class="eyebrow" style="font-size:12px;padding:6px 16px;">Alternativa 02</span>
+  <span class="alternativa-nome">Kê Batata</span>
+</div>
+<div class="pf">22 / 34</div>
+</div>
+</section>
+
+<!-- ══ 14 — ALTERNATIVA 02 · PONTOS 1 e 2 ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>14 · Alternativa 02</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="alt-serie-label">Kê Batata</span>
+<span class="alt-topico">1 · Simplicidade</span>
+<h2 class="titulo-secao" style="font-size:21px;">Um Nome Simples, Sonoro e que Gruda</h2>
+<div class="corpo">
+<p>Kê Batata nasce de uma reação, aquele "que batata!" que escapa quando a comida é boa demais. É uma expressão que o brasileiro já fala sem pensar, e é exatamente por isso que o nome gruda de primeira.</p>
+<p>Do outro, é o Kê de Kenia. E não é um detalhe bonitinho, é o coração da história. Durante anos, a Kenia foi a alma dessa cozinha sem que o nome fosse dela. Ela cozinhou, atendeu, cresceu e sustentou um negócio que sempre levou a marca de outro. Colocar o Kê dela no nome é, enfim, marcar a sua autoria.</p>
+<p>Tem o mesmo segredo que fez o nome antigo funcionar: a musicalidade, o ritmo, o jeito de expressão pronta que já vive na boca das pessoas. É curto, é leve, é divertido, e se fala num sopro. A grafia com Kê, escrita assim de propósito, dá o toque moderno e a personalidade que transformam uma frase comum numa marca de verdade. Fala em voz alta e sente: Kê Batata. Sai fácil, soa alegre e fica na cabeça na primeira vez.</p>
+</div>
+
+<span class="alt-topico" style="margin-top:8px;">2 · Familiaridade</span>
+<h2 class="titulo-secao" style="font-size:21px;">Uma Expressão que Todo Mundo já Usa</h2>
+<div class="corpo">
+<p>Ninguém precisa aprender o que "que batata" quer dizer, porque todo mundo já fala assim. É a exclamação natural de quem gostou, de quem se surpreendeu, de quem provou algo bom. O nome pega uma reação que já existe na vida das pessoas e a transforma em marca, o que faz ele soar familiar desde o primeiro segundo. E tem uma camada a mais, escondida e poderosa: o Kê é também a inicial da Kenia. É o Kê de quem faz a comida, de quem construiu essa história. Sem que ninguém precise explicar, o nome carrega a dona dentro dele, e isso amarra a marca à pessoa que lhe deu vida.</p>
+</div>
+<div class="pf">23 / 34</div>
+</div>
+</section>
+
+<!-- ══ 14 — ALTERNATIVA 02 · PONTO 3 ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>14 · Alternativa 02</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="alt-serie-label">Kê Batata</span>
+<span class="alt-topico">3 · Viabilidade</span>
+<h2 class="titulo-secao" style="font-size:21px;">Estudo de Viabilidade</h2>
+<div class="corpo">
+<p>A viabilidade do nome foi verificada nas três frentes: a busca por registro de marca no INPI na classe de serviços de alimentação, a pesquisa de concorrentes do mesmo nicho em Araxá e região, e a disponibilidade de perfil e domínio no digital.</p>
+</div>
+
+<div class="destaque">
+  <span class="destaque-label">Resultado do registro</span>
+  <p style="font-size:19px;">Não existe registro no INPI!!</p>
+  <p style="font-family:'DM Sans',sans-serif;font-weight:500;font-size:14px;color:var(--preto);margin-top:10px;">Obs.: a busca não encontrou registro nem com "KE" (sem acento) nem com "KÊ" (com acento) — as duas grafias de <strong>KE/KÊ BATATA</strong> estão livres.</p>
+</div>
+<div class="placeholder-box is-placeholder">
+  <span class="placeholder-tag">📎 Print do INPI</span>
+  <img src="./assets/prints/alternativa-02/inpi-ke-batata.png" alt="Print da busca no INPI — Kê Batata"
+    onload="this.parentElement.classList.remove('is-placeholder')"
+    onerror="this.parentElement.classList.add('is-placeholder')">
+  <p class="placeholder-fallback-text">Print da busca no INPI.</p>
+</div>
+
+<div class="corpo">
+<p>Sobre a concorrência local, há apenas um ponto de atenção, e ele é pequeno. Existe em Araxá a Ki Batatas Keila, que trabalha com batata assada por delivery em conjunto com uma pizzaria. Apesar da sonoridade parecida, não se trata de um concorrente direto no mesmo território: é uma operação de delivery, sem proposta de restaurante, com posicionamento fraco e sem construção de marca. A diferença de conceito, de estrutura e de força entre as duas é grande o suficiente para que não haja confusão.</p>
+</div>
+<div class="pf">24 / 34</div>
+</div>
+</section>
+
+<!-- ══ 14 — ALTERNATIVA 02 · PONTO 4 ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>14 · Alternativa 02</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="alt-serie-label">Kê Batata</span>
+<span class="alt-topico">4 · Aplicação</span>
+<h2 class="titulo-secao" style="font-size:21px;">Como o Nome se Usa no Dia a Dia</h2>
+<div class="corpo">
+<p>Na prática, o nome é curtíssimo e cai fácil na boca. A pessoa fala "vou no Kê Batata" ou simplesmente "vou no Kê", e a marca já vira apelido carinhoso na hora. O Kê aceita o artigo com naturalidade, "lá no Kê", "aqui no Kê Batata", do mesmo jeito espontâneo que se fala de um lugar de sempre. E tem um bônus raro: a grafia estilizada, além de moderna, deixa a marca fácil de reconhecer visualmente. Uma vez visto, o Kê não se esquece.</p>
+</div>
+<div class="pf">25 / 34</div>
+</div>
+</section>
+
+<!-- ══ 14 — ALTERNATIVA 02 · PONTO 6 ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>14 · Alternativa 02</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="alt-serie-label">Kê Batata</span>
+<span class="alt-topico">6 · Cardápio &amp; Slogans</span>
+<h2 class="titulo-secao" style="font-size:21px;">Naming do Cardápio, Conexões e Slogans</h2>
+<div class="corpo">
+<p>O maior diferencial do Kê Batata é que ele não é só um nome, é uma linguagem inteira. O "Kê" vira um sistema que organiza e batiza tudo, com a mesma alma divertida.</p>
+<p>Os pratos executivos do almoço podem virar <strong>Kê Prato</strong>. As porções da noite viram <strong>Kê Porção</strong>. As carnes na brasa viram <strong>Kê Brasa</strong> (e repare que o universo da brasa, tão forte na comida, cabe aqui dentro como uma parte do todo). O prato do dia vira <strong>Kê Segunda</strong>, o combo de fim de semana vira <strong>Kê Sábado</strong>, o chopp e as bebidas viram <strong>Kê Gelada</strong>. Tudo conversa, tudo tem a mesma cara, e o cardápio inteiro ganha identidade própria sem depender de nada do passado.</p>
+</div>
+
+<span class="eyebrow" style="font-size:10px;">Direções de assinatura possíveis</span>
+<div>
+  <div class="slogan-box"><p>"Kê Batata, kê delícia!"</p></div>
+  <div class="slogan-box"><p>"Deu fome? Kê Batata."</p></div>
+</div>
+
+<div class="corpo" style="margin-top:16px;">
+<p>O mascote pode ser a batatinha Kê, de olhos arregalados e sorriso animado, sempre reagindo com um "Kêêê!" diante do prato. Expressiva e divertida, perfeita para as redes sociais, para a criançada e para virar o rosto querido da marca.</p>
+</div>
+<div class="pf">26 / 34</div>
+</div>
+</section>
+
+<!-- ══ 15 — ALTERNATIVA 03 ══ -->
+<section>
+<div class="pagina pagina-escura" id="sec-alt03">
+<div class="ph"><span>15 · Alternativa 03</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<div class="alternativa-wrap">
+  <span class="eyebrow" style="font-size:12px;padding:6px 16px;">Alternativa 03</span>
+  <span class="alternativa-nome">Kasa da Batata</span>
+</div>
+<div class="pf">27 / 34</div>
+</div>
+</section>
+
+<!-- ══ 15 — ALTERNATIVA 03 · PONTOS 1 e 2 ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>15 · Alternativa 03</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="alt-serie-label">Kasa da Batata</span>
+<span class="alt-topico">1 · Simplicidade</span>
+<h2 class="titulo-secao" style="font-size:21px;">Um Nome Simples, Acolhedor e Fácil de Falar</h2>
+<div class="corpo">
+<p>Kasa da Batata é o nome mais aconchegante dos três, e o que mais fala direto ao coração. "Casa" é uma das palavras mais simples e afetuosas que existem, todo mundo entende e sente na hora. O nome rola fácil na boca e vira apelido na mesma hora: "vou na Kasa", "bora na Kasa da Batata". A grafia com K dá o toque de personalidade e modernidade, sem atrapalhar a leitura, porque a pessoa lê "casa" naturalmente. É um nome que soa como um convite, caloroso e sem nenhuma dificuldade, do tipo que a pessoa fala uma vez e já não esquece.</p>
+</div>
+
+<span class="alt-topico" style="margin-top:8px;">2 · Familiaridade</span>
+<h2 class="titulo-secao" style="font-size:21px;">Uma Palavra que Aquece na Hora</h2>
+<div class="corpo">
+<p>Ninguém precisa pensar pra entender o que "casa" significa. É a palavra do aconchego, do pertencimento, do lugar onde a gente se sente bem. Ao ouvir "Kasa da Batata", a pessoa já sente o acolhimento antes mesmo de entrar, porque a palavra carrega tudo isso naturalmente. E ela tem uma força dupla: é a casa como aconchego, a comida caseira, o sentir-se em casa, e é a casa como referência, o lugar oficial da batata na cidade, do mesmo jeito que se fala "a casa do pão de queijo" ou "a casa da picanha". O nome acolhe e posiciona ao mesmo tempo, dizendo que ali é A casa da batata em Araxá.</p>
+</div>
+<div class="pf">28 / 34</div>
+</div>
+</section>
+
+<!-- ══ 15 — ALTERNATIVA 03 · PONTO 3 ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>15 · Alternativa 03</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="alt-serie-label">Kasa da Batata</span>
+<span class="alt-topico">3 · Viabilidade</span>
+<h2 class="titulo-secao" style="font-size:21px;">Estudo de Viabilidade</h2>
+<div class="placeholder-box is-placeholder">
+  <span class="placeholder-tag">📎 Print do INPI</span>
+  <img src="./assets/prints/alternativa-03/inpi-kasa-da-batata.png" alt="Print da busca no INPI — Kasa da Batata"
+    onload="this.parentElement.classList.remove('is-placeholder')"
+    onerror="this.parentElement.classList.add('is-placeholder')">
+  <p class="placeholder-fallback-text">Prints da pesquisa de INPI, redes e domínio.</p>
+</div>
+<div class="corpo">
+<p>A viabilidade do nome foi verificada nas três frentes: a busca por registro de marca no INPI na classe de serviços de alimentação, a pesquisa de concorrentes do mesmo nicho em Araxá e região, e a disponibilidade de perfil e domínio no digital.</p>
+<p>Sobre a concorrência local, não foi identificado em Araxá nenhum estabelecimento com esse nome, o que deixa o caminho livre na cidade. É importante saber, porém, que "Casa da Batata" é uma construção usada em outras cidades do país, por ser um formato natural de nome. É justamente aí que entra a força da grafia com K: escrever Kasa, e não Casa, dá à marca uma identidade própria e uma escrita distinta, o que ajuda tanto a diferenciar de qualquer homônimo quanto a proteger o registro. Por esse motivo, a recomendação é registrar a marca já na forma estilizada, com o K, e verificar a disponibilidade considerando essa grafia específica.</p>
+</div>
+<div class="pf">29 / 34</div>
+</div>
+</section>
+
+<!-- ══ 15 — ALTERNATIVA 03 · PONTO 4 ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>15 · Alternativa 03</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="alt-serie-label">Kasa da Batata</span>
+<span class="alt-topico">4 · Aplicação</span>
+<h2 class="titulo-secao" style="font-size:21px;">Como o Nome se Usa no Dia a Dia</h2>
+<div class="corpo">
+<p>Na prática, o nome funciona lindamente tanto completo quanto abreviado. A marca é a Kasa da Batata, mas na boca do cliente vira "a Kasa", como em "vou almoçar na Kasa" ou "encontra a gente na Kasa da Batata". O artigo cai natural e carinhoso, e a palavra "casa" já traz embutida a ideia de lugar, de ponto, o que faz o nome virar referência com facilidade. É o tipo de nome que a pessoa usa como se falasse de um lugar querido de sempre, porque a própria palavra já sugere isso.</p>
+</div>
+<div class="pf">30 / 34</div>
+</div>
+</section>
+
+<!-- ══ 15 — ALTERNATIVA 03 · PONTO 5 ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>15 · Alternativa 03</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="alt-serie-label">Kasa da Batata</span>
+<span class="alt-topico">5 · Universo</span>
+<h2 class="titulo-secao" style="font-size:21px;">O Universo de Marca</h2>
+<div class="corpo">
+<p>Kasa da Batata vive no território do aconchego e da autoridade. É o mais afetivo dos três, e traduz com perfeição a ideia de comida caseira, feita com cuidado, num lugar que recebe bem. A grande ideia é simples e poderosa: aqui não é um ponto qualquer de praça de alimentação, é uma casa. Um lugar onde a comida é de verdade, o atendimento recebe como quem recebe visita, e a mesa é farta como um almoço de família. A personalidade que nasce daí é calorosa, acolhedora e caseira, com um toque moderno no visual por conta do K. E há uma vantagem estratégica enorme para o futuro: "Kasa" escala com naturalidade para franquia. Do mesmo jeito que existem redes conhecidas construídas sobre a ideia de "casa", cada nova unidade é mais uma Kasa da Batata, o que faz o nome já nascer pensado para crescer e chegar a outras cidades.</p>
+</div>
+<div class="pf">31 / 34</div>
+</div>
+</section>
+
+<!-- ══ 15 — ALTERNATIVA 03 · PONTO 6 ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>15 · Alternativa 03</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="alt-serie-label">Kasa da Batata</span>
+<span class="alt-topico">6 · Cardápio &amp; Slogans</span>
+<h2 class="titulo-secao" style="font-size:21px;">Naming do Cardápio, Conexões e Slogans</h2>
+<div class="corpo">
+<p>A palavra "casa" organiza o cardápio inteiro com naturalidade, porque tudo pode pertencer à Kasa.</p>
+<p>Os pratos executivos do almoço podem virar <strong>Prato da Kasa</strong>, o prato-feito caseiro do dia a dia. As porções da noite viram <strong>Mesa da Kasa</strong>, as de dividir com a turma. A batata assinatura vira <strong>Batata da Kasa</strong>, a especialidade. O cartão fidelidade vira <strong>Gente da Kasa</strong>, o clube de quem é de casa. O combo de fim de semana vira <strong>Domingo na Kasa</strong>, e a receita especial vira <strong>Segredo da Kasa</strong>. Tudo pertence à Kasa, e isso cria uma linguagem afetuosa e coerente do começo ao fim.</p>
+</div>
+
+<span class="eyebrow" style="font-size:10px;">Direções de assinatura possíveis</span>
+<div>
+  <div class="slogan-box"><p>"Aqui, você é de casa."</p></div>
+  <div class="slogan-box"><p>"A Kasa da Batata é sua."</p></div>
+  <div class="slogan-box"><p>"Comida de verdade, comida de casa!"</p></div>
+</div>
+
+<div class="corpo" style="margin-top:16px;">
+<p>O mascote pode ser uma batatinha acolhedora, com um jeitinho de quem recebe de braços abertos, talvez com um avental caseiro, transmitindo o calor de um lar.</p>
+</div>
+<div class="pf">32 / 34</div>
+</div>
+</section>
+
+<!-- ══ 16 — OUTROS NOMES ESTUDADOS ══ -->
+<section>
+<div class="pagina" id="sec-outrosnomes">
+<div class="ph"><span>16 · Outros Nomes Estudados</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="num-secao">16</span>
+<h2 class="titulo-secao">Outros Nomes Estudados</h2>
+<div class="corpo">
+<p>Estes nomes fizeram parte do processo criativo, alguns foram descartados por já terem registro, por não atenderem aos critérios definidos ou por não traduzirem bem a essência da marca. Ficam registrados como inspiração, caso nenhuma das três opções principais seja a escolhida.</p>
+</div>
+
+<div style="margin-top:10px;">
+  <div class="nome-estudado">
+    <div class="nome-estudado-topo"><span class="nome-estudado-nome">Gran Batata</span><span class="nome-estudado-selo selo-descartado">Descartado</span></div>
+    <p class="nome-estudado-texto">Já possui registro no INPI e gera confusão com a Gran Milho, empresa grande de Araxá, parecendo mais indústria do que restaurante.</p>
+  </div>
+  <div class="nome-estudado">
+    <div class="nome-estudado-topo"><span class="nome-estudado-nome">Nossa Batata</span><span class="nome-estudado-selo selo-reserva">Reserva</span></div>
+    <p class="nome-estudado-texto">Não tem registro, traz autoria e é fácil de lembrar. Ficou como alternativa de reserva.</p>
+  </div>
+  <div class="nome-estudado">
+    <div class="nome-estudado-topo"><span class="nome-estudado-nome">Bendita Batata</span><span class="nome-estudado-selo selo-descartado">Descartado</span></div>
+    <p class="nome-estudado-texto">Sonoridade ótima, mas já possui registro no INPI.</p>
+  </div>
+  <div class="nome-estudado">
+    <div class="nome-estudado-topo"><span class="nome-estudado-nome">Batata &amp; Lenha</span><span class="nome-estudado-selo selo-descartado">Descartado</span></div>
+    <p class="nome-estudado-texto">Não tem registro, mas já existem outros restaurantes com "lenha" no nome, e não fica tão alinhado com a linguagem moderna da marca e do shopping.</p>
+  </div>
+  <div class="nome-estudado">
+    <div class="nome-estudado-topo"><span class="nome-estudado-nome">Kebela Batata</span><span class="nome-estudado-selo selo-reserva">Reserva</span></div>
+    <p class="nome-estudado-texto">Criativo e diferente, não tem registro. Ficou como alternativa de reserva.</p>
+  </div>
+  <div class="nome-estudado">
+    <div class="nome-estudado-topo"><span class="nome-estudado-nome">Kebrasa Batata</span><span class="nome-estudado-selo selo-reserva">Reserva</span></div>
+    <p class="nome-estudado-texto">Criativo e diferente, não tem registro. Ficou como alternativa de reserva — une os dois universos, do Kê e da Brasa.</p>
+  </div>
+</div>
+<div class="pf">33 / 34</div>
+</div>
+</section>
+
+<!-- ══ 17 — PRÓXIMOS PASSOS ══ -->
+<section>
+<div class="pagina pagina-escura" id="sec-proximos">
+<div class="ph"><span>17 · Próximos Passos</span><span class="ph-right"><span class="ph-marca">Projeto Rebranding</span> · Plataforma de Marca</span></div>
+<span class="eyebrow">Roteiro do Projeto</span>
+<h2 class="titulo-secao">Próximos Passos</h2>
+
+<div style="margin-top:22px;">
+  <div class="passo-item">
+    <span class="passo-num">1</span>
+    <div class="passo-corpo">
+      <span class="passo-corpo-titulo">Definição do Nome<span class="passo-etapa-selo">Próxima etapa</span></span>
+      <p>Apresentação e avaliação dos caminhos de nome construídos a partir dos critérios definidos nesta plataforma, para escolha e refinamento com a Kenia.</p>
+    </div>
+  </div>
+  <div class="passo-item">
+    <span class="passo-num">2</span>
+    <div class="passo-corpo">
+      <span class="passo-corpo-titulo">Ajustes de Posicionamento</span>
+      <p>Retirar dúvida e ajustes relacionados ao posicionamento, garantindo que tudo esteja alinhado antes de seguir pro visual.</p>
+    </div>
+  </div>
+  <div class="passo-item">
+    <span class="passo-num">3</span>
+    <div class="passo-corpo">
+      <span class="passo-corpo-titulo">Estudo de Referências</span>
+      <p>Levantamento de referências visuais a partir do nome escolhido, pra guiar a direção estética da marca.</p>
+    </div>
+  </div>
+  <div class="passo-item">
+    <span class="passo-num">4</span>
+    <div class="passo-corpo">
+      <span class="passo-corpo-titulo">Projeto de Identidade Visual</span>
+      <p>Construção da marca visual — logotipo, cores e aplicações — a partir do nome escolhido e das referências definidas.</p>
+    </div>
+  </div>
+</div>
+
+<div class="destaque" style="margin-top:22px;">
+  <span class="destaque-label">Prazo</span>
+  <p style="font-size:15px;">A prévia de identidade visual é entregue em aproximadamente 10 dias úteis após a definição do nome.</p>
+</div>
+
+<div style="margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.15);text-align:center;">
+  <span style="font-family:'Poppins',sans-serif;font-size:9.5px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);">Posicionamento desenvolvido por Fabiana Rosant | Todos os direitos reservados</span>
+</div>
+<div class="pf">34 / 34</div>
+</div>
+</section>
+
+</div>
+</body>
+</html>
