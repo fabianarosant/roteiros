@@ -278,6 +278,29 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
 .rest-grid-ab .restaurante{ margin: 0; }
 @media (max-width: 540px) {.rest-grid-ab{ grid-template-columns: 1fr; }}
 
+/* ═══════════════════ LINHA DO TEMPO (resumo do dia) ═══════════════════ */
+.timeline-dia-header{ display:flex; align-items:center; justify-content:center; gap:16px; margin-bottom:22px; flex-wrap:wrap; }
+.timeline-dia-num{ font-family:'Magnolia Script',cursive; font-size:36px; color:var(--azul-medio); line-height:1; }
+.timeline-dia-data{ font-family:'Poppins',sans-serif; font-size:13px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#64748b; }
+.timeline-titulo{ font-family:'Poppins',sans-serif; font-size:12px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:var(--azul-medio); text-align:center; margin:24px 0 12px; }
+.timeline-dia{ display:flex; flex-direction:column; border:1px solid var(--cinza-borda); border-radius:12px; overflow:hidden; margin-top:6px; }
+.timeline-item{ display:flex; align-items:center; gap:14px; padding:13px 18px; border-bottom:1px solid var(--cinza-claro); background:white; }
+.timeline-item:last-child{ border-bottom:none; }
+.timeline-num{ width:24px; height:24px; border-radius:50%; background:var(--azul-medio); color:white; font-family:'Poppins',sans-serif; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.timeline-item.timeline-rest .timeline-num{ visibility:hidden; }
+.timeline-hora{ width:52px; flex-shrink:0; font-family:'Poppins',sans-serif; font-size:15px; font-weight:700; color:var(--azul-medio); }
+.timeline-corpo{ flex:1; min-width:0; }
+.timeline-local{ font-family:'Poppins',sans-serif; font-size:15px; font-weight:600; color:var(--texto); display:block; }
+.timeline-desloc{ font-family:'Poppins',sans-serif; font-size:12.5px; color:#94a3b8; }
+.timeline-selo{ flex-shrink:0; font-family:'Poppins',sans-serif; font-size:11.5px; font-weight:700; padding:5px 12px; border-radius:20px; white-space:nowrap; }
+.timeline-selo.pago{ background:#f0fdf4; color:#166534; border:1px solid #16a34a; }
+.timeline-selo.gratuito{ background:#dbeafe; color:var(--azul-medio); border:1px solid var(--azul-medio); }
+.timeline-selo.dourado{ background:#fef9c3; color:#854d0e; border:1px solid #ca8a04; }
+.timeline-item.timeline-rest{ background:#fdf6ec; }
+.timeline-item.timeline-rest .timeline-hora{ color:#8a6830; }
+.timeline-item.timeline-rest .timeline-local{ font-weight:500; font-style:italic; color:#8a6830; }
+@media (max-width: 500px) {.timeline-local{ font-size:13px; } .timeline-desloc{ font-size:11px; } .timeline-selo{ font-size:10px; padding:4px 9px; }}
+
 /* ═══════════════════ SEÇÃO CURADORIA DE VOOS ═══════════════════ */
 .voo-card{ background:white; border:1.5px solid #e0eaf5; border-radius:16px; overflow:hidden; margin:0 0 20px; box-shadow:0 2px 10px rgba(26,58,92,0.07); transition:transform 0.2s, box-shadow 0.2s; }
 .voo-card:hover{ transform:translateY(-2px); box-shadow:0 6px 24px rgba(26,58,92,0.12); }
@@ -1381,6 +1404,63 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
     </div>
     <div class="dia-header-body">
       <span class="dia-header-ritmo">🚗 Ritmo: Leve · dia de adaptação</span>
+    </div>
+  </div>
+
+  <div class="timeline-titulo">Linha do Tempo</div>
+  <div class="timeline-dia">
+    <div class="timeline-item timeline-rest">
+      <span class="timeline-num">·</span>
+      <span class="timeline-hora">06h20</span>
+      <div class="timeline-corpo"><span class="timeline-local">🛬 Pouso em Dallas</span><span class="timeline-desloc">Aeroporto DFW</span></div>
+    </div>
+    <div class="timeline-item timeline-rest">
+      <span class="timeline-num">·</span>
+      <span class="timeline-hora">08h00</span>
+      <div class="timeline-corpo"><span class="timeline-local">🚗 Retirada do carro</span><span class="timeline-desloc">no terminal do DFW</span></div>
+    </div>
+    <div class="timeline-item timeline-rest">
+      <span class="timeline-num">·</span>
+      <span class="timeline-hora">~08h30</span>
+      <div class="timeline-corpo"><span class="timeline-local">☕ Café da manhã — Whataburger</span><span class="timeline-desloc">entre o DFW e Las Colinas</span></div>
+    </div>
+    <div class="timeline-item timeline-rest">
+      <span class="timeline-num">·</span>
+      <span class="timeline-hora">~09h30</span>
+      <div class="timeline-corpo"><span class="timeline-local">🚗 Volta de carro por Downtown</span><span class="timeline-desloc">primeiro contato com o skyline</span></div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-num">01</span>
+      <span class="timeline-hora">~10h</span>
+      <div class="timeline-corpo"><span class="timeline-local">Pioneer Plaza</span><span class="timeline-desloc">🚗 ~5 min de Downtown</span></div>
+      <span class="timeline-selo gratuito">🔵 Gratuito</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-num">02</span>
+      <span class="timeline-hora">~11h</span>
+      <div class="timeline-corpo"><span class="timeline-local">Dealey Plaza &amp; Memorial JFK</span><span class="timeline-desloc">👣 8 min da Pioneer Plaza</span></div>
+      <span class="timeline-selo gratuito">🔵 Gratuito</span>
+    </div>
+    <div class="timeline-item timeline-rest">
+      <span class="timeline-num">·</span>
+      <span class="timeline-hora">~12h30</span>
+      <div class="timeline-corpo"><span class="timeline-local">🍽 Almoço — Mia's Tex-Mex</span><span class="timeline-desloc">Uptown, Dallas</span></div>
+    </div>
+    <div class="timeline-item timeline-rest">
+      <span class="timeline-num">·</span>
+      <span class="timeline-hora">~15h</span>
+      <div class="timeline-corpo"><span class="timeline-local">🏨 Check-in — Sandman Signature</span><span class="timeline-desloc">Las Colinas</span></div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-num">03</span>
+      <span class="timeline-hora">Pôr do sol</span>
+      <div class="timeline-corpo"><span class="timeline-local">Reunion Tower</span><span class="timeline-desloc">🚗 ~20 min do hotel</span></div>
+      <span class="timeline-selo dourado">🎟️ Comprar no local</span>
+    </div>
+    <div class="timeline-item timeline-rest">
+      <span class="timeline-num">·</span>
+      <span class="timeline-hora">~20h</span>
+      <div class="timeline-corpo"><span class="timeline-local">🍽 Jantar — Pappas Bros. Steakhouse</span><span class="timeline-desloc">Downtown Dallas</span></div>
     </div>
   </div>
 
