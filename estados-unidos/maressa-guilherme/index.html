@@ -213,6 +213,19 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
 .legenda-glass{ background: rgba(255,255,255,0.10); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.20); border-radius: 14px; padding: 16px 18px; margin-bottom: 16px; }
 .legenda-glass-titulo{ font-family: "Poppins", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: white; display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.15); }
 
+/* ═══════════════════ HERO DE CIDADE (cidade-clean) ═══════════════════ */
+section.cidade-clean{ position:relative; overflow:hidden; min-height:100svh; }
+section.cidade-clean::before{ content:""; position:absolute; inset:0; background-image: var(--cidade-bg); background-size:cover; background-position:center; z-index:0; }
+section.cidade-clean::after{ content:""; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(10,22,40,0.18) 0%, rgba(10,22,40,0.26) 28%, rgba(10,22,40,0.52) 62%, rgba(10,22,40,0.78) 100%); z-index:0; }
+section.cidade-clean .page.secao{ position:relative; z-index:1; padding-top:72px; padding-bottom:56px; color:white !important; max-width:900px; }
+section.cidade-clean .cidade-nome{ font-family:"Pinyon Script","Great Vibes",cursive; font-size:112px; color:white !important; display:block; text-align:center; line-height:0.95; margin:68px 0 22px; text-shadow:0 4px 24px rgba(0,0,0,0.28); }
+section.cidade-clean .cidade-resumo{ max-width:720px; margin:0 auto 24px; text-align:left; font-size:13px; line-height:1.8; color:rgba(255,255,255,0.92) !important; text-shadow:0 1px 8px rgba(0,0,0,0.16); }
+section.cidade-clean .city-cards-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:22px auto 0; max-width:860px; }
+section.cidade-clean .legenda-glass{ background:rgba(255,255,255,0.10) !important; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border:1px solid rgba(255,255,255,0.16) !important; border-radius:18px !important; padding:18px 18px 16px !important; box-shadow:0 8px 30px rgba(0,0,0,0.12); margin-bottom:16px !important; }
+section.cidade-clean .legenda-glass-titulo{ color:white !important; border-bottom:1px solid rgba(255,255,255,0.14) !important; padding-bottom:10px !important; margin-bottom:10px !important; }
+section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span, section.cidade-clean .legenda-glass li{ color:rgba(255,255,255,0.86) !important; }
+@media (max-width: 768px) {section.cidade-clean .page.secao{ padding-top:56px; padding-bottom:42px; } section.cidade-clean .cidade-nome{ font-size:68px; margin:58px 0 18px; } section.cidade-clean .city-cards-grid{ grid-template-columns:1fr; gap:12px; }}
+
 /* ═══════════════════ ROTEIRO DETALHADO — CABEÇALHO DO DIA ═══════════════════ */
 .dia-header-card{ background: white; border: 1.5px solid #dde8f5; border-radius: 18px; box-shadow: 0 2px 10px rgba(26,58,92,0.08); overflow: hidden; margin-bottom: 24px; }
 .dia-header-pill-top{ background: var(--azul-medio); padding: 10px 20px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
@@ -1387,6 +1400,39 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
   <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 32px;max-width:620px;">O roteiro que vai com vocês na viagem. Cada dia descrito com detalhe, lógica e carinho — do café da manhã ao jantar.</p>
 
   <div class="btn-menu-wrap"><a class="btn-menu" href="#dia01">Ir pro Dia 01</a></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ HERO — DALLAS ═══════════════════════════════════════════════════════ -->
+<section id="dallas-cidade" class="cidade-clean" style="--cidade-bg:url('./assets/cidades/dallas/dallas-capa.jpg');background:linear-gradient(135deg,#0a1f44 0%,#1a3a5c 50%,#7a1823 100%);overflow:hidden;">
+<div class="page secao" style="color:white;padding-top:40px;">
+  <span class="cidade-nome">Dallas</span>
+
+  <p class="cidade-resumo">Dallas é a porta de entrada de vocês nos Estados Unidos — parte da "Metroplex", a quarta maior região metropolitana do país, formada junto com a vizinha Fort Worth. Arranha-céus de vidro, chapéu de cowboy, churrasco lento e uma história que passa por petróleo, algodão e um dos capítulos mais marcantes do século XX. É aqui que a viagem de vocês começa a valer o carimbo.</p>
+
+  <div class="city-cards-grid">
+    <div class="legenda-glass">
+      <span class="legenda-glass-titulo">🤠 Sobre Dallas</span>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">📍</span><span style="font-size:12px;color:rgba(255,255,255,0.85);">Fundada em 1841 por John Neely Bryan às margens do <strong style="color:white;">Trinity River</strong> — hoje forma, com Fort Worth, a Metroplex, a quarta maior região metropolitana dos EUA.</span></div>
+        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🕐</span><span style="font-size:12px;color:rgba(255,255,255,0.85);">Fuso <strong style="color:white;">Central Time</strong>, 3h atrás de Brasília — o mesmo fuso durante toda a estadia em Dallas.</span></div>
+        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🌡️</span><span style="font-size:12px;color:rgba(255,255,255,0.85);">Outubro em Dallas costuma ser ameno, entre <strong style="color:white;">12°C e 26°C</strong> — bem mais fresco que Miami e Orlando, que vêm depois na viagem.</span></div>
+        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🐂</span><span style="font-size:12px;color:rgba(255,255,255,0.85);">A identidade cowboy não é só estética: até os anos 1980 a cidade viveu do <strong style="color:white;">petróleo e da pecuária</strong> — o mesmo Texas que virou símbolo mundial de fartura e chapéu grande.</span></div>
+      </div>
+    </div>
+
+    <div class="legenda-glass">
+      <span class="legenda-glass-titulo">✨ Curiosidades de Dallas</span>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🤠</span><span style="font-size:12px;color:rgba(255,255,255,0.8);"><strong style="color:white;">Big Tex</strong>, o cowboy gigante de 16 metros, é símbolo da State Fair of Texas desde 1952 — já pegou fogo duas vezes e sempre voltou maior.</span></div>
+        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🏠</span><span style="font-size:12px;color:rgba(255,255,255,0.8);">O rancho real usado nas gravações da novela americana <strong style="color:white;">"Dallas"</strong> (1978–1991), o Southfork Ranch, fica a ~40 min do centro e ainda recebe visitantes.</span></div>
+        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">✈️</span><span style="font-size:12px;color:rgba(255,255,255,0.8);">O <strong style="color:white;">Aeroporto DFW</strong>, por onde vocês chegam, tem mais área que a ilha de Manhattan inteira — um dos maiores do mundo em extensão.</span></div>
+        <div style="display:flex;gap:10px;"><span style="font-size:16px;flex-shrink:0;">🏪</span><span style="font-size:12px;color:rgba(255,255,255,0.8);">A rede <strong style="color:white;">7-Eleven</strong> nasceu em Dallas em 1927, como uma loja de gelo que passou a vender leite e ovos fora do horário comercial.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico" style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:white;">Menu Principal</a></div>
 </div>
 </section>
 
