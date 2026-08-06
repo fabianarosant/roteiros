@@ -253,6 +253,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
 .atracao-nova-info{ flex: 1; }
 .atracao-nova-nome{ font-family: "Poppins", sans-serif; font-size: 14px; font-weight: 700; color: var(--azul); display: block; }
 .atracao-nova-cat{ font-size: 11px; color: #94a3b8; display: block; margin-top: 2px; }
+.atracao-selecao{ display:flex; flex-direction:column; align-items:flex-end; gap:6px; flex-shrink:0; }
+.atracao-checkbox-label{ display:flex; align-items:center; gap:5px; font-family:"Poppins",sans-serif; font-size:9px; font-weight:600; color:var(--azul-medio); white-space:nowrap; cursor:pointer; }
+.atracao-checkbox-label input[type="checkbox"]{ width:13px; height:13px; accent-color:var(--azul-medio); cursor:pointer; margin:0; }
+.selo-fixo{ background:#eff6ff; color:var(--azul-medio); border:1.5px solid #bfdbfe; }
 .atracao-data{ font-family: "Poppins", sans-serif; font-size: 8px; font-weight: 500; color: #b0bec5; letter-spacing: 0.5px; margin-left: 6px; white-space: nowrap; }
 .atracao-info-faixa{ background: #eef4fb; padding: 10px 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; border-bottom: 1px solid #e0eaf4; }
 .info-label{ font-family: "Poppins", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--azul-medio); display: block; margin-bottom: 2px; }
@@ -1467,6 +1471,7 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">Chegada em Dallas — Aeroporto DFW <span class="atracao-data">Dia 01 · 21/10 · Quarta</span></span>
         <span class="atracao-nova-cat">🛬 Logística de chegada</span>
       </div>
+      <span class="selo selo-fixo">📌 Fixo</span>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Pouso</span><span class="info-valor">🕐 06h20</span></div>
@@ -1519,7 +1524,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">Pioneer Plaza <span class="atracao-data">Dia 01 · 21/10 · Quarta</span></span>
         <span class="atracao-nova-cat">📍 Marco Histórico — a maior escultura de bronze do mundo</span>
       </div>
-      <span class="selo selo-verde">🔵 Gratuito</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-verde">🔵 Gratuito</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">🚗 ~5 min de Downtown</span></div>
@@ -1546,7 +1554,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">Dealey Plaza &amp; Memorial JFK <span class="atracao-data">Dia 01 · 21/10 · Quarta</span></span>
         <span class="atracao-nova-cat">📍 Marco Histórico — onde a história dos EUA mudou de rumo</span>
       </div>
-      <span class="selo selo-verde">🔵 Gratuito</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-verde">🔵 Gratuito</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">🚶 8 min a pé da Pioneer Plaza</span></div>
@@ -1607,7 +1618,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">Reunion Tower <span class="atracao-data">Dia 01 · 21/10 · Quarta</span></span>
         <span class="atracao-nova-cat">🌇 Vista Panorâmica — o pôr do sol mais alto de Dallas</span>
       </div>
-      <span class="selo selo-amarelo">🟡 Ingresso no Local</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-amarelo">🟡 Ingresso no Local</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">🚗 ~20 min do hotel</span></div>
@@ -1678,7 +1692,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">Sixth Floor Museum <span class="atracao-data">Dia 02 · 22/10 · Quinta</span></span>
         <span class="atracao-nova-cat">🏛️ Museu Histórico — o outro lado de Dealey Plaza</span>
       </div>
-      <span class="selo selo-amarelo">🟡 Ingresso no Local</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-amarelo">🟡 Ingresso no Local</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">🚗 ~20 min do hotel</span></div>
@@ -1706,7 +1723,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">Dallas Arts District <span class="atracao-data">Dia 02 · 22/10 · Quinta</span></span>
         <span class="atracao-nova-cat">🎨 Distrito Cultural — o maior distrito de artes contíguo dos EUA</span>
       </div>
-      <span class="selo selo-verde">🔵 Gratuito</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-verde">🔵 Gratuito</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">🚗 ~8 min do museu</span></div>
@@ -1749,7 +1769,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">Klyde Warren Park <span class="atracao-data">Dia 02 · 22/10 · Quinta</span></span>
         <span class="atracao-nova-cat">🌳 Parque Urbano — o point mais democrático de Dallas</span>
       </div>
-      <span class="selo selo-verde">🔵 Gratuito</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-verde">🔵 Gratuito</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">🚶 5 min da Arts District</span></div>
@@ -1774,7 +1797,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">McKinney Avenue <span class="atracao-data">Dia 02 · 22/10 · Quinta</span></span>
         <span class="atracao-nova-cat">🚋 Passeio & Compras — o coração de Uptown Dallas</span>
       </div>
-      <span class="selo selo-verde">🔵 Gratuito</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-verde">🔵 Gratuito</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">🚗 ~10 min do parque</span></div>
@@ -1844,7 +1870,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">Grapevine Historic Main Street <span class="atracao-data">Dia 03 · 23/10 · Sexta</span></span>
         <span class="atracao-nova-cat">🍇 Cidade Histórica — a capital do vinho do Texas</span>
       </div>
-      <span class="selo selo-verde">🔵 Gratuito</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-verde">🔵 Gratuito</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">🚗 ~15 min do hotel</span></div>
@@ -1870,7 +1899,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">Degustação em Vinícola <span class="atracao-data">Dia 03 · 23/10 · Sexta</span></span>
         <span class="atracao-nova-cat">🍷 Experiência — vinho texano em plena Main Street</span>
       </div>
-      <span class="selo selo-amarelo">🟡 Ingresso no Local</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-amarelo">🟡 Ingresso no Local</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">👣 dentro da Main Street</span></div>
@@ -1909,7 +1941,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">Range de Tiro Esportivo <span class="atracao-data">Dia 03 · 23/10 · Sexta</span></span>
         <span class="atracao-nova-cat">🎯 Experiência Texana — atirar como cowboy, com segurança</span>
       </div>
-      <span class="selo selo-amarelo">🟡 Reserva Recomendada</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-amarelo">🟡 Reserva Recomendada</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">🚗 a definir conforme unidade escolhida</span></div>
@@ -1975,7 +2010,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">Bishop Arts District <span class="atracao-data">Dia 04 · 24/10 · Sábado</span></span>
         <span class="atracao-nova-cat">🎨 Bairro Charmoso — o lado boêmio de Oak Cliff</span>
       </div>
-      <span class="selo selo-verde">🔵 Gratuito</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-verde">🔵 Gratuito</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">🚗 ~20 min do hotel</span></div>
@@ -2001,7 +2039,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">Deep Ellum <span class="atracao-data">Dia 04 · 24/10 · Sábado</span></span>
         <span class="atracao-nova-cat">🎸 Distrito Cultural — berço do blues e da arte urbana de Dallas</span>
       </div>
-      <span class="selo selo-verde">🔵 Gratuito</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-verde">🔵 Gratuito</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">🚗 ~15 min do Bishop Arts</span></div>
@@ -2043,7 +2084,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">Ensaio Pré-Wedding <span class="atracao-data">Dia 04 · 24/10 · Sábado</span></span>
         <span class="atracao-nova-cat">💍 Momento Especial — Margaret Hunt Hill Bridge &amp; Trinity Groves</span>
       </div>
-      <span class="selo selo-verde">🔵 Locação gratuita</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-verde">🔵 Locação gratuita</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">🚗 ~10 min de Deep Ellum</span></div>
@@ -2118,7 +2162,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">Fort Worth Stockyards <span class="atracao-data">Dia 05 · 25/10 · Domingo</span></span>
         <span class="atracao-nova-cat">🤠 Distrito Histórico — o Velho Oeste ainda vivo</span>
       </div>
-      <span class="selo selo-verde">🔵 Gratuito</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-verde">🔵 Gratuito</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">🚗 ~35 min do hotel</span></div>
@@ -2162,7 +2209,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">Sundance Square <span class="atracao-data">Dia 05 · 25/10 · Domingo</span></span>
         <span class="atracao-nova-cat">🏛️ Centro Histórico — o coração revitalizado de Fort Worth</span>
       </div>
-      <span class="selo selo-verde">🔵 Gratuito</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-verde">🔵 Gratuito</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">🚗 ~10 min dos Stockyards</span></div>
@@ -2214,7 +2264,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <span class="atracao-nova-nome">NorthPark Center <span class="atracao-data">Dia 06 · 26/10 · Segunda</span></span>
         <span class="atracao-nova-cat">🛍️ Shopping & Arte — compras com museu embutido</span>
       </div>
-      <span class="selo selo-verde">🔵 Entrada gratuita</span>
+      <div class="atracao-selecao">
+        <label class="atracao-checkbox-label"><input type="checkbox"> Passeio pré-selecionado</label>
+        <span class="selo selo-verde">🔵 Entrada gratuita</span>
+      </div>
     </div>
     <div class="atracao-info-faixa">
       <div><span class="info-label">Trajeto</span><span class="info-valor">🚗 ~25 min do hotel</span></div>
