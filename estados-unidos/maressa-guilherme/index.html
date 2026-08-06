@@ -213,6 +213,71 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
 .legenda-glass{ background: rgba(255,255,255,0.10); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.20); border-radius: 14px; padding: 16px 18px; margin-bottom: 16px; }
 .legenda-glass-titulo{ font-family: "Poppins", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: white; display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.15); }
 
+/* ═══════════════════ ROTEIRO DETALHADO — CABEÇALHO DO DIA ═══════════════════ */
+.dia-header-card{ background: white; border: 1.5px solid #dde8f5; border-radius: 18px; box-shadow: 0 2px 10px rgba(26,58,92,0.08); overflow: hidden; margin-bottom: 24px; }
+.dia-header-pill-top{ background: var(--azul-medio); padding: 10px 20px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+.dia-header-titulo-novo{ font-family: "Magnolia Script", cursive; font-size: 28px; color: white; line-height: 1; justify-self: start; }
+.dia-header-data-wrap{ display: flex; flex-direction: column; align-items: center; justify-self: center; }
+.dia-header-data-novo{ font-family: "Poppins", sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: white; }
+.dia-header-tema{ font-family: "Poppins", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: white; justify-self: end; text-align: right; }
+.dia-header-body{ padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.dia-header-ritmo{ font-family: "Poppins", sans-serif; font-size: 10px; font-weight: 600; color: var(--azul-medio); display: flex; align-items: center; gap: 4px; white-space: nowrap; flex-shrink: 0; }
+.dia-header-links{ display: flex; gap: 6px; flex-shrink: 0; }
+.dia-header-body .btn-rota{ padding: 6px 14px; font-size: 9.5px; white-space: nowrap; }
+.btn-rota{ display: inline-flex; align-items: center; gap: 5px; padding: 6px 14px; border-radius: 20px; font-family: "Poppins", sans-serif; font-size: 9.5px; font-weight: 600; letter-spacing: 0.5px; text-decoration: none; border: 1.5px solid var(--azul-medio); color: var(--azul-medio); background: white; transition: all 0.2s; white-space: nowrap; }
+.btn-rota:hover{ background: var(--azul-medio); color: white; }
+@media (max-width: 600px) {.dia-header-titulo-novo{ font-size: 24px; }.dia-header-data-novo{ font-size: 8px; }.dia-header-tema{ font-size: 8px; }.dia-header-body{ gap: 5px; flex-wrap: wrap; }.dia-header-body .btn-rota{ font-size: 8.5px; padding: 5px 10px; }}
+
+/* ═══════════════════ RESUMO DIÁRIO — pontos visuais ═══════════════════ */
+.resumo-pontos{ display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0 16px; }
+.resumo-ponto{ display: inline-flex; align-items: center; gap: 4px; background: #f0f7ff; border: 1px solid #dde8f5; border-radius: 20px; padding: 2px 8px 2px 2px; font-family: "Poppins", sans-serif; font-size: 9px; color: #475569; white-space: nowrap; }
+.resumo-ponto-num{ width: 16px; height: 16px; background: var(--azul-medio); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 7.5px; font-weight: 700; flex-shrink: 0; }
+
+/* ═══════════════════ CARD DE ATRAÇÃO ═══════════════════ */
+.atracao-nova{ position: relative; background: white; border: 1px solid #e0eaf5; border-radius: 14px; overflow: hidden; margin: 0 0 24px; box-shadow: 0 2px 8px rgba(26,58,92,0.07); }
+.atracao-nova-topo{ padding: 14px 18px 12px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #f1f5f9; }
+.atracao-nova-num{ width: 34px; height: 34px; background: var(--azul-medio); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: "Poppins", sans-serif; font-size: 14px; font-weight: 800; color: white; flex-shrink: 0; }
+.atracao-nova-info{ flex: 1; }
+.atracao-nova-nome{ font-family: "Poppins", sans-serif; font-size: 14px; font-weight: 700; color: var(--azul); display: block; }
+.atracao-nova-cat{ font-size: 11px; color: #94a3b8; display: block; margin-top: 2px; }
+.atracao-data{ font-family: "Poppins", sans-serif; font-size: 8px; font-weight: 500; color: #b0bec5; letter-spacing: 0.5px; margin-left: 6px; white-space: nowrap; }
+.atracao-info-faixa{ background: #eef4fb; padding: 10px 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; border-bottom: 1px solid #e0eaf4; }
+.info-label{ font-family: "Poppins", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--azul-medio); display: block; margin-bottom: 2px; }
+.info-valor{ font-size: 11.5px; color: #334155; display: block; }
+.info-atencao{ font-size: 11px; color: #64748b; grid-column: 1 / -1; margin-top: 2px; }
+.info-atencao strong{ color: #92400e; }
+.atracao-nova-corpo{ padding: 14px 18px 16px; border-bottom: 1px solid #f1f5f9; overflow: hidden; }
+.atracao-img-box{ float: right; width: 230px; height: 180px; border-radius: 14px; overflow: hidden; margin: 0 0 10px 14px; background: var(--cinza-claro); position: relative; }
+.atracao-img-box img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+.atracao-img-box span{ display: none; }
+.atracao-img-box.is-placeholder{ display: flex; align-items: center; justify-content: center; }
+.atracao-img-box.is-placeholder img{ display: none; }
+.atracao-img-box.is-placeholder::after{ content: "📷"; font-size: 28px; opacity: 0.3; }
+.atracao-nova-desc{ font-size: 12px; line-height: 1.75; color: #475569; margin: 0; }
+.atracao-nova-corpo::after{ content: ""; display: table; clear: both; }
+@media (max-width: 600px) {.atracao-img-box{ float: none; width: 100%; height: 200px; margin: 0 0 12px; }}
+.ingresso-box{ background: var(--azul-medio); padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.ingresso-box-topo{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.ingresso-box-titulo{ font-family: "Poppins", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+.ingresso-box p{ font-size: 12.5px; line-height: 1.65; color: rgba(255,255,255,0.88); margin: 4px 0; }
+.ingresso-box strong{ color: white; }
+.dicas-box{ background: #f0f7ff; padding: 14px 18px; }
+.dica-item{ display: flex; gap: 8px; margin: 6px 0; font-size: 12px; line-height: 1.6; color: #475569; }
+.dica-item-icon{ flex-shrink: 0; font-size: 13px; }
+.dica-item-label{ font-family: "Poppins", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--azul-medio); display: block; margin-bottom: 2px; }
+
+/* ═══════════════════ RESTAURANTE ═══════════════════ */
+.restaurante{ background: white; border: 1px solid #e0eaf5; border-radius: 14px; overflow: hidden; margin: 0 0 20px; box-shadow: 0 2px 8px rgba(26,58,92,0.07); }
+.restaurante-header{ background: var(--azul-claro); border-bottom: 1px solid #dde8f5; padding: 12px 18px; display: flex; align-items: center; gap: 10px; }
+.rest-letra{ width: 30px; height: 30px; background: var(--azul-medio); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+.rest-nome{ font-family: "Poppins", sans-serif; font-size: 14px; font-weight: 700; color: var(--azul); display: flex; align-items: center; justify-content: space-between; flex: 1; gap: 6px; }
+.rest-nome .rest-recomendado-badge{ margin-left: auto; flex-shrink: 0; }
+.restaurante-body{ padding: 14px 18px 16px; font-size: 12.5px; color: #475569; }
+.rest-prato{ background: #eef4fb; border-left: 3px solid var(--azul-medio); border-radius: 0 8px 8px 0; padding: 8px 12px; font-size: 12px; margin: 10px 0; font-weight: 600; color: var(--azul); }
+.rest-grid-ab{ display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0 24px; }
+.rest-grid-ab .restaurante{ margin: 0; }
+@media (max-width: 540px) {.rest-grid-ab{ grid-template-columns: 1fr; }}
+
 /* ═══════════════════ SEÇÃO CURADORIA DE VOOS ═══════════════════ */
 .voo-card{ background:white; border:1.5px solid #e0eaf5; border-radius:16px; overflow:hidden; margin:0 0 20px; box-shadow:0 2px 10px rgba(26,58,92,0.07); transition:transform 0.2s, box-shadow 0.2s; }
 .voo-card:hover{ transform:translateY(-2px); box-shadow:0 6px 24px rgba(26,58,92,0.12); }
@@ -1231,91 +1296,51 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
 <div class="vg-page" style="padding-top:0;">
   <div class="vg-header">
     <span class="vg-titulo-h titulo-principal">Roteiro Macro 🇺🇸</span>
-    <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;max-width:560px;margin:0 auto;">15 dias de viagem: <strong style="color:var(--azul);">4 em Dallas · 4 em Miami · 4 em Orlando</strong>, mais os dias de voo e o translado interno.</p>
+    <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;max-width:560px;margin:0 auto;">19 dias de viagem, de Campo Grande até Campo Grande: <strong style="color:var(--azul);">6 em Dallas · 4 em Miami · 5 em Orlando</strong>, mais o pernoite em São Paulo e os dias de voo.</p>
   </div>
 
   <div class="vg-grid">
 
     <!-- VOO IDA -->
-    <a class="vg-card" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">✈️ Ida</span><span class="vg-dia-data">21/10 · Qua</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">Campo Grande → Dallas</span></div>
-    </a>
+    <a class="vg-card" href="#voos-recomendados"><div class="vg-card-header"><span class="vg-dia-num">✈️ Ida</span><span class="vg-dia-data">19/10 · Seg</span></div><div class="vg-card-body"><span class="vg-destino-tag">Campo Grande → São Paulo</span><ul class="vg-items"><li>Voo CGR → GRU · 10h35</li><li>1 noite em Guarulhos</li><li>Descanso antes do voo internacional</li></ul></div></a>
+
+    <a class="vg-card" href="#voos-recomendados"><div class="vg-card-header"><span class="vg-dia-num">✈️ Ida</span><span class="vg-dia-data">20/10 · Ter</span></div><div class="vg-card-body"><span class="vg-destino-tag">São Paulo → Dallas</span><ul class="vg-items"><li>Chegar no aeroporto às 19h</li><li>Voo GRU → Dallas · 22h</li><li>Chegada em Dallas no dia seguinte · 06h20</li></ul></div></a>
 
     <!-- ═══════════ DALLAS ═══════════ -->
-    <a class="vg-card vg-dallas" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 01</span><span class="vg-dia-data">22/10 · Qui</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">🤠 Dallas</span></div>
-    </a>
+    <a class="vg-card vg-dallas" href="#dia01"><div class="vg-card-header"><span class="vg-dia-num">DIA 01</span><span class="vg-dia-data">21/10 · Qua</span></div><div class="vg-card-body"><span class="vg-destino-tag">🤠 Chegada em Dallas</span><ul class="vg-items"><li>Imigração + retirada do carro</li><li>Check-in no Sandman Signature</li><li>Pioneer Plaza + Dealey Plaza</li><li>Reunion Tower ao pôr do sol</li></ul></div></a>
 
-    <a class="vg-card vg-dallas" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 02</span><span class="vg-dia-data">23/10 · Sex</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">🤠 Dallas</span></div>
-    </a>
+    <a class="vg-card vg-dallas" href="#roteiro-detalhado"><div class="vg-card-header"><span class="vg-dia-num">DIA 02</span><span class="vg-dia-data">22/10 · Qui</span></div><div class="vg-card-body"><span class="vg-destino-tag">🤠 História & Distrito Cultural</span><ul class="vg-items"><li>Sixth Floor Museum</li><li>Dallas Arts District</li><li>Klyde Warren Park</li><li>McKinney Avenue</li></ul></div></a>
 
-    <a class="vg-card vg-dallas" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 03</span><span class="vg-dia-data">24/10 · Sáb</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">🤠 Dallas</span></div>
-    </a>
+    <a class="vg-card vg-dallas" href="#roteiro-detalhado"><div class="vg-card-header"><span class="vg-dia-num">DIA 03</span><span class="vg-dia-data">23/10 · Sex</span></div><div class="vg-card-body"><span class="vg-destino-tag">🤠 Grapevine & Vinícolas</span><ul class="vg-items"><li>Grapevine Historic Main Street</li><li>Degustação em vinícola</li><li>Buc-ee's</li><li>Churrasco texano</li></ul></div></a>
 
-    <a class="vg-card vg-dallas" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 04</span><span class="vg-dia-data">25/10 · Dom</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">🤠 Dallas</span></div>
-    </a>
+    <a class="vg-card vg-dallas" href="#roteiro-detalhado"><div class="vg-card-header"><span class="vg-dia-num">DIA 04</span><span class="vg-dia-data">24/10 · Sáb</span></div><div class="vg-card-body"><span class="vg-destino-tag">🤠 Bairros & Ensaio Pré-Wedding</span><ul class="vg-items"><li>Bishop Arts District</li><li>Deep Ellum</li><li>Ensaio fotográfico do casal</li><li>Jantar especial</li></ul></div></a>
 
-    <!-- ═══════════ TRANSLADO INTERNO ═══════════ -->
-    <a class="vg-card" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">✈️ Translado</span><span class="vg-dia-data">26/10 · Seg</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">Dallas → Miami</span></div>
-    </a>
+    <a class="vg-card vg-dallas" href="#roteiro-detalhado"><div class="vg-card-header"><span class="vg-dia-num">DIA 05</span><span class="vg-dia-data">25/10 · Dom</span></div><div class="vg-card-body"><span class="vg-destino-tag">🤠 Fort Worth & Rodeio</span><ul class="vg-items"><li>Fort Worth Stockyards</li><li>Longhorn Cattle Drive</li><li>Sundance Square</li><li>Rodeio (se houver programação)</li></ul></div></a>
+
+    <a class="vg-card vg-dallas" href="#roteiro-detalhado"><div class="vg-card-header"><span class="vg-dia-num">DIA 06</span><span class="vg-dia-data">26/10 · Seg</span></div><div class="vg-card-body"><span class="vg-destino-tag">🤠 Compras & Despedida</span><ul class="vg-items"><li>NorthPark Center ou Galleria Dallas</li><li>Últimas compras</li><li>Malas prontas</li><li>Jantar de despedida de Dallas</li></ul></div></a>
 
     <!-- ═══════════ MIAMI ═══════════ -->
-    <a class="vg-card vg-miami" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 05</span><span class="vg-dia-data">27/10 · Ter</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">🌴 Miami</span></div>
-    </a>
+    <a class="vg-card vg-miami" href="#roteiro-detalhado"><div class="vg-card-header"><span class="vg-dia-num">DIA 07</span><span class="vg-dia-data">27/10 · Ter</span></div><div class="vg-card-body"><span class="vg-destino-tag">🌴 Dallas → Miami</span><ul class="vg-items"><li>Voo DFW → FLL · 07h17-11h15</li><li>Check-in no The Julia Hotel</li><li>Ocean Drive + South Beach</li><li>Espanola Way à noite</li></ul></div></a>
 
-    <a class="vg-card vg-miami" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 06</span><span class="vg-dia-data">28/10 · Qua</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">🌴 Miami</span></div>
-    </a>
+    <a class="vg-card vg-miami" href="#roteiro-detalhado"><div class="vg-card-header"><span class="vg-dia-num">DIA 08</span><span class="vg-dia-data">28/10 · Qua</span></div><div class="vg-card-body"><span class="vg-destino-tag">🌴 Downtown, Brickell & Wynwood</span><ul class="vg-items"><li>Bayside Marketplace</li><li>Brickell City Centre</li><li>Wynwood Walls</li></ul></div></a>
 
-    <a class="vg-card vg-miami" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 07</span><span class="vg-dia-data">29/10 · Qui</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">🌴 Miami</span></div>
-    </a>
+    <a class="vg-card vg-miami" href="#roteiro-detalhado"><div class="vg-card-header"><span class="vg-dia-num">DIA 09</span><span class="vg-dia-data">29/10 · Qui</span></div><div class="vg-card-body"><span class="vg-destino-tag">🌴 Everglades & Coral Gables</span><ul class="vg-items"><li>Passeio de Airboat nos Everglades</li><li>Coral Gables + Miracle Mile</li><li>Coconut Grove</li></ul></div></a>
 
-    <a class="vg-card vg-miami" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 08</span><span class="vg-dia-data">30/10 · Sex</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">🌴 Miami</span></div>
-    </a>
+    <a class="vg-card vg-miami" href="#roteiro-detalhado"><div class="vg-card-header"><span class="vg-dia-num">DIA 10</span><span class="vg-dia-data">30/10 · Sex</span></div><div class="vg-card-body"><span class="vg-destino-tag">🌴 Key Biscayne</span><ul class="vg-items"><li>Rickenbacker Causeway</li><li>Crandon Park</li><li>Bill Baggs Cape Florida State Park</li></ul></div></a>
 
     <!-- ═══════════ ORLANDO ═══════════ -->
-    <a class="vg-card vg-orlando" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 09</span><span class="vg-dia-data">31/10 · Sáb 🎃</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">🎢 Orlando</span></div>
-    </a>
+    <a class="vg-card vg-orlando" href="#roteiro-detalhado"><div class="vg-card-header"><span class="vg-dia-num">DIA 11</span><span class="vg-dia-data">31/10 · Sáb 🎃</span></div><div class="vg-card-body"><span class="vg-destino-tag">🎢 Miami → Orlando</span><ul class="vg-items"><li>Compras (outlet à escolha)</li><li>Viagem até Orlando</li><li>Check-in no Sonesta ES Suites</li></ul></div></a>
 
-    <a class="vg-card vg-orlando" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 10</span><span class="vg-dia-data">01/11 · Dom</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">🎢 Orlando</span></div>
-    </a>
+    <a class="vg-card vg-orlando" href="#roteiro-detalhado"><div class="vg-card-header"><span class="vg-dia-num">DIA 12</span><span class="vg-dia-data">01/11 · Dom</span></div><div class="vg-card-body"><span class="vg-destino-tag">🎢 EPCOT</span><ul class="vg-items"><li>Guardians of the Galaxy: Cosmic Rewind</li><li>Remy's Ratatouille Adventure</li><li>World Showcase</li></ul></div></a>
 
-    <a class="vg-card vg-orlando" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 11</span><span class="vg-dia-data">02/11 · Seg</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">🎢 Orlando</span></div>
-    </a>
+    <a class="vg-card vg-orlando" href="#roteiro-detalhado"><div class="vg-card-header"><span class="vg-dia-num">DIA 13</span><span class="vg-dia-data">02/11 · Seg</span></div><div class="vg-card-body"><span class="vg-destino-tag">🎢 Disney Springs & Winter Park</span><ul class="vg-items"><li>Disney Springs</li><li>Park Avenue em Winter Park</li><li>Jantar em steakhouse americana</li></ul></div></a>
 
-    <a class="vg-card vg-orlando" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">DIA 12</span><span class="vg-dia-data">03/11 · Ter</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">🎢 Orlando</span></div>
-    </a>
+    <a class="vg-card vg-orlando" href="#roteiro-detalhado"><div class="vg-card-header"><span class="vg-dia-num">DIA 14</span><span class="vg-dia-data">03/11 · Ter</span></div><div class="vg-card-body"><span class="vg-destino-tag">🎢 Magic Kingdom</span><ul class="vg-items"><li>Castelo da Cinderela</li><li>Seven Dwarfs Mine Train</li><li>Happily Ever After à noite</li></ul></div></a>
+
+    <a class="vg-card vg-orlando" href="#roteiro-detalhado"><div class="vg-card-header"><span class="vg-dia-num">DIA 15</span><span class="vg-dia-data">04/11 · Qua</span></div><div class="vg-card-body"><span class="vg-destino-tag">🎢 Universal Islands of Adventure</span><ul class="vg-items"><li>Área de Harry Potter</li><li>Jurassic World VelociCoaster</li><li>Ou dia livre para descanso</li></ul></div></a>
 
     <!-- VOO VOLTA -->
-    <a class="vg-card" href="#voos-recomendados">
-      <div class="vg-card-header"><span class="vg-dia-num">✈️ Volta</span><span class="vg-dia-data">04/11 · Qua</span></div>
-      <div class="vg-card-body"><span class="vg-destino-tag">Orlando → Campo Grande</span></div>
-    </a>
+    <a class="vg-card" href="#voos-recomendados"><div class="vg-card-header"><span class="vg-dia-num">✈️ Volta</span><span class="vg-dia-data">05/11 · Qui</span></div><div class="vg-card-body"><span class="vg-destino-tag">Orlando → Campo Grande</span><ul class="vg-items"><li>Checkout do Sonesta + devolução do carro em Miami</li><li>Voo MIA → BSB · 21h30</li><li>Chegada em Campo Grande 06/11 · 16h20</li></ul></div></a>
 
   </div>
   <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
@@ -1753,11 +1778,180 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
   <span class="titulo-principal">Roteiro Detalhado</span>
   <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 32px;max-width:620px;">O roteiro que vai com vocês na viagem. Cada dia descrito com detalhe, lógica e carinho — do café da manhã ao jantar.</p>
 
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#dia01">Ir pro Dia 01</a></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ DIA 01 — CHEGADA EM DALLAS ═══════════════════════════════════════════════════════ -->
+<section id="dia01" class="dia-secao">
+<div class="page">
+
+  <div class="dia-header-card">
+    <div class="dia-header-pill-top">
+      <span class="dia-header-titulo-novo">Dia 01</span>
+      <div class="dia-header-data-wrap">
+        <span class="dia-header-data-novo">21/10 · QUARTA</span>
+      </div>
+      <span class="dia-header-tema">🤠 Chegada em Dallas</span>
+    </div>
+    <div class="dia-header-body">
+      <span class="dia-header-ritmo">🚗 Ritmo: Leve · dia de adaptação</span>
+    </div>
+  </div>
+
+  <div class="dica-box">
+    <span class="dica-box-label">📋 Resumo do Dia</span>
+    <p>Depois de mais de 15 horas entre o voo internacional e a conexão em São Paulo, hoje é dia de pisar no Texas pela primeira vez. A manhã é só logística — imigração, bagagem, retirada do carro alugado e check-in no hotel em Las Colinas. À tarde, sem pressa, um mergulho leve no coração histórico de Dallas: as longhorns de bronze da Pioneer Plaza, a praça onde a história dos EUA mudou de rumo em Dealey Plaza e o pôr do sol lá do alto da Reunion Tower. Fecha com chave de ouro num jantar clássico numa steakhouse texana — a primeira de muitas carnes boas desta viagem.</p>
+  </div>
+  <div class="resumo-pontos"><span class="resumo-ponto"><span class="resumo-ponto-num">01</span>Imigração &amp; Carro</span><span class="resumo-ponto"><span class="resumo-ponto-num">02</span>Pioneer Plaza</span><span class="resumo-ponto"><span class="resumo-ponto-num">03</span>Dealey Plaza &amp; Memorial JFK</span><span class="resumo-ponto"><span class="resumo-ponto-num">04</span>Reunion Tower</span></div>
+
+  <!-- ══ ATRAÇÃO 01 — CHEGADA ══ -->
+  <div class="atracao-nova">
+    <div class="atracao-nova-topo">
+      <div class="atracao-nova-num">01</div>
+      <div class="atracao-nova-info">
+        <span class="atracao-nova-nome">Chegada em Dallas — Aeroporto DFW <span class="atracao-data">Dia 01 · 21/10 · Quarta</span></span>
+        <span class="atracao-nova-cat">🛬 Logística de chegada</span>
+      </div>
+    </div>
+    <div class="atracao-info-faixa">
+      <div><span class="info-label">Pouso</span><span class="info-valor">🕐 06h20</span></div>
+      <div><span class="info-label">Até o hotel</span><span class="info-valor">🚗 ~20 min de carro</span></div>
+    </div>
+    <div class="atracao-nova-corpo">
+      <div class="atracao-img-box is-placeholder">
+        <img src="./assets/atracoes/dia-01/chegada-dfw.jpg" alt="Aeroporto DFW" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      </div>
+      <p class="atracao-nova-desc">Depois do pouso, o processo segue a ordem clássica de qualquer chegada internacional aos EUA: fila da imigração, coleta de bagagem e, por fim, a retirada do carro alugado — tudo dentro do próprio terminal do DFW. Com o carro em mãos, o trajeto até o hotel em Las Colinas é de cerca de 20 minutos. Chega de deixar as malas no quarto, é hora de sair para o primeiro contato com a cidade.</p>
+    </div>
+    <div class="dicas-box">
+      <div class="dica-item"><span class="dica-item-icon">🛂</span><div><span class="dica-item-label">IMIGRAÇÃO</span>A fila costuma ser mais tranquila em voos que chegam cedo, como o de vocês. Tenham em mãos o endereço do hotel e o motivo da viagem (turismo) prontos para a pergunta padrão do oficial.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">💡</span><div><span class="dica-item-label">DICA</span>Levem o comprovante de reserva do carro e a confirmação do hotel salvos offline no celular — o wi-fi do aeroporto nem sempre é o mais rápido logo na chegada.</div></div>
+    </div>
+  </div>
+
+  <span class="rest-titulo-script">Sugestão pro Almoço Texano</span>
+  <div class="restaurante">
+    <div class="restaurante-header">
+      <div class="rest-letra">🌮</div>
+      <div class="rest-nome">Mia's Tex-Mex<span class="rest-recomendado-badge badge-bom">⭐ Bem Avaliado</span></div>
+    </div>
+    <div class="restaurante-body">
+      <p>📍 Uptown, Dallas · a caminho do Downtown</p>
+      <p>Culinária: Tex-Mex tradicional · ambiente descontraído e animado</p>
+      <p>💰 <strong>~US$ 15–25</strong> por pessoa</p>
+      <div class="rest-prato">Brisket tacos ou o queso clássico — prato-símbolo da casa, disputado por décadas de fila na porta</div>
+      <p><span class="reserva-direto">✅ Sem reserva</span></p>
+    </div>
+  </div>
+
+  <!-- ══ ATRAÇÃO 02 ══ -->
+  <div class="atracao-nova">
+    <div class="atracao-nova-topo">
+      <div class="atracao-nova-num">02</div>
+      <div class="atracao-nova-info">
+        <span class="atracao-nova-nome">Pioneer Plaza <span class="atracao-data">Dia 01 · 21/10 · Quarta</span></span>
+        <span class="atracao-nova-cat">📍 Marco Histórico — a maior escultura de bronze do mundo</span>
+      </div>
+      <span class="selo selo-verde">🔵 Gratuito</span>
+    </div>
+    <div class="atracao-info-faixa">
+      <div><span class="info-label">Trajeto</span><span class="info-valor">🚗 ~5 min de Downtown</span></div>
+      <div><span class="info-label">Horário</span><span class="info-valor">🕐 Tarde · 30–40 min</span></div>
+    </div>
+    <div class="atracao-nova-corpo">
+      <div class="atracao-img-box is-placeholder">
+        <img src="./assets/atracoes/dia-01/pioneer-plaza.jpg" alt="Pioneer Plaza" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      </div>
+      <p class="atracao-nova-desc">Inaugurada em 1994 pelo escultor texano Robert Summers, a Pioneer Plaza reúne 49 longhorns de bronze em tamanho real conduzidas por três cowboys montados — a maior escultura de bronze do mundo dedicada a um único tema. A cena recria as grandes boiadas do Shawnee Trail, rota usada nas décadas de 1860 e 1870 para levar gado do Texas até as ferrovias do Kansas, movimento que forjou boa parte da identidade texana que vocês vão sentir viagem afora. É possível caminhar entre as esculturas e tocar os chifres — a escala real dos animais é bem maior do que qualquer foto entrega. No fundo, o riacho artificial e os arranha-céus de Downtown criam um contraste curioso entre o Texas antigo e o moderno.</p>
+    </div>
+    <div class="dicas-box">
+      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CARIMBE</span>Fiquem no nível dos animais, agachados, com os prédios de Downtown ao fundo — a perspectiva de baixo faz o rebanho parecer gigante.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">💡</span><div><span class="dica-item-label">DICA</span>É gratuito e aberto 24h, mas o fim de tarde, com o sol mais baixo, dá uma luz dourada nas esculturas de bronze que vale muito mais a foto.</div></div>
+    </div>
+  </div>
+
+  <!-- ══ ATRAÇÃO 03 ══ -->
+  <div class="atracao-nova">
+    <div class="atracao-nova-topo">
+      <div class="atracao-nova-num">03</div>
+      <div class="atracao-nova-info">
+        <span class="atracao-nova-nome">Dealey Plaza &amp; Memorial JFK <span class="atracao-data">Dia 01 · 21/10 · Quarta</span></span>
+        <span class="atracao-nova-cat">📍 Marco Histórico — onde a história dos EUA mudou de rumo</span>
+      </div>
+      <span class="selo selo-verde">🔵 Gratuito</span>
+    </div>
+    <div class="atracao-info-faixa">
+      <div><span class="info-label">Trajeto</span><span class="info-valor">🚶 8 min a pé da Pioneer Plaza</span></div>
+      <div><span class="info-label">Horário</span><span class="info-valor">🕐 30–40 min</span></div>
+    </div>
+    <div class="atracao-nova-corpo">
+      <div class="atracao-img-box is-placeholder">
+        <img src="./assets/atracoes/dia-01/dealey-plaza.jpg" alt="Dealey Plaza" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      </div>
+      <p class="atracao-nova-desc">Dealey Plaza é considerada o berço de Dallas — foi ali que John Neely Bryan fundou a cidade em 1841, às margens do Trinity River. Um século depois, o local ficou marcado por outro capítulo: em 22 de novembro de 1963, o presidente John F. Kennedy foi assassinado exatamente nesta praça, um dos eventos mais documentados do século XX. A alguns passos dali fica o Memorial JFK, projetado pelo arquiteto Philip Johnson e inaugurado em 1970 — um cenotáfio aberto, sem teto, que remete simbolicamente a um túmulo vazio, já que o corpo do presidente está enterrado em Arlington. É um espaço de silêncio e reflexão em pleno centro de Dallas, bem diferente do resto da cidade que vocês vão explorar nos próximos dias.</p>
+    </div>
+    <div class="dicas-box">
+      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CARIMBE</span>O X pintado no asfalto marca o ponto exato do disparo fatal — é o registro mais procurado por quem visita, mas atenção ao trânsito ao fotografar.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">💡</span><div><span class="dica-item-label">DICA</span>Quem quiser aprofundar a história pode voltar amanhã ao Sixth Floor Museum, no prédio que domina a praça — já está no roteiro do Dia 02.</div></div>
+    </div>
+  </div>
+
+  <!-- ══ ATRAÇÃO 04 ══ -->
+  <div class="atracao-nova">
+    <div class="atracao-nova-topo">
+      <div class="atracao-nova-num">04</div>
+      <div class="atracao-nova-info">
+        <span class="atracao-nova-nome">Reunion Tower <span class="atracao-data">Dia 01 · 21/10 · Quarta</span></span>
+        <span class="atracao-nova-cat">🌇 Vista Panorâmica — o pôr do sol mais alto de Dallas</span>
+      </div>
+      <span class="selo selo-amarelo">🟡 Ingresso no Local</span>
+    </div>
+    <div class="atracao-info-faixa">
+      <div><span class="info-label">Trajeto</span><span class="info-valor">🚶 10 min a pé de Dealey Plaza</span></div>
+      <div><span class="info-label">Horário</span><span class="info-valor">🕐 Pôr do sol · ~45 min</span></div>
+      <span class="info-atencao"><strong>⚠️</strong> Ingresso do GeO-Deck ~US$ 20 por pessoa — não incluso.</span>
+    </div>
+    <div class="atracao-nova-corpo">
+      <div class="atracao-img-box is-placeholder">
+        <img src="./assets/atracoes/dia-01/reunion-tower.jpg" alt="Reunion Tower" loading="lazy" onload="this.parentElement.classList.remove('is-placeholder')" onerror="this.parentElement.classList.add('is-placeholder')">
+      </div>
+      <p class="atracao-nova-desc">Concluída em 1978, a Reunion Tower é a esfera geodésica que domina o skyline de Dallas — 170 metros de altura, hoje parte do complexo do Hyatt Regency. O GeO-Deck, no topo, oferece vista de 360° sobre a cidade, com telescópios de alta definição e um trecho de piso de vidro para quem topa o desafio. À noite, a esfera se transforma num show de luzes LED sincronizado, visível de vários pontos de Downtown — um símbolo tão de Dallas quanto as próprias longhorns que vocês viram hoje mais cedo. Chegar perto do pôr do sol garante o melhor dos dois mundos: a cidade ainda iluminada pelo dia e as luzes noturnas começando a acender lá embaixo.</p>
+    </div>
+    <div class="dicas-box">
+      <div class="dica-item"><span class="dica-item-icon">📸</span><div><span class="dica-item-label">CARIMBE</span>O horário do pôr do sol é o pico de fila — cheguem uns 20 minutos antes pra garantir lugar na varanda externa sem disputar espaço.</div></div>
+      <div class="dica-item"><span class="dica-item-icon">💡</span><div><span class="dica-item-label">DICA</span>Ingressos podem ser comprados no local ou antecipados online — antecipar evita fila na bilheteria, principalmente em dia de boa previsão do tempo.</div></div>
+    </div>
+  </div>
+
+  <span class="rest-titulo-script">Sugestão pro Jantar — Primeira Steakhouse da Viagem</span>
+  <div class="restaurante">
+    <div class="restaurante-header">
+      <div class="rest-letra">🥩</div>
+      <div class="rest-nome">Pappas Bros. Steakhouse<span class="rest-recomendado-badge badge-premium">✨ Experiência</span></div>
+    </div>
+    <div class="restaurante-body">
+      <p>📍 Downtown Dallas</p>
+      <p>Culinária: Steakhouse texana clássica · ambiente elegante, ideal pra celebrar a chegada</p>
+      <p>💰 <strong>~US$ 60–90</strong> por pessoa</p>
+      <div class="rest-prato">Bone-in ribeye ou o filé mignon com crosta — carne envelhecida a seco (dry-aged), marca registrada da casa</div>
+      <p><span class="reserva-essencial">🔴 Reserva Essencial</span></p>
+    </div>
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ ROTEIRO DETALHADO — PRÓXIMOS DIAS ═══════════════════════════════════════════════════════ -->
+<section id="roteiro-detalhado-continuacao" class="secao-wrapper" style="background:linear-gradient(180deg,#f5f8fd 0%,#eef4fb 100%);">
+<div class="page secao">
+
   <!-- Bloco principal de espera — minimalista -->
   <div style="border:1.5px solid #e0eaf5;border-radius:16px;padding:36px 28px;text-align:center;margin-bottom:28px;background:white;">
     <div style="font-size:36px;margin-bottom:14px;opacity:0.35;">⚙️</div>
-    <p style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--azul-medio);margin:0 0 8px;">Em construção</p>
-    <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#94a3b8;line-height:1.8;margin:0;max-width:460px;margin:0 auto;">Esta seção será atualizada na <strong style="color:var(--azul);">Etapa 4</strong> — com voos e hospedagem confirmados, cada dia ganha vida aqui.</p>
+    <p style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--azul-medio);margin:0 0 8px;">Dias 02 a 16 em construção</p>
+    <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#94a3b8;line-height:1.8;margin:0;max-width:460px;margin:0 auto;">O Dia 01 já está pronto lá em cima ☝️ Os próximos dias seguem sendo escritos com o mesmo nível de detalhe.</p>
   </div>
 
   <!-- O que vai ter aqui -->
