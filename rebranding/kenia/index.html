@@ -287,6 +287,15 @@
   .nav-item:hover{ color:var(--branco); background:rgba(255,255,255,0.06); }
   .nav-item-num{ font-weight:800; color:var(--amarelo); font-size:11px; flex-shrink:0; }
 
+  @media (max-width:600px){
+    .hamburger-btn{ width:64px; height:64px; top:14px; right:14px; }
+    .hamburger-btn span{ width:28px; height:3px; }
+    .nav-drawer{ width:78vw; max-width:340px; padding-top:96px; }
+    .nav-drawer-titulo{ font-size:16px; padding:0 22px 18px; margin-bottom:10px; }
+    .nav-item{ font-size:18px; padding:14px 22px; gap:12px; }
+    .nav-item-num{ font-size:15px; }
+  }
+
   @media print {
     @page{ size:A4 portrait; margin:0; }
     *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
