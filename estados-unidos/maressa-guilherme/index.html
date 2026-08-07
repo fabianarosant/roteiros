@@ -61,11 +61,19 @@ body{ font-family: "Poppins", "DM Sans", sans-serif; color: var(--texto); backgr
 .menu-pratico-bg{ position: absolute; inset: 0; background-image: url("./assets/capas/menu-pratico-bg.png"); background-size: cover; background-position: center; z-index: 0; }
 .mp-logo-wrapper{ position: absolute; top: -52px; left: 50%; transform: translateX(-50%); z-index: 10; width: 90px; height: 90px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.12); padding: 6px; }
 .mp-logo{ width: 72px; height: 72px; object-fit: contain; }
-.menu-pratico-card{ position: relative; z-index: 2; background: white; border-radius: 16px; padding: 56px 28px 36px; width: 100%; max-width: 360px; box-shadow: 0 8px 40px rgba(0,0,0,0.13); display: flex; flex-direction: column; align-items: center; }
+.menu-pratico-card{ position: relative; z-index: 2; background: white; border-radius: 16px; padding: 56px 28px 36px; width: 100%; max-width: 680px; box-shadow: 0 8px 40px rgba(0,0,0,0.13); display: flex; flex-direction: column; align-items: center; }
 .mp-btn{ display: block; width: 100%; background: var(--azul-medio); color: white; text-decoration: none; text-align: center; padding: 13px 16px; border-radius: 7px; font-family: "Poppins", sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin: 4px 0; transition: background 0.2s, transform 0.15s; box-shadow: 0 3px 0 rgba(0,0,0,0.18); }
 .mp-btn:hover{ background: var(--azul); transform: translateY(-1px); }
 .mp-btn:active{ transform: translateY(1px); box-shadow: none; }
 .mp-clientes{ font-family: "Poppins", sans-serif; font-size: 10px; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; color: rgba(26,58,92,0.4); margin-top: 20px; text-align: center; }
+.mp-columns{ display: grid; grid-template-columns: 1fr 1fr; gap: 24px; width: 100%; align-items: start; }
+.mp-column{ display: flex; flex-direction: column; }
+.mp-col-label{ font-family: "Poppins", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #94a3b8; margin: 14px 0 6px; text-align: center; }
+.mp-col-label:first-child{ margin-top: 0; }
+.mp-dias-grid{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 4px; }
+.mp-dia-pill{ display: flex; align-items: center; justify-content: center; background: var(--azul-claro); color: var(--azul-medio); text-decoration: none; padding: 9px 4px; border-radius: 6px; font-family: "Poppins", sans-serif; font-size: 10.5px; font-weight: 700; transition: background 0.2s, color 0.2s; }
+.mp-dia-pill:hover{ background: var(--azul-medio); color: white; }
+@media (max-width: 640px) {.mp-columns{ grid-template-columns: 1fr; gap: 4px; } .menu-pratico-card{ max-width: 360px; }}
 .etapa-badge{ display:inline-block; background:linear-gradient(135deg,#c8a96e,#dbbf8a); color:white; font-family:"Poppins",sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:4px 10px; border-radius:10px; margin-bottom:10px; box-shadow:0 2px 8px rgba(180,150,90,0.2); }
 #menu-dias{ background: #eef4fb; padding: 80px 0 60px; border-bottom: none; }
 .vg-page{ max-width: 780px; margin: 0 auto; padding: 0 48px; }
@@ -442,18 +450,45 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
     </div>
     <div style="font-family:'Magnolia Script',cursive;font-size:32px;font-weight:400;color:var(--azul-medio);margin-bottom:16px;letter-spacing:0;text-transform:none;">Menu Principal</div>
 
-    <a class="mp-btn" href="#proximos-passos" style="background:linear-gradient(135deg,#c8a96e,#dbbf8a);color:white;font-weight:700;">📍 Nossa Rota</a>
-    <a class="mp-btn" href="#checklist-planejamento">✅ Checklist da Viagem</a>
-    <a class="mp-btn" href="#voos-recomendados">✈️ Voos</a>
-    <a class="mp-btn" href="#hospedagem-curadoria">🏨 Curadoria de Hospedagens</a>
-    <a class="mp-btn" href="#menu-dias">🗺️ Roteiro Macro</a>
-    <a class="mp-btn" href="#cidade">🇺🇸 Sobre os Estados Unidos</a>
-    <a class="mp-btn" href="#dinheiro">💵 Guia Financeiro</a>
-    <a class="mp-btn" href="#clima">🧳 Clima &amp; Checklist Mala</a>
-    <a class="mp-btn" href="#frases">💬 Frases Mágicas</a>
-    <a class="mp-btn" href="#guia-gastronomico">🍔 Guia Gastronômico</a>
-    <a class="mp-btn" href="#legendas">📌 Legendas do Roteiro</a>
-    <a class="mp-btn" href="#roteiro-detalhado">📅 Roteiro Detalhado</a>
+    <div class="mp-columns">
+      <div class="mp-column">
+        <a class="mp-btn" href="#proximos-passos" style="background:linear-gradient(135deg,#c8a96e,#dbbf8a);color:white;font-weight:700;">📍 Nossa Rota</a>
+        <a class="mp-btn" href="#checklist-planejamento">✅ Checklist da Viagem</a>
+        <a class="mp-btn" href="#menu-dias">🗺️ Roteiro Macro</a>
+        <a class="mp-btn" href="#roteiro-detalhado">📅 Roteiro Detalhado</a>
+
+        <div class="mp-col-label">Dias 01–16</div>
+        <div class="mp-dias-grid">
+          <a class="mp-dia-pill" href="#dia01">01</a>
+          <a class="mp-dia-pill" href="#dia02">02</a>
+          <a class="mp-dia-pill" href="#dia03">03</a>
+          <a class="mp-dia-pill" href="#dia04">04</a>
+          <a class="mp-dia-pill" href="#dia05">05</a>
+          <a class="mp-dia-pill" href="#dia06">06</a>
+          <a class="mp-dia-pill" href="#dia07">07</a>
+          <a class="mp-dia-pill" href="#dia08">08</a>
+          <a class="mp-dia-pill" href="#dia09">09</a>
+          <a class="mp-dia-pill" href="#dia10">10</a>
+          <a class="mp-dia-pill" href="#dia11">11</a>
+          <a class="mp-dia-pill" href="#dia12">12</a>
+          <a class="mp-dia-pill" href="#dia13">13</a>
+          <a class="mp-dia-pill" href="#dia14">14</a>
+          <a class="mp-dia-pill" href="#dia15">15</a>
+          <a class="mp-dia-pill" href="#dia16">16</a>
+        </div>
+      </div>
+
+      <div class="mp-column">
+        <a class="mp-btn" href="#voos-recomendados">✈️ Voos</a>
+        <a class="mp-btn" href="#hospedagem-curadoria">🏨 Curadoria de Hospedagens</a>
+        <a class="mp-btn" href="#cidade">🇺🇸 Sobre os Estados Unidos</a>
+        <a class="mp-btn" href="#dinheiro">💵 Guia Financeiro</a>
+        <a class="mp-btn" href="#clima">🧳 Clima &amp; Checklist Mala</a>
+        <a class="mp-btn" href="#frases">💬 Frases Mágicas</a>
+        <a class="mp-btn" href="#guia-gastronomico">🍔 Guia Gastronômico</a>
+        <a class="mp-btn" href="#legendas">📌 Legendas do Roteiro</a>
+      </div>
+    </div>
 
     <div class="mp-clientes">Maressa &amp; Guilherme · Outubro/Novembro 2026</div>
   </div>
@@ -683,656 +718,6 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
         <input type="checkbox">
         <span style="font-family:'Poppins',sans-serif;font-size:12px;color:var(--texto);">Reservas em restaurantes que exigem antecedência</span>
       </div>
-    </div>
-  </div>
-
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
-</div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════ VOOS ═══════════════════════════════════════════════════════ -->
-<section id="voos-recomendados" class="secao-wrapper">
-<div class="page secao">
-  <span class="titulo-principal">✈️ Voos</span>
-  <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 24px;max-width:640px;">Período: <strong style="color:var(--azul);">19/10 a 06/11/2026</strong> · Rota: <strong style="color:var(--azul);">Dallas · Miami · Orlando</strong></p>
-
-  <!-- RESUMO DOS VOOS -->
-  <div class="card" style="margin-bottom:28px;">
-    <div class="card-header"><span class="card-header-icon">🗺️</span><span class="card-header-titulo">Resumo dos voos</span></div>
-    <div class="card-body">
-      <div style="display:flex;flex-direction:column;">
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--cinza-claro);flex-wrap:wrap;gap:4px;"><span style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;">✈️ Ida — CGR → GRU → DFW</span><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);">19–21/10 · GOL + American Airlines</span></div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--cinza-claro);flex-wrap:wrap;gap:4px;"><span style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;">✈️ Interno — DFW → FLL</span><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);">27/10 · American Airlines</span></div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;flex-wrap:wrap;gap:4px;"><span style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;">✈️ Volta — MIA → BSB → CGH → CGR</span><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);">05–06/11 · GOL · Pacote Decolar</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══ TRECHO 01 — IDA ═══ -->
-  <div style="display:flex;align-items:center;gap:12px;margin:8px 0 16px;padding-bottom:12px;border-bottom:2px solid var(--azul-claro);">
-    <div style="background:var(--azul);border-radius:8px;padding:6px 12px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:white;flex-shrink:0;">Trecho 01</div>
-    <div>
-      <span style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--azul);display:block;">Ida — Campo Grande → Dallas</span>
-      <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#94a3b8;">CGR → GRU → DFW · 19–21/10/2026</span>
-    </div>
-  </div>
-
-  <div class="voo-card voo-custo">
-    <div class="voo-card-header">
-      <div>
-        <span class="voo-opcao-label">Voo 01 · GOL</span>
-        <span class="voo-opcao-titulo">Campo Grande → São Paulo</span>
-      </div>
-      <div style="text-align:right;"><span style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.7);">Seg, 19/10/2026</span></div>
-    </div>
-    <div class="voo-card-body">
-      <div class="voo-rota-grid">
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">CGR</span>
-          <span class="voo-aeroporto-cidade">Campo Grande</span>
-          <span class="voo-aeroporto-hora">10h35</span>
-          <span class="voo-aeroporto-data">Seg, 19/10</span>
-        </div>
-        <div class="voo-meio">
-          <span class="voo-duracao">1h40</span>
-          <div class="voo-linha-avião"></div>
-          <span class="voo-conexao">Direto</span>
-        </div>
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">GRU</span>
-          <span class="voo-aeroporto-cidade">São Paulo</span>
-          <span class="voo-aeroporto-hora">13h15</span>
-          <span class="voo-aeroporto-data">Seg, 19/10</span>
-        </div>
-      </div>
-      <div class="voo-info-grid">
-        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">GOL</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Escalas</span><span class="voo-info-valor">Voo direto</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Duração</span><span class="voo-info-valor">1h40</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Aeroporto destino</span><span class="voo-info-valor">Guarulhos (GRU)</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div style="display:flex;align-items:center;gap:10px;padding:14px 20px;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;margin:4px 0;">
-    <span style="font-size:20px;">🏨</span>
-    <div>
-      <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);display:block;">Pernoite em São Paulo</span>
-      <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">Chegada em Guarulhos às 13h15 do dia 19/10 — próximo voo parte às 22h00 do dia 20/10. Uma noite e quase um dia inteiro em SP antes da travessia transatlântica.</span>
-    </div>
-  </div>
-
-  <div class="voo-card voo-custo" style="margin-top:8px;">
-    <div class="voo-card-header">
-      <div>
-        <span class="voo-opcao-label">Voo 02 · American Airlines</span>
-        <span class="voo-opcao-titulo">São Paulo → Dallas</span>
-      </div>
-      <div class="voo-opcao-valor">R$ 6.200<small>2 pessoas · inclui taxas</small></div>
-    </div>
-    <div class="voo-card-body">
-      <div class="voo-rota-grid">
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">GRU</span>
-          <span class="voo-aeroporto-cidade">São Paulo</span>
-          <span class="voo-aeroporto-hora">22h00</span>
-          <span class="voo-aeroporto-data">Ter, 20/10</span>
-        </div>
-        <div class="voo-meio">
-          <span class="voo-duracao">10h20</span>
-          <div class="voo-linha-avião"></div>
-          <span class="voo-conexao">Direto</span>
-        </div>
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">DFW</span>
-          <span class="voo-aeroporto-cidade">Dallas</span>
-          <span class="voo-aeroporto-hora">06h20</span>
-          <span class="voo-aeroporto-data">Qua, 21/10</span>
-        </div>
-      </div>
-      <div class="voo-info-grid">
-        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">American Airlines</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Escalas</span><span class="voo-info-valor">Voo direto</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Duração</span><span class="voo-info-valor">10h20</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Valor</span><span class="voo-info-valor">R$ 6.200 (2 pessoas)</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══ TRECHO 02 — VOO INTERNO ═══ -->
-  <div style="display:flex;align-items:center;gap:12px;margin:24px 0 16px;padding-bottom:12px;border-bottom:2px solid var(--azul-claro);">
-    <div style="background:var(--azul);border-radius:8px;padding:6px 12px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:white;flex-shrink:0;">Trecho 02</div>
-    <div>
-      <span style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--azul);display:block;">Interno — Dallas → Fort Lauderdale</span>
-      <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#94a3b8;">DFW → FLL · Terça, 27/10/2026</span>
-    </div>
-  </div>
-
-  <div class="voo-card voo-custo">
-    <div class="voo-card-header">
-      <div>
-        <span class="voo-opcao-label">Voo 03 · American Airlines</span>
-        <span class="voo-opcao-titulo">Dallas → Fort Lauderdale</span>
-      </div>
-      <div class="voo-opcao-valor">US$ 212<small>2 pessoas · inclui taxas</small></div>
-    </div>
-    <div class="voo-card-body">
-      <div class="voo-rota-grid">
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">DFW</span>
-          <span class="voo-aeroporto-cidade">Dallas</span>
-          <span class="voo-aeroporto-hora">07h00</span>
-          <span class="voo-aeroporto-data">Ter, 27/10</span>
-        </div>
-        <div class="voo-meio">
-          <span class="voo-duracao">2h52</span>
-          <div class="voo-linha-avião"></div>
-          <span class="voo-conexao">Direto</span>
-        </div>
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">FLL</span>
-          <span class="voo-aeroporto-cidade">Fort Lauderdale</span>
-          <span class="voo-aeroporto-hora">10h52</span>
-          <span class="voo-aeroporto-data">Ter, 27/10</span>
-        </div>
-      </div>
-      <div class="voo-info-grid">
-        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">American Airlines</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Escalas</span><span class="voo-info-valor">Voo direto</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Aeroporto destino</span><span class="voo-info-valor">Fort Lauderdale (FLL)</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Valor</span><span class="voo-info-valor">US$ 212 (2 pessoas)</span></div>
-      </div>
-      <div class="voo-destaque-box neutro">
-        <span class="voo-destaque-label">📍 Fort Lauderdale → Miami</span>
-        <span class="voo-destaque-texto">Fort Lauderdale (FLL) fica a ~40–50 min de Miami Beach de Uber — tranquilo e bem mais barato que o aeroporto principal de Miami.</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══ TRECHO 03 — VOLTA ═══ -->
-  <div style="display:flex;align-items:center;gap:12px;margin:24px 0 16px;padding-bottom:12px;border-bottom:2px solid var(--azul-claro);">
-    <div style="background:var(--azul);border-radius:8px;padding:6px 12px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:white;flex-shrink:0;">Trecho 03</div>
-    <div>
-      <span style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--azul);display:block;">Volta — Miami → Campo Grande</span>
-      <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#94a3b8;">MIA → BSB → CGH → CGR · 05–06/11/2026 · GOL · Pacote Decolar</span>
-    </div>
-  </div>
-
-  <div class="voo-card voo-custo">
-    <div class="voo-card-header">
-      <div>
-        <span class="voo-opcao-label">Voo 04 · GOL · Pacote Decolar</span>
-        <span class="voo-opcao-titulo">Miami → Brasília</span>
-      </div>
-      <div style="text-align:right;"><span style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.7);">Qui, 05/11/2026</span></div>
-    </div>
-    <div class="voo-card-body">
-      <div class="voo-rota-grid">
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">MIA</span>
-          <span class="voo-aeroporto-cidade">Miami</span>
-          <span class="voo-aeroporto-hora">21h30</span>
-          <span class="voo-aeroporto-data">Qui, 05/11</span>
-        </div>
-        <div class="voo-meio">
-          <span class="voo-duracao">7h34</span>
-          <div class="voo-linha-avião"></div>
-          <span class="voo-conexao">Direto</span>
-        </div>
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">BSB</span>
-          <span class="voo-aeroporto-cidade">Brasília</span>
-          <span class="voo-aeroporto-hora">07h15</span>
-          <span class="voo-aeroporto-data">Sex, 06/11</span>
-        </div>
-      </div>
-      <div class="voo-info-grid">
-        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">GOL</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Escalas</span><span class="voo-info-valor">Voo direto</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div style="display:flex;align-items:center;gap:10px;padding:12px 20px;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;margin:4px 0;">
-    <span style="font-size:18px;">🔄</span>
-    <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;"><strong style="color:var(--azul);">Conexão Brasília (BSB)</strong> · Chegada às 07h15 → próximo voo às 10h30 · 3h15 de conexão</span>
-  </div>
-
-  <div class="voo-card voo-custo" style="margin-top:8px;">
-    <div class="voo-card-header">
-      <div>
-        <span class="voo-opcao-label">Voo 05 · GOL · Pacote Decolar</span>
-        <span class="voo-opcao-titulo">Brasília → São Paulo</span>
-      </div>
-      <div style="text-align:right;"><span style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.7);">Sex, 06/11/2026</span></div>
-    </div>
-    <div class="voo-card-body">
-      <div class="voo-rota-grid">
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">BSB</span>
-          <span class="voo-aeroporto-cidade">Brasília</span>
-          <span class="voo-aeroporto-hora">10h30</span>
-          <span class="voo-aeroporto-data">Sex, 06/11</span>
-        </div>
-        <div class="voo-meio">
-          <span class="voo-duracao">1h50</span>
-          <div class="voo-linha-avião"></div>
-          <span class="voo-conexao">Direto</span>
-        </div>
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">CGH</span>
-          <span class="voo-aeroporto-cidade">São Paulo</span>
-          <span class="voo-aeroporto-hora">12h20</span>
-          <span class="voo-aeroporto-data">Sex, 06/11</span>
-        </div>
-      </div>
-      <div class="voo-info-grid">
-        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">GOL</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Aeroporto destino</span><span class="voo-info-valor">Congonhas (CGH)</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div style="display:flex;align-items:center;gap:10px;padding:12px 20px;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;margin:4px 0;">
-    <span style="font-size:18px;">🔄</span>
-    <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;"><strong style="color:var(--azul);">Conexão Congonhas (CGH)</strong> · Chegada às 12h20 → próximo voo às 13h40 · 1h20 de conexão</span>
-  </div>
-
-  <div class="voo-card voo-custo" style="margin-top:8px;">
-    <div class="voo-card-header">
-      <div>
-        <span class="voo-opcao-label">Voo 06 · GOL · Pacote Decolar</span>
-        <span class="voo-opcao-titulo">São Paulo → Campo Grande</span>
-      </div>
-      <div style="text-align:right;"><span style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.7);">Sex, 06/11/2026</span></div>
-    </div>
-    <div class="voo-card-body">
-      <div class="voo-rota-grid">
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">CGH</span>
-          <span class="voo-aeroporto-cidade">São Paulo</span>
-          <span class="voo-aeroporto-hora">13h40</span>
-          <span class="voo-aeroporto-data">Sex, 06/11</span>
-        </div>
-        <div class="voo-meio">
-          <span class="voo-duracao">1h50</span>
-          <div class="voo-linha-avião"></div>
-          <span class="voo-conexao">Direto</span>
-        </div>
-        <div class="voo-aeroporto">
-          <span class="voo-aeroporto-codigo">CGR</span>
-          <span class="voo-aeroporto-cidade">Campo Grande</span>
-          <span class="voo-aeroporto-hora">14h30</span>
-          <span class="voo-aeroporto-data">Sex, 06/11</span>
-        </div>
-      </div>
-      <div class="voo-info-grid">
-        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">GOL</span></div>
-        <div class="voo-info-item"><span class="voo-info-label">Chegada</span><span class="voo-info-valor">Campo Grande (CGR)</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
-</div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════ CURADORIA DE HOSPEDAGENS ═══════════════════════════════════════════════════════ -->
-<section id="hospedagem-curadoria" class="secao-wrapper">
-<div class="page secao">
-  <span class="titulo-principal">🏨 Curadoria de Hospedagens</span>
-  <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 24px;max-width:640px;">Hotéis de Dallas, Miami e Orlando já escolhidos e reservados. Falta só definir o pernoite em São Paulo/GRU antes do voo internacional.</p>
-
-  <div style="background:#f0fdf4;border:1.5px solid #16a34a;border-radius:12px;padding:14px 18px;margin-bottom:28px;display:flex;align-items:center;gap:12px;">
-    <span style="font-size:20px;flex-shrink:0;">✅</span>
-    <span style="font-family:'Poppins',sans-serif;font-size:12px;color:#166534;line-height:1.55;"><strong>Hotéis selecionados e reservas confirmadas</strong> — Dallas, Miami e Orlando já reservados. Seguimos para a montagem do roteiro completo dia a dia.</span>
-  </div>
-
-  <!-- ══════ PERNOITE — SÃO PAULO · GRU ══════ -->
-  <div style="background:var(--azul-medio);border-radius:14px;padding:18px 22px;margin:28px 0 18px;display:flex;align-items:center;gap:14px;">
-    <div style="font-size:28px;">🛬</div>
-    <div>
-      <div style="font-family:'Playfair Display',serif;font-size:19px;color:white;font-weight:700;">Pernoite — São Paulo · GRU</div>
-      <div style="font-family:'Poppins',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.85);">19/10 (segunda) → 20/10 (terça) · 1 noite · Para chegarem descansados ao voo internacional às 22h do dia 20</div>
-    </div>
-  </div>
-  <!-- Airport Hotel Gru -->
-  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
-    <div style="width:100%;height:200px;overflow:hidden;background:#e2e8f0;">
-      <img src="./assets/hospedagem/gru/airport-hotel-gru.jpg" alt="Airport Hotel Gru" loading="lazy"
-        style="width:100%;height:100%;object-fit:cover;display:block;">
-    </div>
-    <div style="padding:16px 18px;">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
-        <div>
-          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Airport Hotel Gru</div>
-          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐ · Bela Vista, Guarulhos · Transfer gratuito</div>
-        </div>
-        <span style="background:#c9a227;color:white;font-family:'Poppins',sans-serif;font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;">✓ Recomendado</span>
-      </div>
-      <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
-        <div class="voo-info-item">
-          <span class="voo-info-label">Check-in</span>
-          <span class="voo-info-valor">19/10 · Segunda</span>
-        </div>
-        <div class="voo-info-item">
-          <span class="voo-info-label">Check-out</span>
-          <span class="voo-info-valor">20/10 · Terça</span>
-        </div>
-        <div class="voo-info-item">
-          <span class="voo-info-label">Total (1 noite)</span>
-          <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 376</span>
-        </div>
-      </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;"><strong style='color:var(--azul);display:block;margin-bottom:4px;'>Melhor equilíbrio entre conforto e investimento.</strong>Hotel moderno e bem avaliado a poucos minutos do aeroporto de Guarulhos. Oferece um nível de conforto superior para a noite anterior ao embarque internacional — chegam descansados, sem correria. Café da manhã incluso e transfer gratuito até o terminal.</div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">☕ Café incluso</span><span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🚌 Transfer gratuito</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">💰 Mais econômico</span></div>
-      <a href="https://www.booking.com/hotel/br/airport-gru-ltda.pt-br.html?aid=2311236&label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652796015463%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101240%3Ali%3Adec%3Adm&sid=0ce82a685da3e7632045e06e1563fd15&checkin=2026-10-19&checkout=2026-10-20&dest_id=13922&dest_type=hotel&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
-    </div>
-  </div>
-  <!-- Sleep Inn Aeroporto de Guarulhos -->
-  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
-    <div style="width:100%;height:200px;overflow:hidden;background:#e2e8f0;">
-      <img src="./assets/hospedagem/gru/sleep-inn-gru.jpg" alt="Sleep Inn Aeroporto de Guarulhos" loading="lazy"
-        style="width:100%;height:100%;object-fit:cover;display:block;">
-    </div>
-    <div style="padding:16px 18px;">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
-        <div>
-          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Sleep Inn Aeroporto de Guarulhos</div>
-          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐ · Taboão, Guarulhos · Transfer gratuito</div>
-        </div>
-        
-      </div>
-      <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
-        <div class="voo-info-item">
-          <span class="voo-info-label">Check-in</span>
-          <span class="voo-info-valor">19/10 · Segunda</span>
-        </div>
-        <div class="voo-info-item">
-          <span class="voo-info-label">Check-out</span>
-          <span class="voo-info-valor">20/10 · Terça</span>
-        </div>
-        <div class="voo-info-item">
-          <span class="voo-info-label">Total (1 noite)</span>
-          <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 550</span>
-        </div>
-      </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Hospedagem prática e funcional próxima ao Aeroporto Internacional de Guarulhos. Boa alternativa para quem busca conforto e praticidade para a pernoite antes do embarque. Transfer gratuito até o terminal incluso.</div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">☕ Café incluso</span><span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🚌 Transfer gratuito</span></div>
-      <a href="https://www.booking.com/hotel/br/sleep-inn-guarulhos.pt-br.html?label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652796015463%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101240%3Ali%3Adec%3Adm&aid=2311236&ucfs=1&checkin=2026-10-19&checkout=2026-10-20&dest_id=2120957&dest_type=hotel&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
-    </div>
-  </div>
-  <!-- ══════ DALLAS · TEXAS ══════ -->
-  <div style="background:var(--azul-medio);border-radius:14px;padding:18px 22px;margin:28px 0 18px;display:flex;align-items:center;gap:14px;">
-    <div style="font-size:28px;">🤠</div>
-    <div>
-      <div style="font-family:'Playfair Display',serif;font-size:19px;color:white;font-weight:700;">Dallas · Texas</div>
-      <div style="font-family:'Poppins',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.85);">21/10 (quarta) → 27/10 (terça) · 6 noites · Região de Las Colinas / Irving</div>
-    </div>
-  </div>
-  <!-- Sandman Signature Dallas Las Colinas -->
-  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
-    <div style="width:100%;height:200px;overflow:hidden;background:#e2e8f0;">
-      <img src="./assets/hospedagem/dallas/sandman-signature.jpg" alt="Sandman Signature Dallas Las Colinas" loading="lazy"
-        style="width:100%;height:100%;object-fit:cover;display:block;">
-    </div>
-    <div style="padding:16px 18px;">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
-        <div>
-          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Sandman Signature Dallas Las Colinas</div>
-          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐⭐ · Irving, TX (Las Colinas)</div>
-        </div>
-        <span style="background:#16a34a;color:white;font-family:'Poppins',sans-serif;font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;">✓ Selecionado</span>
-      </div>
-      <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
-        <div class="voo-info-item">
-          <span class="voo-info-label">Check-in</span>
-          <span class="voo-info-valor">21/10 · Quarta</span>
-        </div>
-        <div class="voo-info-item">
-          <span class="voo-info-label">Check-out</span>
-          <span class="voo-info-valor">27/10 · Terça</span>
-        </div>
-        <div class="voo-info-item">
-          <span class="voo-info-label">Total (6 noites)</span>
-          <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 5.479</span>
-        </div>
-      </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Localizado em Las Colinas com localização estratégica para explorar Dallas, Fort Worth, Grapevine, Arlington e o aeroporto DFW. Hotel de categoria superior com estrutura completa e excelentes avaliações.</div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">⭐ 4 estrelas</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">📍 Las Colinas</span></div>
-      <a href="https://www.booking.com/hotel/us/sandman-signature-las-colinas-amp-suites.pt-br.html?label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652828998892%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101243%3Ali%3Adec%3Adm&sid=f8e1ab598a3d51217d5c9f6199900555&aid=2311236&ucfs=1&checkin=2026-10-21&checkout=2026-10-27&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
-    </div>
-  </div>
-  <!-- ══════ MIAMI · FLÓRIDA ══════ -->
-  <div style="background:var(--azul-medio);border-radius:14px;padding:18px 22px;margin:28px 0 18px;display:flex;align-items:center;gap:14px;">
-    <div style="font-size:28px;">🌴</div>
-    <div>
-      <div style="font-family:'Playfair Display',serif;font-size:19px;color:white;font-weight:700;">Miami · Flórida</div>
-      <div style="font-family:'Poppins',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.85);">27/10 (terça) → 31/10 (sábado) · 4 noites · Miami Beach / Brickell</div>
-    </div>
-  </div>
-  <!-- The Julia Hotel — Selecionado pelos clientes, fora da curadoria -->
-  <div style="background:#f0fdf4;border:1.5px solid #16a34a;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(22,163,74,0.08);">
-    <div style="padding:16px 18px;">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
-        <div>
-          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">The Julia Hotel</div>
-          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">Miami Beach</div>
-        </div>
-        <span style="background:#16a34a;color:white;font-family:'Poppins',sans-serif;font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;">✓ Selecionado</span>
-      </div>
-      <div class="voo-info-grid" style="grid-template-columns:1fr 1fr;margin-bottom:12px;">
-        <div class="voo-info-item">
-          <span class="voo-info-label">Check-in</span>
-          <span class="voo-info-valor">27/10 · Terça</span>
-        </div>
-        <div class="voo-info-item">
-          <span class="voo-info-label">Check-out</span>
-          <span class="voo-info-valor">31/10 · Sábado</span>
-        </div>
-      </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Hotel escolhido diretamente por vocês, fora das opções da curadoria inicial. Reserva confirmada — 4 noites em Miami Beach.</div>
-    </div>
-  </div>
-  <!-- ══════ ORLANDO · FLÓRIDA ══════ -->
-  <div style="background:var(--azul-medio);border-radius:14px;padding:18px 22px;margin:28px 0 18px;display:flex;align-items:center;gap:14px;">
-    <div style="font-size:28px;">🎡</div>
-    <div>
-      <div style="font-family:'Playfair Display',serif;font-size:19px;color:white;font-weight:700;">Orlando · Flórida</div>
-      <div style="font-family:'Poppins',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.85);">31/10 (sábado) → 04/11 (quarta) · 4 noites · Lake Buena Vista / International Drive</div>
-    </div>
-  </div>
-  <!-- Sonesta ES Suites Orlando — Lake Buena Vista -->
-  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
-    <div style="width:100%;height:200px;overflow:hidden;background:#e2e8f0;">
-      <img src="./assets/hospedagem/orlando/sonesta-suites.jpg" alt="Sonesta ES Suites Orlando — Lake Buena Vista" loading="lazy"
-        style="width:100%;height:100%;object-fit:cover;display:block;">
-    </div>
-    <div style="padding:16px 18px;">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
-        <div>
-          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Sonesta ES Suites Orlando — Lake Buena Vista</div>
-          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐ · Lake Buena Vista, Orlando</div>
-        </div>
-        <span style="background:#16a34a;color:white;font-family:'Poppins',sans-serif;font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;">✓ Selecionado</span>
-      </div>
-      <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
-        <div class="voo-info-item">
-          <span class="voo-info-label">Check-in</span>
-          <span class="voo-info-valor">31/10 · Sábado</span>
-        </div>
-        <div class="voo-info-item">
-          <span class="voo-info-label">Check-out</span>
-          <span class="voo-info-valor">05/11 · Quinta</span>
-        </div>
-        <div class="voo-info-item">
-          <span class="voo-info-label">Total (5 noites)</span>
-          <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">Reserva confirmada</span>
-        </div>
-      </div>
-      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Hotel com perfil de residência temporária — suítes espaçosas com cozinha completa, sala de estar e ambientes mais amplos. Boa alternativa para quem deseja mais espaço e comodidade durante a estadia. Localizado próximo ao complexo Disney. <strong>Reserva estendida para 5 noites</strong> (1 a mais que a cotação inicial de 4 noites).</div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🍳 Cozinha inclusa</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏰 Próximo Disney</span></div>
-      <a href="https://www.booking.com/hotel/us/sonesta-suites-es-lake-buena-vista.pt-br.html?label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652828998892%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101243%3Ali%3Adec%3Adm&sid=f8e1ab598a3d51217d5c9f6199900555&aid=2311236&ucfs=1&checkin=2026-10-31&checkout=2026-11-04&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
-    </div>
-  </div>
-  <div class="dica-box" style="margin-bottom:16px;">
-    <span class="dica-box-label">🚗 Do hotel ao aeroporto</span>
-    <p>Check-out do Sonesta em Orlando na <strong>quinta, 05/11</strong>, mesmo dia do voo internacional de volta, que sai de <strong>Miami (MIA) às 21h30</strong>. Dá o dia inteiro de folga para o trajeto até o aeroporto (~3h30 de carro) com tempo de sobra antes do embarque.</p>
-  </div>
-
-  <!-- Como fazemos a curadoria -->
-  <div class="card" style="margin-bottom:16px;">
-    <div class="card-header"><span class="card-header-icon">🔍</span><span class="card-header-titulo">Como fazemos a curadoria</span></div>
-    <div class="card-body">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
-        <div style="display:flex;gap:10px;align-items:flex-start;padding:10px;background:#f4f6f9;border-radius:8px;">
-          <span style="font-size:18px;flex-shrink:0;">🚇</span>
-          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);display:block;">Logística</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#475569;">Proximidade de metrô, trem ou transporte público</span></div>
-        </div>
-        <div style="display:flex;gap:10px;align-items:flex-start;padding:10px;background:#f4f6f9;border-radius:8px;">
-          <span style="font-size:18px;flex-shrink:0;">📍</span>
-          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);display:block;">Localização estratégica</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#475569;">Para otimizar deslocamentos entre as atrações</span></div>
-        </div>
-        <div style="display:flex;gap:10px;align-items:flex-start;padding:10px;background:#f4f6f9;border-radius:8px;">
-          <span style="font-size:18px;flex-shrink:0;">🛏</span>
-          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);display:block;">Conforto</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#475569;">Alinhado ao perfil e ritmo de vocês</span></div>
-        </div>
-        <div style="display:flex;gap:10px;align-items:flex-start;padding:10px;background:#f4f6f9;border-radius:8px;">
-          <span style="font-size:18px;flex-shrink:0;">💰</span>
-          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);display:block;">Equilíbrio</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#475569;">Entre experiência e investimento</span></div>
-        </div>
-      </div>
-      <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;line-height:1.6;margin-bottom:12px;">Foi assim que chegamos às opções de Dallas, Miami e Orlando, já escolhidas e reservadas. Para o pernoite em São Paulo/GRU, ainda em aberto, seguimos o mesmo critério.</p>
-      <div class="dica2-box" style="margin:0;">
-        <span class="dica2-label">⚠️ Atenção aos valores</span>
-        <p>Os valores apresentados correspondem ao <strong>total para todos os viajantes</strong> na quantidade de noites de cada cidade — não é por pessoa.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Ação dos clientes -->
-  <div class="dica-box" style="margin-bottom:16px;">
-    <span class="dica-box-label">📲 O que vocês fazem nessa etapa</span>
-    <p>Analisem cada opção com calma e sinalizem no grupo a preferência para avançarmos com as reservas. Fiquem à vontade para pesquisar também — usando as datas do roteiro macro. Se encontrarem algo interessante, enviem o link para validarmos juntos a localização e logística.</p>
-  </div>
-
-  <!-- Por que Booking -->
-  <div class="card" style="margin-bottom:16px;">
-    <div class="card-header"><span class="card-header-icon">📋</span><span class="card-header-titulo">Por que trabalhamos com o Booking</span></div>
-    <div class="card-body">
-      <ul style="list-style:none;padding:0;margin:0 0 14px;">
-        <li style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;"><span>✅</span><span><strong style="color:var(--texto);">Cancelamento gratuito</strong> — grande parte das opções permite cancelar sem custo, mantendo flexibilidade para ajustes durante a viagem</span></li>
-        <li style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;"><span>✅</span><span><strong style="color:var(--texto);">Política clara</strong> — prazos, condições e taxas transparentes antes de confirmar</span></li>
-        <li style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;"><span>✅</span><span><strong style="color:var(--texto);">Avaliações reais e consolidadas</strong> — confiáveis para embasar a escolha</span></li>
-        <li style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;"><span>✅</span><span><strong style="color:var(--texto);">Centralização</strong> — todas as hospedagens organizadas em um único lugar, fácil de acessar durante a viagem</span></li>
-        <li style="display:flex;gap:8px;padding:7px 0;font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;"><span>✅</span><span><strong style="color:var(--texto);">Tarifas melhores pelo app</strong> — o aplicativo costuma apresentar valores ligeiramente abaixo da versão desktop</span></li>
-      </ul>
-      <div class="dica-box" style="margin:0;">
-        <span class="dica-box-label">🔑 Conta única</span>
-        <p>As reservas ficam no nome de um único viajante — na conta com maior nível Genius — para aproveitar descontos e benefícios da plataforma.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Níveis Genius -->
-  <div class="card" style="margin-bottom:16px;">
-    <div class="card-header"><span class="card-header-icon">⭐</span><span class="card-header-titulo">Níveis Genius do Booking</span></div>
-    <div class="card-body">
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px;">
-        <div style="border:1.5px solid #e0eaf5;border-radius:10px;padding:14px;text-align:center;">
-          <div style="font-size:24px;margin-bottom:6px;">🥉</div>
-          <div style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);margin-bottom:4px;">Genius Nível 1</div>
-          <div style="font-family:'Poppins',sans-serif;font-size:10px;color:#94a3b8;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #f1f5f9;">Após 2 reservas</div>
-          <ul style="list-style:none;padding:0;margin:0;text-align:left;">
-            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• 10% de desconto em participantes</li>
-            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Algumas ofertas exclusivas</li>
-          </ul>
-        </div>
-        <div style="border:1.5px solid #bfdbfe;border-radius:10px;padding:14px;text-align:center;background:#f0f7ff;">
-          <div style="font-size:24px;margin-bottom:6px;">🥈</div>
-          <div style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul-medio);margin-bottom:4px;">Genius Nível 2</div>
-          <div style="font-family:'Poppins',sans-serif;font-size:10px;color:#94a3b8;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #dbeafe;">Após 5 reservas</div>
-          <ul style="list-style:none;padding:0;margin:0;text-align:left;">
-            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• 10–15% de desconto</li>
-            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Café da manhã gratuito (algumas propriedades)</li>
-            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Upgrade de quarto (quando disponível)</li>
-          </ul>
-        </div>
-        <div style="border:1.5px solid #fde68a;border-radius:10px;padding:14px;text-align:center;background:#fffbeb;">
-          <div style="font-size:24px;margin-bottom:6px;">🥇</div>
-          <div style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:#b45309;margin-bottom:4px;">Genius Nível 3</div>
-          <div style="font-family:'Poppins',sans-serif;font-size:10px;color:#94a3b8;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #fde68a;">Após 15 reservas</div>
-          <ul style="list-style:none;padding:0;margin:0;text-align:left;">
-            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Até 20% de desconto</li>
-            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Upgrade gratuito com mais frequência</li>
-            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Atendimento prioritário</li>
-            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Condições especiais em diversas propriedades</li>
-          </ul>
-        </div>
-      </div>
-      <div class="dica-box" style="margin:0;">
-        <span class="dica-box-label">📱 Como ver seu nível</span>
-        <p>Abra o app do Booking → toque em <strong>"Minha conta"</strong> no menu inferior. O nível Genius aparece no topo do perfil.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Tutorial passo a passo -->
-  <div class="card" style="margin-bottom:16px;">
-    <div class="card-header"><span class="card-header-icon">📖</span><span class="card-header-titulo">Como reservar — passo a passo</span></div>
-    <div class="card-body">
-
-      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
-        <div style="min-width:32px;height:32px;background:var(--azul-medio);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0;">1</div>
-        <div>
-          <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:4px;">Acesse o app pelos links do roteiro</span>
-          <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;margin:0;line-height:1.6;">Use os links diretos desta seção. Preferencialmente pelo celular — o app costuma oferecer tarifas melhores que a versão desktop.</p>
-        </div>
-      </div>
-
-      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
-        <div style="min-width:32px;height:32px;background:var(--azul-medio);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0;">2</div>
-        <div style="width:100%;">
-          <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:4px;">Pesquise com as datas certas</span>
-          <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;margin:0 0 10px;line-height:1.6;">Se quiser explorar por conta, insira: <strong>cidade</strong> conforme o roteiro macro, <strong>datas exatas</strong> da hospedagem e <strong>número de hóspedes</strong>.</p>
-          <div class="voo-print-box is-placeholder">
-            <img src="./assets/hospedagem/booking-busca-exemplo.jpg" alt="Exemplo de pesquisa no Booking" loading="lazy"
-              onload="this.parentElement.classList.remove('is-placeholder')"
-              onerror="this.parentElement.classList.add('is-placeholder')">
-          </div>
-        </div>
-      </div>
-
-      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
-        <div style="min-width:32px;height:32px;background:var(--azul-medio);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0;">3</div>
-        <div>
-          <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:6px;">Aplique os filtros estratégicos</span>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px;">
-            <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:6px;padding:7px 10px;font-family:'Poppins',sans-serif;font-size:11px;color:var(--azul-medio);font-weight:500;">✔ Cancelamento gratuito</div>
-            <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:6px;padding:7px 10px;font-family:'Poppins',sans-serif;font-size:11px;color:var(--azul-medio);font-weight:500;">✔ Banheiro privativo</div>
-            <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:6px;padding:7px 10px;font-family:'Poppins',sans-serif;font-size:11px;color:var(--azul-medio);font-weight:500;">✔ Categoria "Hotel"</div>
-            <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:6px;padding:7px 10px;font-family:'Poppins',sans-serif;font-size:11px;color:var(--azul-medio);font-weight:500;">✔ Café da manhã incluído</div>
-          </div>
-          <p style="font-family:'Poppins',sans-serif;font-size:11.5px;color:#64748b;margin:0;line-height:1.6;">Também dá para ordenar por preço, avaliação ou custo-benefício, e visualizar no mapa para conferir proximidade com metrô e regiões estratégicas.</p>
-        </div>
-      </div>
-
-      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
-        <div style="min-width:32px;height:32px;background:var(--azul-medio);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0;">4</div>
-        <div>
-          <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:4px;">Confira os detalhes antes de confirmar</span>
-          <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;margin:0;line-height:1.6;">Em <strong>"Selecionar quartos"</strong>, verifique: tipo de acomodação sugerido no roteiro, inclusão de café da manhã, <strong>cancelamento gratuito</strong>, valor total com taxas e política de pagamento.</p>
-        </div>
-      </div>
-
-      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;">
-        <div style="min-width:32px;height:32px;background:var(--azul-medio);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0;">5</div>
-        <div>
-          <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:4px;">Finalize e guarde a confirmação</span>
-          <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;margin:0;line-height:1.6;">Insira o cartão de crédito para garantir. Na maioria das opções com cancelamento gratuito não há cobrança imediata — o cartão funciona como garantia. Vocês receberão confirmação por e-mail e tudo fica centralizado na conta do Booking. Em caso de dúvida antes de confirmar, enviem o link ou print no grupo para validarmos juntos.</p>
-        </div>
-      </div>
-
     </div>
   </div>
 
@@ -3611,6 +2996,656 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
 
 <!-- ═══════════════════════════════════════════════════════ ROTEIRO DETALHADO — PRÓXIMOS DIAS ═══════════════════════════════════════════════════════ -->
 
+
+<!-- ═══════════════════════════════════════════════════════ VOOS ═══════════════════════════════════════════════════════ -->
+<section id="voos-recomendados" class="secao-wrapper">
+<div class="page secao">
+  <span class="titulo-principal">✈️ Voos</span>
+  <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 24px;max-width:640px;">Período: <strong style="color:var(--azul);">19/10 a 06/11/2026</strong> · Rota: <strong style="color:var(--azul);">Dallas · Miami · Orlando</strong></p>
+
+  <!-- RESUMO DOS VOOS -->
+  <div class="card" style="margin-bottom:28px;">
+    <div class="card-header"><span class="card-header-icon">🗺️</span><span class="card-header-titulo">Resumo dos voos</span></div>
+    <div class="card-body">
+      <div style="display:flex;flex-direction:column;">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--cinza-claro);flex-wrap:wrap;gap:4px;"><span style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;">✈️ Ida — CGR → GRU → DFW</span><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);">19–21/10 · GOL + American Airlines</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--cinza-claro);flex-wrap:wrap;gap:4px;"><span style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;">✈️ Interno — DFW → FLL</span><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);">27/10 · American Airlines</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;flex-wrap:wrap;gap:4px;"><span style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;">✈️ Volta — MIA → BSB → CGH → CGR</span><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);">05–06/11 · GOL · Pacote Decolar</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ TRECHO 01 — IDA ═══ -->
+  <div style="display:flex;align-items:center;gap:12px;margin:8px 0 16px;padding-bottom:12px;border-bottom:2px solid var(--azul-claro);">
+    <div style="background:var(--azul);border-radius:8px;padding:6px 12px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:white;flex-shrink:0;">Trecho 01</div>
+    <div>
+      <span style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--azul);display:block;">Ida — Campo Grande → Dallas</span>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#94a3b8;">CGR → GRU → DFW · 19–21/10/2026</span>
+    </div>
+  </div>
+
+  <div class="voo-card voo-custo">
+    <div class="voo-card-header">
+      <div>
+        <span class="voo-opcao-label">Voo 01 · GOL</span>
+        <span class="voo-opcao-titulo">Campo Grande → São Paulo</span>
+      </div>
+      <div style="text-align:right;"><span style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.7);">Seg, 19/10/2026</span></div>
+    </div>
+    <div class="voo-card-body">
+      <div class="voo-rota-grid">
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">CGR</span>
+          <span class="voo-aeroporto-cidade">Campo Grande</span>
+          <span class="voo-aeroporto-hora">10h35</span>
+          <span class="voo-aeroporto-data">Seg, 19/10</span>
+        </div>
+        <div class="voo-meio">
+          <span class="voo-duracao">1h40</span>
+          <div class="voo-linha-avião"></div>
+          <span class="voo-conexao">Direto</span>
+        </div>
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">GRU</span>
+          <span class="voo-aeroporto-cidade">São Paulo</span>
+          <span class="voo-aeroporto-hora">13h15</span>
+          <span class="voo-aeroporto-data">Seg, 19/10</span>
+        </div>
+      </div>
+      <div class="voo-info-grid">
+        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">GOL</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Escalas</span><span class="voo-info-valor">Voo direto</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Duração</span><span class="voo-info-valor">1h40</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Aeroporto destino</span><span class="voo-info-valor">Guarulhos (GRU)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:10px;padding:14px 20px;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;margin:4px 0;">
+    <span style="font-size:20px;">🏨</span>
+    <div>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);display:block;">Pernoite em São Paulo</span>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">Chegada em Guarulhos às 13h15 do dia 19/10 — próximo voo parte às 22h00 do dia 20/10. Uma noite e quase um dia inteiro em SP antes da travessia transatlântica.</span>
+    </div>
+  </div>
+
+  <div class="voo-card voo-custo" style="margin-top:8px;">
+    <div class="voo-card-header">
+      <div>
+        <span class="voo-opcao-label">Voo 02 · American Airlines</span>
+        <span class="voo-opcao-titulo">São Paulo → Dallas</span>
+      </div>
+      <div class="voo-opcao-valor">R$ 6.200<small>2 pessoas · inclui taxas</small></div>
+    </div>
+    <div class="voo-card-body">
+      <div class="voo-rota-grid">
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">GRU</span>
+          <span class="voo-aeroporto-cidade">São Paulo</span>
+          <span class="voo-aeroporto-hora">22h00</span>
+          <span class="voo-aeroporto-data">Ter, 20/10</span>
+        </div>
+        <div class="voo-meio">
+          <span class="voo-duracao">10h20</span>
+          <div class="voo-linha-avião"></div>
+          <span class="voo-conexao">Direto</span>
+        </div>
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">DFW</span>
+          <span class="voo-aeroporto-cidade">Dallas</span>
+          <span class="voo-aeroporto-hora">06h20</span>
+          <span class="voo-aeroporto-data">Qua, 21/10</span>
+        </div>
+      </div>
+      <div class="voo-info-grid">
+        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">American Airlines</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Escalas</span><span class="voo-info-valor">Voo direto</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Duração</span><span class="voo-info-valor">10h20</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Valor</span><span class="voo-info-valor">R$ 6.200 (2 pessoas)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ TRECHO 02 — VOO INTERNO ═══ -->
+  <div style="display:flex;align-items:center;gap:12px;margin:24px 0 16px;padding-bottom:12px;border-bottom:2px solid var(--azul-claro);">
+    <div style="background:var(--azul);border-radius:8px;padding:6px 12px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:white;flex-shrink:0;">Trecho 02</div>
+    <div>
+      <span style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--azul);display:block;">Interno — Dallas → Fort Lauderdale</span>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#94a3b8;">DFW → FLL · Terça, 27/10/2026</span>
+    </div>
+  </div>
+
+  <div class="voo-card voo-custo">
+    <div class="voo-card-header">
+      <div>
+        <span class="voo-opcao-label">Voo 03 · American Airlines</span>
+        <span class="voo-opcao-titulo">Dallas → Fort Lauderdale</span>
+      </div>
+      <div class="voo-opcao-valor">US$ 212<small>2 pessoas · inclui taxas</small></div>
+    </div>
+    <div class="voo-card-body">
+      <div class="voo-rota-grid">
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">DFW</span>
+          <span class="voo-aeroporto-cidade">Dallas</span>
+          <span class="voo-aeroporto-hora">07h00</span>
+          <span class="voo-aeroporto-data">Ter, 27/10</span>
+        </div>
+        <div class="voo-meio">
+          <span class="voo-duracao">2h52</span>
+          <div class="voo-linha-avião"></div>
+          <span class="voo-conexao">Direto</span>
+        </div>
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">FLL</span>
+          <span class="voo-aeroporto-cidade">Fort Lauderdale</span>
+          <span class="voo-aeroporto-hora">10h52</span>
+          <span class="voo-aeroporto-data">Ter, 27/10</span>
+        </div>
+      </div>
+      <div class="voo-info-grid">
+        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">American Airlines</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Escalas</span><span class="voo-info-valor">Voo direto</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Aeroporto destino</span><span class="voo-info-valor">Fort Lauderdale (FLL)</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Valor</span><span class="voo-info-valor">US$ 212 (2 pessoas)</span></div>
+      </div>
+      <div class="voo-destaque-box neutro">
+        <span class="voo-destaque-label">📍 Fort Lauderdale → Miami</span>
+        <span class="voo-destaque-texto">Fort Lauderdale (FLL) fica a ~40–50 min de Miami Beach de Uber — tranquilo e bem mais barato que o aeroporto principal de Miami.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ TRECHO 03 — VOLTA ═══ -->
+  <div style="display:flex;align-items:center;gap:12px;margin:24px 0 16px;padding-bottom:12px;border-bottom:2px solid var(--azul-claro);">
+    <div style="background:var(--azul);border-radius:8px;padding:6px 12px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:white;flex-shrink:0;">Trecho 03</div>
+    <div>
+      <span style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--azul);display:block;">Volta — Miami → Campo Grande</span>
+      <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#94a3b8;">MIA → BSB → CGH → CGR · 05–06/11/2026 · GOL · Pacote Decolar</span>
+    </div>
+  </div>
+
+  <div class="voo-card voo-custo">
+    <div class="voo-card-header">
+      <div>
+        <span class="voo-opcao-label">Voo 04 · GOL · Pacote Decolar</span>
+        <span class="voo-opcao-titulo">Miami → Brasília</span>
+      </div>
+      <div style="text-align:right;"><span style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.7);">Qui, 05/11/2026</span></div>
+    </div>
+    <div class="voo-card-body">
+      <div class="voo-rota-grid">
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">MIA</span>
+          <span class="voo-aeroporto-cidade">Miami</span>
+          <span class="voo-aeroporto-hora">21h30</span>
+          <span class="voo-aeroporto-data">Qui, 05/11</span>
+        </div>
+        <div class="voo-meio">
+          <span class="voo-duracao">7h34</span>
+          <div class="voo-linha-avião"></div>
+          <span class="voo-conexao">Direto</span>
+        </div>
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">BSB</span>
+          <span class="voo-aeroporto-cidade">Brasília</span>
+          <span class="voo-aeroporto-hora">07h15</span>
+          <span class="voo-aeroporto-data">Sex, 06/11</span>
+        </div>
+      </div>
+      <div class="voo-info-grid">
+        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">GOL</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Escalas</span><span class="voo-info-valor">Voo direto</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:10px;padding:12px 20px;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;margin:4px 0;">
+    <span style="font-size:18px;">🔄</span>
+    <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;"><strong style="color:var(--azul);">Conexão Brasília (BSB)</strong> · Chegada às 07h15 → próximo voo às 10h30 · 3h15 de conexão</span>
+  </div>
+
+  <div class="voo-card voo-custo" style="margin-top:8px;">
+    <div class="voo-card-header">
+      <div>
+        <span class="voo-opcao-label">Voo 05 · GOL · Pacote Decolar</span>
+        <span class="voo-opcao-titulo">Brasília → São Paulo</span>
+      </div>
+      <div style="text-align:right;"><span style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.7);">Sex, 06/11/2026</span></div>
+    </div>
+    <div class="voo-card-body">
+      <div class="voo-rota-grid">
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">BSB</span>
+          <span class="voo-aeroporto-cidade">Brasília</span>
+          <span class="voo-aeroporto-hora">10h30</span>
+          <span class="voo-aeroporto-data">Sex, 06/11</span>
+        </div>
+        <div class="voo-meio">
+          <span class="voo-duracao">1h50</span>
+          <div class="voo-linha-avião"></div>
+          <span class="voo-conexao">Direto</span>
+        </div>
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">CGH</span>
+          <span class="voo-aeroporto-cidade">São Paulo</span>
+          <span class="voo-aeroporto-hora">12h20</span>
+          <span class="voo-aeroporto-data">Sex, 06/11</span>
+        </div>
+      </div>
+      <div class="voo-info-grid">
+        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">GOL</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Aeroporto destino</span><span class="voo-info-valor">Congonhas (CGH)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:10px;padding:12px 20px;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;margin:4px 0;">
+    <span style="font-size:18px;">🔄</span>
+    <span style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;"><strong style="color:var(--azul);">Conexão Congonhas (CGH)</strong> · Chegada às 12h20 → próximo voo às 13h40 · 1h20 de conexão</span>
+  </div>
+
+  <div class="voo-card voo-custo" style="margin-top:8px;">
+    <div class="voo-card-header">
+      <div>
+        <span class="voo-opcao-label">Voo 06 · GOL · Pacote Decolar</span>
+        <span class="voo-opcao-titulo">São Paulo → Campo Grande</span>
+      </div>
+      <div style="text-align:right;"><span style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.7);">Sex, 06/11/2026</span></div>
+    </div>
+    <div class="voo-card-body">
+      <div class="voo-rota-grid">
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">CGH</span>
+          <span class="voo-aeroporto-cidade">São Paulo</span>
+          <span class="voo-aeroporto-hora">13h40</span>
+          <span class="voo-aeroporto-data">Sex, 06/11</span>
+        </div>
+        <div class="voo-meio">
+          <span class="voo-duracao">1h50</span>
+          <div class="voo-linha-avião"></div>
+          <span class="voo-conexao">Direto</span>
+        </div>
+        <div class="voo-aeroporto">
+          <span class="voo-aeroporto-codigo">CGR</span>
+          <span class="voo-aeroporto-cidade">Campo Grande</span>
+          <span class="voo-aeroporto-hora">14h30</span>
+          <span class="voo-aeroporto-data">Sex, 06/11</span>
+        </div>
+      </div>
+      <div class="voo-info-grid">
+        <div class="voo-info-item"><span class="voo-info-label">Companhia</span><span class="voo-info-valor">GOL</span></div>
+        <div class="voo-info-item"><span class="voo-info-label">Chegada</span><span class="voo-info-valor">Campo Grande (CGR)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ CURADORIA DE HOSPEDAGENS ═══════════════════════════════════════════════════════ -->
+<section id="hospedagem-curadoria" class="secao-wrapper">
+<div class="page secao">
+  <span class="titulo-principal">🏨 Curadoria de Hospedagens</span>
+  <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;text-align:center;margin:-8px auto 24px;max-width:640px;">Hotéis de Dallas, Miami e Orlando já escolhidos e reservados. Falta só definir o pernoite em São Paulo/GRU antes do voo internacional.</p>
+
+  <div style="background:#f0fdf4;border:1.5px solid #16a34a;border-radius:12px;padding:14px 18px;margin-bottom:28px;display:flex;align-items:center;gap:12px;">
+    <span style="font-size:20px;flex-shrink:0;">✅</span>
+    <span style="font-family:'Poppins',sans-serif;font-size:12px;color:#166534;line-height:1.55;"><strong>Hotéis selecionados e reservas confirmadas</strong> — Dallas, Miami e Orlando já reservados. Seguimos para a montagem do roteiro completo dia a dia.</span>
+  </div>
+
+  <!-- ══════ PERNOITE — SÃO PAULO · GRU ══════ -->
+  <div style="background:var(--azul-medio);border-radius:14px;padding:18px 22px;margin:28px 0 18px;display:flex;align-items:center;gap:14px;">
+    <div style="font-size:28px;">🛬</div>
+    <div>
+      <div style="font-family:'Playfair Display',serif;font-size:19px;color:white;font-weight:700;">Pernoite — São Paulo · GRU</div>
+      <div style="font-family:'Poppins',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.85);">19/10 (segunda) → 20/10 (terça) · 1 noite · Para chegarem descansados ao voo internacional às 22h do dia 20</div>
+    </div>
+  </div>
+  <!-- Airport Hotel Gru -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div style="width:100%;height:200px;overflow:hidden;background:#e2e8f0;">
+      <img src="./assets/hospedagem/gru/airport-hotel-gru.jpg" alt="Airport Hotel Gru" loading="lazy"
+        style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Airport Hotel Gru</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐ · Bela Vista, Guarulhos · Transfer gratuito</div>
+        </div>
+        <span style="background:#c9a227;color:white;font-family:'Poppins',sans-serif;font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;">✓ Recomendado</span>
+      </div>
+      <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
+        <div class="voo-info-item">
+          <span class="voo-info-label">Check-in</span>
+          <span class="voo-info-valor">19/10 · Segunda</span>
+        </div>
+        <div class="voo-info-item">
+          <span class="voo-info-label">Check-out</span>
+          <span class="voo-info-valor">20/10 · Terça</span>
+        </div>
+        <div class="voo-info-item">
+          <span class="voo-info-label">Total (1 noite)</span>
+          <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 376</span>
+        </div>
+      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;"><strong style='color:var(--azul);display:block;margin-bottom:4px;'>Melhor equilíbrio entre conforto e investimento.</strong>Hotel moderno e bem avaliado a poucos minutos do aeroporto de Guarulhos. Oferece um nível de conforto superior para a noite anterior ao embarque internacional — chegam descansados, sem correria. Café da manhã incluso e transfer gratuito até o terminal.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">☕ Café incluso</span><span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🚌 Transfer gratuito</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">💰 Mais econômico</span></div>
+      <a href="https://www.booking.com/hotel/br/airport-gru-ltda.pt-br.html?aid=2311236&label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652796015463%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101240%3Ali%3Adec%3Adm&sid=0ce82a685da3e7632045e06e1563fd15&checkin=2026-10-19&checkout=2026-10-20&dest_id=13922&dest_type=hotel&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
+    </div>
+  </div>
+  <!-- Sleep Inn Aeroporto de Guarulhos -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div style="width:100%;height:200px;overflow:hidden;background:#e2e8f0;">
+      <img src="./assets/hospedagem/gru/sleep-inn-gru.jpg" alt="Sleep Inn Aeroporto de Guarulhos" loading="lazy"
+        style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Sleep Inn Aeroporto de Guarulhos</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐ · Taboão, Guarulhos · Transfer gratuito</div>
+        </div>
+        
+      </div>
+      <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
+        <div class="voo-info-item">
+          <span class="voo-info-label">Check-in</span>
+          <span class="voo-info-valor">19/10 · Segunda</span>
+        </div>
+        <div class="voo-info-item">
+          <span class="voo-info-label">Check-out</span>
+          <span class="voo-info-valor">20/10 · Terça</span>
+        </div>
+        <div class="voo-info-item">
+          <span class="voo-info-label">Total (1 noite)</span>
+          <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 550</span>
+        </div>
+      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Hospedagem prática e funcional próxima ao Aeroporto Internacional de Guarulhos. Boa alternativa para quem busca conforto e praticidade para a pernoite antes do embarque. Transfer gratuito até o terminal incluso.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">☕ Café incluso</span><span style="background:#dcfce7;color:#166534;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🚌 Transfer gratuito</span></div>
+      <a href="https://www.booking.com/hotel/br/sleep-inn-guarulhos.pt-br.html?label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652796015463%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101240%3Ali%3Adec%3Adm&aid=2311236&ucfs=1&checkin=2026-10-19&checkout=2026-10-20&dest_id=2120957&dest_type=hotel&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
+    </div>
+  </div>
+  <!-- ══════ DALLAS · TEXAS ══════ -->
+  <div style="background:var(--azul-medio);border-radius:14px;padding:18px 22px;margin:28px 0 18px;display:flex;align-items:center;gap:14px;">
+    <div style="font-size:28px;">🤠</div>
+    <div>
+      <div style="font-family:'Playfair Display',serif;font-size:19px;color:white;font-weight:700;">Dallas · Texas</div>
+      <div style="font-family:'Poppins',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.85);">21/10 (quarta) → 27/10 (terça) · 6 noites · Região de Las Colinas / Irving</div>
+    </div>
+  </div>
+  <!-- Sandman Signature Dallas Las Colinas -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div style="width:100%;height:200px;overflow:hidden;background:#e2e8f0;">
+      <img src="./assets/hospedagem/dallas/sandman-signature.jpg" alt="Sandman Signature Dallas Las Colinas" loading="lazy"
+        style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Sandman Signature Dallas Las Colinas</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐⭐ · Irving, TX (Las Colinas)</div>
+        </div>
+        <span style="background:#16a34a;color:white;font-family:'Poppins',sans-serif;font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;">✓ Selecionado</span>
+      </div>
+      <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
+        <div class="voo-info-item">
+          <span class="voo-info-label">Check-in</span>
+          <span class="voo-info-valor">21/10 · Quarta</span>
+        </div>
+        <div class="voo-info-item">
+          <span class="voo-info-label">Check-out</span>
+          <span class="voo-info-valor">27/10 · Terça</span>
+        </div>
+        <div class="voo-info-item">
+          <span class="voo-info-label">Total (6 noites)</span>
+          <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">R$ 5.479</span>
+        </div>
+      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Localizado em Las Colinas com localização estratégica para explorar Dallas, Fort Worth, Grapevine, Arlington e o aeroporto DFW. Hotel de categoria superior com estrutura completa e excelentes avaliações.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">⭐ 4 estrelas</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">📍 Las Colinas</span></div>
+      <a href="https://www.booking.com/hotel/us/sandman-signature-las-colinas-amp-suites.pt-br.html?label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652828998892%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101243%3Ali%3Adec%3Adm&sid=f8e1ab598a3d51217d5c9f6199900555&aid=2311236&ucfs=1&checkin=2026-10-21&checkout=2026-10-27&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
+    </div>
+  </div>
+  <!-- ══════ MIAMI · FLÓRIDA ══════ -->
+  <div style="background:var(--azul-medio);border-radius:14px;padding:18px 22px;margin:28px 0 18px;display:flex;align-items:center;gap:14px;">
+    <div style="font-size:28px;">🌴</div>
+    <div>
+      <div style="font-family:'Playfair Display',serif;font-size:19px;color:white;font-weight:700;">Miami · Flórida</div>
+      <div style="font-family:'Poppins',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.85);">27/10 (terça) → 31/10 (sábado) · 4 noites · Miami Beach / Brickell</div>
+    </div>
+  </div>
+  <!-- The Julia Hotel — Selecionado pelos clientes, fora da curadoria -->
+  <div style="background:#f0fdf4;border:1.5px solid #16a34a;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(22,163,74,0.08);">
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">The Julia Hotel</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">Miami Beach</div>
+        </div>
+        <span style="background:#16a34a;color:white;font-family:'Poppins',sans-serif;font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;">✓ Selecionado</span>
+      </div>
+      <div class="voo-info-grid" style="grid-template-columns:1fr 1fr;margin-bottom:12px;">
+        <div class="voo-info-item">
+          <span class="voo-info-label">Check-in</span>
+          <span class="voo-info-valor">27/10 · Terça</span>
+        </div>
+        <div class="voo-info-item">
+          <span class="voo-info-label">Check-out</span>
+          <span class="voo-info-valor">31/10 · Sábado</span>
+        </div>
+      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Hotel escolhido diretamente por vocês, fora das opções da curadoria inicial. Reserva confirmada — 4 noites em Miami Beach.</div>
+    </div>
+  </div>
+  <!-- ══════ ORLANDO · FLÓRIDA ══════ -->
+  <div style="background:var(--azul-medio);border-radius:14px;padding:18px 22px;margin:28px 0 18px;display:flex;align-items:center;gap:14px;">
+    <div style="font-size:28px;">🎡</div>
+    <div>
+      <div style="font-family:'Playfair Display',serif;font-size:19px;color:white;font-weight:700;">Orlando · Flórida</div>
+      <div style="font-family:'Poppins',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.85);">31/10 (sábado) → 04/11 (quarta) · 4 noites · Lake Buena Vista / International Drive</div>
+    </div>
+  </div>
+  <!-- Sonesta ES Suites Orlando — Lake Buena Vista -->
+  <div style="background:white;border:1.5px solid #e0eaf5;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 8px rgba(26,58,92,0.06);">
+    <div style="width:100%;height:200px;overflow:hidden;background:#e2e8f0;">
+      <img src="./assets/hospedagem/orlando/sonesta-suites.jpg" alt="Sonesta ES Suites Orlando — Lake Buena Vista" loading="lazy"
+        style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+    <div style="padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:10px;">
+        <div>
+          <div style="font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--azul);">Sonesta ES Suites Orlando — Lake Buena Vista</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;color:#64748b;">⭐⭐⭐ · Lake Buena Vista, Orlando</div>
+        </div>
+        <span style="background:#16a34a;color:white;font-family:'Poppins',sans-serif;font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;">✓ Selecionado</span>
+      </div>
+      <div class="voo-info-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:12px;">
+        <div class="voo-info-item">
+          <span class="voo-info-label">Check-in</span>
+          <span class="voo-info-valor">31/10 · Sábado</span>
+        </div>
+        <div class="voo-info-item">
+          <span class="voo-info-label">Check-out</span>
+          <span class="voo-info-valor">05/11 · Quinta</span>
+        </div>
+        <div class="voo-info-item">
+          <span class="voo-info-label">Total (5 noites)</span>
+          <span class="voo-info-valor" style="color:var(--azul);font-weight:700;font-size:14px;">Reserva confirmada</span>
+        </div>
+      </div>
+      <div style="background:#f8fafc;border:1px solid #e0eaf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:11.5px;color:#475569;line-height:1.65;">Hotel com perfil de residência temporária — suítes espaçosas com cozinha completa, sala de estar e ambientes mais amplos. Boa alternativa para quem deseja mais espaço e comodidade durante a estadia. Localizado próximo ao complexo Disney. <strong>Reserva estendida para 5 noites</strong> (1 a mais que a cotação inicial de 4 noites).</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🍳 Cozinha inclusa</span><span style="background:#dbeafe;color:var(--azul-medio);font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;">🏰 Próximo Disney</span></div>
+      <a href="https://www.booking.com/hotel/us/sonesta-suites-es-lake-buena-vista.pt-br.html?label=pt-br-booking-desktop-9_uvqir24qvA6x6xGiDvCQS652828998892%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9101243%3Ali%3Adec%3Adm&sid=f8e1ab598a3d51217d5c9f6199900555&aid=2311236&ucfs=1&checkin=2026-10-31&checkout=2026-11-04&group_adults=2&no_rooms=1" target="_blank" style="display:block;text-align:center;background:var(--azul-medio);color:white;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;">Reservar no Booking →</a>
+    </div>
+  </div>
+  <div class="dica-box" style="margin-bottom:16px;">
+    <span class="dica-box-label">🚗 Do hotel ao aeroporto</span>
+    <p>Check-out do Sonesta em Orlando na <strong>quinta, 05/11</strong>, mesmo dia do voo internacional de volta, que sai de <strong>Miami (MIA) às 21h30</strong>. Dá o dia inteiro de folga para o trajeto até o aeroporto (~3h30 de carro) com tempo de sobra antes do embarque.</p>
+  </div>
+
+  <!-- Como fazemos a curadoria -->
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-header"><span class="card-header-icon">🔍</span><span class="card-header-titulo">Como fazemos a curadoria</span></div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+        <div style="display:flex;gap:10px;align-items:flex-start;padding:10px;background:#f4f6f9;border-radius:8px;">
+          <span style="font-size:18px;flex-shrink:0;">🚇</span>
+          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);display:block;">Logística</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#475569;">Proximidade de metrô, trem ou transporte público</span></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;padding:10px;background:#f4f6f9;border-radius:8px;">
+          <span style="font-size:18px;flex-shrink:0;">📍</span>
+          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);display:block;">Localização estratégica</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#475569;">Para otimizar deslocamentos entre as atrações</span></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;padding:10px;background:#f4f6f9;border-radius:8px;">
+          <span style="font-size:18px;flex-shrink:0;">🛏</span>
+          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);display:block;">Conforto</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#475569;">Alinhado ao perfil e ritmo de vocês</span></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;padding:10px;background:#f4f6f9;border-radius:8px;">
+          <span style="font-size:18px;flex-shrink:0;">💰</span>
+          <div><span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;color:var(--azul);display:block;">Equilíbrio</span><span style="font-family:'Poppins',sans-serif;font-size:11px;color:#475569;">Entre experiência e investimento</span></div>
+        </div>
+      </div>
+      <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;line-height:1.6;margin-bottom:12px;">Foi assim que chegamos às opções de Dallas, Miami e Orlando, já escolhidas e reservadas. Para o pernoite em São Paulo/GRU, ainda em aberto, seguimos o mesmo critério.</p>
+      <div class="dica2-box" style="margin:0;">
+        <span class="dica2-label">⚠️ Atenção aos valores</span>
+        <p>Os valores apresentados correspondem ao <strong>total para todos os viajantes</strong> na quantidade de noites de cada cidade — não é por pessoa.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ação dos clientes -->
+  <div class="dica-box" style="margin-bottom:16px;">
+    <span class="dica-box-label">📲 O que vocês fazem nessa etapa</span>
+    <p>Analisem cada opção com calma e sinalizem no grupo a preferência para avançarmos com as reservas. Fiquem à vontade para pesquisar também — usando as datas do roteiro macro. Se encontrarem algo interessante, enviem o link para validarmos juntos a localização e logística.</p>
+  </div>
+
+  <!-- Por que Booking -->
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-header"><span class="card-header-icon">📋</span><span class="card-header-titulo">Por que trabalhamos com o Booking</span></div>
+    <div class="card-body">
+      <ul style="list-style:none;padding:0;margin:0 0 14px;">
+        <li style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;"><span>✅</span><span><strong style="color:var(--texto);">Cancelamento gratuito</strong> — grande parte das opções permite cancelar sem custo, mantendo flexibilidade para ajustes durante a viagem</span></li>
+        <li style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;"><span>✅</span><span><strong style="color:var(--texto);">Política clara</strong> — prazos, condições e taxas transparentes antes de confirmar</span></li>
+        <li style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;"><span>✅</span><span><strong style="color:var(--texto);">Avaliações reais e consolidadas</strong> — confiáveis para embasar a escolha</span></li>
+        <li style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--cinza-claro);font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;"><span>✅</span><span><strong style="color:var(--texto);">Centralização</strong> — todas as hospedagens organizadas em um único lugar, fácil de acessar durante a viagem</span></li>
+        <li style="display:flex;gap:8px;padding:7px 0;font-family:'Poppins',sans-serif;font-size:12px;color:#475569;align-items:flex-start;"><span>✅</span><span><strong style="color:var(--texto);">Tarifas melhores pelo app</strong> — o aplicativo costuma apresentar valores ligeiramente abaixo da versão desktop</span></li>
+      </ul>
+      <div class="dica-box" style="margin:0;">
+        <span class="dica-box-label">🔑 Conta única</span>
+        <p>As reservas ficam no nome de um único viajante — na conta com maior nível Genius — para aproveitar descontos e benefícios da plataforma.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Níveis Genius -->
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-header"><span class="card-header-icon">⭐</span><span class="card-header-titulo">Níveis Genius do Booking</span></div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px;">
+        <div style="border:1.5px solid #e0eaf5;border-radius:10px;padding:14px;text-align:center;">
+          <div style="font-size:24px;margin-bottom:6px;">🥉</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul);margin-bottom:4px;">Genius Nível 1</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:10px;color:#94a3b8;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #f1f5f9;">Após 2 reservas</div>
+          <ul style="list-style:none;padding:0;margin:0;text-align:left;">
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• 10% de desconto em participantes</li>
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Algumas ofertas exclusivas</li>
+          </ul>
+        </div>
+        <div style="border:1.5px solid #bfdbfe;border-radius:10px;padding:14px;text-align:center;background:#f0f7ff;">
+          <div style="font-size:24px;margin-bottom:6px;">🥈</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--azul-medio);margin-bottom:4px;">Genius Nível 2</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:10px;color:#94a3b8;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #dbeafe;">Após 5 reservas</div>
+          <ul style="list-style:none;padding:0;margin:0;text-align:left;">
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• 10–15% de desconto</li>
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Café da manhã gratuito (algumas propriedades)</li>
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Upgrade de quarto (quando disponível)</li>
+          </ul>
+        </div>
+        <div style="border:1.5px solid #fde68a;border-radius:10px;padding:14px;text-align:center;background:#fffbeb;">
+          <div style="font-size:24px;margin-bottom:6px;">🥇</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:#b45309;margin-bottom:4px;">Genius Nível 3</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:10px;color:#94a3b8;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #fde68a;">Após 15 reservas</div>
+          <ul style="list-style:none;padding:0;margin:0;text-align:left;">
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Até 20% de desconto</li>
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Upgrade gratuito com mais frequência</li>
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Atendimento prioritário</li>
+            <li style="font-family:'Poppins',sans-serif;font-size:10.5px;color:#475569;padding:3px 0;">• Condições especiais em diversas propriedades</li>
+          </ul>
+        </div>
+      </div>
+      <div class="dica-box" style="margin:0;">
+        <span class="dica-box-label">📱 Como ver seu nível</span>
+        <p>Abra o app do Booking → toque em <strong>"Minha conta"</strong> no menu inferior. O nível Genius aparece no topo do perfil.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tutorial passo a passo -->
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-header"><span class="card-header-icon">📖</span><span class="card-header-titulo">Como reservar — passo a passo</span></div>
+    <div class="card-body">
+
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
+        <div style="min-width:32px;height:32px;background:var(--azul-medio);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0;">1</div>
+        <div>
+          <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:4px;">Acesse o app pelos links do roteiro</span>
+          <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;margin:0;line-height:1.6;">Use os links diretos desta seção. Preferencialmente pelo celular — o app costuma oferecer tarifas melhores que a versão desktop.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
+        <div style="min-width:32px;height:32px;background:var(--azul-medio);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0;">2</div>
+        <div style="width:100%;">
+          <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:4px;">Pesquise com as datas certas</span>
+          <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;margin:0 0 10px;line-height:1.6;">Se quiser explorar por conta, insira: <strong>cidade</strong> conforme o roteiro macro, <strong>datas exatas</strong> da hospedagem e <strong>número de hóspedes</strong>.</p>
+          <div class="voo-print-box is-placeholder">
+            <img src="./assets/hospedagem/booking-busca-exemplo.jpg" alt="Exemplo de pesquisa no Booking" loading="lazy"
+              onload="this.parentElement.classList.remove('is-placeholder')"
+              onerror="this.parentElement.classList.add('is-placeholder')">
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
+        <div style="min-width:32px;height:32px;background:var(--azul-medio);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0;">3</div>
+        <div>
+          <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:6px;">Aplique os filtros estratégicos</span>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px;">
+            <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:6px;padding:7px 10px;font-family:'Poppins',sans-serif;font-size:11px;color:var(--azul-medio);font-weight:500;">✔ Cancelamento gratuito</div>
+            <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:6px;padding:7px 10px;font-family:'Poppins',sans-serif;font-size:11px;color:var(--azul-medio);font-weight:500;">✔ Banheiro privativo</div>
+            <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:6px;padding:7px 10px;font-family:'Poppins',sans-serif;font-size:11px;color:var(--azul-medio);font-weight:500;">✔ Categoria "Hotel"</div>
+            <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:6px;padding:7px 10px;font-family:'Poppins',sans-serif;font-size:11px;color:var(--azul-medio);font-weight:500;">✔ Café da manhã incluído</div>
+          </div>
+          <p style="font-family:'Poppins',sans-serif;font-size:11.5px;color:#64748b;margin:0;line-height:1.6;">Também dá para ordenar por preço, avaliação ou custo-benefício, e visualizar no mapa para conferir proximidade com metrô e regiões estratégicas.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--cinza-claro);">
+        <div style="min-width:32px;height:32px;background:var(--azul-medio);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0;">4</div>
+        <div>
+          <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:4px;">Confira os detalhes antes de confirmar</span>
+          <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;margin:0;line-height:1.6;">Em <strong>"Selecionar quartos"</strong>, verifique: tipo de acomodação sugerido no roteiro, inclusão de café da manhã, <strong>cancelamento gratuito</strong>, valor total com taxas e política de pagamento.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;">
+        <div style="min-width:32px;height:32px;background:var(--azul-medio);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0;">5</div>
+        <div>
+          <span style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;color:var(--azul);display:block;margin-bottom:4px;">Finalize e guarde a confirmação</span>
+          <p style="font-family:'Poppins',sans-serif;font-size:12px;color:#475569;margin:0;line-height:1.6;">Insira o cartão de crédito para garantir. Na maioria das opções com cancelamento gratuito não há cobrança imediata — o cartão funciona como garantia. Vocês receberão confirmação por e-mail e tudo fica centralizado na conta do Booking. Em caso de dúvida antes de confirmar, enviem o link ou print no grupo para validarmos juntos.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-pratico">Menu Principal</a></div>
+</div>
+</section>
 
 <!-- ═══════════════════════════════════════════════════════ SOBRE OS EUA ═══════════════════════════════════════════════════════ -->
 <section id="cidade" class="secao-wrapper" style="background:#eef4fb;">
