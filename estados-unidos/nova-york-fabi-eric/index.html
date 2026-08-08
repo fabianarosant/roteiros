@@ -337,6 +337,18 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
 .btn-menu:hover { background: var(--azul); color: #fff; }
 .btn-menu::before { content: "↑  "; }
 
+/* ══ MOBILE — aproveitar mais o espaço na linha do tempo ══ */
+@media (max-width: 600px) {
+  #detalhado { padding-left: 12px; padding-right: 12px; }
+  .day-body { padding-left: 12px; padding-right: 12px; }
+  .tl > li { padding-left: 52px; }
+  .tl > li .time { width: 34px; font-size: 10px; }
+  .tl > li .dot { left: 36px; }
+  .tl > li::before { left: 40px; }
+  .tl > li.walk-li { padding-left: 52px; }
+  .tl > li.walk-li::before { left: 40px; }
+}
+
 </style>
 </head>
 <body>
@@ -729,7 +741,17 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
 
         <li><span class="time">19h15</span><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s8"><span class="check-box"></span></label><span class="stop-title">Empire State Building · por fora</span></h4>
-          <p class="sub">📸 Melhor ângulo: esquina da 5ª com a 34th, ou da W 33rd olhando para leste. As luzes acendem no fim da tarde.</p></div></li>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>O Empire State foi erguido em apenas 410 dias, entre 1930 e 1931 — auge da Grande Depressão, quando Nova York mais precisava de empregos. Ele venceu a corrida contra o Chrysler Building pelo título de prédio mais alto do mundo, e segurou essa coroa por quase 40 anos, até o World Trade Center em 1970. O mastro no topo foi projetado pra ser um ponto de atracação de dirigíveis — um plano que nunca funcionou de verdade, porque os ventos lá em cima eram fortes demais até pra tentar.</p>
+            <p>Por anos, com tantos andares vazios na Depressão, os nova-iorquinos apelidaram o prédio de "Empty State Building" (Prédio do Estado Vazio). Foi King Kong escalando ele em 1933 que virou o edifício em ícone mundial da cultura pop. Hoje, à noite, o topo se ilumina com cores diferentes conforme a data — verde no St. Patrick's, vermelho e verde no Natal, arco-íris no Pride — quase um calendário de Nova York em luz. Do chão, o point pra foto é a esquina da 5ª com a 34th, onde dá pra ver o prédio inteiro sem inclinar o pescoço.</p>
+          </div></details>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs">
+              <figure>
+                <img src="./assets/atracoes/dia-01/empire-state-inspiracao1.jpg" alt="Referência de pose e ângulo — Empire State Building" onerror="this.parentElement.classList.add('is-placeholder')">
+              </figure>
+            </div>
+          </details></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>4 min</b> · descendo até a W 32nd</div></li>
