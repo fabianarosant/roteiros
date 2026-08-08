@@ -232,6 +232,15 @@ body {
 .tl .stop p.sub b { color: var(--ink-soft); }
 .tl > li.hi .stop h4 { color: var(--gold-deep); }
 
+/* ══ TESTE — Dia 01: horário embaixo do título, linha/bolinha na margem ══ */
+#d1 .tl > li { padding-left: 20px; }
+#d1 .tl > li .dot { left: 0; }
+#d1 .tl > li::before { left: 4px; }
+#d1 .tl > li.walk-li { padding-left: 20px; }
+#d1 .tl > li.walk-li::before { left: 4px; }
+.time-below { display: block; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 700; color: var(--azul); margin: 4px 0 6px; }
+.tl > li.hi .time-below { color: var(--gold-deep); }
+
 .check-stop { display: inline-flex; cursor: pointer; flex-shrink: 0; }
 .check-input { position: absolute; opacity: 0; width: 0; height: 0; }
 .check-box { width: 17px; height: 17px; border: 1.5px solid var(--gold-soft); border-radius: 4px; flex-shrink: 0; position: relative; transition: background 0.15s, border-color 0.15s; }
@@ -661,21 +670,25 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
       </div>
 
       <ul class="tl">
-        <li class="hi"><span class="time">07h00</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s1"><span class="check-box"></span></label><span class="stop-title">Pouso em Miami</span></h4>
+          <span class="time-below">07h00</span>
           <p>Chegada do voo internacional GRU → MIA. Imigração americana + retirada de bagagem acontecem aqui.</p>
           <p class="sub">Conexão de ~4h28 até o próximo voo — dá folga para imigração, esteira e um café antes de embarcar de novo.</p></div></li>
 
-        <li><span class="time">11h20</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s2"><span class="check-box"></span></label><span class="stop-title">Embarque Miami → JFK</span></h4>
+          <span class="time-below">11h20</span>
           <p class="sub">Trecho doméstico, ~2h50 de voo.</p></div></li>
 
-        <li><span class="time">14h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s3"><span class="check-box"></span></label><span class="stop-title">Pouso no JFK</span></h4>
+          <span class="time-below">14h30</span>
           <p class="sub">Desembarquem e sigam direto para o AirTrain, no Terminal 4.</p></div></li>
 
-        <li class="hi"><span class="time">15h15</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s4"><span class="check-box"></span></label><span class="stop-title">JFK → Manhattan</span></h4>
+          <span class="time-below">15h15</span>
           <p>Do desembarque até o Carlton Arms: AirTrain + duas linhas de metrô. Em cada uma, confiram a <b>direção</b> indicada no letreiro da plataforma — é o nome final da linha, e é o jeito de saber se estão do lado certo.</p>
 
           <div class="rota-card">
@@ -707,23 +720,26 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
 
           <p class="sub">💰 AirTrain US$ 8,50 + Metrô US$ 3,25 · Total US$ 11,75 por pessoa · ⏱️ ~1h16 no total. 💳 Pagamento por aproximação — cartão ou celular.</p></div></li>
 
-        <li><span class="time">17h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s5"><span class="check-box"></span></label><span class="stop-title">Check-in no Carlton Arms</span></h4>
+          <span class="time-below">17h30</span>
           <p class="sub">Da estação 23rd St (6) são 5 min a pé. Chegando mais cedo, sobra quase 1h de folga antes de sair — banho, descanso, ajuste do fuso.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>7 min</b> · pela E 25th até Madison Ave</div></li>
 
-        <li><span class="time">18h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s6"><span class="check-box"></span></label><span class="stop-title">Madison Square Park</span></h4>
+          <span class="time-below">18h30</span>
           <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
             <p>Antes de virar parque em 1847, esse terreno já foi cemitério para os pobres da cidade e depois um paiol do exército — só ganhou grama e bancos décadas depois. Foi aqui, não na 8ª Avenida, que ficava o primeiro Madison Square Garden, erguido em 1879 bem na esquina do parque. E entre 1876 e 1882 o braço com a tocha da Estátua da Liberdade ficou exposto exatamente aqui, como estratégia pra arrecadar dinheiro pra construir o resto da estátua — dá pra imaginar o choque de ver só um braço gigante de cobre no meio do gramado.</p>
             <p>Hoje é um respiro verde cercado de prédios lindos — o Flatiron de um lado, o MetLife Tower do outro. De dia é nitidamente um parque de gente da região: executivos do Flatiron District almoçando na grama, moradores levando cachorro pro dog run (um dos mais concorridos de Manhattan), fila que não acaba no Shake Shack original — que abriu ali em 2004 como um carrinho de cachorro-quente e virou fenômeno mundial. Turista, no geral, passa rápido: para pra foto do Flatiron na ponta sul e segue viagem. Mas se vocês sentarem uns minutos num banco, dá pra sentir o parque como ele realmente é — o point do bairro, não uma atração.</p>
           </div></details>
           <p>Primeira respirada em Nova York. Vista clássica do Flatiron pela ponta sul do parque.</p></div></li>
 
-        <li><span class="time">18h50</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s7"><span class="check-box"></span></label><span class="stop-title">Flatiron Building</span></h4>
+          <span class="time-below">18h50</span>
           <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
             <p>O Flatiron nasceu em 1902, projetado por Daniel Burnham, num terreno triangular formado pelo cruzamento da Broadway com a 5ª Avenida — daí o formato de ferro de passar que deu o apelido (o nome oficial é Fuller Building). Com 87 metros e 22 andares, foi um dos primeiros arranha-céus de estrutura de aço da cidade e, na época, uma das construções mais altas do mundo. A ponta é tão fina que virou lenda urbana — apostavam quanto tempo levaria pra ele desabar com o vento.</p>
             <p>O formato triangular cria correntes de vento na esquina que, no início do século 20, levantavam as saias das mulheres que passavam ali — e o lugar virou ponto de encontro de homens querendo ver a cena, até a polícia começar a afastá-los gritando "23 skidoo" (o número da rua ali do lado, a 23rd Street), expressão que entrou pro inglês americano como sinônimo de "dar o fora rápido". Hoje o cruzamento continua sendo um dos mais fotografados de Nova York — turista para no meio da calçada, vira pra trás, e tenta pegar o prédio inteiro entrando no enquadramento.</p>
@@ -739,8 +755,9 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>12 min</b> · subindo a 5ª Avenida</div></li>
 
-        <li><span class="time">19h15</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s8"><span class="check-box"></span></label><span class="stop-title">Empire State Building · por fora</span></h4>
+          <span class="time-below">19h15</span>
           <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
             <p>O Empire State foi erguido em apenas 410 dias, entre 1930 e 1931 — auge da Grande Depressão, quando Nova York mais precisava de empregos. Ele venceu a corrida contra o Chrysler Building pelo título de prédio mais alto do mundo, e segurou essa coroa por quase 40 anos, até o World Trade Center em 1970. O mastro no topo foi projetado pra ser um ponto de atracação de dirigíveis — um plano que nunca funcionou de verdade, porque os ventos lá em cima eram fortes demais até pra tentar.</p>
             <p>Por anos, com tantos andares vazios na Depressão, os nova-iorquinos apelidaram o prédio de "Empty State Building" (Prédio do Estado Vazio). Foi King Kong escalando ele em 1933 que virou o edifício em ícone mundial da cultura pop. Hoje, à noite, o topo se ilumina com cores diferentes conforme a data — verde no St. Patrick's, vermelho e verde no Natal, arco-íris no Pride — quase um calendário de Nova York em luz. Do chão, o point pra foto é a esquina da 5ª com a 34th, onde dá pra ver o prédio inteiro sem inclinar o pescoço.</p>
@@ -756,31 +773,36 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>4 min</b> · descendo até a W 32nd</div></li>
 
-        <li><span class="time">19h35</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s9"><span class="check-box"></span></label><span class="stop-title">Koreatown · W 32nd St</span></h4>
+          <span class="time-below">19h35</span>
           <p>Uma quadra inteira de letreiros coreanos empilhados em prédios. Barato, aberto até tarde e visualmente incrível.</p></div></li>
 
-        <li><span class="time">19h55</span><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s10"><span class="check-box"></span></label><span class="stop-title">Herald Square · Macy's</span></h4></div></li>
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s10"><span class="check-box"></span></label><span class="stop-title">Herald Square · Macy's</span></h4>
+          <span class="time-below">19h55</span></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>10 min</b> · pela Broadway ou 6ª Av</div></li>
 
-        <li><span class="time">20h20</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s11"><span class="check-box"></span></label><span class="stop-title">Bryant Park &amp; Biblioteca Pública</span></h4>
+          <span class="time-below">20h20</span>
           <p>O parque à noite com os prédios em volta acesos. Os leões Patience e Fortitude ficam na entrada da 5ª Av.</p>
           <p class="sub">🚻 Os banheiros do Bryant Park são os mais bonitos e limpos de Nova York — e gratuitos. Fecham às 22h.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>9 min</b> · pela W 42nd rumo oeste</div></li>
 
-        <li class="hi"><span class="time">20h50</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s12"><span class="check-box"></span></label><span class="stop-title">Times Square</span></h4>
+          <span class="time-below">20h50</span>
           <p>O fecho de maior impacto. Suba nas arquibancadas vermelhas da TKTS (47th) para a vista de cima.</p>
           <p class="sub">📸 Melhor take: no meio da ilha de pedestres entre a 44th e a 45th, câmera baixa apontando para cima.</p></div></li>
 
-        <li><span class="time">22h00</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s13"><span class="check-box"></span></label><span class="stop-title">Volta para o Carlton</span></h4>
+          <span class="time-below">22h00</span>
           <p class="sub">Metrô <b>N/R/W</b> de 49th St até 23rd St + 6 min a pé. Ou <b>1</b> de Times Sq até 23rd St.</p></div></li>
       </ul>
 
