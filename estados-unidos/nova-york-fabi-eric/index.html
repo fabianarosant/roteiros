@@ -219,11 +219,10 @@ body {
 .fact .v { font-family: 'DM Sans', sans-serif; font-size: 13.5px; color: var(--ink); font-weight: 500; }
 
 .tl { list-style: none; position: relative; }
-.tl > li { position: relative; padding: 0 0 4px 76px; min-height: 32px; }
-.tl > li .time { position: absolute; left: 0; top: 1px; width: 44px; text-align: right; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 700; color: var(--azul); }
-.tl > li .dot { position: absolute; left: 50px; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: var(--azul); z-index: 2; }
+.tl > li { position: relative; padding: 0 0 4px 20px; min-height: 0; }
+.tl > li .dot { position: absolute; left: 0; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: var(--azul); z-index: 2; }
 .tl > li.hi .dot { background: var(--gold); box-shadow: 0 0 0 4px var(--gold-bg); }
-.tl > li::before { content: ""; position: absolute; left: 54px; top: 13px; bottom: -6px; width: 1px; background: var(--hairline-b); }
+.tl > li::before { content: ""; position: absolute; left: 4px; top: 13px; bottom: -6px; width: 1px; background: var(--hairline-b); }
 .tl > li:last-child::before { display: none; }
 .tl .stop { padding-bottom: 16px; }
 .tl .stop h4 { display: flex; align-items: center; gap: 9px; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; color: var(--azul); margin-bottom: 4px; }
@@ -231,13 +230,6 @@ body {
 .tl .stop p.sub { font-size: 13px; color: var(--ink-mute); margin-top: 5px; }
 .tl .stop p.sub b { color: var(--ink-soft); }
 .tl > li.hi .stop h4 { color: var(--gold-deep); }
-
-/* ══ TESTE — Dia 01: horário embaixo do título, linha/bolinha na margem ══ */
-#d1 .tl > li { padding-left: 20px; }
-#d1 .tl > li .dot { left: 0; }
-#d1 .tl > li::before { left: 4px; }
-#d1 .tl > li.walk-li { padding-left: 20px; }
-#d1 .tl > li.walk-li::before { left: 4px; }
 .time-below { display: block; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 700; color: var(--azul); margin: 4px 0 6px; }
 .tl > li.hi .time-below { color: var(--gold-deep); }
 
@@ -271,10 +263,32 @@ body {
 .insp-imgs figure { margin: 0; }
 .insp-imgs img { display: block; width: 100%; aspect-ratio: 3/4; object-fit: cover; border: 1px solid var(--hairline-b); background: var(--paper-deep); }
 .insp-imgs figure.is-placeholder { display: none; }
+.insp-imgs figcaption { font-family: 'DM Sans', sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; color: var(--azul-medio); margin-top: 5px; text-align: center; }
 
-.tl > li.walk-li { padding: 0 0 10px 76px; min-height: 0; }
+.shop { margin: 4px 0 0; }
+.shop summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--azul); }
+.shop summary::-webkit-details-marker { display: none; }
+.shop summary::before { content: "▸"; display: inline-block; font-size: 15px; line-height: 1; transition: transform 0.15s; }
+.shop[open] summary::before { transform: rotate(90deg); }
+.shop-list { margin: 9px 0 4px; padding: 12px 13px; background: var(--paper-deep); border-left: 2px solid var(--azul-claro); }
+.shop-list .shop-note { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-soft); margin-bottom: 9px; }
+.shop-items { list-style: none; }
+.shop-items li { display: flex; align-items: center; gap: 9px; padding: 7px 0; border-bottom: 1px solid var(--hairline-b); }
+.shop-items li:last-child { border-bottom: none; }
+.shop-items .stop-title { font-family: 'DM Sans', sans-serif; font-size: 13.5px; font-weight: 600; color: var(--ink); }
+
+.tl > li.pit-li { padding: 4px 0 10px 20px; min-height: 0; }
+.tl > li.pit-li .dot { display: none; }
+.tl > li.pit-li::before { left: 4px; }
+.pit-txt { display: flex; align-items: center; gap: 9px; padding: 9px 12px; background: var(--paper-deep); border: 1px dashed var(--hairline-b); }
+.pit-txt .pit-emoji { font-size: 16px; flex-shrink: 0; }
+.pit-txt .pit-body { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
+.pit-txt .pit-body b { color: var(--azul); font-weight: 700; }
+.pit-price { margin-left: auto; font-family: 'DM Mono', monospace; font-size: 11.5px; font-weight: 700; color: var(--gold-deep); white-space: nowrap; flex-shrink: 0; }
+
+.tl > li.walk-li { padding: 0 0 10px 20px; min-height: 0; }
 .tl > li.walk-li .dot { display: none; }
-.tl > li.walk-li::before { left: 54px; top: 11px; }
+.tl > li.walk-li::before { left: 4px; top: 11px; }
 .walk-txt { font-family: 'DM Sans', sans-serif; font-size: 11.5px; letter-spacing: 0.5px; text-transform: uppercase; color: var(--ink-mute); font-weight: 700; display: flex; align-items: center; gap: 6px; }
 .walk-txt b { color: var(--azul); font-weight: 700; }
 
@@ -334,6 +348,24 @@ td { padding: 11px 14px; border-bottom: 1px solid var(--hairline-b); color: var(
 tr:last-child td { border-bottom: none; }
 td.num { text-align: right; white-space: nowrap; font-weight: 700; color: var(--azul); }
 tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
+table.custo-tabela { scroll-margin-top: 70px; }
+table.custo-tabela caption { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 500; font-size: 22px; letter-spacing: 0; text-transform: none; color: var(--azul); padding: 0 0 4px; font-variation-settings: 'opsz' 144; }
+table.custo-tabela caption .custo-hint { display: block; margin-top: 3px; font-family: 'DM Sans', sans-serif; font-style: normal; font-weight: 400; font-size: 10.5px; letter-spacing: 0.3px; text-transform: none; color: var(--ink-mute); }
+
+.dia-acordeao { margin: 0 0 24px; }
+.dia-acordeao > summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 8px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--azul); padding-bottom: 10px; border-bottom: 2px solid var(--azul); margin-bottom: 18px; }
+.dia-acordeao > summary::-webkit-details-marker { display: none; }
+.dia-acordeao > summary::before { content: "▸"; display: inline-block; font-size: 12px; transition: transform 0.15s; order: -1; }
+.dia-acordeao[open] > summary::before { transform: rotate(90deg); }
+.dia-acordeao:not([open]) > summary { margin-bottom: 0; }
+.acordeao-hint { font-weight: 400; letter-spacing: 0.3px; text-transform: none; color: var(--ink-mute); font-size: 11px; }
+.custo-total-link { text-decoration: underline; text-decoration-color: var(--gold-soft); text-decoration-style: dotted; text-underline-offset: 3px; cursor: pointer; }
+.custo-total-link:hover { color: var(--azul-medio); }
+table.custo-tabela td[contenteditable="true"] { cursor: text; border-bottom: 1px dashed transparent; transition: background 0.15s, border-color 0.15s; }
+table.custo-tabela td[contenteditable="true"]:hover { border-bottom-color: var(--gold-soft); }
+table.custo-tabela td[contenteditable="true"]:focus { outline: none; border-bottom: 1px dashed var(--azul); background: var(--gold-bg); }
+table.custo-tabela td[contenteditable="true"]:empty::before { content: attr(data-placeholder); color: var(--ink-mute); font-style: italic; font-weight: 400; }
+table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
 
 /* ══════════════════════════════════════════════
    REGRAS DE OURO
@@ -346,16 +378,10 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
 .btn-menu:hover { background: var(--azul); color: #fff; }
 .btn-menu::before { content: "↑  "; }
 
-/* ══ MOBILE — aproveitar mais o espaço na linha do tempo ══ */
+/* ══ MOBILE — aproveitar mais o espaço ══ */
 @media (max-width: 600px) {
   #detalhado { padding-left: 12px; padding-right: 12px; }
   .day-body { padding-left: 12px; padding-right: 12px; }
-  .tl > li { padding-left: 52px; }
-  .tl > li .time { width: 34px; font-size: 10px; }
-  .tl > li .dot { left: 36px; }
-  .tl > li::before { left: 40px; }
-  .tl > li.walk-li { padding-left: 52px; }
-  .tl > li.walk-li::before { left: 40px; }
 }
 
 </style>
@@ -488,7 +514,8 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
         <div class="item">JFK 14h30 · AirTrain + metrô</div>
         <div class="item">Check-in Carlton Arms</div>
         <div class="item">Madison Square Park · Flatiron</div>
-        <div class="item">Empire State · Koreatown · Herald Sq</div>
+        <div class="item">Loja Harry Potter</div>
+        <div class="item">Koreatown · Empire State · Herald Sq</div>
         <div class="item">Bryant Park · Biblioteca Pública</div>
         <div class="item key">Times Square à noite</div>
       </div>
@@ -661,7 +688,7 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
         <div class="fact"><div class="k">Base</div><div class="v">Carlton Arms · 160 E 25th St</div></div>
         <div class="fact"><div class="k">Pôr do sol</div><div class="v">~19h05</div></div>
         <div class="fact"><div class="k">Caminhada</div><div class="v">~5 km</div></div>
-        <div class="fact"><div class="k">Custo do dia</div><div class="v">~US$ 35 (casal)</div></div>
+        <div class="fact"><div class="k">Custo do dia</div><div class="v"><a href="#custo-d1" class="custo-total-link">~US$ 58 (casal)</a></div></div>
       </div>
 
       <div class="note">
@@ -669,6 +696,8 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
         <b>Dom 13/09 · 23h30</b> — embarque GRU → Miami. <b>Seg 14/09 · 07h00</b> — pouso em Miami: é <b>aqui</b> que passam pela imigração americana, não em JFK. Conexão de ~4h28 até o embarque do trecho MIA → JFK, às <b>11h20</b>. Chegada em Nova York às <b>14h30</b> — como a imigração já foi feita em Miami, o desembarque em JFK é bem mais rápido.
       </div>
 
+      <details class="dia-acordeao" open>
+      <summary>Roteiro</summary>
       <ul class="tl">
         <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s1"><span class="check-box"></span></label><span class="stop-title">Pouso em Miami</span></h4>
@@ -751,13 +780,45 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
               </figure>
             </div>
           </details></div></li>
-      
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>12 min</b> · subindo a 5ª Avenida</div></li>
+          <div class="walk-txt">👣 <b>4 min</b> · descendo pela Broadway até a 21st St</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s101"><span class="check-box"></span></label><span class="stop-title">Loja Harry Potter · Flagship NY</span></h4>
+          <span class="time-below">19h00</span>
+          <p>A maior loja da franquia no mundo, 935 Broadway — três andares de mercadoria exclusiva (nada que se acha em outra loja), área de varinhas interativa e café no telhado. Entrada gratuita, é loja, não atração paga.</p>
+          <p class="sub">💰 Sem ingresso pra entrar, mas raro sair sem comprar nada. Fila pode formar nos fins de semana.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>14 min</b> · subindo pela Broadway até a W 32nd</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s9"><span class="check-box"></span></label><span class="stop-title">Koreatown · W 32nd St</span></h4>
+          <span class="time-below">19h35</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>O Koreatown de Nova York nasceu nos anos 1980, quando imigrantes coreanos começaram a abrir negócios num único quarteirão da W 32nd St, entre a 5ª e a 6ª Avenida — diferente de Los Angeles, onde o bairro coreano se espalha por quilômetros, aqui tudo cabe numa quadra só. A proximidade com o antigo Garment District (distrito de confecções) não é acaso: muitos donos de loja vieram trabalhar nas fábricas de roupa da região antes de abrir o próprio negócio.</p>
+            <p>É um dos poucos lugares de Manhattan que funciona de verdade 24 horas — salas de karaokê (noraebang), restaurantes de churrasco coreano e spas ficam abertos até de madrugada, herança dos tempos em que atendiam trabalhadores saindo do turno da noite nas fábricas ao redor. De dia é point de K-beauty e sobremesas fofas de K-pop; de noite vira point de jantar tardio pra quem sai da Times Square e não quer dormir sem comer.</p>
+          </div></details>
+          <p>Uma quadra inteira de letreiros coreanos empilhados em prédios. Barato, aberto até tarde e visualmente incrível.</p>
+          <details class="shop"><summary>🛍️ Dica de loja — Ko'llection Outlet</summary>
+            <div class="shop-list">
+              <p class="shop-note">Loja de produtos coreanos (skincare e cosméticos) na Koreatown. Checklist do que procurar lá:</p>
+              <ul class="shop-items">
+                <li><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s102"><span class="check-box"></span></label><span class="stop-title">Retinol Shot — Celimax</span></li>
+              </ul>
+            </div>
+          </details></div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🌭</span><span class="pit-body">No caminho: <b>Jongro Rice Hotdog</b> — corn dog coreano pra experimentar.</span><span class="pit-price">~US$ 8</span></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>4 min</b> · até a 34th com a 5ª</div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s8"><span class="check-box"></span></label><span class="stop-title">Empire State Building · por fora</span></h4>
-          <span class="time-below">19h15</span>
+          <span class="time-below">19h55</span>
           <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
             <p>O Empire State foi erguido em apenas 410 dias, entre 1930 e 1931 — auge da Grande Depressão, quando Nova York mais precisava de empregos. Ele venceu a corrida contra o Chrysler Building pelo título de prédio mais alto do mundo, e segurou essa coroa por quase 40 anos, até o World Trade Center em 1970. O mastro no topo foi projetado pra ser um ponto de atracação de dirigíveis — um plano que nunca funcionou de verdade, porque os ventos lá em cima eram fortes demais até pra tentar.</p>
             <p>Por anos, com tantos andares vazios na Depressão, os nova-iorquinos apelidaram o prédio de "Empty State Building" (Prédio do Estado Vazio). Foi King Kong escalando ele em 1933 que virou o edifício em ícone mundial da cultura pop. Hoje, à noite, o topo se ilumina com cores diferentes conforme a data — verde no St. Patrick's, vermelho e verde no Natal, arco-íris no Pride — quase um calendário de Nova York em luz. Do chão, o point pra foto é a esquina da 5ª com a 34th, onde dá pra ver o prédio inteiro sem inclinar o pescoço.</p>
@@ -767,43 +828,86 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
               <figure>
                 <img src="./assets/atracoes/dia-01/empire-state-inspiracao1.jpg" alt="Referência de pose e ângulo — Empire State Building" onerror="this.parentElement.classList.add('is-placeholder')">
               </figure>
+              <figure>
+                <img src="./assets/atracoes/dia-01/empire-state-inspiracao2.jpg" alt="Referência de pose e ângulo — esquina Madison Square com 34th St" onerror="this.parentElement.classList.add('is-placeholder')">
+                <figcaption>Esquina Madison Square com 34th St</figcaption>
+              </figure>
             </div>
           </details></div></li>
-      
-        <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>4 min</b> · descendo até a W 32nd</div></li>
 
-        <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s9"><span class="check-box"></span></label><span class="stop-title">Koreatown · W 32nd St</span></h4>
-          <span class="time-below">19h35</span>
-          <p>Uma quadra inteira de letreiros coreanos empilhados em prédios. Barato, aberto até tarde e visualmente incrível.</p></div></li>
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>3 min</b> · até a Herald Square</div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s10"><span class="check-box"></span></label><span class="stop-title">Herald Square · Macy's</span></h4>
-          <span class="time-below">19h55</span></div></li>
+          <span class="time-below">20h15</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>A loja da Macy's em Herald Square abriu em 1902 e ainda hoje se anuncia como a "maior loja de departamento do mundo" — mais de 250 mil m² espalhados por um quarteirão inteiro. O nome da praça vem do jornal New York Herald, que teve sede ali até o início do século 20; o relógio-monumento com sinos na praça é uma relíquia do prédio do jornal.</p>
+            <p>Foi aqui que nasceu o Desfile de Ação de Graças da Macy's, em 1924 — criado por funcionários da loja, muitos deles imigrantes recém-chegados, como forma de celebrar a nova pátria à moda dos desfiles europeus de Natal. Os balões gigantes só entraram em 1927. E foi essa loja, essa vitrine, que virou cenário do clássico "Milagre na Rua 34" (1947), consolidando pra sempre a ligação entre a Macy's e o Papai Noel de verdade.</p>
+          </div></details></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>10 min</b> · pela Broadway ou 6ª Av</div></li>
 
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🍩</span><span class="pit-body">No caminho: <b>Krispy Kreme</b> — pra experimentar um donut fresquinho.</span><span class="pit-price">~US$ 3</span></div></li>
+
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s11"><span class="check-box"></span></label><span class="stop-title">Bryant Park &amp; Biblioteca Pública</span></h4>
-          <span class="time-below">20h20</span>
+          <span class="time-below">20h40</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>Antes de ser parque, esse terreno também foi cemitério dos pobres da cidade, como o Madison Square — e depois sediou a Exposição Mundial de 1853, num palácio de vidro e ferro inspirado no Crystal Palace de Londres, que queimou por completo em 1858. Ganhou o nome atual em 1884, em homenagem ao poeta e editor William Cullen Bryant. Os leões de pedra na entrada da biblioteca, ao lado, têm nome — Paciência e Fortitude — batizados pelo prefeito LaGuardia durante a Depressão pra lembrar Nova York das qualidades que precisava ter pra atravessar a crise.</p>
+            <p>Nos anos 1970 e 80 o parque virou point de tráfico de drogas — tão perigoso que os moradores evitavam passar perto. A virada aconteceu em 1992, quando uma reforma derrubou as cercas altas e os arbustos que escondiam o parque da rua: a lógica era simples, um espaço visível de fora é um espaço mais seguro. Deu tão certo que virou caso de estudo de urbanismo no mundo inteiro. Hoje é puro contraste com aquele passado — cadeiras verdes espalhadas na grama, gente lendo, piano público, e à noite os prédios ao redor acendendo como moldura.</p>
+          </div></details>
           <p>O parque à noite com os prédios em volta acesos. Os leões Patience e Fortitude ficam na entrada da 5ª Av.</p>
           <p class="sub">🚻 Os banheiros do Bryant Park são os mais bonitos e limpos de Nova York — e gratuitos. Fecham às 22h.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>9 min</b> · pela W 42nd rumo oeste</div></li>
+          <div class="walk-txt">👣 <b>3 min</b> · até a Stavros Niarchos Foundation Library</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s103"><span class="check-box"></span></label><span class="stop-title">Stavros Niarchos Foundation Library · Rooftop</span></h4>
+          <span class="time-below">20h45</span>
+          <p>Terraço aberto ao público no 7º andar da biblioteca, recém-reformada, com vista pra Bryant Park e o horizonte de Midtown. Gratuito e bem menos concorrido que os mirantes pagos da cidade.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>5 min</b> · até a Best Buy</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s104"><span class="check-box"></span></label><span class="stop-title">Best Buy</span></h4>
+          <span class="time-below">21h00</span>
+          <p>Loja de eletrônicos — bom pra dar uma olhada em preços de gadgets americanos, powerbanks, fones, e o que mais precisarem pro resto da viagem.</p></div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🍕</span><span class="pit-body">No caminho: <b>2 Bros Pizza</b> — um pedaço pra comer andando.</span><span class="pit-price">~US$ 10</span></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>8 min</b> · até a Times Square</div></li>
 
         <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s12"><span class="check-box"></span></label><span class="stop-title">Times Square</span></h4>
-          <span class="time-below">20h50</span>
+          <span class="time-below">21h20</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>Até 1904 esse cruzamento se chamava Longacre Square. Virou Times Square quando o jornal The New York Times mudou a sede pro prédio triangular na ponta norte da praça — o mesmo prédio de onde, no Ano Novo seguinte, em 1907, desceu pela primeira vez a bola de cristal que até hoje marca a virada do ano, criada porque fogos de artifício tinham sido proibidos na área. A famosa foto do marinheiro beijando a enfermeira no Dia da Vitória, em 1945, foi tirada bem aqui.</p>
+            <p>Nos anos 1970 e 80 a praça foi sinônimo de decadência — cinemas pornô, crime, prostituição — até uma limpeza pesada nos anos 1990, puxada em parte pela Disney, transformar tudo em vitrine turística iluminada 24 horas. Hoje mais de 300 mil pessoas passam por aqui todo dia, e as telas de LED nunca apagam — por lei, os prédios da praça são obrigados a ter publicidade iluminada, uma das poucas áreas do mundo com essa exigência. É o "Crossroads of the World", cruzamento do mundo, apelido que ganhou ainda no início do século 20 e nunca perdeu.</p>
+          </div></details>
           <p>O fecho de maior impacto. Suba nas arquibancadas vermelhas da TKTS (47th) para a vista de cima.</p>
           <p class="sub">📸 Melhor take: no meio da ilha de pedestres entre a 44th e a 45th, câmera baixa apontando para cima.</p></div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s13"><span class="check-box"></span></label><span class="stop-title">Volta para o Carlton</span></h4>
-          <span class="time-below">22h00</span>
-          <p class="sub">Metrô <b>N/R/W</b> de 49th St até 23rd St + 6 min a pé. Ou <b>1</b> de Times Sq até 23rd St.</p></div></li>
+          <span class="time-below">22h30</span>
+          <div class="rota-card">
+            <div class="rota-etapa">
+              <span class="linha-badge circulo linha-r">R</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>49 St</b> · direção <b>Bay Ridge–95 St</b></span>
+                <span class="rota-meta">4 paradas · ~10 min → descer em <span class="descida">23 St</span></span>
+              </div>
+            </div>
+            <div class="rota-transfer">👣 6 min até o Carlton Arms Hotel</div>
+          </div>
+          <p class="sub">💡 O W (dias de semana) também serve, mesma linha amarela. Evitem o N ou o Q nesse horário — de noite em dia de semana eles rodam expressos em Manhattan e pulam a 23 St.</p></div></li>
       </ul>
 
       <div class="eat">
@@ -815,21 +919,27 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
           <li><span><b>7-Eleven</b> · água e snacks para o dia seguinte</span><span class="price">US$ 5–8</span></li>
         </ul>
       </div>
+      </details>
 
-      <div class="note">
-        <span class="lbl">Estratégia do dia</span>
-        Noite linear de sul para norte, sem voltar atrás, terminando no ponto de maior impacto. Nada de atração paga: o dia da chegada é para sentir a cidade, não para produzir.
-      </div>
-
-      <table>
-        <caption>Custo do dia</caption>
+      <details class="dia-acordeao" open>
+      <summary>Estimativa de Gastos <span class="acordeao-hint">clique nos valores pra editar</span></summary>
+      <table class="custo-tabela" id="custo-d1">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
-          <tr><td>Transporte — AirTrain + Metrô (JFK → Manhattan)</td><td class="num">US$ 23,50</td></tr>
-          <tr><td>Alimentação — jantar</td><td class="num">~US$ 11,50</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d1-r1-item">Transporte — AirTrain + Metrô (JFK → Manhattan)</td><td class="num" contenteditable="true" data-persist-key="d1-r1-val">US$ 23,50</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d1-r2-item">Krispy Kreme — donut no caminho</td><td class="num" contenteditable="true" data-persist-key="d1-r2-val">~US$ 3</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d1-r3-item">2 Bros Pizza — pedaço no caminho</td><td class="num" contenteditable="true" data-persist-key="d1-r3-val">~US$ 10</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d1-r4-item">Metrô — R/W de volta ao hotel (US$ 3/pessoa)</td><td class="num" contenteditable="true" data-persist-key="d1-r4-val">US$ 6</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d1-r5-item">Mercado/Good To Go</td><td class="num" contenteditable="true" data-persist-key="d1-r5-val">US$ 15</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d1-r6-item">Jongro Rice Hotdog — corn dog no caminho</td><td class="num" contenteditable="true" data-persist-key="d1-r6-val">~US$ 8</td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d1-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d1-e1-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d1-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d1-e2-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d1-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d1-e3-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d1-e4-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d1-e4-val"></td></tr>
         </tbody>
-        <tfoot><tr><td>Total do dia</td><td class="num">~US$ 35</td></tr></tfoot>
+        <tfoot><tr><td>Total do dia</td><td class="num">~US$ 58</td></tr></tfoot>
       </table>
+      </details>
 
     </div>
   </article>
@@ -855,115 +965,133 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
       </div>
 
       <ul class="tl">
-        <li><span class="time">5h50</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s14"><span class="check-box"></span></label><span class="stop-title">Saída do Carlton</span></h4>
+          <span class="time-below">5h50</span>
           <p>A pé até a estação <b>23rd St (F/M)</b>, na 6ª Avenida. Trem <b>F</b> sentido Brooklyn até <b>York St</b> — a estação já é dentro do DUMBO.</p>
           <p class="sub">~12 min a pé + ~25 min de trem. Fuso Brasil–NY é de só 1h em setembro: 5h50 lá é 6h50 no corpo de vocês.</p></div></li>
 
-        <li class="hi"><span class="time">6h35</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s15"><span class="check-box"></span></label><span class="stop-title">Washington Street · o take icônico</span></h4>
+          <span class="time-below">6h35</span>
           <p>A rua de paralelepípedo emoldurando a Manhattan Bridge, com o Empire State no vão. Chegando 6h35 vocês pegam o céu já claro e o sol nascendo às 6h40.</p>
           <p class="sub">📸 A luz do nascente bate <b>de frente</b> em Manhattan vista do DUMBO — prédios dourados, não silhueta. É o take que não existe à tarde. Espere dividir o ângulo com 2 ou 3 fotógrafos de tripé.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>5 min</b> · descendo a Washington até a água</div></li>
 
-        <li><span class="time">7h05</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s16"><span class="check-box"></span></label><span class="stop-title">Pebble Beach &amp; Brooklyn Bridge Park</span></h4>
+          <span class="time-below">7h05</span>
           <p>A praia de pedras embaixo da ponte, com Manhattan inteira do outro lado. Jane's Carousel por fora (só abre 11h).</p></div></li>
 
-        <li><span class="time">7h40</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s17"><span class="check-box"></span></label><span class="stop-title">Café da manhã em DUMBO</span></h4>
+          <span class="time-below">7h40</span>
           <p class="sub">As cafeterias abrem entre 7h e 8h. Brooklyn Roasting Company e Butler são as primeiras a levantar a porta. 🚻 Aproveitem o banheiro aqui.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>12 min</b> · subida pela Washington / Prospect St até a rampa da ponte</div></li>
 
-        <li class="hi"><span class="time">8h20</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s18"><span class="check-box"></span></label><span class="stop-title">Travessia da Brooklyn Bridge</span></h4>
+          <span class="time-below">8h20</span>
           <p>2,1 km de passarela de madeira até Manhattan. ~35 min com paradas para foto. Nesse horário vocês estarão no fluxo de quem vai trabalhar — movimentada, mas sem a multidão turística da tarde.</p>
           <p class="sub">📸 As torres de pedra com os cabos abrindo em leque são o take. Fique na faixa de pedestres, não na de bicicleta.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>20 min</b> · descida no City Hall + caminhada sul até Battery Park · ou 4/5 de Brooklyn Bridge a Bowling Green (5 min)</div></li>
 
-        <li class="hi"><span class="time">9h30</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s19"><span class="check-box"></span></label><span class="stop-title">Castle Clinton · segurança da Estátua</span></h4>
+          <span class="time-below">9h30</span>
           <p><b>O horário do ingresso é a hora de chegar na fila da segurança</b>, não a da partida do barco. Reservem o slot das <b>9h30</b>, não das 9h — a ponte pode atrasar 15 min fácil.</p>
           <p class="sub">Triagão estilo aeroporto: 20–30 min. Só a <b>Statue City Cruises</b> desembarca nas ilhas — ignorem qualquer vendedor na rua.</p></div></li>
 
-        <li class="hi"><span class="time">10h00</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s20"><span class="check-box"></span></label><span class="stop-title">Liberty Island</span></h4>
+          <span class="time-below">10h00</span>
           <p>Ferry de 15 min. Fique no deck superior na aproximação: a estátua cresce de silhueta a figura de cobre.</p>
           <p class="sub">🎧 Museu da Estátua (com a tocha original) + Liberty Vista no topo. Audioguia incluso <b>em português</b>. 🚻 Banheiros na ilha. Reservem 1h a 1h30.</p></div></li>
 
-        <li><span class="time">12h00</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s21"><span class="check-box"></span></label><span class="stop-title">Ellis Island</span></h4>
+          <span class="time-below">12h00</span>
           <p>Museu da Imigração no prédio restaurado: Great Hall, sala de bagagens, registro. O audioguia leva 45–60 min.</p>
           <p class="sub">⚠️ Se o dia atrasar, <b>o corte é aqui</b> — nunca na Estátua.</p></div></li>
 
-        <li><span class="time">14h00</span><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s22"><span class="check-box"></span></label><span class="stop-title">Volta ao Battery Park</span></h4></div></li>
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s22"><span class="check-box"></span></label><span class="stop-title">Volta ao Battery Park</span></h4>
+          <span class="time-below">14h00</span></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>4 min</b> · do píer até Bowling Green</div></li>
 
-        <li><span class="time">14h15</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s23"><span class="check-box"></span></label><span class="stop-title">Charging Bull &amp; Fearless Girl</span></h4>
+          <span class="time-below">14h15</span>
           <p class="sub">📸 O touro vive cercado de fila. A Fearless Girl fica hoje em frente à Bolsa, na Broad St.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>5 min</b> · subindo a Broadway</div></li>
 
-        <li><span class="time">14h40</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s24"><span class="check-box"></span></label><span class="stop-title">Wall Street · Federal Hall · Trinity Church</span></h4>
+          <span class="time-below">14h40</span>
           <p>O cânion de prédios da Wall St com a Trinity Church fechando a perspectiva no fim da rua.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>4 min</b> · pela Broad St</div></li>
 
-        <li><span class="time">15h10</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s25"><span class="check-box"></span></label><span class="stop-title">Stone Street</span></h4>
+          <span class="time-below">15h10</span>
           <p>Ruela de paralelepípedo com mesas na rua — o contraponto humano ao Financial District.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>9 min</b> · norte pela Broadway até a Igreja de São Paulo</div></li>
 
-        <li><span class="time">15h35</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s26"><span class="check-box"></span></label><span class="stop-title">Memorial do 11 de Setembro</span></h4>
+          <span class="time-below">15h35</span>
           <p>As duas piscinas nas pegadas das torres. O memorial ao ar livre é <b>gratuito</b> — o museu é pago e fica de fora.</p>
           <p class="sub">📸 Fim de tarde dá reflexo bonito na água escura e nos nomes em bronze.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>3 min</b> · atravessando a praça</div></li>
 
-        <li><span class="time">16h10</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s27"><span class="check-box"></span></label><span class="stop-title">Oculus</span></h4>
+          <span class="time-below">16h10</span>
           <p>A "costela de baleia" branca de Calatrava. Desça até o piso inferior e fotografe olhando para cima.</p>
           <p class="sub">🚻 Banheiros bons e gratuitos aqui. Aproveitem.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>18 min</b> · pela Church St rumo norte até Canal · ou 1 min de metrô</div></li>
 
-        <li class="hi"><span class="time">16h45</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s28"><span class="check-box"></span></label><span class="stop-title">Chinatown</span></h4>
+          <span class="time-below">16h45</span>
           <p>Canal Street, Columbus Park (onde os senhores jogam xadrez e cartas), Doyers Street e a vista do arco da Manhattan Bridge na esquina Canal com Bowery.</p>
           <p class="sub">⚠️ Chinatown <b>antes</b> do ferry, e não depois: as padarias e casas de dumpling fecham cedo.</p></div></li>
 
-        <li><span class="time">17h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s29"><span class="check-box"></span></label><span class="stop-title">Jantar cedo em Chinatown</span></h4>
+          <span class="time-below">17h30</span>
           <p class="sub">A refeição mais barata e mais gostosa da viagem inteira. Comam bem aqui — depois do ferry vocês só vão querer cama.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>10 min</b> de metrô · 4/5/6 de Canal St até Bowling Green, ou R/W até Whitehall</div></li>
 
-        <li class="hi"><span class="time">18h30</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s30"><span class="check-box"></span></label><span class="stop-title">Staten Island Ferry no pôr do sol · GRÁTIS</span></h4>
+          <span class="time-below">18h30</span>
           <p>Saída do Whitehall Terminal. 25 min de travessia cada trecho, saídas a cada 20–30 min. Ida e volta só pelo passeio, sem sair do terminal do outro lado.</p>
           <p class="sub">📸 <b>Fique no lado direito na ida.</b> Vocês pegam a Estátua e o skyline na luz dourada indo, e Manhattan já iluminada voltando. Dois passeios pelo preço de zero.</p></div></li>
 
-        <li><span class="time">20h15</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s31"><span class="check-box"></span></label><span class="stop-title">Volta ao Carlton</span></h4>
+          <span class="time-below">20h15</span>
           <p class="sub">Metrô <b>R/W</b> de Whitehall até 23rd St, ~20 min.</p></div></li>
       </ul>
 
@@ -1011,94 +1139,108 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
       </div>
 
       <ul class="tl">
-        <li><span class="time">8h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s32"><span class="check-box"></span></label><span class="stop-title">Checkout no Carlton</span></h4>
+          <span class="time-below">8h30</span>
           <p class="sub">Se optarem pelo Bounce: levem as malas até a Grand Central antes de começar o dia (6 até 42nd St, ~10 min).</p></div></li>
 
-        <li class="hi"><span class="time">10h00</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s33"><span class="check-box"></span></label><span class="stop-title">FRIENDS Experience · 130 E 23rd St</span></h4>
+          <span class="time-below">10h00</span>
           <p>Na abertura, sem fila. Dois andares com o sofá laranja, o apartamento da Monica, o Central Perk e figurinos originais.</p>
           <p class="sub">Fechado às terças — por isso está na quarta. Reserva antecipada pelo site. ~1h30 de visita. 💰 ~US$ 43/pessoa.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>6 min</b> · pela E 23rd até a Madison Square Park</div></li>
 
-        <li><span class="time">11h45</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s34"><span class="check-box"></span></label><span class="stop-title">Madison Square Park &amp; Flatiron · de dia</span></h4>
+          <span class="time-below">11h45</span>
           <p class="sub">A mesma esquina da segunda-feira, agora com luz. Vale a comparação para o conteúdo.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>14 min</b> · subindo a 5ª Avenida até a 34th</div></li>
 
-        <li><span class="time">12h15</span><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s35"><span class="check-box"></span></label><span class="stop-title">Empire State · Koreatown · Herald Square</span></h4></div></li>
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s35"><span class="check-box"></span></label><span class="stop-title">Empire State · Koreatown · Herald Square</span></h4>
+          <span class="time-below">12h15</span></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>10 min</b> · pela 6ª Avenida</div></li>
 
-        <li><span class="time">13h00</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s36"><span class="check-box"></span></label><span class="stop-title">Bryant Park &amp; Biblioteca Pública · almoço</span></h4>
+          <span class="time-below">13h00</span>
           <p>Entrem na Rose Main Reading Room, no 3º andar — é gratuito e é uma das salas mais bonitas da cidade.</p>
           <p class="sub">🚻 Banheiros do Bryant Park. Quiosques no parque, ou Chipotle/Panera em volta.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>6 min</b> · pela E 42nd rumo leste</div></li>
 
-        <li><span class="time">14h00</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s37"><span class="check-box"></span></label><span class="stop-title">Grand Central Terminal</span></h4>
+          <span class="time-below">14h00</span>
           <p>O teto de constelações, o relógio de latão, a galeria dos sussurros no piso inferior e o Grand Central Market.</p>
           <p class="sub">📸 Melhor take: da escadaria oeste, olhando para a janela leste. 🚻 Banheiros no piso do saguão.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>3 min</b> · Lexington com 42nd</div></li>
 
-        <li><span class="time">14h35</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s38"><span class="check-box"></span></label><span class="stop-title">Chrysler Building · por fora</span></h4>
+          <span class="time-below">14h35</span>
           <p class="sub">Entrem no lobby art déco — é aberto e gratuito.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>13 min</b> · noroeste até a 5ª com 50th</div></li>
 
-        <li><span class="time">15h00</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s39"><span class="check-box"></span></label><span class="stop-title">Rockefeller · St. Patrick's · Radio City</span></h4>
+          <span class="time-below">15h00</span>
           <p>O Top of the Rock fica <b>de fora</b> — o mirante pago da viagem é o SUMMIT, hoje à noite. A catedral é gratuita e vale entrar.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>12 min</b> · subindo a 5ª Avenida até a 59th</div></li>
 
-        <li><span class="time">15h45</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s40"><span class="check-box"></span></label><span class="stop-title">Quinta Avenida · FAO Schwarz · Apple · Plaza</span></h4>
+          <span class="time-below">15h45</span>
           <p class="sub">O FAO Schwarz fica no Rockefeller Center. O cubo de vidro da Apple e o Plaza estão na 59th.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>8 min</b> · descendo até a E 53rd</div></li>
 
-        <li><span class="time">16h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s41"><span class="check-box"></span></label><span class="stop-title">Paley Park &amp; Greenacre Park</span></h4>
+          <span class="time-below">16h30</span>
           <p>Dois "parques de bolso" escondidos entre arranha-céus, com cascatas que abafam o barulho da rua. Gratuitos e quase secretos.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>9 min</b> · leste até a estação do teleférico, 59th com 2ª Av</div></li>
 
-        <li class="hi"><span class="time">17h00</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s42"><span class="check-box"></span></label><span class="stop-title">Roosevelt Island · teleférico</span></h4>
+          <span class="time-below">17h00</span>
           <p>O bondinho sobe ao lado da Queensboro Bridge com Manhattan inteira embaixo. <b>Entra no OMNY</b> — conta como uma viagem normal, sem custo extra.</p>
           <p class="sub">Na ilha: promenade com vista do skyline e o Four Freedoms Park na ponta sul. 📸 Melhor luz é agora, no fim de tarde. Voltem de teleférico também.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>5 min</b> de metrô · 4/5/6 de 59th St até Grand Central</div></li>
 
-        <li class="hi"><span class="time">18h30</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s43"><span class="check-box"></span></label><span class="stop-title">SUMMIT One Vanderbilt</span></h4>
+          <span class="time-below">18h30</span>
           <p>Entrada pelo saguão principal da Grand Central ou pela 45 E 42nd St — <b>o lobby de escritórios não é entrada</b>. Reservem o slot de ~18h para atravessar o pôr do sol (~19h).</p>
           <p class="sub">Três andares de salas espelhadas, as caixas de vidro do Levitation e o terraço aberto. Aberto todos os dias, 8h à meia-noite, última entrada 22h30. 💰 A partir de US$ 44 + US$ 3 de taxa; slot de pôr do sol custa mais e <b>esgota primeiro</b>. Use calça ou shorts — o piso é espelhado. Salto agulha proibido.</p></div></li>
 
-        <li><span class="time">20h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s44"><span class="check-box"></span></label><span class="stop-title">Malas → Metro-North → Yonkers</span></h4>
+          <span class="time-below">20h30</span>
           <p class="sub">Metro-North sai da própria Grand Central. ~30 min até Yonkers. 💰 Metro-North <b>não entra no OMNY</b> — passagem à parte.</p></div></li>
 
-        <li><span class="time">21h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s45"><span class="check-box"></span></label><span class="stop-title">Check-in no Airbnb · 77 Arthur Place</span></h4>
+          <span class="time-below">21h30</span>
           <p class="sub">Primeira noite na varanda com o Hudson. Mercado fica para amanhã.</p></div></li>
       </ul>
 
@@ -1138,97 +1280,112 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
       </div>
 
       <ul class="tl">
-        <li><span class="time">7h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s46"><span class="check-box"></span></label><span class="stop-title">Yonkers → Grand Central</span></h4>
+          <span class="time-below">7h30</span>
           <p class="sub">Metro-North, ~30 min. Depois <b>7</b> da Grand Central até 34th St–Hudson Yards, ~10 min.</p></div></li>
 
-        <li><span class="time">8h45</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s47"><span class="check-box"></span></label><span class="stop-title">Hudson Yards · Vessel &amp; The Shed</span></h4>
+          <span class="time-below">8h45</span>
           <p class="sub">Vessel só por fora — subir é pago e o Edge fica de fora do orçamento. 📸 A escultura de bronze vazada rende foto ótima da base olhando para cima.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>5 min</b> · até a entrada norte da High Line, na W 34th</div></li>
 
-        <li class="hi"><span class="time">9h15</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s48"><span class="check-box"></span></label><span class="stop-title">High Line · percurso completo</span></h4>
+          <span class="time-below">9h15</span>
           <p>2,3 km de linha férrea suspensa virada em jardim. São ~40 min direto, mas reservem <b>1h30</b> com as paradas.</p>
           <p class="sub">Paradas: <b>The Spur</b> (30th) · <b>10th Avenue Square</b>, a janela-anfiteatro sobre o trânsito (17th) · <b>Chelsea Market Passage</b> (16th). 📸 A luz da manhã é a melhor: menos gente e sombra dos prédios ainda curta.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>2 min</b> · saída da High Line na W 16th</div></li>
 
-        <li><span class="time">10h45</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s49"><span class="check-box"></span></label><span class="stop-title">Chelsea Market</span></h4>
+          <span class="time-below">10h45</span>
           <p>Antiga fábrica da Nabisco virada corredor gastronômico de tijolo aparente. Entrada gratuita.</p>
           <p class="sub">🚻 Banheiros bons aqui — é o melhor ponto do dia inteiro para isso.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>6 min</b> · oeste até o rio</div></li>
 
-        <li><span class="time">11h45</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s50"><span class="check-box"></span></label><span class="stop-title">Pier 57 · rooftop grátis</span></h4>
+          <span class="time-below">11h45</span>
           <p>Cobertura pública aberta sobre o Hudson, com vista para Jersey e para o Little Island. Um dos melhores mirantes gratuitos da cidade.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>7 min</b> · sul pela orla até a W 13th</div></li>
 
-        <li><span class="time">12h20</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s51"><span class="check-box"></span></label><span class="stop-title">Little Island</span></h4>
+          <span class="time-below">12h20</span>
           <p>O parque suspenso sobre tulipas de concreto. Gratuito, mas em alta temporada pode pedir reserva de horário para a tarde — de manhã costuma ser livre.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>12 min</b> · leste, entrando no West Village</div></li>
 
-        <li><span class="time">13h15</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s52"><span class="check-box"></span></label><span class="stop-title">West Village · 90 Bedford St</span></h4>
+          <span class="time-below">13h15</span>
           <p>O prédio de esquina que aparece como fachada do apartamento de Friends fica em Bedford com Grove. Ruas arborizadas, casas geminadas e o clima mais bonito de Manhattan.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>5 min</b> · até a Carmine St</div></li>
 
-        <li><span class="time">13h45</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s53"><span class="check-box"></span></label><span class="stop-title">Almoço · Joe's Pizza original</span></h4>
+          <span class="time-below">13h45</span>
           <p class="sub">7 Carmine St — a matriz, aberta desde 1975. Muito melhor que a filial da Times Square.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>8 min</b> · leste até a praça</div></li>
 
-        <li><span class="time">14h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s54"><span class="check-box"></span></label><span class="stop-title">Washington Square Park</span></h4>
+          <span class="time-below">14h30</span>
           <p>O arco, a fonte, os músicos e os enxadristas. O coração da NYU e da vida universitária.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>25 min</b> de metrô · B/C de W 4th St direto até 81st St–Museum of Natural History</div></li>
 
-        <li><span class="time">15h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s55"><span class="check-box"></span></label><span class="stop-title">Central Park · lado oeste, versão rápida</span></h4>
+          <span class="time-below">15h30</span>
           <p>Entrem pela 72nd: <b>Strawberry Fields</b> (o mosaico Imagine) · <b>Bow Bridge</b> · <b>Bethesda Terrace</b> se o ritmo permitir. Depois subam até a 79th.</p>
           <p class="sub">Este é o "oi" ao parque. A exploração com calma é amanhã de manhã.</p></div></li>
 
-        <li class="hi"><span class="time">16h15</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s56"><span class="check-box"></span></label><span class="stop-title">Fila do Museu de História Natural</span></h4>
+          <span class="time-below">16h15</span>
           <p>Cheguem <b>16h15</b>. A entrada é gratuita para quem entra na última hora do dia — está na lista oficial de isenções do museu, e não é restrito a residentes.</p>
           <p class="sub">⚠️ Mesmo grátis, <b>é preciso retirar o ingresso no balcão</b>. Confirmem o horário de fechamento na véspera: ele varia em datas especiais.</p></div></li>
 
-        <li class="hi"><span class="time">16h30</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s57"><span class="check-box"></span></label><span class="stop-title">A baleia azul · 60 minutos</span></h4>
+          <span class="time-below">16h30</span>
           <p>Alvo direto: <b>Milstein Hall of Ocean Life</b>, primeiro andar, perto da entrada. A baleia de 29 metros pendurada no escuro.</p>
           <p class="sub">Sobrando tempo, suba para os dinossauros no 4º andar. A isenção vale só para a entrada geral — planetário e borboletário continuam pagos.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>15 min</b> · descendo a Central Park West até a Columbus Circle</div></li>
 
-        <li class="hi"><span class="time">17h50</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s58"><span class="check-box"></span></label><span class="stop-title">Smorgasburg Central Park · jantar</span></h4>
+          <span class="time-below">17h50</span>
           <p>Mais de 25 barracas na entrada de Columbus Circle, na W 59th. Entrada gratuita, paga-se só o que comer. Funciona de quinta a sábado, meio-dia às 20h.</p>
           <p class="sub">⚠️ <b>Esta edição encerra a temporada no dia 19</b> — quinta é uma das três últimas chances. Levem um pano: dá para montar piquenique e comer dentro do parque.</p></div></li>
 
-        <li><span class="time">19h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s59"><span class="check-box"></span></label><span class="stop-title">Times Square à noite</span></h4>
+          <span class="time-below">19h30</span>
           <p class="sub">Metrô <b>1</b> de 59th St até 42nd St, 3 min. Ou 15 min a pé pela Broadway.</p></div></li>
 
-        <li><span class="time">20h45</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s60"><span class="check-box"></span></label><span class="stop-title">Volta para Yonkers</span></h4>
+          <span class="time-below">20h45</span>
           <p class="sub">Shuttle <b>S</b> de Times Sq até Grand Central + Metro-North.</p></div></li>
       </ul>
 
@@ -1271,75 +1428,86 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
       </div>
 
       <ul class="tl">
-        <li><span class="time">8h00</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s61"><span class="check-box"></span></label><span class="stop-title">Yonkers → Grand Army Plaza</span></h4>
+          <span class="time-below">8h00</span>
           <p class="sub">Metro-North até Grand Central + <b>4/5/6</b> até 59th St. Entrada sudeste do parque.</p></div></li>
 
-        <li class="hi"><span class="time">9h15</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s62"><span class="check-box"></span></label><span class="stop-title">The Pond &amp; Gapstow Bridge</span></h4>
+          <span class="time-below">9h15</span>
           <p>O lago da ponta sul com a pontezinha de pedra e os arranha-céus refletidos. 📸 A luz da manhã bate exatamente aqui — é o melhor horário do parque inteiro.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>10 min</b> · norte, pelo interior do parque</div></li>
 
-        <li><span class="time">9h50</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s63"><span class="check-box"></span></label><span class="stop-title">The Mall · Literary Walk</span></h4>
+          <span class="time-below">9h50</span>
           <p>A alameda de olmos americanos — o corredor arborizado mais fotogênico de Nova York.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>6 min</b> · até o terraço</div></li>
 
-        <li><span class="time">10h20</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s64"><span class="check-box"></span></label><span class="stop-title">Bethesda Terrace &amp; Sheep Meadow</span></h4>
+          <span class="time-below">10h20</span>
           <p class="sub">Se já tiverem feito o Bethesda na quinta, troquem por um tempo deitados no Sheep Meadow com o skyline ao fundo.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>18 min</b> · norte, contornando o lago</div></li>
 
-        <li><span class="time">11h15</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s65"><span class="check-box"></span></label><span class="stop-title">Belvedere Castle</span></h4>
+          <span class="time-below">11h15</span>
           <p>O castelinho no ponto mais alto, com vista para o Turtle Pond e o Great Lawn. Entrada gratuita.</p>
           <p class="sub">🚻 Banheiros no Delacorte / arredores do castelo.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>12 min</b> · leste, saindo na 5ª com 82nd</div></li>
 
-        <li><span class="time">12h15</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s66"><span class="check-box"></span></label><span class="stop-title">MET &amp; Guggenheim · por fora</span></h4>
+          <span class="time-below">12h15</span>
           <p>A escadaria do MET é ponto de encontro e de foto por si só. O Guggenheim fica 7 quadras ao norte, na 89th.</p>
           <p class="sub">⚠️ O preço reduzido do MET é só para residentes de NY, NJ e CT. Para vocês é integral — por isso fica de fora.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>25 min</b> · descendo a 5ª Avenida pelo Museum Mile, da 89th à 59th</div></li>
 
-        <li><span class="time">13h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s67"><span class="check-box"></span></label><span class="stop-title">Quinta Avenida · o que faltou</span></h4>
+          <span class="time-below">13h30</span>
           <p class="sub">Almoço em algum ponto do trecho. Extras opcionais: MoMA, Central Perk Coffeehouse na Times Square, Morgan Library.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>15 min</b> de metrô · E da 5ª Av/53rd até Spring St</div></li>
 
-        <li><span class="time">16h00</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s68"><span class="check-box"></span></label><span class="stop-title">SoHo</span></h4>
+          <span class="time-below">16h00</span>
           <p>Fachadas de ferro fundido, Prince Street, Greene Street e o calçamento de pedra. 📸 Fim de tarde dá luz lateral nos prédios.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>8 min</b> · leste até a Elizabeth St</div></li>
 
-        <li><span class="time">17h15</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s69"><span class="check-box"></span></label><span class="stop-title">NoLita</span></h4>
+          <span class="time-below">17h15</span>
           <p class="sub">Lojinhas independentes, cafés e o Elizabeth Street Garden.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>7 min</b> · sul até a Mulberry St</div></li>
 
-        <li class="hi"><span class="time">18h00</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s70"><span class="check-box"></span></label><span class="stop-title">Festa de San Gennaro · centenário</span></h4>
+          <span class="time-below">18h00</span>
           <p>A Mulberry Street fechada entre Canal e Houston, com luzes suspensas, mais de 300 barracas, palco de música na esquina da Grand com Mott. <b>2026 é a 100ª edição</b> — 17 a 27 de setembro.</p>
           <p class="sub">Funciona das 11h às 23h nos dias de semana. Entrada gratuita, paga-se o que consumir. A procissão é no sábado e fica de fora — hoje é a noite das barraquinhas mesmo.</p></div></li>
 
-        <li><span class="time">21h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s71"><span class="check-box"></span></label><span class="stop-title">Volta para Yonkers</span></h4>
+          <span class="time-below">21h30</span>
           <p class="sub">Metrô <b>6</b> de Spring/Canal até Grand Central + Metro-North.</p></div></li>
       </ul>
 
@@ -1388,44 +1556,52 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
       </div>
 
       <ul class="tl">
-        <li><span class="time">8h40</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s72"><span class="check-box"></span></label><span class="stop-title">Yonkers → Tarrytown</span></h4>
+          <span class="time-below">8h40</span>
           <p class="sub">Metro-North Hudson Line sentido norte, ~20 min. Tarifa off-peak o dia inteiro no fim de semana. 📸 <b>Sentem do lado esquerdo</b> — a linha corre colada no rio.</p></div></li>
 
-        <li class="hi"><span class="time">9h10</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s73"><span class="check-box"></span></label><span class="stop-title">Tarrytown · Main Street</span></h4>
+          <span class="time-below">9h10</span>
           <p>A rua principal em subida, com lojinhas, sebos, antiquários e cafés de calçada. Sábado é o dia em que o comércio está mais vivo.</p>
           <p class="sub">☕ Coffee Labs Roasters é o café de referência da cidade. 🚻 Use aqui — as opções em Cold Spring são mais escassas.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>10 min</b> · descendo de volta ao nível do rio</div></li>
 
-        <li><span class="time">11h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s74"><span class="check-box"></span></label><span class="stop-title">RiverWalk &amp; orla de Tarrytown</span></h4>
+          <span class="time-below">11h30</span>
           <p class="sub">Calçadão à beira do Hudson com vista para a ponte Mario Cuomo. O rio aqui é largo feito lago.</p></div></li>
 
-        <li><span class="time">12h40</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s75"><span class="check-box"></span></label><span class="stop-title">Trem para Cold Spring</span></h4>
+          <span class="time-below">12h40</span>
           <p class="sub">~45 min pela Hudson Line. A partir de Croton-Harmon a paisagem abre para as montanhas do Hudson Highlands.</p></div></li>
 
-        <li class="hi"><span class="time">13h35</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s76"><span class="check-box"></span></label><span class="stop-title">Cold Spring · Main Street</span></h4>
+          <span class="time-below">13h35</span>
           <p>A estação fica a 2 minutos da rua principal. Antiquários, brechós, livrarias e casas do século XIX — a cidadezinha americana de cartão-postal.</p>
           <p class="sub">Almoço aqui. Depois, sem pressa: é literalmente o objetivo do dia.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>4 min</b> · descendo a Main St até a água</div></li>
 
-        <li><span class="time">15h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s77"><span class="check-box"></span></label><span class="stop-title">Orla &amp; coreto do Hudson</span></h4>
+          <span class="time-below">15h30</span>
           <p>O píer e o coreto branco olhando para a Storm King Mountain do outro lado. Se sobrar disposição, <b>Little Stony Point</b> fica a ~25 min a pé ao norte, com mirante sobre o rio.</p></div></li>
 
-        <li class="hi"><span class="time">18h40</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s78"><span class="check-box"></span></label><span class="stop-title">Pôr do sol na orla · ~18h55</span></h4>
+          <span class="time-below">18h40</span>
           <p>O sol se põe atrás das montanhas do lado oeste, com o rio inteiro dourado na frente. Provavelmente a imagem mais bonita — e mais barata — da viagem.</p></div></li>
 
-        <li><span class="time">19h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s79"><span class="check-box"></span></label><span class="stop-title">Volta para Yonkers</span></h4>
+          <span class="time-below">19h30</span>
           <p class="sub">~1h de trem. Confiram o horário exato assim que chegarem em Cold Spring.</p></div></li>
       </ul>
 
@@ -1469,42 +1645,49 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
       </div>
 
       <ul class="tl">
-        <li><span class="time">8h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s80"><span class="check-box"></span></label><span class="stop-title">Yonkers → Times Square</span></h4>
+          <span class="time-below">8h30</span>
           <p class="sub">Metro-North até Grand Central + shuttle <b>S</b> até Times Sq. Depois 5 min a pé até a W 51st.</p></div></li>
 
-        <li class="hi"><span class="time">10h00</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s81"><span class="check-box"></span></label><span class="stop-title">Times Square Church · 237 W 51st St</span></h4>
+          <span class="time-below">10h00</span>
           <p>No antigo Mark Hellinger Theatre, entre a Broadway e a 8ª Avenida. Cultos aos domingos às 10h e às 13h.</p>
           <p class="sub">Igreja interdenominacional com mais de 100 nacionalidades na congregação. Cheguem uns 20 min antes para pegar lugar bom.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>3 min</b> · até a estação 49th St (N/R/W), a uma quadra</div></li>
 
-        <li class="hi"><span class="time">12h30</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s82"><span class="check-box"></span></label><span class="stop-title">Trem N → Coney Island</span></h4>
+          <span class="time-below">12h30</span>
           <p>Direto até <b>Coney Island–Stillwell Ave</b>, sem baldeação. 65 a 75 min. O trecho final é elevado, com vista do sul do Brooklyn.</p>
           <p class="sub">Confiram o serviço no app: em fins de semana há alterações de linha eventuais.</p></div></li>
 
-        <li><span class="time">13h45</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s83"><span class="check-box"></span></label><span class="stop-title">Nathan's Famous original</span></h4>
+          <span class="time-below">13h45</span>
           <p>1310 Surf Ave, bem em frente à saída da estação. Desde 1916 — é onde o hot dog americano virou instituição.</p>
           <p class="sub">🚻 Banheiros no terminal Stillwell e ao longo do calçadão.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>5 min</b> · da Surf Ave até o calçadão</div></li>
 
-        <li><span class="time">14h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s84"><span class="check-box"></span></label><span class="stop-title">Boardwalk, praia &amp; Luna Park</span></h4>
+          <span class="time-below">14h30</span>
           <p>O calçadão de madeira, a areia, o Cyclone de 1927 e a Wonder Wheel ao fundo. Em setembro o parque opera <b>só nos fins de semana</b>, normalmente das 11h às 22h.</p>
           <p class="sub">⚠️ A <b>Wonder Wheel não é do Luna Park</b> — é do Deno's, parque vizinho com ingresso próprio. Confirmem o calendário do dia 20 em lunaparknyc.com/plan/park-hours. Se o Halloween Harvest já tiver começado, pega decoração temática.</p></div></li>
 
-        <li class="hi"><span class="time">18h40</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s85"><span class="check-box"></span></label><span class="stop-title">Pôr do sol na orla</span></h4>
+          <span class="time-below">18h40</span>
           <p class="sub">📸 O sol se põe sobre o mar, com o píer e a roda-gigante em silhueta. Fim de tarde é o melhor momento fotográfico de Coney.</p></div></li>
 
-        <li><span class="time">19h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s86"><span class="check-box"></span></label><span class="stop-title">Volta para Yonkers</span></h4>
+          <span class="time-below">19h30</span>
           <p class="sub">N até Times Sq + shuttle S até Grand Central + Metro-North. ~2h no total. Chegada ~22h.</p></div></li>
       </ul>
 
@@ -1557,37 +1740,45 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
       </div>
 
       <ul class="tl">
-        <li><span class="time">9h00</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s87"><span class="check-box"></span></label><span class="stop-title">Café na varanda</span></h4>
+          <span class="time-below">9h00</span>
           <p class="sub">Primeira manhã sem correr. Cozinha própria, café em casa, o Hudson na frente.</p></div></li>
 
-        <li><span class="time">10h00</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s88"><span class="check-box"></span></label><span class="stop-title">Caminhada pelo bairro residencial</span></h4>
+          <span class="time-below">10h00</span>
           <p>Casas de madeira, caixas de correio na calçada, ônibus escolar amarelo, bandeiras nas varandas. O clichê americano existindo de verdade.</p></div></li>
 
-        <li class="hi"><span class="time">10h45</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s89"><span class="check-box"></span></label><span class="stop-title">Old Croton Aqueduct Trail</span></h4>
+          <span class="time-below">10h45</span>
           <p>Trilha plana sobre o antigo aqueduto que levava água de Croton até Manhattan, passando por Yonkers, Tarrytown e Sleepy Hollow. Gratuita, arborizada e cheia de moradores correndo.</p></div></li>
 
-        <li class="hi"><span class="time">12h00</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s90"><span class="check-box"></span></label><span class="stop-title">Untermyer Gardens</span></h4>
+          <span class="time-below">12h00</span>
           <p>945 N Broadway. Jardim persa murado com colunatas, espelhos d'água e um mirante sobre o Hudson. <b>Entrada gratuita.</b></p>
           <p class="sub">📸 É provavelmente o lugar mais fotogênico de Yonkers e quase ninguém de fora conhece. Confirmem o horário do dia no site.</p></div></li>
 
-        <li><span class="time">14h00</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s91"><span class="check-box"></span></label><span class="stop-title">Almoço em casa</span></h4>
+          <span class="time-below">14h00</span>
           <p class="sub">Cozinha do Airbnb. É aqui que o orçamento de alimentação se paga.</p></div></li>
 
-        <li><span class="time">15h30</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s92"><span class="check-box"></span></label><span class="stop-title">Hudson River Museum ou Trevor Park</span></h4>
+          <span class="time-below">15h30</span>
           <p class="sub">Museu com planetário e vista do rio. Se preferirem tudo gratuito, o parque ao lado entrega a mesma vista.</p></div></li>
 
-        <li><span class="time">17h00</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s93"><span class="check-box"></span></label><span class="stop-title">Orla de Yonkers · mercado</span></h4>
+          <span class="time-below">17h00</span>
           <p class="sub">Van der Donck Park à beira do rio, e depois a compra da semana. Trader Joe's, Stop &amp; Shop ou ShopRite para reabastecer.</p></div></li>
 
-        <li><span class="time">18h45</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s94"><span class="check-box"></span></label><span class="stop-title">Pôr do sol na varanda</span></h4>
+          <span class="time-below">18h45</span>
           <p class="sub">O motivo pelo qual vocês escolheram este apartamento.</p></div></li>
       </ul>
 
@@ -1670,27 +1861,33 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
       </div>
 
       <ul class="tl">
-        <li><span class="time">9h00</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s95"><span class="check-box"></span></label><span class="stop-title">Café e última caminhada</span></h4>
+          <span class="time-below">9h00</span>
           <p class="sub">Sem levar malas para Manhattan. A viagem fecha olhando o Hudson, não correndo pela Penn Station.</p></div></li>
 
-        <li><span class="time">11h00</span><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s96"><span class="check-box"></span></label><span class="stop-title">Checkout do Airbnb</span></h4></div></li>
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s96"><span class="check-box"></span></label><span class="stop-title">Checkout do Airbnb</span></h4>
+          <span class="time-below">11h00</span></div></li>
 
-        <li><span class="time">12h00</span><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s97"><span class="check-box"></span></label><span class="stop-title">Almoço sem pressa</span></h4></div></li>
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s97"><span class="check-box"></span></label><span class="stop-title">Almoço sem pressa</span></h4>
+          <span class="time-below">12h00</span></div></li>
 
-        <li class="hi"><span class="time">13h45</span><span class="dot"></span>
+        <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s98"><span class="check-box"></span></label><span class="stop-title">Yonkers → JFK</span></h4>
+          <span class="time-below">13h45</span>
           <p>Metro-North até <b>Grand Central</b> · LIRR de Grand Central Madison até <b>Jamaica</b> · <b>AirTrain</b> até o terminal.</p>
           <p class="sub">~2h30 no total, com folga para malas e baldeações. 💰 AirTrain US$ 8,50 por pessoa, à parte do OMNY.</p></div></li>
 
-        <li><span class="time">16h15</span><span class="dot"></span>
+        <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s99"><span class="check-box"></span></label><span class="stop-title">Chegada ao JFK</span></h4>
+          <span class="time-below">16h15</span>
           <p class="sub">3h30 antes do voo internacional. Margem confortável.</p></div></li>
 
-        <li><span class="time">19h50</span><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s100"><span class="check-box"></span></label><span class="stop-title">Decolagem para o Brasil</span></h4></div></li>
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s100"><span class="check-box"></span></label><span class="stop-title">Decolagem para o Brasil</span></h4>
+          <span class="time-below">19h50</span></div></li>
       </ul>
 
       <table>
@@ -1887,6 +2084,70 @@ tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
     input.addEventListener('change', function(){
       if (input.checked) localStorage.setItem(key, '1');
       else localStorage.removeItem(key);
+    });
+  });
+})();
+</script>
+
+<!-- ══════════════════════════════════════════
+     CUSTO DO DIA — tabelas editáveis com soma automática (salvo no navegador)
+══════════════════════════════════════════ -->
+<script>
+(function(){
+  var PREFIX = 'ny-fabi-eric-custo-';
+
+  function parseMoney(str){
+    if (!str) return 0;
+    var m = str.replace(/[^\d.,]/g, '');
+    if (!m) return 0;
+    // trata "1.234,56" (milhar+decimal BR) e "23,50" (decimal BR) e "23.50" (decimal US)
+    if (m.indexOf(',') > -1 && m.indexOf('.') > -1) {
+      m = m.replace(/\./g, '').replace(',', '.');
+    } else if (m.indexOf(',') > -1) {
+      m = m.replace(',', '.');
+    }
+    var n = parseFloat(m);
+    return isNaN(n) ? 0 : n;
+  }
+
+  function recalc(table){
+    var total = 0;
+    table.querySelectorAll('tbody td.num').forEach(function(td){
+      total += parseMoney(td.textContent);
+    });
+    var totalRounded = Math.round(total);
+    var tfootTd = table.querySelector('tfoot td.num');
+    if (tfootTd) tfootTd.textContent = '~US$ ' + totalRounded;
+
+    var article = table.closest('article.day');
+    if (article) {
+      var facts = article.querySelectorAll('.facts .fact');
+      facts.forEach(function(f){
+        var k = f.querySelector('.k');
+        if (k && k.textContent.trim() === 'Custo do dia') {
+          var v = f.querySelector('.v');
+          if (v) {
+            var link = v.querySelector('a');
+            var text = '~US$ ' + totalRounded + ' (casal)';
+            if (link) link.textContent = text; else v.textContent = text;
+          }
+        }
+      });
+    }
+  }
+
+  document.querySelectorAll('table.custo-tabela').forEach(function(table){
+    table.querySelectorAll('[data-persist-key]').forEach(function(el){
+      var saved = localStorage.getItem(PREFIX + el.dataset.persistKey);
+      if (saved !== null) el.textContent = saved;
+    });
+    recalc(table);
+    table.addEventListener('input', function(e){
+      var el = e.target;
+      if (el && el.dataset && el.dataset.persistKey) {
+        localStorage.setItem(PREFIX + el.dataset.persistKey, el.textContent);
+      }
+      recalc(table);
     });
   });
 })();
