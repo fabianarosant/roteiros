@@ -76,6 +76,7 @@ body {
   font-variation-settings: 'opsz' 144;
 }
 .sec-h2 em { font-style: italic; font-weight: 400; color: var(--azul); }
+.sec-h2-big { font-size: clamp(44px, 9vw, 68px); }
 
 .prose {
   font-family: 'DM Sans', sans-serif;
@@ -159,7 +160,7 @@ body {
 .menu-card-wrap { position: relative; width: 100%; max-width: 620px; }
 .menu-card-logo { position: absolute; top: -34px; left: 50%; transform: translateX(-50%); width: 68px; height: 68px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.12); padding: 4px; z-index: 3; }
 .menu-card-logo img { width: 58px; height: 58px; object-fit: contain; }
-.menu-card { background: linear-gradient(135deg, rgba(13,45,107,0.97) 0%, rgba(26,74,158,0.94) 55%, rgba(34,85,168,0.94) 100%); border-radius: 18px; padding: 56px 32px 40px; box-shadow: 0 14px 52px rgba(0,0,0,0.38); }
+.menu-card { background: linear-gradient(135deg, rgba(13,45,107,0.90) 0%, rgba(18,52,120,0.88) 50%, rgba(30,70,148,0.85) 100%); border-radius: 18px; padding: 56px 32px 40px; box-shadow: 0 14px 52px rgba(0,0,0,0.38); }
 .menu-card-head { text-align: center; margin-bottom: 28px; }
 .menu-card-head .titulo { font-family: 'Fraunces', serif; font-style: italic; font-weight: 350; font-size: clamp(36px, 8vw, 48px); color: #fff; line-height: 0.95; letter-spacing: -1px; font-variation-settings: 'opsz' 144, 'wght' 350; display: block; }
 .menu-card-head .bemvindos { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.88); margin: 14px 0 2px; line-height: 1.2; }
@@ -169,7 +170,10 @@ body {
 .menu-links a:last-child { border-bottom: none; }
 .menu-links a:hover { color: var(--gold-soft); }
 .menu-dias-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(84px, 1fr)); gap: 8px; margin-top: 20px; }
-.menu-dias-grid a { text-decoration: none; padding: 10px 0; border: 1.5px solid rgba(255,255,255,0.25); text-align: center; border-radius: 4px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 1px; text-transform: uppercase; }
+.menu-dias-grid a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; padding: 14px 6px; border: 1.5px solid rgba(255,255,255,0.25); text-align: center; border-radius: 4px; }
+.menu-dias-grid .dp-dia { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.92); letter-spacing: 1px; text-transform: uppercase; }
+.menu-dias-grid .dp-data { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; color: rgba(255,255,255,0.6); letter-spacing: 0.5px; }
+.menu-dias-grid .dp-tema { font-family: 'DM Sans', sans-serif; font-size: 10.5px; font-weight: 600; color: var(--gold-soft); letter-spacing: 0.3px; line-height: 1.2; }
 
 /* ══════════════════════════════════════════════
    ROTEIRO MACRO — grid fluido
@@ -200,6 +204,7 @@ body {
 ══════════════════════════════════════════════ */
 .secao-head { text-align: center; margin-bottom: 40px; }
 .secao-head .eyebrow { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 10px; }
+#detalhado .secao-head .eyebrow { display: block; margin-bottom: 0; margin-top: 10px; }
 .secao-head p { max-width: 560px; margin: 14px auto 0; color: var(--ink-mute); font-size: 15px; line-height: 1.6; }
 
 /* ══════════════════════════════════════════════
@@ -211,12 +216,28 @@ body {
 .day-head h3 { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(22px, 4vw, 29px); line-height: 1.15; font-variation-settings: 'opsz' 144; }
 .day-head h3 small { display: block; font-family: 'DM Sans', sans-serif; font-style: normal; font-weight: 700; font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 6px; }
 .day-head .badge { font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; border: 1px solid var(--gold-soft); color: var(--gold-soft); padding: 6px 12px; white-space: nowrap; font-weight: 700; }
+.day-head a.badge { text-decoration: none; cursor: pointer; transition: background 0.15s, color 0.15s; }
+.day-head a.badge:hover { background: var(--gold-soft); color: var(--azul); }
 .day-body { background: #fff; border: 1px solid var(--hairline-b); border-top: none; padding: 28px clamp(16px, 4vw, 30px); }
 
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 1px; background: var(--hairline-b); margin: 0 0 26px; border: 1px solid var(--hairline-b); }
-.fact { background: var(--paper-deep); padding: 13px 15px; }
-.fact .k { font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 4px; font-weight: 700; }
+.fact { background: var(--paper-deep); padding: 10px 15px; display: flex; align-items: baseline; justify-content: center; gap: 8px; text-align: center; }
+.facts.minimal { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; border: none; background: none; gap: 6px 26px; }
+.facts.minimal .fact { display: flex; align-items: center; background: none; padding: 2px 0; gap: 7px; }
+.facts.minimal .f-emoji { font-size: 15px; line-height: 1; }
+.facts.minimal .v { font-family: 'DM Sans', sans-serif; font-size: 13.5px; color: var(--ink); font-weight: 500; }
+.fact .k { font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-deep); font-weight: 700; white-space: nowrap; }
 .fact .v { font-family: 'DM Sans', sans-serif; font-size: 13.5px; color: var(--ink); font-weight: 500; }
+
+.day-overview { background: var(--paper-deep); border: 1px solid var(--hairline-b); padding: 16px 20px 14px; margin: 0 0 26px; }
+.day-overview .ov-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
+.day-overview .ov-label { font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-deep); font-weight: 700; }
+.day-overview .dia-num { display: flex; align-items: baseline; gap: 5px; }
+.day-overview .dia-num .lbl { font-family: 'Pinyon Script', cursive; font-size: 27px; color: var(--azul); line-height: 1; }
+.day-overview .dia-num .num { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 100; font-size: 19px; line-height: 1; color: var(--azul); letter-spacing: -0.5px; }
+.day-overview ol { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 7px 22px; }
+.day-overview li { display: flex; align-items: baseline; gap: 9px; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-soft); line-height: 1.35; }
+.day-overview li .ov-num { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 700; color: var(--azul); flex-shrink: 0; width: 16px; text-align: right; }
 
 .tl { list-style: none; position: relative; }
 .tl > li { position: relative; padding: 0 0 4px 20px; min-height: 0; }
@@ -353,7 +374,7 @@ table.custo-tabela caption { font-family: 'Fraunces', Georgia, serif; font-style
 table.custo-tabela caption .custo-hint { display: block; margin-top: 3px; font-family: 'DM Sans', sans-serif; font-style: normal; font-weight: 400; font-size: 10.5px; letter-spacing: 0.3px; text-transform: none; color: var(--ink-mute); }
 
 .dia-acordeao { margin: 0 0 24px; }
-.dia-acordeao > summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 8px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--azul); padding-bottom: 10px; border-bottom: 2px solid var(--azul); margin-bottom: 18px; }
+.dia-acordeao > summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 8px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--azul); padding-bottom: 10px; border-bottom: 1px solid var(--azul); margin-bottom: 18px; }
 .dia-acordeao > summary::-webkit-details-marker { display: none; }
 .dia-acordeao > summary::before { content: "▸"; display: inline-block; font-size: 12px; transition: transform 0.15s; order: -1; }
 .dia-acordeao[open] > summary::before { transform: rotate(90deg); }
@@ -361,11 +382,12 @@ table.custo-tabela caption .custo-hint { display: block; margin-top: 3px; font-f
 .acordeao-hint { font-weight: 400; letter-spacing: 0.3px; text-transform: none; color: var(--ink-mute); font-size: 11px; }
 .custo-total-link { text-decoration: underline; text-decoration-color: var(--gold-soft); text-decoration-style: dotted; text-underline-offset: 3px; cursor: pointer; }
 .custo-total-link:hover { color: var(--azul-medio); }
-table.custo-tabela td[contenteditable="true"] { cursor: text; border-bottom: 1px dashed transparent; transition: background 0.15s, border-color 0.15s; }
-table.custo-tabela td[contenteditable="true"]:hover { border-bottom-color: var(--gold-soft); }
-table.custo-tabela td[contenteditable="true"]:focus { outline: none; border-bottom: 1px dashed var(--azul); background: var(--gold-bg); }
-table.custo-tabela td[contenteditable="true"]:empty::before { content: attr(data-placeholder); color: var(--ink-mute); font-style: italic; font-weight: 400; }
+table.custo-tabela [contenteditable="true"] { cursor: text; border-bottom: 1px dashed transparent; transition: background 0.15s, border-color 0.15s; }
+table.custo-tabela [contenteditable="true"]:hover { border-bottom-color: var(--gold-soft); }
+table.custo-tabela [contenteditable="true"]:focus { outline: none; border-bottom: 1px dashed var(--azul); background: var(--gold-bg); }
+table.custo-tabela [contenteditable="true"]:empty::before { content: attr(data-placeholder); color: var(--ink-mute); font-style: italic; font-weight: 400; }
 table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
+.omny-tap { display: inline-flex; align-items: center; justify-content: center; width: 15px; height: 15px; border-radius: 50%; background: var(--azul); color: #fff; font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 700; margin-right: 7px; flex-shrink: 0; vertical-align: middle; position: relative; top: -1px; }
 
 /* ══════════════════════════════════════════════
    REGRAS DE OURO
@@ -382,6 +404,9 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
 @media (max-width: 600px) {
   #detalhado { padding-left: 12px; padding-right: 12px; }
   .day-body { padding-left: 12px; padding-right: 12px; }
+  .facts { grid-template-columns: repeat(2, 1fr); }
+  .fact:first-child { grid-column: 1 / -1; }
+  .day-overview ol { grid-template-columns: 1fr; }
 }
 
 </style>
@@ -475,16 +500,16 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <a href="#regras">Regras de Ouro</a>
         </div>
         <div class="menu-dias-grid">
-          <a href="#d1">DIA 01</a>
-          <a href="#d2">DIA 02</a>
-          <a href="#d3">DIA 03</a>
-          <a href="#d4">DIA 04</a>
-          <a href="#d5">DIA 05</a>
-          <a href="#d6">DIA 06</a>
-          <a href="#d7">DIA 07</a>
-          <a href="#d8">DIA 08</a>
-          <a href="#d9">DIA 09</a>
-          <a href="#d10">DIA 10</a>
+          <a href="#d1"><span class="dp-dia">Dia 01</span><span class="dp-data">14/09 · SEG</span><span class="dp-tema">Chegada NYC</span></a>
+          <a href="#d2"><span class="dp-dia">Dia 02</span><span class="dp-data">15/09 · TER</span><span class="dp-tema">Estátua Liberdade</span></a>
+          <a href="#d3"><span class="dp-dia">Dia 03</span><span class="dp-data">16/09 · QUA</span><span class="dp-tema">Midtown SUMMIT</span></a>
+          <a href="#d4"><span class="dp-dia">Dia 04</span><span class="dp-data">17/09 · QUI</span><span class="dp-tema">West Village</span></a>
+          <a href="#d5"><span class="dp-dia">Dia 05</span><span class="dp-data">18/09 · SEX</span><span class="dp-tema">San Gennaro</span></a>
+          <a href="#d6"><span class="dp-dia">Dia 06</span><span class="dp-data">19/09 · SÁB</span><span class="dp-tema">Hudson Valley</span></a>
+          <a href="#d7"><span class="dp-dia">Dia 07</span><span class="dp-data">20/09 · DOM</span><span class="dp-tema">Coney Island</span></a>
+          <a href="#d8"><span class="dp-dia">Dia 08</span><span class="dp-data">21/09 · SEG</span><span class="dp-tema">Vida Americana</span></a>
+          <a href="#d9"><span class="dp-dia">Dia 09</span><span class="dp-data">22/09 · TER</span><span class="dp-tema">Dia Coringa</span></a>
+          <a href="#d10"><span class="dp-dia">Dia 10</span><span class="dp-data">23/09 · QUA</span><span class="dp-tema">Volta Brasil</span></a>
         </div>
       </div>
     </div>
@@ -492,212 +517,52 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
 </section>
 
 <!-- ══════════════════════════════════════════
-     ROTEIRO MACRO
-══════════════════════════════════════════ -->
-<section id="roteiro-macro">
-  <div class="macro-head">
-    <h2 class="sec-h2"><em>Roteiro Macro</em></h2>
-    <span class="handle">@vamoscarimbar</span>
-  </div>
-  <div class="secao-head" style="margin-top:-24px;margin-bottom:36px;">
-    <p>Um dia, uma região. Três dias com base em Manhattan, sete em Yonkers com bate-voltas de trem.</p>
-  </div>
-
-  <div class="macro-grid">
-
-    <a href="#d1" class="macro-card">
-      <div class="macro-card-head">
-        <div class="dia-num"><span class="lbl">Dia</span><span class="num">01</span></div>
-        <div class="tema"><span class="t">Chegada &amp; Midtown</span><span class="base">Base: Carlton Arms</span></div>
-      </div>
-      <div class="macro-card-body">
-        <div class="item">JFK 14h30 · AirTrain + metrô</div>
-        <div class="item">Check-in Carlton Arms</div>
-        <div class="item">Madison Square Park · Flatiron</div>
-        <div class="item">Loja Harry Potter</div>
-        <div class="item">Koreatown · Empire State · Herald Sq</div>
-        <div class="item">Bryant Park · Biblioteca Pública</div>
-        <div class="item key">Times Square à noite</div>
-      </div>
-    </a>
-
-    <a href="#d2" class="macro-card">
-      <div class="macro-card-head">
-        <div class="dia-num"><span class="lbl">Dia</span><span class="num">02</span></div>
-        <div class="tema"><span class="t">Nascer do Sol &amp; Estátua</span><span class="base">Base: Carlton Arms</span></div>
-      </div>
-      <div class="macro-card-body">
-        <div class="item key">Nascer do sol no DUMBO · 6h40</div>
-        <div class="item">Washington St · Pebble Beach</div>
-        <div class="item">Travessia da Brooklyn Bridge</div>
-        <div class="item key">Estátua da Liberdade + Ellis</div>
-        <div class="item">Financial District · Wall St</div>
-        <div class="item">Chinatown · Mei Lai Wah · Kam Hing</div>
-        <div class="item key">Staten Island Ferry no pôr do sol</div>
-      </div>
-    </a>
-
-    <a href="#d3" class="macro-card">
-      <div class="macro-card-head">
-        <div class="dia-num"><span class="lbl">Dia</span><span class="num">03</span></div>
-        <div class="tema"><span class="t">Midtown &amp; Mudança</span><span class="base">Carlton → Yonkers</span></div>
-      </div>
-      <div class="macro-card-body">
-        <div class="item">Checkout · malas guardadas</div>
-        <div class="item">FRIENDS Experience · 10h</div>
-        <div class="item">Grand Central · Chrysler · Rockefeller</div>
-        <div class="item">Quinta Avenida · Plaza · Paley Park</div>
-        <div class="item">Roosevelt Island · teleférico</div>
-        <div class="item key">SUMMIT One Vanderbilt no pôr do sol</div>
-        <div class="item">Metro-North → check-in Yonkers</div>
-      </div>
-    </a>
-
-    <a href="#d4" class="macro-card">
-      <div class="macro-card-head">
-        <div class="dia-num"><span class="lbl">Dia</span><span class="num">04</span></div>
-        <div class="tema"><span class="t">West Side &amp; Village</span><span class="base">Bate-volta de Yonkers</span></div>
-      </div>
-      <div class="macro-card-body">
-        <div class="item">Hudson Yards · Vessel · The Shed</div>
-        <div class="item key">High Line inteira</div>
-        <div class="item">Chelsea Market · Pier 57 · Little Island</div>
-        <div class="item">West Village · 90 Bedford · Washington Sq</div>
-        <div class="item key">Museu de História Natural GRÁTIS · 16h30</div>
-        <div class="item key">Smorgasburg Central Park · jantar</div>
-        <div class="item">Times Square à noite</div>
-      </div>
-    </a>
-
-    <a href="#d5" class="macro-card">
-      <div class="macro-card-head">
-        <div class="dia-num"><span class="lbl">Dia</span><span class="num">05</span></div>
-        <div class="tema"><span class="t">Central Park &amp; San Gennaro</span><span class="base">Bate-volta de Yonkers</span></div>
-      </div>
-      <div class="macro-card-body">
-        <div class="item">The Pond · Gapstow Bridge</div>
-        <div class="item">The Mall · Sheep Meadow · Bethesda</div>
-        <div class="item">Belvedere Castle</div>
-        <div class="item">MET e Guggenheim por fora</div>
-        <div class="item">Quinta Avenida · Museum Mile</div>
-        <div class="item">SoHo · NoLita</div>
-        <div class="item key">Festa de San Gennaro · centenário</div>
-      </div>
-    </a>
-
-    <a href="#d6" class="macro-card">
-      <div class="macro-card-head">
-        <div class="dia-num"><span class="lbl">Dia</span><span class="num">06</span></div>
-        <div class="tema"><span class="t">Hudson Valley</span><span class="base">Metro-North off-peak</span></div>
-      </div>
-      <div class="macro-card-body">
-        <div class="item">Tarrytown · Main Street · cafés</div>
-        <div class="item">RiverWalk · centro histórico</div>
-        <div class="item">Trem para Cold Spring</div>
-        <div class="item">Main Street · antiquários · almoço</div>
-        <div class="item key">Pôr do sol na orla do Hudson</div>
-        <div class="item">Volta sem pressa</div>
-      </div>
-    </a>
-
-    <a href="#d7" class="macro-card">
-      <div class="macro-card-head">
-        <div class="dia-num"><span class="lbl">Dia</span><span class="num">07</span></div>
-        <div class="tema"><span class="t">Culto &amp; Coney Island</span><span class="base">Bate-volta de Yonkers</span></div>
-      </div>
-      <div class="macro-card-body">
-        <div class="item key">Times Square Church · 10h</div>
-        <div class="item">Trem N direto para Coney</div>
-        <div class="item">Nathan's Famous original</div>
-        <div class="item">Boardwalk · praia · Luna Park</div>
-        <div class="item">Cyclone · Wonder Wheel</div>
-        <div class="item key">Pôr do sol na orla</div>
-      </div>
-    </a>
-
-    <a href="#d8" class="macro-card">
-      <div class="macro-card-head">
-        <div class="dia-num"><span class="lbl">Dia</span><span class="num">08</span></div>
-        <div class="tema"><span class="t">Yonkers Local</span><span class="base">Vida americana</span></div>
-      </div>
-      <div class="macro-card-body">
-        <div class="item">Manhã sem despertador · varanda</div>
-        <div class="item">Bairro residencial a pé</div>
-        <div class="item">Old Croton Aqueduct Trail</div>
-        <div class="item">Untermyer Gardens · grátis</div>
-        <div class="item">Hudson River Museum ou Trevor Park</div>
-        <div class="item">Mercado · rotina americana</div>
-        <div class="item">Opcional: NY Liberty no Barclays</div>
-      </div>
-    </a>
-
-    <a href="#d9" class="macro-card">
-      <div class="macro-card-head">
-        <div class="dia-num"><span class="lbl">Dia</span><span class="num">09</span></div>
-        <div class="tema"><span class="t">Coringa</span><span class="base">O dia do que amamos</span></div>
-      </div>
-      <div class="macro-card-body">
-        <div class="item">Voltar em Cold Spring ou Tarrytown</div>
-        <div class="item">Repetir DUMBO ou Central Park</div>
-        <div class="item">Compras · outlet · Downtown Yonkers</div>
-        <div class="item">Recuperar bloco perdido por chuva</div>
-        <div class="item">Jogo da Liberty se cair nesta data</div>
-        <div class="item">Ou simplesmente a varanda</div>
-      </div>
-    </a>
-
-    <a href="#d10" class="macro-card">
-      <div class="macro-card-head">
-        <div class="dia-num"><span class="lbl">Dia</span><span class="num">10</span></div>
-        <div class="tema"><span class="t">Última Manhã &amp; JFK</span><span class="base">Voo 19h50</span></div>
-      </div>
-      <div class="macro-card-body">
-        <div class="item">Café e última caminhada em Yonkers</div>
-        <div class="item">Fechar malas · checkout 11h</div>
-        <div class="item">Almoço sem pressa</div>
-        <div class="item">Saída 13h30–14h</div>
-        <div class="item key">Metro-North → LIRR → AirTrain → JFK</div>
-        <div class="item">Chegada ~16h/16h30</div>
-      </div>
-    </a>
-
-  </div>
-
-  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-principal">Menu Principal</a></div>
-</section>
-
-<!-- ══════════════════════════════════════════
      DETALHAMENTO DOS DIAS — linha do tempo
 ══════════════════════════════════════════ -->
 <section id="detalhado">
   <div class="secao-head">
+    <h2 class="sec-h2 sec-h2-big"><em>Roteiro</em></h2>
     <span class="eyebrow">Dia a Dia</span>
-    <h2 class="sec-h2"><em>Roteiro Detalhado</em></h2>
-    <p>Horários sugeridos, trens, minutos de caminhada entre cada ponto, onde comer, banheiros estratégicos e custos.</p>
   </div>
 
   <!-- DIA 1 -->
   <article class="day" id="d1">
     <div class="day-head">
       <h3><small>Segunda · 14 de setembro</small>Chegada &amp; primeiro impacto</h3>
-      <span class="badge">Tudo a pé</span>
+      <a href="#custo-d1" class="badge custo-total-link">~US$ 58</a>
     </div>
     <div class="day-body">
 
-      <div class="facts">
-        <div class="fact"><div class="k">Base</div><div class="v">Carlton Arms · 160 E 25th St</div></div>
-        <div class="fact"><div class="k">Pôr do sol</div><div class="v">~19h05</div></div>
-        <div class="fact"><div class="k">Caminhada</div><div class="v">~5 km</div></div>
-        <div class="fact"><div class="k">Custo do dia</div><div class="v"><a href="#custo-d1" class="custo-total-link">~US$ 58 (casal)</a></div></div>
+      <div class="day-overview">
+        <div class="ov-head">
+          <span class="dia-num"><span class="lbl">Dia</span><span class="num">01</span></span>
+          <span class="ov-label">Visão geral</span>
+        </div>
+        <ol>
+          <li><span class="ov-num">1</span>Madison Square Park</li>
+          <li><span class="ov-num">2</span>Flatiron Building</li>
+          <li><span class="ov-num">3</span>Loja Harry Potter</li>
+          <li><span class="ov-num">4</span>Koreatown</li>
+          <li><span class="ov-num">5</span>Empire State Building</li>
+          <li><span class="ov-num">6</span>Herald Square · Macy's</li>
+          <li><span class="ov-num">7</span>Bryant Park &amp; Biblioteca</li>
+          <li><span class="ov-num">8</span>Rooftop · Stavros Niarchos</li>
+          <li><span class="ov-num">9</span>Best Buy</li>
+          <li><span class="ov-num">10</span>Times Square</li>
+        </ol>
       </div>
 
+      <details class="dia-acordeao">
+      <summary>Roteiro</summary>
+      <div class="facts minimal">
+        <div class="fact"><span class="f-emoji">🏨</span><span class="v">Carlton Arms</span></div>
+        <div class="fact"><span class="f-emoji">☀️</span><span class="v">~19h05</span></div>
+        <div class="fact"><span class="f-emoji">👣</span><span class="v">~5 km</span></div>
+      </div>
       <div class="note">
         <span class="lbl">Voo &amp; conexão</span>
         <b>Dom 13/09 · 23h30</b> — embarque GRU → Miami. <b>Seg 14/09 · 07h00</b> — pouso em Miami: é <b>aqui</b> que passam pela imigração americana, não em JFK. Conexão de ~4h28 até o embarque do trecho MIA → JFK, às <b>11h20</b>. Chegada em Nova York às <b>14h30</b> — como a imigração já foi feita em Miami, o desembarque em JFK é bem mais rápido.
       </div>
-
-      <details class="dia-acordeao" open>
-      <summary>Roteiro</summary>
       <ul class="tl">
         <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s1"><span class="check-box"></span></label><span class="stop-title">Pouso em Miami</span></h4>
@@ -921,15 +786,15 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
       </div>
       </details>
 
-      <details class="dia-acordeao" open>
-      <summary>Estimativa de Gastos <span class="acordeao-hint">clique nos valores pra editar</span></summary>
+      <details class="dia-acordeao">
+      <summary>Estimativa de Gastos <span class="acordeao-hint">edite os valores</span></summary>
       <table class="custo-tabela" id="custo-d1">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
-          <tr><td contenteditable="true" data-persist-key="d1-r1-item">Transporte — AirTrain + Metrô (JFK → Manhattan)</td><td class="num" contenteditable="true" data-persist-key="d1-r1-val">US$ 23,50</td></tr>
+          <tr><td><span class="omny-tap" title="Tap OMNY 1/12 — rumo ao teto grátis dos 7 dias">1</span><span class="ce-text" contenteditable="true" data-persist-key="d1-r1-item">Transporte — AirTrain + Metrô (JFK → Manhattan)</span></td><td class="num" contenteditable="true" data-persist-key="d1-r1-val">US$ 23,50</td></tr>
           <tr><td contenteditable="true" data-persist-key="d1-r2-item">Krispy Kreme — donut no caminho</td><td class="num" contenteditable="true" data-persist-key="d1-r2-val">~US$ 3</td></tr>
           <tr><td contenteditable="true" data-persist-key="d1-r3-item">2 Bros Pizza — pedaço no caminho</td><td class="num" contenteditable="true" data-persist-key="d1-r3-val">~US$ 10</td></tr>
-          <tr><td contenteditable="true" data-persist-key="d1-r4-item">Metrô — R/W de volta ao hotel (US$ 3/pessoa)</td><td class="num" contenteditable="true" data-persist-key="d1-r4-val">US$ 6</td></tr>
+          <tr><td><span class="omny-tap" title="Tap OMNY 2/12 — rumo ao teto grátis dos 7 dias">2</span><span class="ce-text" contenteditable="true" data-persist-key="d1-r4-item">Metrô — R/W de volta ao hotel (US$ 3/pessoa)</span></td><td class="num" contenteditable="true" data-persist-key="d1-r4-val">US$ 6</td></tr>
           <tr><td contenteditable="true" data-persist-key="d1-r5-item">Mercado/Good To Go</td><td class="num" contenteditable="true" data-persist-key="d1-r5-val">US$ 15</td></tr>
           <tr><td contenteditable="true" data-persist-key="d1-r6-item">Jongro Rice Hotdog — corn dog no caminho</td><td class="num" contenteditable="true" data-persist-key="d1-r6-val">~US$ 8</td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d1-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d1-e1-val"></td></tr>
@@ -948,17 +813,39 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
   <article class="day" id="d2">
     <div class="day-head">
       <h3><small>Terça · 15 de setembro</small>Nascer do sol, Estátua &amp; Downtown</h3>
-      <span class="badge">O dia mais intenso · ~15h</span>
+      <a href="#custo-d2" class="badge custo-total-link">~US$ 74</a>
     </div>
     <div class="day-body">
 
-      <div class="facts">
-        <div class="fact"><div class="k">Nascer do sol</div><div class="v">~6h40</div></div>
-        <div class="fact"><div class="k">Pôr do sol</div><div class="v">~19h00</div></div>
-        <div class="fact"><div class="k">Caminhada</div><div class="v">~13 km</div></div>
-        <div class="fact"><div class="k">Custo do dia</div><div class="v">~US$ 74 (casal)</div></div>
+      <div class="day-overview">
+        <div class="ov-head">
+          <span class="dia-num"><span class="lbl">Dia</span><span class="num">02</span></span>
+          <span class="ov-label">Visão geral</span>
+        </div>
+        <ol>
+          <li><span class="ov-num">1</span>Washington Street</li>
+          <li><span class="ov-num">2</span>Pebble Beach &amp; Brooklyn Bridge Park</li>
+          <li><span class="ov-num">3</span>Brooklyn Bridge</li>
+          <li><span class="ov-num">4</span>Castle Clinton</li>
+          <li><span class="ov-num">5</span>Liberty Island</li>
+          <li><span class="ov-num">6</span>Ellis Island</li>
+          <li><span class="ov-num">7</span>Charging Bull &amp; Fearless Girl</li>
+          <li><span class="ov-num">8</span>Wall Street &amp; Trinity Church</li>
+          <li><span class="ov-num">9</span>Stone Street</li>
+          <li><span class="ov-num">10</span>Memorial do 11 de Setembro</li>
+          <li><span class="ov-num">11</span>Oculus</li>
+          <li><span class="ov-num">12</span>Chinatown</li>
+          <li><span class="ov-num">13</span>Staten Island Ferry</li>
+        </ol>
       </div>
 
+      <details class="dia-acordeao">
+      <summary>Roteiro</summary>
+      <div class="facts minimal">
+        <div class="fact"><span class="f-emoji">🌅</span><span class="v">~6h40</span></div>
+        <div class="fact"><span class="f-emoji">☀️</span><span class="v">~19h00</span></div>
+        <div class="fact"><span class="f-emoji">👣</span><span class="v">~13 km</span></div>
+      </div>
       <div class="note warn">
         <span class="lbl">Antes de dormir na segunda</span>
         Deixem tudo pronto: roupa separada, celulares carregados, ingresso da Estátua salvo <b>offline</b> e água na mochila. <b>Resolvam o banheiro no hotel</b> — os do parque em DUMBO abrem mais tarde. Confiram o horário do trem F no app antes de sair: nesse horário ele passa a cada 10–15 min.
@@ -1104,16 +991,23 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <li><span><b>Café em DUMBO</b> · Brooklyn Roasting Co. — abre ~7h</span><span class="price">US$ 4–7</span></li>
         </ul>
       </div>
+      </details>
 
-      <table>
-        <caption>Custo do dia</caption>
+      <details class="dia-acordeao">
+      <summary>Estimativa de Gastos <span class="acordeao-hint">edite os valores</span></summary>
+      <table class="custo-tabela" id="custo-d2">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
-          <tr><td>Ingresso — Estátua da Liberdade + Ellis Island</td><td class="num">US$ 51–62</td></tr>
-          <tr><td>Alimentação — café da manhã + lanches</td><td class="num">~US$ 12–17</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d2-r1-item">Ingresso — Estátua da Liberdade + Ellis Island</td><td class="num" contenteditable="true" data-persist-key="d2-r1-val">US$ 51–62</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d2-r2-item">Alimentação — café da manhã + lanches</td><td class="num" contenteditable="true" data-persist-key="d2-r2-val">~US$ 12–17</td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d2-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d2-e1-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d2-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d2-e2-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d2-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d2-e3-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d2-e4-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d2-e4-val"></td></tr>
         </tbody>
         <tfoot><tr><td>Total do dia</td><td class="num">~US$ 74</td></tr></tfoot>
       </table>
+      </details>
 
     </div>
   </article>
@@ -1122,17 +1016,37 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
   <article class="day" id="d3">
     <div class="day-head">
       <h3><small>Quarta · 16 de setembro</small>Midtown no talo &amp; mudança para Yonkers</h3>
-      <span class="badge">Dia mais apertado do roteiro</span>
+      <a href="#custo-d3" class="badge custo-total-link">~US$ 230</a>
     </div>
     <div class="day-body">
 
-      <div class="facts">
-        <div class="fact"><div class="k">Pôr do sol</div><div class="v">~19h00</div></div>
-        <div class="fact"><div class="k">Caminhada</div><div class="v">~9 km</div></div>
-        <div class="fact"><div class="k">Pagos hoje</div><div class="v">FRIENDS + SUMMIT</div></div>
-        <div class="fact"><div class="k">Custo do dia</div><div class="v">~US$ 230 (casal)</div></div>
+      <div class="day-overview">
+        <div class="ov-head">
+          <span class="dia-num"><span class="lbl">Dia</span><span class="num">03</span></span>
+          <span class="ov-label">Visão geral</span>
+        </div>
+        <ol>
+          <li><span class="ov-num">1</span>FRIENDS Experience</li>
+          <li><span class="ov-num">2</span>Madison Square Park &amp; Flatiron</li>
+          <li><span class="ov-num">3</span>Empire State · Koreatown · Herald Square</li>
+          <li><span class="ov-num">4</span>Bryant Park &amp; Biblioteca</li>
+          <li><span class="ov-num">5</span>Grand Central Terminal</li>
+          <li><span class="ov-num">6</span>Chrysler Building</li>
+          <li><span class="ov-num">7</span>Rockefeller · St. Patrick's · Radio City</li>
+          <li><span class="ov-num">8</span>Quinta Avenida · FAO Schwarz</li>
+          <li><span class="ov-num">9</span>Paley Park &amp; Greenacre Park</li>
+          <li><span class="ov-num">10</span>Roosevelt Island · teleférico</li>
+          <li><span class="ov-num">11</span>SUMMIT One Vanderbilt</li>
+        </ol>
       </div>
 
+      <details class="dia-acordeao">
+      <summary>Roteiro</summary>
+      <div class="facts minimal">
+        <div class="fact"><span class="f-emoji">☀️</span><span class="v">~19h00</span></div>
+        <div class="fact"><span class="f-emoji">👣</span><span class="v">~9 km</span></div>
+        <div class="fact"><span class="f-emoji">🎟️</span><span class="v">FRIENDS + SUMMIT</span></div>
+      </div>
       <div class="note">
         <span class="lbl">Decisão de malas — vale US$ 8</span>
         O Carlton guarda as malas de graça, mas isso obriga a voltar lá depois do SUMMIT (Grand Central → 25th St → Grand Central = <b>30 a 40 min de vaivém às 20h30</b>, com o trem para pegar). Um guarda-volumes <b>Bounce perto da Grand Central</b> custa ~US$ 8 e elimina esse trecho: vocês descem do SUMMIT, pegam as malas e embarcam. Recomendo o Bounce.
@@ -1248,18 +1162,25 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
         <span class="lbl">Se atrasar, corte nesta ordem</span>
         1) Greenacre Park · 2) FAO Schwarz e as lojas da 5ª · 3) versão curta de Roosevelt Island (só a promenade, sem o Four Freedoms Park). <b>O SUMMIT é ingresso com horário marcado e não remarca de graça</b> — ele é a âncora inegociável do dia.
       </div>
+      </details>
 
-      <table>
-        <caption>Custo do dia</caption>
+      <details class="dia-acordeao">
+      <summary>Estimativa de Gastos <span class="acordeao-hint">edite os valores</span></summary>
+      <table class="custo-tabela" id="custo-d3">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
-          <tr><td>Ingresso — FRIENDS Experience</td><td class="num">US$ 86</td></tr>
-          <tr><td>Ingresso — SUMMIT One Vanderbilt (slot pôr do sol)</td><td class="num">US$ 110–130</td></tr>
-          <tr><td>Guarda-volumes Bounce (opcional)</td><td class="num">~US$ 8</td></tr>
-          <tr><td>Alimentação</td><td class="num">~US$ 16</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d3-r1-item">Ingresso — FRIENDS Experience</td><td class="num" contenteditable="true" data-persist-key="d3-r1-val">US$ 86</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d3-r2-item">Ingresso — SUMMIT One Vanderbilt (slot pôr do sol)</td><td class="num" contenteditable="true" data-persist-key="d3-r2-val">US$ 110–130</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d3-r3-item">Guarda-volumes Bounce (opcional)</td><td class="num" contenteditable="true" data-persist-key="d3-r3-val">~US$ 8</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d3-r4-item">Alimentação</td><td class="num" contenteditable="true" data-persist-key="d3-r4-val">~US$ 16</td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d3-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d3-e1-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d3-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d3-e2-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d3-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d3-e3-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d3-e4-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d3-e4-val"></td></tr>
         </tbody>
         <tfoot><tr><td>Total do dia</td><td class="num">~US$ 230</td></tr></tfoot>
       </table>
+      </details>
 
     </div>
   </article>
@@ -1268,15 +1189,36 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
   <article class="day" id="d4">
     <div class="day-head">
       <h3><small>Quinta · 17 de setembro</small>West Side, Village &amp; museu de graça</h3>
-      <span class="badge">Maratona · ~14 km</span>
+      <a href="#custo-d4" class="badge custo-total-link">~US$ 75</a>
     </div>
     <div class="day-body">
 
-      <div class="facts">
-        <div class="fact"><div class="k">Museu</div><div class="v">GRÁTIS · 16h30–17h30</div></div>
-        <div class="fact"><div class="k">Jantar</div><div class="v">Smorgasburg</div></div>
-        <div class="fact"><div class="k">Caminhada</div><div class="v">~14 km</div></div>
-        <div class="fact"><div class="k">Custo do dia</div><div class="v">~US$ 75 (casal)</div></div>
+      <div class="day-overview">
+        <div class="ov-head">
+          <span class="dia-num"><span class="lbl">Dia</span><span class="num">04</span></span>
+          <span class="ov-label">Visão geral</span>
+        </div>
+        <ol>
+          <li><span class="ov-num">1</span>Hudson Yards · Vessel &amp; The Shed</li>
+          <li><span class="ov-num">2</span>High Line</li>
+          <li><span class="ov-num">3</span>Chelsea Market</li>
+          <li><span class="ov-num">4</span>Pier 57 · rooftop</li>
+          <li><span class="ov-num">5</span>Little Island</li>
+          <li><span class="ov-num">6</span>West Village · 90 Bedford St</li>
+          <li><span class="ov-num">7</span>Washington Square Park</li>
+          <li><span class="ov-num">8</span>Central Park · lado oeste</li>
+          <li><span class="ov-num">9</span>Museu de História Natural</li>
+          <li><span class="ov-num">10</span>Smorgasburg Central Park</li>
+          <li><span class="ov-num">11</span>Times Square à noite</li>
+        </ol>
+      </div>
+
+      <details class="dia-acordeao">
+      <summary>Roteiro</summary>
+      <div class="facts minimal">
+        <div class="fact"><span class="f-emoji">🏛️</span><span class="v">GRÁTIS · 16h30–17h30</span></div>
+        <div class="fact"><span class="f-emoji">🍴</span><span class="v">Smorgasburg</span></div>
+        <div class="fact"><span class="f-emoji">👣</span><span class="v">~14 km</span></div>
       </div>
 
       <ul class="tl">
@@ -1397,17 +1339,24 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <li><span><b>Smorgasburg</b> · 25+ barracas, jantar do dia</span><span class="price">US$ 12–18</span></li>
         </ul>
       </div>
+      </details>
 
-      <table>
-        <caption>Custo do dia</caption>
+      <details class="dia-acordeao">
+      <summary>Estimativa de Gastos <span class="acordeao-hint">edite os valores</span></summary>
+      <table class="custo-tabela" id="custo-d4">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
-          <tr><td>Almoço — Joe's Pizza</td><td class="num">~US$ 10</td></tr>
-          <tr><td>Lanche — Chelsea Market</td><td class="num">~US$ 20–30</td></tr>
-          <tr><td>Jantar — Smorgasburg</td><td class="num">~US$ 20–30</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d4-r1-item">Almoço — Joe's Pizza</td><td class="num" contenteditable="true" data-persist-key="d4-r1-val">~US$ 10</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d4-r2-item">Lanche — Chelsea Market</td><td class="num" contenteditable="true" data-persist-key="d4-r2-val">~US$ 20–30</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d4-r3-item">Jantar — Smorgasburg</td><td class="num" contenteditable="true" data-persist-key="d4-r3-val">~US$ 20–30</td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d4-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d4-e1-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d4-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d4-e2-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d4-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d4-e3-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d4-e4-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d4-e4-val"></td></tr>
         </tbody>
         <tfoot><tr><td>Total do dia</td><td class="num">~US$ 75</td></tr></tfoot>
       </table>
+      </details>
 
     </div>
   </article>
@@ -1416,15 +1365,34 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
   <article class="day" id="d5">
     <div class="day-head">
       <h3><small>Sexta · 18 de setembro</small>Central Park, Quinta Avenida &amp; San Gennaro</h3>
-      <span class="badge">Dia mais leve, de propósito</span>
+      <a href="#custo-d5" class="badge custo-total-link">~US$ 60</a>
     </div>
     <div class="day-body">
 
-      <div class="facts">
-        <div class="fact"><div class="k">Evento</div><div class="v">San Gennaro · 100ª edição</div></div>
-        <div class="fact"><div class="k">Caminhada</div><div class="v">~11 km</div></div>
-        <div class="fact"><div class="k">Pagos hoje</div><div class="v">Nenhum</div></div>
-        <div class="fact"><div class="k">Custo do dia</div><div class="v">~US$ 60 (casal)</div></div>
+      <div class="day-overview">
+        <div class="ov-head">
+          <span class="dia-num"><span class="lbl">Dia</span><span class="num">05</span></span>
+          <span class="ov-label">Visão geral</span>
+        </div>
+        <ol>
+          <li><span class="ov-num">1</span>The Pond &amp; Gapstow Bridge</li>
+          <li><span class="ov-num">2</span>The Mall · Literary Walk</li>
+          <li><span class="ov-num">3</span>Bethesda Terrace &amp; Sheep Meadow</li>
+          <li><span class="ov-num">4</span>Belvedere Castle</li>
+          <li><span class="ov-num">5</span>MET &amp; Guggenheim</li>
+          <li><span class="ov-num">6</span>Quinta Avenida</li>
+          <li><span class="ov-num">7</span>SoHo</li>
+          <li><span class="ov-num">8</span>NoLita</li>
+          <li><span class="ov-num">9</span>Festa de San Gennaro</li>
+        </ol>
+      </div>
+
+      <details class="dia-acordeao">
+      <summary>Roteiro</summary>
+      <div class="facts minimal">
+        <div class="fact"><span class="f-emoji">🎉</span><span class="v">San Gennaro · 100ª edição</span></div>
+        <div class="fact"><span class="f-emoji">👣</span><span class="v">~11 km</span></div>
+        <div class="fact"><span class="f-emoji">✅</span><span class="v">Pagos hoje: nenhum</span></div>
       </div>
 
       <ul class="tl">
@@ -1520,17 +1488,24 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <li><span><b>Olive Garden</b> · Times Square, almoço executivo (opção do dia)</span><span class="price">US$ 12–18</span></li>
         </ul>
       </div>
+      </details>
 
-      <table>
-        <caption>Custo do dia</caption>
+      <details class="dia-acordeao">
+      <summary>Estimativa de Gastos <span class="acordeao-hint">edite os valores</span></summary>
+      <table class="custo-tabela" id="custo-d5">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
-          <tr><td>Almoço — Quinta Avenida</td><td class="num">~US$ 20</td></tr>
-          <tr><td>Jantar — San Gennaro (zeppole, sausage &amp; peppers)</td><td class="num">~US$ 30</td></tr>
-          <tr><td>Doces — Ferrara Bakery</td><td class="num">~US$ 10</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d5-r1-item">Almoço — Quinta Avenida</td><td class="num" contenteditable="true" data-persist-key="d5-r1-val">~US$ 20</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d5-r2-item">Jantar — San Gennaro (zeppole, sausage &amp; peppers)</td><td class="num" contenteditable="true" data-persist-key="d5-r2-val">~US$ 30</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d5-r3-item">Doces — Ferrara Bakery</td><td class="num" contenteditable="true" data-persist-key="d5-r3-val">~US$ 10</td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d5-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d5-e1-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d5-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d5-e2-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d5-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d5-e3-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d5-e4-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d5-e4-val"></td></tr>
         </tbody>
         <tfoot><tr><td>Total do dia</td><td class="num">~US$ 60</td></tr></tfoot>
       </table>
+      </details>
 
     </div>
   </article>
@@ -1539,17 +1514,31 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
   <article class="day" id="d6">
     <div class="day-head">
       <h3><small>Sábado · 19 de setembro</small>Hudson Valley · Tarrytown &amp; Cold Spring</h3>
-      <span class="badge">Sem correria</span>
+      <a href="#custo-d6" class="badge custo-total-link">~US$ 90</a>
     </div>
     <div class="day-body">
 
-      <div class="facts">
-        <div class="fact"><div class="k">Transporte</div><div class="v">Metro-North off-peak</div></div>
-        <div class="fact"><div class="k">Pôr do sol</div><div class="v">~18h55 · Cold Spring</div></div>
-        <div class="fact"><div class="k">Caminhada</div><div class="v">~8 km, leve</div></div>
-        <div class="fact"><div class="k">Custo do dia</div><div class="v">~US$ 90 (casal)</div></div>
+      <div class="day-overview">
+        <div class="ov-head">
+          <span class="dia-num"><span class="lbl">Dia</span><span class="num">06</span></span>
+          <span class="ov-label">Visão geral</span>
+        </div>
+        <ol>
+          <li><span class="ov-num">1</span>Tarrytown · Main Street</li>
+          <li><span class="ov-num">2</span>RiverWalk &amp; orla de Tarrytown</li>
+          <li><span class="ov-num">3</span>Cold Spring · Main Street</li>
+          <li><span class="ov-num">4</span>Orla &amp; coreto do Hudson</li>
+          <li><span class="ov-num">5</span>Pôr do sol na orla</li>
+        </ol>
       </div>
 
+      <details class="dia-acordeao">
+      <summary>Roteiro</summary>
+      <div class="facts minimal">
+        <div class="fact"><span class="f-emoji">🚆</span><span class="v">Metro-North off-peak</span></div>
+        <div class="fact"><span class="f-emoji">☀️</span><span class="v">~18h55 · Cold Spring</span></div>
+        <div class="fact"><span class="f-emoji">👣</span><span class="v">~8 km, leve</span></div>
+      </div>
       <div class="note warn">
         <span class="lbl">A regra do dia</span>
         Ao norte de Croton-Harmon os trens ficam <b>quase de hora em hora</b> no fim de semana. Este é o único dia do roteiro que se monta em cima da tabela de horários, não do relógio de vocês. <b>Fotografem o horário dos trens de volta logo ao chegar em Cold Spring</b> — perder um custa 60 minutos parados na plataforma.
@@ -1609,17 +1598,24 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
         <span class="lbl">O que ficou de fora e por quê</span>
         <b>Sleepy Hollow</b> (Philipsburg Manor, Old Dutch Church, cemitério) fica a ~2 km ao norte da estação de Tarrytown e sozinho consome 2 a 3 horas — não cabe junto com Cold Spring. <b>O Great Jack O'Lantern Blaze</b> saiu por escolha de vocês, por ser evento de Halloween. Se um dia esses lugares entrarem no radar, a terça coringa é o espaço natural.
       </div>
+      </details>
 
-      <table>
-        <caption>Custo do dia</caption>
+      <details class="dia-acordeao">
+      <summary>Estimativa de Gastos <span class="acordeao-hint">edite os valores</span></summary>
+      <table class="custo-tabela" id="custo-d6">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
-          <tr><td>Metro-North — Yonkers–Tarrytown–Cold Spring (ida e volta)</td><td class="num">US$ 40–55</td></tr>
-          <tr><td>Café em Tarrytown</td><td class="num">~US$ 15</td></tr>
-          <tr><td>Almoço em Cold Spring</td><td class="num">~US$ 25</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d6-r1-item">Metro-North — Yonkers–Tarrytown–Cold Spring (ida e volta)</td><td class="num" contenteditable="true" data-persist-key="d6-r1-val">US$ 40–55</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d6-r2-item">Café em Tarrytown</td><td class="num" contenteditable="true" data-persist-key="d6-r2-val">~US$ 15</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d6-r3-item">Almoço em Cold Spring</td><td class="num" contenteditable="true" data-persist-key="d6-r3-val">~US$ 25</td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d6-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d6-e1-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d6-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d6-e2-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d6-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d6-e3-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d6-e4-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d6-e4-val"></td></tr>
         </tbody>
         <tfoot><tr><td>Total do dia</td><td class="num">~US$ 90</td></tr></tfoot>
       </table>
+      </details>
 
     </div>
   </article>
@@ -1628,17 +1624,30 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
   <article class="day" id="d7">
     <div class="day-head">
       <h3><small>Domingo · 20 de setembro</small>Culto na Times Square &amp; Coney Island</h3>
-      <span class="badge">Metrô grátis · teto do OMNY</span>
+      <a href="#custo-d7" class="badge custo-total-link">~US$ 45</a>
     </div>
     <div class="day-body">
 
-      <div class="facts">
-        <div class="fact"><div class="k">Culto</div><div class="v">10h · 237 W 51st St</div></div>
-        <div class="fact"><div class="k">Trem</div><div class="v">N direto · sem baldeação</div></div>
-        <div class="fact"><div class="k">Pôr do sol</div><div class="v">~18h55 · na orla</div></div>
-        <div class="fact"><div class="k">Custo do dia</div><div class="v">~US$ 45 (casal)</div></div>
+      <div class="day-overview">
+        <div class="ov-head">
+          <span class="dia-num"><span class="lbl">Dia</span><span class="num">07</span></span>
+          <span class="ov-label">Visão geral</span>
+        </div>
+        <ol>
+          <li><span class="ov-num">1</span>Times Square Church</li>
+          <li><span class="ov-num">2</span>Nathan's Famous original</li>
+          <li><span class="ov-num">3</span>Boardwalk, praia &amp; Luna Park</li>
+          <li><span class="ov-num">4</span>Pôr do sol na orla</li>
+        </ol>
       </div>
 
+      <details class="dia-acordeao">
+      <summary>Roteiro</summary>
+      <div class="facts minimal">
+        <div class="fact"><span class="f-emoji">⛪</span><span class="v">Culto 10h · 237 W 51st St</span></div>
+        <div class="fact"><span class="f-emoji">🚇</span><span class="v">N direto · sem baldeação</span></div>
+        <div class="fact"><span class="f-emoji">☀️</span><span class="v">~18h55 · na orla</span></div>
+      </div>
       <div class="note">
         <span class="lbl">A economia invisível deste dia</span>
         Domingo 20 fecha a primeira semana do OMNY. A essa altura vocês já terão estourado as 12 viagens e batido o teto de US$ 35 — então <b>essa viagem longa até Coney Island sai de graça</b>. É o melhor dia possível para atravessar a cidade inteira.
@@ -1704,17 +1713,24 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <li><span><b>Williams Candy</b> · maçã do amor e caramelo, na Surf Ave</span><span class="price">US$ 4–8</span></li>
         </ul>
       </div>
+      </details>
 
-      <table>
-        <caption>Custo do dia</caption>
+      <details class="dia-acordeao">
+      <summary>Estimativa de Gastos <span class="acordeao-hint">edite os valores</span></summary>
+      <table class="custo-tabela" id="custo-d7">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
-          <tr><td>Almoço — Nathan's Famous</td><td class="num">~US$ 15</td></tr>
-          <tr><td>Lanches — Calçadão / Williams Candy</td><td class="num">~US$ 15</td></tr>
-          <tr><td>Jantar (na volta)</td><td class="num">~US$ 15</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d7-r1-item">Almoço — Nathan's Famous</td><td class="num" contenteditable="true" data-persist-key="d7-r1-val">~US$ 15</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d7-r2-item">Lanches — Calçadão / Williams Candy</td><td class="num" contenteditable="true" data-persist-key="d7-r2-val">~US$ 15</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d7-r3-item">Jantar (na volta)</td><td class="num" contenteditable="true" data-persist-key="d7-r3-val">~US$ 15</td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d7-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d7-e1-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d7-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d7-e2-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d7-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d7-e3-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d7-e4-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d7-e4-val"></td></tr>
         </tbody>
         <tfoot><tr><td>Total do dia</td><td class="num">~US$ 45</td></tr></tfoot>
       </table>
+      </details>
 
     </div>
   </article>
@@ -1723,17 +1739,30 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
   <article class="day" id="d8">
     <div class="day-head">
       <h3><small>Segunda · 21 de setembro</small>Yonkers · a vida americana de verdade</h3>
-      <span class="badge">Sem despertador</span>
+      <a href="#custo-d8" class="badge custo-total-link">~US$ 25</a>
     </div>
     <div class="day-body">
 
-      <div class="facts">
-        <div class="fact"><div class="k">Deslocamento</div><div class="v">Tudo a pé ou ônibus local</div></div>
-        <div class="fact"><div class="k">Untermyer</div><div class="v">Grátis</div></div>
-        <div class="fact"><div class="k">Caminhada</div><div class="v">~7 km, leve</div></div>
-        <div class="fact"><div class="k">Custo do dia</div><div class="v">~US$ 25 (casal)</div></div>
+      <div class="day-overview">
+        <div class="ov-head">
+          <span class="dia-num"><span class="lbl">Dia</span><span class="num">08</span></span>
+          <span class="ov-label">Visão geral</span>
+        </div>
+        <ol>
+          <li><span class="ov-num">1</span>Old Croton Aqueduct Trail</li>
+          <li><span class="ov-num">2</span>Untermyer Gardens</li>
+          <li><span class="ov-num">3</span>Hudson River Museum ou Trevor Park</li>
+          <li><span class="ov-num">4</span>Orla de Yonkers · mercado</li>
+        </ol>
       </div>
 
+      <details class="dia-acordeao">
+      <summary>Roteiro</summary>
+      <div class="facts minimal">
+        <div class="fact"><span class="f-emoji">🚶</span><span class="v">Tudo a pé ou ônibus local</span></div>
+        <div class="fact"><span class="f-emoji">🌳</span><span class="v">Untermyer grátis</span></div>
+        <div class="fact"><span class="f-emoji">👣</span><span class="v">~7 km, leve</span></div>
+      </div>
       <div class="note">
         <span class="lbl">Por que este dia existe</span>
         Depois de sete dias no talo, este é o dia que justifica a escolha de ficar em Yonkers em vez de num hotel de Manhattan. Não é descanso — é <b>conteúdo diferente</b>: o subúrbio americano real, o supermercado, o parque de bairro, a rotina. É o que separa o canal de vocês de qualquer outro roteiro de Nova York.
@@ -1786,15 +1815,22 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
         <span class="lbl">Encaixe opcional da noite</span>
         <b>New York Liberty no Barclays Center.</b> A temporada da WNBA vai até 24 de setembro, e o último jogo da Liberty é dia 23 contra a Atlanta Dream, fechando uma série de dois jogos em casa — então o outro jogo cai por aqui. <b>Confirmem se é 21 ou 22</b> antes de comprar. Barclays fica em Atlantic Ave–Barclays Ctr, ~1h15 de Yonkers.
       </div>
+      </details>
 
-      <table>
-        <caption>Custo do dia</caption>
+      <details class="dia-acordeao">
+      <summary>Estimativa de Gastos <span class="acordeao-hint">edite os valores</span></summary>
+      <table class="custo-tabela" id="custo-d8">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
-          <tr><td>Compras no mercado (Trader Joe's / ShopRite)</td><td class="num">~US$ 25</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d8-r1-item">Compras no mercado (Trader Joe's / ShopRite)</td><td class="num" contenteditable="true" data-persist-key="d8-r1-val">~US$ 25</td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d8-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d8-e1-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d8-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d8-e2-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d8-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d8-e3-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d8-e4-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d8-e4-val"></td></tr>
         </tbody>
         <tfoot><tr><td>Total do dia</td><td class="num">~US$ 25</td></tr></tfoot>
       </table>
+      </details>
 
     </div>
   </article>
@@ -1852,14 +1888,12 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
   <article class="day" id="d10">
     <div class="day-head">
       <h3><small>Quarta · 23 de setembro</small>Última manhã &amp; JFK</h3>
-      <span class="badge">Voo 19h50</span>
+      <a href="#custo-d10" class="badge custo-total-link">~US$ 17</a>
     </div>
     <div class="day-body">
 
-      <div class="facts">
-        <div class="fact"><div class="k">Custo do dia</div><div class="v">~US$ 17 (casal)</div></div>
-      </div>
-
+      <details class="dia-acordeao">
+      <summary>Roteiro</summary>
       <ul class="tl">
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s95"><span class="check-box"></span></label><span class="stop-title">Café e última caminhada</span></h4>
@@ -1889,15 +1923,22 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s100"><span class="check-box"></span></label><span class="stop-title">Decolagem para o Brasil</span></h4>
           <span class="time-below">19h50</span></div></li>
       </ul>
+      </details>
 
-      <table>
-        <caption>Custo do dia</caption>
+      <details class="dia-acordeao">
+      <summary>Estimativa de Gastos <span class="acordeao-hint">edite os valores</span></summary>
+      <table class="custo-tabela" id="custo-d10">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
-          <tr><td>AirTrain (JFK, embarque)</td><td class="num">US$ 17</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d10-r1-item">AirTrain (JFK, embarque)</td><td class="num" contenteditable="true" data-persist-key="d10-r1-val">US$ 17</td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d10-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d10-e1-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d10-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d10-e2-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d10-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d10-e3-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d10-e4-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d10-e4-val"></td></tr>
         </tbody>
         <tfoot><tr><td>Total do dia</td><td class="num">US$ 17</td></tr></tfoot>
       </table>
+      </details>
 
     </div>
   </article>
@@ -2054,6 +2095,181 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
 </section>
 
 <!-- ══════════════════════════════════════════
+     ROTEIRO MACRO
+══════════════════════════════════════════ -->
+<section id="roteiro-macro">
+  <div class="macro-head">
+    <h2 class="sec-h2"><em>Roteiro Macro</em></h2>
+    <span class="handle">@vamoscarimbar</span>
+  </div>
+  <div class="secao-head" style="margin-top:-24px;margin-bottom:36px;">
+    <p>Um dia, uma região. Três dias com base em Manhattan, sete em Yonkers com bate-voltas de trem.</p>
+  </div>
+
+  <div class="macro-grid">
+
+    <a href="#d1" class="macro-card">
+      <div class="macro-card-head">
+        <div class="dia-num"><span class="lbl">Dia</span><span class="num">01</span></div>
+        <div class="tema"><span class="t">Chegada &amp; Midtown</span><span class="base">Base: Carlton Arms</span></div>
+      </div>
+      <div class="macro-card-body">
+        <div class="item">JFK 14h30 · AirTrain + metrô</div>
+        <div class="item">Check-in Carlton Arms</div>
+        <div class="item">Madison Square Park · Flatiron</div>
+        <div class="item">Loja Harry Potter</div>
+        <div class="item">Koreatown · Empire State · Herald Sq</div>
+        <div class="item">Bryant Park · Biblioteca Pública</div>
+        <div class="item key">Times Square à noite</div>
+      </div>
+    </a>
+
+    <a href="#d2" class="macro-card">
+      <div class="macro-card-head">
+        <div class="dia-num"><span class="lbl">Dia</span><span class="num">02</span></div>
+        <div class="tema"><span class="t">Nascer do Sol &amp; Estátua</span><span class="base">Base: Carlton Arms</span></div>
+      </div>
+      <div class="macro-card-body">
+        <div class="item key">Nascer do sol no DUMBO · 6h40</div>
+        <div class="item">Washington St · Pebble Beach</div>
+        <div class="item">Travessia da Brooklyn Bridge</div>
+        <div class="item key">Estátua da Liberdade + Ellis</div>
+        <div class="item">Financial District · Wall St</div>
+        <div class="item">Chinatown · Mei Lai Wah · Kam Hing</div>
+        <div class="item key">Staten Island Ferry no pôr do sol</div>
+      </div>
+    </a>
+
+    <a href="#d3" class="macro-card">
+      <div class="macro-card-head">
+        <div class="dia-num"><span class="lbl">Dia</span><span class="num">03</span></div>
+        <div class="tema"><span class="t">Midtown &amp; Mudança</span><span class="base">Carlton → Yonkers</span></div>
+      </div>
+      <div class="macro-card-body">
+        <div class="item">Checkout · malas guardadas</div>
+        <div class="item">FRIENDS Experience · 10h</div>
+        <div class="item">Grand Central · Chrysler · Rockefeller</div>
+        <div class="item">Quinta Avenida · Plaza · Paley Park</div>
+        <div class="item">Roosevelt Island · teleférico</div>
+        <div class="item key">SUMMIT One Vanderbilt no pôr do sol</div>
+        <div class="item">Metro-North → check-in Yonkers</div>
+      </div>
+    </a>
+
+    <a href="#d4" class="macro-card">
+      <div class="macro-card-head">
+        <div class="dia-num"><span class="lbl">Dia</span><span class="num">04</span></div>
+        <div class="tema"><span class="t">West Side &amp; Village</span><span class="base">Bate-volta de Yonkers</span></div>
+      </div>
+      <div class="macro-card-body">
+        <div class="item">Hudson Yards · Vessel · The Shed</div>
+        <div class="item key">High Line inteira</div>
+        <div class="item">Chelsea Market · Pier 57 · Little Island</div>
+        <div class="item">West Village · 90 Bedford · Washington Sq</div>
+        <div class="item key">Museu de História Natural GRÁTIS · 16h30</div>
+        <div class="item key">Smorgasburg Central Park · jantar</div>
+        <div class="item">Times Square à noite</div>
+      </div>
+    </a>
+
+    <a href="#d5" class="macro-card">
+      <div class="macro-card-head">
+        <div class="dia-num"><span class="lbl">Dia</span><span class="num">05</span></div>
+        <div class="tema"><span class="t">Central Park &amp; San Gennaro</span><span class="base">Bate-volta de Yonkers</span></div>
+      </div>
+      <div class="macro-card-body">
+        <div class="item">The Pond · Gapstow Bridge</div>
+        <div class="item">The Mall · Sheep Meadow · Bethesda</div>
+        <div class="item">Belvedere Castle</div>
+        <div class="item">MET e Guggenheim por fora</div>
+        <div class="item">Quinta Avenida · Museum Mile</div>
+        <div class="item">SoHo · NoLita</div>
+        <div class="item key">Festa de San Gennaro · centenário</div>
+      </div>
+    </a>
+
+    <a href="#d6" class="macro-card">
+      <div class="macro-card-head">
+        <div class="dia-num"><span class="lbl">Dia</span><span class="num">06</span></div>
+        <div class="tema"><span class="t">Hudson Valley</span><span class="base">Metro-North off-peak</span></div>
+      </div>
+      <div class="macro-card-body">
+        <div class="item">Tarrytown · Main Street · cafés</div>
+        <div class="item">RiverWalk · centro histórico</div>
+        <div class="item">Trem para Cold Spring</div>
+        <div class="item">Main Street · antiquários · almoço</div>
+        <div class="item key">Pôr do sol na orla do Hudson</div>
+        <div class="item">Volta sem pressa</div>
+      </div>
+    </a>
+
+    <a href="#d7" class="macro-card">
+      <div class="macro-card-head">
+        <div class="dia-num"><span class="lbl">Dia</span><span class="num">07</span></div>
+        <div class="tema"><span class="t">Culto &amp; Coney Island</span><span class="base">Bate-volta de Yonkers</span></div>
+      </div>
+      <div class="macro-card-body">
+        <div class="item key">Times Square Church · 10h</div>
+        <div class="item">Trem N direto para Coney</div>
+        <div class="item">Nathan's Famous original</div>
+        <div class="item">Boardwalk · praia · Luna Park</div>
+        <div class="item">Cyclone · Wonder Wheel</div>
+        <div class="item key">Pôr do sol na orla</div>
+      </div>
+    </a>
+
+    <a href="#d8" class="macro-card">
+      <div class="macro-card-head">
+        <div class="dia-num"><span class="lbl">Dia</span><span class="num">08</span></div>
+        <div class="tema"><span class="t">Yonkers Local</span><span class="base">Vida americana</span></div>
+      </div>
+      <div class="macro-card-body">
+        <div class="item">Manhã sem despertador · varanda</div>
+        <div class="item">Bairro residencial a pé</div>
+        <div class="item">Old Croton Aqueduct Trail</div>
+        <div class="item">Untermyer Gardens · grátis</div>
+        <div class="item">Hudson River Museum ou Trevor Park</div>
+        <div class="item">Mercado · rotina americana</div>
+        <div class="item">Opcional: NY Liberty no Barclays</div>
+      </div>
+    </a>
+
+    <a href="#d9" class="macro-card">
+      <div class="macro-card-head">
+        <div class="dia-num"><span class="lbl">Dia</span><span class="num">09</span></div>
+        <div class="tema"><span class="t">Coringa</span><span class="base">O dia do que amamos</span></div>
+      </div>
+      <div class="macro-card-body">
+        <div class="item">Voltar em Cold Spring ou Tarrytown</div>
+        <div class="item">Repetir DUMBO ou Central Park</div>
+        <div class="item">Compras · outlet · Downtown Yonkers</div>
+        <div class="item">Recuperar bloco perdido por chuva</div>
+        <div class="item">Jogo da Liberty se cair nesta data</div>
+        <div class="item">Ou simplesmente a varanda</div>
+      </div>
+    </a>
+
+    <a href="#d10" class="macro-card">
+      <div class="macro-card-head">
+        <div class="dia-num"><span class="lbl">Dia</span><span class="num">10</span></div>
+        <div class="tema"><span class="t">Última Manhã &amp; JFK</span><span class="base">Voo 19h50</span></div>
+      </div>
+      <div class="macro-card-body">
+        <div class="item">Café e última caminhada em Yonkers</div>
+        <div class="item">Fechar malas · checkout 11h</div>
+        <div class="item">Almoço sem pressa</div>
+        <div class="item">Saída 13h30–14h</div>
+        <div class="item key">Metro-North → LIRR → AirTrain → JFK</div>
+        <div class="item">Chegada ~16h/16h30</div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-principal">Menu Principal</a></div>
+</section>
+
+<!-- ══════════════════════════════════════════
      HAMBURGER / DRAWER
 ══════════════════════════════════════════ -->
 <script>
@@ -2096,9 +2312,8 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
 (function(){
   var PREFIX = 'ny-fabi-eric-custo-';
 
-  function parseMoney(str){
-    if (!str) return 0;
-    var m = str.replace(/[^\d.,]/g, '');
+  function parseOneAmount(str){
+    var m = (str || '').replace(/[^\d.,]/g, '');
     if (!m) return 0;
     // trata "1.234,56" (milhar+decimal BR) e "23,50" (decimal BR) e "23.50" (decimal US)
     if (m.indexOf(',') > -1 && m.indexOf('.') > -1) {
@@ -2108,6 +2323,18 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
     }
     var n = parseFloat(m);
     return isNaN(n) ? 0 : n;
+  }
+
+  function parseMoney(str){
+    if (!str) return 0;
+    // faixas tipo "US$ 51–62" — usa a média, senão o traço somaria os dois números juntos
+    var rangeParts = str.split('–');
+    if (rangeParts.length === 2) {
+      var a = parseOneAmount(rangeParts[0]);
+      var b = parseOneAmount(rangeParts[1]);
+      if (a && b) return (a + b) / 2;
+    }
+    return parseOneAmount(str);
   }
 
   function recalc(table){
@@ -2121,17 +2348,9 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
 
     var article = table.closest('article.day');
     if (article) {
-      var facts = article.querySelectorAll('.facts .fact');
-      facts.forEach(function(f){
-        var k = f.querySelector('.k');
-        if (k && k.textContent.trim() === 'Custo do dia') {
-          var v = f.querySelector('.v');
-          if (v) {
-            var link = v.querySelector('a');
-            var text = '~US$ ' + totalRounded + ' (casal)';
-            if (link) link.textContent = text; else v.textContent = text;
-          }
-        }
+      var text = '~US$ ' + totalRounded;
+      article.querySelectorAll('.custo-total-link').forEach(function(link){
+        link.textContent = text;
       });
     }
   }
