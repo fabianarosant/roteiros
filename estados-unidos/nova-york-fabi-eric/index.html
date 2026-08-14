@@ -235,8 +235,8 @@ body {
 .day-overview .dia-num { display: flex; align-items: baseline; gap: 5px; }
 .day-overview .dia-num .lbl { font-family: 'Pinyon Script', cursive; font-size: 27px; color: var(--azul); line-height: 1; }
 .day-overview .dia-num .num { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 100; font-size: 19px; line-height: 1; color: var(--azul); letter-spacing: -0.5px; }
-.day-overview ol { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 7px 22px; }
-.day-overview li { display: flex; align-items: baseline; gap: 9px; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-soft); line-height: 1.35; }
+.day-overview ol { list-style: none; column-count: 2; column-gap: 22px; }
+.day-overview li { display: flex; align-items: baseline; gap: 9px; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-soft); line-height: 1.35; margin-bottom: 7px; break-inside: avoid; }
 .day-overview li .ov-num { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 700; color: var(--azul); flex-shrink: 0; width: 16px; text-align: right; }
 
 .tl { list-style: none; position: relative; }
@@ -285,6 +285,8 @@ body {
 .insp-imgs img { display: block; width: 100%; aspect-ratio: 3/4; object-fit: cover; border: 1px solid var(--hairline-b); background: var(--paper-deep); }
 .insp-imgs figure.is-placeholder { display: none; }
 .insp-imgs figcaption { font-family: 'DM Sans', sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; color: var(--azul-medio); margin-top: 5px; text-align: center; }
+.insp-dica { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-mute); margin: 9px 0 0; }
+.insp-dica b { color: var(--ink-soft); }
 
 .shop { margin: 4px 0 0; }
 .shop summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--azul); }
@@ -310,7 +312,7 @@ body {
 .tl > li.walk-li { padding: 0 0 10px 20px; min-height: 0; }
 .tl > li.walk-li .dot { display: none; }
 .tl > li.walk-li::before { left: 4px; top: 11px; }
-.walk-txt { font-family: 'DM Sans', sans-serif; font-size: 11.5px; letter-spacing: 0.5px; text-transform: uppercase; color: var(--ink-mute); font-weight: 700; display: flex; align-items: center; gap: 6px; }
+.walk-txt { font-family: 'DM Sans', sans-serif; font-size: 11.5px; letter-spacing: 0.5px; text-transform: uppercase; color: var(--ink-mute); font-weight: 700; line-height: 1.5; }
 .walk-txt b { color: var(--azul); font-weight: 700; }
 
 /* ══ ROTA — trajeto de metrô/trem passo a passo ══ */
@@ -406,7 +408,7 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
   .day-body { padding-left: 12px; padding-right: 12px; }
   .facts { grid-template-columns: repeat(2, 1fr); }
   .fact:first-child { grid-column: 1 / -1; }
-  .day-overview ol { grid-template-columns: 1fr; }
+  .day-overview ol { column-count: 1; }
 }
 
 </style>
@@ -501,8 +503,8 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
         </div>
         <div class="menu-dias-grid">
           <a href="#d1"><span class="dp-dia">Dia 01</span><span class="dp-data">14/09 · SEG</span><span class="dp-tema">Chegada NYC</span></a>
-          <a href="#d2"><span class="dp-dia">Dia 02</span><span class="dp-data">15/09 · TER</span><span class="dp-tema">Estátua Liberdade</span></a>
-          <a href="#d3"><span class="dp-dia">Dia 03</span><span class="dp-data">16/09 · QUA</span><span class="dp-tema">Midtown SUMMIT</span></a>
+          <a href="#d2"><span class="dp-dia">Dia 02</span><span class="dp-data">15/09 · TER</span><span class="dp-tema">Brooklyn & Estátua</span></a>
+          <a href="#d3"><span class="dp-dia">Dia 03</span><span class="dp-data">16/09 · QUA</span><span class="dp-tema">Quinta Avenida</span></a>
           <a href="#d4"><span class="dp-dia">Dia 04</span><span class="dp-data">17/09 · QUI</span><span class="dp-tema">West Village</span></a>
           <a href="#d5"><span class="dp-dia">Dia 05</span><span class="dp-data">18/09 · SEX</span><span class="dp-tema">San Gennaro</span></a>
           <a href="#d6"><span class="dp-dia">Dia 06</span><span class="dp-data">19/09 · SÁB</span><span class="dp-tema">Hudson Valley</span></a>
@@ -812,7 +814,7 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
   <!-- DIA 2 -->
   <article class="day" id="d2">
     <div class="day-head">
-      <h3><small>Terça · 15 de setembro</small>Nascer do sol, Estátua &amp; Downtown</h3>
+      <h3><small>Terça · 15 de setembro</small>Brooklyn, Financial &amp; Estátua</h3>
       <a href="#custo-d2" class="badge custo-total-link">~US$ 74</a>
     </div>
     <div class="day-body">
@@ -823,19 +825,21 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <span class="ov-label">Visão geral</span>
         </div>
         <ol>
-          <li><span class="ov-num">1</span>Washington Street</li>
-          <li><span class="ov-num">2</span>Pebble Beach &amp; Brooklyn Bridge Park</li>
-          <li><span class="ov-num">3</span>Brooklyn Bridge</li>
-          <li><span class="ov-num">4</span>Castle Clinton</li>
-          <li><span class="ov-num">5</span>Liberty Island</li>
-          <li><span class="ov-num">6</span>Ellis Island</li>
-          <li><span class="ov-num">7</span>Charging Bull &amp; Fearless Girl</li>
-          <li><span class="ov-num">8</span>Wall Street &amp; Trinity Church</li>
-          <li><span class="ov-num">9</span>Stone Street</li>
-          <li><span class="ov-num">10</span>Memorial do 11 de Setembro</li>
-          <li><span class="ov-num">11</span>Oculus</li>
-          <li><span class="ov-num">12</span>Chinatown</li>
-          <li><span class="ov-num">13</span>Staten Island Ferry</li>
+          <li><span class="ov-num">1</span>Ponte do Brooklyn</li>
+          <li><span class="ov-num">2</span>Washington Street</li>
+          <li><span class="ov-num">3</span>Pebble Beach &amp; Brooklyn Bridge Park</li>
+          <li><span class="ov-num">4</span>Time Out Market &amp; Rooftop gratuito</li>
+          <li><span class="ov-num">5</span>Brooklyn Bridge Park · Pier 1</li>
+          <li><span class="ov-num">6</span>Oculus</li>
+          <li><span class="ov-num">7</span>Memorial do 11 de Setembro</li>
+          <li><span class="ov-num">8</span>Trinity Church</li>
+          <li><span class="ov-num">9</span>Wall Street &amp; NYSE</li>
+          <li><span class="ov-num">10</span>Fearless Girl</li>
+          <li><span class="ov-num">11</span>Charging Bull</li>
+          <li><span class="ov-num">12</span>Stone Street</li>
+          <li><span class="ov-num">13</span>Battery Park</li>
+          <li><span class="ov-num">14</span>Staten Island Ferry</li>
+          <li><span class="ov-num">15</span>Rooftop Pier 17</li>
         </ol>
       </div>
 
@@ -848,138 +852,282 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
       </div>
       <div class="note warn">
         <span class="lbl">Antes de dormir na segunda</span>
-        Deixem tudo pronto: roupa separada, celulares carregados, ingresso da Estátua salvo <b>offline</b> e água na mochila. <b>Resolvam o banheiro no hotel</b> — os do parque em DUMBO abrem mais tarde. Confiram o horário do trem F no app antes de sair: nesse horário ele passa a cada 10–15 min.
+        Deixem tudo pronto: roupa separada, celulares carregados e água na mochila. <b>Resolvam o banheiro no hotel</b> — os do parque em DUMBO abrem mais tarde. Confiram o horário do trem C no app antes de sair: nesse horário ele passa a cada 10–15 min.
       </div>
 
       <ul class="tl">
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s14"><span class="check-box"></span></label><span class="stop-title">Saída do Carlton</span></h4>
-          <span class="time-below">5h50</span>
-          <p>A pé até a estação <b>23rd St (F/M)</b>, na 6ª Avenida. Trem <b>F</b> sentido Brooklyn até <b>York St</b> — a estação já é dentro do DUMBO.</p>
-          <p class="sub">~12 min a pé + ~25 min de trem. Fuso Brasil–NY é de só 1h em setembro: 5h50 lá é 6h50 no corpo de vocês.</p></div></li>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s14"><span class="check-box"></span></label><span class="stop-title">Carlton → Brooklyn Bridge</span></h4>
+          <span class="time-below">5h55</span>
+
+          <div class="rota-card">
+            <div class="rota-etapa">
+              <span class="linha-badge circulo linha-6">6</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>23 St–Baruch College</b> · direção <b>Brooklyn Bridge–City Hall</b></span>
+                <span class="rota-meta">1 parada · ~4 min → descer em <span class="descida">Brooklyn Bridge–City Hall</span> (fim da linha)</span>
+              </div>
+            </div>
+            <div class="rota-transfer">👣 ~5 min a pé até a Fulton St — complexos vizinhos, sem precisar de outro trem</div>
+            <div class="rota-etapa">
+              <span class="linha-badge pill linha-e">A/C</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Fulton St</b> · sentido Brooklyn</span>
+                <span class="rota-meta">1 parada · 3 min → descer em <span class="descida">High St–Brooklyn Bridge</span></span>
+              </div>
+            </div>
+            <div class="rota-transfer">👣 5 min até a entrada da ponte, via Cadman Plaza Park</div>
+          </div>
+          <p class="sub">US$ 3 por pessoa. Como a troca é a pé, entre estações diferentes, pode contar como 2 taps no OMNY em vez de 1 — a confirmar no dia, olhando o app. Fuso Brasil–NY é de só 1h em setembro: 5h55 lá é 6h55 no corpo de vocês.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 Saiam da estação em direção ao <b>Cadman Plaza Park</b> e subam a rampa de pedestres na <b>Tillary St / Adams St</b> — é a entrada da ponte.</div></li>
+
+        <li class="hi"><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s105"><span class="check-box"></span></label><span class="stop-title">Ponte do Brooklyn · nascer do sol</span></h4>
+          <span class="time-below">6h30</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>Inaugurada em 1883 depois de 14 anos de obra, a Brooklyn Bridge foi projetada por John A. Roebling, que morreu de tétano antes mesmo do início da construção, num acidente bobo enquanto media o ponto de apoio da ponte. O filho dele, Washington Roebling, assumiu a obra e ficou parcialmente paralisado pela doença descompressiva que pegou trabalhando nos caixões pressurizados debaixo d'água — passou os últimos anos da construção dirigindo tudo da janela do apartamento, com binóculos, tendo a esposa Emily Roebling como elo entre ele e o canteiro de obras. Na época, foi a maior ponte suspensa do mundo e a primeira construída com cabos de aço.</p>
+            <p>De manhã cedo, antes das 7h, a ponte pertence a quem mora ali: corredores, ciclistas indo trabalhar, pouquíssimos turistas. À tarde vira outra coisa — uma das passarelas mais lotadas de Nova York, com fila pra foto em cada ponto icônico. Em 1884, um ano depois da inauguração, P.T. Barnum atravessou a ponte com 21 elefantes de circo pra provar ao público que ela era segura — um boato de que a estrutura estava desabando tinha causado, pouco antes, um tumulto que matou 12 pessoas. Hoje, o maior risco de andar por ali de manhã cedo é levar uma buzinada de ciclista por pisar na faixa errada.</p>
+          </div></details>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+            <p class="insp-dica">No primeiro terço da caminhada os cabos de aço começam a se cruzar formando um desenho geométrico bem bonito — parem no meio da passarela de madeira para fotos verticais. Não atravessem a ponte inteira até Manhattan: caminhem só até o meio, onde fica o segundo arco de pedra, pra tirar as fotos clássicas de frente pra cidade. Depois voltem pela própria ponte em direção ao Brooklyn — antes do fim da rampa tem uma escada de metal à esquerda (placa "Under the Bridge / Washington St") que desce direto no coração do DUMBO.</p>
+          </details></div></li>
 
         <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s15"><span class="check-box"></span></label><span class="stop-title">Washington Street · o take icônico</span></h4>
-          <span class="time-below">6h35</span>
-          <p>A rua de paralelepípedo emoldurando a Manhattan Bridge, com o Empire State no vão. Chegando 6h35 vocês pegam o céu já claro e o sol nascendo às 6h40.</p>
-          <p class="sub">📸 A luz do nascente bate <b>de frente</b> em Manhattan vista do DUMBO — prédios dourados, não silhueta. É o take que não existe à tarde. Espere dividir o ângulo com 2 ou 3 fotógrafos de tripé.</p></div></li>
-      
+          <span class="time-below">7h30</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>A sigla DUMBO significa "Down Under the Manhattan Bridge Overpass" — batizada assim nos anos 1970 por moradores que queriam um nome feio o bastante pra afastar especuladores imobiliários (não funcionou). Até os anos 1980 essa esquina era pura zona industrial: fábricas de caixas, moinhos de café, armazéns de carga. O Manhattan Bridge, inaugurado em 1909, corta o céu bem no meio da rua desde então, moldando o quarteirão.</p>
+            <p>De manhã cedo, antes das 8h, é uma rua vazia — moradores levando cachorro pra passear, um ou outro fotógrafo de tripé. Depois das 9h vira ponto obrigatório de qualquer roteiro de Nova York, com fila pra tirar a mesma foto no meio da rua. A cena virou tão icônica que aparece em capa de disco, ensaio de casamento e comercial de TV — hoje é provavelmente a esquina mais fotografada de um bairro que já foi só galpão.</p>
+          </div></details>
+          <p>A rua de paralelepípedo emoldurando a Manhattan Bridge, com o Empire State no vão. Nesse horário o céu já está claro, logo depois do nascer do sol.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+            <p class="insp-dica">A luz do nascente bate <b>de frente</b> em Manhattan vista do DUMBO — prédios dourados, não silhueta. É o take que não existe à tarde. Espere dividir o ângulo com 2 ou 3 fotógrafos de tripé.</p>
+          </details></div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🏪</span><span class="pit-body">No caminho, uma quadra: <b>7-Eleven</b> — opção pra comer algo barato.</span></div></li>
+
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>5 min</b> · descendo a Washington até a água</div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s16"><span class="check-box"></span></label><span class="stop-title">Pebble Beach &amp; Brooklyn Bridge Park</span></h4>
-          <span class="time-below">7h05</span>
-          <p>A praia de pedras embaixo da ponte, com Manhattan inteira do outro lado. Jane's Carousel por fora (só abre 11h).</p></div></li>
+          <span class="time-below">8h00</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>Pebble Beach nasceu dentro do Brooklyn Bridge Park, inaugurado por trechos entre 2010 e 2021 sobre o que antes eram docas e armazéns portuários abandonados desde os anos 1980. A "praia" de pedras foi desenhada de propósito pra imitar um trecho de litoral natural, funcionando também como parte do sistema de drenagem do parque.</p>
+            <p>É um dos poucos pontos de Nova York de onde dá pra ver as duas pontes — Brooklyn e Manhattan — lado a lado, com o rio na frente. De manhã é point de morador sentado com café antes do trabalho; à tarde enche de gente com cadeira de praia e piquenique.</p>
+          </div></details>
+          <p>A prainha de pedras à beira do rio. A vista mais linda e limpa das duas pontes juntas (Brooklyn e Manhattan) e do horizonte de Nova York — um lugar maravilhoso para sentar nos degraus de madeira e relaxar.</p>
+          <p class="sub">Jane's Carousel e The Max Family Garden ficam ali por perto.</p></div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s17"><span class="check-box"></span></label><span class="stop-title">Café da manhã em DUMBO</span></h4>
-          <span class="time-below">7h40</span>
-          <p class="sub">As cafeterias abrem entre 7h e 8h. Brooklyn Roasting Company e Butler são as primeiras a levantar a porta. 🚻 Aproveitem o banheiro aqui.</p></div></li>
-      
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s17"><span class="check-box"></span></label><span class="stop-title">Time Out Market &amp; Rooftop gratuito</span></h4>
+          <span class="time-below">9h00</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>O prédio que abriga o Time Out Market é o Empire Stores, um conjunto de armazéns de tijolo aparente construído entre 1869 e 1885 pra guardar café, açúcar e outras cargas que chegavam pelo porto do Brooklyn. Ficou abandonado por décadas até ser restaurado e reaberto em 2017 como espaço comercial, mantendo a estrutura original de ferro fundido e tijolo por dentro.</p>
+            <p>Hoje reúne mais de 20 vendors de comida dentro do mesmo prédio que já guardou café cru vindo da América Latina. De manhã é tranquilo — abre às 8h, ainda sem a fila do almoço — e o rooftop do 5º andar, com vista pro skyline de Manhattan e pra própria Brooklyn Bridge, é gratuito o dia inteiro.</p>
+          </div></details>
+          <p>Food hall de frente pro rio, dentro do prédio histórico do Empire Stores (55 Water St). Café da manhã à la carte, com opções de sobra pra cada gosto — abre às 8h.</p>
+          <p class="sub">🌇 Rooftop gratuito no 5º andar. 🚻 Aproveitem o banheiro aqui.</p></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>12 min</b> · subida pela Washington / Prospect St até a rampa da ponte</div></li>
+          <div class="walk-txt">👣 à esquerda, sul pela trilha do parque</div></li>
 
-        <li class="hi"><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s18"><span class="check-box"></span></label><span class="stop-title">Travessia da Brooklyn Bridge</span></h4>
-          <span class="time-below">8h20</span>
-          <p>2,1 km de passarela de madeira até Manhattan. ~35 min com paradas para foto. Nesse horário vocês estarão no fluxo de quem vai trabalhar — movimentada, mas sem a multidão turística da tarde.</p>
-          <p class="sub">📸 As torres de pedra com os cabos abrindo em leque são o take. Fique na faixa de pedestres, não na de bicicleta.</p></div></li>
-      
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s106"><span class="check-box"></span></label><span class="stop-title">Brooklyn Bridge Park · Pier 1</span></h4>
+          <span class="time-below">9h20</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>O Pier 1 foi o primeiro trecho do Brooklyn Bridge Park a abrir, em 2010, construído sobre um antigo terminal de carga portuário desativado nos anos 1980. A escadaria que dá nome ao Granite Prospect foi montada com blocos de meio-fio reaproveitados das próprias ruas de Manhattan, retirados durante obras de repavimentação pela cidade — material de rua virado anfiteatro ao ar livre.</p>
+            <p>É o mirante mais alto e mais aberto do parque, de frente pro rio e pra silhueta inteira de Manhattan. De manhã cedo tem pouca gente — morador fazendo alongamento, alguém lendo num banco — bem diferente do fim de tarde, quando lota de gente esperando o pôr do sol.</p>
+          </div></details>
+          <p>Subam a grande escadaria de granito (Granite Prospect) para ter a vista panorâmica mais limpa de toda a linha de arranha-céus de Manhattan.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+          </details></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>20 min</b> · descida no City Hall + caminhada sul até Battery Park · ou 4/5 de Brooklyn Bridge a Bowling Green (5 min)</div></li>
+          <div class="walk-txt">👣 do Pier 1 até a High St</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s107"><span class="check-box"></span></label><span class="stop-title">High St → Fulton St · rumo ao Oculus</span></h4>
+          <span class="time-below">9h50</span>
+
+          <div class="rota-card">
+            <div class="rota-etapa">
+              <span class="linha-badge pill linha-e">A/C</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>High St–Brooklyn Bridge</b> · sentido Manhattan</span>
+                <span class="rota-meta">1 parada · 3 min → descer em <span class="descida">Fulton St</span></span>
+              </div>
+            </div>
+            <div class="rota-transfer">👣 Dey Street Passageway — túnel interno até o Oculus</div>
+          </div></div></li>
 
         <li class="hi"><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s19"><span class="check-box"></span></label><span class="stop-title">Castle Clinton · segurança da Estátua</span></h4>
-          <span class="time-below">9h30</span>
-          <p><b>O horário do ingresso é a hora de chegar na fila da segurança</b>, não a da partida do barco. Reservem o slot das <b>9h30</b>, não das 9h — a ponte pode atrasar 15 min fácil.</p>
-          <p class="sub">Triagão estilo aeroporto: 20–30 min. Só a <b>Statue City Cruises</b> desembarca nas ilhas — ignorem qualquer vendedor na rua.</p></div></li>
-
-        <li class="hi"><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s20"><span class="check-box"></span></label><span class="stop-title">Liberty Island</span></h4>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s27"><span class="check-box"></span></label><span class="stop-title">Oculus</span></h4>
           <span class="time-below">10h00</span>
-          <p>Ferry de 15 min. Fique no deck superior na aproximação: a estátua cresce de silhueta a figura de cobre.</p>
-          <p class="sub">🎧 Museu da Estátua (com a tocha original) + Liberty Vista no topo. Audioguia incluso <b>em português</b>. 🚻 Banheiros na ilha. Reservem 1h a 1h30.</p></div></li>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>O Oculus foi inaugurado em 2016, projetado por Santiago Calatrava pra ser o novo hub de trens que substituiu a antiga estação do PATH destruída no 11 de Setembro. Com um custo estimado em quase US$ 4 bilhões, é considerada a estação de trem mais cara já construída no mundo — cada uma das "costelas" brancas de aço que formam o teto pesa mais de 700 toneladas.</p>
+            <p>Todo dia 11 de setembro, se o tempo permitir, a claraboia central se abre de verdade, deixando entrar luz e ar direto do céu — um gesto simbólico de memória. No resto do ano é um misto de estação badalada e shopping (o Westfield World Trade Center fica embutido ali dentro): de manhã tem gente de mochila correndo pro trem, e ao longo do dia vira point de compra e de fotógrafo tentando enquadrar a arquitetura toda branca.</p>
+          </div></details>
+          <p>A "costela de baleia" branca de Calatrava, com o Westfield World Trade Center embutido dentro.</p>
+          <p class="sub">🍕 Tem uma Eataly ali dentro com pizza barata. 🚻 Banheiros bons e gratuitos aqui.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+            <p class="insp-dica">Desçam até o piso inferior e fotografem olhando pra cima — é o ângulo que mostra as costelas brancas se abrindo em leque contra o teto de vidro.</p>
+          </details></div></li>
 
-        <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s21"><span class="check-box"></span></label><span class="stop-title">Ellis Island</span></h4>
-          <span class="time-below">12h00</span>
-          <p>Museu da Imigração no prédio restaurado: Great Hall, sala de bagagens, registro. O audioguia leva 45–60 min.</p>
-          <p class="sub">⚠️ Se o dia atrasar, <b>o corte é aqui</b> — nunca na Estátua.</p></div></li>
-
-        <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s22"><span class="check-box"></span></label><span class="stop-title">Volta ao Battery Park</span></h4>
-          <span class="time-below">14h00</span></div></li>
-      
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>4 min</b> · do píer até Bowling Green</div></li>
+          <div class="walk-txt">👣 <b>1 min</b> · saindo pelas portas de vidro do Oculus</div></li>
+
+        <li class="hi"><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s26"><span class="check-box"></span></label><span class="stop-title">Memorial do 11 de Setembro</span></h4>
+          <span class="time-below">10h20</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>O memorial "Reflecting Absence", com as duas piscinas nas pegadas exatas das torres, foi inaugurado em 11 de setembro de 2011, no décimo aniversário do ataque, projetado pelo arquiteto Michael Arad. São as maiores cachoeiras artificiais da América do Norte, com água caindo 9 metros até sumir num vão central que nunca se enche — um símbolo de vazio permanente.</p>
+            <p>Os quase 3 mil nomes gravados em bronze nas bordas não seguem ordem alfabética: foram organizados por "adjacência significativa" — pedidos de família que queriam nomes de parentes, colegas de trabalho ou amigos próximos uns dos outros. De manhã cedo o lugar é mais silencioso, quase contemplativo; ao longo do dia enche de turista tirando foto ao lado das rosas brancas que voluntários deixam nos aniversários das vítimas.</p>
+          </div></details>
+          <p>As duas piscinas nas pegadas das torres. O memorial ao ar livre é <b>gratuito</b> — o museu é pago e fica de fora.</p>
+          <p class="sub">🍽️ Ali perto fica o Brookfield Place, com a praça de alimentação Hudson Eats — e banheiro. 🚻</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+            <p class="insp-dica">De manhã a luz lateral realça o relevo dos nomes em bronze nas bordas das piscinas — não precisa esperar o fim de tarde pro reflexo bonito.</p>
+          </details></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>4 min</b> · para o sul pela Greenwich St, vire à esquerda na Rector St</div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s23"><span class="check-box"></span></label><span class="stop-title">Charging Bull &amp; Fearless Girl</span></h4>
-          <span class="time-below">14h15</span>
-          <p class="sub">📸 O touro vive cercado de fila. A Fearless Girl fica hoje em frente à Bolsa, na Broad St.</p></div></li>
-      
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s108"><span class="check-box"></span></label><span class="stop-title">Trinity Church</span></h4>
+          <span class="time-below">10h45</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>A igreja atual — a terceira construída no mesmo terreno, desde a fundação original em 1697 sob carta real do rei Guilherme III — foi concluída em 1846, em estilo gótico. Sua torre de 85 metros foi o ponto mais alto de Nova York por quase 50 anos, até os primeiros arranha-céus da virada do século 20 passarem por cima dela. O cemitério ao lado guarda nomes da fundação dos Estados Unidos — o mais famoso é Alexander Hamilton, enterrado ali em 1804, dias depois do duelo fatal contra Aaron Burr.</p>
+            <p>De manhã, o pátio do cemitério — com lápides de mais de 200 anos — é um dos cantos mais silenciosos de todo o Financial District; a maioria dos turistas só fotografa a fachada de fora, sem entrar. Quem entra encontra um interior gótico em madeira escura, tetos abobadados e vitrais, um contraste completo com o vidro dos arranha-céus ao redor.</p>
+          </div></details>
+          <p>A igreja gótica no fim da Wall Street, com o cemitério histórico ao lado — Alexander Hamilton está enterrado ali.</p>
+          <p class="sub">🚻 Tem banheiro pra visitantes.</p></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>5 min</b> · subindo a Broadway</div></li>
+          <div class="walk-txt">👣 <b>1 min</b> · atravessando a Broadway direto para a rua de paralelepípedos à frente</div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s24"><span class="check-box"></span></label><span class="stop-title">Wall Street · Federal Hall · Trinity Church</span></h4>
-          <span class="time-below">14h40</span>
-          <p>O cânion de prédios da Wall St com a Trinity Church fechando a perspectiva no fim da rua.</p></div></li>
-      
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s24"><span class="check-box"></span></label><span class="stop-title">Wall Street &amp; Bolsa de Valores (NYSE)</span></h4>
+          <span class="time-below">11h00</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>Wall Street leva esse nome por causa de uma muralha de madeira de verdade, erguida em 1653 pelos colonos holandeses pra defender a fronteira norte de Nova Amsterdã. A muralha foi derrubada em 1699, mas o nome da rua ficou. O prédio neoclássico da Bolsa de Valores (NYSE), com as colunas e a bandeira gigante, é de 1903 — o pregão não é aberto ao público desde os anos 2000, então hoje é sobretudo ponto de foto da fachada. Bem na esquina fica o Federal Hall, onde George Washington fez o juramento de posse como primeiro presidente, em 1789.</p>
+            <p>De manhã bem cedo o trecho é surpreendentemente vazio — os corretores de verdade praticamente sumiram dos prédios físicos, já que o pregão hoje é quase todo eletrônico, e quem passa por ali de manhã é mais funcionário de escritório do que turista. A rua estreita entre prédios altos cria um efeito de cânion que só existe em poucos cantos de Manhattan.</p>
+          </div></details>
+          <p>O cânion de prédios estreito da Wall Street, com a fachada da Bolsa (NYSE) e sua bandeira gigante.</p></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>4 min</b> · pela Broad St</div></li>
+          <div class="walk-txt">👣 <b>0 min</b> · bem ali na esquina</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s109"><span class="check-box"></span></label><span class="stop-title">Fearless Girl · a Menina Destemida</span></h4>
+          <span class="time-below">11h05</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>A escultura de bronze foi instalada em março de 2017, na véspera do Dia Internacional da Mulher, como campanha de um fundo de investimentos — a ideia original era ficar só uma semana em frente ao Touro de Wall Street, olhando pra ele em desafio. A repercussão foi tão grande que a prefeitura estendeu a licença várias vezes.</p>
+            <p>Em 2018 ela foi realocada pra essa esquina, de frente pro prédio da Bolsa de Valores — um símbolo ainda mais direto sobre representação feminina no mercado financeiro. Hoje é ponto certo de fila pra foto, geralmente bem mais rápida que a do Touro.</p>
+          </div></details>
+          <p>A Menina Destemida, hoje de frente pra Bolsa de Valores.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+          </details></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>3 min</b> · voltando para a Broadway e descendo em direção ao sul</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s23"><span class="check-box"></span></label><span class="stop-title">Touro de Wall Street · Charging Bull</span></h4>
+          <span class="time-below">11h20</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>O touro de bronze foi criado por Arturo Di Modica e instalado ilegalmente, de madrugada, em frente à Bolsa de Valores em 1989 — uma intervenção de guerrilha feita depois do crash da bolsa de 1987, pra simbolizar "a força e o poder do povo americano". A polícia confiscou a escultura no dia seguinte, mas a repercussão popular foi tanta que a prefeitura reinstalou ela oficialmente a poucas quadras dali, em Bowling Green, onde está até hoje.</p>
+            <p>A cabeça, os chifres e o nariz do touro brilham de tanto que turista toca pra "dar sorte" — virou um dos rituais mais fotografados de Nova York, mesmo sem nenhuma base histórica real por trás do costume, só repetição. De manhã cedo a fila pra foto é bem menor que ao longo do dia.</p>
+          </div></details>
+          <p>O touro vive cercado de fila; de manhã cedo é bem mais tranquilo.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+          </details></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>2 min</b> · cruzem a Broadway para o lado leste, virem à esquerda na Whitehall St e entrem à direita na Stone St</div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s25"><span class="check-box"></span></label><span class="stop-title">Stone Street</span></h4>
-          <span class="time-below">15h10</span>
-          <p>Ruela de paralelepípedo com mesas na rua — o contraponto humano ao Financial District.</p></div></li>
-      
+          <span class="time-below">11h40</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>A Stone Street é uma das ruas mais antigas de Nova York — pavimentada com pedra em 1658, ainda sob domínio holandês, quando a cidade se chamava Nova Amsterdã. Foi uma das primeiras ruas pavimentadas da América, batizada assim justamente por causa disso.</p>
+            <p>Boa parte do trecho pegou fogo no Grande Incêndio de 1835, e os prédios que restaram — hoje ocupados por bares e restaurantes — foram reconstruídos logo depois, com fachadas de tijolo típicas do século 19. De dia é point de almoço de quem trabalha no Financial District; à noite vira point de happy hour lotado de mesa na rua.</p>
+          </div></details>
+          <p>Ruela de paralelepípedo com mesas na rua — o contraponto humano ao Financial District. Bom ponto pra parar e almoçar.</p></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>9 min</b> · norte pela Broadway até a Igreja de São Paulo</div></li>
+          <div class="walk-txt">👣 <b>5 min</b> · sigam até o final da Stone St, virem à direita na Coenties Slip e caminhem para o sul até o parque</div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s26"><span class="check-box"></span></label><span class="stop-title">Memorial do 11 de Setembro</span></h4>
-          <span class="time-below">15h35</span>
-          <p>As duas piscinas nas pegadas das torres. O memorial ao ar livre é <b>gratuito</b> — o museu é pago e fica de fora.</p>
-          <p class="sub">📸 Fim de tarde dá reflexo bonito na água escura e nos nomes em bronze.</p></div></li>
-      
-        <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>3 min</b> · atravessando a praça</div></li>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s22"><span class="check-box"></span></label><span class="stop-title">Battery Park</span></h4>
+          <span class="time-below">12h15</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>Battery Park leva esse nome por causa das baterias de canhão que defendiam o porto de Nova York aqui desde o período colonial. O forte dentro do parque, Castle Clinton, foi erguido em 1811 numa ilhota separada da costa — só depois, com aterro, a área virou parte contínua de Manhattan.</p>
+            <p>É a ponta mais ao sul da ilha, de frente pra baía inteira: Estátua da Liberdade, Ellis Island, Governors Island. De manhã tem corredor e ciclista contornando a orla; ao longo do dia enche de gente esperando ferry — seja o passeio pago da Estátua, seja o Staten Island Ferry gratuito.</p>
+          </div></details>
+          <p>Ponta sul de Manhattan, de frente pra baía inteira — Estátua da Liberdade e Ellis Island lá longe, na água.</p>
+          <p class="sub">🚻 Tem banheiro público no parque.</p></div></li>
 
-        <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s27"><span class="check-box"></span></label><span class="stop-title">Oculus</span></h4>
-          <span class="time-below">16h10</span>
-          <p>A "costela de baleia" branca de Calatrava. Desça até o piso inferior e fotografe olhando para cima.</p>
-          <p class="sub">🚻 Banheiros bons e gratuitos aqui. Aproveitem.</p></div></li>
-      
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>18 min</b> · pela Church St rumo norte até Canal · ou 1 min de metrô</div></li>
-
-        <li class="hi"><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s28"><span class="check-box"></span></label><span class="stop-title">Chinatown</span></h4>
-          <span class="time-below">16h45</span>
-          <p>Canal Street, Columbus Park (onde os senhores jogam xadrez e cartas), Doyers Street e a vista do arco da Manhattan Bridge na esquina Canal com Bowery.</p>
-          <p class="sub">⚠️ Chinatown <b>antes</b> do ferry, e não depois: as padarias e casas de dumpling fecham cedo.</p></div></li>
-
-        <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s29"><span class="check-box"></span></label><span class="stop-title">Jantar cedo em Chinatown</span></h4>
-          <span class="time-below">17h30</span>
-          <p class="sub">A refeição mais barata e mais gostosa da viagem inteira. Comam bem aqui — depois do ferry vocês só vão querer cama.</p></div></li>
-      
-        <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>10 min</b> de metrô · 4/5/6 de Canal St até Bowling Green, ou R/W até Whitehall</div></li>
+          <div class="walk-txt">👣 <b>3 min</b> · pela borda do parque até o Whitehall Terminal</div></li>
 
         <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s30"><span class="check-box"></span></label><span class="stop-title">Staten Island Ferry no pôr do sol · GRÁTIS</span></h4>
-          <span class="time-below">18h30</span>
-          <p>Saída do Whitehall Terminal. 25 min de travessia cada trecho, saídas a cada 20–30 min. Ida e volta só pelo passeio, sem sair do terminal do outro lado.</p>
-          <p class="sub">📸 <b>Fique no lado direito na ida.</b> Vocês pegam a Estátua e o skyline na luz dourada indo, e Manhattan já iluminada voltando. Dois passeios pelo preço de zero.</p></div></li>
+          <span class="time-below">17h30</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>O ferry gratuito entre Manhattan e Staten Island existe desde 1905, quando a prefeitura assumiu o serviço que antes era operado por empresas privadas. Por quase um século cobrou uma tarifa simbólica — só uma moeda de 5 centavos por décadas — até virar totalmente gratuito em 1997, quando a prefeitura decidiu que tirar a catraca acelerava o embarque.</p>
+            <p>Hoje carrega cerca de 70 mil pessoas por dia, a maioria trabalhador fazendo o trajeto de rotina — mas pra quem visita, é a forma gratuita mais famosa de ver a Estátua da Liberdade de perto, sem fila de segurança nem ingresso. A travessia leva 25 minutos, direto pela baía.</p>
+          </div></details>
+          <p>Subam as escadas rolantes do Whitehall Terminal e embarquem às <b>17h30</b> pra ver a Estátua da Liberdade com o sol dourado. Passeio gratuito, 25 min de travessia cada trecho.</p>
+          <p class="sub">🚻 Banheiros no terminal.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+            <p class="insp-dica">Fiquem no lado direito na ida. Vocês pegam a Estátua e o skyline na luz dourada indo, e Manhattan já iluminada voltando — dois passeios pelo preço de zero.</p>
+          </details></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>12 min</b> · para o norte saindo do Whitehall Terminal, contornando a orla</div></li>
+
+        <li class="hi"><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s110"><span class="check-box"></span></label><span class="stop-title">Rooftop Pier 17 · gratuito</span></h4>
+          <span class="time-below">18h45</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>O Pier 17 atual foi inaugurado em 2018, parte da revitalização do South Street Seaport — substituiu um shopping dos anos 1980 que ficava no mesmo lugar, demolido depois de décadas decadente. O projeto é da SHoP Architects, mesmo escritório por trás de outros prédios marcantes de Nova York.</p>
+            <p>O rooftop é gratuito e aberto ao público fora dos dias de show (no verão vira casa de show ao ar livre com line-up graúdo). De noite, com a Brooklyn Bridge iluminada logo ali na frente e o rio embaixo, é um dos mirantes mais bonitos e menos conhecidos do Financial District — a maioria dos turistas nem sabe que existe.</p>
+          </div></details>
+          <p>Rooftop gratuito com vista aberta pra Brooklyn Bridge iluminada.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+            <p class="insp-dica">De noite, a ponte iluminada some no fundo escuro do céu — vale usar modo noturno ou apoiar o celular pra não borrar.</p>
+          </details></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>5 min</b> · até a estação Fulton St</div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s31"><span class="check-box"></span></label><span class="stop-title">Volta ao Carlton</span></h4>
-          <span class="time-below">20h15</span>
-          <p class="sub">Metrô <b>R/W</b> de Whitehall até 23rd St, ~20 min.</p></div></li>
+          <span class="time-below">19h30</span>
+
+          <div class="rota-card">
+            <div class="rota-etapa">
+              <span class="linha-badge pill linha-e">A/C</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Fulton St</b> · sentido Uptown (168 St)</span>
+                <span class="rota-meta">~6 paradas · ~14 min → descer em <span class="descida">23 St–8 Av</span></span>
+              </div>
+            </div>
+            <div class="rota-transfer">👣 ~16 min a pé até o Carlton Arms</div>
+          </div></div></li>
       </ul>
 
       <div class="eat">
@@ -998,14 +1146,17 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
       <table class="custo-tabela" id="custo-d2">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
-          <tr><td contenteditable="true" data-persist-key="d2-r1-item">Ingresso — Estátua da Liberdade + Ellis Island</td><td class="num" contenteditable="true" data-persist-key="d2-r1-val">US$ 51–62</td></tr>
-          <tr><td contenteditable="true" data-persist-key="d2-r2-item">Alimentação — café da manhã + lanches</td><td class="num" contenteditable="true" data-persist-key="d2-r2-val">~US$ 12–17</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d2-r1-item">Café da manhã — Time Out Market</td><td class="num" contenteditable="true" data-persist-key="d2-r1-val">~US$ 20</td></tr>
+          <tr><td><span class="omny-tap" title="Tap OMNY 3/12 — rumo ao teto grátis dos 7 dias">3</span><span class="ce-text" contenteditable="true" data-persist-key="d2-r2-item">Metrô — 6 + A/C até a ponte (Carlton → Brooklyn Bridge)</span></td><td class="num" contenteditable="true" data-persist-key="d2-r2-val">US$ 6</td></tr>
+          <tr><td><span class="omny-tap" title="Tap OMNY 4/12 — rumo ao teto grátis dos 7 dias">4</span><span class="ce-text" contenteditable="true" data-persist-key="d2-r3-item">Metrô — A/C até Fulton St (rumo ao Oculus)</span></td><td class="num" contenteditable="true" data-persist-key="d2-r3-val">US$ 6</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d2-r4-item">Lanches — 7-Eleven, Eataly</td><td class="num" contenteditable="true" data-persist-key="d2-r4-val">~US$ 10</td></tr>
+          <tr><td><span class="omny-tap" title="Tap OMNY 5/12 — rumo ao teto grátis dos 7 dias">5</span><span class="ce-text" contenteditable="true" data-persist-key="d2-r5-item">Metrô — A/C de Fulton St até 23 St–8 Av</span></td><td class="num" contenteditable="true" data-persist-key="d2-r5-val">US$ 6</td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d2-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d2-e1-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d2-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d2-e2-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d2-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d2-e3-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d2-e4-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d2-e4-val"></td></tr>
         </tbody>
-        <tfoot><tr><td>Total do dia</td><td class="num">~US$ 74</td></tr></tfoot>
+        <tfoot><tr><td>Total do dia</td><td class="num">~US$ 45</td></tr></tfoot>
       </table>
       </details>
 
@@ -1015,7 +1166,7 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
   <!-- DIA 3 -->
   <article class="day" id="d3">
     <div class="day-head">
-      <h3><small>Quarta · 16 de setembro</small>Midtown no talo &amp; mudança para Yonkers</h3>
+      <h3><small>Quarta · 16 de setembro</small>Quinta Avenida &amp; mudança para Yonkers</h3>
       <a href="#custo-d3" class="badge custo-total-link">~US$ 230</a>
     </div>
     <div class="day-body">
@@ -1026,141 +1177,150 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <span class="ov-label">Visão geral</span>
         </div>
         <ol>
-          <li><span class="ov-num">1</span>FRIENDS Experience</li>
-          <li><span class="ov-num">2</span>Madison Square Park &amp; Flatiron</li>
-          <li><span class="ov-num">3</span>Empire State · Koreatown · Herald Square</li>
-          <li><span class="ov-num">4</span>Bryant Park &amp; Biblioteca</li>
-          <li><span class="ov-num">5</span>Grand Central Terminal</li>
-          <li><span class="ov-num">6</span>Chrysler Building</li>
-          <li><span class="ov-num">7</span>Rockefeller · St. Patrick's · Radio City</li>
-          <li><span class="ov-num">8</span>Quinta Avenida · FAO Schwarz</li>
-          <li><span class="ov-num">9</span>Paley Park &amp; Greenacre Park</li>
-          <li><span class="ov-num">10</span>Roosevelt Island · teleférico</li>
-          <li><span class="ov-num">11</span>SUMMIT One Vanderbilt</li>
+          <li><span class="ov-num">1</span>Roosevelt Island · teleférico</li>
+          <li><span class="ov-num">2</span>Apple Store · 5ª Avenida</li>
+          <li><span class="ov-num">3</span>Tiffany &amp; Co.</li>
+          <li><span class="ov-num">4</span>Catedral de São Patrício</li>
+          <li><span class="ov-num">5</span>Rockefeller Center</li>
+          <li><span class="ov-num">6</span>Paley Park &amp; Greenacre Park</li>
+          <li><span class="ov-num">7</span>Grand Central Terminal</li>
+          <li><span class="ov-num">8</span>Chrysler Building</li>
         </ol>
       </div>
 
       <details class="dia-acordeao">
       <summary>Roteiro</summary>
       <div class="facts minimal">
+        <div class="fact"><span class="f-emoji">🏨</span><span class="v">Yonkers à noite</span></div>
         <div class="fact"><span class="f-emoji">☀️</span><span class="v">~19h00</span></div>
         <div class="fact"><span class="f-emoji">👣</span><span class="v">~9 km</span></div>
-        <div class="fact"><span class="f-emoji">🎟️</span><span class="v">FRIENDS + SUMMIT</span></div>
       </div>
       <div class="note">
-        <span class="lbl">Decisão de malas — vale US$ 8</span>
-        O Carlton guarda as malas de graça, mas isso obriga a voltar lá depois do SUMMIT (Grand Central → 25th St → Grand Central = <b>30 a 40 min de vaivém às 20h30</b>, com o trem para pegar). Um guarda-volumes <b>Bounce perto da Grand Central</b> custa ~US$ 8 e elimina esse trecho: vocês descem do SUMMIT, pegam as malas e embarcam. Recomendo o Bounce.
+        <span class="lbl">Dia mais aberto, de propósito</span>
+        Ainda não compramos os ingressos do FRIENDS Experience nem do SUMMIT One Vanderbilt — os dois ficam como encaixe flexível (aqui ou em outro dia). O núcleo fixo do dia é o passeio pela Quinta Avenida + Roosevelt Island.
       </div>
 
       <ul class="tl">
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s32"><span class="check-box"></span></label><span class="stop-title">Checkout no Carlton</span></h4>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s32"><span class="check-box"></span></label><span class="stop-title">Checkout no Carlton · malas ficam lá</span></h4>
           <span class="time-below">8h30</span>
-          <p class="sub">Se optarem pelo Bounce: levem as malas até a Grand Central antes de começar o dia (6 até 42nd St, ~10 min).</p></div></li>
+          <p class="sub">Deixem as malas guardadas no próprio hotel — sem guarda-volumes pago por enquanto. Isso significa voltar aqui mais tarde antes de seguir pra Yonkers.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>10 min</b> · pela 1st Ave até a 21st St</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s111"><span class="check-box"></span></label><span class="stop-title">Café da manhã · Ess-a-Bagel</span></h4>
+          <span class="time-below">8h45</span>
+          <p>359 1st Ave, esquina com a 21st St — a loja original da rede, um clássico de bagel nova-iorquino desde 1976.</p>
+          <p class="sub">🥯 Everything Bagel com cream cheese, ~US$ 6 cada. Outras opções mais baratas no caminho: 7-Eleven, mercados de bairro, Lidl ou Trader Joe's.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>12 min</b> de metrô · 6 de 23 St–Baruch College até 59 St, sentido Uptown</div></li>
 
         <li class="hi"><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s33"><span class="check-box"></span></label><span class="stop-title">FRIENDS Experience · 130 E 23rd St</span></h4>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s42"><span class="check-box"></span></label><span class="stop-title">Roosevelt Island · teleférico</span></h4>
           <span class="time-below">10h00</span>
-          <p>Na abertura, sem fila. Dois andares com o sofá laranja, o apartamento da Monica, o Central Perk e figurinos originais.</p>
-          <p class="sub">Fechado às terças — por isso está na quarta. Reserva antecipada pelo site. ~1h30 de visita. 💰 ~US$ 43/pessoa.</p></div></li>
-      
+          <p>O bondinho sobe ao lado da Queensboro Bridge com Manhattan inteira embaixo. <b>Entra no OMNY</b> — conta como uma viagem normal, sem custo extra.</p>
+          <p class="sub">Na ilha: promenade com vista do skyline e o Four Freedoms Park na ponta sul. Voltem de teleférico também — a estação é a mesma, 59th com 2ª Av.</p></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>6 min</b> · pela E 23rd até a Madison Square Park</div></li>
+          <div class="walk-txt">👣 <b>8 min</b> · da estação do teleférico até a 5ª Avenida com a 59th</div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s34"><span class="check-box"></span></label><span class="stop-title">Madison Square Park &amp; Flatiron · de dia</span></h4>
-          <span class="time-below">11h45</span>
-          <p class="sub">A mesma esquina da segunda-feira, agora com luz. Vale a comparação para o conteúdo.</p></div></li>
-      
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s112"><span class="check-box"></span></label><span class="stop-title">Apple Store · 5ª Avenida</span></h4>
+          <span class="time-below">11h15</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>O cubo de vidro na 59th com a 5ª Avenida abriu em 2006, projetado pelo escritório de Steve Jobs em parceria com a Bohlin Cywinski Jackson — foi a primeira loja da Apple aberta 24 horas por dia, todos os dias. O cubo original tinha 90 painéis de vidro; em 2011 foi todo refeito com apenas 15 painéis maiores, usando uma tecnologia de vidro que só existia pra essa obra.</p>
+            <p>A loja de verdade fica embaixo da terra — o cubo é só a entrada, uma claraboia gigante que ilumina o salão subterrâneo. É uma das lojas mais visitadas do mundo, aberta todo santo dia do ano, e o Wi-Fi gratuito vira ponto de parada rápida pra quem precisa resolver alguma coisa no meio do passeio.</p>
+          </div></details>
+          <p>O famoso cubo de vidro gigante. Entrem para ver a arquitetura subterrânea e usar o Wi-Fi.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+          </details></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>14 min</b> · subindo a 5ª Avenida até a 34th</div></li>
+          <div class="walk-txt">👣 <b>5 min</b> · descendo a 5ª até a 57th</div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s35"><span class="check-box"></span></label><span class="stop-title">Empire State · Koreatown · Herald Square</span></h4>
-          <span class="time-below">12h15</span></div></li>
-      
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s113"><span class="check-box"></span></label><span class="stop-title">Tiffany &amp; Co. · 57th St</span></h4>
+          <span class="time-below">11h35</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>A loja funciona nesse endereço desde 1940, mas virou ícone mundial em 1961, quando "Bonequinha de Luxo" (Breakfast at Tiffany's) usou a vitrine como cenário de abertura, com Audrey Hepburn parada na calçada tomando café da manhã olhando pras joias. Desde então virou point obrigatório de quem visita Nova York, mesmo sem comprar nada.</p>
+            <p>Por dentro, os andares funcionam quase como um pequeno museu — peças históricas em vitrine, incluindo réplicas de diamantes lendários. A entrada é livre, sem necessidade de comprar nada, e os funcionários estão acostumados com turista só passeando pra ver.</p>
+          </div></details>
+          <p>O cenário de "Bonequinha de Luxo". Entrem sem vergonha — a entrada é livre e o prédio de vários andares funciona quase como um museu de joias.</p></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>10 min</b> · pela 6ª Avenida</div></li>
+          <div class="walk-txt">👣 <b>6 min</b> · descendo a 5ª, fachadas da Gucci, Cartier e Armani no caminho</div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s36"><span class="check-box"></span></label><span class="stop-title">Bryant Park &amp; Biblioteca Pública · almoço</span></h4>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s114"><span class="check-box"></span></label><span class="stop-title">Catedral de São Patrício · 51st St</span></h4>
+          <span class="time-below">12h00</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>A catedral neogótica foi inaugurada em 1879, construída ao longo de 21 anos — na época, ficava tão longe do centro da cidade que foi apelidada de "loucura de Hughes" (o arcebispo que decidiu construir ali). As torres gêmeas, de 100 metros, só foram concluídas em 1888.</p>
+            <p>Hoje é a maior catedral católica gótica dos Estados Unidos, encravada entre os arranha-céus de vidro da 5ª Avenida — o contraste entre a pedra entalhada e o vidro espelhado ao redor é parte do que torna o lugar tão fotografado. Entrada sempre gratuita.</p>
+          </div></details>
+          <p>Entrem gratuitamente para ver a imensidão gótica contrastando com os prédios espelhados.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>3 min</b> · descendo até a 49th</div></li>
+
+        <li class="hi"><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s39"><span class="check-box"></span></label><span class="stop-title">Rockefeller Center · 49th St</span></h4>
+          <span class="time-below">12h30</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>O complexo foi erguido entre 1930 e 1939 por John D. Rockefeller Jr., em plena Grande Depressão — um dos maiores projetos de construção privada já feitos no país, criado em parte pra gerar empregos na crise. A estátua dourada de Prometeu, na praça central, é de 1934 e retrata o titã grego roubando o fogo dos deuses pra dar à humanidade.</p>
+            <p>O Top of the Rock (mirante pago no topo) fica de fora do roteiro — o mirante da viagem é outro, se comprarmos. Bem em frente à praça fica a Loja da LEGO, com esculturas gigantes feitas de peças, e a Nintendo NY, cheia de instalação interativa dos games.</p>
+          </div></details>
+          <p>Vejam a praça da estátua de ouro de Prometeu e visitem a divertida Loja da LEGO e a Nintendo NY logo em frente.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+          </details></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>8 min</b> · leste até a Madison Ave</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s41"><span class="check-box"></span></label><span class="stop-title">Paley Park &amp; Greenacre Park</span></h4>
           <span class="time-below">13h00</span>
-          <p>Entrem na Rose Main Reading Room, no 3º andar — é gratuito e é uma das salas mais bonitas da cidade.</p>
-          <p class="sub">🚻 Banheiros do Bryant Park. Quiosques no parque, ou Chipotle/Panera em volta.</p></div></li>
-      
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>Paley Park (3 E 53rd St) abriu em 1967, um dos primeiros "parques de bolso" do mundo — um terreno estreitíssimo entre dois prédios virado praça, com uma parede d'água de 6 metros no fundo que abafa o barulho da rua inteira. Greenacre Park (217 E 51st St), a poucas quadras dali, abriu em 1971 seguindo a mesma ideia, com cascata própria e mesinhas escondidas atrás de plantas.</p>
+            <p>Os dois são gratuitos, mantidos por fundações privadas, e continuam sendo dos segredos mais bem guardados de Midtown — a maioria dos turistas passa reto sem saber que existem. Meio-dia, com gente de escritório almoçando, é quando ficam mais vivos.</p>
+          </div></details>
+          <p>Dois "parques de bolso" escondidos entre arranha-céus, com cascatas que abafam o barulho da rua. Gratuitos e quase secretos — bom horário pra almoçar num banco ali.</p></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>6 min</b> · pela E 42nd rumo leste</div></li>
+          <div class="walk-txt">👣 <b>10 min</b> · sul até a 42nd, rumo à Grand Central</div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s37"><span class="check-box"></span></label><span class="stop-title">Grand Central Terminal</span></h4>
-          <span class="time-below">14h00</span>
+          <span class="time-below">13h45</span>
           <p>O teto de constelações, o relógio de latão, a galeria dos sussurros no piso inferior e o Grand Central Market.</p>
           <p class="sub">📸 Melhor take: da escadaria oeste, olhando para a janela leste. 🚻 Banheiros no piso do saguão.</p></div></li>
-      
+
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>3 min</b> · Lexington com 42nd</div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s38"><span class="check-box"></span></label><span class="stop-title">Chrysler Building · por fora</span></h4>
-          <span class="time-below">14h35</span>
+          <span class="time-below">14h15</span>
           <p class="sub">Entrem no lobby art déco — é aberto e gratuito.</p></div></li>
-      
-        <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>13 min</b> · noroeste até a 5ª com 50th</div></li>
-
-        <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s39"><span class="check-box"></span></label><span class="stop-title">Rockefeller · St. Patrick's · Radio City</span></h4>
-          <span class="time-below">15h00</span>
-          <p>O Top of the Rock fica <b>de fora</b> — o mirante pago da viagem é o SUMMIT, hoje à noite. A catedral é gratuita e vale entrar.</p></div></li>
-      
-        <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>12 min</b> · subindo a 5ª Avenida até a 59th</div></li>
-
-        <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s40"><span class="check-box"></span></label><span class="stop-title">Quinta Avenida · FAO Schwarz · Apple · Plaza</span></h4>
-          <span class="time-below">15h45</span>
-          <p class="sub">O FAO Schwarz fica no Rockefeller Center. O cubo de vidro da Apple e o Plaza estão na 59th.</p></div></li>
-      
-        <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>8 min</b> · descendo até a E 53rd</div></li>
-
-        <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s41"><span class="check-box"></span></label><span class="stop-title">Paley Park &amp; Greenacre Park</span></h4>
-          <span class="time-below">16h30</span>
-          <p>Dois "parques de bolso" escondidos entre arranha-céus, com cascatas que abafam o barulho da rua. Gratuitos e quase secretos.</p></div></li>
-      
-        <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>9 min</b> · leste até a estação do teleférico, 59th com 2ª Av</div></li>
-
-        <li class="hi"><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s42"><span class="check-box"></span></label><span class="stop-title">Roosevelt Island · teleférico</span></h4>
-          <span class="time-below">17h00</span>
-          <p>O bondinho sobe ao lado da Queensboro Bridge com Manhattan inteira embaixo. <b>Entra no OMNY</b> — conta como uma viagem normal, sem custo extra.</p>
-          <p class="sub">Na ilha: promenade com vista do skyline e o Four Freedoms Park na ponta sul. 📸 Melhor luz é agora, no fim de tarde. Voltem de teleférico também.</p></div></li>
-      
-        <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>5 min</b> de metrô · 4/5/6 de 59th St até Grand Central</div></li>
-
-        <li class="hi"><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s43"><span class="check-box"></span></label><span class="stop-title">SUMMIT One Vanderbilt</span></h4>
-          <span class="time-below">18h30</span>
-          <p>Entrada pelo saguão principal da Grand Central ou pela 45 E 42nd St — <b>o lobby de escritórios não é entrada</b>. Reservem o slot de ~18h para atravessar o pôr do sol (~19h).</p>
-          <p class="sub">Três andares de salas espelhadas, as caixas de vidro do Levitation e o terraço aberto. Aberto todos os dias, 8h à meia-noite, última entrada 22h30. 💰 A partir de US$ 44 + US$ 3 de taxa; slot de pôr do sol custa mais e <b>esgota primeiro</b>. Use calça ou shorts — o piso é espelhado. Salto agulha proibido.</p></div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s44"><span class="check-box"></span></label><span class="stop-title">Malas → Metro-North → Yonkers</span></h4>
-          <span class="time-below">20h30</span>
-          <p class="sub">Metro-North sai da própria Grand Central. ~30 min até Yonkers. 💰 Metro-North <b>não entra no OMNY</b> — passagem à parte.</p></div></li>
+          <span class="time-below">16h00</span>
+          <p class="sub">Volta ao Carlton pra pegar as malas, depois Metro-North direto de Grand Central. ~30 min até Yonkers. 💰 Metro-North <b>não entra no OMNY</b> — passagem à parte. Horário desliza pra mais tarde se entrar o SUMMIT.</p></div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s45"><span class="check-box"></span></label><span class="stop-title">Check-in no Airbnb · 77 Arthur Place</span></h4>
-          <span class="time-below">21h30</span>
+          <span class="time-below">17h00</span>
           <p class="sub">Primeira noite na varanda com o Hudson. Mercado fica para amanhã.</p></div></li>
       </ul>
 
-      <div class="note warn">
-        <span class="lbl">Se atrasar, corte nesta ordem</span>
-        1) Greenacre Park · 2) FAO Schwarz e as lojas da 5ª · 3) versão curta de Roosevelt Island (só a promenade, sem o Four Freedoms Park). <b>O SUMMIT é ingresso com horário marcado e não remarca de graça</b> — ele é a âncora inegociável do dia.
+      <div class="note">
+        <span class="lbl">Passeios pagos a decidir</span>
+        <b>FRIENDS Experience</b> (130 E 23rd St) — fechado às terças, ~1h30 de visita, ~US$ 43/pessoa. Fica perto do hotel, então cabe bem logo de manhã, antes do checkout, se decidirem comprar. <b>SUMMIT One Vanderbilt</b> — dentro da própria Grand Central, a partir de US$ 44 + taxa, o slot de pôr do sol é o mais caro e esgota primeiro. Se comprarem, ele encaixa naturalmente depois do Chrysler Building, esticando o dia até o entardecer (~19h) antes de seguir pra Yonkers.
       </div>
       </details>
 
@@ -1169,16 +1329,15 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
       <table class="custo-tabela" id="custo-d3">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
-          <tr><td contenteditable="true" data-persist-key="d3-r1-item">Ingresso — FRIENDS Experience</td><td class="num" contenteditable="true" data-persist-key="d3-r1-val">US$ 86</td></tr>
-          <tr><td contenteditable="true" data-persist-key="d3-r2-item">Ingresso — SUMMIT One Vanderbilt (slot pôr do sol)</td><td class="num" contenteditable="true" data-persist-key="d3-r2-val">US$ 110–130</td></tr>
-          <tr><td contenteditable="true" data-persist-key="d3-r3-item">Guarda-volumes Bounce (opcional)</td><td class="num" contenteditable="true" data-persist-key="d3-r3-val">~US$ 8</td></tr>
-          <tr><td contenteditable="true" data-persist-key="d3-r4-item">Alimentação</td><td class="num" contenteditable="true" data-persist-key="d3-r4-val">~US$ 16</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d3-r1-item">Café da manhã — Ess-a-Bagel (2x Everything Bagel c/ cream cheese)</td><td class="num" contenteditable="true" data-persist-key="d3-r1-val">US$ 12</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d3-r2-item">Metrô + teleférico — 6 até 59th + Roosevelt Island (ida e volta)</td><td class="num" contenteditable="true" data-persist-key="d3-r2-val">US$ 18</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d3-r3-item">Alimentação — almoço/lanches</td><td class="num" contenteditable="true" data-persist-key="d3-r3-val">~US$ 16</td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d3-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d3-e1-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d3-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d3-e2-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d3-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d3-e3-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d3-e4-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d3-e4-val"></td></tr>
         </tbody>
-        <tfoot><tr><td>Total do dia</td><td class="num">~US$ 230</td></tr></tfoot>
+        <tfoot><tr><td>Total do dia</td><td class="num">~US$ 46</td></tr></tfoot>
       </table>
       </details>
 
@@ -1961,13 +2120,12 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
       <caption>Atrações pagas</caption>
       <thead><tr><th>Item</th><th>Quando</th><th style="text-align:right">Casal</th></tr></thead>
       <tbody>
-        <tr><td>Estátua da Liberdade + Ellis Island</td><td>Ter 15</td><td class="num">US$ 51–62</td></tr>
         <tr><td>SUMMIT One Vanderbilt · slot pôr do sol</td><td>Qua 16</td><td class="num">US$ 110–130</td></tr>
         <tr><td>FRIENDS Experience</td><td>Qua 16</td><td class="num">US$ 86</td></tr>
         <tr><td>Museu de História Natural</td><td>Qui 17</td><td class="num">US$ 0</td></tr>
         <tr><td>Jogo da NY Liberty <em>(opcional)</em></td><td>Seg 21 ou Ter 22</td><td class="num">US$ 60–120</td></tr>
       </tbody>
-      <tfoot><tr><td colspan="2">Subtotal atrações</td><td class="num">~US$ 250–280</td></tr></tfoot>
+      <tfoot><tr><td colspan="2">Subtotal atrações</td><td class="num">~US$ 195–215</td></tr></tfoot>
     </table>
 
     <table>
@@ -2127,31 +2285,32 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
     <a href="#d2" class="macro-card">
       <div class="macro-card-head">
         <div class="dia-num"><span class="lbl">Dia</span><span class="num">02</span></div>
-        <div class="tema"><span class="t">Nascer do Sol &amp; Estátua</span><span class="base">Base: Carlton Arms</span></div>
+        <div class="tema"><span class="t">Brooklyn, Financial &amp; Estátua</span><span class="base">Base: Carlton Arms</span></div>
       </div>
       <div class="macro-card-body">
-        <div class="item key">Nascer do sol no DUMBO · 6h40</div>
-        <div class="item">Washington St · Pebble Beach</div>
-        <div class="item">Travessia da Brooklyn Bridge</div>
-        <div class="item key">Estátua da Liberdade + Ellis</div>
-        <div class="item">Financial District · Wall St</div>
-        <div class="item">Chinatown · Mei Lai Wah · Kam Hing</div>
-        <div class="item key">Staten Island Ferry no pôr do sol</div>
+        <div class="item key">Brooklyn Bridge · nascer do sol 6h30</div>
+        <div class="item">Washington St · Pebble Beach · Time Out Market</div>
+        <div class="item">Oculus · Memorial 11/9 · Trinity Church</div>
+        <div class="item">Wall St · NYSE · Fearless Girl · Touro</div>
+        <div class="item">Stone Street · Battery Park</div>
+        <div class="item key">Staten Island Ferry no pôr do sol · 17h30</div>
+        <div class="item">Rooftop Pier 17</div>
       </div>
     </a>
 
     <a href="#d3" class="macro-card">
       <div class="macro-card-head">
         <div class="dia-num"><span class="lbl">Dia</span><span class="num">03</span></div>
-        <div class="tema"><span class="t">Midtown &amp; Mudança</span><span class="base">Carlton → Yonkers</span></div>
+        <div class="tema"><span class="t">Quinta Avenida &amp; Mudança</span><span class="base">Carlton → Yonkers</span></div>
       </div>
       <div class="macro-card-body">
-        <div class="item">Checkout · malas guardadas</div>
-        <div class="item">FRIENDS Experience · 10h</div>
-        <div class="item">Grand Central · Chrysler · Rockefeller</div>
-        <div class="item">Quinta Avenida · Plaza · Paley Park</div>
-        <div class="item">Roosevelt Island · teleférico</div>
-        <div class="item key">SUMMIT One Vanderbilt no pôr do sol</div>
+        <div class="item">Checkout · malas ficam no hotel</div>
+        <div class="item">Ess-a-Bagel · café da manhã</div>
+        <div class="item key">Roosevelt Island · teleférico</div>
+        <div class="item">Apple Store · Tiffany · São Patrício</div>
+        <div class="item">Rockefeller · Paley Park · Greenacre</div>
+        <div class="item">Grand Central · Chrysler Building</div>
+        <div class="item">FRIENDS + SUMMIT — a decidir</div>
         <div class="item">Metro-North → check-in Yonkers</div>
       </div>
     </a>
