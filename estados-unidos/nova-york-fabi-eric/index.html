@@ -328,6 +328,8 @@ body {
 .linha-1, .linha-2, .linha-3 { background: #ee352e; }
 .linha-l { background: #a7a9ac; }
 .linha-s { background: #808183; }
+.linha-7 { background: #b933ad; }
+.linha-bee { background: #0039a6; }
 .rota-etapa-txt { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .rota-embarque { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink); font-weight: 500; line-height: 1.4; }
 .rota-embarque b { color: var(--azul); font-weight: 700; }
@@ -364,6 +366,8 @@ body {
 ══════════════════════════════════════════════ */
 #custos { padding: 80px 20px; background: var(--paper-deep); }
 #custos .wrap { max-width: 760px; margin: 0 auto; }
+#financeiro-macro { padding: 80px 20px; background: var(--paper-deep); }
+#financeiro-macro .wrap { max-width: 760px; margin: 0 auto; }
 table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--hairline-b); font-family: 'DM Sans', sans-serif; font-size: 13.5px; margin-bottom: 26px; }
 caption { font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-deep); text-align: left; padding: 0 0 10px; font-weight: 700; }
 th { background: var(--azul); color: #fff; font-weight: 600; font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; padding: 11px 14px; text-align: left; }
@@ -390,6 +394,21 @@ table.custo-tabela [contenteditable="true"]:focus { outline: none; border-bottom
 table.custo-tabela [contenteditable="true"]:empty::before { content: attr(data-placeholder); color: var(--ink-mute); font-style: italic; font-weight: 400; }
 table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
 .omny-tap { display: inline-flex; align-items: center; justify-content: center; width: 15px; height: 15px; border-radius: 50%; background: var(--azul); color: #fff; font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 700; margin-right: 7px; flex-shrink: 0; vertical-align: middle; position: relative; top: -1px; }
+.pago-tag, .pendente-tag { display: inline-flex; align-items: center; gap: 4px; font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-left: 8px; }
+.pago-tag { color: #1a8a4f; }
+.pago-tag::before { content: "✓"; display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; background: #1a8a4f; color: #fff; font-size: 9px; font-weight: 900; flex-shrink: 0; }
+.pendente-tag { color: #a87d0a; }
+.pendente-tag::before { content: "●"; display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; background: #f0b429; color: #f0b429; font-size: 6px; flex-shrink: 0; }
+.fin-resumo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 34px 0 10px; }
+.fin-box { background: #fff; border: 1px solid var(--hairline-b); padding: 18px 20px; text-align: center; grid-column: span 1; }
+.fin-box:first-child { grid-column: 1 / -1; }
+.fin-box-label { display: block; font-family: 'DM Sans', sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 8px; }
+.fin-box-val { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 26px; color: var(--azul); font-variation-settings: 'opsz' 144; }
+.fin-box-pago { border-color: #bfe3cd; background: #f4fbf6; }
+.fin-box-pago .fin-box-label, .fin-box-pago .fin-box-val { color: #1a8a4f; }
+.fin-box-pendente { border: 2px solid #f0b429; background: #fdf3e0; padding: 24px; }
+.fin-box-pendente .fin-box-label { color: #a87d0a; }
+.fin-box-pendente .fin-box-val { color: #a87d0a; font-size: 34px; }
 
 /* ══════════════════════════════════════════════
    REGRAS DE OURO
@@ -445,6 +464,7 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
   <a class="nav-link" href="#d10">Dia 10 · Qua 23/09</a>
   <span class="nav-section">Planejamento</span>
   <a class="nav-link" href="#custos">Custos Previstos</a>
+  <a class="nav-link" href="#financeiro-macro">Financeiro Macro</a>
   <a class="nav-link" href="#regras">Regras de Ouro</a>
 </nav>
 
@@ -499,6 +519,7 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
         <div class="menu-links">
           <a href="#roteiro-macro">Roteiro Macro</a>
           <a href="#custos">Custos Previstos</a>
+          <a href="#financeiro-macro">Financeiro Macro</a>
           <a href="#regras">Regras de Ouro</a>
         </div>
         <div class="menu-dias-grid">
@@ -509,8 +530,8 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <a href="#d5"><span class="dp-dia">Dia 05</span><span class="dp-data">18/09 · SEX</span><span class="dp-tema">San Gennaro</span></a>
           <a href="#d6"><span class="dp-dia">Dia 06</span><span class="dp-data">19/09 · SÁB</span><span class="dp-tema">Hudson Valley</span></a>
           <a href="#d7"><span class="dp-dia">Dia 07</span><span class="dp-data">20/09 · DOM</span><span class="dp-tema">Coney Island</span></a>
-          <a href="#d8"><span class="dp-dia">Dia 08</span><span class="dp-data">21/09 · SEG</span><span class="dp-tema">Vida Americana</span></a>
-          <a href="#d9"><span class="dp-dia">Dia 09</span><span class="dp-data">22/09 · TER</span><span class="dp-tema">Dia Coringa</span></a>
+          <a href="#d8"><span class="dp-dia">Dia 08</span><span class="dp-data">21/09 · SEG</span><span class="dp-tema">Chega a Yadira</span></a>
+          <a href="#d9"><span class="dp-dia">Dia 09</span><span class="dp-data">22/09 · TER</span><span class="dp-tema">Tarrytown de novo</span></a>
           <a href="#d10"><span class="dp-dia">Dia 10</span><span class="dp-data">23/09 · QUA</span><span class="dp-tema">Volta Brasil</span></a>
         </div>
       </div>
@@ -1149,7 +1170,7 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <tr><td contenteditable="true" data-persist-key="d2-r1-item">Café da manhã — Time Out Market</td><td class="num" contenteditable="true" data-persist-key="d2-r1-val">~US$ 20</td></tr>
           <tr><td><span class="omny-tap" title="Tap OMNY 3/12 — rumo ao teto grátis dos 7 dias">3</span><span class="ce-text" contenteditable="true" data-persist-key="d2-r2-item">Metrô — 6 + A/C até a ponte (Carlton → Brooklyn Bridge)</span></td><td class="num" contenteditable="true" data-persist-key="d2-r2-val">US$ 6</td></tr>
           <tr><td><span class="omny-tap" title="Tap OMNY 4/12 — rumo ao teto grátis dos 7 dias">4</span><span class="ce-text" contenteditable="true" data-persist-key="d2-r3-item">Metrô — A/C até Fulton St (rumo ao Oculus)</span></td><td class="num" contenteditable="true" data-persist-key="d2-r3-val">US$ 6</td></tr>
-          <tr><td contenteditable="true" data-persist-key="d2-r4-item">Lanches — 7-Eleven, Eataly</td><td class="num" contenteditable="true" data-persist-key="d2-r4-val">~US$ 10</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d2-r4-item">Lanches e jantar — 7-Eleven, Eataly</td><td class="num" contenteditable="true" data-persist-key="d2-r4-val">~US$ 25</td></tr>
           <tr><td><span class="omny-tap" title="Tap OMNY 5/12 — rumo ao teto grátis dos 7 dias">5</span><span class="ce-text" contenteditable="true" data-persist-key="d2-r5-item">Metrô — A/C de Fulton St até 23 St–8 Av</span></td><td class="num" contenteditable="true" data-persist-key="d2-r5-val">US$ 6</td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d2-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d2-e1-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d2-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d2-e2-val"></td></tr>
@@ -1320,7 +1341,7 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
 
       <div class="note">
         <span class="lbl">Passeios pagos a decidir</span>
-        <b>FRIENDS Experience</b> (130 E 23rd St) — fechado às terças, ~1h30 de visita, ~US$ 43/pessoa. Fica perto do hotel, então cabe bem logo de manhã, antes do checkout, se decidirem comprar. <b>SUMMIT One Vanderbilt</b> — dentro da própria Grand Central, a partir de US$ 44 + taxa, o slot de pôr do sol é o mais caro e esgota primeiro. Se comprarem, ele encaixa naturalmente depois do Chrysler Building, esticando o dia até o entardecer (~19h) antes de seguir pra Yonkers.
+        <b>FRIENDS Experience</b> (130 E 23rd St) — fechado às terças, ~1h30 de visita, ~US$ 110 pro casal. Fica perto do hotel, então cabe bem logo de manhã, antes do checkout, se decidirem comprar. <b>SUMMIT One Vanderbilt</b> — dentro da própria Grand Central, ~US$ 96 pro casal, o slot de pôr do sol é o mais caro e esgota primeiro. Se comprarem, ele encaixa naturalmente depois do Chrysler Building, esticando o dia até o entardecer (~19h) antes de seguir pra Yonkers.
       </div>
       </details>
 
@@ -1330,14 +1351,21 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
           <tr><td contenteditable="true" data-persist-key="d3-r1-item">Café da manhã — Ess-a-Bagel (2x Everything Bagel c/ cream cheese)</td><td class="num" contenteditable="true" data-persist-key="d3-r1-val">US$ 12</td></tr>
-          <tr><td contenteditable="true" data-persist-key="d3-r2-item">Metrô + teleférico — 6 até 59th + Roosevelt Island (ida e volta)</td><td class="num" contenteditable="true" data-persist-key="d3-r2-val">US$ 18</td></tr>
-          <tr><td contenteditable="true" data-persist-key="d3-r3-item">Alimentação — almoço/lanches</td><td class="num" contenteditable="true" data-persist-key="d3-r3-val">~US$ 16</td></tr>
+          <tr><td><span class="omny-tap" title="Tap OMNY 6/12 — rumo ao teto grátis dos 7 dias">6</span><span class="ce-text" contenteditable="true" data-persist-key="d3-r2-item">Metrô — 6 de 23 St–Baruch College até 59 St</span></td><td class="num" contenteditable="true" data-persist-key="d3-r2-val">US$ 6</td></tr>
+          <tr><td><span class="omny-tap" title="Tap OMNY 7/12 — rumo ao teto grátis dos 7 dias">7</span><span class="ce-text" contenteditable="true" data-persist-key="d3-r3-item">Teleférico — Roosevelt Island, ida</span></td><td class="num" contenteditable="true" data-persist-key="d3-r3-val">US$ 6</td></tr>
+          <tr><td><span class="omny-tap" title="Tap OMNY 8/12 — rumo ao teto grátis dos 7 dias">8</span><span class="ce-text" contenteditable="true" data-persist-key="d3-r4-item">Teleférico — Roosevelt Island, volta</span></td><td class="num" contenteditable="true" data-persist-key="d3-r4-val">US$ 6</td></tr>
+          <tr><td><span class="omny-tap" title="Tap OMNY 9/12 — rumo ao teto grátis dos 7 dias">9</span><span class="ce-text" contenteditable="true" data-persist-key="d3-r9-item">Metrô — de volta ao Carlton pra pegar as malas</span></td><td class="num" contenteditable="true" data-persist-key="d3-r9-val">US$ 6</td></tr>
+          <tr><td><span class="omny-tap" title="Tap OMNY 10/12 — rumo ao teto grátis dos 7 dias">10</span><span class="ce-text" contenteditable="true" data-persist-key="d3-r10-item">Metrô — do Carlton até a Grand Central</span></td><td class="num" contenteditable="true" data-persist-key="d3-r10-val">US$ 6</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d3-r5-item">Metro-North — Grand Central até Yonkers</td><td class="num" contenteditable="true" data-persist-key="d3-r5-val">US$ 18,50</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d3-r6-item">Lyft — estação de Yonkers até o Airbnb</td><td class="num" contenteditable="true" data-persist-key="d3-r6-val">US$ 10</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d3-r7-item">Almoço/lanches</td><td class="num" contenteditable="true" data-persist-key="d3-r7-val">~US$ 16</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d3-r8-item">Jantar/lanche</td><td class="num" contenteditable="true" data-persist-key="d3-r8-val">~US$ 15</td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d3-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d3-e1-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d3-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d3-e2-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d3-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d3-e3-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d3-e4-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d3-e4-val"></td></tr>
         </tbody>
-        <tfoot><tr><td>Total do dia</td><td class="num">~US$ 46</td></tr></tfoot>
+        <tfoot><tr><td>Total do dia</td><td class="num">~US$ 90</td></tr></tfoot>
       </table>
       </details>
 
@@ -1363,12 +1391,18 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <li><span class="ov-num">3</span>Chelsea Market</li>
           <li><span class="ov-num">4</span>Pier 57 · rooftop</li>
           <li><span class="ov-num">5</span>Little Island</li>
-          <li><span class="ov-num">6</span>West Village · 90 Bedford St</li>
-          <li><span class="ov-num">7</span>Washington Square Park</li>
-          <li><span class="ov-num">8</span>Central Park · lado oeste</li>
-          <li><span class="ov-num">9</span>Museu de História Natural</li>
-          <li><span class="ov-num">10</span>Smorgasburg Central Park</li>
-          <li><span class="ov-num">11</span>Times Square à noite</li>
+          <li><span class="ov-num">6</span>Casa da Carrie Bradshaw</li>
+          <li><span class="ov-num">7</span>West Village · 90 Bedford St</li>
+          <li><span class="ov-num">8</span>75½ Bedford St</li>
+          <li><span class="ov-num">9</span>Washington Square Park</li>
+          <li><span class="ov-num">10</span>Praça do letreiro "New York"</li>
+          <li><span class="ov-num">11</span>FDNY Ladder 8</li>
+          <li><span class="ov-num">12</span>Tea Dealers &amp; Ceramics</li>
+          <li><span class="ov-num">13</span>Staple Street</li>
+          <li><span class="ov-num">14</span>Jenga Tower · 56 Leonard</li>
+          <li><span class="ov-num">15</span>Museu de História Natural</li>
+          <li><span class="ov-num">16</span>Belvedere Castle · pôr do sol</li>
+          <li><span class="ov-num">17</span>Times Square à noite</li>
         </ol>
       </div>
 
@@ -1376,15 +1410,42 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
       <summary>Roteiro</summary>
       <div class="facts minimal">
         <div class="fact"><span class="f-emoji">🏛️</span><span class="v">GRÁTIS · 16h30–17h30</span></div>
-        <div class="fact"><span class="f-emoji">🍴</span><span class="v">Smorgasburg</span></div>
+        <div class="fact"><span class="f-emoji">🌅</span><span class="v">Belvedere Castle · ~18h55</span></div>
         <div class="fact"><span class="f-emoji">👣</span><span class="v">~14 km</span></div>
       </div>
 
       <ul class="tl">
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s46"><span class="check-box"></span></label><span class="stop-title">Yonkers → Grand Central</span></h4>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s46"><span class="check-box"></span></label><span class="stop-title">Yonkers → Hudson Yards · ônibus + metrô</span></h4>
           <span class="time-below">7h30</span>
-          <p class="sub">Metro-North, ~30 min. Depois <b>7</b> da Grand Central até 34th St–Hudson Yards, ~10 min.</p></div></li>
+          <p>Hoje testamos economizar no transporte: ônibus + metrô em vez do Metro-North. Vamos ver se compensa ou se cansa demais.</p>
+
+          <div class="rota-card">
+            <div class="rota-etapa">
+              <span class="linha-badge pill linha-bee">Bee-Line 1</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Warburton Ave &amp; Arthur St</b> · linha <b>Broadway @ Manhattan College Pkwy</b></span>
+                <span class="rota-meta">Várias paradas → descer no ponto final, <span class="descida">Van Cortlandt Park–242 St</span></span>
+              </div>
+            </div>
+            <div class="rota-transfer">👣 O ponto final do ônibus já conecta direto com a estação de metrô</div>
+            <div class="rota-etapa">
+              <span class="linha-badge circulo linha-1">1</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Van Cortlandt Park–242 St</b> · direção <b>Manhattan</b>, via Broadway/7 Av</span>
+                <span class="rota-meta">24 paradas → descer em <span class="descida">Times Sq–42 St</span></span>
+              </div>
+            </div>
+            <div class="rota-transfer">👣 Troca de linha dentro da própria Times Sq–42 St</div>
+            <div class="rota-etapa">
+              <span class="linha-badge circulo linha-7">7</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Times Sq–42 St</b> · direção <b>Hudson Yards</b></span>
+                <span class="rota-meta">→ descer em <span class="descida">34 St–Hudson Yards</span></span>
+              </div>
+            </div>
+          </div>
+          <p class="sub">💰 Desde janeiro de 2026 o Bee-Line entrou no OMNY — ônibus e os dois metrôs contam como <b>1 tap só</b>, com baldeação grátis de 2h entre eles.</p></div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s47"><span class="check-box"></span></label><span class="stop-title">Hudson Yards · Vessel &amp; The Shed</span></h4>
@@ -1428,35 +1489,146 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>12 min</b> · leste, entrando no West Village</div></li>
 
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🧁</span><span class="pit-body">No caminho: <b>Magnolia Bakery original</b> (401 Bleecker St) — o cupcake de baunilha clássico, fila anda rápido.</span></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s115"><span class="check-box"></span></label><span class="stop-title">Casa da Carrie Bradshaw · 66 Perry St</span></h4>
+          <span class="time-below">12h35</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>A escadaria de entrada em 66 Perry St foi usada como a fachada do apartamento da Carrie Bradshaw em "Sex and the City" (1998–2004) e segue aparecendo nos revivals mais recentes. É uma casa particular de verdade — ninguém do elenco jamais morou ali, era só a fachada usada nas cenas externas.</p>
+            <p>Os moradores atuais já colocaram placas pedindo silêncio e respeito, cansados do fluxo constante de fãs. Mesmo assim, é parada obrigatória pra quem curte a série — só não vale sentar na escada ou tocar a campainha.</p>
+          </div></details>
+          <p>A fachada clássica da série, hoje residência particular — fotografem da calçada, sem invadir a escada.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+          </details></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>3 min</b> · até a Bedford com Grove</div></li>
+
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s52"><span class="check-box"></span></label><span class="stop-title">West Village · 90 Bedford St</span></h4>
-          <span class="time-below">13h15</span>
+          <span class="time-below">12h50</span>
           <p>O prédio de esquina que aparece como fachada do apartamento de Friends fica em Bedford com Grove. Ruas arborizadas, casas geminadas e o clima mais bonito de Manhattan.</p></div></li>
-      
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>5 min</b> · até a Carmine St</div></li>
+          <div class="walk-txt">👣 <b>1 min</b> · descendo a Bedford St</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s122"><span class="check-box"></span></label><span class="stop-title">75½ Bedford St · a casinha estreita</span></h4>
+          <span class="time-below">12h55</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>Com só 2,90 metros de largura, é a casa mais estreita de Nova York — construída em 1873 numa antiga passagem de carruagens entre dois prédios. A poeta Edna St. Vincent Millay morou ali nos anos 1920, e há relatos (nunca totalmente confirmados) de que o ator Cary Grant também passou uma temporada na casa.</p>
+            <p>Hoje é residência particular, espremida entre dois prédios normais — muita gente passa reto sem notar, mas de perto a desproporção salta aos olhos.</p>
+          </div></details>
+          <p>A casa mais estreita de Nova York, quase escondida entre dois prédios.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>8 min</b> · até a Carmine St</div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s53"><span class="check-box"></span></label><span class="stop-title">Almoço · Joe's Pizza original</span></h4>
-          <span class="time-below">13h45</span>
+          <span class="time-below">13h15</span>
           <p class="sub">7 Carmine St — a matriz, aberta desde 1975. Muito melhor que a filial da Times Square.</p></div></li>
-      
+
         <li class="walk-li"><span class="dot"></span>
           <div class="walk-txt">👣 <b>8 min</b> · leste até a praça</div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s54"><span class="check-box"></span></label><span class="stop-title">Washington Square Park</span></h4>
-          <span class="time-below">14h30</span>
+          <span class="time-below">13h55</span>
           <p>O arco, a fonte, os músicos e os enxadristas. O coração da NYU e da vida universitária.</p></div></li>
-      
-        <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>25 min</b> de metrô · B/C de W 4th St direto até 81st St–Museum of Natural History</div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s55"><span class="check-box"></span></label><span class="stop-title">Central Park · lado oeste, versão rápida</span></h4>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s117"><span class="check-box"></span></label><span class="stop-title">Wash Sq → Tribeca</span></h4>
+          <span class="time-below">14h20</span>
+
+          <div class="rota-card">
+            <div class="rota-etapa">
+              <span class="linha-badge pill linha-e">A/C</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>W 4 St–Wash Sq</b> · direção <b>Downtown &amp; Brooklyn</b></span>
+                <span class="rota-meta">→ descer em <span class="descida">Canal St</span></span>
+              </div>
+            </div>
+          </div></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s123"><span class="check-box"></span></label><span class="stop-title">Praça do letreiro "New York"</span></h4>
+          <span class="time-below">14h30</span>
+          <p>Já saindo da estação Canal St, a praça com o letreiro "New York" fica bem ali — ponto de foto rápido antes de seguir andando pra Tribeca.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 até o FDNY Ladder 8</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s118"><span class="check-box"></span></label><span class="stop-title">FDNY Ladder 8 · 14 North Moore St</span></h4>
+          <span class="time-below">14h40</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>O quartel de bombeiros de verdade, ativo desde 1903, virou famoso mundialmente como a fachada do quartel-general dos Ghostbusters (Caça-Fantasmas), nos filmes de 1984 e 1989. A cena clássica do carro Ecto-1 saindo pela garagem foi filmada bem ali.</p>
+            <p>Os bombeiros seguem trabalhando normalmente — não é atração turística oficial, só uma fachada real que os fãs visitam. Respeito é essencial: se o portão estiver aberto e houver movimento operacional, mantenham distância.</p>
+          </div></details>
+          <p>A fachada real do quartel-general dos Ghostbusters. Ainda é um quartel de bombeiros ativo.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>3 min</b> · até a Hudson St</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s120"><span class="check-box"></span></label><span class="stop-title">Tea Dealers &amp; Ceramics · 90 Hudson St</span></h4>
+          <span class="time-below">14h50</span>
+          <p>Loja de chás e cerâmica artesanal em Tribeca. Parada certa pra levar o matcha de presente pra amiga que ama.</p>
+          <details class="shop"><summary>🛍️ Dica de loja — Tea Dealers &amp; Ceramics</summary>
+            <div class="shop-list">
+              <p class="shop-note">Checklist do que procurar lá:</p>
+              <ul class="shop-items">
+                <li><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s121"><span class="check-box"></span></label><span class="stop-title">Matcha de presente</span></li>
+              </ul>
+            </div>
+          </details></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>3 min</b> · até a Staple St</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s124"><span class="check-box"></span></label><span class="stop-title">Staple Street</span></h4>
+          <span class="time-below">14h55</span>
+          <p>Um beco minúsculo perto do Duane Park, com uma passarela coberta ligando dois prédios no alto — um dos cantos mais fotografados e menos óbvios de Tribeca.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+          </details></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>5 min</b> · até a Leonard St</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s119"><span class="check-box"></span></label><span class="stop-title">Jenga Tower · 56 Leonard St</span></h4>
+          <span class="time-below">15h05</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>O prédio residencial, projetado pelos suíços Herzog & de Meuron (mesma dupla do Estádio Ninho de Pássaro de Pequim), foi concluído em 2016 com uma estrutura de blocos empilhados de forma irregular — cada apartamento tem uma varanda própria, o que dá o visual de peças de Jenga prestes a cair, apelido que colou.</p>
+            <p>Embaixo do prédio fica a escultura "Corkscrew" de Anish Kapoor (o mesmo artista do "Feijão" de Chicago), uma peça de aço espelhado e retorcido visível da rua, gratuita pra ver de fora.</p>
+          </div></details>
+          <p>A torre de blocos empilhados que parece prestes a desabar — e a escultura de Anish Kapoor embaixo dela, um "prédio grandão" impossível de não notar.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+          </details></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>5 min</b> · de volta até a estação Canal St</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s55"><span class="check-box"></span></label><span class="stop-title">Canal St → Museu de História Natural</span></h4>
           <span class="time-below">15h30</span>
-          <p>Entrem pela 72nd: <b>Strawberry Fields</b> (o mosaico Imagine) · <b>Bow Bridge</b> · <b>Bethesda Terrace</b> se o ritmo permitir. Depois subam até a 79th.</p>
-          <p class="sub">Este é o "oi" ao parque. A exploração com calma é amanhã de manhã.</p></div></li>
+
+          <div class="rota-card">
+            <div class="rota-etapa">
+              <span class="linha-badge circulo linha-c">C</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Canal St</b> · direção <b>Uptown</b>, via 8ª Avenida (A/C)</span>
+                <span class="rota-meta">→ descer em <span class="descida">81 St–Museum of Natural History</span></span>
+              </div>
+            </div>
+          </div></div></li>
 
         <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s56"><span class="check-box"></span></label><span class="stop-title">Fila do Museu de História Natural</span></h4>
@@ -1471,23 +1643,49 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <p class="sub">Sobrando tempo, suba para os dinossauros no 4º andar. A isenção vale só para a entrada geral — planetário e borboletário continuam pagos.</p></div></li>
       
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>15 min</b> · descendo a Central Park West até a Columbus Circle</div></li>
+          <div class="walk-txt">👣 <b>5 min</b> · entrando no parque pela 81st, rumo ao Belvedere Castle</div></li>
 
         <li class="hi"><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s58"><span class="check-box"></span></label><span class="stop-title">Smorgasburg Central Park · jantar</span></h4>
-          <span class="time-below">17h50</span>
-          <p>Mais de 25 barracas na entrada de Columbus Circle, na W 59th. Entrada gratuita, paga-se só o que comer. Funciona de quinta a sábado, meio-dia às 20h.</p>
-          <p class="sub">⚠️ <b>Esta edição encerra a temporada no dia 19</b> — quinta é uma das três últimas chances. Levem um pano: dá para montar piquenique e comer dentro do parque.</p></div></li>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s58"><span class="check-box"></span></label><span class="stop-title">Belvedere Castle · pôr do sol</span></h4>
+          <span class="time-below">18h40</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>O castelinho foi erguido em 1869 pela mesma dupla que projetou boa parte do Central Park, Calvert Vaux e Jacob Wrey Mould — sem nenhuma função prática, era só um "folly" vitoriano, uma construção decorativa pra dar um ponto de mirante bonito no ponto mais alto do parque, o Vista Rock. De 1919 a 1960 funcionou como estação oficial de medição do clima de Nova York, e até hoje o Central Park Conservancy mede a temperatura oficial da cidade ali perto.</p>
+            <p>Do terraço dá pra ver o Turtle Pond e o Ramble embaixo, de um lado, e o skyline de Midtown do outro — é o único mirante do parque com essa vista dupla. Hoje funciona como pequeno centro de natureza, aberto e gratuito.</p>
+          </div></details>
+          <p>Do alto do Vista Rock, com o Turtle Pond de um lado e o skyline do outro — um dos melhores mirantes gratuitos do dia, e o mais perto do museu.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+          </details></div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s59"><span class="check-box"></span></label><span class="stop-title">Times Square à noite</span></h4>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s59"><span class="check-box"></span></label><span class="stop-title">Times Square à noite · opcional</span></h4>
           <span class="time-below">19h30</span>
-          <p class="sub">Metrô <b>1</b> de 59th St até 42nd St, 3 min. Ou 15 min a pé pela Broadway.</p></div></li>
+          <p>Depende do ritmo e do cansaço: dá pra pegar o metrô <b>B/C</b> (~10 min) até a Times Square pra jantar e fechar a noite por lá, ou já voltar direto pro Airbnb a partir do Belvedere Castle, sem esse trecho.</p>
+          <p class="sub">Se forem: jantar em algum ponto por ali antes de curtir a praça.</p></div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s60"><span class="check-box"></span></label><span class="stop-title">Volta para Yonkers</span></h4>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s60"><span class="check-box"></span></label><span class="stop-title">Volta para Yonkers · metrô + ônibus</span></h4>
           <span class="time-below">20h45</span>
-          <p class="sub">Shuttle <b>S</b> de Times Sq até Grand Central + Metro-North.</p></div></li>
+          <p>Hoje a volta repete o esquema da ida: metrô até o fim da linha 1, depois o Bee-Line de volta pro Airbnb — sem pegar o Metro-North.</p>
+
+          <div class="rota-card">
+            <div class="rota-etapa">
+              <span class="linha-badge circulo linha-1">1</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque numa estação da linha <b>1</b> (Times Square ou perto do parque, dependendo de onde estiverem) · direção <b>Van Cortlandt Park–242 St</b></span>
+                <span class="rota-meta">→ descer no ponto final, <span class="descida">Van Cortlandt Park–242 St</span></span>
+              </div>
+            </div>
+            <div class="rota-transfer">👣 A estação já conecta direto com o ponto do ônibus</div>
+            <div class="rota-etapa">
+              <span class="linha-badge pill linha-bee">Bee-Line 1</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque de volta · linha <b>Broadway @ Manhattan College Pkwy</b></span>
+                <span class="rota-meta">Várias paradas → descer em <span class="descida">Warburton Ave &amp; Arthur St</span></span>
+              </div>
+            </div>
+          </div>
+          <p class="sub">💰 Depois do teto batido mais cedo hoje, essa viagem sai <b>grátis</b> — nem precisa se preocupar com o valor.</p></div></li>
       </ul>
 
       <div class="eat">
@@ -1495,7 +1693,7 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
         <ul>
           <li><span><b>Joe's Pizza</b> · 7 Carmine St — a matriz do Village</span><span class="price">US$ 4–5</span></li>
           <li><span><b>Chelsea Market</b> · tacos, lobster roll, doces</span><span class="price">US$ 10–20</span></li>
-          <li><span><b>Smorgasburg</b> · 25+ barracas, jantar do dia</span><span class="price">US$ 12–18</span></li>
+          <li><span><b>Times Square</b> · opções variadas pro jantar da noite</span><span class="price">US$ 15–25</span></li>
         </ul>
       </div>
       </details>
@@ -1505,9 +1703,13 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
       <table class="custo-tabela" id="custo-d4">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
+          <tr><td><span class="omny-tap" title="Tap OMNY 11/12 — rumo ao teto grátis dos 7 dias">11</span><span class="ce-text" contenteditable="true" data-persist-key="d4-r4-item">Ônibus Bee-Line + metrô — Yonkers até Hudson Yards</span></td><td class="num" contenteditable="true" data-persist-key="d4-r4-val">US$ 6</td></tr>
+          <tr><td><span class="omny-tap" title="Tap OMNY 12/12 — bate o teto dos 7 dias aqui!">12</span><span class="ce-text" contenteditable="true" data-persist-key="d4-r5-item">Metrô — Wash Sq → Canal St + Canal St → Museu (mesma janela de 2h)</span></td><td class="num" contenteditable="true" data-persist-key="d4-r5-val">US$ 6</td></tr>
+          <tr><td><span class="omny-tap" title="Tap 13 — passa do teto, essa e as próximas saem grátis até domingo">13</span><span class="ce-text" contenteditable="true" data-persist-key="d4-r6-item">Metrô — Times Square à noite (opcional, se forem) · primeira grátis!</span></td><td class="num" contenteditable="true" data-persist-key="d4-r6-val">US$ 0</td></tr>
+          <tr><td><span class="omny-tap" title="Tap 14 — grátis, já passou do teto">14</span><span class="ce-text" contenteditable="true" data-persist-key="d4-r7-item">Metrô + ônibus Bee-Line — volta pro Airbnb em Yonkers · grátis</span></td><td class="num" contenteditable="true" data-persist-key="d4-r7-val">US$ 0</td></tr>
           <tr><td contenteditable="true" data-persist-key="d4-r1-item">Almoço — Joe's Pizza</td><td class="num" contenteditable="true" data-persist-key="d4-r1-val">~US$ 10</td></tr>
           <tr><td contenteditable="true" data-persist-key="d4-r2-item">Lanche — Chelsea Market</td><td class="num" contenteditable="true" data-persist-key="d4-r2-val">~US$ 20–30</td></tr>
-          <tr><td contenteditable="true" data-persist-key="d4-r3-item">Jantar — Smorgasburg</td><td class="num" contenteditable="true" data-persist-key="d4-r3-val">~US$ 20–30</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d4-r3-item">Jantar — Times Square</td><td class="num" contenteditable="true" data-persist-key="d4-r3-val">~US$ 20–30</td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d4-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d4-e1-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d4-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d4-e2-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d4-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d4-e3-val"></td></tr>
@@ -1523,7 +1725,7 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
   <!-- DIA 5 -->
   <article class="day" id="d5">
     <div class="day-head">
-      <h3><small>Sexta · 18 de setembro</small>Central Park, Quinta Avenida &amp; San Gennaro</h3>
+      <h3><small>Sexta · 18 de setembro</small>Central Park, SoHo &amp; San Gennaro</h3>
       <a href="#custo-d5" class="badge custo-total-link">~US$ 60</a>
     </div>
     <div class="day-body">
@@ -1534,15 +1736,19 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <span class="ov-label">Visão geral</span>
         </div>
         <ol>
-          <li><span class="ov-num">1</span>The Pond &amp; Gapstow Bridge</li>
-          <li><span class="ov-num">2</span>The Mall · Literary Walk</li>
-          <li><span class="ov-num">3</span>Bethesda Terrace &amp; Sheep Meadow</li>
-          <li><span class="ov-num">4</span>Belvedere Castle</li>
-          <li><span class="ov-num">5</span>MET &amp; Guggenheim</li>
-          <li><span class="ov-num">6</span>Quinta Avenida</li>
-          <li><span class="ov-num">7</span>SoHo</li>
-          <li><span class="ov-num">8</span>NoLita</li>
-          <li><span class="ov-num">9</span>Festa de San Gennaro</li>
+          <li><span class="ov-num">1</span>Strawberry Fields</li>
+          <li><span class="ov-num">2</span>Bow Bridge</li>
+          <li><span class="ov-num">3</span>Bethesda Terrace &amp; Fountain</li>
+          <li><span class="ov-num">4</span>The Mall · Literary Walk</li>
+          <li><span class="ov-num">5</span>Columbus Circle</li>
+          <li><span class="ov-num">6</span>Smorgasburg Central Park</li>
+          <li><span class="ov-num">7</span>Greene Street · SoHo</li>
+          <li><span class="ov-num">8</span>Housing Works Bookstore</li>
+          <li><span class="ov-num">9</span>Pell St com Mott St</li>
+          <li><span class="ov-num">10</span>Nom Wah Tea Parlor</li>
+          <li><span class="ov-num">11</span>Templo Budista Mahayana</li>
+          <li><span class="ov-num">12</span>Canal St · arcos do San Gennaro</li>
+          <li><span class="ov-num">13</span>Festa de San Gennaro</li>
         </ol>
       </div>
 
@@ -1550,81 +1756,222 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
       <summary>Roteiro</summary>
       <div class="facts minimal">
         <div class="fact"><span class="f-emoji">🎉</span><span class="v">San Gennaro · 100ª edição</span></div>
-        <div class="fact"><span class="f-emoji">👣</span><span class="v">~11 km</span></div>
+        <div class="fact"><span class="f-emoji">👣</span><span class="v">~15 km</span></div>
         <div class="fact"><span class="f-emoji">✅</span><span class="v">Pagos hoje: nenhum</span></div>
       </div>
 
       <ul class="tl">
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s61"><span class="check-box"></span></label><span class="stop-title">Yonkers → Grand Army Plaza</span></h4>
-          <span class="time-below">8h00</span>
-          <p class="sub">Metro-North até Grand Central + <b>4/5/6</b> até 59th St. Entrada sudeste do parque.</p></div></li>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s61"><span class="check-box"></span></label><span class="stop-title">Yonkers → Central Park · ônibus + metrô</span></h4>
+          <span class="time-below">7h30</span>
+          <p>Mesmo esquema do dia anterior — Bee-Line até o fim da linha, metrô até o parque.</p>
+
+          <div class="rota-card">
+            <div class="rota-etapa">
+              <span class="linha-badge pill linha-bee">Bee-Line 1</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Warburton Ave &amp; Arthur St</b> · linha <b>Broadway @ Manhattan College Pkwy</b></span>
+                <span class="rota-meta">Várias paradas → descer no ponto final, <span class="descida">Van Cortlandt Park–242 St</span></span>
+              </div>
+            </div>
+            <div class="rota-transfer">👣 Conecta direto com a estação de metrô</div>
+            <div class="rota-etapa">
+              <span class="linha-badge circulo linha-1">1</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Van Cortlandt Park–242 St</b> · direção <b>Manhattan</b></span>
+                <span class="rota-meta">→ descer em <span class="descida">72 St</span></span>
+              </div>
+            </div>
+          </div></div></li>
 
         <li class="hi"><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s62"><span class="check-box"></span></label><span class="stop-title">The Pond &amp; Gapstow Bridge</span></h4>
-          <span class="time-below">9h15</span>
-          <p>O lago da ponta sul com a pontezinha de pedra e os arranha-céus refletidos. 📸 A luz da manhã bate exatamente aqui — é o melhor horário do parque inteiro.</p></div></li>
-      
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s62"><span class="check-box"></span></label><span class="stop-title">Strawberry Fields</span></h4>
+          <span class="time-below">8h30</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>O memorial de 1,5 acre foi criado em 1985 em homenagem a John Lennon, assassinado em 1980 bem em frente, na entrada do prédio Dakota, onde ele morava com Yoko Ono. O nome vem da música "Strawberry Fields Forever", dos Beatles. O mosaico circular escrito "Imagine" — nome de outra música dele — foi doação da cidade de Nápoles, feito por artesãos italianos.</p>
+            <p>É ponto de peregrinação silenciosa: sempre tem gente deixando flores, e em datas como o aniversário de morte dele (8 de dezembro) o lugar lota de fãs cantando. De manhã cedo costuma estar tranquilo, só com quem realmente busca aquele momento de silêncio.</p>
+          </div></details>
+          <p>O mosaico "Imagine" em homenagem a John Lennon, de frente pro Dakota, onde ele morava.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+          </details></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>10 min</b> · norte, pelo interior do parque</div></li>
+          <div class="walk-txt">👣 <b>8 min</b> · sul, entrando no Ramble</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s125"><span class="check-box"></span></label><span class="stop-title">Bow Bridge</span></h4>
+          <span class="time-below">8h50</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>A ponte de ferro fundido, de 1862, foi desenhada por Calvert Vaux — o mesmo dupla por trás de boa parte do desenho original do parque — e é uma das primeiras pontes de ferro fundido construídas nos Estados Unidos. Liga a Cherry Hill ao Ramble, sobre o lago.</p>
+            <p>É uma das pontes mais fotografadas do mundo — aparece em incontáveis filmes e pedidos de casamento reais acontecem ali quase todo fim de semana. De manhã cedo dá pra ter a ponte praticamente sozinha pra foto.</p>
+          </div></details>
+          <p>A ponte de ferro fundido mais fotografada do parque, sobre o lago.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+          </details></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>10 min</b> · sul até o terraço</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s64"><span class="check-box"></span></label><span class="stop-title">Bethesda Terrace &amp; Fountain</span></h4>
+          <span class="time-below">9h15</span>
+          <p>A escadaria e o terraço com a fonte "Angel of the Waters" (1868), de Emma Stebbins — a primeira obra pública de Nova York encomendada a uma artista mulher. Referência bíblica às águas curativas do Tanque de Betesda.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>6 min</b> · norte até a alameda</div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s63"><span class="check-box"></span></label><span class="stop-title">The Mall · Literary Walk</span></h4>
           <span class="time-below">9h50</span>
-          <p>A alameda de olmos americanos — o corredor arborizado mais fotogênico de Nova York.</p></div></li>
-      
+          <p>A alameda de olmos americanos — um dos maiores trechos remanescentes desses olmos na América do Norte, já que a doença holandesa do olmo dizimou a espécie em quase todo o resto do país. O corredor arborizado mais fotogênico de Nova York, ladeado de estátuas de escritores como Shakespeare e Walter Scott.</p></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>6 min</b> · até o terraço</div></li>
+          <div class="walk-txt">👣 <b>10 min</b> · sul até a saída do parque</div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s64"><span class="check-box"></span></label><span class="stop-title">Bethesda Terrace &amp; Sheep Meadow</span></h4>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s126"><span class="check-box"></span></label><span class="stop-title">Columbus Circle</span></h4>
           <span class="time-below">10h20</span>
-          <p class="sub">Se já tiverem feito o Bethesda na quinta, troquem por um tempo deitados no Sheep Meadow com o skyline ao fundo.</p></div></li>
-      
+          <p>A rotatória com a estátua de Colombo de 1892 no centro — é o "ponto zero" oficial de Nova York, de onde todas as distâncias rodoviárias da cidade são medidas.</p></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>18 min</b> · norte, contornando o lago</div></li>
+          <div class="walk-txt">👣 ali mesmo</div></li>
+
+        <li class="hi"><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s127"><span class="check-box"></span></label><span class="stop-title">Smorgasburg Central Park · almoço</span></h4>
+          <span class="time-below">12h00</span>
+          <p>Mais de 25 barracas na entrada de Columbus Circle. Entrada gratuita, paga-se só o que comer. Funciona sexta, sábado e domingo, meio-dia às 20h — hoje é dia certo.</p></div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s65"><span class="check-box"></span></label><span class="stop-title">Belvedere Castle</span></h4>
-          <span class="time-below">11h15</span>
-          <p>O castelinho no ponto mais alto, com vista para o Turtle Pond e o Great Lawn. Entrada gratuita.</p>
-          <p class="sub">🚻 Banheiros no Delacorte / arredores do castelo.</p></div></li>
-      
-        <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>12 min</b> · leste, saindo na 5ª com 82nd</div></li>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s128"><span class="check-box"></span></label><span class="stop-title">Columbus Circle → SoHo</span></h4>
+          <span class="time-below">13h15</span>
+
+          <div class="rota-card">
+            <div class="rota-etapa">
+              <span class="linha-badge circulo linha-c">C</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Columbus Circle</b> · direção <b>Downtown &amp; Brooklyn</b></span>
+                <span class="rota-meta">→ descer em <span class="descida">Spring St</span></span>
+              </div>
+            </div>
+          </div></div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s66"><span class="check-box"></span></label><span class="stop-title">MET &amp; Guggenheim · por fora</span></h4>
-          <span class="time-below">12h15</span>
-          <p>A escadaria do MET é ponto de encontro e de foto por si só. O Guggenheim fica 7 quadras ao norte, na 89th.</p>
-          <p class="sub">⚠️ O preço reduzido do MET é só para residentes de NY, NJ e CT. Para vocês é integral — por isso fica de fora.</p></div></li>
-      
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s129"><span class="check-box"></span></label><span class="stop-title">Spring Street</span></h4>
+          <span class="time-below">13h35</span>
+          <p>Caminhando pela Spring Street, entrando no coração do SoHo.</p></div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">💄</span><span class="pit-body">No caminho: <b>Glossier SoHo</b> (72 Spring St) — loja conceito toda rosa, parece museu, vale entrar só pra fotos.</span></div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🥐</span><span class="pit-body">No caminho: <b>Dominique Ansel Bakery</b> — criador do Cronut.</span></div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🍰</span><span class="pit-body">No caminho: <b>Ladurée</b> — macarons franceses.</span></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>25 min</b> · descendo a 5ª Avenida pelo Museum Mile, da 89th à 59th</div></li>
+          <div class="walk-txt">👣 <b>5 min</b> · até a Greene St</div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s67"><span class="check-box"></span></label><span class="stop-title">Quinta Avenida · o que faltou</span></h4>
-          <span class="time-below">13h30</span>
-          <p class="sub">Almoço em algum ponto do trecho. Extras opcionais: MoMA, Central Perk Coffeehouse na Times Square, Morgan Library.</p></div></li>
-      
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s130"><span class="check-box"></span></label><span class="stop-title">Greene Street · esquina de ferro fundido</span></h4>
+          <span class="time-below">13h55</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>A Greene Street concentra a maior coleção de fachadas de ferro fundido do mundo — construídas entre 1869 e 1895, quando o ferro fundido virou moda por imitar pedra esculpida a um custo bem menor. O SoHo virou distrito histórico tombado em 1973 justamente pra proteger esse conjunto.</p>
+            <p>As escadas de incêndio de ferro que cruzam as fachadas, hoje decorativas e fotogênicas, eram exigência de segurança da época — muitos prédios eram fábricas têxteis com risco real de incêndio.</p>
+          </div></details>
+          <p>O cruzamento com as escadas de incêndio de ferro fundido mais lindas e imponentes do SoHo.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+          </details></div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🍎</span><span class="pit-body">No caminho: <b>Apple SoHo</b> (103 Prince St).</span></div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🧱</span><span class="pit-body">No caminho: <b>LEGO Store SoHo</b> (102 Prince St, em frente à Apple) — esculturas gigantes de LEGO com ícones de Nova York.</span></div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🧣</span><span class="pit-body">No caminho: <b>Uniqlo SoHo</b> (546 Broadway) — a maior loja da rede em NY, boa opção pra roupa térmica barata.</span></div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🍕</span><span class="pit-body">No caminho: <b>Prince Street Pizza</b> — o quadrado de pepperoni famoso.</span></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>15 min</b> de metrô · E da 5ª Av/53rd até Spring St</div></li>
+          <div class="walk-txt">👣 <b>6 min</b> · até a Crosby St</div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s68"><span class="check-box"></span></label><span class="stop-title">SoHo</span></h4>
-          <span class="time-below">16h00</span>
-          <p>Fachadas de ferro fundido, Prince Street, Greene Street e o calçamento de pedra. 📸 Fim de tarde dá luz lateral nos prédios.</p></div></li>
-      
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s131"><span class="check-box"></span></label><span class="stop-title">Housing Works Bookstore · 126 Crosby St</span></h4>
+          <span class="time-below">14h15</span>
+          <p>Livraria e café vintage com escadaria de madeira que parece cenário de filme. Toda a renda é revertida pra caridade.</p></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>8 min</b> · leste até a Elizabeth St</div></li>
+          <div class="walk-txt">👣 <b>10 min</b> · até a Mulberry St</div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s69"><span class="check-box"></span></label><span class="stop-title">NoLita</span></h4>
-          <span class="time-below">17h15</span>
-          <p class="sub">Lojinhas independentes, cafés e o Elizabeth Street Garden.</p></div></li>
-      
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s132"><span class="check-box"></span></label><span class="stop-title">Mulberry Street · transição pra Chinatown</span></h4>
+          <span class="time-below">14h35</span>
+          <p>Descendo a Mulberry a partir da Broome St, o clima muda de SoHo pra Little Italy e depois Chinatown.</p>
+          <p class="sub">🎨 Na esquina com a Broome, na parede do Café Roma, fica o mural da Audrey Hepburn — grafite de Tristan Eaton, um dos mais fotografados de Nova York, bem onde a festa vai acontecer à noite.</p></div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🍰</span><span class="pit-body">No caminho: <b>Eileen's Special Cheesecake</b>.</span></div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🇮🇹</span><span class="pit-body">Esquina Mulberry com Hester: olhem pra cima — as placas de rua clássicas de <b>Little Italy</b>, com as cores da bandeira e o desenho de uma bota.</span></div></li>
+
         <li class="walk-li"><span class="dot"></span>
-          <div class="walk-txt">👣 <b>7 min</b> · sul até a Mulberry St</div></li>
+          <div class="walk-txt">👣 cruzando a Grand St</div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🍮</span><span class="pit-body">Na Grand St: <b>Ferrara Bakery &amp; Cafe</b> (195) — cannoli desde 1892 — e coladinha, <b>E. Rossi &amp; Co</b> (191) — lojinha de souvenirs italianos aberta em 1910.</span></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>6 min</b> · seguindo até a Pell St</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s133"><span class="check-box"></span></label><span class="stop-title">Cruzamento da Pell St com a Mott St</span></h4>
+          <span class="time-below">14h55</span>
+          <p>Uma das esquinas mais antigas e características de Chinatown.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>3 min</b> · até a Doyers St</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s134"><span class="check-box"></span></label><span class="stop-title">Nom Wah Tea Parlor</span></h4>
+          <span class="time-below">15h05</span>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>Aberto em 1920 na Doyers Street — a mesma ruazinha em curva conhecida como "Bloody Angle" no início do século 20 — é o restaurante mais antigo em operação contínua de Chinatown. Começou como confeitaria/casa de chá e virou referência de dim sum, ainda administrado pela mesma família há gerações.</p>
+            <p>O egg roll original da casa é diferente do que se vê hoje em qualquer outro lugar — receita de décadas, quase impossível achar igual em outro restaurante.</p>
+          </div></details>
+          <p>O restaurante mais antigo de Chinatown, aberto desde 1920.</p></div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🍨</span><span class="pit-body">No caminho: <b>Chinatown Ice Cream Factory</b>.</span></div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🛒</span><span class="pit-body">Passeio cultural: <b>Hong Kong Supermarket</b> (157 Hester St) — salgadinhos exóticos, chás e docinhos baratos, ótimos de lembrancinha.</span></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>6 min</b> · até a Bowery com Canal</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s136"><span class="check-box"></span></label><span class="stop-title">Templo Budista Mahayana · 133 Canal St</span></h4>
+          <span class="time-below">15h20</span>
+          <p>Colado na entrada da Manhattan Bridge, por fora parece um prédio qualquer — por dentro tem um Buda dourado de 5 metros sobre uma flor de lótus. O maior templo budista de Chinatown, entrada gratuita.</p>
+          <p class="sub">🧘 Uma pausa de paz no meio do barulho do bairro.</p></div></li>
+
+        <li class="pit-li"><span class="dot"></span>
+          <div class="pit-txt"><span class="pit-emoji">🌿</span><span class="pit-body">No caminho: <b>Lin Sister Herb Shop</b> (4 Bowery) — botica de medicina chinesa tradicional, paredes de gavetinhas de madeira com ervas e chás.</span></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>3 min</b> · até a ponta sul da Canal com Mulberry</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s135"><span class="check-box"></span></label><span class="stop-title">Canal Street · início dos arcos do San Gennaro</span></h4>
+          <span class="time-below">15h35</span>
+          <p>É aqui, na ponta sul, que começa a grande estrutura de arcos e luzes da Festa de San Gennaro — o portal de entrada da festa que vocês vão viver à noite.</p></div></li>
 
         <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s70"><span class="check-box"></span></label><span class="stop-title">Festa de San Gennaro · centenário</span></h4>
@@ -1633,9 +1980,28 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <p class="sub">Funciona das 11h às 23h nos dias de semana. Entrada gratuita, paga-se o que consumir. A procissão é no sábado e fica de fora — hoje é a noite das barraquinhas mesmo.</p></div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s71"><span class="check-box"></span></label><span class="stop-title">Volta para Yonkers</span></h4>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s71"><span class="check-box"></span></label><span class="stop-title">Volta para Yonkers · metrô + ônibus</span></h4>
           <span class="time-below">21h30</span>
-          <p class="sub">Metrô <b>6</b> de Spring/Canal até Grand Central + Metro-North.</p></div></li>
+          <p>Mesmo esquema da ida, de volta: metrô até o fim da linha 1, depois o Bee-Line até o Airbnb.</p>
+
+          <div class="rota-card">
+            <div class="rota-etapa">
+              <span class="linha-badge circulo linha-1">1</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Canal St</b> · direção <b>Van Cortlandt Park–242 St</b></span>
+                <span class="rota-meta">→ descer no ponto final, <span class="descida">Van Cortlandt Park–242 St</span> (Bronx)</span>
+              </div>
+            </div>
+            <div class="rota-transfer">👣 Conecta direto com o ponto do ônibus</div>
+            <div class="rota-etapa">
+              <span class="linha-badge pill linha-bee">Bee-Line 1</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque de volta · linha <b>Broadway @ Manhattan College Pkwy</b></span>
+                <span class="rota-meta">Várias paradas → descer em <span class="descida">Warburton Ave &amp; Arthur St</span></span>
+              </div>
+            </div>
+          </div>
+          <p class="sub">💰 Ainda dentro da semana do teto batido — essa viagem sai grátis.</p></div></li>
       </ul>
 
       <div class="eat">
@@ -1654,9 +2020,12 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
       <table class="custo-tabela" id="custo-d5">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
-          <tr><td contenteditable="true" data-persist-key="d5-r1-item">Almoço — Quinta Avenida</td><td class="num" contenteditable="true" data-persist-key="d5-r1-val">~US$ 20</td></tr>
+          <tr><td><span class="omny-tap" title="Tap 15 — grátis, já passou do teto">15</span><span class="ce-text" contenteditable="true" data-persist-key="d5-r4-item">Ônibus Bee-Line + metrô — Yonkers até Central Park · grátis</span></td><td class="num" contenteditable="true" data-persist-key="d5-r4-val">US$ 0</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d5-r1-item">Almoço — Smorgasburg Central Park</td><td class="num" contenteditable="true" data-persist-key="d5-r1-val">~US$ 20</td></tr>
+          <tr><td><span class="omny-tap" title="Tap 16 — grátis, já passou do teto">16</span><span class="ce-text" contenteditable="true" data-persist-key="d5-r5-item">Metrô — Columbus Circle até Spring St · grátis</span></td><td class="num" contenteditable="true" data-persist-key="d5-r5-val">US$ 0</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d5-r3-item">Doces — Ferrara Bakery, Eileen's, Chinatown Ice Cream</td><td class="num" contenteditable="true" data-persist-key="d5-r3-val">~US$ 15</td></tr>
           <tr><td contenteditable="true" data-persist-key="d5-r2-item">Jantar — San Gennaro (zeppole, sausage &amp; peppers)</td><td class="num" contenteditable="true" data-persist-key="d5-r2-val">~US$ 30</td></tr>
-          <tr><td contenteditable="true" data-persist-key="d5-r3-item">Doces — Ferrara Bakery</td><td class="num" contenteditable="true" data-persist-key="d5-r3-val">~US$ 10</td></tr>
+          <tr><td><span class="omny-tap" title="Tap 17 — grátis, já passou do teto">17</span><span class="ce-text" contenteditable="true" data-persist-key="d5-r6-item">Metrô + ônibus Bee-Line — volta pro Airbnb · grátis</span></td><td class="num" contenteditable="true" data-persist-key="d5-r6-val">US$ 0</td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d5-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d5-e1-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d5-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d5-e2-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d5-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d5-e3-val"></td></tr>
@@ -1694,7 +2063,7 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
       <details class="dia-acordeao">
       <summary>Roteiro</summary>
       <div class="facts minimal">
-        <div class="fact"><span class="f-emoji">🚆</span><span class="v">Metro-North off-peak</span></div>
+        <div class="fact"><span class="f-emoji">🎫</span><span class="v">Day Pass Greystone-Beacon</span></div>
         <div class="fact"><span class="f-emoji">☀️</span><span class="v">~18h55 · Cold Spring</span></div>
         <div class="fact"><span class="f-emoji">👣</span><span class="v">~8 km, leve</span></div>
       </div>
@@ -1707,7 +2076,8 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s72"><span class="check-box"></span></label><span class="stop-title">Yonkers → Tarrytown</span></h4>
           <span class="time-below">8h40</span>
-          <p class="sub">Metro-North Hudson Line sentido norte, ~20 min. Tarifa off-peak o dia inteiro no fim de semana. 📸 <b>Sentem do lado esquerdo</b> — a linha corre colada no rio.</p></div></li>
+          <p>Na bilheteria ou no app, comprem o <b>Day Pass Greystone → Beacon</b> — ~US$ 22,50 por pessoa, e dá pra parar e descer em qualquer estação do trecho o dia inteiro, sem comprar passagem nova a cada trecho.</p>
+          <p class="sub">Metro-North Hudson Line sentido norte, ~20 min. 📸 <b>Sentem do lado esquerdo</b> — a linha corre colada no rio.</p></div></li>
 
         <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s73"><span class="check-box"></span></label><span class="stop-title">Tarrytown · Main Street</span></h4>
@@ -1764,9 +2134,10 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
       <table class="custo-tabela" id="custo-d6">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
-          <tr><td contenteditable="true" data-persist-key="d6-r1-item">Metro-North — Yonkers–Tarrytown–Cold Spring (ida e volta)</td><td class="num" contenteditable="true" data-persist-key="d6-r1-val">US$ 40–55</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d6-r1-item">Metro-North — Day Pass Greystone → Beacon (2x)</td><td class="num" contenteditable="true" data-persist-key="d6-r1-val">US$ 45</td></tr>
           <tr><td contenteditable="true" data-persist-key="d6-r2-item">Café em Tarrytown</td><td class="num" contenteditable="true" data-persist-key="d6-r2-val">~US$ 15</td></tr>
           <tr><td contenteditable="true" data-persist-key="d6-r3-item">Almoço em Cold Spring</td><td class="num" contenteditable="true" data-persist-key="d6-r3-val">~US$ 25</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d6-r4-item">Jantar em Cold Spring, antes de voltar</td><td class="num" contenteditable="true" data-persist-key="d6-r4-val">~US$ 25</td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d6-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d6-e1-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d6-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d6-e2-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d6-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d6-e3-val"></td></tr>
@@ -1908,72 +2279,117 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <span class="ov-label">Visão geral</span>
         </div>
         <ol>
-          <li><span class="ov-num">1</span>Old Croton Aqueduct Trail</li>
+          <li><span class="ov-num">1</span>Encontro com a Yadira · LGA</li>
           <li><span class="ov-num">2</span>Untermyer Gardens</li>
-          <li><span class="ov-num">3</span>Hudson River Museum ou Trevor Park</li>
-          <li><span class="ov-num">4</span>Orla de Yonkers · mercado</li>
+          <li><span class="ov-num">3</span>Yonkers Waterfront &amp; Esplanade Park</li>
         </ol>
       </div>
 
       <details class="dia-acordeao">
       <summary>Roteiro</summary>
       <div class="facts minimal">
-        <div class="fact"><span class="f-emoji">🚶</span><span class="v">Tudo a pé ou ônibus local</span></div>
+        <div class="fact"><span class="f-emoji">👋</span><span class="v">Yadira · 10h30 LGA</span></div>
         <div class="fact"><span class="f-emoji">🌳</span><span class="v">Untermyer grátis</span></div>
-        <div class="fact"><span class="f-emoji">👣</span><span class="v">~7 km, leve</span></div>
+        <div class="fact"><span class="f-emoji">👣</span><span class="v">~9 km</span></div>
       </div>
       <div class="note">
-        <span class="lbl">Por que este dia existe</span>
-        Depois de sete dias no talo, este é o dia que justifica a escolha de ficar em Yonkers em vez de num hotel de Manhattan. Não é descanso — é <b>conteúdo diferente</b>: o subúrbio americano real, o supermercado, o parque de bairro, a rotina. É o que separa o canal de vocês de qualquer outro roteiro de Nova York.
+        <span class="lbl">🎉 A Yadira chega hoje!</span>
+        Amiga de internet que conseguiu um voo pra ver vocês — pouso às <b>10h30 no LaGuardia</b>, hospedada no <b>Courtyard by Marriott Yonkers</b> (5 Executive Blvd). Volta dia 23 às 18h, do JFK, no mesmo dia do voo de vocês.
+      </div>
+      <div class="note warn">
+        <span class="lbl">A semana do OMNY reiniciou</span>
+        A partir de hoje volta a cobrar — a janela grátis dos primeiros 7 dias acabou no domingo. Todo tap desta semana está com custo real na tabela abaixo.
       </div>
 
       <ul class="tl">
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s87"><span class="check-box"></span></label><span class="stop-title">Café na varanda</span></h4>
-          <span class="time-below">9h00</span>
-          <p class="sub">Primeira manhã sem correr. Cozinha própria, café em casa, o Hudson na frente.</p></div></li>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s87"><span class="check-box"></span></label><span class="stop-title">Yonkers → LaGuardia</span></h4>
+          <span class="time-below">8h30</span>
+          <p>Rota mais barata pro aeroporto: ônibus até o metrô, metrô até a Columbia University, e o <b>M60-SBS</b> — o expresso que vai direto até o Terminal B do LaGuardia.</p>
 
-        <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s88"><span class="check-box"></span></label><span class="stop-title">Caminhada pelo bairro residencial</span></h4>
-          <span class="time-below">10h00</span>
-          <p>Casas de madeira, caixas de correio na calçada, ônibus escolar amarelo, bandeiras nas varandas. O clichê americano existindo de verdade.</p></div></li>
+          <div class="rota-card">
+            <div class="rota-etapa">
+              <span class="linha-badge pill linha-bee">Bee-Line 1</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Warburton Ave &amp; Arthur St</b></span>
+                <span class="rota-meta">→ descer no ponto final, <span class="descida">Van Cortlandt Park–242 St</span></span>
+              </div>
+            </div>
+            <div class="rota-transfer">👣 Conecta direto com o metrô</div>
+            <div class="rota-etapa">
+              <span class="linha-badge circulo linha-1">1</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Van Cortlandt Park–242 St</b> · direção <b>Manhattan</b></span>
+                <span class="rota-meta">→ descer em <span class="descida">116 St–Columbia University</span></span>
+              </div>
+            </div>
+            <div class="rota-transfer">👣 Subam à rua pro ponto do M60</div>
+            <div class="rota-etapa">
+              <span class="linha-badge pill linha-bee">M60-SBS</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Broadway/116 St</b> · direção <b>LaGuardia Airport</b></span>
+                <span class="rota-meta">→ descer no <span class="descida">Terminal B</span></span>
+              </div>
+            </div>
+          </div>
+          <p class="sub">💰 US$ 3 por pessoa — conta como 1 tap só, a viagem inteira dentro da janela de 2h.</p></div></li>
 
         <li class="hi"><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s89"><span class="check-box"></span></label><span class="stop-title">Old Croton Aqueduct Trail</span></h4>
-          <span class="time-below">10h45</span>
-          <p>Trilha plana sobre o antigo aqueduto que levava água de Croton até Manhattan, passando por Yonkers, Tarrytown e Sleepy Hollow. Gratuita, arborizada e cheia de moradores correndo.</p></div></li>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s138"><span class="check-box"></span></label><span class="stop-title">Encontro com a Yadira</span></h4>
+          <span class="time-below">10h30</span>
+          <p>Pouso dela no Terminal B. Esperem na área de desembarque com folga — voo internacional... não, doméstico, mas sempre bom ter 15–20 min de gordura.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s139"><span class="check-box"></span></label><span class="stop-title">Escolha do caminho até Yonkers</span></h4>
+          <span class="time-below">11h00</span>
+          <p><b>Se a Yadira estiver só de mochila e topar uma paradinha:</b> M60-SBS + metrô até a Times Square, um giro rápido por lá, depois metrô até a Grand Central e Metro-North até Greystone.</p>
+          <p><b>Se ela preferir ir direto:</b> M60-SBS de volta até a 125 St, e ali mesmo — sem precisar descer até a Grand Central — embarcam no Metro-North Hudson Line direto até Greystone (a linha já passa pela 125 St antes de descer pro centro).</p>
+          <p class="sub">💰 Opção Times Square: +1 tap de metrô (~US$ 6 pro casal) e mais o Metro-North de Grand Central. Opção direta: só o Metro-North de 125 St, sem tap extra.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s140"><span class="check-box"></span></label><span class="stop-title">Metro-North até Greystone</span></h4>
+          <span class="time-below">12h15</span>
+          <p class="sub">De 125 St ou de Grand Central, dependendo do caminho escolhido. ~35–45 min até Greystone.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s141"><span class="check-box"></span></label><span class="stop-title">Greystone → hotel da Yadira</span></h4>
+          <span class="time-below">13h00</span>
+          <p>O Courtyard fica na Executive Blvd, um pouco afastado da estação — não é o mesmo lado do rio do Airbnb. Lyft/Uber é o mais prático.</p>
+          <p class="sub">💰 Lyft/Uber ~US$ 10. Caminhando: ~3,2 km, uns 40 min — só se topar esticar a perna.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s142"><span class="check-box"></span></label><span class="stop-title">Check-in da Yadira</span></h4>
+          <span class="time-below">13h30</span>
+          <p class="sub">Ela guarda as coisas, respira, tira o voo do corpo.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s91"><span class="check-box"></span></label><span class="stop-title">Comer algo na região</span></h4>
+          <span class="time-below">14h15</span>
+          <p class="sub">Alguma coisa perto do hotel dela ou a caminho do Untermyer.</p></div></li>
 
         <li class="hi"><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s90"><span class="check-box"></span></label><span class="stop-title">Untermyer Gardens</span></h4>
-          <span class="time-below">12h00</span>
-          <p>945 N Broadway. Jardim persa murado com colunatas, espelhos d'água e um mirante sobre o Hudson. <b>Entrada gratuita.</b></p>
-          <p class="sub">📸 É provavelmente o lugar mais fotogênico de Yonkers e quase ninguém de fora conhece. Confirmem o horário do dia no site.</p></div></li>
-
-        <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s91"><span class="check-box"></span></label><span class="stop-title">Almoço em casa</span></h4>
-          <span class="time-below">14h00</span>
-          <p class="sub">Cozinha do Airbnb. É aqui que o orçamento de alimentação se paga.</p></div></li>
-
-        <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s92"><span class="check-box"></span></label><span class="stop-title">Hudson River Museum ou Trevor Park</span></h4>
           <span class="time-below">15h30</span>
-          <p class="sub">Museu com planetário e vista do rio. Se preferirem tudo gratuito, o parque ao lado entrega a mesma vista.</p></div></li>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p>Samuel Untermyer, um dos advogados mais poderosos de Nova York, comprou a propriedade em 1899 e contratou William Welles Bosworth — o mesmo arquiteto paisagista por trás de Kykuit, a propriedade dos Rockefeller — pra desenhar um jardim inspirado em referências persas, gregas e italianas. O coração do lugar é o Jardim Amuralhado, um "chahar bagh" clássico: quatro quadrantes divididos por canais de água que se encontram numa piscina central, o mesmo esquema descrito como paraíso nos jardins persas antigos. Duas esfinges guardam a entrada.</p>
+            <p>No auge, entre os anos 1910 e 1930, era considerado por muitos contemporâneos o jardim mais espetacular dos Estados Unidos — Untermyer dava festas grandiosas ali, com centenas de convidados. O complexo inclui o Templo do Amor (um gazebo de colunas com vista pro Hudson), um anfiteatro esculpido na encosta e um jardim de pedras. A fonte original de 1947 que ficava aqui foi removida décadas depois e hoje está no Conservatory Garden, dentro do Central Park — quem já visitou lá, sem saber, já viu um pedaço do Untermyer.</p>
+            <p>Depois da morte de Untermyer em 1940, a propriedade foi doada à cidade e passou décadas em abandono quase total — vandalismo, mato tomando conta, fontes secas. Só a partir de 2011, quando a Untermyer Gardens Conservancy (uma ONG local) assumiu a restauração, o jardim voltou a ficar de pé. Hoje é gratuito, mantido por voluntários, e um dos jardins mais bonitos e menos conhecidos do país — a maioria dos nova-iorquinos nunca ouviu falar dele.</p>
+          </div></details>
+          <p>945 N Broadway. Jardim persa murado com colunatas, espelhos d'água e um mirante sobre o Hudson. <b>Entrada gratuita.</b></p>
+          <p class="sub">📸 É provavelmente o lugar mais fotogênico de Yonkers e quase ninguém de fora conhece. Confirmem o horário do dia no site.</p>
+          <details class="insp"><summary>📸 Inspiração pra Carimbar</summary>
+            <div class="insp-imgs"></div>
+          </details></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 ônibus local ou app até a orla</div></li>
 
         <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s93"><span class="check-box"></span></label><span class="stop-title">Orla de Yonkers · mercado</span></h4>
-          <span class="time-below">17h00</span>
-          <p class="sub">Van der Donck Park à beira do rio, e depois a compra da semana. Trader Joe's, Stop &amp; Shop ou ShopRite para reabastecer.</p></div></li>
-
-        <li><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s94"><span class="check-box"></span></label><span class="stop-title">Pôr do sol na varanda</span></h4>
-          <span class="time-below">18h45</span>
-          <p class="sub">O motivo pelo qual vocês escolheram este apartamento.</p></div></li>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s93"><span class="check-box"></span></label><span class="stop-title">Yonkers Waterfront &amp; Esplanade Park</span></h4>
+          <span class="time-below">17h30</span>
+          <p class="sub">Van der Donck Park e a esplanada à beira do rio — bom fim de tarde pra fechar o primeiro dia com a Yadira.</p></div></li>
       </ul>
 
-      <div class="note">
-        <span class="lbl">Encaixe opcional da noite</span>
-        <b>New York Liberty no Barclays Center.</b> A temporada da WNBA vai até 24 de setembro, e o último jogo da Liberty é dia 23 contra a Atlanta Dream, fechando uma série de dois jogos em casa — então o outro jogo cai por aqui. <b>Confirmem se é 21 ou 22</b> antes de comprar. Barclays fica em Atlantic Ave–Barclays Ctr, ~1h15 de Yonkers.
-      </div>
       </details>
 
       <details class="dia-acordeao">
@@ -1981,13 +2397,19 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
       <table class="custo-tabela" id="custo-d8">
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
+          <tr><td><span class="omny-tap" title="Tap OMNY 1/12 — nova semana, novo teto">1</span><span class="ce-text" contenteditable="true" data-persist-key="d8-r2-item">Ônibus + metrô + M60-SBS — Yonkers até LaGuardia</span></td><td class="num" contenteditable="true" data-persist-key="d8-r2-val">US$ 6</td></tr>
+          <tr><td><span class="omny-tap" title="Tap OMNY 2/12 — só se optarem pela Times Square">2</span><span class="ce-text" contenteditable="true" data-persist-key="d8-r3-item">Metrô — LaGuardia até Times Square (se optarem por essa rota)</span></td><td class="num" contenteditable="true" data-persist-key="d8-r3-val">US$ 6</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d8-r4-item">Metro-North — 125 St ou Grand Central até Greystone (2x)</td><td class="num" contenteditable="true" data-persist-key="d8-r4-val">~US$ 18</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d8-r5-item">Lyft/Uber — Greystone até o hotel da Yadira</td><td class="num" contenteditable="true" data-persist-key="d8-r5-val">~US$ 10</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d8-r6-item">Almoço/lanche na região</td><td class="num" contenteditable="true" data-persist-key="d8-r6-val">~US$ 25</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d8-r7-item">Jantar em casa, com as compras do mercado</td><td class="num" contenteditable="true" data-persist-key="d8-r7-val">~US$ 20</td></tr>
           <tr><td contenteditable="true" data-persist-key="d8-r1-item">Compras no mercado (Trader Joe's / ShopRite)</td><td class="num" contenteditable="true" data-persist-key="d8-r1-val">~US$ 25</td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d8-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d8-e1-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d8-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d8-e2-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d8-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d8-e3-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d8-e4-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d8-e4-val"></td></tr>
         </tbody>
-        <tfoot><tr><td>Total do dia</td><td class="num">~US$ 25</td></tr></tfoot>
+        <tfoot><tr><td>Total do dia</td><td class="num">~US$ 90</td></tr></tfoot>
       </table>
       </details>
 
@@ -1997,48 +2419,111 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
   <!-- DIA 9 -->
   <article class="day" id="d9">
     <div class="day-head">
-      <h3><small>Terça · 22 de setembro</small>Coringa</h3>
-      <span class="badge">Sem roteiro fixo · de propósito</span>
+      <h3><small>Terça · 22 de setembro</small>Tarrytown &amp; Cold Spring · com a Yadira</h3>
+      <a href="#custo-d9" class="badge custo-total-link">~US$ 60</a>
     </div>
     <div class="day-body">
 
-      <div class="note">
-        <span class="lbl">A regra deste dia</span>
-        Este dia <b>não se planeja agora</b>. Ele existe para absorver o imprevisto: a chuva que estragou o domingo, o lugar que vocês amaram e querem repetir, o bloco que ficou pela metade, o cansaço legítimo. Um roteiro sem folga não é intenso — é frágil.
+      <div class="day-overview">
+        <div class="ov-head">
+          <span class="dia-num"><span class="lbl">Dia</span><span class="num">09</span></span>
+          <span class="ov-label">Visão geral</span>
+        </div>
+        <ol>
+          <li><span class="ov-num">1</span>Tarrytown · Main Street</li>
+          <li><span class="ov-num">2</span>RiverWalk &amp; orla de Tarrytown</li>
+          <li><span class="ov-num">3</span>Cold Spring · Main Street</li>
+          <li><span class="ov-num">4</span>Orla &amp; coreto do Hudson</li>
+          <li><span class="ov-num">5</span>Pôr do sol na orla</li>
+        </ol>
       </div>
 
-      <div class="cols">
-        <div class="panel">
-          <h4>Se quiserem repetir</h4>
-          <ul>
-            <li>Cold Spring num dia de semana — a cidade vazia de verdade</li>
-            <li>Tarrytown com tempo para Sunnyside ou Sleepy Hollow</li>
-            <li>DUMBO de novo, agora sem pressa</li>
-            <li>Central Park nas partes que ficaram de fora</li>
-            <li>Chinatown para comer tudo o que faltou</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h4>Se quiserem algo novo</h4>
-          <ul>
-            <li>Beacon e o museu Dia Beacon, mais ao norte na mesma linha</li>
-            <li>Outlet de Woodbury Common ou Empire Outlets</li>
-            <li>Downtown Yonkers e a orla</li>
-            <li>Jogo da Liberty, se cair nesta data</li>
-            <li>Compras finais e presentes</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h4>Se o corpo pedir</h4>
-          <ul>
-            <li>Manhã inteira na varanda</li>
-            <li>Cozinhar com calma</li>
-            <li>Editar e organizar o material do canal</li>
-            <li>Fechar as malas sem pressa</li>
-            <li>Uma última caminhada pelo bairro</li>
-          </ul>
-        </div>
+      <details class="dia-acordeao">
+      <summary>Roteiro</summary>
+      <div class="facts minimal">
+        <div class="fact"><span class="f-emoji">🎫</span><span class="v">Day Pass Greystone-Beacon</span></div>
+        <div class="fact"><span class="f-emoji">☀️</span><span class="v">~18h50 · Cold Spring</span></div>
+        <div class="fact"><span class="f-emoji">👣</span><span class="v">~8 km, leve</span></div>
       </div>
+      <div class="note">
+        <span class="lbl">Repetindo com a Yadira</span>
+        Mesmo passeio do sábado — Tarrytown de manhã, Cold Spring à tarde — dessa vez com a Yadira junto. Como hoje é terça-feira, os trens são bem mais frequentes que no fim de semana: sem a corrida contra o relógio que teve no sábado.
+      </div>
+
+      <ul class="tl">
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s143"><span class="check-box"></span></label><span class="stop-title">Encontro com a Yadira</span></h4>
+          <span class="time-below">8h15</span>
+          <p class="sub">Ela desce até a estação de Greystone (ou encontram vocês na Yonkers Station, o que for mais fácil pra ela) e seguem juntos.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s72b"><span class="check-box"></span></label><span class="stop-title">Yonkers → Tarrytown</span></h4>
+          <span class="time-below">8h40</span>
+          <p>Comprem o <b>Day Pass Greystone → Beacon</b> pra cada um (~US$ 22,50/pessoa) — hoje são 3 pessoas, então 3 passes.</p>
+          <p class="sub">Metro-North Hudson Line sentido norte, ~20 min. 📸 <b>Sentem do lado esquerdo</b> — a linha corre colada no rio.</p></div></li>
+
+        <li class="hi"><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s73b"><span class="check-box"></span></label><span class="stop-title">Tarrytown · Main Street</span></h4>
+          <span class="time-below">9h10</span>
+          <p>A rua principal em subida, com lojinhas, sebos, antiquários e cafés de calçada.</p>
+          <p class="sub">☕ Coffee Labs Roasters é o café de referência da cidade. 🚻 Use aqui — as opções em Cold Spring são mais escassas.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>10 min</b> · descendo de volta ao nível do rio</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s74b"><span class="check-box"></span></label><span class="stop-title">RiverWalk &amp; orla de Tarrytown</span></h4>
+          <span class="time-below">11h00</span>
+          <p class="sub">Calçadão à beira do Hudson com vista para a ponte Mario Cuomo. O rio aqui é largo feito lago.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s75b"><span class="check-box"></span></label><span class="stop-title">Trem para Cold Spring</span></h4>
+          <span class="time-below">12h15</span>
+          <p class="sub">~45 min pela Hudson Line, já usando o Day Pass — não precisa comprar nada de novo. A partir de Croton-Harmon a paisagem abre pras montanhas do Hudson Highlands.</p></div></li>
+
+        <li class="hi"><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s76b"><span class="check-box"></span></label><span class="stop-title">Cold Spring · Main Street</span></h4>
+          <span class="time-below">13h10</span>
+          <p>A estação fica a 2 minutos da rua principal. Antiquários, brechós, livrarias e casas do século XIX — a cidadezinha americana de cartão-postal.</p>
+          <p class="sub">Almoço aqui, sem pressa.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>4 min</b> · descendo a Main St até a água</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s77b"><span class="check-box"></span></label><span class="stop-title">Orla &amp; coreto do Hudson</span></h4>
+          <span class="time-below">15h00</span>
+          <p>O píer e o coreto branco olhando para a Storm King Mountain do outro lado. Se sobrar disposição, <b>Little Stony Point</b> fica a ~25 min a pé ao norte, com mirante sobre o rio.</p></div></li>
+
+        <li class="hi"><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s78b"><span class="check-box"></span></label><span class="stop-title">Pôr do sol na orla · ~18h50</span></h4>
+          <span class="time-below">18h35</span>
+          <p>O sol se põe atrás das montanhas do lado oeste, com o rio inteiro dourado na frente.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s79b"><span class="check-box"></span></label><span class="stop-title">Volta para Yonkers</span></h4>
+          <span class="time-below">19h30</span>
+          <p class="sub">~1h de trem, trens mais frequentes que no sábado. Deixem a Yadira na estação mais perto do hotel dela antes de seguir pro Airbnb.</p></div></li>
+      </ul>
+      </details>
+
+      <details class="dia-acordeao">
+      <summary>Estimativa de Gastos <span class="acordeao-hint">edite os valores</span></summary>
+      <table class="custo-tabela" id="custo-d9">
+        <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
+        <tbody>
+          <tr><td contenteditable="true" data-persist-key="d9-r1-item">Metro-North — Day Pass Greystone → Beacon (2x, só vocês)</td><td class="num" contenteditable="true" data-persist-key="d9-r1-val">US$ 45</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d9-r2-item">Café em Tarrytown</td><td class="num" contenteditable="true" data-persist-key="d9-r2-val">~US$ 15</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d9-r3-item">Almoço em Cold Spring</td><td class="num" contenteditable="true" data-persist-key="d9-r3-val">~US$ 25</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d9-r4-item">Jantar em Cold Spring, antes de voltar</td><td class="num" contenteditable="true" data-persist-key="d9-r4-val">~US$ 25</td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d9-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d9-e1-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d9-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d9-e2-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d9-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d9-e3-val"></td></tr>
+          <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d9-e4-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d9-e4-val"></td></tr>
+        </tbody>
+        <tfoot><tr><td>Total do dia</td><td class="num">~US$ 85</td></tr></tfoot>
+      </table>
+      </details>
 
     </div>
   </article>
@@ -2068,15 +2553,20 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
           <span class="time-below">12h00</span></div></li>
 
         <li class="hi"><span class="dot"></span>
-          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s98"><span class="check-box"></span></label><span class="stop-title">Yonkers → JFK</span></h4>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s98"><span class="check-box"></span></label><span class="stop-title">Yonkers → JFK · com a Yadira</span></h4>
           <span class="time-below">13h45</span>
-          <p>Metro-North até <b>Grand Central</b> · LIRR de Grand Central Madison até <b>Jamaica</b> · <b>AirTrain</b> até o terminal.</p>
+          <p>Metro-North até <b>Grand Central</b> · LIRR de Grand Central Madison até <b>Jamaica</b> · <b>AirTrain</b> até o terminal. A Yadira vai junto — o voo dela (18h) sai antes do de vocês.</p>
           <p class="sub">~2h30 no total, com folga para malas e baldeações. 💰 AirTrain US$ 8,50 por pessoa, à parte do OMNY.</p></div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s99"><span class="check-box"></span></label><span class="stop-title">Chegada ao JFK</span></h4>
           <span class="time-below">16h15</span>
-          <p class="sub">3h30 antes do voo internacional. Margem confortável.</p></div></li>
+          <p class="sub">3h30 antes do voo internacional de vocês. Margem confortável — e dá tempo de acompanhar a Yadira até o check-in dela também.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s137"><span class="check-box"></span></label><span class="stop-title">Yadira embarca</span></h4>
+          <span class="time-below">18h00</span>
+          <p class="sub">Despedida — o voo dela sai quase 2h antes do de vocês. Depois é só esperar a hora de embarcar.</p></div></li>
 
         <li><span class="dot"></span>
           <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s100"><span class="check-box"></span></label><span class="stop-title">Decolagem para o Brasil</span></h4>
@@ -2090,6 +2580,7 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
         <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
         <tbody>
           <tr><td contenteditable="true" data-persist-key="d10-r1-item">AirTrain (JFK, embarque)</td><td class="num" contenteditable="true" data-persist-key="d10-r1-val">US$ 17</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d10-r2-item">Alimentação — café, almoço sem pressa</td><td class="num" contenteditable="true" data-persist-key="d10-r2-val">~US$ 45</td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d10-e1-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d10-e1-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d10-e2-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d10-e2-val"></td></tr>
           <tr class="custo-extra"><td contenteditable="true" data-placeholder="Digite aqui" data-persist-key="d10-e3-item"></td><td class="num" contenteditable="true" data-placeholder="US$" data-persist-key="d10-e3-val"></td></tr>
@@ -2120,47 +2611,144 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
       <caption>Atrações pagas</caption>
       <thead><tr><th>Item</th><th>Quando</th><th style="text-align:right">Casal</th></tr></thead>
       <tbody>
-        <tr><td>SUMMIT One Vanderbilt · slot pôr do sol</td><td>Qua 16</td><td class="num">US$ 110–130</td></tr>
-        <tr><td>FRIENDS Experience</td><td>Qua 16</td><td class="num">US$ 86</td></tr>
+        <tr><td>SUMMIT One Vanderbilt · slot pôr do sol <em>(a decidir)</em></td><td>Qua 16</td><td class="num">US$ 96</td></tr>
+        <tr><td>FRIENDS Experience <em>(a decidir)</em></td><td>Qua 16</td><td class="num">US$ 110</td></tr>
+        <tr><td>Estátua da Liberdade <em>(a decidir)</em></td><td>Ter 15</td><td class="num">US$ 70</td></tr>
         <tr><td>Museu de História Natural</td><td>Qui 17</td><td class="num">US$ 0</td></tr>
-        <tr><td>Jogo da NY Liberty <em>(opcional)</em></td><td>Seg 21 ou Ter 22</td><td class="num">US$ 60–120</td></tr>
       </tbody>
-      <tfoot><tr><td colspan="2">Subtotal atrações</td><td class="num">~US$ 195–215</td></tr></tfoot>
+      <tfoot><tr><td colspan="2">Subtotal atrações <em>(limite de US$ 200 — escolham entre os 3 acima)</em></td><td class="num">≤ US$ 200</td></tr></tfoot>
     </table>
 
     <table>
       <caption>Transporte</caption>
       <thead><tr><th>Item</th><th>Detalhe</th><th style="text-align:right">Casal</th></tr></thead>
       <tbody>
-        <tr><td>OMNY · semana 1</td><td>Teto de US$ 35 por pessoa</td><td class="num">US$ 70</td></tr>
-        <tr><td>OMNY · semana 2</td><td>3 dias, sem atingir o teto</td><td class="num">US$ 30–40</td></tr>
-        <tr><td>Metro-North Yonkers → Grand Central</td><td>~6 idas e voltas, off-peak</td><td class="num">US$ 150–200</td></tr>
-        <tr><td>Metro-North Hudson Valley</td><td>Tarrytown + Cold Spring</td><td class="num">US$ 40–55</td></tr>
-        <tr><td>AirTrain JFK</td><td>Ida e volta</td><td class="num">US$ 34</td></tr>
+        <tr><td>Dia 1 · Segunda 14</td><td>AirTrain + metrô chegada, metrô volta</td><td class="num">~US$ 30</td></tr>
+        <tr><td>Dia 2 · Terça 15</td><td>3 taps de metrô</td><td class="num">~US$ 18</td></tr>
+        <tr><td>Dia 3 · Quarta 16</td><td>5 taps + Metro-North + Lyft</td><td class="num">~US$ 59</td></tr>
+        <tr><td>Dia 4 · Quinta 17</td><td>Bee-Line + metrô (2 taps, teto batido)</td><td class="num">~US$ 12</td></tr>
+        <tr><td>Dia 5 · Sexta 18</td><td>Bee-Line + metrô, tudo grátis</td><td class="num">US$ 0</td></tr>
+        <tr><td>Dia 6 · Sábado 19</td><td>Day Pass Greystone → Beacon</td><td class="num">~US$ 45</td></tr>
+        <tr><td>Dia 7 · Domingo 20</td><td>Metrô grátis (teto batido)</td><td class="num">US$ 0</td></tr>
+        <tr><td>Dia 8 · Segunda 21</td><td>Semana nova: LGA de ônibus+metrô, Metro-North, Lyft</td><td class="num">~US$ 40</td></tr>
+        <tr><td>Dia 9 · Terça 22</td><td>Day Pass Greystone → Beacon</td><td class="num">~US$ 45</td></tr>
+        <tr><td>Dia 10 · Quarta 23</td><td>AirTrain embarque</td><td class="num">~US$ 17</td></tr>
       </tbody>
-      <tfoot><tr><td colspan="2">Subtotal transporte</td><td class="num">~US$ 325–400</td></tr></tfoot>
+      <tfoot><tr><td colspan="2">Subtotal transporte</td><td class="num">~US$ 265</td></tr></tfoot>
+    </table>
+
+    <table>
+      <caption>Alimentação</caption>
+      <thead><tr><th>Item</th><th>Detalhe</th><th style="text-align:right">Casal</th></tr></thead>
+      <tbody>
+        <tr><td>Dia 1 · Segunda 14</td><td>Lanches no caminho + mercado</td><td class="num">~US$ 36</td></tr>
+        <tr><td>Dia 2 · Terça 15</td><td>Café da manhã + lanches/jantar</td><td class="num">~US$ 45</td></tr>
+        <tr><td>Dia 3 · Quarta 16</td><td>Bagel + almoço/lanches + jantar</td><td class="num">~US$ 43</td></tr>
+        <tr><td>Dia 4 · Quinta 17</td><td>Almoço + lanche + jantar</td><td class="num">~US$ 60</td></tr>
+        <tr><td>Dia 5 · Sexta 18</td><td>Smorgasburg + doces + San Gennaro</td><td class="num">~US$ 65</td></tr>
+        <tr><td>Dia 6 · Sábado 19</td><td>Café + almoço + jantar em Tarrytown/Cold Spring</td><td class="num">~US$ 65</td></tr>
+        <tr><td>Dia 7 · Domingo 20</td><td>Almoço + lanches + jantar</td><td class="num">~US$ 45</td></tr>
+        <tr><td>Dia 8 · Segunda 21</td><td>Almoço/lanche + jantar em casa + mercado</td><td class="num">~US$ 70</td></tr>
+        <tr><td>Dia 9 · Terça 22</td><td>Café + almoço + jantar (com a Yadira)</td><td class="num">~US$ 65</td></tr>
+        <tr><td>Dia 10 · Quarta 23</td><td>Café e almoço sem pressa</td><td class="num">~US$ 45</td></tr>
+      </tbody>
+      <tfoot><tr><td colspan="2">Subtotal alimentação</td><td class="num">~US$ 539</td></tr></tfoot>
     </table>
 
     <div class="note">
       <span class="lbl">Onde mora a economia real</span>
-      <b>1. O ônibus Bee-Line.</b> Ele adotou o OMNY, custa os mesmos US$ 3, dá transferência gratuita para o metrô e <b>conta para o teto de US$ 35</b> — só a linha expressa BxM4C fica fora. Trocar o Metro-North por ônibus + metrô economiza US$ 25 a 30 por dia, mas custa ~2h de luz do dia. <b>Sugestão: Metro-North na ida</b> (compra a manhã, que é o horário nobre de foto) <b>e ônibus + metrô na volta</b>, quando vocês só querem chegar e dormir. Isso pode derrubar o subtotal de transporte em US$ 80 a 100.
+      <b>1. A cozinha.</b> As noites com cozinha no Airbnb são o que faz o orçamento fechar — cada refeição feita em casa em vez de fora já está descontada nos valores acima.
       <br><br>
-      <b>2. A cozinha.</b> Sete noites com cozinha é o que faz o orçamento fechar. Café da manhã e uma refeição por dia em casa derrubam a alimentação para ~US$ 40/dia no casal.
+      <b>2. Os itens mais cortáveis.</b> SUMMIT One Vanderbilt, FRIENDS Experience e a Estátua da Liberdade seguem como "a decidir" — juntos passariam de US$ 270, mas o cálculo final já trava num limite de <b>US$ 200</b> pra esse bloco. Ou seja: escolham no máximo dois dos três (ou um só, se preferirem folga).
       <br><br>
-      <b>3. O item mais cortável.</b> Se o orçamento apertar, o FRIENDS Experience (US$ 86) é o corte mais indolor — é o único item pago que não é insubstituível.
+      <b>3. A semana 2 custa mais em transporte.</b> O teto do OMNY reinicia na segunda 21 — por isso os Dias 8 e 9 voltam a ter custo de metrô/trem, depois de uma semana 1 que terminou com tudo grátis a partir do Dia 4.
     </div>
 
     <table>
       <caption>Fechamento estimado</caption>
       <thead><tr><th>Bloco</th><th style="text-align:right">Casal</th></tr></thead>
       <tbody>
-        <tr><td>Atrações pagas</td><td class="num">~US$ 265</td></tr>
-        <tr><td>Transporte (com estratégia do ônibus)</td><td class="num">~US$ 290</td></tr>
-        <tr><td>Alimentação · 10 dias, com cozinha</td><td class="num">~US$ 400</td></tr>
-        <tr><td>Reserva para imprevistos</td><td class="num">~US$ 45</td></tr>
+        <tr><td>Transporte</td><td class="num">~US$ 265</td></tr>
+        <tr><td>Alimentação · 10 dias</td><td class="num">~US$ 539</td></tr>
+        <tr><td>Atrações pagas <em>(limite — escolham entre SUMMIT, FRIENDS e Estátua)</em></td><td class="num">≤ US$ 200</td></tr>
       </tbody>
-      <tfoot><tr><td>Total no destino</td><td class="num">~US$ 1.000</td></tr></tfoot>
+      <tfoot><tr><td>Total no destino</td><td class="num">~US$ 1.004</td></tr></tfoot>
     </table>
+
+    <div class="note">
+      <span class="lbl">Em reais</span>
+      ~US$ 1.004 · câmbio R$ 5,20/USD ≈ <b>R$ 5.221</b> para o casal, no destino. Não inclui hospedagem nem passagens aéreas.
+    </div>
+
+  </div>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-principal">Menu Principal</a></div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FINANCEIRO MACRO
+══════════════════════════════════════════ -->
+<section id="financeiro-macro">
+  <div class="wrap">
+    <div class="secao-head">
+      <span class="eyebrow">Visão Geral</span>
+      <h2 class="sec-h2"><em>Financeiro Macro</em></h2>
+      <p>O quadro completo da viagem — antes de sair de Araxá, os dias em Nova York, e o desvio por Curitiba na volta. Valores em reais.</p>
+    </div>
+
+    <table>
+      <caption>Pré-viagem</caption>
+      <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
+      <tbody>
+        <tr><td>Ônibus Araxá → São Paulo <span class="pago-tag">Pago</span></td><td class="num">R$ 312</td></tr>
+        <tr><td>Ônibus São Paulo → Araxá <span class="pago-tag">Pago</span></td><td class="num">R$ 312</td></tr>
+        <tr><td>Voo São Paulo → Nova York <span class="pago-tag">Pago</span></td><td class="num">R$ 2.000</td></tr>
+        <tr><td>Airbnb Yonkers <span class="pago-tag">Pago</span></td><td class="num">R$ 3.612,20</td></tr>
+        <tr><td>Carlton Arms Manhattan (2 diárias) <span class="pendente-tag">Pendente</span> <em>— cobra no cartão dia 10/09</em></td><td class="num">R$ 2.080</td></tr>
+      </tbody>
+      <tfoot><tr><td>Subtotal pré-viagem</td><td class="num">R$ 8.316,20</td></tr></tfoot>
+    </table>
+
+    <table>
+      <caption>Nova York</caption>
+      <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
+      <tbody>
+        <tr><td>Transporte <span class="pendente-tag">Pendente</span> <em>(ver Custos Previstos)</em></td><td class="num">US$ 265 → ~R$ 1.378</td></tr>
+        <tr><td>Alimentação <span class="pendente-tag">Pendente</span> <em>(ver Custos Previstos)</em></td><td class="num">US$ 539 → ~R$ 2.803</td></tr>
+        <tr><td>Atrações e outros <span class="pendente-tag">Pendente</span> <em>(limite — ver Custos Previstos)</em></td><td class="num">≤ US$ 200 → ≤ R$ 1.040</td></tr>
+      </tbody>
+      <tfoot><tr><td>Subtotal Nova York</td><td class="num">~R$ 5.221</td></tr></tfoot>
+    </table>
+
+    <table>
+      <caption>Gerais</caption>
+      <thead><tr><th>Item</th><th style="text-align:right">Casal</th></tr></thead>
+      <tbody>
+        <tr><td>Gastos em São Paulo <span class="pendente-tag">Pendente</span></td><td class="num">R$ 100</td></tr>
+        <tr><td>Gastos em Curitiba <span class="pendente-tag">Pendente</span> <em>(5 dias, pulinho pra ver uma amiga — meta de gastos)</em></td><td class="num">R$ 800</td></tr>
+      </tbody>
+      <tfoot><tr><td>Subtotal gerais</td><td class="num">R$ 900</td></tr></tfoot>
+    </table>
+
+    <div class="fin-resumo">
+      <div class="fin-box">
+        <span class="fin-box-label">Soma Total</span>
+        <span class="fin-box-val">~R$ 14.437</span>
+      </div>
+      <div class="fin-box fin-box-pago">
+        <span class="fin-box-label">Soma Pagos</span>
+        <span class="fin-box-val">R$ 6.236,20</span>
+      </div>
+      <div class="fin-box fin-box-pendente">
+        <span class="fin-box-label">Soma Pendentes</span>
+        <span class="fin-box-val">~R$ 8.201</span>
+      </div>
+    </div>
+
+    <div class="note">
+      <span class="lbl">Como ler</span>
+      Tudo que não foi confirmado como pago fica marcado <b>Pendente</b> por padrão — é só avisar quando pagar algo que eu troco a tag pra <b>Pago</b> e recalculo as três somas. Curitiba entra como meta de gastos (R$ 800 pros 5 dias) — se o gasto real for diferente, é só avisar que eu ajusto.
+    </div>
 
   </div>
 
@@ -2203,11 +2791,9 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
     <div class="panel">
       <h4>Confirmar mais perto da data</h4>
       <ul>
-        <li>Data exata do jogo da NY Liberty — 21 ou 22 de setembro.</li>
         <li>Calendário do Luna Park para o domingo 20.</li>
         <li>Horário de fechamento do Museu de História Natural na véspera.</li>
-        <li>Horários oficiais do ferry da Estátua para setembro.</li>
-        <li>Tabela do Metro-North para o sábado no Hudson Valley.</li>
+        <li>Tabela do Metro-North para o sábado e a terça no Hudson Valley.</li>
       </ul>
     </div>
 
@@ -2218,7 +2804,6 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
         <li><b>Chelsea Market</b> — melhor opção do West Side.</li>
         <li><b>Oculus</b> — limpos e gratuitos no Downtown.</li>
         <li><b>Grand Central</b> — no piso do saguão principal.</li>
-        <li><b>Liberty e Ellis Island</b> — em ambas as ilhas.</li>
         <li>Regra geral: use sempre que passar por um museu, mercado coberto ou estação grande.</li>
       </ul>
     </div>
@@ -2238,7 +2823,6 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
     <div class="panel">
       <h4>Datas travadas</h4>
       <ul>
-        <li><b>Smorgasburg Central Park</b> — quinta a sábado, 12h às 20h. <b>Encerra dia 19.</b></li>
         <li><b>San Gennaro</b> — 17 a 27 de setembro. 100ª edição.</li>
         <li><b>FRIENDS Experience</b> — fechado às terças.</li>
         <li><b>SUMMIT</b> — aberto todos os dias, 8h à meia-noite.</li>
@@ -2324,9 +2908,9 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
         <div class="item">Hudson Yards · Vessel · The Shed</div>
         <div class="item key">High Line inteira</div>
         <div class="item">Chelsea Market · Pier 57 · Little Island</div>
-        <div class="item">West Village · 90 Bedford · Washington Sq</div>
+        <div class="item">West Village · Tribeca · Washington Sq</div>
         <div class="item key">Museu de História Natural GRÁTIS · 16h30</div>
-        <div class="item key">Smorgasburg Central Park · jantar</div>
+        <div class="item key">Pôr do sol no Belvedere Castle</div>
         <div class="item">Times Square à noite</div>
       </div>
     </a>
@@ -2337,12 +2921,11 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
         <div class="tema"><span class="t">Central Park &amp; San Gennaro</span><span class="base">Bate-volta de Yonkers</span></div>
       </div>
       <div class="macro-card-body">
-        <div class="item">The Pond · Gapstow Bridge</div>
-        <div class="item">The Mall · Sheep Meadow · Bethesda</div>
-        <div class="item">Belvedere Castle</div>
-        <div class="item">MET e Guggenheim por fora</div>
-        <div class="item">Quinta Avenida · Museum Mile</div>
-        <div class="item">SoHo · NoLita</div>
+        <div class="item">Strawberry Fields · Bow Bridge</div>
+        <div class="item">Bethesda Terrace · The Mall</div>
+        <div class="item key">Smorgasburg Central Park · 12h</div>
+        <div class="item">SoHo · Greene St · lojas</div>
+        <div class="item">Chinatown · Nom Wah · templo</div>
         <div class="item key">Festa de San Gennaro · centenário</div>
       </div>
     </a>
@@ -2380,31 +2963,28 @@ table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
     <a href="#d8" class="macro-card">
       <div class="macro-card-head">
         <div class="dia-num"><span class="lbl">Dia</span><span class="num">08</span></div>
-        <div class="tema"><span class="t">Yonkers Local</span><span class="base">Vida americana</span></div>
+        <div class="tema"><span class="t">Chega a Yadira</span><span class="base">Vida americana</span></div>
       </div>
       <div class="macro-card-body">
-        <div class="item">Manhã sem despertador · varanda</div>
-        <div class="item">Bairro residencial a pé</div>
-        <div class="item">Old Croton Aqueduct Trail</div>
+        <div class="item key">Encontro no LaGuardia · 10h30</div>
+        <div class="item">Yonkers → LGA de ônibus + metrô</div>
+        <div class="item">Check-in dela no Courtyard</div>
         <div class="item">Untermyer Gardens · grátis</div>
-        <div class="item">Hudson River Museum ou Trevor Park</div>
-        <div class="item">Mercado · rotina americana</div>
-        <div class="item">Opcional: NY Liberty no Barclays</div>
+        <div class="item">Yonkers Waterfront &amp; Esplanade Park</div>
       </div>
     </a>
 
     <a href="#d9" class="macro-card">
       <div class="macro-card-head">
         <div class="dia-num"><span class="lbl">Dia</span><span class="num">09</span></div>
-        <div class="tema"><span class="t">Coringa</span><span class="base">O dia do que amamos</span></div>
+        <div class="tema"><span class="t">Tarrytown &amp; Cold Spring</span><span class="base">Com a Yadira</span></div>
       </div>
       <div class="macro-card-body">
-        <div class="item">Voltar em Cold Spring ou Tarrytown</div>
-        <div class="item">Repetir DUMBO ou Central Park</div>
-        <div class="item">Compras · outlet · Downtown Yonkers</div>
-        <div class="item">Recuperar bloco perdido por chuva</div>
-        <div class="item">Jogo da Liberty se cair nesta data</div>
-        <div class="item">Ou simplesmente a varanda</div>
+        <div class="item">Repete o sábado, dia de semana</div>
+        <div class="item">Day Pass Greystone → Beacon</div>
+        <div class="item">Tarrytown de manhã</div>
+        <div class="item key">Cold Spring à tarde</div>
+        <div class="item">Pôr do sol na orla · ~18h50</div>
       </div>
     </a>
 
