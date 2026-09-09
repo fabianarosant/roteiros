@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Plano Financeiro Pessoal — Eric de Paula</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-950: #06111f;
+      --navy-900: #091a2d;
+      --navy-800: #102a46;
+      --navy-700: #183a5d;
+      --gold: #bd9650;
+      --gold-light: #dec386;
+      --gold-pale: #f0e4c9;
+      --paper: #f7f4ed;
+      --paper-deep: #eee8dc;
+      --white: #ffffff;
+      --ink: #172334;
+      --muted: #66717c;
+      --line: #d8cfbe;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'DM Sans', Arial, sans-serif;
+      --body: 'Manrope', Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { background: #4f5357; scroll-behavior: smooth; }
+    body {
+      background: #4f5357;
+      color: var(--ink);
+      font-family: var(--body);
+      padding: 24px 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    a { color: inherit; text-decoration: none; }
+    strong { font-weight: 600; }
+
+    .page {
+      background: var(--paper);
+      box-shadow: 0 5px 28px rgba(0,0,0,.45);
+      height: 297mm;
+      margin: 0 auto 5mm;
+      overflow: hidden;
+      padding: 14mm 15mm 13mm;
+      position: relative;
+      width: 210mm;
+    }
+
+    .page-header {
+      align-items: center;
+      border-bottom: .35mm solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 11mm;
+      padding-bottom: 3mm;
+    }
+    .page-header span {
+      color: var(--muted);
+      font: 600 8.5pt/1 var(--sans);
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .page-header .gold { color: var(--gold); }
+    .page-footer {
+      align-items: center;
+      bottom: 7mm;
+      display: flex;
+      justify-content: space-between;
+      left: 15mm;
+      position: absolute;
+      right: 15mm;
+    }
+    .page-footer span {
+      color: #89919a;
+      font: 600 8pt/1 var(--sans);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .page-footer .number { color: var(--gold); font-size: 8pt; }
+
+    .eyebrow {
+      color: var(--gold);
+      font: 700 9.5pt/1.3 var(--sans);
+      letter-spacing: .28em;
+      text-transform: uppercase;
+    }
+    .title-xl {
+      color: var(--navy-900);
+      font: 500 48pt/.95 var(--serif);
+      letter-spacing: -.035em;
+    }
+    .title-xl em, .title-lg em { color: var(--gold); font-weight: 500; }
+    .title-lg {
+      color: var(--navy-900);
+      font: 500 32pt/1.02 var(--serif);
+      letter-spacing: -.025em;
+    }
+    .lead {
+      color: var(--muted);
+      font: 500 13pt/1.58 var(--body);
+    }
+    .body-copy {
+      color: #45515f;
+      font: 500 11.5pt/1.62 var(--body);
+    }
+    .body-copy + .body-copy { margin-top: 4mm; }
+
+    .monogram {
+      align-items: center;
+      border: .35mm solid var(--gold);
+      color: var(--gold-light);
+      display: grid;
+      font: italic 500 17pt/1 var(--serif);
+      height: 15mm;
+      place-items: center;
+      width: 15mm;
+    }
+
+    /* Capa */
+    .cover { background: var(--navy-950); color: white; padding: 0; }
+    .cover-photo { height: 100%; object-fit: cover; position: absolute; right: 0; top: 0; width: 100%; }
+    .cover-shade { display: none; }
+    .cover::before {
+      background: radial-gradient(circle, rgba(189,150,80,.18), transparent 68%);
+      content: none;
+      height: 160mm;
+      position: absolute;
+      right: -55mm;
+      top: -55mm;
+      width: 160mm;
+    }
+    .cover::after {
+      border: .3mm solid rgba(189,150,80,.2);
+      border-radius: 50%;
+      content: none;
+      height: 145mm;
+      position: absolute;
+      right: -55mm;
+      top: 25mm;
+      width: 145mm;
+    }
+    .cover-top {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      left: 16mm;
+      position: absolute;
+      right: 16mm;
+      top: 14mm;
+      z-index: 2;
+    }
+    .cover-logo { height: auto; width: 50mm; }
+    .cover-brand { font: 500 9pt/1 var(--sans); letter-spacing: .22em; text-transform: uppercase; }
+    .cover-content { bottom: 39mm; left: 17mm; position: absolute; right: 17mm; z-index: 2; }
+    .cover-kicker { color: var(--gold-light); font: 700 9pt/1 var(--sans); letter-spacing: .3em; text-transform: uppercase; }
+    .cover h1 { font: 500 54pt/.9 var(--serif); letter-spacing: -.045em; margin-top: 10mm; max-width: 150mm; }
+    .cover h1 em { color: var(--gold-light); display: block; font-weight: 500; }
+    .cover-line { background: var(--gold); height: .35mm; margin: 12mm 0 6mm; width: 24mm; }
+    .cover-sub { color: rgba(255,255,255,.66); font: 500 11.5pt/1.55 var(--body); max-width: 118mm; }
+    .cover-foot { bottom: 13mm; color: rgba(255,255,255,.52); font: 600 8pt/1 var(--sans); left: 17mm; letter-spacing: .2em; position: absolute; text-transform: uppercase; }
+
+    /* Sobre */
+    .about-layout { display: grid; gap: 12mm; grid-template-columns: 61mm 1fr; }
+    .about-visual {
+      background: linear-gradient(155deg, var(--navy-800), var(--navy-950));
+      height: 214mm;
+      overflow: hidden;
+      position: relative;
+    }
+    .about-photo { height: 100%; object-fit: cover; object-position: 52% center; position: absolute; width: 100%; z-index: 1; }
+    .about-visual::before, .about-visual::after { content: none; }
+    .about-initials { color: var(--gold-light); font: italic 500 46pt/1 var(--serif); left: 50%; position: absolute; top: 50%; transform: translate(-50%,-50%); z-index: 2; }
+    .about-label { bottom: 9mm; color: rgba(255,255,255,.76); font: 600 8pt/1.45 var(--sans); left: 8mm; letter-spacing: .14em; position: absolute; right: 8mm; text-transform: uppercase; z-index: 2; }
+    .about-copy { padding-top: 4mm; }
+    .about-name { color: var(--navy-900); font: 500 30pt/1 var(--serif); margin: 4mm 0; }
+    .about-roles { color: var(--gold); font: 700 8.5pt/1.6 var(--sans); letter-spacing: .1em; margin-bottom: 8mm; text-transform: uppercase; }
+    .about-rule { background: var(--gold); height: .35mm; margin: 8mm 0; width: 20mm; }
+    .milestones { border-top: .3mm solid var(--line); display: grid; grid-template-columns: 1fr 1fr; margin-top: 9mm; }
+    .milestone { border-bottom: .3mm solid var(--line); padding: 4.5mm 3mm 4.5mm 0; }
+    .milestone:nth-child(odd) { border-right: .3mm solid var(--line); }
+    .milestone:nth-child(even) { padding-left: 5mm; }
+    .milestone strong { color: var(--navy-800); display: block; font: 500 20pt/1 var(--serif); }
+    .milestone span { color: var(--muted); display: block; font: 500 9pt/1.35 var(--sans); margin-top: 2mm; }
+
+    /* Frase */
+    .statement { background: var(--navy-900); color: white; }
+    .statement .page-header { border-color: rgba(255,255,255,.14); }
+    .statement .page-header span { color: rgba(255,255,255,.45); }
+    .statement-content { display: flex; flex-direction: column; height: 225mm; justify-content: flex-start; padding-top: 20mm; position: relative; }
+    .statement-mark { color: var(--gold); font: 500 74pt/.7 var(--serif); left: -2mm; opacity: .8; position: absolute; top: 5mm; }
+    .statement h2 { font: 500 37pt/1.02 var(--serif); letter-spacing: -.035em; max-width: 171mm; }
+    .statement h2 em { color: var(--gold-light); display: block; font-weight: 500; }
+    .statement-line { background: var(--gold); height: .35mm; margin-top: 15mm; width: 30mm; }
+    .statement p { color: rgba(255,255,255,.7); font: 500 12pt/1.55 var(--body); margin-top: 6mm; max-width: 135mm; }
+    .freedom-strip { display: grid; gap: 2.5mm; grid-template-columns: repeat(3, 1fr); height: 84mm; margin-top: 12mm; }
+    .freedom-photo { overflow: hidden; position: relative; }
+    .freedom-photo img { height: 100%; object-fit: cover; width: 100%; }
+    .freedom-photo:nth-child(1) img { object-position: 51% center; }
+    .freedom-photo:nth-child(2) img { object-position: 37% center; }
+    .freedom-photo:nth-child(3) img { object-position: 50% center; }
+    .freedom-photo span { bottom: 0; color: white; font: 700 8pt/1 var(--sans); left: 0; letter-spacing: .11em; padding: 4mm; position: absolute; right: 0; text-transform: uppercase; }
+    .statement .page-footer span { color: rgba(255,255,255,.35); }
+
+    /* Definição */
+    .definition-intro { display: grid; gap: 13mm; grid-template-columns: 1.05fr .95fr; margin-top: 11mm; }
+    .definition-intro .lead { border-left: .5mm solid var(--gold); padding-left: 6mm; }
+    .definition-intro .body-copy { padding-top: 1mm; }
+    .definition-photo { height: 45mm; overflow: hidden; position: relative; }
+    .definition-photo img { height: 100%; object-fit: cover; object-position: center 42%; width: 100%; }
+    .definition-photo::after { content: none; }
+    .definition-photo span { bottom: 4mm; color: white; font: 700 8pt/1.3 var(--sans); left: 4mm; letter-spacing: .1em; position: absolute; text-transform: uppercase; z-index: 1; }
+    .definition-summary { color: #45515f; font: 500 10pt/1.55 var(--body); margin-top: 5mm; }
+    .feature-grid { display: grid; gap: 4mm; grid-template-columns: 1fr 1fr; margin-top: 13mm; }
+    .feature {
+      background: white;
+      border-top: .7mm solid var(--gold);
+      min-height: 49mm;
+      padding: 6mm;
+    }
+    .feature-number { color: var(--gold); font: 700 8.5pt/1 var(--sans); letter-spacing: .12em; }
+    .feature h3 { color: var(--navy-900); font: 500 15pt/1.15 var(--serif); margin: 5mm 0 2.5mm; }
+    .feature p { color: var(--muted); font: 500 10pt/1.5 var(--body); }
+
+    /* Entregas */
+    .deliverables-head { align-items: end; display: flex; justify-content: space-between; margin-bottom: 10mm; }
+    .deliverables-head .lead { max-width: 65mm; }
+    .deliverable-list { border-top: .3mm solid var(--line); }
+    .deliverable {
+      align-items: start;
+      border-bottom: .3mm solid var(--line);
+      display: grid;
+      gap: 7mm;
+      grid-template-columns: 12mm 52mm 1fr;
+      padding: 6mm 0;
+    }
+    .deliverable-number { color: var(--gold); font: 700 9pt/1 var(--sans); padding-top: 1mm; }
+    .deliverable h3 { color: var(--navy-900); font: 500 14pt/1.15 var(--serif); }
+    .deliverable p { color: var(--muted); font: 500 10pt/1.5 var(--body); }
+    .support-band { background: var(--navy-900); color: white; display: grid; gap: 8mm; grid-template-columns: 43mm 1fr; margin-top: 9mm; padding: 7mm; }
+    .support-band strong { color: var(--gold-light); font: 500 18pt/1 var(--serif); }
+    .support-band p { color: rgba(255,255,255,.72); font: 500 10pt/1.5 var(--body); }
+
+    /* Decisões */
+    .decisions-grid { display: grid; gap: 4mm; grid-template-columns: repeat(2, 1fr); margin-top: 11mm; }
+    .decision { background: var(--paper-deep); min-height: 39mm; padding: 6mm; position: relative; }
+    .decision::before { background: var(--gold); content: ''; height: 6mm; left: 0; position: absolute; top: 6mm; width: .7mm; }
+    .decision h3 { color: var(--navy-800); font: 600 12pt/1.25 var(--sans); }
+    .decision p { color: var(--muted); font: 500 10pt/1.48 var(--body); margin-top: 2.5mm; }
+    .decision-wide { background: var(--navy-900); color: white; grid-column: 1 / -1; min-height: 34mm; }
+    .decision-wide h3 { color: var(--gold-light); }
+    .decision-wide p { color: rgba(255,255,255,.62); }
+
+    /* Público e processo */
+    .audience { display: grid; gap: 10mm; grid-template-columns: .85fr 1.15fr; margin-top: 12mm; }
+    .audience-box { background: var(--navy-900); color: white; padding: 9mm; }
+    .audience-box h3 { color: var(--gold-light); font: 500 20pt/1.1 var(--serif); margin-bottom: 6mm; }
+    .check-list { list-style: none; }
+    .check-list li { border-top: .3mm solid rgba(255,255,255,.12); color: rgba(255,255,255,.78); font: 500 9.5pt/1.4 var(--body); padding: 3.6mm 0 3.6mm 7mm; position: relative; }
+    .check-list li::before { color: var(--gold-light); content: '—'; left: 0; position: absolute; }
+    .process-list { border-top: .3mm solid var(--line); }
+    .process-step { border-bottom: .3mm solid var(--line); display: grid; gap: 5mm; grid-template-columns: 10mm 1fr; padding: 5mm 0; }
+    .process-step span { color: var(--gold); font: 700 8.5pt/1.4 var(--sans); }
+    .process-step h3 { color: var(--navy-900); font: 500 15pt/1.1 var(--serif); }
+    .process-step p { color: var(--muted); font: 500 9.5pt/1.45 var(--body); margin-top: 2mm; }
+
+    /* Investimento */
+    .investment { background: var(--navy-950); color: white; }
+    .investment .page-header { border-color: rgba(255,255,255,.14); }
+    .investment .page-header span { color: rgba(255,255,255,.45); }
+    .investment-grid { display: grid; gap: 15mm; grid-template-columns: .9fr 1.1fr; margin-top: 23mm; }
+    .investment-copy h2 { color: white; font: 500 36pt/1 var(--serif); margin-top: 5mm; }
+    .investment-copy h2 em { color: var(--gold-light); display: block; font-weight: 500; }
+    .investment-copy .lead { color: rgba(255,255,255,.58); margin-top: 9mm; }
+    .price-card { background: var(--paper); color: var(--ink); padding: 11mm; position: relative; }
+    .price-card::before { border: .3mm solid var(--gold); content: ''; inset: 4mm; pointer-events: none; position: absolute; }
+    .price-label { color: var(--gold); font: 700 9pt/1 var(--sans); letter-spacing: .18em; text-transform: uppercase; }
+    .price { color: var(--navy-900); font: 500 49pt/.9 var(--serif); margin: 8mm 0 3mm; }
+    .price-note { color: var(--muted); font: 500 10pt/1.5 var(--body); }
+    .payment-plan { border-top: .3mm solid var(--line); margin-top: 9mm; padding-top: 7mm; }
+    .payment-row { align-items: center; border-bottom: .3mm solid var(--line); display: flex; justify-content: space-between; padding: 4mm 0; }
+    .payment-row span { color: var(--muted); font: 500 9.5pt/1.4 var(--body); max-width: 45mm; }
+    .payment-row strong { color: var(--navy-800); font: 500 14pt/1 var(--serif); }
+    .payment-methods { color: var(--gold-light); font: 700 9.5pt/1.25 var(--sans); letter-spacing: .13em; margin-top: 12mm; text-transform: uppercase; }
+    .investment .page-footer span { color: rgba(255,255,255,.35); }
+
+    /* Encerramento */
+    .closing { background: var(--paper); }
+    .closing-photo { bottom: 0; height: 100%; object-fit: cover; position: absolute; right: 0; top: 0; width: 100%; }
+    .closing-shade { display: none; }
+    .closing .page-header { position: relative; z-index: 3; }
+    .closing .page-footer { z-index: 3; }
+    .closing-inner { align-items: flex-start; display: flex; flex-direction: column; height: 235mm; justify-content: center; position: relative; text-align: left; width: 55%; z-index: 2; }
+    .closing h2 { font-size: 39pt; max-width: 95mm; }
+    .closing .lead { font-size: 10pt; margin-top: 9mm; max-width: 86mm; }
+    .closing-line { background: var(--gold); height: .35mm; margin: 11mm 0 7mm; width: 20mm; }
+    .closing-name { color: var(--navy-900); font: 600 9pt/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; }
+    .closing-role { color: var(--muted); font: 600 8.5pt/1.5 var(--sans); letter-spacing: .09em; margin-top: 3mm; text-transform: uppercase; }
+
+    @media screen and (max-width: 850px) {
+      body { padding: 0; }
+      .page { box-shadow: none; margin: 0 auto 3mm; transform-origin: top center; }
+    }
+
+    @media print {
+      @page { margin: 0; size: A4 portrait; }
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      html, body { background: white !important; margin: 0 !important; padding: 0 !important; }
+      .page {
+        break-after: page;
+        box-shadow: none !important;
+        height: 297mm !important;
+        margin: 0 !important;
+        max-height: 297mm !important;
+        overflow: hidden !important;
+        page-break-after: always;
+        width: 210mm !important;
+      }
+      .page:last-child { break-after: auto; page-break-after: auto; }
+      .feature, .deliverable, .decision, .process-step { break-inside: avoid; page-break-inside: avoid; }
+      /* Evita grupos de transparência no gerador universal sem remover as fotografias. */
+      .cover-shade, .closing-shade { display: none !important; }
+      .cover::before, .cover::after, .about-visual::before, .about-visual::after, .definition-photo::after { display: none !important; }
+      .freedom-photo span { padding: 4mm !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 01 · CAPA -->
+  <section class="page cover">
+    <img class="cover-photo" src="./assets/fotos/eric-capa-flat.jpg" alt="Eric de Paula">
+    <div class="cover-shade"></div>
+    <div class="cover-top">
+      <img class="cover-logo" src="./assets/logo-ericdepaula.png" alt="Eric de Paula — Educador Financeiro">
+    </div>
+    <div class="cover-content">
+      <p class="cover-kicker">Proposta de acompanhamento</p>
+      <h1>Plano Financeiro <em>Pessoal</em></h1>
+      <div class="cover-line"></div>
+      <p class="cover-sub">Organização, estratégia e acompanhamento para transformar sua relação com o dinheiro e construir um futuro com mais possibilidades.</p>
+    </div>
+    <p class="cover-foot">Finanças · Educação · Liberdade</p>
+  </section>
+
+  <!-- 02 · SOBRE -->
+  <section class="page">
+    <header class="page-header"><span>Apresentação</span><span class="gold">Plano Financeiro Pessoal</span></header>
+    <div class="about-layout">
+      <div class="about-visual">
+        <img class="about-photo" src="./assets/fotos/eric-sobre-flat.jpg" alt="Eric de Paula">
+        <span class="about-label">Educador financeiro<br>Investidor<br>Especialista em milhas</span>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">Sobre mim</p>
+        <h2 class="about-name">Eric de Paula</h2>
+        <p class="about-roles">Educador financeiro · Investidor<br>Especialista em milhas</p>
+        <p class="body-copy">Tenho 30 anos e, desde muito cedo, a vida me ensinou a importância da independência financeira.</p>
+        <p class="body-copy">Comecei a gerar renda aos 14 anos e, aos 15, já investia. Não por modismo, mas por necessidade e visão de futuro.</p>
+        <p class="body-copy">Com estudo, disciplina e prática diária, construí uma base financeira sólida: reserva de emergência, carteira de investimentos, casa própria e liberdade para viver experiências que antes pareciam distantes.</p>
+        <div class="about-rule"></div>
+        <p class="body-copy"><strong>Hoje, coloco esse conhecimento em prática ajudando outras pessoas a organizarem suas finanças, investirem com consciência e ampliarem suas possibilidades de vida.</strong></p>
+        <div class="milestones">
+          <div class="milestone"><strong>14</strong><span>anos: comecei a gerar minha própria renda</span></div>
+          <div class="milestone"><strong>15</strong><span>anos: dei os primeiros passos como investidor</span></div>
+          <div class="milestone"><strong>30</strong><span>anos: uma trajetória construída com prática</span></div>
+          <div class="milestone"><strong>Hoje</strong><span>conhecimento aplicado para transformar vidas</span></div>
+        </div>
+      </div>
+    </div>
+    <footer class="page-footer"><span>Eric de Paula</span><span class="number">02</span></footer>
+  </section>
+
+  <!-- 03 · TRANSFORMAÇÃO -->
+  <section class="page statement">
+    <header class="page-header"><span>A transformação</span><span>Eric de Paula</span></header>
+    <div class="statement-content">
+      <span class="statement-mark">“</span>
+      <h2>Da desorganização à clareza: <em>um plano para transformar suas finanças em possibilidades.</em></h2>
+      <div class="statement-line"></div>
+      <p>Mais do que controlar números, organizar a vida financeira é criar espaço para escolhas conscientes, decisões seguras e sonhos possíveis.</p>
+      <div class="freedom-strip" aria-label="Experiências e possibilidades construídas com planejamento">
+        <div class="freedom-photo"><img src="./assets/fotos/eric-paris-flat.jpg" alt="Eric em Paris"><span>Possibilidades</span></div>
+        <div class="freedom-photo"><img src="./assets/fotos/eric-roma-flat.jpg" alt="Eric em Roma"><span>Experiências</span></div>
+        <div class="freedom-photo"><img src="./assets/fotos/eric-chile-flat.jpg" alt="Eric no Chile"><span>Liberdade</span></div>
+      </div>
+    </div>
+    <footer class="page-footer"><span>Plano Financeiro Pessoal</span><span class="number">03</span></footer>
+  </section>
+
+  <!-- 04 · O QUE É -->
+  <section class="page">
+    <header class="page-header"><span>A proposta</span><span class="gold">Plano Financeiro Pessoal</span></header>
+    <p class="eyebrow">O que é este plano</p>
+    <h2 class="title-xl" style="margin-top:5mm">Estratégia para a sua <em>vida real.</em></h2>
+    <div class="definition-intro">
+      <div>
+        <p class="lead">Um acompanhamento individual criado para quem deseja colocar a vida financeira em ordem e construir um caminho possível para o futuro.</p>
+        <p class="definition-summary">Aplicamos princípios de gestão financeira à realidade pessoal para que as decisões deixem de ser improvisadas.</p>
+      </div>
+      <div class="definition-photo"><img src="./assets/fotos/eric-clareza-flat.jpg" alt="Eric de Paula em atendimento"><span>Clareza para decidir</span></div>
+    </div>
+    <div class="feature-grid">
+      <article class="feature"><span class="feature-number">01 · CLAREZA</span><h3>Entender onde você está</h3><p>Mapeamento da realidade financeira para identificar hábitos, compromissos, riscos e oportunidades.</p></article>
+      <article class="feature"><span class="feature-number">02 · ORGANIZAÇÃO</span><h3>Colocar a casa em ordem</h3><p>Estrutura prática para organizar receitas, despesas, dívidas, contas e decisões do dia a dia.</p></article>
+      <article class="feature"><span class="feature-number">03 · DIREÇÃO</span><h3>Saber qual é o próximo passo</h3><p>Plano de ação alinhado às prioridades, aos objetivos e ao momento de vida de cada pessoa.</p></article>
+      <article class="feature"><span class="feature-number">04 · CONTINUIDADE</span><h3>Construir com consistência</h3><p>Acompanhamento para transformar conhecimento em novos hábitos e decisões mais conscientes.</p></article>
+    </div>
+    <footer class="page-footer"><span>Eric de Paula</span><span class="number">04</span></footer>
+  </section>
+
+  <!-- 05 · ENTREGAS -->
+  <section class="page">
+    <header class="page-header"><span>O que está incluso</span><span class="gold">Plano Financeiro Pessoal</span></header>
+    <div class="deliverables-head">
+      <div><p class="eyebrow">Acompanhamento completo</p><h2 class="title-lg" style="margin-top:4mm">Do diagnóstico<br>à <em>evolução.</em></h2></div>
+      <p class="lead">Conhecimento aplicado, ferramentas e direção para construir uma base financeira mais sólida.</p>
+    </div>
+    <div class="deliverable-list">
+      <article class="deliverable"><span class="deliverable-number">01</span><h3>Diagnóstico financeiro pessoal</h3><p>Leitura do cenário atual para compreender rendas, despesas, compromissos, dívidas e prioridades.</p></article>
+      <article class="deliverable"><span class="deliverable-number">02</span><h3>Organização e plano de ação</h3><p>Definição de ações práticas, possíveis e ordenadas para avançar a partir da realidade identificada.</p></article>
+      <article class="deliverable"><span class="deliverable-number">03</span><h3>Ferramentas de gestão</h3><p>Recursos para acompanhar o dinheiro com clareza e tornar a organização parte da rotina.</p></article>
+      <article class="deliverable"><span class="deliverable-number">04</span><h3>Educação financeira</h3><p>Conceitos essenciais de finanças e economia traduzidos para decisões do cotidiano e preparação para o futuro.</p></article>
+      <article class="deliverable"><span class="deliverable-number">05</span><h3>Estrutura para investir</h3><p>Construção da reserva de emergência e preparação da base necessária para investir com consciência.</p></article>
+    </div>
+    <div class="support-band"><strong>12 meses</strong><p>de suporte para acompanhar decisões, ajustar o planejamento e sustentar a evolução financeira ao longo do caminho.</p></div>
+    <footer class="page-footer"><span>Eric de Paula</span><span class="number">05</span></footer>
+  </section>
+
+  <!-- 06 · DECISÕES -->
+  <section class="page">
+    <header class="page-header"><span>Decisões importantes</span><span class="gold">Plano Financeiro Pessoal</span></header>
+    <p class="eyebrow">Finanças na prática</p>
+    <h2 class="title-lg" style="font-size:35pt;margin-top:5mm">Orientação para escolhas que impactam <em>o seu futuro.</em></h2>
+    <p class="lead" style="margin-top:7mm;max-width:150mm">O plano também cria clareza para avaliar situações financeiras relevantes, considerando contexto, riscos e possibilidades.</p>
+    <div class="decisions-grid">
+      <article class="decision"><h3>Casa própria ou aluguel?</h3><p>Análise para compreender qual caminho faz mais sentido para o seu momento e seus objetivos.</p></article>
+      <article class="decision"><h3>Financiamento ou consórcio?</h3><p>Entendimento dos custos, compromissos e diferenças antes de assumir uma decisão de longo prazo.</p></article>
+      <article class="decision"><h3>Dívidas e nome negativado</h3><p>Organização de prioridades e construção de uma estratégia possível para recuperar o controle.</p></article>
+      <article class="decision"><h3>Cartão e cheque especial</h3><p>Compreensão dos juros e reorganização do uso do crédito para evitar ciclos de endividamento.</p></article>
+      <article class="decision"><h3>Relacionamento bancário</h3><p>Mais consciência na escolha e utilização de produtos, serviços, limites e soluções financeiras.</p></article>
+      <article class="decision"><h3>Reserva e investimentos</h3><p>Preparação da estrutura necessária para proteger o presente e começar a construir o futuro.</p></article>
+      <article class="decision decision-wide"><h3>Sonhos que precisam sair do papel</h3><p>Viagens, projetos, patrimônio ou tranquilidade: transformamos desejos em metas financeiras com direção e próximos passos.</p></article>
+    </div>
+    <footer class="page-footer"><span>Eric de Paula</span><span class="number">06</span></footer>
+  </section>
+
+  <!-- 07 · PARA QUEM E JORNADA -->
+  <section class="page">
+    <header class="page-header"><span>Para quem é</span><span class="gold">Plano Financeiro Pessoal</span></header>
+    <p class="eyebrow">Uma jornada individual</p>
+    <h2 class="title-lg" style="margin-top:5mm">Um plano construído a partir da <em>sua realidade.</em></h2>
+    <div class="audience">
+      <div class="audience-box">
+        <h3>Este plano é para você que...</h3>
+        <ul class="check-list">
+          <li>Sente que a vida financeira está desorganizada</li>
+          <li>Não sabe exatamente para onde o dinheiro está indo</li>
+          <li>Precisa organizar dívidas e recuperar o controle</li>
+          <li>Quer formar uma reserva de emergência</li>
+          <li>Deseja começar a investir com mais consciência</li>
+          <li>Tem sonhos, mas ainda não encontrou um caminho financeiro</li>
+          <li>Precisa de clareza antes de uma decisão importante</li>
+        </ul>
+      </div>
+      <div>
+        <div class="process-list">
+          <article class="process-step"><span>01</span><div><h3>Conhecer</h3><p>Entendemos sua história, seu momento financeiro, suas dificuldades e seus objetivos.</p></div></article>
+          <article class="process-step"><span>02</span><div><h3>Organizar</h3><p>Mapeamos números, compromissos e prioridades para tornar o cenário visível.</p></div></article>
+          <article class="process-step"><span>03</span><div><h3>Planejar</h3><p>Criamos um plano de ação pessoal com decisões e próximos passos claros.</p></div></article>
+          <article class="process-step"><span>04</span><div><h3>Aplicar</h3><p>Você coloca o planejamento em prática com ferramentas e orientação.</p></div></article>
+          <article class="process-step"><span>05</span><div><h3>Acompanhar</h3><p>Ao longo de 12 meses, ajustamos a rota e fortalecemos sua evolução.</p></div></article>
+        </div>
+      </div>
+    </div>
+    <footer class="page-footer"><span>Eric de Paula</span><span class="number">07</span></footer>
+  </section>
+
+  <!-- 08 · INVESTIMENTO -->
+  <section class="page investment">
+    <header class="page-header"><span>Investimento</span><span>Eric de Paula</span></header>
+    <div class="investment-grid">
+      <div class="investment-copy">
+        <p class="eyebrow">Seu próximo passo</p>
+        <h2>Investir em clareza é começar a construir <em>liberdade.</em></h2>
+        <p class="lead">Um plano individual, construído para organizar o presente e preparar suas próximas decisões financeiras.</p>
+        <p class="payment-methods">Pagamento via Pix ou cartão de crédito</p>
+      </div>
+      <div class="price-card">
+        <p class="price-label">Investimento total</p>
+        <p class="price">R$ 500</p>
+        <p class="price-note">Plano Financeiro Pessoal com acompanhamento e suporte por 12 meses.</p>
+        <div class="payment-plan">
+          <div class="payment-row"><span>Entrada para garantir a vaga e iniciar o trabalho</span><strong>R$ 250</strong></div>
+          <div class="payment-row"><span>Pagamento final</span><strong>R$ 250</strong></div>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:.3mm solid rgba(189,150,80,.28);margin-top:25mm;padding-top:8mm">
+      <p style="color:rgba(255,255,255,.68);font:500 10.5pt/1.6 var(--body);max-width:150mm">Ao confirmar a entrada, sua vaga é reservada e iniciamos a etapa de diagnóstico para construir o seu Plano Financeiro Pessoal.</p>
+    </div>
+    <footer class="page-footer"><span>Plano Financeiro Pessoal</span><span class="number">08</span></footer>
+  </section>
+
+  <!-- 09 · ENCERRAMENTO -->
+  <section class="page closing">
+    <img class="closing-photo" src="./assets/fotos/eric-encerramento-flat.jpg" alt="Eric de Paula">
+    <div class="closing-shade"></div>
+    <header class="page-header"><span>Vamos começar?</span><span class="gold">Plano Financeiro Pessoal</span></header>
+    <div class="closing-inner">
+      <p class="eyebrow">Organização · Estratégia · Futuro</p>
+      <h2 class="title-xl" style="margin-top:7mm">Você não precisa descobrir tudo <em>sozinho.</em></h2>
+      <p class="lead">Com clareza, planejamento e acompanhamento, suas finanças podem deixar de ser uma fonte de preocupação e se tornar uma ferramenta para realizar escolhas e ampliar possibilidades.</p>
+      <div class="closing-line"></div>
+      <p class="closing-name">Eric de Paula</p>
+      <p class="closing-role">Educador financeiro · Investidor · Especialista em milhas</p>
+    </div>
+    <footer class="page-footer"><span>Finanças com direção</span><span class="number">09</span></footer>
+  </section>
+
+</body>
+</html>
