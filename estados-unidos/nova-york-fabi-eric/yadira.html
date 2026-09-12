@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Nova York — Roteiro com a Yadira | Vamos Carimbar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+/* ══════════════════════════════════════════════
+   TOKENS — mesma identidade visual do roteiro da Silvana
+══════════════════════════════════════════════ */
+:root {
+  --azul:        #0d2d6b;
+  --azul-medio:  #2563a8;
+  --azul-claro:  #e8f0fb;
+
+  --gold:        #b08d3c;
+  --gold-deep:   #8a6830;
+  --gold-soft:   #d9bf7c;
+  --gold-bg:     #faf6ec;
+  --gold-line:   #e8dcb8;
+
+  --paper:       #fefcf9;
+  --paper-deep:  #f9f5ee;
+  --ink:         #1a1d26;
+  --ink-soft:    #3a3f4d;
+  --ink-mute:    #6b7280;
+  --hairline:    #e4dccb;
+  --hairline-b:  #d8e1ed;
+}
+
+/* ══════════════════════════════════════════════
+   RESET & BASE — site fluido, sem paginação A4
+══════════════════════════════════════════════ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+/* ══════════════════════════════════════════════
+   TIPOGRAFIA EDITORIAL
+══════════════════════════════════════════════ */
+.chap-h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(48px, 11vw, 100px);
+  line-height: 1.0;
+  letter-spacing: -1.5px;
+  color: var(--azul);
+  font-variation-settings: 'opsz' 144;
+}
+.chap-h1 em { font-style: italic; font-weight: 400; color: #ad8f57; }
+
+.sec-h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(30px, 6vw, 44px);
+  line-height: 1.05;
+  letter-spacing: -1px;
+  color: var(--azul);
+  font-variation-settings: 'opsz' 144;
+}
+.sec-h2 em { font-style: italic; font-weight: 400; color: var(--azul); }
+.sec-h2-big { font-size: clamp(44px, 9vw, 68px); }
+
+.prose {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.prose strong { color: var(--azul-medio); font-weight: 700; }
+.prose em {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.15em;
+  color: var(--azul-medio);
+}
+
+/* ══════════════════════════════════════════════
+   TOPBAR + HAMBURGER
+══════════════════════════════════════════════ */
+.topbar { position: fixed; top: 0; left: 0; right: 0; height: 52px; background: rgba(13,45,107,0.42); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid rgba(255,255,255,0.10); transition: background 0.3s; }
+.topbar:hover { background: rgba(13,45,107,0.62); }
+.topbar-logo { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.65); letter-spacing: 3px; text-transform: uppercase; }
+.topbar-right { display: flex; align-items: center; gap: 12px; }
+.topbar-destino { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.60); letter-spacing: 2px; text-transform: uppercase; display: none; }
+@media (min-width: 560px) { .topbar-destino { display: block; } }
+.hamburger-btn { width: 52px; height: 52px; background: none; border: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 0; border-radius: 8px; transition: background 0.2s; -webkit-tap-highlight-color: transparent; touch-action: manipulation; user-select: none; -webkit-user-select: none; }
+.hamburger-btn:hover { background: rgba(255,255,255,0.10); }
+.hamburger-btn span { display: block; width: 26px; height: 2.5px; background: white; border-radius: 2px; transition: all 0.3s; }
+.hamburger-btn.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.hamburger-btn.open span:nth-child(2) { opacity: 0; }
+.hamburger-btn.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+.nav-drawer { position: fixed; top: 52px; right: 0; width: 300px; max-width: 84vw; height: calc(100vh - 52px); background: rgba(13,45,107,0.58); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); border-left: 1px solid rgba(255,255,255,0.08); z-index: 199; overflow-y: auto; padding: 16px 0 40px; transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); box-shadow: -4px 0 32px rgba(0,0,0,0.28); }
+.nav-drawer.open { transform: translateX(0); }
+.nav-overlay { position: fixed; inset: 52px 0 0 0; background: rgba(0,0,0,0.22); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); z-index: 198; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+.nav-overlay.open { opacity: 1; pointer-events: all; }
+.nav-section { display: block; padding: 14px 24px 8px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+.nav-link { display: block; padding: 11px 24px; color: rgba(255,255,255,0.80); font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.5px; transition: color 0.15s, background 0.15s; border-left: 2px solid transparent; }
+.nav-link:hover { color: white; background: rgba(255,255,255,0.07); border-left-color: var(--gold); }
+
+/* ══════════════════════════════════════════════
+   HERO FLUIDO — base para capa, contracapa e menu
+══════════════════════════════════════════════ */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ══ CAPA ══ */
+#capa .capa-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; z-index: 0; }
+#capa .capa-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.30) 62%, rgba(0,0,0,0.74) 100%); z-index: 1; }
+#capa .capa-logo { position: absolute; top: clamp(24px, 6vh, 56px); left: 0; right: 0; display: flex; justify-content: center; z-index: 3; }
+#capa .capa-logo img { width: clamp(76px, 14vw, 130px); height: clamp(76px, 14vw, 130px); object-fit: contain; filter: drop-shadow(0 2px 14px rgba(0,0,0,0.30)); opacity: 0.92; }
+#capa .capa-content { position: relative; z-index: 2; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 120px 20px 60px; text-align: center; }
+#capa .capa-title { font-family: 'Pinyon Script', cursive; font-size: clamp(70px, 18vw, 150px); color: #fff; line-height: 0.85; display: block; text-shadow: 0 2px 28px rgba(0,0,0,0.22); }
+#capa .capa-kicker { font-family: 'DM Sans', sans-serif; font-size: clamp(11px, 2.4vw, 14px); font-weight: 600; letter-spacing: 10px; color: #fff; text-transform: uppercase; display: block; margin-top: 26px; }
+#capa .capa-badge { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 24px; padding: 16px clamp(28px, 8vw, 44px); background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.22); border-radius: 12px; }
+#capa .capa-badge .nomes { font-family: 'DM Sans', sans-serif; font-size: clamp(15px, 3.4vw, 18px); font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.95); }
+#capa .capa-badge .data { font-family: 'DM Sans', sans-serif; font-size: clamp(12px, 2.8vw, 15px); font-weight: 300; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.65); }
+
+/* ══ CONTRACAPA — manifesto carimbar ══ */
+#contracapa { background: var(--azul); }
+#contracapa .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0.85; }
+#contracapa .conteudo { position: relative; z-index: 2; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 24px; }
+#contracapa .marca-wrap { position: relative; display: inline-block; margin-bottom: 8px; }
+#contracapa .marca { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; font-size: clamp(48px, 12vw, 96px); color: #fff; line-height: 0.88; display: block; font-variation-settings: 'opsz' 144; letter-spacing: -2px; }
+#contracapa .marca-logo { position: absolute; top: 0; right: clamp(-30px, -8vw, -62px); height: clamp(40px, 9vw, 80px); opacity: 1; transform: rotate(-8deg); }
+#contracapa .verbo { font-family: 'DM Sans', sans-serif; font-size: 11pt; font-weight: 500; letter-spacing: 4px; color: rgba(255,255,255,0.80); text-transform: lowercase; display: block; margin-bottom: 28px; }
+#contracapa .texto { font-family: 'DM Sans', sans-serif; font-size: clamp(14px, 3.4vw, 15pt); font-weight: 500; color: #ffffff; line-height: 1.6; max-width: 460px; }
+#contracapa .texto em { font-family: 'Fraunces', serif; font-style: italic; color: #ffffff; font-weight: 400; font-size: 1.15em; }
+
+/* ══ MENU PRINCIPAL ══ */
+#menu-principal .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
+#menu-principal .conteudo { position: relative; z-index: 2; width: 100%; display: flex; align-items: center; justify-content: center; padding: 90px 20px 60px; }
+.menu-card-wrap { position: relative; width: 100%; max-width: 620px; }
+.menu-card-logo { position: absolute; top: -34px; left: 50%; transform: translateX(-50%); width: 68px; height: 68px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.12); padding: 4px; z-index: 3; }
+.menu-card-logo img { width: 58px; height: 58px; object-fit: contain; }
+.menu-card { background: linear-gradient(135deg, rgba(13,45,107,0.90) 0%, rgba(18,52,120,0.88) 50%, rgba(30,70,148,0.85) 100%); border-radius: 18px; padding: 56px 32px 40px; box-shadow: 0 14px 52px rgba(0,0,0,0.38); }
+.menu-card-head { text-align: center; margin-bottom: 28px; }
+.menu-card-head .titulo { font-family: 'Fraunces', serif; font-style: italic; font-weight: 350; font-size: clamp(36px, 8vw, 48px); color: #fff; line-height: 0.95; letter-spacing: -1px; font-variation-settings: 'opsz' 144, 'wght' 350; display: block; }
+.menu-card-head .bemvindos { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.88); margin: 14px 0 2px; line-height: 1.2; }
+.menu-card-head .nomes-script { font-family: 'Pinyon Script', cursive; font-size: 30px; color: #fff; line-height: 1.0; }
+.menu-boasvindas-msg { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.92); line-height: 1.6; text-align: center; max-width: 480px; margin: 22px auto 0; }
+.menu-boasvindas-msg.en { color: rgba(255,255,255,0.68); font-size: 13px; font-style: italic; margin-top: 12px; }
+.menu-boasvindas-msg + .menu-boasvindas-msg { margin-top: 12px; }
+.menu-links { display: flex; flex-direction: column; }
+.menu-links a { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.88); padding: 12px 0; border-bottom: 1.5px solid rgba(255,255,255,0.20); text-transform: uppercase; letter-spacing: 1.5px; transition: color 0.15s; }
+.menu-links a:last-child { border-bottom: none; }
+.menu-links a:hover { color: var(--gold-soft); }
+.menu-dias-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(84px, 1fr)); gap: 8px; margin-top: 20px; }
+.menu-dias-grid a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; padding: 14px 6px; border: 1.5px solid rgba(255,255,255,0.25); text-align: center; border-radius: 4px; }
+.menu-dias-grid .dp-dia { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.92); letter-spacing: 1px; text-transform: uppercase; }
+.menu-dias-grid .dp-data { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; color: rgba(255,255,255,0.6); letter-spacing: 0.5px; }
+.menu-dias-grid .dp-tema { font-family: 'DM Sans', sans-serif; font-size: 10.5px; font-weight: 600; color: var(--gold-soft); letter-spacing: 0.3px; line-height: 1.2; }
+
+/* ══════════════════════════════════════════════
+   ROTEIRO MACRO — grid fluido
+══════════════════════════════════════════════ */
+#roteiro-macro { padding: 90px 20px 70px; max-width: 1100px; margin: 0 auto; }
+.macro-head { text-align: center; margin-bottom: 40px; }
+.macro-head .handle { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 400; color: #9aa5b0; letter-spacing: 1.5px; }
+.macro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+.macro-card { display: block; background: #fff; border: 1px solid var(--hairline-b); overflow: hidden; box-shadow: 0 1px 8px rgba(0,0,0,0.04); transition: box-shadow 0.15s, transform 0.15s; }
+.macro-card:hover { box-shadow: 0 6px 20px rgba(13,45,107,0.12); transform: translateY(-2px); }
+.macro-card-head { background: var(--azul); padding: 10px 18px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.macro-card-head .dia-num { display: inline-flex; align-items: baseline; gap: 4px; flex-shrink: 0; }
+.macro-card-head .dia-num .lbl { font-family: 'Pinyon Script', cursive; font-size: 22px; color: #fff; line-height: 1; }
+.macro-card-head .dia-num .num { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300; font-size: 17px; line-height: 1; color: #fff; letter-spacing: -0.5px; }
+.macro-card-head .tema { text-align: right; overflow: hidden; }
+.macro-card-head .tema .t { font-family: 'DM Sans', sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: #fff; display: block; }
+.macro-card-head .tema .base { font-family: 'DM Sans', sans-serif; font-size: 9.5px; font-weight: 500; color: rgba(255,255,255,0.6); letter-spacing: 0.5px; display: block; margin-top: 1px; }
+.macro-card-body { padding: 12px 18px; }
+.macro-card-body .item { position: relative; padding: 7px 0 7px 15px; border-bottom: 0.5px solid var(--azul-claro); font-family: 'DM Sans', sans-serif; font-size: 13.5px; font-weight: 500; color: var(--ink-soft); }
+.macro-card-body .item:last-child { border-bottom: none; }
+.macro-card-body .item::before { content: ""; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--azul-medio); }
+.macro-card-body .item.key { color: var(--azul); font-weight: 700; }
+.macro-card-body .item.key::before { background: var(--gold); }
+.macro-card.is-placeholder .macro-card-body .item { color: var(--ink-mute); font-style: italic; }
+
+/* ══════════════════════════════════════════════
+   CABEÇALHO DE SEÇÃO — genérico (macro / detalhado / custos / regras)
+══════════════════════════════════════════════ */
+.secao-head { text-align: center; margin-bottom: 40px; }
+.secao-head .eyebrow { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 10px; }
+#detalhado .secao-head .eyebrow { display: block; margin-bottom: 0; margin-top: 10px; }
+.secao-head p { max-width: 560px; margin: 14px auto 0; color: var(--ink-mute); font-size: 15px; line-height: 1.6; }
+
+/* ══════════════════════════════════════════════
+   DETALHAMENTO DOS DIAS — linha do tempo
+══════════════════════════════════════════════ */
+#detalhado { padding: 90px 20px 30px; max-width: 900px; margin: 0 auto; }
+.day { margin-bottom: 64px; scroll-margin-top: 66px; }
+.day-head { background: var(--azul); color: #fff; padding: 22px clamp(18px,4vw,28px); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.day-head h3 { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(22px, 4vw, 29px); line-height: 1.15; font-variation-settings: 'opsz' 144; }
+.day-head h3 small { display: block; font-family: 'DM Sans', sans-serif; font-style: normal; font-weight: 700; font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 6px; }
+.day-head .badge { font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; border: 1px solid var(--gold-soft); color: var(--gold-soft); padding: 6px 12px; white-space: nowrap; font-weight: 700; }
+.day-head a.badge { text-decoration: none; cursor: pointer; transition: background 0.15s, color 0.15s; }
+.day-head a.badge:hover { background: var(--gold-soft); color: var(--azul); }
+.day-body { background: #fff; border: 1px solid var(--hairline-b); border-top: none; padding: 28px clamp(16px, 4vw, 30px); }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 1px; background: var(--hairline-b); margin: 0 0 26px; border: 1px solid var(--hairline-b); }
+.fact { background: var(--paper-deep); padding: 10px 15px; display: flex; align-items: baseline; justify-content: center; gap: 8px; text-align: center; }
+.facts.minimal { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; border: none; background: none; gap: 6px 26px; }
+.facts.minimal .fact { display: flex; align-items: center; background: none; padding: 2px 0; gap: 7px; }
+.facts.minimal .f-emoji { font-size: 15px; line-height: 1; }
+.facts.minimal .v { font-family: 'DM Sans', sans-serif; font-size: 13.5px; color: var(--ink); font-weight: 500; }
+.fact .k { font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-deep); font-weight: 700; white-space: nowrap; }
+.fact .v { font-family: 'DM Sans', sans-serif; font-size: 13.5px; color: var(--ink); font-weight: 500; }
+
+.day-overview { background: var(--paper-deep); border: 1px solid var(--hairline-b); padding: 16px 20px 14px; margin: 0 0 26px; }
+.day-overview .ov-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
+.day-overview .ov-label { font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-deep); font-weight: 700; }
+.day-overview .dia-num { display: flex; align-items: baseline; gap: 5px; }
+.day-overview .dia-num .lbl { font-family: 'Pinyon Script', cursive; font-size: 27px; color: var(--azul); line-height: 1; }
+.day-overview .dia-num .num { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 100; font-size: 19px; line-height: 1; color: var(--azul); letter-spacing: -0.5px; }
+.day-overview ol { list-style: none; column-count: 2; column-gap: 22px; }
+.day-overview li { display: flex; align-items: baseline; gap: 9px; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-soft); line-height: 1.35; margin-bottom: 7px; break-inside: avoid; }
+.day-overview li .ov-num { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 700; color: var(--azul); flex-shrink: 0; width: 16px; text-align: right; }
+
+.tl { list-style: none; position: relative; }
+.tl > li { position: relative; padding: 0 0 4px 20px; min-height: 0; }
+.tl > li .dot { position: absolute; left: 0; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: var(--azul); z-index: 2; }
+.tl > li.hi .dot { background: var(--gold); box-shadow: 0 0 0 4px var(--gold-bg); }
+.tl > li::before { content: ""; position: absolute; left: 4px; top: 13px; bottom: -6px; width: 1px; background: var(--hairline-b); }
+.tl > li:last-child::before { display: none; }
+.tl .stop { padding-bottom: 16px; }
+.tl .stop h4 { display: flex; align-items: center; gap: 9px; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; color: var(--azul); margin-bottom: 4px; }
+.tl .stop p { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--ink-soft); line-height: 1.55; }
+.tl .stop p.sub { font-size: 13px; color: var(--ink-mute); margin-top: 5px; }
+.tl .stop p.sub b { color: var(--ink-soft); }
+.tl > li.hi .stop h4 { color: var(--gold-deep); }
+.time-below { display: block; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 700; color: var(--azul); margin: 4px 0 6px; }
+.tl > li.hi .time-below { color: var(--gold-deep); }
+
+.check-stop { display: inline-flex; cursor: pointer; flex-shrink: 0; }
+.check-input { position: absolute; opacity: 0; width: 0; height: 0; }
+.check-box { width: 17px; height: 17px; border: 1.5px solid var(--gold-soft); border-radius: 4px; flex-shrink: 0; position: relative; transition: background 0.15s, border-color 0.15s; }
+.check-input:checked + .check-box { background: var(--azul); border-color: var(--azul); }
+.check-input:checked + .check-box::after { content: "✓"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 11px; font-weight: 700; line-height: 1; }
+.check-input:focus-visible + .check-box { outline: 2px solid var(--azul-medio); outline-offset: 2px; }
+.check-input:checked ~ .stop-title { color: var(--ink-mute); text-decoration: line-through; text-decoration-color: var(--gold-soft); }
+
+.curio { margin: 4px 0 0; }
+.curio summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 5px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-deep); }
+.curio summary::-webkit-details-marker { display: none; }
+.curio summary::before { content: "▸"; display: inline-block; font-size: 15px; line-height: 1; transition: transform 0.15s; }
+.curio[open] summary::before { transform: rotate(90deg); }
+.curio-txt { margin: 7px 0 4px; padding: 10px 13px; background: var(--gold-bg); border-left: 2px solid var(--gold-soft); overflow: hidden; }
+.curio-txt p { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 13.5px; color: var(--ink-soft); line-height: 1.55; }
+.curio-txt p + p { margin-top: 9px; }
+.curio-lang { font-family: 'DM Sans', sans-serif !important; font-style: normal !important; font-size: 9.5px !important; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-mute) !important; margin: 0 0 5px !important; }
+.curio-lang + p { margin-top: 0 !important; }
+.curio-divider { border-top: 1px dashed var(--gold-soft); margin: 11px 0; }
+.curio-img-wrap { margin: -10px -13px 9px; }
+.curio-img { display: block; width: 100%; aspect-ratio: 16/10; object-fit: cover; }
+.curio-credit { display: block; font-family: 'DM Sans', sans-serif; font-size: 9.5px; color: var(--ink-mute); text-align: right; margin-top: 9px; font-style: normal; }
+.curio-img-wrap.is-placeholder { display: none; }
+
+.insp { margin: 4px 0 0; }
+.insp summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--azul-medio); }
+.insp summary::-webkit-details-marker { display: none; }
+.insp summary::before { content: "▸"; display: inline-block; font-size: 15px; line-height: 1; transition: transform 0.15s; }
+.insp[open] summary::before { transform: rotate(90deg); }
+.insp-imgs { margin: 9px 0 4px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.insp-imgs figure { margin: 0; }
+.insp-imgs img { display: block; width: 100%; aspect-ratio: 3/4; object-fit: cover; border: 1px solid var(--hairline-b); background: var(--paper-deep); }
+.insp-imgs figure.is-placeholder { display: none; }
+.insp-imgs figcaption { font-family: 'DM Sans', sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; color: var(--azul-medio); margin-top: 5px; text-align: center; }
+.insp-dica { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-mute); margin: 9px 0 0; }
+.insp-dica b { color: var(--ink-soft); }
+
+.stop-photos { margin: 10px 0 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; }
+.stop-photos img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; border: 1px solid var(--hairline-b); background: var(--paper-deep); }
+.stop-photos-2col { grid-template-columns: repeat(2, 1fr) !important; }
+
+.shop { margin: 4px 0 0; }
+.shop summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--azul); }
+.shop summary::-webkit-details-marker { display: none; }
+.shop summary::before { content: "▸"; display: inline-block; font-size: 15px; line-height: 1; transition: transform 0.15s; }
+.shop[open] summary::before { transform: rotate(90deg); }
+.shop-list { margin: 9px 0 4px; padding: 12px 13px; background: var(--paper-deep); border-left: 2px solid var(--azul-claro); }
+.shop-list .shop-note { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-soft); margin-bottom: 9px; }
+.shop-items { list-style: none; }
+.shop-items li { display: flex; align-items: center; gap: 9px; padding: 7px 0; border-bottom: 1px solid var(--hairline-b); }
+.shop-items li:last-child { border-bottom: none; }
+.shop-items .stop-title { font-family: 'DM Sans', sans-serif; font-size: 13.5px; font-weight: 600; color: var(--ink); }
+
+.tl > li.pit-li { padding: 4px 0 10px 20px; min-height: 0; }
+.tl > li.pit-li .dot { display: none; }
+.tl > li.pit-li::before { left: 4px; }
+.pit-txt { display: flex; align-items: center; gap: 9px; padding: 9px 12px; background: var(--paper-deep); border: 1px dashed var(--hairline-b); }
+.pit-txt .pit-emoji { font-size: 16px; flex-shrink: 0; }
+.pit-txt .pit-body { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
+.pit-txt .pit-body b { color: var(--azul); font-weight: 700; }
+.pit-price { margin-left: auto; font-family: 'DM Mono', monospace; font-size: 11.5px; font-weight: 700; color: var(--gold-deep); white-space: nowrap; flex-shrink: 0; }
+
+.tl > li.walk-li { padding: 0 0 10px 20px; min-height: 0; }
+.tl > li.walk-li .dot { display: none; }
+.tl > li.walk-li::before { left: 4px; top: 11px; }
+.walk-txt { font-family: 'DM Sans', sans-serif; font-size: 11.5px; letter-spacing: 0.5px; text-transform: uppercase; color: var(--ink-mute); font-weight: 700; line-height: 1.5; }
+.walk-txt b { color: var(--azul); font-weight: 700; }
+
+/* ══ ROTA — trajeto de metrô/trem passo a passo ══ */
+.rota-card { margin: 12px 0; padding: 14px 16px 12px; background: var(--paper-deep); border: 1px solid var(--hairline-b); border-radius: 4px; }
+.rota-etapa { display: flex; align-items: center; gap: 12px; padding: 5px 0; }
+.linha-badge { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-family: 'DM Sans', sans-serif; font-weight: 800; color: #fff; line-height: 1; }
+.linha-badge.circulo { width: 28px; height: 28px; border-radius: 50%; font-size: 14px; }
+.linha-badge.pill { padding: 6px 10px; border-radius: 4px; font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase; white-space: nowrap; }
+.linha-air { background: #a6192e; }
+.linha-e, .linha-c, .linha-a { background: #0039a6; }
+.linha-6, .linha-4, .linha-5 { background: #00933c; }
+.linha-n, .linha-r, .linha-w, .linha-q { background: #fccc0a; color: #1a1d26; }
+.linha-1, .linha-2, .linha-3 { background: #ee352e; }
+.linha-l { background: #a7a9ac; }
+.linha-s { background: #808183; }
+.linha-7 { background: #b933ad; }
+.linha-bee { background: #0039a6; }
+.rota-etapa-txt { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.rota-embarque { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink); font-weight: 500; line-height: 1.4; }
+.rota-embarque b { color: var(--azul); font-weight: 700; }
+.rota-meta { font-family: 'DM Sans', sans-serif; font-size: 11.5px; color: var(--ink-mute); }
+.rota-meta .descida { background: var(--gold-bg); color: var(--gold-deep); font-weight: 800; padding: 1px 6px; border-radius: 3px; }
+.rota-transfer { display: flex; align-items: center; gap: 8px; margin: 2px 0 2px 14px; padding: 4px 0 4px 16px; border-left: 1.5px dashed var(--gold-soft); font-family: 'DM Sans', sans-serif; font-size: 11.5px; color: var(--ink-mute); font-weight: 600; }
+.rota-transfer b { color: var(--azul); }
+
+.eat { margin: 24px 0; border: 1px solid var(--hairline-b); background: var(--paper-deep); }
+.eat h5 { background: var(--azul); color: var(--gold-soft); font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 10px 18px; font-weight: 700; }
+.eat ul { list-style: none; padding: 6px 18px 12px; }
+.eat li { font-family: 'DM Sans', sans-serif; font-size: 13.5px; padding: 9px 0; border-bottom: 1px solid var(--hairline-b); display: flex; justify-content: space-between; gap: 14px; color: var(--ink-soft); }
+.eat li:last-child { border-bottom: none; }
+.eat li b { font-weight: 700; color: var(--azul); }
+.eat li .price { color: var(--gold-deep); font-weight: 700; white-space: nowrap; font-size: 12.5px; }
+
+.note { border-left: 3px solid var(--gold); background: var(--gold-bg); padding: 16px 20px; margin: 22px 0; font-family: 'DM Sans', sans-serif; font-size: 14px; line-height: 1.6; color: var(--ink-soft); }
+.note.warn { border-left-color: #9a2a2a; background: #faeaea; }
+.note b { color: var(--azul); font-weight: 700; }
+.note .lbl { display: block; font-family: 'DM Sans', sans-serif; font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 8px; font-weight: 700; }
+.note.warn .lbl { color: #9a2a2a; }
+
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: 20px; }
+.panel { background: var(--paper-deep); border: 1px solid var(--hairline-b); padding: 22px; }
+.panel h4 { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 500; font-size: 19px; color: var(--azul); margin-bottom: 12px; font-variation-settings: 'opsz' 144; }
+.panel ul { list-style: none; }
+.panel li { font-family: 'DM Sans', sans-serif; font-size: 13px; padding: 8px 0 8px 15px; position: relative; border-bottom: 1px solid var(--hairline-b); color: var(--ink-soft); line-height: 1.5; }
+.panel li:last-child { border-bottom: none; }
+.panel li::before { content: ""; position: absolute; left: 0; top: 15px; width: 6px; height: 1px; background: var(--gold); }
+.panel li b { color: var(--azul); }
+
+/* ══════════════════════════════════════════════
+   CUSTOS — tabelas
+══════════════════════════════════════════════ */
+#custos { padding: 80px 20px; background: var(--paper-deep); }
+#custos .wrap { max-width: 760px; margin: 0 auto; }
+#financeiro-macro { padding: 80px 20px; background: var(--paper-deep); }
+#financeiro-macro .wrap { max-width: 760px; margin: 0 auto; }
+table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--hairline-b); font-family: 'DM Sans', sans-serif; font-size: 13.5px; margin-bottom: 26px; }
+caption { font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-deep); text-align: left; padding: 0 0 10px; font-weight: 700; }
+th { background: var(--azul); color: #fff; font-weight: 600; font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; padding: 11px 14px; text-align: left; }
+td { padding: 11px 14px; border-bottom: 1px solid var(--hairline-b); color: var(--ink-soft); }
+tr:last-child td { border-bottom: none; }
+td.num { text-align: right; white-space: nowrap; font-weight: 700; color: var(--azul); }
+tfoot td { background: var(--gold-bg); font-weight: 700; color: var(--azul); }
+table.custo-tabela { scroll-margin-top: 70px; }
+table.custo-tabela caption { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 500; font-size: 22px; letter-spacing: 0; text-transform: none; color: var(--azul); padding: 0 0 4px; font-variation-settings: 'opsz' 144; }
+table.custo-tabela caption .custo-hint { display: block; margin-top: 3px; font-family: 'DM Sans', sans-serif; font-style: normal; font-weight: 400; font-size: 10.5px; letter-spacing: 0.3px; text-transform: none; color: var(--ink-mute); }
+
+.dia-acordeao { margin: 0 0 24px; }
+.dia-acordeao > summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 8px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--azul); padding-bottom: 10px; border-bottom: 1px solid var(--azul); margin-bottom: 18px; }
+.dia-acordeao > summary::-webkit-details-marker { display: none; }
+.dia-acordeao > summary::before { content: "▸"; display: inline-block; font-size: 12px; transition: transform 0.15s; order: -1; }
+.dia-acordeao[open] > summary::before { transform: rotate(90deg); }
+.dia-acordeao:not([open]) > summary { margin-bottom: 0; }
+.acordeao-hint { font-weight: 400; letter-spacing: 0.3px; text-transform: none; color: var(--ink-mute); font-size: 11px; }
+.custo-total-link { text-decoration: underline; text-decoration-color: var(--gold-soft); text-decoration-style: dotted; text-underline-offset: 3px; cursor: pointer; }
+.custo-total-link:hover { color: var(--azul-medio); }
+table.custo-tabela [contenteditable="true"] { cursor: text; border-bottom: 1px dashed transparent; transition: background 0.15s, border-color 0.15s; }
+table.custo-tabela [contenteditable="true"]:hover { border-bottom-color: var(--gold-soft); }
+table.custo-tabela [contenteditable="true"]:focus { outline: none; border-bottom: 1px dashed var(--azul); background: var(--gold-bg); }
+table.custo-tabela [contenteditable="true"]:empty::before { content: attr(data-placeholder); color: var(--ink-mute); font-style: italic; font-weight: 400; }
+table.custo-tabela tr.custo-extra td { color: var(--ink-mute); }
+.omny-tap { display: inline-flex; align-items: center; justify-content: center; width: 15px; height: 15px; border-radius: 50%; background: var(--azul); color: #fff; font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 700; margin-right: 7px; flex-shrink: 0; vertical-align: middle; position: relative; top: -1px; }
+.pago-tag, .pendente-tag { display: inline-flex; align-items: center; gap: 4px; font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-left: 8px; }
+.pago-tag { color: #1a8a4f; }
+.pago-tag::before { content: "✓"; display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; background: #1a8a4f; color: #fff; font-size: 9px; font-weight: 900; flex-shrink: 0; }
+.pendente-tag { color: #a87d0a; }
+.pendente-tag::before { content: "●"; display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; background: #f0b429; color: #f0b429; font-size: 6px; flex-shrink: 0; }
+.fin-resumo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 34px 0 10px; }
+.fin-box { background: #fff; border: 1px solid var(--hairline-b); padding: 18px 20px; text-align: center; grid-column: span 1; }
+.fin-box:first-child { grid-column: 1 / -1; }
+.fin-box-label { display: block; font-family: 'DM Sans', sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 8px; }
+.fin-box-val { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 26px; color: var(--azul); font-variation-settings: 'opsz' 144; }
+.fin-box-pago { border-color: #bfe3cd; background: #f4fbf6; }
+.fin-box-pago .fin-box-label, .fin-box-pago .fin-box-val { color: #1a8a4f; }
+.fin-box-pendente { border: 2px solid #f0b429; background: #fdf3e0; padding: 24px; }
+.fin-box-pendente .fin-box-label { color: #a87d0a; }
+.fin-box-pendente .fin-box-val { color: #a87d0a; font-size: 34px; }
+
+/* ══════════════════════════════════════════════
+   REGRAS DE OURO
+══════════════════════════════════════════════ */
+#regras { padding: 80px 20px 90px; max-width: 1100px; margin: 0 auto; }
+#poses-ny { padding: 80px 20px; }
+#poses-ny .wrap { max-width: 900px; margin: 0 auto; }
+#poses-ny .insp-imgs { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+
+/* ══ BOTÃO VOLTAR AO MENU ══ */
+.btn-menu-wrap { text-align: center; padding: 10px 0 70px; }
+.btn-menu { display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--azul); border: 1px solid var(--azul); padding: 11px 26px; border-radius: 2px; transition: background 0.15s, color 0.15s; }
+.btn-menu:hover { background: var(--azul); color: #fff; }
+.btn-menu::before { content: "↑  "; }
+
+/* ══ MOBILE — aproveitar mais o espaço ══ */
+@media (max-width: 600px) {
+  #detalhado { padding-left: 12px; padding-right: 12px; }
+  .day-body { padding-left: 12px; padding-right: 12px; }
+  .facts { grid-template-columns: repeat(2, 1fr); }
+  .fact:first-child { grid-column: 1 / -1; }
+  .day-overview ol { column-count: 1; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOPBAR + HAMBURGER -->
+<div class="topbar">
+  <span class="topbar-logo">Vamos Carimbar</span>
+  <div class="topbar-right">
+    <span class="topbar-destino">Fabi, Eric &amp; Yadira · Nova York · Set 2026</span>
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</div>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<nav class="nav-drawer" id="navDrawer">
+  <span class="nav-section">Roteiro</span>
+  <a class="nav-link" href="#menu-principal">Menu Principal</a>
+  <span class="nav-section">Dia a Dia</span>
+  <a class="nav-link" href="#d8">Dia 01 · Seg 21/09</a>
+  <a class="nav-link" href="#d9">Dia 02 · Ter 22/09</a>
+  <a class="nav-link" href="#d10">Dia 03 · Qua 23/09</a>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     CAPA
+     Trocar imagem: assets/capas/capa-nova-york.jpg
+══════════════════════════════════════════ -->
+<section id="capa" class="hero">
+  <img class="capa-bg" src="./assets/capas/capa-nova-york.jpg" alt="Nova York"
+    onerror="this.style.background='linear-gradient(160deg,#0d2d6b 0%,#142a52 55%,#000 100%)'">
+  <div class="capa-overlay"></div>
+  <div class="capa-logo"><img src="./assets/branding/logo-vamos-carimbar-branco.png" alt="Vamos Carimbar"></div>
+  <div class="capa-content">
+    <span class="capa-title">Nova York</span>
+    <span class="capa-kicker">Roteiro de Viagem</span>
+    <div class="capa-badge">
+      <span class="nomes">Fabi, Eric &amp; Yadira</span>
+      <span class="data">21 a 23 de Setembro 2026 · 3 dias</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CONTRACAPA — manifesto carimbar (fixo)
+══════════════════════════════════════════ -->
+<section id="contracapa" class="hero">
+  <img class="bg" src="./assets/capas/carimbarbranding.png" alt="">
+  <div class="conteudo">
+    <div class="marca-wrap">
+      <span class="marca">carimbar</span>
+      <img class="marca-logo" src="./assets/branding/logo-vamos-carimbar-branco.png" alt="">
+    </div>
+    <span class="verbo">verbo transitivo direto</span>
+    <p class="texto">Ato de marcar, registrar ou validar algo; deixar a prova de que atravessou uma fronteira — interna ou externa. <strong>carimbar na alma uma nova versão de si:</strong> mais expandida, com mais cultura, repertório e experiência de vida. É marcar no coração novas histórias, novos lugares e novas pessoas… <em>carimbos que ficam pra sempre.</em></p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     MENU PRINCIPAL
+══════════════════════════════════════════ -->
+<section id="menu-principal" class="hero">
+  <img class="bg" src="./assets/capas/menu-pratico-bg.png" alt="">
+  <div class="conteudo">
+    <div class="menu-card-wrap">
+      <div class="menu-card-logo"><img src="./assets/branding/logo-vamos-carimbar-azul.png" alt=""></div>
+      <div class="menu-card">
+        <div class="menu-card-head">
+          <span class="titulo">Menu Principal</span>
+          <p class="bemvindos">Seja bem-vinda,</p>
+          <p class="nomes-script">Yadira!</p>
+        </div>
+        <p class="menu-boasvindas-msg">Fizemos esse roteiro com muito carinho pra aproveitar ao máximo esse momento com você — estamos muito felizes com esse encontro! ❤️</p>
+        <p class="menu-boasvindas-msg en">We made this itinerary with so much love to make the most of this time together — we're so happy about this reunion! ❤️</p>
+        <div class="menu-dias-grid">
+          <a href="#d8"><span class="dp-dia">Dia 01</span><span class="dp-data">21/09 · SEG</span><span class="dp-tema">Encontro com a Yadira</span></a>
+          <a href="#d9"><span class="dp-dia">Dia 02</span><span class="dp-data">22/09 · TER</span><span class="dp-tema">Tarrytown & Cold Spring</span></a>
+          <a href="#d10"><span class="dp-dia">Dia 03</span><span class="dp-data">23/09 · QUA</span><span class="dp-tema">Última manhã & JFK</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     DETALHAMENTO DOS DIAS — linha do tempo
+══════════════════════════════════════════ -->
+<section id="detalhado">
+  <div class="secao-head">
+    <h2 class="sec-h2 sec-h2-big"><em>Roteiro</em></h2>
+    <span class="eyebrow">Dia a Dia</span>
+  </div>
+
+  <!-- DIA 8 -->
+  <article class="day" id="d8">
+    <div class="day-head">
+      <h3><small>Segunda · 21 de setembro</small>Yonkers: Encontro com a Yadira</h3>
+      <a href="#custo-d8" class="badge custo-total-link">~US$ 68</a>
+    </div>
+    <div class="day-body">
+
+      <div class="day-overview">
+        <div class="ov-head">
+          <span class="dia-num"><span class="lbl">Dia</span><span class="num">08</span></span>
+          <span class="ov-label">Visão geral</span>
+        </div>
+        <ol>
+          <li><span class="ov-num">1</span>Encontro com a Yadira · LGA</li>
+          <li><span class="ov-num">2</span>Açaí · SoBol &amp; Fresh&amp;Co</li>
+          <li><span class="ov-num">3</span>Untermyer Gardens</li>
+          <li><span class="ov-num">4</span>Yonkers Waterfront &amp; Esplanade Park</li>
+        </ol>
+      </div>
+
+      <details class="dia-acordeao">
+      <summary>Roteiro</summary>
+      <div class="facts minimal">
+        <div class="fact"><span class="f-emoji">👋</span><span class="v">Yadira · 10h30 LGA</span></div>
+        <div class="fact"><span class="f-emoji">🌳</span><span class="v">Untermyer grátis</span></div>
+        <div class="fact"><span class="f-emoji">👣</span><span class="v">~9 km</span></div>
+      </div>
+      <div class="note">
+        <span class="lbl">🎉 Encontro com nossa amiga uhuuuul!</span>
+        A Yadira chega hoje — pouso às <b>10h30 no LaGuardia</b>, hospedada no <b>Courtyard by Marriott Yonkers</b> (5 Executive Blvd). Volta dia 23 às 18h, do JFK, no mesmo dia do voo de vocês.
+      </div>
+      <ul class="tl">
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s87"><span class="check-box"></span></label><span class="stop-title">Yonkers → LaGuardia</span></h4>
+          <span class="time-below">8h30</span>
+          <p>Rota mais barata pro aeroporto: ônibus até o metrô, metrô até a Columbia University, e o <b>M60-SBS</b> — o expresso que vai direto até o Terminal B do LaGuardia.</p>
+
+          <div class="rota-card">
+            <div class="rota-etapa">
+              <span class="linha-badge pill linha-bee">Bee-Line 1</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Warburton Ave &amp; Arthur St</b></span>
+                <span class="rota-meta">→ descer no ponto final, <span class="descida">Van Cortlandt Park–242 St</span></span>
+              </div>
+            </div>
+            <div class="rota-transfer">👣 Conecta direto com o metrô</div>
+            <div class="rota-etapa">
+              <span class="linha-badge circulo linha-1">1</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Van Cortlandt Park–242 St</b> · direção <b>Manhattan</b></span>
+                <span class="rota-meta">→ descer em <span class="descida">116 St–Columbia University</span></span>
+              </div>
+            </div>
+            <div class="rota-transfer">👣 Subam à rua pro ponto do M60</div>
+            <div class="rota-etapa">
+              <span class="linha-badge pill linha-bee">M60-SBS</span>
+              <div class="rota-etapa-txt">
+                <span class="rota-embarque">Embarque em <b>Broadway/116 St</b> · direção <b>LaGuardia Airport</b></span>
+                <span class="rota-meta">→ descer no <span class="descida">Terminal B</span></span>
+              </div>
+            </div>
+          </div>
+          <p class="sub">💰 US$ 3 por pessoa — conta como 1 tap só, a viagem inteira dentro da janela de 2h.</p></div></li>
+
+        <li class="hi"><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s138"><span class="check-box"></span></label><span class="stop-title">Encontro com a Yadira</span></h4>
+          <span class="time-below">10h30</span>
+          <p>Pouso dela no Terminal B. Esperem na área de desembarque com folga — voo internacional... não, doméstico, mas sempre bom ter 15–20 min de gordura.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s139"><span class="check-box"></span></label><span class="stop-title">Escolha do caminho até Yonkers</span></h4>
+          <span class="time-below">11h00</span>
+          <p><b>Se a Yadira topar uma parada em Manhattan</b> (Times Square ou Central Park, o que ela preferir): M60-SBS + metrô até lá, um giro rápido, depois metrô até a Grand Central e Metro-North até Greystone.</p>
+          <p><b>Se preferirem ir direto pro Yonkers:</b> <b>M60-SBS até a E 125 St com Park Ave</b>, e ali mesmo — sem precisar descer até a Grand Central — embarcam no Metro-North <b>Hudson Line</b>, via a estação de <b>Harlem–125 St</b>, direto até <b>Greystone</b>.</p>
+          <p class="sub">💰 Opção com parada em Manhattan: +1 tap de metrô (~US$ 6 pro casal) e mais o Metro-North de Grand Central. Opção direta: só o Metro-North de 125 St, sem tap extra.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s140"><span class="check-box"></span></label><span class="stop-title">Metro-North até Greystone</span></h4>
+          <span class="time-below">12h15</span>
+          <p class="sub">De 125 St ou de Grand Central, dependendo do caminho escolhido. ~35–45 min até Greystone.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s141"><span class="check-box"></span></label><span class="stop-title">Greystone → hotel da Yadira</span></h4>
+          <span class="time-below">13h00</span>
+          <p>O Courtyard fica na Executive Blvd, um pouco afastado da estação — não é o mesmo lado do rio do Airbnb. Lyft/Uber é o mais prático.</p>
+          <p class="sub">💰 Lyft/Uber ~US$ 10. Caminhando: ~3,2 km, uns 40 min — só se topar esticar a perna.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s142"><span class="check-box"></span></label><span class="stop-title">Check-in da Yadira</span></h4>
+          <span class="time-below">13h30</span>
+          <p class="sub">Ela guarda as coisas, respira, tira o voo do corpo.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s91"><span class="check-box"></span></label><span class="stop-title">Almoço perto do hotel da Yadira</span></h4>
+          <span class="time-below">14h15</span>
+          <p class="sub">Depois do check-in, hora de comer alguma coisa — a região do Courtyard não tem muita opção a pé, então um Uber curto resolve.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s174"><span class="check-box"></span></label><span class="stop-title">Açaí · SoBol &amp; Fresh&amp;Co</span></h4>
+          <span class="time-below">14h30</span>
+          <div class="stop-photos">
+            <img src="./assets/atracoes/dia-08/acai-sobol-freshco.jpg" alt="Açaí bowl">
+            <img src="./assets/atracoes/dia-08/freshco-cardapio-acai.jpg" alt="Cardápio de açaí bowls do Fresh&Co">
+          </div>
+          <p><b>SoBol</b> (2353 Central Park Ave) pra um açaí bowl, ou <b>Fresh&amp;Co</b> (1086 N Broadway) pra salada/bowl fresco — os dois a um Uber curto do Courtyard.</p>
+          <p class="sub">💰 ~US$ 12–15 por pessoa nos dois. Um Lyft/Uber de ida resolve, ~US$ 8–10.</p></div></li>
+
+        <li class="hi"><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s90"><span class="check-box"></span></label><span class="stop-title">Untermyer Gardens</span></h4>
+          <span class="time-below">16h00</span>
+          <div class="stop-photos stop-photos-2col">
+            <img src="./assets/atracoes/dia-08/untermyer-jardim-amuralhado.jpg" alt="Untermyer Gardens — Jardim Amuralhado">
+            <img src="./assets/atracoes/dia-08/untermyer-escadaria-hudson.jpg" alt="Untermyer Gardens — escadaria com vista pro Hudson">
+            <img src="./assets/atracoes/dia-08/untermyer-temple-of-love2.jpg" alt="Untermyer Gardens — Temple of Love, outro ângulo">
+            <img src="./assets/atracoes/dia-08/untermyer-pergola.jpg" alt="Untermyer Gardens — pérgola com vista pro Hudson">
+          </div>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p class="curio-lang">🇺🇸 English</p>
+            <p>Samuel Untermyer, one of New York's most powerful lawyers, bought the property in 1899 and hired William Welles Bosworth — the same landscape architect behind Kykuit, the Rockefeller estate — to design a garden inspired by Persian, Greek, and Italian references. The heart of the place is the Walled Garden, a classic "chahar bagh": four quadrants divided by water canals that meet in a central pool, the same layout described as paradise in ancient Persian gardens. Two sphinxes guard the entrance.</p>
+            <p>At its peak, between the 1910s and 1930s, many contemporaries considered it the most spectacular garden in the United States — Untermyer threw grand parties there, with hundreds of guests. The complex includes the Temple of Love (a columned gazebo overlooking the Hudson), an amphitheater carved into the hillside, and a rock garden. The original 1947 fountain that stood here was removed decades later and now sits in the Conservatory Garden inside Central Park — anyone who's visited there has unknowingly already seen a piece of Untermyer.</p>
+            <p>After Untermyer's death in 1940, the property was donated to the city and spent decades in near-total abandonment — vandalism, overgrowth, dry fountains. Only starting in 2011, when the Untermyer Gardens Conservancy (a local nonprofit) took over the restoration, did the garden come back to life. Today it's free, volunteer-maintained, and one of the most beautiful, least-known gardens in the country — most New Yorkers have never even heard of it.</p>
+            <div class="curio-divider"></div>
+            <p class="curio-lang">🇧🇷 Português</p>
+            <p>Samuel Untermyer, um dos advogados mais poderosos de Nova York, comprou a propriedade em 1899 e contratou William Welles Bosworth — o mesmo arquiteto paisagista por trás de Kykuit, a propriedade dos Rockefeller — pra desenhar um jardim inspirado em referências persas, gregas e italianas. O coração do lugar é o Jardim Amuralhado, um "chahar bagh" clássico: quatro quadrantes divididos por canais de água que se encontram numa piscina central, o mesmo esquema descrito como paraíso nos jardins persas antigos. Duas esfinges guardam a entrada.</p>
+            <p>No auge, entre os anos 1910 e 1930, era considerado por muitos contemporâneos o jardim mais espetacular dos Estados Unidos — Untermyer dava festas grandiosas ali, com centenas de convidados. O complexo inclui o Templo do Amor (um gazebo de colunas com vista pro Hudson), um anfiteatro esculpido na encosta e um jardim de pedras. A fonte original de 1947 que ficava aqui foi removida décadas depois e hoje está no Conservatory Garden, dentro do Central Park — quem já visitou lá, sem saber, já viu um pedaço do Untermyer.</p>
+            <p>Depois da morte de Untermyer em 1940, a propriedade foi doada à cidade e passou décadas em abandono quase total — vandalismo, mato tomando conta, fontes secas. Só a partir de 2011, quando a Untermyer Gardens Conservancy (uma ONG local) assumiu a restauração, o jardim voltou a ficar de pé. Hoje é gratuito, mantido por voluntários, e um dos jardins mais bonitos e menos conhecidos do país — a maioria dos nova-iorquinos nunca ouviu falar dele.</p>
+          </div></details>
+          <p>945 N Broadway. Jardim persa murado com colunatas, espelhos d'água e um mirante sobre o Hudson. <b>Entrada gratuita.</b></p>
+          <p class="sub">📸 É provavelmente o lugar mais fotogênico de Yonkers e quase ninguém de fora conhece. Confirmem o horário do dia no site.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 ônibus local ou app até a orla</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s93"><span class="check-box"></span></label><span class="stop-title">Yonkers Waterfront &amp; Esplanade Park</span></h4>
+          <span class="time-below">19h00</span>
+          <div class="stop-photos">
+            <img src="./assets/atracoes/dia-08/yonkers-waterfront-esplanade.jpg" alt="Yonkers Waterfront & Esplanade Park">
+            <img src="./assets/atracoes/dia-08/yonkers-waterfront-esplanade2.webp" alt="Vista do Hudson do calçadão de Yonkers">
+          </div>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p class="curio-lang">🇺🇸 English</p>
+            <p>The very name Yonkers comes from a single man: Adriaen van der Donck, a Dutch lawyer who in 1646 received a land grant of nearly 25,000 acres in this region, stretching from the Spuyten Duyvil River well beyond where the city sits today. Van der Donck held the honorary title "Jonkheer" (roughly "young lord" in Dutch) — and that nickname, "The Younckers," slowly morphed over the centuries into "Yonkers." He built farms and mills right at the confluence of the Hudson River and the Nepperhan River, exactly where this stretch of waterfront sits today.</p>
+            <p>The park named after him, Van der Donck Park, is recent — part of a revitalization project that daylighted a stretch of the Nepperhan River that had spent decades buried under parking lots and concrete. Today it's the city's go-to late-afternoon spot: people jogging, families with kids, benches facing the river — the kind of quiet esplanade most New York tourists never see, simply because it's outside Manhattan.</p>
+            <div class="curio-divider"></div>
+            <p class="curio-lang">🇧🇷 Português</p>
+            <p>O próprio nome de Yonkers vem de um único homem: Adriaen van der Donck, advogado holandês que em 1646 recebeu uma concessão de terra de quase 10 mil hectares dessa região, indo do Rio Spuyten Duyvil até bem além de onde a cidade fica hoje. Van der Donck carregava o título honorífico de "Jonkheer" (algo como "jovem senhor" em holandês) — e foi esse apelido, "The Younckers", que ao longo dos séculos foi virando "Yonkers". Ele montou fazendas e moinhos bem na confluência entre o Rio Hudson e o Rio Nepperhan, exatamente onde fica esse trecho de orla hoje.</p>
+            <p>O parque que leva o nome dele, Van der Donck Park, é recente — parte de um projeto de revitalização que reabriu ao ar livre um trecho do Nepperhan que passou décadas enterrado embaixo de estacionamento e concreto. Hoje é o point de fim de tarde da cidade: gente correndo, família com criança, banco de frente pro rio — o tipo de esplanada tranquila que a maioria dos turistas de Nova York nunca chega a ver, porque fica fora de Manhattan.</p>
+          </div></details>
+          <p class="sub">Van der Donck Park e a esplanada à beira do rio, já com as luzes da noite começando a acender.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s160"><span class="check-box"></span></label><span class="stop-title">Jantar na região da Main St</span></h4>
+          <span class="time-below">20h00</span>
+          <p class="sub">Restaurantes e opções de mercado ali pertinho da orla, na Main St de Yonkers — fechando o primeiro dia inteiro com a Yadira com calma, sem pressa pra voltar.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s161"><span class="check-box"></span></label><span class="stop-title">Volta pros hotéis · Uber/Lyft</span></h4>
+          <span class="time-below">21h15</span>
+          <p class="sub">Um carro só: deixam a Yadira primeiro no Courtyard (Executive Blvd) e seguem pro Airbnb em Arthur Place.</p></div></li>
+      </ul>
+
+      </details>
+
+      <details class="dia-acordeao">
+      <summary>Estimativa de Gastos</summary>
+      <table class="custo-tabela" id="custo-d8">
+        <thead><tr><th>Item</th><th style="text-align:right">Por pessoa</th></tr></thead>
+        <tbody>
+          <tr><td><span class="omny-tap" title="Tap OMNY 1/12 — nova semana, novo teto">1</span><span class="ce-text" contenteditable="true" data-persist-key="d8-r2-item">Ônibus + metrô + M60-SBS — Yonkers até LaGuardia</span></td><td class="num" contenteditable="true" data-persist-key="d8-r2-val">US$ 3</td></tr>
+          <tr><td><span class="omny-tap" title="Tap OMNY 2/12 — só se optarem pela Times Square">2</span><span class="ce-text" contenteditable="true" data-persist-key="d8-r3-item">Metrô — LaGuardia até Times Square (se optarem por essa rota)</span></td><td class="num" contenteditable="true" data-persist-key="d8-r3-val">US$ 3</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d8-r4-item">Metro-North — 125 St ou Grand Central até Greystone</td><td class="num" contenteditable="true" data-persist-key="d8-r4-val">~US$ 9</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d8-r5-item">Lyft/Uber — Greystone até o hotel da Yadira</td><td class="num" contenteditable="true" data-persist-key="d8-r5-val">~US$ 5</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d8-r6-item">Almoço/lanche — SoBol ou Fresh&amp;Co</td><td class="num" contenteditable="true" data-persist-key="d8-r6-val">~US$ 20</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d8-r7-item">Jantar na Main St, Yonkers</td><td class="num" contenteditable="true" data-persist-key="d8-r7-val">~US$ 20</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d8-r9-item">Lyft/Uber — volta pros hotéis</td><td class="num" contenteditable="true" data-persist-key="d8-r9-val">~US$ 8</td></tr>        </tbody>
+        <tfoot><tr><td>Total do dia</td><td class="num">~US$ 68</td></tr></tfoot>
+      </table>
+      </details>
+
+    </div>
+  </article>
+
+  <!-- DIA 9 -->
+  <article class="day" id="d9">
+    <div class="day-head">
+      <h3><small>Terça · 22 de setembro</small>Tarrytown &amp; Cold Spring · com a Yadira</h3>
+      <a href="#custo-d9" class="badge custo-total-link">~US$ 73</a>
+    </div>
+    <div class="day-body">
+
+      <div class="day-overview">
+        <div class="ov-head">
+          <span class="dia-num"><span class="lbl">Dia</span><span class="num">09</span></span>
+          <span class="ov-label">Visão geral</span>
+        </div>
+        <ol>
+          <li><span class="ov-num">1</span>Pierson Park &amp; RiverWalk</li>
+          <li><span class="ov-num">2</span>Tarrytown · Main Street</li>
+          <li><span class="ov-num">3</span>Broadway (Route 9)</li>
+          <li><span class="ov-num">4</span>Patriots Park</li>
+          <li><span class="ov-num">5</span>Cold Spring · Main Street</li>
+          <li><span class="ov-num">6</span>West Point Foundry Preserve</li>
+          <li><span class="ov-num">7</span>Orla &amp; coreto do Hudson</li>
+          <li><span class="ov-num">8</span>Pôr do sol na orla</li>
+        </ol>
+      </div>
+
+      <details class="dia-acordeao">
+      <summary>Roteiro</summary>
+      <div class="facts minimal">
+        <div class="fact"><span class="f-emoji">🎫</span><span class="v">Day Pass Greystone-Cold Spring</span></div>
+        <div class="fact"><span class="f-emoji">☀️</span><span class="v">~18h50 · Cold Spring</span></div>
+        <div class="fact"><span class="f-emoji">👣</span><span class="v">~9 km, leve</span></div>
+      </div>
+      <div class="note">
+        <span class="lbl">Tarrytown &amp; Cold Spring com a Yadira</span>
+        Hoje é terça-feira, os trens são bem mais frequentes que no fim de semana — sem a corrida contra o relógio que teve no sábado.
+      </div>
+
+      <ul class="tl">
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s143"><span class="check-box"></span></label><span class="stop-title">Encontro com a Yadira</span></h4>
+          <span class="time-below">8h15</span>
+          <p class="sub">Ela desce até a estação de Greystone (ou encontram vocês na Yonkers Station, o que for mais fácil pra ela) e seguem juntos.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s72b"><span class="check-box"></span></label><span class="stop-title">Yonkers → Tarrytown</span></h4>
+          <span class="time-below">8h40</span>
+          <p>Comprem o <b>Day Pass Greystone → Cold Spring</b> pra cada um (~US$ 22,50/pessoa) — hoje são 3 pessoas, então 3 passes.</p>
+          <p class="sub">Metro-North Hudson Line sentido norte, ~20 min. 📸 <b>Sentem do lado esquerdo</b> — a linha corre colada no rio.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s168"><span class="check-box"></span></label><span class="stop-title">Pierson Park &amp; Tarrytown RiverWalk</span></h4>
+          <span class="time-below">9h00</span>
+          <div class="stop-photos">
+            <img src="./assets/atracoes/dia-09/pierson-park-riverwalk1.jpg" alt="Tarrytown RiverWalk, vista pra ponte Mario Cuomo">
+            <img src="./assets/atracoes/dia-09/pierson-park-riverwalk2.jpg" alt="Coreto de Pierson Park à beira do Hudson">
+          </div>
+          <p>O parque fica literalmente colado na estação — é só atravessar a passarela sobre os trilhos. A RiverWalk que corre ao lado, mantida pela Scenic Hudson, segue quase 1,6 km rio acima até o farol de Sleepy Hollow, com vista aberta pra ponte Mario Cuomo.</p>
+          <p class="sub">Calçadão à beira do Hudson com vista pra ponte Mario Cuomo. O rio aqui é largo feito lago.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>3 min</b> · saindo do parque, subindo a Main Street</div></li>
+
+        <li class="hi"><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s73b"><span class="check-box"></span></label><span class="stop-title">Tarrytown · Main Street</span></h4>
+          <span class="time-below">9h20</span>
+          <div class="stop-photos">
+            <img src="./assets/atracoes/dia-09/tarrytown-main-street1.jpg" alt="Tarrytown Main Street — esquina histórica">
+            <img src="./assets/atracoes/dia-09/tarrytown-main-street2.jpg" alt="Tarrytown Main Street — Music Hall e Coffee Labs Roasters">
+          </div>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p class="curio-lang">🇺🇸 English</p>
+            <p>The first Dutch settlers arrived here in 1645, drawn by the light, fertile soil that was great for growing wheat — and no one knows for certain where the name comes from, but the most accepted explanation is that "Tarrytown" is a corruption of "Terve Town" ("wheat town" in old Dutch). Washington Irving himself, who lived nearby, joked about another version in his writing: that the name came from local wives complaining their husbands always "tarry" (linger, dawdle) at the village tavern on market days.</p>
+            <p>This same region — Tarrytown, with Sleepy Hollow right next door — inspired "The Legend of Sleepy Hollow," written by Irving in 1820. Tell Yadira this one while you're walking up Main Street — it's the kind of trivia that makes for good conversation in an unfamiliar little town.</p>
+            <div class="curio-divider"></div>
+            <p class="curio-lang">🇧🇷 Português</p>
+            <p>Os primeiros colonos holandeses chegaram aqui em 1645, atraídos pela terra leve e fértil, ótima pra plantar trigo — e ninguém tem certeza absoluta de onde vem o nome, mas a explicação mais aceita é que "Tarrytown" seria uma corruptela de "Terve Town" ("cidade do trigo" em holandês antigo). O próprio Washington Irving, que morava ali perto, brincava com outra versão em seus escritos: que o nome vinha das esposas locais reclamando que os maridos sempre "tarry" (se demoravam, enrolavam) na taverna do vilarejo nos dias de feira.</p>
+            <p>É essa mesma região — Tarrytown, Sleepy Hollow ao lado — que inspirou "A Lenda do Cavaleiro sem Cabeça", escrita por Irving em 1820. Contem essa pra Yadira enquanto sobem a Main Street — é o tipo de curiosidade que rende boa conversa numa cidadezinha desconhecida.</p>
+          </div></details>
+          <p>Saiam do parque e comecem a subir a Main Street. Logo no começo, parem no <b>Coffee Labs Roasters</b> pra pegar um café pra viagem. Continuem subindo a rua curtindo as livrarias e lojas de antiguidades que vão aparecendo.</p>
+          <p class="sub">🚻 Use o banheiro aqui — as opções em Cold Spring são mais escassas.</p>
+          <div class="shop-list">
+            <p class="shop-note">🌮 Se bater fome — opções custo-benefício:</p>
+            <ul class="shop-items">
+              <li><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s169"><span class="check-box"></span></label><span class="stop-title">The Taco Project (18 Main St) — US$ 10–15</span></li>
+              <li><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s170"><span class="check-box"></span></label><span class="stop-title">Main Street Pizza of Tarrytown — US$ 4–6</span></li>
+            </ul>
+          </div></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>5 min</b> · continuando a subida até a Broadway (Route 9)</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s171"><span class="check-box"></span></label><span class="stop-title">Broadway (Route 9)</span></h4>
+          <span class="time-below">9h35</span>
+          <p>A grande avenida que corta a cidade. Caminhar por ela revela casarões vitorianos e a Christ Episcopal Church, de 1837 — igreja gótica onde Washington Irving foi conselheiro e teve o funeral, em 1859.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>3 min</b> · seguindo pela Route 9 até o Patriots Park</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s155"><span class="check-box"></span></label><span class="stop-title">Patriots Park</span></h4>
+          <span class="time-below">9h45</span>
+          <div class="stop-photos">
+            <img src="./assets/atracoes/dia-09/patriots-park.jpg" alt="Patriots Park, Tarrytown">
+            <img src="./assets/atracoes/dia-09/patriots-park2.jpg" alt="Patriots Park — ponte de pedra e monumento">
+          </div>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p class="curio-lang">🇺🇸 English</p>
+            <p>The park holds an 1853 monument dedicated to three militiamen — John Paulding, Isaac Van Wart, and David Williams — who captured British Major John André here in 1780. He was returning in disguise from a secret meeting with American general Benedict Arnold, who was negotiating to hand over the fort at West Point to the British in exchange for money. The three militiamen found the incriminating papers hidden in André's boot, refused a bribe to let him go, and Arnold's betrayal came to light — André was hanged as a spy weeks later.</p>
+            <p>Today it's the same corner that turns into the town's farmers market (TaSH) on Saturdays — today's Tuesday, so the park is quieter, just the monument and the Warner Library next door.</p>
+            <div class="curio-divider"></div>
+            <p class="curio-lang">🇧🇷 Português</p>
+            <p>O parque guarda um monumento de 1853 dedicado a três milicianos — John Paulding, Isaac Van Wart e David Williams — que capturaram ali, em 1780, o major britânico John André. Ele estava voltando disfarçado de um encontro secreto com o general americano Benedict Arnold, que negociava entregar o forte de West Point aos britânicos em troca de dinheiro. Os três milicianos acharam os papéis comprometedores escondidos na bota de André, recusaram suborno pra soltá-lo, e a traição de Arnold veio à tona — André foi enforcado como espião semanas depois.</p>
+            <p>Hoje é a mesma esquina que aos sábados vira a feira de produtores da cidade (TaSH) — hoje é terça, então o parque fica mais tranquilo, só o monumento e a Warner Library do lado.</p>
+          </div></details>
+          <p>O monumento aos captores do major André, em meio a um dos episódios mais decisivos da Guerra da Independência.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>10 min</b> · retorno pra estação, ladeira abaixo</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s75b"><span class="check-box"></span></label><span class="stop-title">Trem para Cold Spring</span></h4>
+          <span class="time-below">12h00</span>
+          <p>Sentem do lado esquerdo. Esse trecho é considerado um dos mais bonitos dos Estados Unidos — a linha corre colada no Rio Hudson, com as montanhas do Hudson Highlands quase encostando na janela.</p>
+          <p class="sub">~43 min pela Hudson Line, já usando o Day Pass — não precisa comprar nada de novo.</p></div></li>
+
+        <li class="hi"><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s76b"><span class="check-box"></span></label><span class="stop-title">Cold Spring · Main Street</span></h4>
+          <span class="time-below">12h45</span>
+          <div class="stop-photos">
+            <img src="./assets/atracoes/dia-09/cold-spring-main-street1.jpg" alt="Cold Spring Main Street — fachada histórica">
+            <img src="./assets/atracoes/dia-09/cold-spring-main-street2.jpg" alt="Cold Spring Main Street — General Store">
+          </div>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p class="curio-lang">🇺🇸 English</p>
+            <p>The name comes from a natural cold-water spring where ships used to stop to restock, back in the early 19th century. The town really took off in 1818, when the West Point Foundry set up shop there and became one of the largest artillery foundries in the United States — it's where Captain Robert Parker Parrott developed the Parrott gun, a decisive Union weapon in the Civil War.</p>
+            <p>The foundry closed in 1911, and the town pretty much froze in time after that — which today is Cold Spring's biggest stroke of luck. The same 19th-century houses became antique shops, thrift stores, and bookstores, with no modern construction breaking the postcard-town feel.</p>
+            <div class="curio-divider"></div>
+            <p class="curio-lang">🇧🇷 Português</p>
+            <p>O nome vem de uma nascente natural de água fria onde os navios paravam pra reabastecer, ainda no início do século 19. A cidade só decolou de verdade em 1818, quando o West Point Foundry se instalou ali e virou uma das maiores fundições de artilharia dos Estados Unidos — foi lá que o capitão Robert Parker Parrott desenvolveu o canhão Parrott, arma decisiva da União na Guerra Civil.</p>
+            <p>A fundição fechou em 1911, e a cidade praticamente parou no tempo depois disso — o que hoje é a maior sorte de Cold Spring. As mesmas casas do século 19 viraram antiquário, brechó e livraria, sem nenhuma construção moderna quebrando o clima de cidadezinha de cartão-postal.</p>
+          </div></details>
+          <p>A estação fica a 2 minutos da rua principal. Antiquários, brechós, livrarias e casas do século XIX — a cidadezinha americana de cartão-postal.</p>
+          <p class="sub">Almoço aqui, sem pressa.</p>
+          <div class="shop-list">
+            <p class="shop-note">🍔 Opções de restaurantes em Cold Spring:</p>
+            <ul class="shop-items">
+              <li><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s172"><span class="check-box"></span></label><span class="stop-title">Cold Spring Depot (1 Depot Square) — hambúrguer ou petisco de taverna, US$ 12–18</span></li>
+              <li><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s173"><span class="check-box"></span></label><span class="stop-title">Hudson House River Inn (2 Main St) — US$ 14–22</span></li>
+            </ul>
+          </div></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>8 min</b> · rumo à estação, entrando pela trilha do Foundry Preserve</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s157"><span class="check-box"></span></label><span class="stop-title">West Point Foundry Preserve</span></h4>
+          <span class="time-below">13h30</span>
+          <div class="stop-photos">
+            <img src="./assets/atracoes/dia-09/west-point-foundry1.jpg" alt="Trilha do West Point Foundry Preserve">
+            <img src="./assets/atracoes/dia-09/west-point-foundry2.webp" alt="Ruína histórica da fundição">
+          </div>
+          <details class="curio"><summary>Storytelling</summary><div class="curio-txt">
+            <p class="curio-lang">🇺🇸 English</p>
+            <p>This is literally the foundry grounds from the Cold Spring story — 87 acres preserved by Scenic Hudson, with almost 2 miles of trail running over the original railroad tracks and past the stabilized ruins of the industrial buildings. This is where some of the first steam engines and locomotives in the United States were built, along with the Parrott guns that helped the Union win the Civil War.</p>
+            <p>Free admission, open every day, with explanatory signs along the way. The main trail connects directly to the train station — just a third of a mile, so it's easy to fit in without eating into the rest of the afternoon.</p>
+            <div class="curio-divider"></div>
+            <p class="curio-lang">🇧🇷 Português</p>
+            <p>É literalmente o terreno da fundição contada na história de Cold Spring — 35 hectares preservados pela Scenic Hudson, com quase 3 km de trilha passando por cima dos trilhos ferroviários originais e pelas ruínas estabilizadas dos prédios industriais. Foi aqui que se fabricaram alguns dos primeiros motores a vapor e locomotivas dos Estados Unidos, além dos canhões Parrott que ajudaram a União a vencer a Guerra Civil.</p>
+            <p>Entrada gratuita, aberta todos os dias, com placas explicativas ao longo do trajeto. A trilha principal conecta direto com a estação de trem — meio quilômetro só, então dá pra encaixar sem comprometer o resto da tarde.</p>
+          </div></details>
+          <p>Ruínas industriais do século 19 no meio do mato, viradas em passeio a céu aberto. Trilha curta e fácil, sem cobrar ingresso — boa pra mostrar pra Yadira.</p></div></li>
+
+        <li class="walk-li"><span class="dot"></span>
+          <div class="walk-txt">👣 <b>4 min</b> · voltando pela Main St até a água</div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s77b"><span class="check-box"></span></label><span class="stop-title">Orla &amp; Cold Spring Bandstand</span></h4>
+          <span class="time-below">14h45</span>
+          <div class="stop-photos">
+            <img src="./assets/atracoes/dia-09/cold-spring-bandstand1.jpg" alt="Cold Spring Bandstand">
+            <img src="./assets/atracoes/dia-09/cold-spring-bandstand2.webp" alt="Píer da orla de Cold Spring">
+          </div>
+          <p>O píer e o coreto branco (o "Bandstand") olhando para a Storm King Mountain do outro lado. Se sobrar disposição, <b>Little Stony Point</b> fica a ~25 min a pé ao norte, com mirante sobre o rio.</p></div></li>
+
+        <li class="hi"><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s78b"><span class="check-box"></span></label><span class="stop-title">Pôr do sol na orla · ~18h50</span></h4>
+          <span class="time-below">18h35</span>
+          <p>O sol se põe atrás das montanhas do lado oeste, com o rio inteiro dourado na frente.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s79b"><span class="check-box"></span></label><span class="stop-title">Volta para Yonkers</span></h4>
+          <span class="time-below">19h30</span>
+          <p class="sub">~1h de trem, trens mais frequentes que no sábado. Deixem a Yadira na estação mais perto do hotel dela antes de seguir pro Airbnb.</p></div></li>
+      </ul>
+      </details>
+
+      <details class="dia-acordeao">
+      <summary>Estimativa de Gastos</summary>
+      <table class="custo-tabela" id="custo-d9">
+        <thead><tr><th>Item</th><th style="text-align:right">Por pessoa</th></tr></thead>
+        <tbody>
+          <tr><td contenteditable="true" data-persist-key="d9-r1-item">Metro-North — Day Pass Greystone → Cold Spring</td><td class="num" contenteditable="true" data-persist-key="d9-r1-val">US$ 23</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d9-r2-item">Café/lanche em Tarrytown</td><td class="num" contenteditable="true" data-persist-key="d9-r2-val">~US$ 10</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d9-r3-item">Almoço/lanche em Cold Spring</td><td class="num" contenteditable="true" data-persist-key="d9-r3-val">~US$ 20</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d9-r4-item">Jantar/lanche</td><td class="num" contenteditable="true" data-persist-key="d9-r4-val">~US$ 20</td></tr>        </tbody>
+        <tfoot><tr><td>Total do dia</td><td class="num">~US$ 73</td></tr></tfoot>
+      </table>
+      </details>
+
+    </div>
+  </article>
+
+  <!-- DIA 10 -->
+  <article class="day" id="d10">
+    <div class="day-head">
+      <h3><small>Quarta · 23 de setembro</small>Última manhã &amp; JFK</h3>
+      <a href="#custo-d10" class="badge custo-total-link">~US$ 34</a>
+    </div>
+    <div class="day-body">
+
+      <div class="day-overview">
+        <div class="ov-head">
+          <span class="dia-num"><span class="lbl">Dia</span><span class="num">10</span></span>
+          <span class="ov-label">Visão geral</span>
+        </div>
+        <ol>
+          <li><span class="ov-num">1</span>Checkout do Airbnb · 11h00</li>
+          <li><span class="ov-num">2</span>Yonkers → JFK · 13h45</li>
+          <li><span class="ov-num">3</span>Embarque pro Brasil · 19h50</li>
+        </ol>
+      </div>
+
+      <details class="dia-acordeao">
+      <summary>Roteiro</summary>
+      <ul class="tl">
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s95"><span class="check-box"></span></label><span class="stop-title">Café e última caminhada</span></h4>
+          <span class="time-below">9h00</span>
+          <p class="sub">Sem levar malas para Manhattan. A viagem fecha olhando o Hudson, não correndo pela Penn Station.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s96"><span class="check-box"></span></label><span class="stop-title">Checkout do Airbnb</span></h4>
+          <span class="time-below">11h00</span></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s97"><span class="check-box"></span></label><span class="stop-title">Almoço sem pressa</span></h4>
+          <span class="time-below">12h00</span></div></li>
+
+        <li class="hi"><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s98"><span class="check-box"></span></label><span class="stop-title">Yonkers → JFK · com a Yadira</span></h4>
+          <span class="time-below">13h45</span>
+          <p>Metro-North até <b>Grand Central</b> · LIRR de Grand Central Madison até <b>Jamaica</b> · <b>AirTrain</b> até o terminal. A Yadira vai junto — o voo dela (18h) sai antes do de vocês.</p>
+          <p class="sub">~2h30 no total, com folga para malas e baldeações. 💰 AirTrain US$ 8,50 por pessoa, à parte do OMNY.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s99"><span class="check-box"></span></label><span class="stop-title">Chegada ao JFK</span></h4>
+          <span class="time-below">16h15</span>
+          <p class="sub">3h30 antes do voo internacional de vocês. Margem confortável — e dá tempo de acompanhar a Yadira até o check-in dela também.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s137"><span class="check-box"></span></label><span class="stop-title">Yadira embarca</span></h4>
+          <span class="time-below">18h00</span>
+          <p class="sub">Despedida — o voo dela sai quase 2h antes do de vocês. Depois é só esperar a hora de embarcar.</p></div></li>
+
+        <li><span class="dot"></span>
+          <div class="stop"><h4><label class="check-stop"><input type="checkbox" class="check-input" data-chk="s100"><span class="check-box"></span></label><span class="stop-title">Decolagem para o Brasil</span></h4>
+          <span class="time-below">19h50</span></div></li>
+      </ul>
+      </details>
+
+      <details class="dia-acordeao">
+      <summary>Estimativa de Gastos</summary>
+      <table class="custo-tabela" id="custo-d10">
+        <thead><tr><th>Item</th><th style="text-align:right">Por pessoa</th></tr></thead>
+        <tbody>
+          <tr><td contenteditable="true" data-persist-key="d10-r1-item">AirTrain (JFK, embarque)</td><td class="num" contenteditable="true" data-persist-key="d10-r1-val">US$ 9</td></tr>
+          <tr><td contenteditable="true" data-persist-key="d10-r2-item">Alimentação — café, almoço, lanches</td><td class="num" contenteditable="true" data-persist-key="d10-r2-val">~US$ 25</td></tr>        </tbody>
+        <tfoot><tr><td>Total do dia</td><td class="num">~US$ 34</td></tr></tfoot>
+      </table>
+      </details>
+
+    </div>
+  </article>
+
+  <div class="btn-menu-wrap"><a class="btn-menu" href="#menu-principal">Menu Principal</a></div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     HAMBURGER / DRAWER
+══════════════════════════════════════════ -->
+<script>
+(function(){
+  var btn = document.getElementById('hamburgerBtn');
+  var drawer = document.getElementById('navDrawer');
+  var overlay = document.getElementById('navOverlay');
+  function closeDrawer(){ btn.classList.remove('open'); drawer.classList.remove('open'); overlay.classList.remove('open'); }
+  btn.addEventListener('click', function(){
+    var isOpen = drawer.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    overlay.classList.toggle('open', isOpen);
+  });
+  overlay.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeDrawer); });
+})();
+</script>
+
+<!-- ══════════════════════════════════════════
+     ABRIR ROTEIRO DO DIA AO CLICAR NO MENU
+══════════════════════════════════════════ -->
+<script>
+(function(){
+  function openDiaRoteiro(id){
+    var artigo = document.getElementById(id);
+    if (!artigo) return;
+    var acordeao = artigo.querySelector('details.dia-acordeao');
+    if (acordeao) acordeao.open = true;
+  }
+  function checkHash(){
+    var id = window.location.hash.replace('#', '');
+    if (/^d\d+$/.test(id)) openDiaRoteiro(id);
+  }
+  document.querySelectorAll('a[href^="#d"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      var id = a.getAttribute('href').replace('#', '');
+      openDiaRoteiro(id);
+    });
+  });
+  window.addEventListener('hashchange', checkHash);
+  checkHash();
+})();
+</script>
+
+<!-- ══════════════════════════════════════════
+     CHECKLIST — marca o que já foi feito (salvo no navegador)
+══════════════════════════════════════════ -->
+<script>
+(function(){
+  var PREFIX = 'ny-fabi-eric-check-';
+  document.querySelectorAll('.check-input').forEach(function(input){
+    var key = PREFIX + input.dataset.chk;
+    if (localStorage.getItem(key) === '1') input.checked = true;
+    input.addEventListener('change', function(){
+      if (input.checked) localStorage.setItem(key, '1');
+      else localStorage.removeItem(key);
+    });
+  });
+})();
+</script>
+
+<!-- ══════════════════════════════════════════
+     CUSTO DO DIA — tabelas editáveis com soma automática (salvo no navegador)
+══════════════════════════════════════════ -->
+<script>
+(function(){
+  var PREFIX = 'ny-fabi-eric-custo-';
+
+  function parseOneAmount(str){
+    var m = (str || '').replace(/[^\d.,]/g, '');
+    if (!m) return 0;
+    // trata "1.234,56" (milhar+decimal BR) e "23,50" (decimal BR) e "23.50" (decimal US)
+    if (m.indexOf(',') > -1 && m.indexOf('.') > -1) {
+      m = m.replace(/\./g, '').replace(',', '.');
+    } else if (m.indexOf(',') > -1) {
+      m = m.replace(',', '.');
+    }
+    var n = parseFloat(m);
+    return isNaN(n) ? 0 : n;
+  }
+
+  function parseMoney(str){
+    if (!str) return 0;
+    // faixas tipo "US$ 51–62" — usa a média, senão o traço somaria os dois números juntos
+    var rangeParts = str.split('–');
+    if (rangeParts.length === 2) {
+      var a = parseOneAmount(rangeParts[0]);
+      var b = parseOneAmount(rangeParts[1]);
+      if (a && b) return (a + b) / 2;
+    }
+    return parseOneAmount(str);
+  }
+
+  function recalc(table){
+    var total = 0;
+    table.querySelectorAll('tbody td.num').forEach(function(td){
+      total += parseMoney(td.textContent);
+    });
+    var totalRounded = Math.round(total);
+    var tfootTd = table.querySelector('tfoot td.num');
+    if (tfootTd) tfootTd.textContent = '~US$ ' + totalRounded;
+
+    var article = table.closest('article.day');
+    if (article) {
+      var text = '~US$ ' + totalRounded;
+      article.querySelectorAll('.custo-total-link').forEach(function(link){
+        link.textContent = text;
+      });
+    }
+  }
+
+  document.querySelectorAll('table.custo-tabela').forEach(function(table){
+    table.querySelectorAll('[data-persist-key]').forEach(function(el){
+      var saved = localStorage.getItem(PREFIX + el.dataset.persistKey);
+      if (saved !== null) el.textContent = saved;
+    });
+    recalc(table);
+    table.addEventListener('input', function(e){
+      var el = e.target;
+      if (el && el.dataset && el.dataset.persistKey) {
+        localStorage.setItem(PREFIX + el.dataset.persistKey, el.textContent);
+      }
+      recalc(table);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

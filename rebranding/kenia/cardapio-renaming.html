@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Briefing de Cardápio — Batata &amp; Brasa · Renaming</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --preto: #141414;
+    --amarelo: #f8cb09;
+    --amarelo-claro: #fdf1b8;
+    --amarelo-claro2: #fff8e0;
+    --amarelo-texto: #e0a300;
+    --branco: #ffffff;
+    --linha: #e9e4d2;
+    --cinza-texto: #6b6b64;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    font-family:'DM Sans', 'Poppins', sans-serif;
+    color: var(--preto);
+    background:#525659;
+    padding:24px 0;
+    font-size:17px;
+    line-height:1.6;
+  }
+
+  /* ── ESTRUTURA DE PÁGINA A4 ── */
+  section{ width:210mm; margin:0 auto; padding:0; background:transparent; }
+  .pagina{
+    width:210mm;
+    min-height:297mm;
+    box-sizing:border-box;
+    padding:16mm 18mm 20mm;
+    background: var(--branco);
+    box-shadow:0 4px 24px rgba(0,0,0,0.35);
+    margin:0 auto 6mm;
+    position:relative;
+  }
+  .pagina.pagina-escura{ background: var(--preto); color: var(--branco); }
+  .pagina.pagina-imagem{ padding:0; background: var(--preto); overflow:hidden; }
+  .pagina.pagina-imagem img{ display:block; width:180mm; height:258mm; margin:15mm auto 0; object-fit:contain; }
+  .pagina.pagina-imagem .img-legenda{ position:absolute; left:0; right:0; bottom:9mm; text-align:center; font-family:'Poppins',sans-serif; font-size:8.5px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.5); padding:0 10mm; }
+
+  .ph{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-bottom:8px; margin-bottom:9mm;
+    border-bottom:2px solid var(--preto);
+    font-family:'Poppins',sans-serif; font-size:8.5px; font-weight:700;
+    letter-spacing:2px; text-transform:uppercase; color:var(--cinza-texto);
+  }
+  .pagina-escura .ph{ border-bottom-color:var(--amarelo); color:rgba(255,255,255,0.5); }
+  .ph-right{ display:flex; align-items:center; gap:8px; }
+  .ph-marca{ font-weight:800; color:inherit; }
+
+  .pf{ position:absolute; left:0; right:0; bottom:8mm; text-align:center; font-family:'Poppins',sans-serif; font-size:9px; font-weight:600; letter-spacing:1.5px; color:var(--cinza-texto); }
+  .pagina-escura .pf{ color:rgba(255,255,255,0.4); }
+
+  /* ── TIPOGRAFIA GERAL ── */
+  .eyebrow{
+    font-family:'Poppins',sans-serif; font-size:11px; font-weight:800;
+    letter-spacing:1.5px; text-transform:uppercase; color:var(--preto);
+    background:var(--amarelo); display:inline-block; padding:4px 11px;
+    border-radius:3px; margin-bottom:12px;
+  }
+  .num-secao{
+    font-family:'Poppins',sans-serif; font-weight:800;
+    font-size:13px; letter-spacing:1px; color:var(--cinza-texto); display:block; margin-bottom:4px;
+  }
+  .pagina-escura .num-secao{ color:rgba(255,255,255,0.45); }
+  h2.titulo-secao{
+    font-family:'Poppins',sans-serif; font-weight:800; font-size:26px; text-transform:uppercase;
+    color: var(--preto); line-height:1.2; margin-bottom:14px; letter-spacing:-0.2px;
+  }
+  .pagina-escura h2.titulo-secao{ color: var(--branco); }
+  .corpo p{ font-family:'DM Sans', sans-serif; font-size:16px; line-height:1.8; margin-bottom:14px; color:var(--preto); }
+  .corpo p:last-child{ margin-bottom:0; }
+  .pagina-escura .corpo p{ color: rgba(255,255,255,0.9); }
+  .corpo strong{ color:var(--amarelo-texto); font-weight:800; }
+  .pagina-escura .corpo strong{ color:var(--amarelo); }
+
+  /* ── COMPARATIVO ── */
+  .compara-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:8px; }
+  .compara-titulo{ display:inline-block; font-family:'Poppins',sans-serif; font-weight:800; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; padding:5px 13px; border-radius:20px; margin-bottom:12px; }
+  .compara-col.sim .compara-titulo{ background:var(--preto); color:var(--amarelo); }
+  .compara-col.nao .compara-titulo{ background:var(--branco); color:var(--cinza-texto); border:1.5px solid var(--linha); }
+  .compara-item{ display:flex; align-items:flex-start; gap:8px; padding:6px 0; font-family:'DM Sans',sans-serif; font-size:14.5px; line-height:1.5; }
+  .compara-col.sim .compara-item{ color:var(--preto); font-weight:600; }
+  .compara-col.sim .compara-item::before{ content:'→'; color:var(--amarelo-texto); font-weight:800; flex-shrink:0; }
+  .compara-col.nao .compara-item{ color:var(--cinza-texto); }
+  .compara-col.nao .compara-item::before{ content:'✓'; color:var(--amarelo-texto); font-weight:800; flex-shrink:0; }
+
+  /* ── DESTAQUE ── */
+  .destaque{
+    background: var(--amarelo-claro); border-left:4px solid var(--preto);
+    border-radius:0 8px 8px 0; padding:14px 20px; margin:18px 0;
+  }
+  .destaque p{ font-family:'Poppins',sans-serif; font-weight:600; font-size:15px; color:var(--preto); line-height:1.6; margin:0; }
+  .destaque-label{ display:block; font-family:'Poppins',sans-serif; font-size:8.5px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--preto); margin-bottom:6px; }
+
+  /* ── ESTRUTURA DAS 4 CATEGORIAS ── */
+  .cat-grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:16px 0 0; }
+  .cat-card{ border:1px solid var(--linha); border-radius:12px; padding:14px 16px; background:var(--amarelo-claro2); }
+  .cat-card-nome{ display:block; font-family:'Poppins',sans-serif; font-weight:900; text-transform:uppercase; font-size:14px; color:var(--preto); margin-bottom:5px; letter-spacing:-0.2px; }
+  .cat-card-desc{ font-family:'DM Sans',sans-serif; font-size:13px; line-height:1.55; color:var(--cinza-texto); }
+
+  /* ── TABELA DE RENAMING ── */
+  .cat-label{
+    display:inline-block; font-family:'Poppins',sans-serif; font-weight:800;
+    font-size:11px; letter-spacing:1px; text-transform:uppercase;
+    background:var(--preto); color:var(--amarelo); padding:6px 14px; border-radius:20px;
+    margin:24px 0 2px;
+  }
+  .cat-label:first-of-type{ margin-top:4px; }
+  .cat-sub{ display:block; font-family:'DM Sans',sans-serif; font-size:12.5px; color:var(--cinza-texto); margin:7px 0 0; font-style:italic; }
+
+  .rt{ width:100%; border-collapse:collapse; margin:12px 0 2px; }
+  .rt thead th{
+    background:var(--amarelo); color:var(--preto);
+    font-family:'Poppins',sans-serif; font-size:9px; font-weight:800;
+    letter-spacing:0.8px; text-transform:uppercase; padding:9px 10px; text-align:left;
+    border-bottom:2px solid var(--preto);
+  }
+  .rt thead th.n{ text-align:right; }
+  .rt td{
+    padding:10px 10px; font-family:'DM Sans',sans-serif; font-size:13px;
+    line-height:1.5; border-bottom:1px solid var(--linha); vertical-align:top;
+  }
+  .rt td.n{ text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--cinza-texto); }
+  .rt td.n-multi{ text-align:right; font-variant-numeric:tabular-nums; color:var(--cinza-texto); font-size:12px; }
+  .rt tr.com-nota td{ border-bottom:none; padding-bottom:2px; }
+  .rt .item-nome{ display:block; font-weight:600; color:var(--preto); font-size:13.5px; }
+  .rt .item-desc{ display:block; font-size:12px; color:#7a7a70; line-height:1.5; margin-top:3px; }
+  .rt .novo .item-nome{ font-weight:800; }
+  .rt .nota td{
+    font-family:'DM Sans',sans-serif; font-size:11.5px; font-style:italic;
+    color:var(--amarelo-texto); padding-top:0; padding-bottom:10px; border-bottom:1px solid var(--linha);
+  }
+  .tag{ display:inline-block; font-family:'Poppins',sans-serif; font-size:8px; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; padding:2px 7px; border-radius:10px; vertical-align:middle; margin-left:6px; }
+  .tag-muda{ background:var(--amarelo); color:var(--preto); }
+  .tag-conf{ background:var(--preto); color:var(--amarelo); }
+  .tag-mantem{ background:#f0f0ea; color:var(--cinza-texto); }
+  .tag-novo{ background:#1a6b3c; color:#fff; }
+
+  /* ── BLOCO DE COMPLEMENTOS / MOLHOS ── */
+  .bloco-extra{ border:1px solid var(--linha); border-radius:10px; background:var(--amarelo-claro2); padding:14px 18px; margin-top:16px; }
+  .bloco-extra-label{ display:block; font-family:'Poppins',sans-serif; font-size:9.5px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:var(--cinza-texto); margin-bottom:8px; }
+  .bloco-extra p{ font-family:'DM Sans',sans-serif; font-size:13px; line-height:1.7; color:var(--preto); margin:0; }
+
+  /* ── LISTA COMPACTA (bebidas) ── */
+  .mini-grid{ display:grid; grid-template-columns:1fr 1fr; gap:2px 24px; margin:10px 0 2px; }
+  .mini-item{ display:flex; justify-content:space-between; gap:10px; font-family:'DM Sans',sans-serif; font-size:12.5px; padding:6px 0; border-bottom:1px solid var(--linha); }
+  .mini-item span:last-child{ color:var(--cinza-texto); font-variant-numeric:tabular-nums; white-space:nowrap; }
+
+  /* ── CRITÉRIOS ── */
+  .criterios-lista{ margin-top:8px; }
+  .criterio-item{ display:flex; align-items:flex-start; gap:12px; padding:11px 0; border-bottom:1px solid var(--linha); }
+  .criterio-item:last-child{ border-bottom:none; }
+  .pagina-escura .criterio-item{ border-bottom-color:rgba(255,255,255,0.15); }
+  .criterio-check{ flex-shrink:0; width:24px; height:24px; border-radius:50%; background:var(--preto); color:var(--amarelo); display:flex; align-items:center; justify-content:center; font-family:'Poppins',sans-serif; font-size:11px; font-weight:800; }
+  .pagina-escura .criterio-check{ background:var(--amarelo); color:var(--preto); }
+  .criterio-texto{ font-size:14px; line-height:1.65; color:var(--preto); padding-top:2px; }
+  .pagina-escura .criterio-texto{ color:rgba(255,255,255,0.9); }
+  .criterio-texto strong{ color:var(--amarelo-texto); font-weight:800; }
+  .pagina-escura .criterio-texto strong{ color:var(--amarelo); }
+
+  /* ── ARTES INCLUSAS ── */
+  .arte-item{ margin-top:24px; }
+  .arte-item:first-of-type{ margin-top:6px; }
+  .arte-cab{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+  .arte-num{ flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--preto); color:var(--amarelo); font-family:'Poppins',sans-serif; font-weight:800; font-size:12px; display:flex; align-items:center; justify-content:center; }
+  .arte-titulo{ font-family:'Poppins',sans-serif; font-weight:800; font-size:15px; text-transform:uppercase; color:var(--preto); letter-spacing:-0.2px; }
+  .arte-medida{ font-family:'DM Sans',sans-serif; font-size:12px; font-style:italic; color:var(--cinza-texto); margin-left:6px; text-transform:none; letter-spacing:0; }
+  .arte-img{ border:1px solid var(--linha); border-radius:10px; overflow:hidden; background:#fafaf7; display:flex; justify-content:center; width:fit-content; max-width:100%; margin:0 auto; }
+  .arte-img img{ width:auto; max-width:100%; max-height:130mm; height:auto; display:block; }
+  .arte-img.grande img{ max-height:132mm; }
+  .arte-img.solo img{ max-height:190mm; }
+  .arte-img.is-placeholder{ border-style:dashed; }
+  .arte-img.is-placeholder img{ display:none; }
+  .arte-img.is-placeholder::after{ content:'Imagem a inserir'; display:block; text-align:center; font-family:'Poppins',sans-serif; font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--cinza-texto); padding:46px 0; }
+  .check-lista{ margin-top:4px; }
+  .check-linha{ display:flex; align-items:flex-start; gap:10px; padding:6px 0; font-family:'DM Sans',sans-serif; font-size:13px; line-height:1.5; color:var(--preto); }
+  .check-box{ flex-shrink:0; width:14px; height:14px; border:1.5px solid var(--preto); border-radius:3px; margin-top:2px; }
+  .check-box.checked{ background:var(--preto); position:relative; }
+  .check-box.checked::after{ content:''; position:absolute; left:3px; top:0px; width:4px; height:8px; border:solid var(--amarelo); border-width:0 2px 2px 0; transform:rotate(45deg); }
+
+  /* ── CAPA ── */
+  #capa{ display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 20mm; }
+  #capa .capa-eyebrow{ font-family:'Poppins',sans-serif; font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--amarelo); margin-bottom:26px; }
+  #capa .capa-titulo{ font-family:'Poppins',sans-serif; font-weight:900; text-transform:uppercase; font-size:60px; line-height:1.05; margin-bottom:0; letter-spacing:-0.5px; color:var(--branco); }
+  #capa .capa-titulo .ct-amarelo{ color:var(--amarelo); }
+  #capa .capa-linha{ width:70px; height:3px; background:var(--amarelo); margin:22px 0; }
+  #capa .capa-subtitulo{ font-family:'Poppins',sans-serif; font-weight:600; font-size:16px; color:rgba(255,255,255,0.9); margin-bottom:8px; }
+  #capa .capa-tipo{ font-family:'Poppins',sans-serif; font-size:10.5px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.45); margin-top:6px; }
+  #capa .capa-rodape{ position:absolute; bottom:20mm; left:0; right:0; text-align:center; font-family:'Poppins',sans-serif; font-size:9.5px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.4); }
+
+  /* ── MENU HAMBÚRGUER ── */
+  .hamburger-btn{ position:fixed; top:18px; right:18px; z-index:300; width:46px; height:46px; border-radius:50%; background:var(--preto); border:none; cursor:pointer; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; box-shadow:0 3px 14px rgba(0,0,0,0.35); }
+  .hamburger-btn span{ display:block; width:20px; height:2px; background:var(--amarelo); border-radius:2px; transition:all 0.25s; }
+  .hamburger-btn.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .hamburger-btn.open span:nth-child(2){ opacity:0; }
+  .hamburger-btn.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+  .nav-overlay{ position:fixed; inset:0; background:rgba(0,0,0,0.4); z-index:298; opacity:0; pointer-events:none; transition:opacity 0.25s; }
+  .nav-overlay.open{ opacity:1; pointer-events:all; }
+  .nav-drawer{ position:fixed; top:0; right:0; bottom:0; width:290px; max-width:82vw; background:var(--preto); z-index:299; overflow-y:auto; padding:80px 0 32px; transform:translateX(100%); transition:transform 0.3s cubic-bezier(0.4,0,0.2,1); box-shadow:-6px 0 30px rgba(0,0,0,0.4); }
+  .nav-drawer.open{ transform:translateX(0); }
+  .nav-drawer-titulo{ display:block; padding:0 24px 14px; font-family:'Poppins',sans-serif; font-weight:800; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--amarelo); border-bottom:1px solid rgba(255,255,255,0.1); margin-bottom:8px; }
+  .nav-item{ display:flex; align-items:baseline; gap:10px; padding:9px 24px; color:rgba(255,255,255,0.8); text-decoration:none; font-family:'Poppins',sans-serif; font-size:12.5px; font-weight:600; }
+  .nav-item:hover{ color:var(--branco); background:rgba(255,255,255,0.06); }
+  .nav-item-num{ font-weight:800; color:var(--amarelo); font-size:11px; flex-shrink:0; }
+
+  @media print {
+    @page{ size:A4 portrait; margin:0; }
+    *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+    body{ background:white !important; padding:0 !important; }
+    .pagina{ page-break-after:always; break-after:page; margin:0 auto !important; box-shadow:none !important; }
+    section{ page-break-before:auto !important; margin:0 !important; }
+    .hamburger-btn, .nav-drawer, .nav-overlay{ display:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<button class="hamburger-btn" id="hamburgerBtn" onclick="toggleNavDrawer()" aria-label="Abrir menu">
+  <span></span><span></span><span></span>
+</button>
+<div class="nav-overlay" id="navOverlay" onclick="toggleNavDrawer()"></div>
+<nav class="nav-drawer" id="navDrawer">
+  <span class="nav-drawer-titulo">Briefing de Cardápio · Batata &amp; Brasa</span>
+  <a class="nav-item" href="#capa" onclick="toggleNavDrawer()"><span class="nav-item-num">—</span>Capa</a>
+  <a class="nav-item" href="#sec-regra" onclick="toggleNavDrawer()"><span class="nav-item-num">01</span>A regra do renaming</a>
+  <a class="nav-item" href="#sec-executivos" onclick="toggleNavDrawer()"><span class="nav-item-num">02</span>Executivos Brasa do Dia</a>
+  <a class="nav-item" href="#sec-porcoes" onclick="toggleNavDrawer()"><span class="nav-item-num">03</span>Porções na Brasa</a>
+  <a class="nav-item" href="#sec-recheada" onclick="toggleNavDrawer()"><span class="nav-item-num">04</span>Batata Recheada na Brasa</a>
+  <a class="nav-item" href="#sec-burguers" onclick="toggleNavDrawer()"><span class="nav-item-num">05</span>Burguers na Brasa</a>
+  <a class="nav-item" href="#sec-artes" onclick="toggleNavDrawer()"><span class="nav-item-num">06</span>Artes inclusas no projeto</a>
+  <a class="nav-item" href="#sec-redes" onclick="toggleNavDrawer()"><span class="nav-item-num">07</span>Orientação pras redes sociais</a>
+</nav>
+<script>
+function toggleNavDrawer(){
+  document.getElementById('navDrawer').classList.toggle('open');
+  document.getElementById('navOverlay').classList.toggle('open');
+  document.getElementById('hamburgerBtn').classList.toggle('open');
+}
+</script>
+
+<div class="main-content">
+
+<!-- ══ CAPA ══ -->
+<section>
+<div class="pagina pagina-escura" id="capa">
+  <span class="capa-eyebrow">Projeto Rebranding · Batata &amp; Brasa</span>
+  <span class="capa-titulo">Reunião de<br><span class="ct-amarelo">Alinhamento</span></span>
+  <div class="capa-linha"></div>
+  <span class="capa-subtitulo">Cardápio + Artes Inclusas + Orientação Redes Sociais</span>
+  <div class="capa-rodape">Hakuna Batata → Batata &amp; Brasa · Shopping Boulevard, Araxá · Setembro de 2026</div>
+  <div class="pf">01 / 10</div>
+</div>
+</section>
+
+<!-- ══ 01 — A REGRA DO RENAMING ══ -->
+<section>
+<div class="pagina" id="sec-regra">
+<div class="ph"><span>01 · A Regra do Renaming</span><span class="ph-right"><span class="ph-marca">Briefing de Cardápio</span> · Batata &amp; Brasa</span></div>
+<span class="num-secao">01</span>
+<h2 class="titulo-secao">Por Que e O Que Vamos Renomear</h2>
+
+<div class="corpo">
+<p>Ao sair da franquia, a operação não pode mais usar os nomes e slogans que pertencem à <strong>Hakuna Batata</strong>. Isso não vale para os pratos em si — picanha, tilápia, milanesa e frango especial são nomes genéricos e continuam iguais. Vale para o que a franquia criou como marca: o nome, o slogan e a "Maionese Hakuna".</p>
+<p>A ideia é simples: o cardápio ganha quatro blocos, cada um com o "sobrenome" <strong>na Brasa</strong>, e dentro deles os pratos mantêm nomes diretos.</p>
+</div>
+
+<div class="cat-grid">
+  <div class="cat-card"><span class="cat-card-nome">Executivos Brasa do Dia</span><span class="cat-card-desc">Os pratos completos do dia a dia.</span></div>
+  <div class="cat-card"><span class="cat-card-nome">Porções na Brasa</span><span class="cat-card-desc">As porções pra dividir.</span></div>
+  <div class="cat-card"><span class="cat-card-nome">Batata Recheada na Brasa</span><span class="cat-card-desc">As recheadas, assinatura da casa.</span></div>
+  <div class="cat-card"><span class="cat-card-nome">Burguers na Brasa</span><span class="cat-card-desc">A linha de hambúrgueres.</span></div>
+</div>
+
+<div class="compara-grid" style="margin-top:20px;">
+  <div class="compara-col sim">
+    <span class="compara-titulo">O que muda</span>
+    <div class="compara-item">Todo nome com "Hakuna" (Hakuna Cheese, Hakuna Bacon, Hakuna Filé)</div>
+    <div class="compara-item">O slogan "esse é o nosso lema"</div>
+    <div class="compara-item">A "Maionese Hakuna" → Maionese da Casa</div>
+    <div class="compara-item">"Suprema" pode ficar (é adjetivo comum) — mas, pra algo mais original: Brasa Braba, Brasa Suprema ou Sublime</div>
+  </div>
+  <div class="compara-col nao">
+    <span class="compara-titulo">O que fica igual</span>
+    <div class="compara-item">Nomes genéricos de prato (Picanha, Tilápia, Milanesa, Frango Especial, Franbacon, Strogonoff…)</div>
+    <div class="compara-item">Marcas de fornecedor nas bebidas (Del Valle, Ice Tea Leão, Heineken)</div>
+    <div class="compara-item">Os preços — a tabela mostra os valores atuais; o reajuste vem à parte</div>
+  </div>
+</div>
+
+<div class="destaque">
+  <span class="destaque-label">Como ler a tabela</span>
+  <p>Nome novo <strong>em negrito</strong> = proposta de mudança. <span class="tag tag-mantem">Mantém</span> = nome continua igual, só entra no visual novo. <span class="tag tag-novo">Novo</span> = item que ainda não existe.</p>
+</div>
+<div class="pf">02 / 10</div>
+</div>
+</section>
+
+<!-- ══ 02 — EXECUTIVOS BRASA DO DIA ══ -->
+<section>
+<div class="pagina" id="sec-executivos">
+<div class="ph"><span>02 · Executivos Brasa do Dia</span><span class="ph-right"><span class="ph-marca">Briefing de Cardápio</span> · Batata &amp; Brasa</span></div>
+<span class="num-secao">02</span>
+<h2 class="titulo-secao">Executivos Brasa do Dia</h2>
+
+<div class="corpo">
+<p>Os pratos completos do dia a dia. <strong>Nenhum nome muda aqui</strong> — só entram no cardápio novo sob o título Executivos Brasa do Dia.</p>
+</div>
+
+<table class="rt">
+<thead><tr><th style="width:42%;">Nome antigo</th><th class="n" style="width:14%;">Preço antigo</th><th style="width:30%;">Nome novo / proposta</th><th class="n" style="width:14%;">Preço</th></tr></thead>
+<tbody>
+  <tr class="com-nota"><td><span class="item-nome">Picanha</span><span class="item-desc">2 bifes ~200g · arroz, farofa, batata e salada simples</span></td><td class="n">R$ 49,90</td><td class="novo"><span class="item-nome">Picanha <span class="tag tag-mantem">Mantém</span></span></td><td class="n">R$ 49,90</td></tr>
+  <tr class="nota"><td colspan="4">O trabalho de marca fica na versão porção (Picanha na Brasa, na página seguinte).</td></tr>
+  <tr><td><span class="item-nome">Tilápia</span><span class="item-desc">arroz, batata e salada verão</span></td><td class="n">R$ 29,90</td><td class="novo"><span class="item-nome">Tilápia <span class="tag tag-mantem">Mantém</span></span></td><td class="n">R$ 29,90</td></tr>
+  <tr><td><span class="item-nome">Frango Especial</span><span class="item-desc">filé de frango, arroz, batata e salada clássica</span></td><td class="n">R$ 21,90</td><td class="novo"><span class="item-nome">Frango Especial <span class="tag tag-mantem">Mantém</span></span></td><td class="n">R$ 21,90</td></tr>
+  <tr><td><span class="item-nome">Milanesa</span><span class="item-desc">filé de frango empanado, arroz, batata e salada simples</span></td><td class="n">R$ 20,90</td><td class="novo"><span class="item-nome">Milanesa <span class="tag tag-mantem">Mantém</span></span></td><td class="n">R$ 20,90</td></tr>
+</tbody>
+</table>
+
+<div class="bloco-extra">
+  <span class="bloco-extra-label">Complementos dos Executivos</span>
+  <p>Salpicão +R$ 5,00 &nbsp;·&nbsp; Fritas +R$ 4,00 &nbsp;·&nbsp; Purê de Batata +R$ 4,00 &nbsp;·&nbsp; Batata Palha +R$ 3,00 &nbsp;·&nbsp; Arroz Branco +R$ 4,00 &nbsp;·&nbsp; Farofa +R$ 2,00 &nbsp;·&nbsp; Ovo +R$ 3,00 &nbsp;·&nbsp; Feijão +R$ 3,00 &nbsp;·&nbsp; Salada Verão +R$ 6,00 &nbsp;·&nbsp; Salada Clássica +R$ 4,00</p>
+</div>
+<div class="pf">03 / 10</div>
+</div>
+</section>
+
+<!-- ══ 03 — PORÇÕES NA BRASA ══ -->
+<section>
+<div class="pagina" id="sec-porcoes">
+<div class="ph"><span>03 · Porções na Brasa</span><span class="ph-right"><span class="ph-marca">Briefing de Cardápio</span> · Batata &amp; Brasa</span></div>
+<span class="num-secao">03</span>
+<h2 class="titulo-secao">Porções na Brasa</h2>
+
+<div class="corpo">
+<p>As porções pra dividir, nos dois tamanhos: <strong>Para Nós</strong> (dupla) e <strong>Para Todos</strong> (grupo).</p>
+</div>
+
+<table class="rt">
+<thead><tr><th style="width:34%;">Nome antigo</th><th class="n" style="width:12%;">Para Nós</th><th class="n" style="width:12%;">Para Todos</th><th style="width:42%;">Nome novo / proposta</th></tr></thead>
+<tbody>
+  <tr><td><span class="item-nome">Fritas</span><span class="item-desc">batata frita</span></td><td class="n">R$ 29,90</td><td class="n">—</td><td class="novo"><span class="item-nome">Fritas <span class="tag tag-mantem">Mantém</span></span></td></tr>
+  <tr class="com-nota"><td><span class="item-nome">Suprema</span><span class="item-desc">batata frita com cheddar e bacon</span></td><td class="n">R$ 36,90</td><td class="n">R$ 54,90</td><td class="novo"><span class="item-nome">Brasa Braba <span class="tag tag-muda">Muda</span></span></td></tr>
+  <tr class="nota"><td colspan="4">Era "Suprema".</td></tr>
+  <tr class="com-nota"><td><span class="item-nome">Picanha</span><span class="item-desc">iscas de picanha com fritas</span></td><td class="n">R$ 99,90</td><td class="n">R$ 119,90</td><td class="novo"><span class="item-nome">Picanha na Brasa <span class="tag tag-muda">Muda</span></span></td></tr>
+  <tr class="nota"><td colspan="4">Era só "Picanha".</td></tr>
+  <tr class="com-nota"><td><span class="item-nome">Filé / Fritas</span><span class="item-desc">iscas de filé com fritas</span></td><td class="n">R$ 69,90</td><td class="n">R$ 89,90</td><td class="novo"><span class="item-nome">Filé na Brasa <span class="tag tag-muda">Muda</span></span></td></tr>
+  <tr class="nota"><td colspan="4">Absorve também a antiga "Hakuna Filé" (contrafilé, batata e muçarela) — que continha "Hakuna".</td></tr>
+  <tr class="com-nota"><td><span class="item-nome">Peixe / Fritas</span><span class="item-desc">iscas de peixe empanado com fritas</span></td><td class="n">R$ 69,90</td><td class="n">R$ 89,90</td><td class="novo"><span class="item-nome">Fish'n Fries <span class="tag tag-mantem">Mantém</span></span></td></tr>
+  <tr class="nota"><td colspan="4">Preço da porção a conferir na fonte (foto ilegível).</td></tr>
+  <tr class="com-nota"><td><span class="item-nome">—</span><span class="item-desc">não existe hoje</span></td><td class="n">a definir</td><td class="n">a definir</td><td class="novo"><span class="item-nome">Costelinha ao Molho Barbecue <span class="tag tag-novo">Novo</span></span></td></tr>
+  <tr class="nota"><td colspan="4">Novidade do cardápio.</td></tr>
+</tbody>
+</table>
+
+<div class="bloco-extra">
+  <span class="bloco-extra-label">Molhos</span>
+  <p>Rosé &nbsp;·&nbsp; Ketchup &nbsp;·&nbsp; <strong>Maionese da Casa</strong> &nbsp;·&nbsp; Barbecue &nbsp;·&nbsp; Chipotle<br>
+  <span style="font-size:11.5px;color:var(--cinza-texto);">"Maionese Hakuna" → "Maionese da Casa". A marca de seção "Moooolhos" sai.</span></p>
+</div>
+<span class="cat-sub">Contrafilé, Strogonoff (prato), Lombo BBQ e as Parmegianas ("Parmê") do cardápio antigo não entram nesta versão.</span>
+<div class="pf">04 / 10</div>
+</div>
+</section>
+
+<!-- ══ 04 — BATATA RECHEADA NA BRASA ══ -->
+<section>
+<div class="pagina" id="sec-recheada">
+<div class="ph"><span>04 · Batata Recheada na Brasa</span><span class="ph-right"><span class="ph-marca">Briefing de Cardápio</span> · Batata &amp; Brasa</span></div>
+<span class="num-secao">04</span>
+<h2 class="titulo-secao">Batata Recheada na Brasa</h2>
+
+<div class="corpo">
+<p>As batatas recheadas — todas a <strong>R$ 26,90</strong>.</p>
+</div>
+
+<table class="rt">
+<thead><tr><th style="width:40%;">Nome antigo</th><th class="n" style="width:13%;">Preço antigo</th><th style="width:34%;">Nome novo / proposta</th><th class="n" style="width:13%;">Preço</th></tr></thead>
+<tbody>
+  <tr class="com-nota"><td><span class="item-nome">Suprema</span><span class="item-desc">bacon e cheddar</span></td><td class="n">R$ 26,90</td><td class="novo"><span class="item-nome">Brasa Braba <span class="tag tag-muda">Muda</span></span></td><td class="n">R$ 26,90</td></tr>
+  <tr class="nota"><td colspan="4">Era "Suprema".</td></tr>
+  <tr><td><span class="item-nome">Franbacon</span><span class="item-desc">frango desfiado, requeijão e bacon</span></td><td class="n">R$ 26,90</td><td class="novo"><span class="item-nome">Franbacon <span class="tag tag-mantem">Mantém</span></span></td><td class="n">R$ 26,90</td></tr>
+  <tr><td><span class="item-nome">Strogonoff</span><span class="item-desc">strogonoff de frango, requeijão e batata palha</span></td><td class="n">R$ 26,90</td><td class="novo"><span class="item-nome">Strogonoff <span class="tag tag-mantem">Mantém</span></span></td><td class="n">R$ 26,90</td></tr>
+  <tr><td><span class="item-nome">Três Queijos</span><span class="item-desc">requeijão, cheddar cremoso e muçarela</span></td><td class="n">R$ 26,90</td><td class="novo"><span class="item-nome">Três Queijos <span class="tag tag-mantem">Mantém</span></span></td><td class="n">R$ 26,90</td></tr>
+  <tr class="com-nota"><td><span class="item-nome">—</span><span class="item-desc">não existe hoje</span></td><td class="n">a definir</td><td class="novo"><span class="item-nome">Costelinha <span class="tag tag-novo">Novo</span></span></td><td class="n">a definir</td></tr>
+  <tr class="nota"><td colspan="4">Novidade do cardápio.</td></tr>
+</tbody>
+</table>
+
+<div class="bloco-extra">
+  <span class="bloco-extra-label">Bebidas — todas mantêm o nome (marcas de fornecedor ou termos genéricos)</span>
+  <div class="mini-grid" style="margin-top:4px;">
+    <div class="mini-item"><span>Del Valle</span><span>R$ 6,50</span></div>
+    <div class="mini-item"><span>Água com gás</span><span>R$ 4,00</span></div>
+    <div class="mini-item"><span>Ice Tea Leão</span><span>R$ 6,50</span></div>
+    <div class="mini-item"><span>Água sem gás</span><span>R$ 3,50</span></div>
+    <div class="mini-item"><span>Refri lata (350ml)</span><span>R$ 6,00</span></div>
+    <div class="mini-item"><span>Suco natural (500ml)</span><span>R$ 9,50</span></div>
+    <div class="mini-item"><span>Chopp (300ml)</span><span>R$ 8,00</span></div>
+    <div class="mini-item"><span>Suco natural (300ml)</span><span>R$ 6,50</span></div>
+    <div class="mini-item"><span>Chopp (500ml)</span><span>R$ 11,90</span></div>
+    <div class="mini-item"><span>Heineken</span><span>R$ 9,00</span></div>
+  </div>
+</div>
+<div class="pf">05 / 10</div>
+</div>
+</section>
+
+<!-- ══ 05 — BURGUERS NA BRASA ══ -->
+<section>
+<div class="pagina" id="sec-burguers">
+<div class="ph"><span>05 · Burguers na Brasa</span><span class="ph-right"><span class="ph-marca">Briefing de Cardápio</span> · Batata &amp; Brasa</span></div>
+<span class="num-secao">05</span>
+<h2 class="titulo-secao">Burguers na Brasa</h2>
+
+<div class="corpo">
+<p>Preços em <strong>Burguer</strong> (simples / duplo / triplo) e <strong>Combo</strong> (simples / duplo / triplo).</p>
+</div>
+
+<table class="rt">
+<thead><tr><th style="width:24%;">Nome antigo</th><th class="n" style="width:19%;">Burguer S/D/T</th><th class="n" style="width:19%;">Combo S/D/T</th><th style="width:38%;">Nome novo / proposta</th></tr></thead>
+<tbody>
+  <tr class="com-nota"><td><span class="item-nome">Smash Supremo</span></td><td class="n-multi">23,90 / 29,90 / 34,90</td><td class="n-multi">33,90 / 39,90 / 44,90</td><td class="novo"><span class="item-nome">Brasa Supremo <span class="tag tag-muda">Muda</span></span></td></tr>
+  <tr class="nota"><td colspan="4">Descrição usa "teia de batata frita" → vira "ninho de batata palha".</td></tr>
+  <tr><td><span class="item-nome">Cheddar Melt</span></td><td class="n-multi">23,90 / 27,90 / 32,90</td><td class="n-multi">33,90 / 37,90 / 42,90</td><td class="novo"><span class="item-nome">Cheddar Melt <span class="tag tag-mantem">Mantém</span></span></td></tr>
+  <tr class="com-nota"><td><span class="item-nome">Hakuna Cheese</span></td><td class="n-multi">19,90 / 25,90 / 30,90</td><td class="n-multi">29,90 / 35,90 / 40,90</td><td class="novo"><span class="item-nome">Cheese Brasa <span class="tag tag-muda">Muda</span></span></td></tr>
+  <tr class="nota"><td colspan="4">Contém "Hakuna" — mudança obrigatória.</td></tr>
+  <tr class="com-nota"><td><span class="item-nome">Hakuna Bacon</span></td><td class="n-multi">22,90 / 28,90 / 33,90</td><td class="n-multi">32,90 / 38,90 / 43,90</td><td class="novo"><span class="item-nome">Brasa Bacon <span class="tag tag-muda">Muda</span></span></td></tr>
+  <tr class="nota"><td colspan="4">Contém "Hakuna" — mudança obrigatória.</td></tr>
+  <tr><td><span class="item-nome">Chicken Supremo</span></td><td class="n-multi">22,90 / 28,90 / 33,90</td><td class="n-multi">32,90 / 38,90 / 43,90</td><td class="novo"><span class="item-nome">Chicken Supremo <span class="tag tag-mantem">Mantém</span></span></td></tr>
+  <tr class="com-nota"><td><span class="item-nome">—</span><span class="item-desc">não existe hoje</span></td><td class="n-multi">a definir</td><td class="n-multi">a definir</td><td class="novo"><span class="item-nome">Costelinha <span class="tag tag-novo">Novo</span></span></td></tr>
+  <tr class="nota"><td colspan="4">Novidade do cardápio.</td></tr>
+  <tr class="com-nota"><td><span class="item-nome">—</span><span class="item-desc">não existe hoje</span></td><td class="n-multi">a definir</td><td class="n-multi">a definir</td><td class="novo"><span class="item-nome">Brasinha (kids) <span class="tag tag-novo">Novo</span></span></td></tr>
+  <tr class="nota"><td colspan="4">Novidade do cardápio — definir composição (mini burger + fritas?) e preço.</td></tr>
+</tbody>
+</table>
+
+<div class="bloco-extra">
+  <span class="bloco-extra-label">Complementos do Burguer · R$ 4,00 cada</span>
+  <p>Muçarela &nbsp;·&nbsp; Cheddar fatiado &nbsp;·&nbsp; Cheddar cremoso &nbsp;·&nbsp; Requeijão cremoso &nbsp;·&nbsp; Cebola caramelizada &nbsp;·&nbsp; Bacon crispy &nbsp;·&nbsp; <strong>Chips de milho</strong> <span style="font-size:11.5px;color:var(--cinza-texto);">(era "Doritos")</span><br>
+  <span style="font-size:11.5px;color:var(--cinza-texto);">Em todas as descrições dos burguers: "Maionese Hakuna" → "Maionese da Casa".</span></p>
+</div>
+<div class="pf">06 / 10</div>
+</div>
+</section>
+
+<!-- ══ 06 — ARTES INCLUSAS (1/2) ══ -->
+<section>
+<div class="pagina" id="sec-artes">
+<div class="ph"><span>06 · Artes Inclusas no Projeto</span><span class="ph-right"><span class="ph-marca">Briefing de Cardápio</span> · Batata &amp; Brasa</span></div>
+<span class="num-secao">06</span>
+<h2 class="titulo-secao">Artes Inclusas no Projeto de Identidade Visual</h2>
+
+<div class="corpo">
+<p>Peças gráficas que já fazem parte do projeto de identidade visual, pra conferência e aprovação.</p>
+</div>
+
+<div class="arte-item">
+  <div class="arte-cab"><span class="arte-num">1</span><span class="arte-titulo">Cartão Fidelidade Aprovado</span></div>
+  <div class="arte-img grande is-placeholder">
+    <img src="./assets/artes/cartao-fidelidade.jpg" alt="Cartão fidelidade — Batata &amp; Brasa"
+      onload="this.parentElement.classList.remove('is-placeholder')"
+      onerror="this.parentElement.classList.add('is-placeholder')">
+  </div>
+  <div class="bloco-extra">
+    <span class="bloco-extra-label">Conferir informações</span>
+    <div class="check-lista">
+      <div class="check-linha"><span class="check-box checked"></span>Instagram — @batataebrasaoficial</div>
+      <div class="check-linha"><span class="check-box checked"></span>Endereço — Shopping Boulevard Garden Araxá &nbsp;·&nbsp; Av. Aracely de Paula, 1005</div>
+    </div>
+  </div>
+</div>
+<div class="pf">07 / 10</div>
+</div>
+</section>
+
+<!-- ══ 06 — ARTES INCLUSAS · QUADROS ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>06 · Artes Inclusas no Projeto</span><span class="ph-right"><span class="ph-marca">Briefing de Cardápio</span> · Batata &amp; Brasa</span></div>
+<span class="num-secao">06</span>
+<h2 class="titulo-secao" style="font-size:21px;">Artes Inclusas — continuação</h2>
+
+<div class="arte-item">
+  <div class="arte-cab"><span class="arte-num">2</span><span class="arte-titulo">Quadros Decorativos de Parede</span></div>
+  <div class="arte-img solo is-placeholder">
+    <img src="./assets/artes/quadros-parede.jpg" alt="Quadros decorativos de parede — Batata &amp; Brasa"
+      onload="this.parentElement.classList.remove('is-placeholder')"
+      onerror="this.parentElement.classList.add('is-placeholder')">
+  </div>
+</div>
+<div class="pf">08 / 10</div>
+</div>
+</section>
+
+<!-- ══ 06 — ARTES INCLUSAS · FORRO DE BANDEJA ══ -->
+<section>
+<div class="pagina">
+<div class="ph"><span>06 · Artes Inclusas no Projeto</span><span class="ph-right"><span class="ph-marca">Briefing de Cardápio</span> · Batata &amp; Brasa</span></div>
+<span class="num-secao">06</span>
+<h2 class="titulo-secao" style="font-size:21px;">Artes Inclusas — continuação</h2>
+
+<div class="arte-item">
+  <div class="arte-cab"><span class="arte-num">3</span><span class="arte-titulo">Forro de Bandeja — Caça-palavras<span class="arte-medida">25 × 35 cm</span></span></div>
+  <div class="arte-img solo is-placeholder">
+    <img src="./assets/artes/forro-bandeja.png" alt="Forro de bandeja caça-palavras — Batata &amp; Brasa"
+      onload="this.parentElement.classList.remove('is-placeholder')"
+      onerror="this.parentElement.classList.add('is-placeholder')">
+  </div>
+</div>
+<div class="pf">09 / 10</div>
+</div>
+</section>
+
+<!-- ══ 07 — ORIENTAÇÃO PRAS REDES SOCIAIS ══ -->
+<section>
+<div class="pagina pagina-imagem" id="sec-redes">
+  <img src="./assets/redes-sociais/simulacao-feed.png" alt="Simulação de feed do Instagram — Batata &amp; Brasa">
+  <span class="img-legenda">Orientação pras Redes Sociais · Simulação de feed — referência de linguagem visual e tom</span>
+  <div class="pf" style="color:rgba(255,255,255,0.4);">10 / 10</div>
+</div>
+</section>
+
+</div>
+</body>
+</html>
