@@ -396,6 +396,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
 .trip-maps .map-miami{background:#e5f5f2;color:#186c62;border-color:#a3d7ce}
 .trip-maps .map-orlando{background:#eee9fa;color:#624490;border-color:#cbb9e5}
 .trip-maps a:hover{filter:brightness(.95)}
+
+/* Mapas alinhados à coluna esquerda do menu principal. */
+#menu-pratico .mp-column>.trip-maps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%;margin:0}
+#menu-pratico .mp-column>.trip-maps a{padding:10px 2px;font-size:9px;letter-spacing:0;white-space:nowrap;min-width:0}
 </style>
 </head>
 
@@ -463,9 +467,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
     </div>
     <div style="font-family:'Magnolia Script',cursive;font-size:32px;font-weight:400;color:var(--azul-medio);margin-bottom:16px;letter-spacing:0;text-transform:none;">Menu Principal</div>
 
-    <nav class="trip-maps" aria-label="Mapas da viagem"><a class="map-dallas" href="https://www.google.com/maps/d/u/0/edit?mid=18WnOsPR9nuzBbuOxJlgfsJ671WpNEtM&amp;usp=sharing" target="_blank" rel="noopener noreferrer">📍 MAPA DALLAS</a><a class="map-miami" href="https://www.google.com/maps/d/u/0/edit?mid=1Tobu5ik3CVy_SVGavR4fhBHyYVlvFW4&amp;usp=sharing" target="_blank" rel="noopener noreferrer">📍 MAPA MIAMI</a><a class="map-orlando" href="https://www.google.com/maps/d/u/0/edit?mid=1qWDyc0Ns9CQfAFgOT8XTo69-cU6qZrs&amp;usp=sharing" target="_blank" rel="noopener noreferrer">📍 MAPA ORLANDO</a></nav>
+    
 <div class="mp-columns">
       <div class="mp-column">
+<nav class="trip-maps" aria-label="Mapas da viagem"><a class="map-dallas" href="https://www.google.com/maps/d/u/0/edit?mid=18WnOsPR9nuzBbuOxJlgfsJ671WpNEtM&amp;usp=sharing" target="_blank" rel="noopener noreferrer">📍 MAPA DALLAS</a><a class="map-miami" href="https://www.google.com/maps/d/u/0/edit?mid=1Tobu5ik3CVy_SVGavR4fhBHyYVlvFW4&amp;usp=sharing" target="_blank" rel="noopener noreferrer">📍 MAPA MIAMI</a><a class="map-orlando" href="https://www.google.com/maps/d/u/0/edit?mid=1qWDyc0Ns9CQfAFgOT8XTo69-cU6qZrs&amp;usp=sharing" target="_blank" rel="noopener noreferrer">📍 MAPA ORLANDO</a></nav>
         
         <a class="mp-btn" href="#checklist-planejamento" style="background:linear-gradient(135deg,#c8a96e,#dbbf8a);color:white;font-weight:700;">✅ Checklist da Viagem</a>
         <a class="mp-btn" href="#menu-dias">🗺️ Roteiro Macro</a>
