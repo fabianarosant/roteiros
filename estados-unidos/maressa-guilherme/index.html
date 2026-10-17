@@ -389,6 +389,13 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
 .passo-tag.agora{ background:var(--azul-medio); color:white; }
 .passo-tag.em-breve{ background:#f1f5f9; color:#64748b; }
 .passo-tag.depois{ background:#fdf6ec; color:#8a6830; }
+
+.trip-maps{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:16px 0}
+.trip-maps a{display:inline-flex;align-items:center;justify-content:center;padding:10px 15px;border-radius:8px;font-family:Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:.3px;text-decoration:none;border:1px solid transparent}
+.trip-maps .map-dallas{background:#fff1df;color:#7c4a16;border-color:#e8c795}
+.trip-maps .map-miami{background:#e5f5f2;color:#186c62;border-color:#a3d7ce}
+.trip-maps .map-orlando{background:#eee9fa;color:#624490;border-color:#cbb9e5}
+.trip-maps a:hover{filter:brightness(.95)}
 </style>
 </head>
 
@@ -456,7 +463,8 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
     </div>
     <div style="font-family:'Magnolia Script',cursive;font-size:32px;font-weight:400;color:var(--azul-medio);margin-bottom:16px;letter-spacing:0;text-transform:none;">Menu Principal</div>
 
-    <div class="mp-columns">
+    <nav class="trip-maps" aria-label="Mapas da viagem"><a class="map-dallas" href="https://www.google.com/maps/d/u/0/edit?mid=18WnOsPR9nuzBbuOxJlgfsJ671WpNEtM&amp;usp=sharing" target="_blank" rel="noopener noreferrer">📍 MAPA DALLAS</a><a class="map-miami" href="https://www.google.com/maps/d/u/0/edit?mid=1Tobu5ik3CVy_SVGavR4fhBHyYVlvFW4&amp;usp=sharing" target="_blank" rel="noopener noreferrer">📍 MAPA MIAMI</a><a class="map-orlando" href="https://www.google.com/maps/d/u/0/edit?mid=1qWDyc0Ns9CQfAFgOT8XTo69-cU6qZrs&amp;usp=sharing" target="_blank" rel="noopener noreferrer">📍 MAPA ORLANDO</a></nav>
+<div class="mp-columns">
       <div class="mp-column">
         <a class="mp-btn" href="#proximos-passos">📍 Nossa Rota</a>
         <a class="mp-btn" href="#checklist-planejamento" style="background:linear-gradient(135deg,#c8a96e,#dbbf8a);color:white;font-weight:700;">✅ Checklist da Viagem</a>
@@ -1155,8 +1163,10 @@ section.cidade-clean .legenda-glass p, section.cidade-clean .legenda-glass span,
 <!-- ═══════════════════════════════════════════════════════ ROTEIRO MACRO (esboçado) ═══════════════════════════════════════════════════════ -->
 <section id="menu-dias">
 <div class="vg-page" style="padding-top:0;">
-  <div class="vg-header">
+  
+<div class="vg-header">
     <span class="vg-titulo-h titulo-principal">Roteiro Macro 🇺🇸</span>
+<nav class="trip-maps" aria-label="Mapas da viagem"><a class="map-dallas" href="https://www.google.com/maps/d/u/0/edit?mid=18WnOsPR9nuzBbuOxJlgfsJ671WpNEtM&amp;usp=sharing" target="_blank" rel="noopener noreferrer">📍 MAPA DALLAS</a><a class="map-miami" href="https://www.google.com/maps/d/u/0/edit?mid=1Tobu5ik3CVy_SVGavR4fhBHyYVlvFW4&amp;usp=sharing" target="_blank" rel="noopener noreferrer">📍 MAPA MIAMI</a><a class="map-orlando" href="https://www.google.com/maps/d/u/0/edit?mid=1qWDyc0Ns9CQfAFgOT8XTo69-cU6qZrs&amp;usp=sharing" target="_blank" rel="noopener noreferrer">📍 MAPA ORLANDO</a></nav>
     <p style="font-family:'Poppins',sans-serif;font-size:12.5px;color:#64748b;line-height:1.8;max-width:560px;margin:0 auto;">19 dias de viagem, de Campo Grande até Campo Grande: <strong style="color:var(--azul);">6 em Dallas · 4 em Miami · 5 em Orlando</strong>, mais o pernoite em São Paulo e os dias de voo.</p>
   </div>
 
